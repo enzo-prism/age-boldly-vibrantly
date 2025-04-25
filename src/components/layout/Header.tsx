@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -36,8 +35,12 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <NavLink to="/" className="text-2xl font-bold text-teal">
-          Rebellious Aging
+        <NavLink to="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/996bea95-9371-4561-b396-1e00f4198ca3.png" 
+            alt="Rebellious Aging Logo" 
+            className="h-12 w-auto transition-transform hover:scale-105"
+          />
         </NavLink>
 
         {/* Mobile menu toggle */}
