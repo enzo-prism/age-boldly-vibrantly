@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -35,9 +34,9 @@ const Movement = () => {
             </div>
             <div className="rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" 
-                alt="Woman looking confidently at camera" 
-                className="w-full h-auto"
+                src="https://i.imgur.com/p1YPvQo.jpg" 
+                alt="Suz smiling confidently, embodying the Rebellious Aging lifestyle" 
+                className="w-full h-auto object-cover rounded-lg"
               />
             </div>
           </div>
