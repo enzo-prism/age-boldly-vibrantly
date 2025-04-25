@@ -24,13 +24,13 @@ const Movement = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Origin Story</h2>
               <p className="text-gray-700 mb-4">
-                Rebellious Aging began in 2018 when our founder, Elizabeth Chen, found herself facing her 60th birthday with mixed emotions. Despite her vibrant health and zest for life, she felt invisible in a youth-obsessed culture.
+                Hi, I'm Suz — a passionate advocate for Rebellious Aging. My journey began in my 50s when I faced a health challenge — a high cholesterol diagnosis. Like many, I was presented with the typical path: medication. But something inside me said there had to be a better way. I wasn't interested in a lifetime of prescriptions; I wanted to heal my body naturally.
               </p>
               <p className="text-gray-700 mb-4">
-                After connecting with others who shared similar experiences, she realized there was a need for a community that celebrated aging as a time of growth, wisdom, and new possibilities rather than decline.
+                Through extensive research, I discovered the incredible power of a whole-food, plant-based diet. I immersed myself in the works of pioneers like Dr. Caldwell Esselstyn and Dr. T. Colin Campbell, whose groundbreaking studies showed how food can prevent and even reverse chronic disease.
               </p>
               <p className="text-gray-700">
-                What started as a small blog and local meetup group quickly grew into a global movement, with thousands of people embracing a new paradigm of aging with confidence, style, and purpose.
+                What started as a personal experiment quickly became a transformative experience — for my body, mind, and outlook on life. This powerful shift from a conventional diet to a plant-based lifestyle is central to my story. I went from accepting the status quo to challenging it, which is the essence of Rebellious Aging.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
