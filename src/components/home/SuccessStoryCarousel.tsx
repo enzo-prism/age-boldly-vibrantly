@@ -1,7 +1,7 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowUp } from 'lucide-react';
 
 interface SuccessStory {
   id: number;
@@ -19,7 +19,7 @@ const successStories: SuccessStory[] = [
     age: 68,
     pillar: "Confidence",
     quote: "After decades of putting myself last, Rebellious Aging helped me reclaim my confidence and voice. I now lead a seniors hiking group with 50+ members!",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600&h=400"
+    image: "linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)"
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const successStories: SuccessStory[] = [
     age: 55,
     pillar: "Style",
     quote: "I never thought style was for me until I discovered this community. Now I express myself boldly through fashion and get compliments everywhere I go.",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=600&h=400"
+    image: "linear-gradient(to top, #accbee 0%, #e7f0fd 100%)"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const successStories: SuccessStory[] = [
     age: 72,
     pillar: "Longevity",
     quote: "The plant-based nutrition program reversed my heart disease. My doctor was shocked when my markers improved in just 3 months of following the protocol!",
-    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=600&h=400"
+    image: "linear-gradient(to top, #d299c2 0%, #fef9d7 100%)"
   }
 ];
 

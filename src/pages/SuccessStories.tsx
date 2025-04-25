@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -15,31 +16,78 @@ interface SuccessStory {
   story: string;
 }
 
+// Define the base success stories data first
+const baseSuccessStories: Omit<SuccessStory, "image">[] = [
+  {
+    id: 1,
+    name: "Eleanor Johnson",
+    age: 68,
+    pillar: "Confidence",
+    gender: "Female",
+    quote: "After decades of putting myself last, Rebellious Aging helped me reclaim my confidence and voice. I now lead a seniors hiking group with 50+ members!",
+    story: "Eleanor spent most of her life taking care of others - her children, her husband, and later her aging parents. At 65, she found herself alone and unsure of her identity outside of being a caretaker. Through Rebellious Aging's confidence workshops and community support, she discovered her passion for the outdoors and leadership abilities she never knew she had."
+  },
+  {
+    id: 2,
+    name: "Michael Torres",
+    age: 55,
+    pillar: "Style",
+    gender: "Male",
+    quote: "I never thought style was for me until I discovered this community. Now I express myself boldly through fashion and get compliments everywhere I go.",
+    story: "After a corporate career where he wore the same dark suits for decades, Michael felt invisible after early retirement. By exploring personal style through the Rebellious Aging approach, he discovered how clothing and self-expression could become a form of personal liberation and creativity."
+  },
+  {
+    id: 3,
+    name: "Patricia Reynolds",
+    age: 72,
+    pillar: "Longevity",
+    gender: "Female",
+    quote: "The plant-based nutrition program reversed my heart disease. My doctor was shocked when my markers improved in just 3 months of following the protocol!",
+    story: "Patricia was facing serious heart issues and was told she would need ongoing medication for the rest of her life. Determined to find another way, she fully embraced the Rebellious Aging nutrition plan. Her transformation wasn't just physical - she found a new sense of empowerment by taking control of her health."
+  },
+  {
+    id: 4,
+    name: "David Chen",
+    age: 60,
+    pillar: "Confidence",
+    gender: "Male",
+    quote: "After my divorce at 58, I thought my life was over. Rebellious Aging showed me it was just beginning. I've since started my own business and am dating again!",
+    story: "David found himself single after 32 years of marriage and felt completely lost. The Rebellious Aging community helped him rebuild his confidence through peer mentoring and personal development workshops. He's now helping other men navigate similar life transitions."
+  },
+  {
+    id: 5,
+    name: "Sophia Washington",
+    age: 67,
+    pillar: "Style",
+    gender: "Female",
+    quote: "I used to dress to be invisible. Now my wardrobe is full of colors and patterns that make me feel alive and seen!",
+    story: "As a professor for over 40 years, Sophia always dressed conservatively to be taken seriously in academia. Upon retirement, she felt she had lost her identity. Through Rebellious Aging's style workshops, she discovered how fashion could be a form of self-expression and joy rather than conformity."
+  }
+];
+
+// Now add the gradient images to create the full success stories
 const successStories: SuccessStory[] = [
   {
-    ...successStories[0],
+    ...baseSuccessStories[0],
     image: "linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)"
   },
   {
-    ...successStories[1],
+    ...baseSuccessStories[1],
     image: "linear-gradient(to top, #accbee 0%, #e7f0fd 100%)"
   },
   {
-    ...successStories[2],
+    ...baseSuccessStories[2],
     image: "linear-gradient(to top, #d299c2 0%, #fef9d7 100%)"
   },
   {
-    ...successStories[3],
+    ...baseSuccessStories[3],
     image: "linear-gradient(90deg, rgba(245,152,168) 0%, rgba(246,237,178) 100%)"
   },
   {
-    ...successStories[4],
+    ...baseSuccessStories[4],
     image: "linear-gradient(to right, #ee9ca7, #ffdde1)"
   }
-].map((story, index) => ({
-  ...story,
-  id: index + 1
-}));
+];
 
 const SuccessStories = () => {
   const [activeFilters, setActiveFilters] = useState<{
