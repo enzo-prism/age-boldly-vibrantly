@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -64,13 +63,14 @@ const SuccessStoryCarousel = () => {
           <Card className="overflow-hidden border-none shadow-lg">
             <CardContent className="p-0">
               <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="h-64 md:h-auto bg-gray-200">
-                  <img 
-                    src={successStories[activeIndex].image}
-                    alt={successStories[activeIndex].name} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <div 
+                  className="h-64 md:h-auto"
+                  style={{ 
+                    background: successStories[activeIndex].image,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                />
                 <div className="p-6 md:p-8 flex flex-col justify-between">
                   <div>
                     <div className="inline-block px-3 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-4">

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -18,56 +17,29 @@ interface SuccessStory {
 
 const successStories: SuccessStory[] = [
   {
-    id: 1,
-    name: "Eleanor Johnson",
-    age: 68,
-    gender: "Female",
-    pillar: "Confidence",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400",
-    quote: "After decades of putting myself last, Rebellious Aging helped me reclaim my confidence and voice.",
-    story: "For most of my life, I was the peacekeeper, the one who made sure everyone else was happy, often at the expense of my own needs. When I turned 65, I realized I had spent decades living for others—my children, my husband, my aging parents—but rarely for myself. I joined a Rebellious Aging workshop hoping to find direction in this new phase of life. The confidence pillar resonated deeply with me. I learned to set boundaries, express my opinions, and pursue interests I had put aside. Today, I lead a seniors hiking group with over 50 members, have taken up watercolor painting, and am no longer afraid to speak up when something matters to me. Age has given me perspective, and Rebellious Aging gave me the tools to use that wisdom with confidence."
+    ...successStories[0],
+    image: "linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)"
   },
   {
-    id: 2,
-    name: "Michael Torres",
-    age: 55,
-    gender: "Male",
-    pillar: "Style",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=400",
-    quote: "I never thought style was for me until I discovered this community. Now I express myself boldly through fashion.",
-    story: "As a software engineer for over 30 years, my wardrobe consisted of whatever was comfortable and practical—typically jeans and tech company t-shirts. I never gave much thought to personal style, assuming it was superficial and not relevant to my identity. When I attended a Rebellious Aging style workshop on a whim, I was surprised to learn that style wasn't about following trends or trying to look younger, but about authentic self-expression. Working with a style mentor helped me discover colors, textures, and silhouettes that felt right for me. Now in my mid-50s, I've developed a distinctive look that combines classic pieces with bold colors and interesting accessories. People notice and comment on the change, but more importantly, I feel more confident and true to myself. Style has become a creative outlet and a daily act of self-care."
+    ...successStories[1],
+    image: "linear-gradient(to top, #accbee 0%, #e7f0fd 100%)"
   },
   {
-    id: 3,
-    name: "Patricia Reynolds",
-    age: 72,
-    gender: "Female",
-    pillar: "Longevity",
-    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=400",
-    quote: "The plant-based nutrition program reversed my heart disease. My doctor was shocked when my markers improved in just 3 months!",
-    story: "After my annual physical at age 70, my doctor delivered concerning news: elevated cholesterol, high blood pressure, and early signs of coronary artery disease. She recommended medication and said these changes were 'just part of aging.' Unwilling to accept that narrative, I found Rebellious Aging and their whole-food, plant-based nutrition program. Despite initial skepticism, I committed fully to Dr. Esselstyn's protocol. The first month was challenging as I learned new cooking techniques without oil and animal products, but I quickly began feeling more energetic. After three months, my follow-up tests showed dramatic improvements: my total cholesterol dropped from 245 to 175, my blood pressure normalized, and inflammation markers decreased significantly. My doctor was astonished and reduced my medication. Two years later, I maintain my plant-based lifestyle and have more energy now than I did a decade ago. This approach hasn't just extended my life—it's improved its quality immeasurably."
+    ...successStories[2],
+    image: "linear-gradient(to top, #d299c2 0%, #fef9d7 100%)"
   },
   {
-    id: 4,
-    name: "James Wilson",
-    age: 61,
-    gender: "Male",
-    pillar: "Confidence",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=400",
-    quote: "Retirement left me feeling invisible and irrelevant. The confidence workshops helped me find purpose again.",
-    story: "After 35 years in corporate management, retirement hit me harder than expected. Without the title, team, and daily responsibilities, I felt stripped of my identity and value. Depression set in as I struggled to find purpose. Six months into retirement, my daughter suggested the Rebellious Aging program. The confidence workshops helped me identify skills and wisdom I'd accumulated that could benefit my community. I started mentoring young entrepreneurs at a local business incubator and joined a volunteer board for a nonprofit. These roles required the same leadership skills I'd honed throughout my career but in service of causes I deeply cared about. The program taught me that confidence in later life isn't about clinging to past achievements but leveraging life experience in meaningful new directions. At 61, I feel more purposeful than ever, not despite my age but because of the perspective it gives me."
+    ...successStories[3],
+    image: "linear-gradient(90deg, rgba(245,152,168) 0%, rgba(246,237,178) 100%)"
   },
   {
-    id: 5,
-    name: "Sophia Chen",
-    age: 58,
-    gender: "Female",
-    pillar: "Style",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=400",
-    quote: "Embracing my silver hair was the most liberating style choice I've ever made.",
-    story: "I spent decades battling my graying hair with expensive dye jobs every three weeks. As an executive in the fashion industry, I felt tremendous pressure to maintain a youthful appearance. When the pandemic hit and salons closed, my silver roots grew in. At first, I was horrified, but as they grew longer, I started to see a different kind of beauty emerging. The Rebellious Aging style philosophy encouraged embracing authentic changes rather than fighting them. With support from the community and advice on updating my wardrobe colors to complement my new silver tones, I made the full transition. The response has been overwhelmingly positive—people comment that I look more striking and distinctive. More importantly, I feel liberated from the tyranny of constant touch-ups and more comfortable in my own skin. My silver hair has become my signature, and I'm proud of what it represents: experience, wisdom, and the courage to be authentically myself."
+    ...successStories[4],
+    image: "linear-gradient(to right, #ee9ca7, #ffdde1)"
   }
-];
+].map((story, index) => ({
+  ...story,
+  id: index + 1
+}));
 
 const SuccessStories = () => {
   const [activeFilters, setActiveFilters] = useState<{
@@ -84,23 +56,19 @@ const SuccessStories = () => {
   
   const filterStories = () => {
     return successStories.filter(story => {
-      // Filter by search term
       if (searchTerm && !story.name.toLowerCase().includes(searchTerm.toLowerCase()) && 
           !story.story.toLowerCase().includes(searchTerm.toLowerCase())) {
         return false;
       }
       
-      // Filter by pillar
       if (activeFilters.pillar && story.pillar !== activeFilters.pillar) {
         return false;
       }
       
-      // Filter by gender
       if (activeFilters.gender && story.gender !== activeFilters.gender) {
         return false;
       }
       
-      // Filter by age range
       if (activeFilters.ageRange) {
         const age = story.age;
         if (activeFilters.ageRange === '50-59' && (age < 50 || age > 59)) return false;
@@ -132,7 +100,6 @@ const SuccessStories = () => {
 
   return (
     <div>
-      {/* Hero Section */}
       <section className="bg-teal/10 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -145,7 +112,6 @@ const SuccessStories = () => {
         </div>
       </section>
       
-      {/* Filters */}
       <section className="py-8 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between gap-6">
@@ -228,20 +194,20 @@ const SuccessStories = () => {
         </div>
       </section>
       
-      {/* Stories Grid */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           {filteredStories.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredStories.map(story => (
                 <Card key={story.id} className="overflow-hidden hover:shadow-md transition-shadow">
-                  <div className="h-64 overflow-hidden">
-                    <img 
-                      src={story.image} 
-                      alt={story.name} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <div 
+                    className="h-64 overflow-hidden"
+                    style={{ 
+                      background: story.image,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
+                    }}
+                  />
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-2">
                       <Badge className="bg-teal">{story.pillar}</Badge>
@@ -269,7 +235,6 @@ const SuccessStories = () => {
         </div>
       </section>
       
-      {/* Share Your Story CTA */}
       <section className="py-16 bg-teal/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
