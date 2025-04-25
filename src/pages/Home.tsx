@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowUp } from 'lucide-react';
 import PillarCard from '@/components/home/PillarCard';
 import NewsletterSignup from '@/components/home/NewsletterSignup';
 import SuccessStoryCarousel from '@/components/home/SuccessStoryCarousel';
