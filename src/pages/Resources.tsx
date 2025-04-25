@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,28 +9,28 @@ const Resources = () => {
       title: "How Not To Die",
       author: "Dr. Michael Greger",
       description: "Discover the foods scientifically proven to prevent and reverse disease.",
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=400&h=300",
+      gradient: "linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)",
       category: "Longevity"
     },
     {
       title: "Prevent and Reverse Heart Disease",
       author: "Dr. Caldwell Esselstyn",
       description: "The revolutionary scientifically proven, nutrition-based cure for heart disease.",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=400&h=300",
+      gradient: "linear-gradient(to top, #accbee 0%, #e7f0fd 100%)",
       category: "Longevity"
     },
     {
       title: "The Confidence Code",
       author: "Katty Kay & Claire Shipman",
       description: "The science and art of self-assurance—what women should know.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400&h=300",
+      gradient: "linear-gradient(to top, #d299c2 0%, #fef9d7 100%)",
       category: "Confidence"
     },
     {
       title: "Aging with Style and Grace",
       author: "Alison Lester",
       description: "Redefine your personal style in the second half of life.",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=400&h=300",
+      gradient: "linear-gradient(to right, #ee9ca7, #ffdde1)",
       category: "Style"
     }
   ];
@@ -41,14 +40,14 @@ const Resources = () => {
       title: "Forks Over Knives",
       creator: "Brian Wendel",
       description: "Examines the profound claim that most degenerative diseases can be controlled by rejecting animal-based and processed foods.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=400&h=300",
+      gradient: "linear-gradient(90deg, hsla(46, 73%, 75%, 1) 0%, hsla(176, 73%, 88%, 1) 100%)",
       category: "Longevity"
     },
     {
       title: "Game Changers",
       creator: "James Cameron",
       description: "Explores the benefits of plant-based eating for athletes and active individuals.",
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=400&h=300",
+      gradient: "linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%)",
       category: "Longevity"
     }
   ];
@@ -177,13 +176,10 @@ const Resources = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {books.map((book, index) => (
                   <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow h-full flex flex-col">
-                    <div className="h-48 overflow-hidden">
-                      <img 
-                        src={book.image} 
-                        alt={book.title} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                    <div 
+                      className="h-48 overflow-hidden"
+                      style={{ background: book.gradient }}
+                    />
                     <CardHeader className="pb-2">
                       <CardTitle className="text-lg">{book.title}</CardTitle>
                       <CardDescription>{book.author}</CardDescription>
@@ -205,13 +201,10 @@ const Resources = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {documentaries.map((doc, index) => (
                   <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow h-full flex flex-col">
-                    <div className="h-48 overflow-hidden">
-                      <img 
-                        src={doc.image} 
-                        alt={doc.title} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                    <div 
+                      className="h-48 overflow-hidden"
+                      style={{ background: doc.gradient }}
+                    />
                     <CardHeader className="pb-2">
                       <CardTitle className="text-lg">{doc.title}</CardTitle>
                       <CardDescription>{doc.creator}</CardDescription>

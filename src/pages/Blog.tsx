@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -14,7 +13,7 @@ interface BlogPost {
   readTime: number;
   pillar: string;
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
-  image: string;
+  gradient: string;
   hasAudio: boolean;
 }
 
@@ -28,7 +27,7 @@ const blogPosts: BlogPost[] = [
     readTime: 6,
     pillar: "Confidence",
     difficulty: "Beginner",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800&h=500",
+    gradient: "linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)",
     hasAudio: true
   },
   {
@@ -40,7 +39,7 @@ const blogPosts: BlogPost[] = [
     readTime: 8,
     pillar: "Style",
     difficulty: "Intermediate",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=800&h=500",
+    gradient: "linear-gradient(to top, #accbee 0%, #e7f0fd 100%)",
     hasAudio: false
   },
   {
@@ -52,7 +51,7 @@ const blogPosts: BlogPost[] = [
     readTime: 12,
     pillar: "Longevity",
     difficulty: "Advanced",
-    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=800&h=500",
+    gradient: "linear-gradient(to top, #d299c2 0%, #fef9d7 100%)",
     hasAudio: true
   },
   {
@@ -64,7 +63,7 @@ const blogPosts: BlogPost[] = [
     readTime: 5,
     pillar: "Confidence",
     difficulty: "Beginner",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=800&h=500",
+    gradient: "linear-gradient(90deg, hsla(46, 73%, 75%, 1) 0%, hsla(176, 73%, 88%, 1) 100%)",
     hasAudio: true
   },
   {
@@ -76,7 +75,7 @@ const blogPosts: BlogPost[] = [
     readTime: 7,
     pillar: "Style",
     difficulty: "Intermediate",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800&h=500",
+    gradient: "linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%)",
     hasAudio: false
   }
 ];
@@ -95,23 +94,19 @@ const Blog = () => {
   
   const filterPosts = () => {
     return blogPosts.filter(post => {
-      // Filter by search term
       if (searchTerm && !post.title.toLowerCase().includes(searchTerm.toLowerCase()) && 
           !post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())) {
         return false;
       }
       
-      // Filter by pillar
       if (activeFilters.pillar && post.pillar !== activeFilters.pillar) {
         return false;
       }
       
-      // Filter by difficulty
       if (activeFilters.difficulty && post.difficulty !== activeFilters.difficulty) {
         return false;
       }
       
-      // Filter by audio availability
       if (showAudioOnly && !post.hasAudio) {
         return false;
       }
@@ -140,7 +135,6 @@ const Blog = () => {
 
   return (
     <div>
-      {/* Hero Section */}
       <section className="bg-teal/10 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -152,18 +146,16 @@ const Blog = () => {
         </div>
       </section>
       
-      {/* Featured Post */}
       <section className="py-12 border-b">
         <div className="container mx-auto px-4">
           <Card className="overflow-hidden border-none shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="h-64 md:h-full bg-gray-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" 
-                  alt="Featured post" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div 
+                className="h-64 md:h-full"
+                style={{ 
+                  background: "linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)"
+                }}
+              />
               <div className="p-6 md:p-10 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -190,7 +182,6 @@ const Blog = () => {
         </div>
       </section>
       
-      {/* Filters */}
       <section className="py-8 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between gap-6">
@@ -269,19 +260,16 @@ const Blog = () => {
         </div>
       </section>
       
-      {/* Blog Posts Grid */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           {filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map(post => (
                 <Card key={post.id} className="overflow-hidden hover:shadow-md transition-shadow h-full flex flex-col">
-                  <div className="h-48 overflow-hidden relative">
-                    <img 
-                      src={post.image} 
-                      alt={post.title} 
-                      className="w-full h-full object-cover"
-                    />
+                  <div 
+                    className="h-48 overflow-hidden relative"
+                    style={{ background: post.gradient }}
+                  >
                     {post.hasAudio && (
                       <div className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-md flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -326,7 +314,6 @@ const Blog = () => {
         </div>
       </section>
       
-      {/* Newsletter */}
       <section className="py-16 bg-teal/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
