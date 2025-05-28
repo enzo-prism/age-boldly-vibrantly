@@ -3,6 +3,14 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface PillarContent {
   title: string;
@@ -10,6 +18,7 @@ interface PillarContent {
   quizTitle: string;
   quizDescription: string;
   checklistTitle: string;
+  galleryImages: string[];
 }
 
 const pillarContent: Record<string, PillarContent> = {
@@ -19,6 +28,11 @@ const pillarContent: Record<string, PillarContent> = {
     quizTitle: "The Confidence Self-Assessment",
     quizDescription: "Discover your current confidence level and receive personalized recommendations to build unshakeable self-assurance.",
     checklistTitle: "7-Day Confidence Boosting Checklist",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop"
+    ],
   },
   style: {
     title: "Style",
@@ -26,6 +40,11 @@ const pillarContent: Record<string, PillarContent> = {
     quizTitle: "Discover Your Authentic Style Personality",
     quizDescription: "Take this quiz to uncover your unique style personality and learn how to express yourself authentically through fashion.",
     checklistTitle: "The Rebellious Style Essentials Checklist",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=600&fit=crop"
+    ],
   },
   longevity: {
     title: "Longevity",
@@ -33,6 +52,11 @@ const pillarContent: Record<string, PillarContent> = {
     quizTitle: "The Longevity Lifestyle Assessment",
     quizDescription: "Evaluate your current lifestyle habits and receive a personalized roadmap to optimize your health span.",
     checklistTitle: "Daily Longevity Practices Checklist",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
+    ],
   },
 };
 
@@ -60,6 +84,36 @@ const PillarPage = () => {
             <p className="text-lg text-gray-700">
               {content.description}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Inspiring {content.title} Gallery
+            </h2>
+            <Carousel className="w-full">
+              <CarouselContent>
+                {content.galleryImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <AspectRatio ratio={4 / 3}>
+                        <img
+                          src={image}
+                          alt={`${content.title} inspiration ${index + 1}`}
+                          className="rounded-lg object-cover w-full h-full"
+                        />
+                      </AspectRatio>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
