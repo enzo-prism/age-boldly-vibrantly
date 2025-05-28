@@ -101,7 +101,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Email</h3>
-                    <p className="text-gray-600">enzo@design-prism.com</p>
+                    <p className="text-gray-600">suz@rebelliousaging.com</p>
                     <p className="text-sm text-gray-500 mt-1">
                       I typically respond within 24 hours
                     </p>

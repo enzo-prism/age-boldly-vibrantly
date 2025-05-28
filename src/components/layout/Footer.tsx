@@ -137,7 +137,7 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a 
-                href="mailto:enzo@design-prism.com" 
+                href="mailto:suz@rebelliousaging.com" 
                 className="w-10 h-10 bg-coral/10 hover:bg-coral hover:text-white text-coral rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
                 <Mail size={18} />
