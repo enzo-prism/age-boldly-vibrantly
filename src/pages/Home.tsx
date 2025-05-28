@@ -28,6 +28,13 @@ const Home = () => {
     }
   ];
 
+  const scrollToPillars = () => {
+    const pillarsSection = document.getElementById('pillars-section');
+    if (pillarsSection) {
+      pillarsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       {/* Hero section */}
@@ -53,8 +60,13 @@ const Home = () => {
               <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white">
                 <Link to="/movement">Join the Movement</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="bg-white/20 backdrop-blur-sm text-white border-white hover:bg-white/30">
-                <Link to="/pillars/confidence">Explore the Pillars</Link>
+              <Button 
+                onClick={scrollToPillars}
+                variant="outline" 
+                size="lg" 
+                className="bg-white/20 backdrop-blur-sm text-white border-white hover:bg-white/30"
+              >
+                Explore the Pillars
               </Button>
             </div>
           </div>
@@ -72,7 +84,7 @@ const Home = () => {
       </section>
 
       {/* Pillars section */}
-      <section className="py-20 bg-gray-50">
+      <section id="pillars-section" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">The Three Pillars</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
