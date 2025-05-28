@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
@@ -69,18 +68,6 @@ const Nutrition = () => {
           </div>
         </div>
       </section>
-      
-      {/* Sticky Banner */}
-      <div className="sticky top-20 z-10 bg-coral text-white py-3">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="font-medium mb-2 md:mb-0">Ready to transform your health? Join the 30-Day Plant-Powered Challenge!</p>
-            <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white/20">
-              Sign Up Now
-            </Button>
-          </div>
-        </div>
-      </div>
 
       {/* Tabs Section */}
       <section className="py-12">
