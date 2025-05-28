@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -117,6 +117,25 @@ const PillarPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Nutrition CTA - Only for Longevity */}
+      {pillarId === 'longevity' && (
+        <section className="py-16 bg-coral/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-4">Fuel Your Longevity Journey</h2>
+              <p className="text-lg text-gray-700 mb-8">
+                Discover how proper nutrition supports your longevity goals. Learn about foods that promote vitality, brain health, and overall wellness as you age rebelliously.
+              </p>
+              <Link to="/nutrition">
+                <Button className="bg-coral hover:bg-coral-dark text-white">
+                  Explore Nutrition for Longevity
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Quiz Section */}
       <section className="py-16 bg-gray-50">
