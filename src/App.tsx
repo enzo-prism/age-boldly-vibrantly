@@ -10,6 +10,7 @@ import Movement from "./pages/Movement";
 import PillarPage from "./pages/PillarPage";
 import Nutrition from "./pages/Nutrition";
 import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/pillars/:pillarId" element={<PillarPage />} />
             <Route path="/nutrition" element={<Nutrition />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

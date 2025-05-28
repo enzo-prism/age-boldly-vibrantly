@@ -55,7 +55,7 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">Connect</h4>
             <ul className="space-y-2">
               <li><Link to="/blog" className="text-gray-600 hover:text-teal transition-colors">Blog</Link></li>
-              <li><a href="mailto:enzo@design-prism.com" className="text-gray-600 hover:text-teal transition-colors">Contact Us</a></li>
+              <li><Link to="/contact" className="text-gray-600 hover:text-teal transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>

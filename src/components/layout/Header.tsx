@@ -114,6 +114,12 @@ const Header = () => {
           >
             Blog
           </NavLink>
+          <NavLink 
+            to="/contact" 
+            className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
+          >
+            Contact
+          </NavLink>
         </nav>
 
         {/* Mobile menu dropdown */}
@@ -173,6 +179,13 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Blog
+              </NavLink>
+              <NavLink 
+                to="/contact" 
+                className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
               </NavLink>
             </nav>
           </div>
