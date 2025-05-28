@@ -1,73 +1,171 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Heart, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 pt-16 pb-8">
+    <footer className="bg-gradient-to-br from-teal/5 to-coral/5 pt-20 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <div className="md:col-span-1">
-            <h3 className="text-xl font-bold text-teal mb-4">Rebellious Aging</h3>
-            <p className="text-gray-600 mb-4">
-              Inspiring you to age boldly, live vibrantly, and redefine what aging means in today's world.
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          
+          {/* Brand Section */}
+          <div className="lg:col-span-1">
+            <h3 className="text-2xl font-bold text-teal mb-4">
+              Rebellious Aging
+            </h3>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Breaking stereotypes and redefining what it means to age gracefully. 
+              Join our community of vibrant individuals living their best lives at every stage.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-teal transition-colors">
-                <Facebook size={20} />
+            <div className="flex items-center gap-2 text-coral font-medium">
+              <Heart size={18} className="fill-current" />
+              <span>Age boldly, live vibrantly</span>
+            </div>
+          </div>
+
+          {/* The Three Pillars */}
+          <div>
+            <h4 className="font-bold text-foreground mb-6 text-lg">The Three Pillars</h4>
+            <ul className="space-y-4">
+              <li>
+                <Link 
+                  to="/pillars/confidence" 
+                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="text-xl">🌟</span>
+                  <span className="group-hover:translate-x-1 transition-transform">Confidence</span>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/pillars/style" 
+                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="text-xl">👗</span>
+                  <span className="group-hover:translate-x-1 transition-transform">Style</span>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/pillars/longevity" 
+                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="text-xl">🌱</span>
+                  <span className="group-hover:translate-x-1 transition-transform">Longevity</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources & Community */}
+          <div>
+            <h4 className="font-bold text-foreground mb-6 text-lg">Resources & Community</h4>
+            <ul className="space-y-4">
+              <li>
+                <Link 
+                  to="/movement" 
+                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform">The Movement</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/nutrition" 
+                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform">Nutrition (WFPB)</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/blog" 
+                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform">Blog & Stories</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/contact" 
+                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform">Get in Touch</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Connect With Suz */}
+          <div>
+            <h4 className="font-bold text-foreground mb-6 text-lg">Connect With Suz</h4>
+            <p className="text-gray-600 mb-6 text-sm">
+              Follow along for daily inspiration, tips, and real talk about aging rebelliously.
+            </p>
+            <div className="flex gap-4 mb-6">
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 bg-teal/10 hover:bg-teal hover:text-white text-teal rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
+                <Facebook size={18} />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-teal transition-colors">
-                <Instagram size={20} />
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 bg-teal/10 hover:bg-teal hover:text-white text-teal rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
+                <Instagram size={18} />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-teal transition-colors">
-                <Linkedin size={20} />
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 bg-teal/10 hover:bg-teal hover:text-white text-teal rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
+                <Linkedin size={18} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="mailto:enzo@design-prism.com" className="text-gray-400 hover:text-teal transition-colors">
-                <Mail size={20} />
+              <a 
+                href="mailto:enzo@design-prism.com" 
+                className="w-10 h-10 bg-coral/10 hover:bg-coral hover:text-white text-coral rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
+                <Mail size={18} />
                 <span className="sr-only">Email</span>
               </a>
             </div>
           </div>
-
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-600 hover:text-teal transition-colors">Home</Link></li>
-              <li><Link to="/movement" className="text-gray-600 hover:text-teal transition-colors">The Movement</Link></li>
-              <li><Link to="/nutrition" className="text-gray-600 hover:text-teal transition-colors">Nutrition (WFPB)</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Pillars</h4>
-            <ul className="space-y-2">
-              <li><Link to="/pillars/confidence" className="text-gray-600 hover:text-teal transition-colors">Confidence</Link></li>
-              <li><Link to="/pillars/style" className="text-gray-600 hover:text-teal transition-colors">Style</Link></li>
-              <li><Link to="/pillars/longevity" className="text-gray-600 hover:text-teal transition-colors">Longevity</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Connect</h4>
-            <ul className="space-y-2">
-              <li><Link to="/blog" className="text-gray-600 hover:text-teal transition-colors">Blog</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-teal transition-colors">Contact</Link></li>
-            </ul>
-          </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <p className="text-gray-500 text-sm text-center">
-            Medical Disclaimer: The information provided on this website is for educational purposes only and is not intended as medical advice. 
-            Always consult with a qualified healthcare professional before making significant changes to your diet or lifestyle.
-          </p>
-          <p className="text-gray-500 text-sm text-center mt-4">
-            &copy; {new Date().getFullYear()} Rebellious Aging. All rights reserved.
-          </p>
+        {/* Bottom Section */}
+        <div className="border-t border-gray-200 pt-8">
+          <div className="text-center lg:text-left lg:flex lg:justify-between lg:items-center">
+            <div className="mb-6 lg:mb-0">
+              <p className="text-gray-500 text-sm mb-2">
+                <strong>Medical Disclaimer:</strong> The information provided on this website is for educational purposes only and is not intended as medical advice. 
+                Always consult with a qualified healthcare professional before making significant changes to your diet or lifestyle.
+              </p>
+            </div>
+            
+            <div className="text-center lg:text-right">
+              <p className="text-gray-500 text-sm">
+                &copy; {new Date().getFullYear()} Rebellious Aging. All rights reserved.
+              </p>
+              <p className="text-teal text-sm font-medium mt-1">
+                Designed with 💚 for the rebels
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
