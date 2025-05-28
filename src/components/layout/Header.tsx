@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -84,13 +85,19 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>
-                <NavLink to="/pillars/confidence" className="w-full">Confidence</NavLink>
+                <NavLink to="/pillars/confidence" className="w-full flex items-center gap-2">
+                  🌟 Confidence
+                </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <NavLink to="/pillars/style" className="w-full">Style</NavLink>
+                <NavLink to="/pillars/style" className="w-full flex items-center gap-2">
+                  👗 Style
+                </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <NavLink to="/pillars/longevity" className="w-full">Longevity</NavLink>
+                <NavLink to="/pillars/longevity" className="w-full flex items-center gap-2">
+                  🌱 Longevity
+                </NavLink>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -132,24 +139,24 @@ const Header = () => {
                 <div className="pl-4 flex flex-col space-y-2">
                   <NavLink 
                     to="/pillars/confidence" 
-                    className={({isActive}) => `py-1 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Confidence
+                    🌟 Confidence
                   </NavLink>
                   <NavLink 
                     to="/pillars/style" 
-                    className={({isActive}) => `py-1 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Style
+                    👗 Style
                   </NavLink>
                   <NavLink 
                     to="/pillars/longevity" 
-                    className={({isActive}) => `py-1 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Longevity
+                    🌱 Longevity
                   </NavLink>
                 </div>
               </div>
