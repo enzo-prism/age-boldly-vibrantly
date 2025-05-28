@@ -7,7 +7,6 @@ import { Separator } from '@/components/ui/separator';
 interface PillarContent {
   title: string;
   description: string;
-  videoUrl: string;
   quizTitle: string;
   quizDescription: string;
   checklistTitle: string;
@@ -17,7 +16,6 @@ const pillarContent: Record<string, PillarContent> = {
   confidence: {
     title: "Confidence",
     description: "Confidence is the cornerstone of rebellious aging. It's about embracing your unique voice, standing firmly in your truth, and expressing yourself authentically without apology or permission. Our approach to confidence building combines mindset work, practical techniques, and community support.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     quizTitle: "The Confidence Self-Assessment",
     quizDescription: "Discover your current confidence level and receive personalized recommendations to build unshakeable self-assurance.",
     checklistTitle: "7-Day Confidence Boosting Checklist",
@@ -25,7 +23,6 @@ const pillarContent: Record<string, PillarContent> = {
   style: {
     title: "Style",
     description: "Style is self-expression, not rule-following. Our approach to rebellious style focuses on discovering what makes you feel authentic and vibrant, regardless of conventional 'age-appropriate' fashion rules. We believe that personal style evolves throughout life and should be a source of joy and creativity.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     quizTitle: "Discover Your Authentic Style Personality",
     quizDescription: "Take this quiz to uncover your unique style personality and learn how to express yourself authentically through fashion.",
     checklistTitle: "The Rebellious Style Essentials Checklist",
@@ -33,7 +30,6 @@ const pillarContent: Record<string, PillarContent> = {
   longevity: {
     title: "Longevity",
     description: "Longevity isn't just about adding years to your life—it's about adding life to your years. Our evidence-based approach focuses on physical vitality, cognitive sharpness, and emotional resilience through sustainable lifestyle practices that support vibrant aging.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     quizTitle: "The Longevity Lifestyle Assessment",
     quizDescription: "Evaluate your current lifestyle habits and receive a personalized roadmap to optimize your health span.",
     checklistTitle: "Daily Longevity Practices Checklist",
@@ -67,31 +63,6 @@ const PillarPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Video Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Watch the {content.title} Explainer</h2>
-            <div className="aspect-w-16 aspect-h-9 mb-6">
-              <div className="w-full h-0 pb-[56.25%] relative bg-gray-200">
-                <iframe 
-                  src={content.videoUrl}
-                  title={`${content.title} explainer video`}
-                  className="absolute top-0 left-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-            <p className="text-gray-600">
-              This 45-second video introduces the concept of {content.title.toLowerCase()} as a pillar of rebellious aging and how it contributes to living a vibrant, fulfilling life.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <Separator />
 
       {/* Quiz Section */}
       <section className="py-16 bg-gray-50">
