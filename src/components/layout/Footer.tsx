@@ -52,12 +52,10 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Resources</h4>
+            <h4 className="font-semibold text-foreground mb-4">Connect</h4>
             <ul className="space-y-2">
-              <li><Link to="/resources" className="text-gray-600 hover:text-teal transition-colors">Starter Kit</Link></li>
               <li><Link to="/blog" className="text-gray-600 hover:text-teal transition-colors">Blog</Link></li>
-              <li><Link to="/resources#books" className="text-gray-600 hover:text-teal transition-colors">Books & Documentaries</Link></li>
-              <li><Link to="/resources#tools" className="text-gray-600 hover:text-teal transition-colors">Tools & Downloads</Link></li>
+              <li><a href="mailto:enzo@design-prism.com" className="text-gray-600 hover:text-teal transition-colors">Contact Us</a></li>
             </ul>
           </div>
         </div>

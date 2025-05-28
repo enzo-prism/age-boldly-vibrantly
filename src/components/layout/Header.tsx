@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -103,12 +102,6 @@ const Header = () => {
             Nutrition (WFPB)
           </NavLink>
           <NavLink 
-            to="/resources" 
-            className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
-          >
-            Resources
-          </NavLink>
-          <NavLink 
             to="/blog" 
             className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
           >
@@ -166,13 +159,6 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Nutrition (WFPB)
-              </NavLink>
-              <NavLink 
-                to="/resources" 
-                className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Resources
               </NavLink>
               <NavLink 
                 to="/blog" 

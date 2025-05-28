@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import Movement from "./pages/Movement";
 import PillarPage from "./pages/PillarPage";
 import Nutrition from "./pages/Nutrition";
-import Resources from "./pages/Resources";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
@@ -27,7 +26,6 @@ const App = () => (
             <Route path="/movement" element={<Movement />} />
             <Route path="/pillars/:pillarId" element={<PillarPage />} />
             <Route path="/nutrition" element={<Nutrition />} />
-            <Route path="/resources" element={<Resources />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
