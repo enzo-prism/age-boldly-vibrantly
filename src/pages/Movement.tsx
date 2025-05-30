@@ -46,51 +46,6 @@ const Movement = () => {
           </div>
         </div>
       </section>
-
-      {/* Mission */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-10">Our Mission</h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <p className="text-xl text-center italic mb-6">
-                "To empower adults in their second half of life to reject limiting stereotypes and embrace aging as a time of continued growth, joy, and purpose through community, education, and advocacy."
-              </p>
-              <div className="w-20 h-1 bg-coral mx-auto"></div>
-            </div>
-            
-            <div className="mt-16">
-              <h3 className="text-2xl font-bold mb-6">What We Stand For</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-teal mb-2">Authenticity</h4>
-                  <p className="text-gray-700">
-                    Embracing who you truly are, with all the wisdom, experience, and unique qualities you've developed over a lifetime.
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-teal mb-2">Growth Mindset</h4>
-                  <p className="text-gray-700">
-                    Believing that learning, development, and transformation continue throughout our entire lives.
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-teal mb-2">Community</h4>
-                  <p className="text-gray-700">
-                    Creating connections that provide support, inspiration, and a sense of belonging as we navigate this journey together.
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-teal mb-2">Health Optimization</h4>
-                  <p className="text-gray-700">
-                    Taking an evidence-based approach to maximize physical and cognitive health for vibrant longevity.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
