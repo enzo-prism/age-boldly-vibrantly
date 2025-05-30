@@ -47,7 +47,7 @@ const pillarContent: Record<string, PillarContent> = {
     ],
   },
   longevity: {
-    title: "Longevity",
+    title: "Longevity - Nourish to Flourish",
     description: "You were not meant to slow down. You were meant to thrive. At Rebellious Aging, we encourage and embrace a Whole- Food, Plant- Based Lifestyle, as a delicious, empowering way to add healthy years to your life AND at the same time easily settle into your best weight and add life to your years. With every healthy bite you are fueling your body with vitality, managing weight naturally (no calorie counting and eating as much as you like) and taking care of your health in the most delicious way. Longevity isn't about living longer—-it is about living better, with purpose, authenticity, and sparkle",
     quizTitle: "The Longevity Lifestyle Assessment",
     quizDescription: "Evaluate your current lifestyle habits and receive a personalized roadmap to optimize your health span.",
