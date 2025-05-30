@@ -38,12 +38,12 @@ const Home = () => {
   return (
     <>
       {/* Hero section */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="/lovable-uploads/acc306a5-3414-40c3-988d-cfce06dadfe1.png"
             alt="Vibrant seniors being active outdoors" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover md:animate-none animate-[pan-right_20s_ease-in-out_infinite]"
           />
           <div className="absolute inset-0 bg-black/25"></div>
         </div>
