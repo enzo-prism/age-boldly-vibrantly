@@ -1,7 +1,10 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   Carousel,
   CarouselContent,
@@ -73,6 +76,69 @@ const PillarPage = () => {
 
   const content = pillarContent[pillarId];
 
+  const suzChoiceContent = {
+    recipes: [
+      {
+        title: "Rainbow Buddha Bowl",
+        description: "A vibrant, nutrient-packed bowl with quinoa, roasted vegetables, and tahini dressing.",
+        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+        category: "Main Dish"
+      },
+      {
+        title: "Green Goddess Smoothie",
+        description: "Energizing blend of spinach, banana, mango, and coconut water.",
+        image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=400&h=300&fit=crop",
+        category: "Smoothie"
+      },
+      {
+        title: "Lentil Power Salad",
+        description: "Protein-rich lentils with fresh herbs, vegetables, and lemon vinaigrette.",
+        image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop",
+        category: "Salad"
+      }
+    ],
+    books: [
+      {
+        title: "How Not to Die",
+        author: "Dr. Michael Greger",
+        description: "The revolutionary guide to the foods that prevent and reverse disease.",
+        image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop"
+      },
+      {
+        title: "The Blue Zones",
+        author: "Dan Buettner",
+        description: "Lessons for living longer from the people who've lived the longest.",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+      },
+      {
+        title: "Eat to Live",
+        author: "Dr. Joel Fuhrman",
+        description: "The amazing nutrient-rich program for fast and sustained weight loss.",
+        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop"
+      }
+    ],
+    videos: [
+      {
+        title: "Forks Over Knives",
+        description: "Documentary examining the claim that most diseases can be controlled by rejecting animal-based foods.",
+        image: "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=400&h=300&fit=crop",
+        type: "Documentary"
+      },
+      {
+        title: "Game Changers",
+        description: "Revolutionary documentary about plant-based eating and athletic performance.",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        type: "Documentary"
+      },
+      {
+        title: "What the Health",
+        description: "Uncovers the secret to preventing and even reversing chronic diseases.",
+        image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400&h=300&fit=crop",
+        type: "Documentary"
+      }
+    ]
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -87,35 +153,147 @@ const PillarPage = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              gallery
-            </h2>
-            <Carousel className="w-full">
-              <CarouselContent>
-                {content.galleryImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <AspectRatio ratio={4 / 3}>
-                        <img
-                          src={image}
-                          alt={`${content.title} inspiration ${index + 1}`}
-                          className="rounded-lg object-cover w-full h-full"
-                        />
-                      </AspectRatio>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+      {/* Suz's Choice Section - Only for Longevity */}
+      {pillarId === 'longevity' ? (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">Suz's Choice for Longevity</h2>
+              
+              <Tabs defaultValue="recipes" className="w-full">
+                <TabsList className="w-full max-w-md mx-auto grid grid-cols-3 mb-8">
+                  <TabsTrigger value="recipes">Recipes</TabsTrigger>
+                  <TabsTrigger value="books">Books</TabsTrigger>
+                  <TabsTrigger value="videos">Videos</TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="recipes">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {suzChoiceContent.recipes.map((recipe, index) => (
+                      <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                        <div className="h-48 overflow-hidden">
+                          <img
+                            src={recipe.image}
+                            alt={recipe.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <CardHeader>
+                          <div className="flex justify-between items-start">
+                            <CardTitle className="text-lg">{recipe.title}</CardTitle>
+                            <span className="bg-teal/10 text-teal text-xs px-2 py-1 rounded">
+                              {recipe.category}
+                            </span>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-gray-600 text-sm mb-4">{recipe.description}</p>
+                          <Button variant="outline" className="w-full text-teal border-teal hover:bg-teal hover:text-white">
+                            Get Recipe
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="books">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {suzChoiceContent.books.map((book, index) => (
+                      <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                        <div className="h-48 overflow-hidden">
+                          <img
+                            src={book.image}
+                            alt={book.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <CardHeader>
+                          <CardTitle className="text-lg">{book.title}</CardTitle>
+                          <CardDescription>{book.author}</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-gray-600 text-sm mb-4">{book.description}</p>
+                          <Button variant="outline" className="w-full text-teal border-teal hover:bg-teal hover:text-white">
+                            Learn More
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="videos">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {suzChoiceContent.videos.map((video, index) => (
+                      <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                        <div className="h-48 overflow-hidden relative">
+                          <img
+                            src={video.image}
+                            alt={video.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                            <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                              <svg className="w-6 h-6 text-gray-800 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <CardHeader>
+                          <div className="flex justify-between items-start">
+                            <CardTitle className="text-lg">{video.title}</CardTitle>
+                            <span className="bg-coral/10 text-coral text-xs px-2 py-1 rounded">
+                              {video.type}
+                            </span>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-gray-600 text-sm mb-4">{video.description}</p>
+                          <Button variant="outline" className="w-full text-teal border-teal hover:bg-teal hover:text-white">
+                            Watch Now
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        // Gallery Section for other pillars
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">
+                gallery
+              </h2>
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {content.galleryImages.map((image, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <AspectRatio ratio={4 / 3}>
+                          <img
+                            src={image}
+                            alt={`${content.title} inspiration ${index + 1}`}
+                            className="rounded-lg object-cover w-full h-full"
+                          />
+                        </AspectRatio>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Nutrition CTA - Only for Longevity */}
       {pillarId === 'longevity' && (
