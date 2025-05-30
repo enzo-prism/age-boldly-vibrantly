@@ -54,7 +54,7 @@ const Home = () => {
               Age Boldly / Live Loudly
             </h1>
             <p className="text-xl md:text-2xl mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
-              Redefining what it means to grow older in today's world with confidence, style, and purpose.
+              Ditch the outdated rules. Rebellious aging is where vibrant health, bold confidence, and signature style take center stage.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
               <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white">
