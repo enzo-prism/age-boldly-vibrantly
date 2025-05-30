@@ -8,7 +8,7 @@ const Movement = () => {
       <section className="bg-teal/10 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">The Movement</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Rebellious Aging</h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8">
               Rebellious Aging is more than a lifestyle—it's a movement challenging outdated notions of what it means to grow older in today's world.
             </p>
