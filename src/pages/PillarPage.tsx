@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -24,7 +23,7 @@ interface PillarContent {
 const pillarContent: Record<string, PillarContent> = {
   confidence: {
     title: "Confidence",
-    description: "Confidence is the cornerstone of rebellious aging. It's about embracing your unique voice, standing firmly in your truth, and expressing yourself authentically without apology or permission. Our approach to confidence building combines mindset work, practical techniques, and community support.",
+    description: "Rebels don't shrink back, they rise up. Confidence in your 50's, 60's, 70's, 80's, and beyond is about knowing your worth, owning your story, and most importantly embracing the power of your wisdom. At Rebellious Aging we are here to help you silence the inner critic, shake off limiting, and outdated beliefs and reignite your self-assurance. This is your time to show up boldly, speak your truth, and radiate the kind of confidence that does NOT ask permission.",
     quizTitle: "The Confidence Self-Assessment",
     quizDescription: "Discover your current confidence level and receive personalized recommendations to build unshakeable self-assurance.",
     checklistTitle: "7-Day Confidence Boosting Checklist",
