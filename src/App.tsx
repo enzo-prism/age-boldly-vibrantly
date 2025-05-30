@@ -24,7 +24,7 @@ const App = () => (
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/movement" element={<Movement />} />
+            <Route path="/our-story" element={<Movement />} />
             <Route path="/pillars/:pillarId" element={<PillarPage />} />
             <Route path="/nutrition" element={<Nutrition />} />
             <Route path="/blog" element={<Blog />} />

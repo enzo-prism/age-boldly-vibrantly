@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -72,10 +73,10 @@ const Header = () => {
             Home
           </NavLink>
           <NavLink 
-            to="/movement" 
+            to="/our-story" 
             className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
           >
-            About
+            Our Story
           </NavLink>
 
           <DropdownMenu>
@@ -133,11 +134,11 @@ const Header = () => {
                 Home
               </NavLink>
               <NavLink 
-                to="/movement" 
+                to="/our-story" 
                 className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                About
+                Our Story
               </NavLink>
               <div className="py-2">
                 <div className="font-medium mb-1">Pillars</div>
