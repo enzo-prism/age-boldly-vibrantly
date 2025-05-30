@@ -46,6 +46,77 @@ const Movement = () => {
           </div>
         </div>
       </section>
+
+      {/* A Rebellious Introduction to Aging */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">A Rebellious Introduction to Aging/ Living Boldly Outside the Box</h2>
+            
+            <div className="space-y-6 text-gray-700">
+              <p>
+                Maybe up until now, you've lived neatly inside the lines—checking the boxes, doing what is expected, following the rules. But that box? It's getting cramped. And guess what? It was never really yours to begin with.
+              </p>
+              
+              <p>
+                Now is the time to break out, break free, and become the woman you were always meant to be.
+              </p>
+              
+              <div className="text-center my-8">
+                <p className="text-xl font-bold text-teal">
+                  Rebel. Reinvent. Reignite.<br />
+                  Sparkle fiercely, vibrantly, loudly and boldly.
+                </p>
+              </div>
+              
+              <p>
+                Aging sneaks up in unexpected ways. One day you are just living your life…and suddenly the mailbox is filled with AARP invitations. Medicare enrollment packets appear like clockwork. Social Security whispers. Senior discounts pop up at the movies, the bus, the train, in grocery stores and restaurants. People offer you their seat on the bus or subway. Friends pass away. You are told you "look good for your age." And during a global pandemic? You found yourself classified as high risk, just for existing.
+              </p>
+              
+              <p className="text-center font-medium">
+                Creepy, right?
+              </p>
+              
+              <p className="font-bold">
+                But here is the truth: None of that defines YOU.
+              </p>
+              
+              <p>
+                You are not a number. Not a statistic. Not a stereotype.
+              </p>
+              
+              <p>
+                If you are reading this, you already feel it. That quiet fire. That gentle nudge. That rebellious urge to say: WTF.
+              </p>
+              
+              <p>
+                At Rebellious Aging, we are not slowing down—-we are showing up.
+              </p>
+              
+              <p>
+                We defy the narrative that aging is about DECLINE. We embrace the idea that these are our glory years—-our time to glow brighter, live louder and love harder. We say yes to vibrant health, bold confidence and unapologetic style.
+              </p>
+              
+              <p>
+                So if you ever felt dismissed, overlooked, or boxed in, consider this your permission to rise.
+              </p>
+              
+              <p className="text-xl font-bold text-center">
+                DO NOT LET THE OLD LADY IN.
+              </p>
+              
+              <p>
+                Instead, let these so-called reminders of age ignite your determination. Let them fuel your curiosity, your wisdom and your spark. Let's reinvent what it means to grow older. Let's reignite our passion for living healthy, confident and authentic lives—on our own terms.
+              </p>
+              
+              <div className="text-center text-xl font-bold text-teal mt-8">
+                <p>Because Rebels do not retire.</p>
+                <p>They reignite.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
