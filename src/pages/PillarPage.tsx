@@ -22,7 +22,7 @@ interface PillarContent {
 
 const pillarContent: Record<string, PillarContent> = {
   confidence: {
-    title: "Confidence",
+    title: "Confidence - A Rebel's Superpower",
     description: "Rebels don't shrink back, they rise up. Confidence in your 50's, 60's, 70's, 80's, and beyond is about knowing your worth, owning your story, and most importantly embracing the power of your wisdom. At Rebellious Aging we are here to help you silence the inner critic, shake off limiting, and outdated beliefs and reignite your self-assurance. This is your time to show up boldly, speak your truth, and radiate the kind of confidence that does NOT ask permission.",
     quizTitle: "The Confidence Self-Assessment",
     quizDescription: "Discover your current confidence level and receive personalized recommendations to build unshakeable self-assurance.",
