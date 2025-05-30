@@ -45,26 +45,26 @@ const Home = () => {
             alt="Vibrant seniors being active outdoors" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/25"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl text-white">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 animate-fade-in drop-shadow-lg">
               Age Boldly / Live Loudly
             </h1>
-            <p className="text-xl md:text-2xl mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
+            <p className="text-xl md:text-2xl mb-8 animate-fade-in drop-shadow-md" style={{animationDelay: "0.2s"}}>
               Ditch the outdated rules. Rebellious aging is where vibrant health, bold confidence, and signature style take center stage.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
-              <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white">
+              <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg">
                 <Link to="/movement">Join the Movement</Link>
               </Button>
               <Button 
                 onClick={scrollToPillars}
                 variant="outline" 
                 size="lg" 
-                className="bg-white/20 backdrop-blur-sm text-white border-white hover:bg-white/30"
+                className="bg-white/30 backdrop-blur-sm text-white border-white hover:bg-white/40 shadow-lg"
               >
                 Explore the Pillars
               </Button>
