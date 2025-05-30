@@ -41,7 +41,7 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=2000"
+            src="/lovable-uploads/acc306a5-3414-40c3-988d-cfce06dadfe1.png"
             alt="Vibrant seniors being active outdoors" 
             className="w-full h-full object-cover"
           />
