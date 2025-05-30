@@ -5,6 +5,12 @@ import { ArrowUp } from 'lucide-react';
 import PillarCard from '@/components/home/PillarCard';
 import NewsletterSignup from '@/components/home/NewsletterSignup';
 import { Button } from '@/components/ui/button';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 const Home = () => {
   const pillars = [
@@ -28,6 +34,14 @@ const Home = () => {
     }
   ];
 
+  const heroImages = [
+    "/lovable-uploads/e383e12d-d193-4b00-864e-4593b167f3f4.png",
+    "/lovable-uploads/c1463203-92fc-434c-a583-4399bb786c73.png",
+    "/lovable-uploads/30b1e0f5-39bd-4e3e-8a1f-6c10d54b384a.png",
+    "/lovable-uploads/efa97b78-3cbb-4f8c-b543-050d2d59e578.png",
+    "/lovable-uploads/08d809cc-1f8a-475d-b10f-17d66e8b0502.png"
+  ];
+
   const scrollToPillars = () => {
     const pillarsSection = document.getElementById('pillars-section');
     if (pillarsSection) {
@@ -40,12 +54,29 @@ const Home = () => {
       {/* Hero section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/lovable-uploads/acc306a5-3414-40c3-988d-cfce06dadfe1.png"
-            alt="Vibrant seniors being active outdoors" 
-            className="w-full h-full object-cover md:animate-none animate-[pan-right_20s_ease-in-out_infinite]"
-          />
-          <div className="absolute inset-0 bg-black/25"></div>
+          <Carousel 
+            className="w-full h-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
+          >
+            <CarouselContent className="h-full -ml-0">
+              {heroImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-0 basis-full">
+                  <div className="relative w-full h-full">
+                    <img 
+                      src={image}
+                      alt={`Vibrant aging lifestyle ${index + 1}`}
+                      className="w-full h-[90vh] object-cover transition-opacity duration-1000"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
