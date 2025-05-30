@@ -36,7 +36,7 @@ const pillarContent: Record<string, PillarContent> = {
   },
   style: {
     title: "Style",
-    description: "Style is self-expression, not rule-following. Our approach to rebellious style focuses on discovering what makes you feel authentic and vibrant, regardless of conventional 'age-appropriate' fashion rules. We believe that personal style evolves throughout life and should be a source of joy and creativity.",
+    description: "Style is not superficial—it is soulful, it is how you tell the world who you are without saying a word. Whether it is bright red lips, a daring scarf, or the perfect pair of vintage shoes and matching purse, style at Rebellious Aging is about expressing your true self—-bold, bright and unapologetically you. The time is now, so sparkle and shine with personality, play, panache and let your style dreams emerge.",
     quizTitle: "Discover Your Authentic Style Personality",
     quizDescription: "Take this quiz to uncover your unique style personality and learn how to express yourself authentically through fashion.",
     checklistTitle: "The Rebellious Style Essentials Checklist",
