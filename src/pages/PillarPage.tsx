@@ -28,9 +28,9 @@ const pillarContent: Record<string, PillarContent> = {
     quizDescription: "Discover your current confidence level and receive personalized recommendations to build unshakeable self-assurance.",
     checklistTitle: "7-Day Confidence Boosting Checklist",
     galleryImages: [
-      "/lovable-uploads/5417c997-a5cb-468a-bacf-b4fb5b503c23.png",
-      "/lovable-uploads/8e31f2a9-47df-44dc-87ce-c323dba17cf0.png",
-      "/lovable-uploads/561e8ebb-46c4-40c8-a487-d7c5dbf1961f.png"
+      "/lovable-uploads/b03d839e-90f3-410b-83ed-728958a1c2a7.png",
+      "/lovable-uploads/de04437d-18b0-4eca-86c4-53077d082060.png",
+      "/lovable-uploads/80d36c2d-c6e2-4381-b9a9-60b9a000b58f.png"
     ],
   },
   style: {
