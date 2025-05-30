@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -28,8 +29,11 @@ const Movement = () => {
               <p className="text-gray-700 mb-4">
                 Through extensive research, I discovered the incredible power of a whole-food, plant-based diet. I immersed myself in the works of pioneers like Dr. Caldwell Esselstyn and Dr. T. Colin Campbell, whose groundbreaking studies showed how food can prevent and even reverse chronic disease.
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-700 mb-6">
                 What started as a personal experiment quickly became a transformative experience — for my body, mind, and outlook on life. This powerful shift from a conventional diet to a plant-based lifestyle is central to my story. I went from accepting the status quo to challenging it, which is the essence of Rebellious Aging.
+              </p>
+              <p className="text-gray-700">
+                Suz is not here to fade quietly into the background——and she doesn't want you to either. A lifelong lover of fashion (her first outfit obsession began at age 4) she believes personal style is a powerful expression of self, your calling card, your identity, it is letting the inner you shine through without apology. As a certified Whole-Food, Plant-Based lifestyle advocate, Suz has experienced firsthand the vibrant health, easy weight management, and renewed energy that come from living in alignment with your body. But Rebellious Aging is more than good health and great outfits——it is a call to rewrite the narrative. After 83 years of personal growth and learning to silence her own limiting beliefs and excel, she is now helping women 55+ to rebel against outdated expectations, reclaim their health, confidence, and style to become the bold, brilliant version of themselves they were always meant to be.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
