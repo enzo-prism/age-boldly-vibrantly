@@ -40,9 +40,9 @@ const pillarContent: Record<string, PillarContent> = {
     quizDescription: "Take this quiz to uncover your unique style personality and learn how to express yourself authentically through fashion.",
     checklistTitle: "The Rebellious Style Essentials Checklist",
     galleryImages: [
-      "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=600&fit=crop"
+      "/lovable-uploads/c520ecf2-2d39-4f88-aada-5c65c62e7081.png",
+      "/lovable-uploads/94ed8310-7c9b-41fe-8292-33065ffa56eb.png",
+      "/lovable-uploads/a624ace1-6dc9-4ab4-846c-176e441f514f.png"
     ],
   },
   longevity: {
