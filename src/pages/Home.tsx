@@ -51,7 +51,7 @@ const Home = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl text-white">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 animate-fade-in">
-              Forget everything you've heard about aging.
+              Age Boldly / Live Loudly
             </h1>
             <p className="text-xl md:text-2xl mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
               Redefining what it means to grow older in today's world with confidence, style, and purpose.
