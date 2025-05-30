@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -87,21 +88,6 @@ const Movement = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Manifesto */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">The Rebellious Aging Manifesto</h2>
-            <p className="text-lg text-gray-700 mb-8">
-              Our manifesto outlines the core principles and beliefs that guide our community. Download it for daily inspiration and a reminder of your commitment to aging rebelliously.
-            </p>
-            <Button className="bg-coral hover:bg-coral-dark text-white">
-              Download the Manifesto (PDF)
-            </Button>
           </div>
         </div>
       </section>
