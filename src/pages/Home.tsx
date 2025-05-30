@@ -89,7 +89,7 @@ const Home = () => {
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
               <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg">
-                <Link to="/our-story">Join the Movement</Link>
+                <Link to="/our-story">Our Story</Link>
               </Button>
               <Button 
                 onClick={scrollToPillars}
