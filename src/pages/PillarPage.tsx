@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -29,9 +28,9 @@ const pillarContent: Record<string, PillarContent> = {
     quizDescription: "Discover your current confidence level and receive personalized recommendations to build unshakeable self-assurance.",
     checklistTitle: "7-Day Confidence Boosting Checklist",
     galleryImages: [
-      "/lovable-uploads/d4b3ce25-41b5-45b9-b45a-ad66fbf37559.png",
-      "/lovable-uploads/7ced1d09-fd83-4a5f-a25d-c040b92e7fc0.png",
-      "/lovable-uploads/dd9b9018-e92c-4c8a-8d1a-417f09e618e1.png"
+      "/lovable-uploads/5417c997-a5cb-468a-bacf-b4fb5b503c23.png",
+      "/lovable-uploads/8e31f2a9-47df-44dc-87ce-c323dba17cf0.png",
+      "/lovable-uploads/561e8ebb-46c4-40c8-a487-d7c5dbf1961f.png"
     ],
   },
   style: {
