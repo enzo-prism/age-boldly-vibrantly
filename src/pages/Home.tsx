@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
@@ -69,7 +68,10 @@ const Home = () => {
                     <img 
                       src={image}
                       alt={`Vibrant aging lifestyle ${index + 1}`}
-                      className="w-full h-[90vh] object-cover transition-opacity duration-1000"
+                      className="w-full h-[90vh] object-cover object-center transition-opacity duration-1000"
+                      style={{
+                        objectPosition: 'center 20%'
+                      }}
                     />
                   </div>
                 </CarouselItem>
