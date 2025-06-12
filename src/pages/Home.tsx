@@ -101,6 +101,9 @@ const Home = () => {
               >
                 Explore the Pillars
               </Button>
+              <Button asChild size="lg" className="bg-coral hover:bg-coral-dark text-white shadow-lg">
+                <Link to="/contact">Contact</Link>
+              </Button>
             </div>
           </div>
         </div>
