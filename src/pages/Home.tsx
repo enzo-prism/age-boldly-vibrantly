@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
@@ -101,7 +102,12 @@ const Home = () => {
               >
                 Explore the Pillars
               </Button>
-              <Button asChild size="lg" className="bg-coral hover:bg-coral-dark text-white shadow-lg">
+              <Button 
+                asChild 
+                variant="outline" 
+                size="lg" 
+                className="bg-white/20 backdrop-blur-sm text-white border-white/50 hover:bg-white/30 shadow-sm"
+              >
                 <Link to="/contact">Contact</Link>
               </Button>
             </div>
