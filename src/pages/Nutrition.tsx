@@ -427,26 +427,6 @@ const Nutrition = () => {
                       Essential for bone health, immune function, and mood regulation. While your body produces vitamin D from sun exposure, many factors can limit this natural production.
                     </p>
                   </div>
-                  
-                  <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal">
-                    <h3 className="text-xl font-bold mb-2">Omega-3 (Algae-based DHA/EPA)</h3>
-                    <p className="text-gray-700 mb-3">
-                      <strong>Recommended for:</strong> Those who don't regularly consume flax, chia, or hemp seeds
-                    </p>
-                    <p className="text-gray-700">
-                      Important for brain health and reducing inflammation. Algae supplements provide preformed DHA and EPA without fish oil.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal">
-                    <h3 className="text-xl font-bold mb-2">Iodine</h3>
-                    <p className="text-gray-700 mb-3">
-                      <strong>Recommended for:</strong> Those who don't use iodized salt or eat seaweed regularly
-                    </p>
-                    <p className="text-gray-700">
-                      Critical for thyroid function. Plant foods can be unreliable sources, so supplementation or regular seaweed consumption is advisable.
-                    </p>
-                  </div>
                 </div>
                 
                 <h3 className="text-2xl font-bold mb-4">Quality Matters</h3>
