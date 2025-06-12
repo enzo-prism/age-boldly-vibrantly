@@ -39,7 +39,11 @@ const Home = () => {
     "/lovable-uploads/c1463203-92fc-434c-a583-4399bb786c73.png",
     "/lovable-uploads/30b1e0f5-39bd-4e3e-8a1f-6c10d54b384a.png",
     "/lovable-uploads/efa97b78-3cbb-4f8c-b543-050d2d59e578.png",
-    "/lovable-uploads/08d809cc-1f8a-475d-b10f-17d66e8b0502.png"
+    "/lovable-uploads/08d809cc-1f8a-475d-b10f-17d66e8b0502.png",
+    "/lovable-uploads/827e005a-0f1d-4ff9-8c64-de86f0cb830b.png",
+    "/lovable-uploads/7874b7f9-4097-47fa-9878-e29e6f7f5e0b.png",
+    "/lovable-uploads/8349679d-94f3-45a2-becd-840476452304.png",
+    "/lovable-uploads/16f5888d-2ca4-47be-8916-676a597f1890.png"
   ];
 
   const scrollToPillars = () => {
@@ -71,7 +75,7 @@ const Home = () => {
                       alt={`Vibrant aging lifestyle ${index + 1}`}
                       className="w-full h-[90vh] object-cover object-center transition-opacity duration-1000"
                       style={{
-                        objectPosition: 'center 20%'
+                        objectPosition: 'center 30%'
                       }}
                     />
                   </div>
