@@ -91,7 +91,7 @@ const Nutrition = () => {
                   value="protocol" 
                   className={`px-4 py-2 border-b-2 rounded-none ${activeTab === 'protocol' ? 'border-teal text-teal' : 'border-transparent'}`}
                 >
-                  Dr. Esselstyn Protocol
+                  Dr. Caldwell Esselstyn's Protocol
                 </TabsTrigger>
                 <TabsTrigger 
                   value="foods" 
@@ -182,62 +182,39 @@ const Nutrition = () => {
             </TabsContent>
             
             <TabsContent value="protocol">
-              <h2 className="text-3xl font-bold mb-6">Dr. Esselstyn's Protocol</h2>
-              <p className="mb-6">
-                Dr. Caldwell B. Esselstyn Jr.'s groundbreaking research at the Cleveland Clinic demonstrated that a strict plant-based diet can prevent and reverse heart disease. His protocol has helped countless patients avoid invasive procedures and medications.
-              </p>
+              <h2 className="text-3xl font-bold mb-6">Dr. Caldwell Esselstyn's Protocol</h2>
               
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>The Science Behind the Protocol</AccordionTrigger>
-                  <AccordionContent>
-                    <p className="mb-4">
-                      Dr. Esselstyn's research showed that eliminating dietary cholesterol and minimizing dietary fat allows the body to heal damaged endothelium (the inner lining of blood vessels), preventing and reversing atherosclerosis.
-                    </p>
-                    <p>
-                      His landmark 12-year study published in 1995 followed 18 patients with severe coronary artery disease. After following his program, 11 of the 18 patients experienced regression of their disease, proven by angiograms. None of the compliant patients suffered cardiac events during the study period.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger>Key Guidelines of the Protocol</AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="list-disc pl-6 space-y-2">
-                      <li>Eliminate all animal products, including meat, poultry, fish, dairy, and eggs</li>
-                      <li>Avoid all oils, including olive oil, coconut oil, and other plant oils</li>
-                      <li>Avoid processed foods, especially those containing added fats</li>
-                      <li>Avoid nuts and seeds in patients with established heart disease</li>
-                      <li>Eat plenty of leafy green vegetables daily</li>
-                      <li>Focus on whole grains, legumes, vegetables, and fruits</li>
-                      <li>Supplement with vitamin B12</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3">
-                  <AccordionTrigger>Implementation Tips</AccordionTrigger>
-                  <AccordionContent>
-                    <p className="mb-4">
-                      The Esselstyn protocol requires commitment and consistency. Here are some practical tips for implementation:
-                    </p>
-                    <ul className="list-disc pl-6 space-y-2">
-                      <li>Begin each meal with a leafy green salad or steamed greens</li>
-                      <li>Use vinegar, lemon juice, spices, and herbs for flavoring instead of oil</li>
-                      <li>Prepare meals in advance to avoid impulsive choices</li>
-                      <li>When dining out, call ahead to request oil-free, plant-based options</li>
-                      <li>Read labels carefully to avoid hidden fats and animal products</li>
-                      <li>Join a support group or work with a health coach familiar with the protocol</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-4">
-                  <AccordionTrigger>Medical Supervision</AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      It's essential to undertake this protocol under medical supervision, especially if you have existing health conditions or take medications. The diet can dramatically improve cholesterol, blood pressure, and blood sugar levels, potentially requiring adjustments to medications. Regular monitoring and communication with healthcare providers are crucial parts of the protocol.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+              <div className="prose max-w-none space-y-6">
+                <p className="text-lg leading-relaxed">
+                  Dr. Caldwell Esselstyn's work has transformed our understanding of heart disease. A distinguished surgeon and researcher at the Cleveland Clinic, he has conducted a long running study on the effects of nutrition on heart health. His findings are remarkable: a Whole Food, Plant-Based, oil free diet not only can prevent the progression of coronary heart disease —it can actually reverse it.
+                </p>
+                
+                <p className="leading-relaxed">
+                  By eliminating meat, dairy, oils, and highly processed foods, and focusing instead on nutrient-dense plant foods–especially leafy greens—-Dr. Esselstyn's patients have restored blood flow, reduced inflammation, and, in many cases avoided the need for surgery or medication. His message is clear and compelling: the most powerful tool for protecting your heart is your daily food choices. It is not a quick fix—-it is a lifestyle, and one that offers the potential for profound healing and vitality.
+                </p>
+                
+                <div className="bg-teal/10 p-6 rounded-lg border-l-4 border-teal">
+                  <p className="leading-relaxed">
+                    At Rebellious Aging, I deeply honor Dr Esselstyn's evidence– -based approach and incorporate his principles and guidance into my lifestyle. While each of us has unique needs, I believe his work offers a powerful foundation for anyone seeking long term health and vitality—especially as we age. Embracing a WFPB lifestyle is not about restriction—it is about liberation.
+                  </p>
+                </div>
+                
+                <p className="leading-relaxed">
+                  It is about reclaiming our health, protecting our clarity and purpose. Whether you are taking your first step or fine tuning your path, this way of eating can help you thrive from the inside out.
+                </p>
+                
+                <div className="bg-coral/10 p-6 rounded-lg border-l-4 border-coral">
+                  <p className="font-medium leading-relaxed">
+                    I follow his protocol myself and it has been life changing. This way of eating has brought my cholesterol levels down without meds, vanished the arthritis in my hands and fingers, stabilized my weight, re-energized me and gives me the peace of mind knowing I am supporting my heart and a peaceful life with every bite.
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-teal/20 to-coral/20 p-6 rounded-lg text-center">
+                  <p className="text-lg font-bold leading-relaxed">
+                    This lifestyle is not about DEPRIVATION. It is about freedom: freedom from chronic illness, from fear, from food confusion. It is never too late to nourish your body, protect your health, and feel truly alive again.
+                  </p>
+                </div>
+              </div>
             </TabsContent>
             
             <TabsContent value="foods">
