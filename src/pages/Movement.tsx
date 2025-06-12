@@ -39,21 +39,22 @@ const Movement = () => {
                   <h2 className="text-2xl sm:text-3xl font-bold text-teal">
                     Rebellious Aging
                   </h2>
-                  <p>I am not here to fade quietly into the background and I definitely do not want you to either. Rebellious Aging is a call to crush outdated beliefs about aging and celebrate a brave new chapter built on three vibrant pillars: radiant health, confident living, and unapologetic personal style. 
+                  <p>I am not here to fade quietly into the background and I definitely do not want you to either. Rebellious Aging is a call to crush outdated beliefs about aging and celebrate a brave new chapter built on three vibrant pillars: radiant health, confident living, and unapologetic personal style.
 
-Since I was a little girl draping myself in my mom’s scarfs, and  pearls, and proudly strutting in her fancy shoes, I’ve believed that style isn’t just decoration—it’s declaration. It is your calling card, your identity, the inner you shining through without apology.
+Since I was a little girl draping myself in my mom’s scarfs, and pearls, and proudly strutting in her fancy shoes, I’ve believed that style isn’t just decoration—it’s declaration. It is your calling card, your identity, the inner you shining through without apology.
 
 And CONFIDENCE? It is definitely not about having it all figured out. It’s about showing up, speaking up, and daring to sparkle in your way.
 
-I am passionate about the power of plants and the simple brilliance of Hippocrates’ wisdom: let food be thy medicine. I think you will enjoy learning more about plant power, never any judgement from me. My goal is to create awareness and plant a seed. 
+I am passionate about the power of plants and the simple brilliance of Hippocrates’ wisdom: let food be thy medicine. I think you will enjoy learning more about plant power, never any judgement from me. My goal is to create awareness and plant a seed.
 
 My approach to health and aging is grounded in science, and no one has shaped that understanding more than Dr. T. Colin Campbell, PhD. His decades of rigorous research, culminating in the China Study, one of the most comprehensive studies of nutrition. This study illuminates the powerful relationship between diet and disease. His work not only changed the conversation around food but also inspired the founding of the Center for Nutrition Studies, where I am honored to contribute through Whole Communities.
+
 
 I also hold a deep respect for Dr. Caldwell Esselstyn, whose clinical work in preventing and reversing heart disease has brought Dr. Campbell’s findings to life in profound ways. His protocol, centered on nutrient- dense, oil-free whole plant foods, demonstrates the healing potential of food when applied with precision and commitment.
 
 Together, their work forms the scientific and clinical backbone of my Whole Food, Plant-Based knowledge and conviction and philosophy—one rooted in evidence, compassion, and the belief that aging can be vibrant, purposeful, and full of possibility.
 
- I am here to inspire and encourage women 55-105 to rebel against any societal aging  limitations, reclaim their vitality and become the healthy, bold, beautiful, brilliant, confident, vibrant, version of themselves that they have always envisioned.</p>
+I am here to inspire and encourage women 55-105 to rebel against any societal aging limitations, reclaim their vitality and become the healthy, bold, beautiful, brilliant, confident, vibrant, version of themselves that they have always envisioned.</p>
                 </div>
               </div>
               
