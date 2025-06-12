@@ -268,6 +268,16 @@ const Nutrition = () => {
                         </div>
                       </li>
                     </ul>
+                    
+                    <div className="mt-6 pt-6 border-t border-gray-200">
+                      <h4 className="text-lg font-bold text-teal mb-3">Dr. Esselstyn's "Greens Jingle"</h4>
+                      <p className="text-gray-700 mb-3">
+                        Dr. Esselstyn is well known for his "Greens Jingle" that he uses to emphasize the importance of incorporating a variety of leafy greens into one's diet. In the jingle he mentions bok choy, collard greens, mustard greens, turnip greens, napa cabbage, Brussels sprouts, broccoli, cauliflower, cilantro, parsley, and asparagus.
+                      </p>
+                      <p className="text-gray-700">
+                        These 11 vegetables are rich in nitrates which the body converts into nitric oxide—a compound that helps dilate blood vessels to keep things moving and improve cardiovascular health.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 
