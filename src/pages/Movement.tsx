@@ -33,9 +33,7 @@ const Movement = () => {
                   <p>
                     Through extensive research, I discovered the incredible power of a whole-food, plant-based diet. I immersed myself in the works of pioneers like Dr. Caldwell Esselstyn and Dr. T. Colin Campbell, whose groundbreaking studies showed how food can prevent and even reverse chronic disease.
                   </p>
-                  <p>
-                    What started as a personal experiment quickly became a transformative experience — for my body, mind, and outlook on life. This powerful shift from a conventional diet to a plant-based lifestyle is central to my story. I went from accepting the status quo to challenging it, which is the essence of Rebellious Aging.
-                  </p>
+                  <p>What started as a personal experiment quickly became a transformative experience — for my body, mind, and outlook on life. This powerful shift from the Standard American Diet (Sad) to a plant-based lifestyle is central to my story. Not only did my cholesterol numbers become acceptable, my weight stabilized without ever giving it a second thought, the arthritis in my hands vanished, my energy accelerated and I remain, at 83, vibrant and drug free. Going from accepting the status quo to challenging it, is the essence of Rebellious Aging.</p>
                   <h2 className="text-2xl sm:text-3xl font-bold text-teal">
                     Rebellious Aging
                   </h2>
