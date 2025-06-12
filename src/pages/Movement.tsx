@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-
 const Movement = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal/10 to-coral/5 py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4">
@@ -42,20 +39,28 @@ const Movement = () => {
                   <h2 className="text-2xl sm:text-3xl font-bold text-teal">
                     Rebellious Aging
                   </h2>
-                  <p>
-                    Suz is not here to fade quietly into the background——and she doesn't want you to either. A lifelong lover of fashion (her first outfit obsession began at age 4) she believes personal style is a powerful expression of self, your calling card, your identity, it is letting the inner you shine through without apology. As a certified Whole-Food, Plant-Based lifestyle advocate, Suz has experienced firsthand the vibrant health, easy weight management, and renewed energy that come from living in alignment with your body. But Rebellious Aging is more than good health and great outfits——it is a call to rewrite the narrative. After 83 years of personal growth and learning to silence her own limiting beliefs and excel, she is now helping women 55+ to rebel against outdated expectations, reclaim their health, confidence, and style to become the bold, brilliant version of themselves they were always meant to be.
-                  </p>
+                  <p>I am not here to fade quietly into the background and I definitely do not want you to either. Rebellious Aging is a call to crush outdated beliefs about aging and celebrate a brave new chapter built on three vibrant pillars: radiant health, confident living, and unapologetic personal style. 
+
+Since I was a little girl draping myself in my mom’s scarfs, and  pearls, and proudly strutting in her fancy shoes, I’ve believed that style isn’t just decoration—it’s declaration. It is your calling card, your identity, the inner you shining through without apology.
+
+And CONFIDENCE? It is definitely not about having it all figured out. It’s about showing up, speaking up, and daring to sparkle in your way.
+
+I am passionate about the power of plants and the simple brilliance of Hippocrates’ wisdom: let food be thy medicine. I think you will enjoy learning more about plant power, never any judgement from me. My goal is to create awareness and plant a seed. 
+
+My approach to health and aging is grounded in science, and no one has shaped that understanding more than Dr. T. Colin Campbell, PhD. His decades of rigorous research, culminating in the China Study, one of the most comprehensive studies of nutrition. This study illuminates the powerful relationship between diet and disease. His work not only changed the conversation around food but also inspired the founding of the Center for Nutrition Studies, where I am honored to contribute through Whole Communities.
+
+I also hold a deep respect for Dr. Caldwell Esselstyn, whose clinical work in preventing and reversing heart disease has brought Dr. Campbell’s findings to life in profound ways. His protocol, centered on nutrient- dense, oil-free whole plant foods, demonstrates the healing potential of food when applied with precision and commitment.
+
+Together, their work forms the scientific and clinical backbone of my Whole Food, Plant-Based knowledge and conviction and philosophy—one rooted in evidence, compassion, and the belief that aging can be vibrant, purposeful, and full of possibility.
+
+ I am here to inspire and encourage women 55-105 to rebel against any societal aging  limitations, reclaim their vitality and become the healthy, bold, beautiful, brilliant, confident, vibrant, version of themselves that they have always envisioned.</p>
                 </div>
               </div>
               
               {/* Image */}
               <div className="order-1 lg:order-2 w-full">
                 <div className="rounded-xl overflow-hidden shadow-lg mx-auto max-w-md lg:max-w-none">
-                  <img 
-                    src="https://i.imgur.com/p1YPvQo.jpg" 
-                    alt="Suz smiling confidently, embodying the Rebellious Aging lifestyle" 
-                    className="w-full h-auto object-cover aspect-square sm:aspect-[4/5] lg:aspect-auto lg:h-full"
-                  />
+                  <img src="https://i.imgur.com/p1YPvQo.jpg" alt="Suz smiling confidently, embodying the Rebellious Aging lifestyle" className="w-full h-auto object-cover aspect-square sm:aspect-[4/5] lg:aspect-auto lg:h-full" />
                 </div>
               </div>
             </div>
@@ -142,8 +147,6 @@ const Movement = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Movement;
