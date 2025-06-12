@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
@@ -40,10 +39,10 @@ const Home = () => {
     "/lovable-uploads/30b1e0f5-39bd-4e3e-8a1f-6c10d54b384a.png",
     "/lovable-uploads/efa97b78-3cbb-4f8c-b543-050d2d59e578.png",
     "/lovable-uploads/08d809cc-1f8a-475d-b10f-17d66e8b0502.png",
-    "/lovable-uploads/827e005a-0f1d-4ff9-8c64-de86f0cb830b.png",
-    "/lovable-uploads/7874b7f9-4097-47fa-9878-e29e6f7f5e0b.png",
-    "/lovable-uploads/8349679d-94f3-45a2-becd-840476452304.png",
-    "/lovable-uploads/16f5888d-2ca4-47be-8916-676a597f1890.png"
+    "/lovable-uploads/e0902678-17f6-460f-be73-3b9521f08fb7.png",
+    "/lovable-uploads/8c02e566-3f53-4592-ab46-09bb1ec08c83.png",
+    "/lovable-uploads/34f618fe-81a8-41b5-8235-6f432ce55ce7.png",
+    "/lovable-uploads/6adf3183-9e2d-4253-98d4-ec336f1daa3e.png"
   ];
 
   const scrollToPillars = () => {
