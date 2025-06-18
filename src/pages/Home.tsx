@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
 import PillarCard from '@/components/home/PillarCard';
@@ -12,6 +13,9 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 
 const Home = () => {
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
+  const [preloadedImages, setPreloadedImages] = useState<Set<number>>(new Set());
+
   const pillars = [
     {
       title: "Confidence",
@@ -45,6 +49,38 @@ const Home = () => {
     "/lovable-uploads/6adf3183-9e2d-4253-98d4-ec336f1daa3e.png"
   ];
 
+  // Preload the second image immediately
+  useEffect(() => {
+    if (heroImages.length > 1) {
+      const img = new Image();
+      img.onload = () => {
+        setPreloadedImages(prev => new Set(prev).add(1));
+      };
+      img.src = heroImages[1];
+    }
+  }, []);
+
+  // Progressive loading function
+  const loadImage = (index: number) => {
+    if (!loadedImages.has(index) && !preloadedImages.has(index)) {
+      const img = new Image();
+      img.onload = () => {
+        setLoadedImages(prev => new Set(prev).add(index));
+      };
+      img.src = heroImages[index];
+    }
+  };
+
+  // Load next images when carousel becomes active
+  const handleCarouselSelect = (index: number) => {
+    // Load current image if not loaded
+    loadImage(index);
+    
+    // Preload next image
+    const nextIndex = (index + 1) % heroImages.length;
+    loadImage(nextIndex);
+  };
+
   const scrollToPillars = () => {
     const pillarsSection = document.getElementById('pillars-section');
     if (pillarsSection) {
@@ -69,14 +105,26 @@ const Home = () => {
               {heroImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-0 basis-full">
                   <div className="relative w-full h-full">
-                    <img 
-                      src={image}
-                      alt={`Vibrant aging lifestyle ${index + 1}`}
-                      className="w-full h-[90vh] object-cover object-center transition-opacity duration-1000"
-                      style={{
-                        objectPosition: 'center 30%'
-                      }}
-                    />
+                    {(loadedImages.has(index) || preloadedImages.has(index) || index === 0) ? (
+                      <img 
+                        src={image}
+                        alt={`Vibrant aging lifestyle ${index + 1}`}
+                        className="w-full h-[90vh] object-cover object-center transition-opacity duration-1000"
+                        style={{
+                          objectPosition: 'center 30%'
+                        }}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        onLoad={() => {
+                          if (index !== 0) {
+                            handleCarouselSelect(index);
+                          }
+                        }}
+                      />
+                    ) : (
+                      <div className="w-full h-[90vh] bg-gray-200 animate-pulse flex items-center justify-center">
+                        <div className="text-gray-400">Loading...</div>
+                      </div>
+                    )}
                   </div>
                 </CarouselItem>
               ))}
