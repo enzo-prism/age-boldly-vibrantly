@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, Heart, ArrowRight } from "lucide-react";
@@ -136,7 +137,7 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a 
-                href="mailto:suz@rebelliousaging.com" 
+                href="mailto:suz@rebelwithsuz.com" 
                 className="w-10 h-10 bg-coral/10 hover:bg-coral hover:text-white text-coral rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
                 <Mail size={18} />
