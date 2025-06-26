@@ -38,7 +38,11 @@ const Nutrition = () => {
         '2 tablespoons fresh mint, chopped',
         '5-6 cups of arugula or greens of choice'
       ],
-      instructions: 'In a large bowl, combine the beans, mangoes, oranges, jalapeño, lime zest and juice, and mint. Taste to see if you need more lime juice. Arrange the arugula or greens of choice in the bottom of a wide bowl, add the bean mixture, and feast on a combination of such good taste.'
+      instructions: [
+        'In a large bowl, combine the beans, mangoes, oranges, jalapeño, lime zest and juice, and mint.',
+        'Taste to see if you need more lime juice.',
+        'Arrange the arugula or greens of choice in the bottom of a wide bowl, add the bean mixture, and feast on a combination of such good taste.'
+      ]
     },
     {
       id: 2,
@@ -58,7 +62,12 @@ const Nutrition = () => {
         '½ medium red onion, minced',
         '2 tablespoons chives, chopped'
       ],
-      instructions: 'Roll up each kale leaf and slice thinly. Add to a large salad bowl with avocado, lemon juice and vinegar. Using your hands massage the avocado, lemon juice, and vinegar into the kale leaves until the kale starts to soften and wilt and each leaf is coated, about 2-3 minutes. Mix in red cabbage, apple, dried cherries, onion and chives. Note: If you have problems finding unsweetened, unsulfured cherries or blueberries, they can be ordered on-line.'
+      instructions: [
+        'Roll up each kale leaf and slice thinly. Add to a large salad bowl with avocado, lemon juice and vinegar.',
+        'Using your hands massage the avocado, lemon juice, and vinegar into the kale leaves until the kale starts to soften and wilt and each leaf is coated, about 2-3 minutes.',
+        'Mix in red cabbage, apple, dried cherries, onion and chives.',
+        'Note: If you have problems finding unsweetened, unsulfured cherries or blueberries, they can be ordered on-line.'
+      ]
     },
     {
       id: 3,
@@ -82,7 +91,15 @@ const Nutrition = () => {
         '1 tablespoon white miso',
         '1 tablespoon balsamic vinegar'
       ],
-      instructions: 'In a large pot over medium-high heat, add 2 tablespoons of water. Add the shallots or onion and cook until translucent, about 3 minutes, adding more water as needed. Stir in the garlic, ginger and rosemary and continue cooking for about 30 seconds. Add the vegetable broth, sweet potato, barley, and cayenne pepper and bring just to a boil. Reduce the heat to a simmer and cook partially covered, 15-20 minutes, until the sweet potato is tender. Add the lima beans, swiss chard or greens of choice, maple syrup (if using) and cook for about 3 minutes, until the greens begin to soften. In a small bowl, place some of the soup liquid and stir in the miso. Add this mix to the pot and also stir in the balsamic vinegar. I am addicted to this soup. Deelish! Company worthy.'
+      instructions: [
+        'In a large pot over medium-high heat, add 2 tablespoons of water. Add the shallots or onion and cook until translucent, about 3 minutes, adding more water as needed.',
+        'Stir in the garlic, ginger and rosemary and continue cooking for about 30 seconds.',
+        'Add the vegetable broth, sweet potato, barley, and cayenne pepper and bring just to a boil.',
+        'Reduce the heat to a simmer and cook partially covered, 15-20 minutes, until the sweet potato is tender.',
+        'Add the lima beans, swiss chard or greens of choice, maple syrup (if using) and cook for about 3 minutes, until the greens begin to soften.',
+        'In a small bowl, place some of the soup liquid and stir in the miso. Add this mix to the pot and also stir in the balsamic vinegar.',
+        'I am addicted to this soup. Deelish! Company worthy.'
+      ]
     },
     {
       id: 4,
@@ -104,7 +121,14 @@ const Nutrition = () => {
         '1 cup oat milk',
         '1 cup blueberries, fresh or frozen (If you can find them wild blueberries are wonderful)'
       ],
-      instructions: 'Preheat oven to 400 degrees. Mix the first 6 ingredients in a large bowl. Place remaining ingredients in the center. Carefully fold from center to outside until all ingredients are blended. DO NOT OVER STIR. Spoon batter into a nonstick muffin pan. Makes 8-10 muffins. Bake for 25 minutes, or until the tops are brown and the toothpick is clean. Do not overbake.'
+      instructions: [
+        'Preheat oven to 400 degrees.',
+        'Mix the first 6 ingredients in a large bowl.',
+        'Place remaining ingredients in the center.',
+        'Carefully fold from center to outside until all ingredients are blended. DO NOT OVER STIR.',
+        'Spoon batter into a nonstick muffin pan. Makes 8-10 muffins.',
+        'Bake for 25 minutes, or until the tops are brown and the toothpick is clean. Do not overbake.'
+      ]
     },
     {
       id: 5,
@@ -118,7 +142,10 @@ const Nutrition = () => {
         '2 tablespoons of Dijon mustard',
         '1 tablespoon of maple syrup'
       ],
-      instructions: 'Whisk the ingredients in a bowl or place in a jar and shake until smooth. Makes several servings.'
+      instructions: [
+        'Whisk the ingredients in a bowl or place in a jar and shake until smooth.',
+        'Makes several servings.'
+      ]
     }
   ];
   
@@ -490,7 +517,16 @@ const Nutrition = () => {
                           
                           <div>
                             <h4 className="font-semibold mb-3">Instructions:</h4>
-                            <p className="text-sm leading-relaxed">{recipe.instructions}</p>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.instructions.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
                           </div>
                         </div>
                       </div>
