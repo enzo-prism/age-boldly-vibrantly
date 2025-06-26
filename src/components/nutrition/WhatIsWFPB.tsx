@@ -15,7 +15,7 @@ const WhatIsWFPB = () => {
           <li><strong>Whole foods:</strong> Foods that are unprocessed or minimally processed</li>
           <li><strong>Plant-based:</strong> Derived from plants, including vegetables, fruits, whole grains, legumes, nuts, and seeds</li>
           <li><strong>Minimally processed:</strong> Foods that retain their natural nutritional integrity</li>
-          <li><strong>Avoids:</strong> Animal products, refined foods, added oils, and most packaged foods</li>
+          <li><strong>Avoids:</strong> Animal products, refined foods, added oils, most packaged foods, minimize sugars, oils, and salt</li>
         </ul>
         
         <p className="mb-4">
