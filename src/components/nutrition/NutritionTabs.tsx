@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import WhatIsWFPB from './WhatIsWFPB';
 import Benefits from './Benefits';
 import Protocol from './Protocol';
+import DrCampbell from './DrCampbell';
 import Foods from './Foods';
 import Recipes from './Recipes';
 import Supplements from './Supplements';
@@ -36,6 +37,12 @@ const NutritionTabs = () => {
                 Dr. Caldwell Esselstyn's Protocol
               </TabsTrigger>
               <TabsTrigger 
+                value="dr-campbell" 
+                className={`px-4 py-2 border-b-2 rounded-none ${activeTab === 'dr-campbell' ? 'border-teal text-teal' : 'border-transparent'}`}
+              >
+                Dr. T. Colin Campbell
+              </TabsTrigger>
+              <TabsTrigger 
                 value="foods" 
                 className={`px-4 py-2 border-b-2 rounded-none ${activeTab === 'foods' ? 'border-teal text-teal' : 'border-transparent'}`}
               >
@@ -66,6 +73,10 @@ const NutritionTabs = () => {
           
           <TabsContent value="protocol">
             <Protocol />
+          </TabsContent>
+          
+          <TabsContent value="dr-campbell">
+            <DrCampbell />
           </TabsContent>
           
           <TabsContent value="foods">

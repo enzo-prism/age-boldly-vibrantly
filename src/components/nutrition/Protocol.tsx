@@ -36,6 +36,32 @@ const Protocol = () => {
             This lifestyle is not about DEPRIVATION. It is about freedom: freedom from chronic illness, from fear, from food confusion. It is never too late to nourish your body, protect your health, and feel truly alive again.
           </p>
         </div>
+        
+        <div className="mt-8">
+          <h3 className="text-2xl font-bold mb-4">Dr. Esselstyn's Attention Grabbers</h3>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-coral">
+              <blockquote className="text-lg italic leading-relaxed">
+                "Heart disease is a food borne illness."
+              </blockquote>
+              <cite className="block text-right mt-2 text-gray-600">— Dr. Caldwell Esselstyn</cite>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-coral">
+              <blockquote className="text-lg italic leading-relaxed">
+                "The truth be told, coronary artery disease is a toothless paper tiger that needs to never exist and if it does exist, it need never progress."
+              </blockquote>
+              <cite className="block text-right mt-2 text-gray-600">— Dr. Caldwell Esselstyn</cite>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-coral">
+              <blockquote className="text-lg italic leading-relaxed">
+                "Some people think the WFPB diet is extreme. Half a million people a year will have their chest opened up and a vein taken from their leg and sewn onto their coronary artery. Some people would call that extreme."
+              </blockquote>
+              <cite className="block text-right mt-2 text-gray-600">— Dr. Caldwell Esselstyn</cite>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
