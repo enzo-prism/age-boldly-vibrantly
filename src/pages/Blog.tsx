@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -13,6 +12,7 @@ const Blog = () => {
       title: 'A Quick Introduction and Guide to a Whole-Food Plant-Based (WFPB) Lifestyle',
       excerpt: 'The WFPB lifestyle is NOT a diet. It is a lifestyle which promotes better health, greater energy, and a deeper connection with the way humans chose to nourish themselves.',
       date: '1/29/2025',
+      dateSort: new Date('2025-01-29'),
       category: 'Blog 2',
       readTime: '12 min read'
     },
@@ -21,6 +21,7 @@ const Blog = () => {
       title: 'The Rebellious Guide (What is on Your Plate)',
       excerpt: 'Let\'s set the table for something deliciously different. I am excited to talk with you about something that has transformed my life - the Whole Food Plant Based (WFPB) lifestyle.',
       date: '6/25/2025',
+      dateSort: new Date('2025-06-25'),
       category: 'Blog 3',
       readTime: '8 min read'
     },
@@ -29,10 +30,14 @@ const Blog = () => {
       title: 'The Road to Success: 8 Thoughts',
       excerpt: 'Eight powerful principles that pave the way to success: from hard work and patience to self-confidence and focus. Discover the mindset shifts that transform ordinary into extraordinary.',
       date: '4/4/2025',
+      dateSort: new Date('2025-04-04'),
       category: 'Blog 1',
       readTime: '3 min read'
     }
   ];
+
+  // Sort blog posts by date in descending order (most recent first)
+  const sortedBlogPosts = [...blogPosts].sort((a, b) => b.dateSort.getTime() - a.dateSort.getTime());
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -55,7 +60,7 @@ const Blog = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid gap-8">
-              {blogPosts.map((post) => (
+              {sortedBlogPosts.map((post) => (
                 <Card key={post.id} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
@@ -106,4 +111,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
