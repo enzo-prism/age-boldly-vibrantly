@@ -13,6 +13,7 @@ import Nutrition from "./pages/Nutrition";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import WelcomeLetter from "./pages/WelcomeLetter";
 import PasswordProtection from "./components/PasswordProtection";
 
 const queryClient = new QueryClient();
@@ -54,6 +55,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/our-story" element={<Movement />} />
+              <Route path="/welcome-letter" element={<WelcomeLetter />} />
               <Route path="/pillars/:pillarId" element={<PillarPage />} />
               {/* Legacy route redirect */}
               <Route path="/pillars/longevity" element={<Navigate to="/pillars/health" replace />} />

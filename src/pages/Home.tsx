@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
 import PillarCard from '@/components/home/PillarCard';
 import NewsletterSignup from '@/components/home/NewsletterSignup';
+import WelcomePopup from '@/components/home/WelcomePopup';
 import { Button } from '@/components/ui/button';
 import {
   Carousel,
@@ -15,6 +15,20 @@ import Autoplay from 'embla-carousel-autoplay';
 const Home = () => {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
   const [preloadedImages, setPreloadedImages] = useState<Set<number>>(new Set());
+  const [showWelcomePopup, setShowWelcomePopup] = useState(false);
+
+  // Check if user has seen the welcome popup before
+  useEffect(() => {
+    const hasSeenWelcome = localStorage.getItem('has-seen-welcome-popup');
+    if (!hasSeenWelcome) {
+      setShowWelcomePopup(true);
+    }
+  }, []);
+
+  const handleCloseWelcomePopup = () => {
+    setShowWelcomePopup(false);
+    localStorage.setItem('has-seen-welcome-popup', 'true');
+  };
 
   const pillars = [
     {
@@ -90,6 +104,11 @@ const Home = () => {
 
   return (
     <>
+      <WelcomePopup 
+        isOpen={showWelcomePopup} 
+        onClose={handleCloseWelcomePopup} 
+      />
+
       {/* Hero section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
