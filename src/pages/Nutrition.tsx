@@ -105,6 +105,20 @@ const Nutrition = () => {
         '1 cup blueberries, fresh or frozen (If you can find them wild blueberries are wonderful)'
       ],
       instructions: 'Preheat oven to 400 degrees. Mix the first 6 ingredients in a large bowl. Place remaining ingredients in the center. Carefully fold from center to outside until all ingredients are blended. DO NOT OVER STIR. Spoon batter into a nonstick muffin pan. Makes 8-10 muffins. Bake for 25 minutes, or until the tops are brown and the toothpick is clean. Do not overbake.'
+    },
+    {
+      id: 5,
+      title: '3-2-1 Salad Dressing',
+      description: 'A simple and delicious oil-free salad dressing by Jane and Anne Esselstyn.',
+      servings: 'Several servings',
+      source: 'Jane and Anne Esselstyn',
+      tags: ['Quick', 'Oil-Free'],
+      ingredients: [
+        '3 tablespoons balsamic vinegar',
+        '2 tablespoons of Dijon mustard',
+        '1 tablespoon of maple syrup'
+      ],
+      instructions: 'Whisk the ingredients in a bowl or place in a jar and shake until smooth. Makes several servings.'
     }
   ];
   
