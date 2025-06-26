@@ -1,10 +1,14 @@
+
 export interface PillarContent {
   title: string;
   description: string;
   quizTitle: string;
   quizDescription: string;
   checklistTitle: string;
-  galleryImages: string[];
+  galleryImages: Array<{
+    src: string;
+    description: string;
+  }>;
 }
 
 export const pillarContent: Record<string, PillarContent> = {
@@ -15,10 +19,22 @@ export const pillarContent: Record<string, PillarContent> = {
     quizDescription: "Discover your current confidence level and receive personalized recommendations to build unshakeable self-assurance.",
     checklistTitle: "7-Day Confidence Boosting Checklist",
     galleryImages: [
-      "/lovable-uploads/de04437d-18b0-4eca-86c4-53077d082060.png",
-      "/lovable-uploads/80d36c2d-c6e2-4381-b9a9-60b9a000b58f.png",
-      "/lovable-uploads/8a5c92a9-a9f5-46c7-a24a-8c9ce5b620d2.png",
-      "/lovable-uploads/1c94eebb-2eac-4395-a57b-5bcca749c799.png"
+      {
+        src: "/lovable-uploads/de04437d-18b0-4eca-86c4-53077d082060.png",
+        description: "Embrace your authentic self with confidence"
+      },
+      {
+        src: "/lovable-uploads/80d36c2d-c6e2-4381-b9a9-60b9a000b58f.png",
+        description: "Stand tall and own your power"
+      },
+      {
+        src: "/lovable-uploads/8a5c92a9-a9f5-46c7-a24a-8c9ce5b620d2.png",
+        description: "Radiate confidence from within"
+      },
+      {
+        src: "/lovable-uploads/1c94eebb-2eac-4395-a57b-5bcca749c799.png",
+        description: "Your wisdom is your superpower"
+      }
     ],
   },
   style: {
@@ -28,9 +44,18 @@ export const pillarContent: Record<string, PillarContent> = {
     quizDescription: "Take this quiz to uncover your unique style personality and learn how to express yourself authentically through fashion.",
     checklistTitle: "The Rebellious Style Essentials Checklist",
     galleryImages: [
-      "/lovable-uploads/c520ecf2-2d39-4f88-aada-5c65c62e7081.png",
-      "/lovable-uploads/94ed8310-7c9b-41fe-8292-33065ffa56eb.png",
-      "/lovable-uploads/a624ace1-6dc9-4ab4-846c-176e441f514f.png"
+      {
+        src: "/lovable-uploads/c520ecf2-2d39-4f88-aada-5c65c62e7081.png",
+        description: "Express your unique style with confidence"
+      },
+      {
+        src: "/lovable-uploads/94ed8310-7c9b-41fe-8292-33065ffa56eb.png",
+        description: "Bold fashion choices for the rebellious spirit"
+      },
+      {
+        src: "/lovable-uploads/a624ace1-6dc9-4ab4-846c-176e441f514f.png",
+        description: "Timeless elegance meets modern rebellion"
+      }
     ],
   },
   health: {
@@ -40,9 +65,18 @@ export const pillarContent: Record<string, PillarContent> = {
     quizDescription: "Evaluate your current lifestyle habits and receive a personalized roadmap to optimize your health span.",
     checklistTitle: "Daily Health Practices Checklist",
     galleryImages: [
-      "/lovable-uploads/cf105833-6fd8-4909-9750-38675de6241b.png",
-      "/lovable-uploads/34efa388-151a-455e-b488-c2eab5762e90.png",
-      "/lovable-uploads/035da362-e4a4-4878-9f56-1bf7c28634b7.png"
+      {
+        src: "/lovable-uploads/cf105833-6fd8-4909-9750-38675de6241b.png",
+        description: "Essential nutrition guides for plant-based living"
+      },
+      {
+        src: "/lovable-uploads/34efa388-151a-455e-b488-c2eab5762e90.png",
+        description: "Nourishing whole foods for vibrant health"
+      },
+      {
+        src: "/lovable-uploads/035da362-e4a4-4878-9f56-1bf7c28634b7.png",
+        description: "Fresh ingredients for a thriving lifestyle"
+      }
     ],
   },
 };
