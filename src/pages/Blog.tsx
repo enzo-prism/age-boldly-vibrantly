@@ -13,7 +13,6 @@ const Blog = () => {
       excerpt: 'The WFPB lifestyle is NOT a diet. It is a lifestyle which promotes better health, greater energy, and a deeper connection with the way humans chose to nourish themselves.',
       date: '1/29/2025',
       dateSort: new Date('2025-01-29'),
-      category: 'Blog 2',
       readTime: '12 min read'
     },
     {
@@ -22,7 +21,6 @@ const Blog = () => {
       excerpt: 'Let\'s set the table for something deliciously different. I am excited to talk with you about something that has transformed my life - the Whole Food Plant Based (WFPB) lifestyle.',
       date: '6/25/2025',
       dateSort: new Date('2025-06-25'),
-      category: 'Blog 3',
       readTime: '8 min read'
     },
     {
@@ -31,7 +29,6 @@ const Blog = () => {
       excerpt: 'Eight powerful principles that pave the way to success: from hard work and patience to self-confidence and focus. Discover the mindset shifts that transform ordinary into extraordinary.',
       date: '4/4/2025',
       dateSort: new Date('2025-04-04'),
-      category: 'Blog 1',
       readTime: '3 min read'
     }
   ];
@@ -68,8 +65,6 @@ const Blog = () => {
                         <Calendar className="w-4 h-4" />
                         {post.date}
                       </div>
-                      <span>•</span>
-                      <span>{post.category}</span>
                       <span>•</span>
                       <span>{post.readTime}</span>
                     </div>
