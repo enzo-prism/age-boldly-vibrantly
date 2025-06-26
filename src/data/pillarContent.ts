@@ -1,4 +1,3 @@
-
 export interface PillarContent {
   title: string;
   description: string;
@@ -30,10 +29,6 @@ export const pillarContent: Record<string, PillarContent> = {
       {
         src: "/lovable-uploads/8a5c92a9-a9f5-46c7-a24a-8c9ce5b620d2.png",
         description: "Radiate confidence from within"
-      },
-      {
-        src: "/lovable-uploads/1c94eebb-2eac-4395-a57b-5bcca749c799.png",
-        description: "Your wisdom is your superpower"
       }
     ],
   },
