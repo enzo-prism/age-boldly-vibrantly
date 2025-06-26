@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -6,7 +7,7 @@ import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 const BlogPost = () => {
   const { postId } = useParams();
   
-  // Handle the new blog post
+  // Handle the success blog post (now Blog 1)
   if (postId === 'the-road-to-success-8-thoughts') {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
@@ -23,10 +24,10 @@ const BlogPost = () => {
               <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                 <div className="flex items-center gap-1">
                   <Calendar className="w-4 h-4" />
-                  6/26/2025
+                  4/4/2025
                 </div>
                 <span>•</span>
-                <span>Blog 5</span>
+                <span>Blog 1</span>
                 <span>•</span>
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
@@ -106,7 +107,7 @@ const BlogPost = () => {
     );
   }
   
-  // Handle the existing blog post
+  // Handle the nutrition blog post (now Blog 2)
   if (postId === 'rebellious-guide-what-is-on-your-plate') {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
@@ -126,7 +127,7 @@ const BlogPost = () => {
                   6/25/2025
                 </div>
                 <span>•</span>
-                <span>Blog 4</span>
+                <span>Blog 2</span>
                 <span>•</span>
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />

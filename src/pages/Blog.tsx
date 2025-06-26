@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,20 +8,20 @@ import { Calendar, ArrowRight } from 'lucide-react';
 const Blog = () => {
   const blogPosts = [
     {
-      id: 'the-road-to-success-8-thoughts',
-      title: 'The Road to Success: 8 Thoughts',
-      excerpt: 'Eight powerful principles that pave the way to success: from hard work and patience to self-confidence and focus. Discover the mindset shifts that transform ordinary into extraordinary.',
-      date: '6/26/2025',
-      category: 'Blog 5',
-      readTime: '3 min read'
-    },
-    {
       id: 'rebellious-guide-what-is-on-your-plate',
       title: 'The Rebellious Guide (What is on Your Plate)',
       excerpt: 'Let\'s set the table for something deliciously different. I am excited to talk with you about something that has transformed my life - the Whole Food Plant Based (WFPB) lifestyle.',
       date: '6/25/2025',
-      category: 'Blog 4',
+      category: 'Blog 2',
       readTime: '8 min read'
+    },
+    {
+      id: 'the-road-to-success-8-thoughts',
+      title: 'The Road to Success: 8 Thoughts',
+      excerpt: 'Eight powerful principles that pave the way to success: from hard work and patience to self-confidence and focus. Discover the mindset shifts that transform ordinary into extraordinary.',
+      date: '4/4/2025',
+      category: 'Blog 1',
+      readTime: '3 min read'
     }
   ];
 
