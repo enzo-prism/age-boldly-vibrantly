@@ -3,7 +3,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { pillarContent } from '@/data/pillarContent';
 import PillarHero from '@/components/pillar/PillarHero';
-import SuzChoiceSection from '@/components/pillar/SuzChoiceSection';
 import GallerySection from '@/components/pillar/GallerySection';
 import NutritionCTA from '@/components/pillar/NutritionCTA';
 import QuizSection from '@/components/pillar/QuizSection';
@@ -27,11 +26,7 @@ const PillarPage = () => {
     <div>
       <PillarHero content={content} />
 
-      {pillarId === 'health' ? (
-        <SuzChoiceSection />
-      ) : (
-        <GallerySection content={content} />
-      )}
+      <GallerySection content={content} />
 
       {pillarId === 'health' && <NutritionCTA />}
 

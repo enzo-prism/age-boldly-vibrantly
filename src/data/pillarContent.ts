@@ -1,3 +1,4 @@
+
 export interface PillarContent {
   title: string;
   description: string;
@@ -43,7 +44,10 @@ export const pillarContent: Record<string, PillarContent> = {
     galleryImages: [
       "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&h=600&fit=crop"
     ],
   },
 };
