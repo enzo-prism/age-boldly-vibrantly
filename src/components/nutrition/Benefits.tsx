@@ -26,8 +26,14 @@ const Benefits = () => {
         </div>
         <div className="bg-white p-6 rounded-lg shadow-sm">
           <h3 className="text-xl font-bold mb-3">Cancer Prevention</h3>
+          <p className="text-gray-700 mb-3">
+            Plant foods are rich in antioxidants and phytonutrients that help protect cells from damage that can lead to cancer. Animal products and processed meats are linked to cancer risk.
+          </p>
+          <p className="text-gray-700 mb-3">
+            <strong>Antioxidants</strong> are natural substances that help protect your body's cells from damage. They work by stopping harmful molecules called free radicals, which can hurt cells and contribute to aging and diseases like cancer or heart disease. You can think of antioxidants as your body's tiny defenders - tiny shields that block damage.
+          </p>
           <p className="text-gray-700">
-            Plant foods are rich in antioxidants and phytonutrients that help protect cells from damage that can lead to cancer, while avoiding processed meats and other animal products linked to increased cancer risk.
+            <strong>Phytonutrients</strong> are natural chemicals found in plants that keep plants healthy and can help to keep you healthy also. They support your body by protecting against disease, reducing inflammation and helping your cells to work better. You can think of phytonutrients as the bonus superpowers in fruits, veggies, whole grains, and herbs. They give your body extra protection and strength.
           </p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-sm">
