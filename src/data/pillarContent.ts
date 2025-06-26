@@ -41,13 +41,9 @@ export const pillarContent: Record<string, PillarContent> = {
     quizDescription: "Evaluate your current lifestyle habits and receive a personalized roadmap to optimize your health span.",
     checklistTitle: "Daily Health Practices Checklist",
     galleryImages: [
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&h=600&fit=crop",
-      "/lovable-uploads/cf105833-6fd8-4909-9750-38675de6241b.png"
+      "/lovable-uploads/cf105833-6fd8-4909-9750-38675de6241b.png",
+      "/lovable-uploads/34efa388-151a-455e-b488-c2eab5762e90.png",
+      "/lovable-uploads/035da362-e4a4-4878-9f56-1bf7c28634b7.png"
     ],
   },
 };
