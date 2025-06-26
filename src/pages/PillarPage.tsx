@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -275,13 +276,15 @@ const PillarPage = () => {
                   {content.galleryImages.map((image, index) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                       <div className="p-1">
-                        <AspectRatio ratio={4 / 3}>
-                          <img
-                            src={image}
-                            alt={`${content.title} inspiration ${index + 1}`}
-                            className="rounded-lg object-cover w-full h-full"
-                          />
-                        </AspectRatio>
+                        <div className="bg-gray-50 rounded-lg overflow-hidden">
+                          <AspectRatio ratio={4 / 3}>
+                            <img
+                              src={image}
+                              alt={`${content.title} inspiration ${index + 1}`}
+                              className="w-full h-full object-contain"
+                            />
+                          </AspectRatio>
+                        </div>
                       </div>
                     </CarouselItem>
                   ))}
