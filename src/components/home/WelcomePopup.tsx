@@ -23,13 +23,13 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) => {
         <DialogHeader className="text-center pb-4">
           <div className="text-4xl mb-2">💚</div>
           <DialogTitle className="text-2xl font-bold text-gray-800 mb-2">
-            Welcome, Dear Rebel!
+            Welcome, My Dear Rebel!
           </DialogTitle>
         </DialogHeader>
         
         <div className="text-center space-y-4">
           <p className="text-gray-600 leading-relaxed">
-            "I am so glad that you are here. I have created this space to not only welcome you into my world but to share with you what I have learned over the years..."
+            "I'm so glad you're here. I created this space not just to share what I've learned over the years, but to open a door—so we can walk through this chapter together..."
           </p>
           
           <div className="pt-4">

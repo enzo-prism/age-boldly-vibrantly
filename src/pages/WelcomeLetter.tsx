@@ -14,40 +14,48 @@ const WelcomeLetter = () => {
           </div>
           
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
-            <p className="text-xl font-medium text-teal-600">Welcome my dear Rebel,</p>
+            <h2 className="text-2xl font-bold text-teal-600 mb-4">Welcome, My Dear Rebel</h2>
             
-            <p>I am so glad that you are here.</p>
+            <p>I'm so glad you're here.</p>
             
-            <p>I have created this space to not only welcome you into my world but to share with you what I have learned over the years. I look forward to hearing your stories also, and to encourage and inspire you, to offer support and inspiration and motivation, to send warm hugs if needed, and share and exchange knowledge. Together as "ladies of a certain age" we will march alongside each other pushing back the stigmas of traditional aging. I cannot wait to see what y'all will bring to this party. Remember we are better together.</p>
+            <p>I created this space not just to share what I've learned over the years, but to open a door—so we can walk through this chapter together. I want to hear your stories. I want to offer support, inspiration, laughter, and the occasional nudge (or hug) when needed. We are better together, and as ladies of a certain age, we're marching side-by-side—pushing back on outdated ideas of what aging should look like.</p>
             
-            <p>I hope we can balance the serious and the sassy here. Sass and serious absolutely deserve their own private moment, because together they combine that magical balance that defines Rebellious Aging. The sass gives us permission to have fun, break the rules, and embrace our own personal sparkle. The serious offers comfort, wisdom, facts, learning and encouragement for real life challenges. By making space for both, we are honoring the WHOLE PERSON.</p>
-            
-            <p>Ok, I will go first.</p>
-            
-            <p>I have just closed the 83 chapter of my life and I am a few paragraphs into trying out the beginning of my 84 chapter.</p>
-            
-            <p>Here is what I have learned and what I am passionate about sharing with you regarding aging:</p>
+            <p>This space? It's where sass and serious meet for a cup of tea (or a green smoothie).</p>
             
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>The incredible power of plants to nourish our bodies and bring us vibrant health.</li>
-              <li>The importance of igniting your confidence, and courage, because you are meant to shine bright.</li>
-              <li>The fun and magic of developing your personal style, your signature way of saying to the world, "This is me!"</li>
-              <li>The adventure of exploring how to grow older with class and sass, because aging should be anything but boring!</li>
-              <li>And through it all, the gift of gratitude, which makes every day brighter.</li>
+              <li>The sass gives us permission to play, to break the rules, to sparkle without apology.</li>
+              <li>The serious offers comfort, truth, wisdom, and support for real-life challenges.</li>
             </ul>
             
-            <p>There is no judgement here, just some wisdom, teaching, laughter, and a merry old time as we smash society's tired image of "old age" to pieces.</p>
+            <p>And when they come together, they create the magical balance that defines Rebellious Aging.</p>
+            
+            <p>So… I'll go first.</p>
+            
+            <p>I've just closed the 83rd chapter of my life and have begun writing my 84th. Here's what I know for sure, and what I am passionate about sharing with you:</p>
+            
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>The incredible power of plants to nourish your body and bring vibrant health.</li>
+              <li>The importance of igniting your confidence and courage, because you are meant to shine.</li>
+              <li>The joy and magic of creating your personal style, your way of saying to the world, "This is me."</li>
+              <li>The adventure of aging with class and sass, because this ride should be anything but boring.</li>
+              <li>And most of all, the quiet superpower of gratitude—which brightens every day, no matter what.</li>
+            </ul>
+            
+            <p>This isn't a place for judgment. It's a place for wisdom, curiosity, learning, and a merry old time as we gently (or not so gently) smash society's tired image of "old age" to pieces.</p>
             
             <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400">
-              <p className="font-semibold text-teal-800 mb-2">A Special Note:</p>
-              <p className="text-teal-700">I understand that not everyone is blessed with perfect health and wealth as they age, and that each of us faces unique challenges on this journey. I do believe with all my heart that it is never too late to start making choices that nourish your body, lift your spirit, and bring more joy. Wherever you are right now, you are welcome here.</p>
+              <h3 className="font-semibold text-teal-800 mb-2">A Note from My Heart</h3>
+              <p className="text-teal-700">I know that not everyone is blessed with perfect health, resources, or support as they age. Every one of us carries a different story, a different challenge. But I believe—deeply—that it is never too late to start making choices that nourish your body, lift your spirit, and bring you joy.</p>
+              <p className="text-teal-700 mt-4">Wherever you are right now, you are welcome here.</p>
             </div>
             
-            <p>Whenever you're ready to take the next step, dream up something new to share, or just need a little boost, I am here for you.</p>
+            <p>And whenever you're ready to take a next step, share a dream, or simply sit with someone who understands—you've got me.</p>
             
-            <p>Let's all keep rebelling, keep shining, and keep dazzling the world.</p>
+            <p>So let's keep rebelling.</p>
+            <p>Keep shining.</p>
+            <p>And keep dazzling the world.</p>
             
-            <p className="text-xl font-medium text-teal-600 italic">With love, laughter and leafy greens,<br />Suz</p>
+            <p className="text-xl font-medium text-teal-600 italic">With love, laughter, and leafy greens,<br />Suz</p>
           </div>
         </div>
       </div>
