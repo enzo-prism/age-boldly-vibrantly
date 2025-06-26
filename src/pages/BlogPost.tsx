@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -7,7 +8,7 @@ import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 const BlogPost = () => {
   const { postId } = useParams();
   
-  // Handle the success blog post (now Blog 1)
+  // Handle the success blog post (Blog 1)
   if (postId === 'the-road-to-success-8-thoughts') {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
@@ -107,7 +108,183 @@ const BlogPost = () => {
     );
   }
   
-  // Handle the nutrition blog post (now Blog 2)
+  // Handle the new WFPB lifestyle guide (Blog 2)
+  if (postId === 'wfpb-lifestyle-guide') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {/* Back to Blog */}
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
+
+          <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            {/* Article Header */}
+            <header className="mb-8">
+              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  1/29/2025
+                </div>
+                <span>•</span>
+                <span>Blog 2</span>
+                <span>•</span>
+                <div className="flex items-center gap-1">
+                  <Clock className="w-4 h-4" />
+                  12 min read
+                </div>
+              </div>
+              <div className="text-sm text-gray-500 mb-4 italic">[A work in progress. Revised 1/29/2025]</div>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                A Quick Introduction and Guide to a Whole-Food Plant-Based (WFPB) Lifestyle
+              </h1>
+            </header>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <p className="text-xl text-teal-600 font-medium mb-6">
+                The WFPB lifestyle is NOT a diet. It is a lifestyle which promotes better health, greater energy, and a deeper connection with the way humans chose to nourish themselves.
+              </p>
+              
+              <p className="mb-6">It has been proven to be better for humans, the animals and the planet.</p>
+
+              <p className="mb-6">Studies show that a WFPB diet can help prevent or manage or reverse chronic conditions like heart disease, type 2 diabetes, hypertension, autoimmune diseases, obesity, adult on-set diabetes, certain types of cancer, dementia and a host of other ailments linked to diet including impotence.</p>
+
+              <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400 mb-8">
+                <p className="text-teal-800 font-medium">
+                  <strong>Side Benefit:</strong> "If adopted and fully and completely adhered to you will never again have to count calories or worry about your weight". 
+                  <span className="block mt-2 text-sm">- Dr Esselstyn</span>
+                </p>
+              </div>
+
+              <h2 className="text-2xl font-bold text-teal-600 mt-12 mb-6">Whole Food Plant Based Defined</h2>
+              <p className="text-lg font-medium text-coral mb-4">Think from the garden not the farm or factory.</p>
+
+              <ul className="space-y-2 mb-6">
+                <li>• No animals (nothing with a momma), including sea animals</li>
+                <li>• No animal by products</li>
+                <li>• No processed foods</li>
+                <li>• Limit sugar, oil and salt</li>
+              </ul>
+
+              <p className="mb-6">WFPB focuses on optimal health and whole nutrient dense foods. It emphasizes eating minimally processed, whole plant foods such as fruits and vegetables, whole grains, nuts and seeds.</p>
+
+              <p className="mb-8">Embrace the delight of all fruits and veggies, grains, nuts and seeds in as close to their original state as possible. <strong>Note:</strong> Calorie Density is important to consider if weight is an issue. Think nuts and avocados vs kale and lettuce.</p>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Insights from Professionals</h3>
+              <p className="mb-6">A few quick comments from professionals who have influenced me along the way.</p>
+
+              <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                <h4 className="font-semibold text-blue-800 mb-3">Dr. Caldwell Esselstyn</h4>
+                <p className="text-blue-700 mb-3">A surgeon, clinician and researcher at the Cleveland Clinic.</p>
+                <blockquote className="text-blue-800 italic mb-3">
+                  "My message is clear and absolute: coronary artery disease does not have to exist, and if it does. it need not progress"
+                </blockquote>
+                <p className="text-sm text-blue-600">- "Prevent and Reverse Heart Disease"</p>
+              </div>
+
+              <div className="bg-green-50 p-6 rounded-lg mb-8">
+                <h4 className="font-semibold text-green-800 mb-3">Dr T Colin Campbell</h4>
+                <p className="text-green-700 mb-3">A biochemist and a pioneering nutrition scientist and professor emeritus at Cornell University. Recently retired and founder of the global community, T Colin Campbell Center for Nutrition Studies.</p>
+                <blockquote className="text-green-800 italic mb-3">
+                  "I propose to do nothing less than redefine what we think of as good nutrition. The provocative results of my four decades of experimental research, including the findings from a 27 year laboratory program, prove that eating right can save your life"
+                </blockquote>
+                <p className="text-sm text-green-600">- "The China Study"</p>
+              </div>
+
+              <p className="font-medium text-teal-600 mb-8">These two gents are now 90+. They and their families have chosen to follow their research for 40+ years. Their personal results are astounding and the good news, achievable. They are my inspiration.</p>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Recommended Books</h3>
+              <ul className="space-y-2 mb-6">
+                <li>• Prevent And Reverse Heart Disease: The Revolutionary, Scientifically Proven, Nutrition-Based Cure</li>
+                <li>• The China Study Revised Expanded Edition</li>
+                <li>• How Not to Die: Discover the Foods Scientifically Proven to Prevent and Reverse Disease</li>
+                <li>• For Fork's Sake: A Quick Guide to Healing Yourself and the Planet Through a Plant-Based Diet</li>
+              </ul>
+
+              <div className="bg-amber-50 p-4 rounded-lg mb-8">
+                <p className="text-amber-800">
+                  <strong>Note:</strong> The book "For Forks Sake" is a wonderful, user-friendly, practical step by step guide to embracing the WFPB lifestyle.
+                </p>
+              </div>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Documentaries to Inspire Your Journey (WATCH THESE)</h3>
+              <ul className="space-y-2 mb-8">
+                <li>• Forks over Knives</li>
+                <li>• The Game Changers</li>
+                <li>• What the Health</li>
+                <li>• You are What You Eat: A Twin Experiment (Stanford University)</li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Where Do You Get Your Protein?</h3>
+              <p className="mb-4">The same place many animals do including but not limited to cows, chickens and pigs. These animals consume plants and synthesize the amino acids from the proteins in those plants. When humans eat meat, they are indirectly consuming the protein that originally came from the plants that the animals ate.</p>
+
+              <p className="mb-6">So by eating plant foods directly one can "cut out the middleman" and still meet protein requirements efficiently. There are 40+ animals that go directly to the source, elephants, gorillas, hippos, etc.</p>
+
+              <div className="bg-green-50 p-6 rounded-lg mb-8">
+                <p className="text-green-800 mb-3">
+                  <strong>Note:</strong> All plants contain protein, in varying amounts. Legumes, soy, whole grains, nuts and seeds are rich sources, while even vegetables provide some.
+                </p>
+                <p className="text-green-700">
+                  Here is a short list: spinach, broccoli, kale, brussel sprouts, asparagus, artichokes, mushrooms, collard greens, mustard greens, watercress.
+                </p>
+              </div>
+
+              <p className="mb-8">Eating a variety of plant foods ensures all essential amino acids, making plant-based diets fully capable of meeting protein needs.</p>
+
+              <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400 mb-8">
+                <p className="text-red-800 font-medium">
+                  <strong>Red Flag:</strong> BEWARE OF PROCESSED FOODS and products labeled VEGAN. Best to stick to foods without labels.
+                </p>
+              </div>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Closing Thoughts from Dr. Dean Ornish</h3>
+              <div className="bg-gray-50 p-6 rounded-lg mb-8">
+                <p className="text-gray-700 mb-4 italic">
+                  "One of the surprising findings in our study is that, for many people, it is easier to make BIG changes in diet and lifestyle than to make only moderate ones. Although this goes against conventional wisdom, we found it to be true."
+                </p>
+                <p className="text-gray-700 mb-4 italic">
+                  "When people make only moderate changes in diet and lifestyle, they have the worst of both worlds. They have the sense of deprivation because they are not able to eat and do everything they want, but they are not making changes big enough to make them feel much better or to have much effect on their weight, their cholesterol, or their health."
+                </p>
+                <p className="text-gray-700 italic">
+                  "On the other hand, when people make comprehensive changes in their diet and lifestyle, they begin to feel so much better, so quickly that the choices become clear, and for many people, worth making."
+                </p>
+                <p className="text-sm text-gray-600 mt-4">- Dean Ornish, M.D., President and Director, Preventive Medicine Research Institute, University of California, San Francisco</p>
+              </div>
+
+              <div className="bg-coral-50 p-6 rounded-lg mb-8">
+                <p className="text-coral-800 font-medium mb-4">
+                  However: If all you can do today is take one step, then take one step. The biggest wins are made up of the smallest steps.
+                </p>
+                <p className="text-coral-800 font-bold">
+                  THE KEY IS CONSISTENCY AND PERSEVERANCE.
+                </p>
+              </div>
+
+              <div className="text-center bg-teal-50 p-8 rounded-lg">
+                <h4 className="font-bold text-teal-800 mb-4">Let's Continue the Conversation at Your Convenience.</h4>
+                <p className="text-teal-700 mb-2"><strong>Suzanne Meinhardt</strong></p>
+                <p className="text-teal-700 mb-2">beachmom@gmail.com</p>
+                <p className="text-teal-700">408-406-8322 TEXT ONLY</p>
+              </div>
+            </div>
+          </article>
+
+          {/* Navigation */}
+          <div className="mt-12 text-center">
+            <Link to="/blog">
+              <Button className="bg-teal hover:bg-teal-dark text-white">
+                Back to All Posts
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  
+  // Handle the nutrition blog post (now Blog 3)
   if (postId === 'rebellious-guide-what-is-on-your-plate') {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
@@ -127,7 +304,7 @@ const BlogPost = () => {
                   6/25/2025
                 </div>
                 <span>•</span>
-                <span>Blog 2</span>
+                <span>Blog 3</span>
                 <span>•</span>
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
@@ -294,3 +471,4 @@ const BlogPost = () => {
 };
 
 export default BlogPost;
+

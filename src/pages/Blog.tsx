@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,11 +9,19 @@ import { Calendar, ArrowRight } from 'lucide-react';
 const Blog = () => {
   const blogPosts = [
     {
+      id: 'wfpb-lifestyle-guide',
+      title: 'A Quick Introduction and Guide to a Whole-Food Plant-Based (WFPB) Lifestyle',
+      excerpt: 'The WFPB lifestyle is NOT a diet. It is a lifestyle which promotes better health, greater energy, and a deeper connection with the way humans chose to nourish themselves.',
+      date: '1/29/2025',
+      category: 'Blog 2',
+      readTime: '12 min read'
+    },
+    {
       id: 'rebellious-guide-what-is-on-your-plate',
       title: 'The Rebellious Guide (What is on Your Plate)',
       excerpt: 'Let\'s set the table for something deliciously different. I am excited to talk with you about something that has transformed my life - the Whole Food Plant Based (WFPB) lifestyle.',
       date: '6/25/2025',
-      category: 'Blog 2',
+      category: 'Blog 3',
       readTime: '8 min read'
     },
     {
@@ -97,3 +106,4 @@ const Blog = () => {
 };
 
 export default Blog;
+
