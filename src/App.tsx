@@ -55,6 +55,8 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/our-story" element={<Movement />} />
               <Route path="/pillars/:pillarId" element={<PillarPage />} />
+              {/* Legacy route redirect */}
+              <Route path="/pillars/longevity" element={<Navigate to="/pillars/health" replace />} />
               <Route path="/nutrition" element={<Nutrition />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />

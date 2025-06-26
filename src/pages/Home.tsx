@@ -30,10 +30,10 @@ const Home = () => {
       link: "/pillars/style"
     },
     {
-      title: "Longevity",
+      title: "Health",
       description: "Implement science-backed strategies for vibrant physical health, mental sharpness, and emotional wellbeing as you age.",
       icon: "🌱",
-      link: "/pillars/longevity"
+      link: "/pillars/health"
     }
   ];
 

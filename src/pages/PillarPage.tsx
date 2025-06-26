@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -48,12 +47,12 @@ const pillarContent: Record<string, PillarContent> = {
       "/lovable-uploads/a624ace1-6dc9-4ab4-846c-176e441f514f.png"
     ],
   },
-  longevity: {
-    title: "Longevity - Nourish to Flourish",
-    description: "You were not meant to slow down. You were meant to thrive. At Rebellious Aging, we encourage and embrace a Whole- Food, Plant- Based Lifestyle, as a delicious, empowering way to add healthy years to your life AND at the same time easily settle into your best weight and add life to your years. With every healthy bite you are fueling your body with vitality, managing weight naturally (no calorie counting and eating as much as you like) and taking care of your health in the most delicious way. Longevity isn't about living longer—-it is about living better, with purpose, authenticity, and sparkle",
-    quizTitle: "The Longevity Lifestyle Assessment",
+  health: {
+    title: "Health - Nourish to Flourish",
+    description: "You were not meant to slow down. You were meant to thrive. At Rebellious Aging, we encourage and embrace a Whole- Food, Plant- Based Lifestyle, as a delicious, empowering way to add healthy years to your life AND at the same time easily settle into your best weight and add life to your years. With every healthy bite you are fueling your body with vitality, managing weight naturally (no calorie counting and eating as much as you like) and taking care of your health in the most delicious way. Health isn't about living longer—-it is about living better, with purpose, authenticity, and sparkle",
+    quizTitle: "The Health Lifestyle Assessment",
     quizDescription: "Evaluate your current lifestyle habits and receive a personalized roadmap to optimize your health span.",
-    checklistTitle: "Daily Longevity Practices Checklist",
+    checklistTitle: "Daily Health Practices Checklist",
     galleryImages: [
       "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&h=600&fit=crop",
@@ -153,12 +152,12 @@ const PillarPage = () => {
         </div>
       </section>
 
-      {/* Suz's Choice Section - Only for Longevity */}
-      {pillarId === 'longevity' ? (
+      {/* Suz's Choice Section - Only for Health */}
+      {pillarId === 'health' ? (
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Suz's Choice for Longevity</h2>
+              <h2 className="text-3xl font-bold mb-8 text-center">Suz's Choice for Health</h2>
               
               <Tabs defaultValue="recipes" className="w-full">
                 <TabsList className="w-full max-w-md mx-auto grid grid-cols-3 mb-8">
@@ -295,18 +294,18 @@ const PillarPage = () => {
         </section>
       )}
 
-      {/* Nutrition CTA - Only for Longevity */}
-      {pillarId === 'longevity' && (
+      {/* Nutrition CTA - Only for Health */}
+      {pillarId === 'health' && (
         <section className="py-16 bg-coral/10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-4">Fuel Your Longevity Journey</h2>
+              <h2 className="text-3xl font-bold mb-4">Fuel Your Health Journey</h2>
               <p className="text-lg text-gray-700 mb-8">
-                Discover how proper nutrition supports your longevity goals. Learn about foods that promote vitality, brain health, and overall wellness as you age rebelliously.
+                Discover how proper nutrition supports your health goals. Learn about foods that promote vitality, brain health, and overall wellness as you age rebelliously.
               </p>
               <Link to="/nutrition">
                 <Button className="bg-coral hover:bg-coral-dark text-white">
-                  Explore Nutrition for Longevity
+                  Explore Nutrition for Health
                 </Button>
               </Link>
             </div>

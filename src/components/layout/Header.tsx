@@ -95,8 +95,8 @@ const Header = () => {
                 </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <NavLink to="/pillars/longevity" className="w-full flex items-center gap-2">
-                  🌱 Longevity
+                <NavLink to="/pillars/health" className="w-full flex items-center gap-2">
+                  🌱 Health
                 </NavLink>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -158,11 +158,11 @@ const Header = () => {
                     👗 Style
                   </NavLink>
                   <NavLink 
-                    to="/pillars/longevity" 
+                    to="/pillars/health" 
                     className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    🌱 Longevity
+                    🌱 Health
                   </NavLink>
                 </div>
               </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, Heart, ArrowRight } from "lucide-react";
@@ -49,11 +48,11 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/pillars/longevity" 
+                  to="/pillars/health" 
                   className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
                 >
                   <span className="text-xl">🌱</span>
-                  <span className="group-hover:translate-x-1 transition-transform">Longevity</span>
+                  <span className="group-hover:translate-x-1 transition-transform">Health</span>
                 </Link>
               </li>
             </ul>
