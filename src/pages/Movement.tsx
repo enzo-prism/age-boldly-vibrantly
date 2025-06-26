@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+
 const Movement = () => {
   return <div className="min-h-screen">
       {/* Hero Section */}
@@ -27,6 +28,14 @@ const Movement = () => {
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center lg:text-left">
                   Our Story
                 </h2>
+                
+                {/* New inspirational text */}
+                <div className="mb-6 sm:mb-8 p-4 sm:p-6 bg-gradient-to-r from-teal/10 to-coral/10 rounded-lg border-l-4 border-teal">
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic">
+                    If you are reading this, you already feel it. That quiet fire. That gentle nudge. That rebellious urge to shout WT_? "This is my time to stop holding back". Allow the "YOU", ya know, the person you always wanted to be to explode from within and join the aging revolution.
+                  </p>
+                </div>
+
                 <div className="space-y-4 sm:space-y-5 text-gray-700 text-sm sm:text-base leading-relaxed">
                   <p>
                     Hi, I'm Suz — a passionate advocate for Rebellious Aging. My journey began in my 50s when I faced a health challenge — a high cholesterol diagnosis. Like many, I was presented with the typical path: medication. But something inside me said there had to be a better way. I wasn't interested in a lifetime of prescriptions; I wanted to heal my body naturally.
@@ -148,4 +157,5 @@ const Movement = () => {
       </section>
     </div>;
 };
+
 export default Movement;
