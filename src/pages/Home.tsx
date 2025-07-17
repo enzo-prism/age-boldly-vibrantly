@@ -9,6 +9,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselApi,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -16,6 +17,8 @@ const Home = () => {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
   const [preloadedImages, setPreloadedImages] = useState<Set<number>>(new Set());
   const [showWelcomePopup, setShowWelcomePopup] = useState(false);
+  const [api, setApi] = useState<CarouselApi>();
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   // Check if user has seen the welcome popup before
   useEffect(() => {
@@ -24,6 +27,19 @@ const Home = () => {
       setShowWelcomePopup(true);
     }
   }, []);
+
+  // Track carousel current slide
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrentSlide(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrentSlide(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   const handleCloseWelcomePopup = () => {
     setShowWelcomePopup(false);
@@ -149,7 +165,8 @@ const Home = () => {
             {/* Image Carousel */}
             <div className="order-1 lg:order-2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Carousel 
+                <Carousel
+                  setApi={setApi}
                   className="w-full"
                   opts={{
                     align: "start",
@@ -186,6 +203,20 @@ const Home = () => {
                     ))}
                   </CarouselContent>
                 </Carousel>
+                
+                {/* Progress Bar */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {heroImages.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        index === currentSlide 
+                          ? 'w-8 bg-white' 
+                          : 'w-1.5 bg-white/40 hover:bg-white/60'
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
