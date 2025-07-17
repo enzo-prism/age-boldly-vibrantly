@@ -113,13 +113,81 @@ export default {
 					'100%': {
 						opacity: '0'
 					}
+				},
+				'slide-up-fade': {
+					'0%': {
+						opacity: '0',
+						transform: 'translate3d(0, 60px, 0)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translate3d(0, 0, 0)'
+					}
+				},
+				'slide-left-fade': {
+					'0%': {
+						opacity: '0',
+						transform: 'translate3d(-60px, 0, 0)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translate3d(0, 0, 0)'
+					}
+				},
+				'slide-right-fade': {
+					'0%': {
+						opacity: '0',
+						transform: 'translate3d(60px, 0, 0)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translate3d(0, 0, 0)'
+					}
+				},
+				'scale-fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale3d(0.9, 0.9, 1)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale3d(1, 1, 1)'
+					}
+				},
+				'bounce-gentle': {
+					'0%': {
+						transform: 'translate3d(0, -20px, 0)'
+					},
+					'50%': {
+						transform: 'translate3d(0, -5px, 0)'
+					},
+					'100%': {
+						transform: 'translate3d(0, 0, 0)'
+					}
+				},
+				'gradient-shift': {
+					'0%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
+					},
+					'100%': {
+						backgroundPosition: '0% 50%'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
-				'fade-out': 'fade-out 0.5s ease-out'
+				'fade-out': 'fade-out 0.5s ease-out',
+				'slide-up-fade': 'slide-up-fade 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+				'slide-left-fade': 'slide-left-fade 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+				'slide-right-fade': 'slide-right-fade 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+				'scale-fade-in': 'scale-fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+				'bounce-gentle': 'bounce-gentle 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'gradient-shift': 'gradient-shift 8s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
