@@ -6,7 +6,7 @@ interface UseScrollAnimationOptions {
   triggerOnce?: boolean;
 }
 
-export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
+export const useScrollAnimation = <T extends HTMLElement = HTMLElement>(options: UseScrollAnimationOptions = {}) => {
   const {
     threshold = 0.1,
     rootMargin = '0px 0px -50px 0px',
@@ -15,7 +15,7 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
   
   const [isInView, setIsInView] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     const element = ref.current;
@@ -55,8 +55,8 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
   return { ref, isInView };
 };
 
-export const useStaggeredAnimation = (itemCount: number, options: UseScrollAnimationOptions = {}) => {
-  const { ref, isInView } = useScrollAnimation(options);
+export const useStaggeredAnimation = <T extends HTMLElement = HTMLElement>(itemCount: number, options: UseScrollAnimationOptions = {}) => {
+  const { ref, isInView } = useScrollAnimation<T>(options);
   
   return {
     ref,
@@ -68,9 +68,9 @@ export const useStaggeredAnimation = (itemCount: number, options: UseScrollAnima
   };
 };
 
-export const useParallaxEffect = (speed: number = 0.5) => {
+export const useParallaxEffect = <T extends HTMLElement = HTMLElement>(speed: number = 0.5) => {
   const [offset, setOffset] = useState(0);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -4,8 +4,8 @@ import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnim
 import { useScrollAnimationTrigger } from '@/hooks/useScrollAnimationTrigger';
 
 const Movement = () => {
-  const heroRef = useScrollAnimation({ threshold: 0.3 });
-  const { ref: titleRef, isInView: titleInView, getItemStyle } = useStaggeredAnimation(2, { threshold: 0.5 });
+  const heroRef = useScrollAnimation<HTMLElement>({ threshold: 0.3 });
+  const { ref: titleRef, isInView: titleInView, getItemStyle } = useStaggeredAnimation<HTMLDivElement>(2, { threshold: 0.5 });
   
   // Initialize scroll animation triggers
   useScrollAnimationTrigger();
