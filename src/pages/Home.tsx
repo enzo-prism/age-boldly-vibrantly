@@ -167,12 +167,16 @@ const Home = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Carousel
                   setApi={setApi}
-                  className="w-full"
+                  className="w-full touch-pan-y"
                   opts={{
                     align: "start",
                     loop: true,
+                    dragFree: true,
+                    containScroll: "trimSnaps",
+                    skipSnaps: false,
+                    watchDrag: true,
                   }}
-                  plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
+                  plugins={[Autoplay({ delay: 4000, stopOnInteraction: true })]}
                 >
                   <CarouselContent className="-ml-0">
                     {heroImages.map((image, index) => (
