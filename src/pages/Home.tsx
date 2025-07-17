@@ -110,76 +110,83 @@ const Home = () => {
       />
 
       {/* Hero section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Carousel 
-            className="w-full h-full"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
-          >
-            <CarouselContent className="h-full -ml-0">
-              {heroImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-0 basis-full">
-                  <div className="relative w-full h-full">
-                    {(loadedImages.has(index) || preloadedImages.has(index) || index === 0) ? (
-                      <img 
-                        src={image}
-                        alt={`Vibrant aging lifestyle ${index + 1}`}
-                        className="w-full h-[90vh] object-cover object-center transition-opacity duration-1000"
-                        style={{
-                          objectPosition: 'center 30%'
-                        }}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        onLoad={() => {
-                          if (index !== 0) {
-                            handleCarouselSelect(index);
-                          }
-                        }}
-                      />
-                    ) : (
-                      <div className="w-full h-[90vh] bg-gray-200 animate-pulse flex items-center justify-center">
-                        <div className="text-gray-400">Loading...</div>
-                      </div>
-                    )}
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl text-white">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 animate-fade-in drop-shadow-lg">
-              Age Boldly / Live Loudly
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 animate-fade-in drop-shadow-md" style={{animationDelay: "0.2s"}}>
-              Ditch the outdated rules. Rebellious aging is where vibrant health, bold confidence, and signature style take center stage.
-            </p>
-            <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
-              <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg">
-                <Link to="/our-story">Our Story</Link>
-              </Button>
-              <Button 
-                onClick={scrollToPillars}
-                variant="outline" 
-                size="lg" 
-                className="bg-white/30 backdrop-blur-sm text-white border-white hover:bg-white/40 shadow-lg"
-              >
-                Explore the Pillars
-              </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="bg-white/20 backdrop-blur-sm text-white border-white/50 hover:bg-white/30 shadow-sm"
-              >
-                <Link to="/contact">Contact</Link>
-              </Button>
+      <section className="min-h-[90vh] py-12 lg:py-0">
+        <div className="container mx-auto px-4 h-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 h-full items-center">
+            {/* Text Content */}
+            <div className="order-2 lg:order-1 flex flex-col justify-center">
+              <div className="max-w-2xl">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
+                  Age Boldly / Live Loudly
+                </h1>
+                <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-600 animate-fade-in" style={{animationDelay: "0.2s"}}>
+                  Ditch the outdated rules. Rebellious aging is where vibrant health, bold confidence, and signature style take center stage.
+                </p>
+                <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
+                  <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg">
+                    <Link to="/our-story">Our Story</Link>
+                  </Button>
+                  <Button 
+                    onClick={scrollToPillars}
+                    variant="outline" 
+                    size="lg" 
+                    className="border-teal text-teal hover:bg-teal hover:text-white shadow-sm"
+                  >
+                    Explore the Pillars
+                  </Button>
+                  <Button 
+                    asChild 
+                    variant="outline" 
+                    size="lg" 
+                    className="border-gray-300 text-gray-600 hover:bg-gray-50 shadow-sm"
+                  >
+                    <Link to="/contact">Contact</Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Carousel */}
+            <div className="order-1 lg:order-2">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Carousel 
+                  className="w-full"
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
+                >
+                  <CarouselContent className="-ml-0">
+                    {heroImages.map((image, index) => (
+                      <CarouselItem key={index} className="pl-0 basis-full">
+                        <div className="relative w-full">
+                          {(loadedImages.has(index) || preloadedImages.has(index) || index === 0) ? (
+                            <img 
+                              src={image}
+                              alt={`Vibrant aging lifestyle ${index + 1}`}
+                              className="w-full h-[50vh] lg:h-[60vh] object-cover transition-opacity duration-1000"
+                              style={{
+                                objectPosition: 'center 30%'
+                              }}
+                              loading={index === 0 ? "eager" : "lazy"}
+                              onLoad={() => {
+                                if (index !== 0) {
+                                  handleCarouselSelect(index);
+                                }
+                              }}
+                            />
+                          ) : (
+                            <div className="w-full h-[50vh] lg:h-[60vh] bg-gray-200 animate-pulse flex items-center justify-center">
+                              <div className="text-gray-400">Loading...</div>
+                            </div>
+                          )}
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>
@@ -187,7 +194,7 @@ const Home = () => {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}
-            className="w-10 h-10 flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full text-white"
+            className="w-10 h-10 flex items-center justify-center bg-teal/20 backdrop-blur-sm rounded-full text-teal hover:bg-teal/30 transition-colors"
             aria-label="Scroll down"
           >
             <ArrowUp className="rotate-180 w-5 h-5" />
