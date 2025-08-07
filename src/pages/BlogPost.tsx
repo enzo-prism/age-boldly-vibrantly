@@ -923,12 +923,151 @@ const BlogPost = () => {
               </div>
             </div>
           </div>
-        </div>
-      );
-    }
+      </div>
+    );
+  }
 
-    // Post not found
+  if (postId === 'shop-window-aging-gracefully') {
     return (
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Back to Blog Link */}
+            <Link to="/blog" className="inline-flex items-center text-teal hover:text-teal-dark mb-8">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Blog
+            </Link>
+            
+            {/* Article Header */}
+            <header className="mb-12">
+              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  5/1/2025
+                </div>
+                <span>•</span>
+                <span>Blog 8</span>
+                <span>•</span>
+                <span>10 min read</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                What a Shop Window Taught Me About Aging Gracefully
+              </h1>
+            </header>
+
+            {/* Article Content */}
+            <article className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-700 mb-8 font-medium">
+                Who knew a shop window could deliver a life lesson? One early morning glance stopped me in my tracks and got me thinking about posture, presence, and how we carry ourselves through the years. A gentle nudge for all of us Rebels.
+              </p>
+
+              <p className="mb-6">
+                It started as just another peaceful morning walk with my pup, Gabe.
+              </p>
+
+              <p className="mb-6">
+                We took a different route today. One that wound us through the quiet charm of downtown. As the sun peeked over the buildings and Gabe sniffed his way through the sidewalk stories of the day, I caught a glimpse of myself in a shop window.
+              </p>
+
+              <p className="mb-6">
+                I stopped, stunned. Shoulders slumped. Back rounded. My body was speaking, not in the way I wanted it to.
+              </p>
+
+              <p className="mb-8">
+                I instantly thought of my mom. She had a thing about posture as I was growing up. "Stand tall", she'd say, tapping gently on my shoulders. "Good posture shows self respect."
+              </p>
+
+              <div className="bg-teal/10 p-6 rounded-lg mb-8">
+                <p className="text-lg font-semibold text-teal-dark mb-2">She was right.</p>
+                <p className="mb-0">
+                  Posture is not just about looking elegant, it is about aging with confidence, strength, and even safety. It affects balance, energy, mood, digestion, and how the world sees us. And more importantly, how we see ourselves.
+                </p>
+              </div>
+
+              <p className="mb-6">
+                As we age, our bodies naturally change. Poor posture can speed up the process and steal joy from everyday moments.
+              </p>
+
+              <div className="bg-coral/10 p-6 rounded-lg mb-8">
+                <h3 className="text-xl font-semibold text-coral-dark mb-4">Examples:</h3>
+                <ul className="space-y-2 mb-0">
+                  <li>• Rounded shoulders can tighten the chest and restrict breathing.</li>
+                  <li>• Slouching weakens core and back muscles.</li>
+                  <li>• Poor alignment increases fall risk and spinal compression.</li>
+                  <li>• It can even lower confidence and mood because body language is a language.</li>
+                </ul>
+              </div>
+
+              <div className="bg-sage/10 p-6 rounded-lg mb-8">
+                <p className="text-lg font-semibold text-sage-dark mb-2">Here is the good news, it is never too late to straighten up.</p>
+              </div>
+
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Gentle Ways to Stand Tall</h2>
+
+              <p className="mb-6">
+                Here are a few simple things I am doing now (and you can too!)
+              </p>
+
+              <div className="bg-white border-l-4 border-teal p-6 rounded-lg mb-6">
+                <h3 className="text-xl font-semibold mb-4">Sticky Note Reminders</h3>
+                <p className="mb-4">I include the following in my morning stretch and workout routine.</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-3">A. The Wall Test</h4>
+                  <p className="mb-2">Stand with your back against a wall. Heels, tailbone, shoulders, and the back of your head touching the wall. Hold for 30 seconds. Repeat several times.</p>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold mb-3">B. Daily Posture Reset Stretch</h4>
+                  <p className="mb-3">Try this quick sequence:</p>
+                  <ul className="space-y-2">
+                    <li>• Roll shoulders up, back and down</li>
+                    <li>• Tuck chin gently to lengthen the neck</li>
+                    <li>• Lift your chest slightly and breathe deeply</li>
+                    <li>• Engage your core like you are zipping up a snug coat</li>
+                    <li>• Hold for 10 seconds. Repeat often.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p className="mb-6">
+                So the shop window moment could have spiraled into self criticism. Instead, it became a nudge, a reminder that Rebellious Aging is not about perfection. It is about paying attention, making tweaks, and moving forward with self love and attention.
+              </p>
+
+              <div className="bg-gradient-to-r from-teal/20 to-coral/20 p-8 rounded-lg mb-8 text-center">
+                <p className="text-lg font-semibold mb-2">We deserve to take up space.</p>
+                <p className="text-lg font-semibold mb-2">To walk with pride.</p>
+                <p className="text-lg font-semibold mb-0">To show the world we are not invisible but still rising.</p>
+              </div>
+
+              <div className="bg-sage/20 p-6 rounded-lg mb-8">
+                <h3 className="text-xl font-semibold text-sage-dark mb-4">🌟 Rebel Homework</h3>
+                <p className="mb-4">Stand before a mirror or a shop window, and do your own posture check and correct.</p>
+                <p className="mb-0 font-medium">Leave a comment and let's straighten up together.</p>
+              </div>
+
+              <div className="text-center mt-12">
+                <p className="text-xl font-semibold text-coral">Sparkle on,</p>
+                <p className="text-xl font-semibold text-coral">Suz</p>
+              </div>
+            </article>
+
+            {/* Back to All Posts */}
+            <div className="mt-16 pt-8 border-t border-gray-200">
+              <Link to="/blog">
+                <Button className="bg-teal hover:bg-teal-dark text-white">
+                  ← Back to All Posts
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Post not found
+  return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-4xl text-center">
         <h1 className="text-3xl font-bold mb-4">Post Not Found</h1>

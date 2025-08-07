@@ -70,6 +70,15 @@ const Blog = () => {
       dateSort: new Date('2025-04-15'),
       readTime: '12 min read',
       blogNumber: 7
+    },
+    {
+      id: 'shop-window-aging-gracefully',
+      title: 'What a Shop Window Taught Me About Aging Gracefully',
+      excerpt: 'Who knew a shop window could deliver a life lesson? One early morning glance stopped me in my tracks and got me thinking about posture, presence, and how we carry ourselves through the years.',
+      date: '5/1/2025',
+      dateSort: new Date('2025-05-01'),
+      readTime: '10 min read',
+      blogNumber: 8
     }
   ];
 
