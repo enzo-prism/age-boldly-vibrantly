@@ -57,11 +57,11 @@ const Blog = () => {
     },
     {
       id: 'gratitude-rebellious-soul',
-      title: 'Gratitude and the Rebellious Soul (The Quiet Superpower)',
-      excerpt: 'Yesterday when Enzo and I were recording a video about the three pillars of Rebellious Aging, I blurted out, I must include a fourth pillar, gratitude.',
-      date: '7/15/2025',
-      dateSort: new Date('2025-07-15'),
-      readTime: '8 min read',
+      title: 'The Rebellious Guide (What is on Your Plate.)',
+      excerpt: 'Let\'s set the table for something deliciously different. I am excited to talk with you about something that has transformed my life - the Whole Food Plant Based (WFPB) lifestyle.',
+      date: '6/25/2025',
+      dateSort: new Date('2025-06-25'),
+      readTime: '18 min read',
       blogNumber: 6
     }
   ];
