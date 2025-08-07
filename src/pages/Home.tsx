@@ -16,17 +16,10 @@ import Autoplay from 'embla-carousel-autoplay';
 const Home = () => {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
   const [preloadedImages, setPreloadedImages] = useState<Set<number>>(new Set());
-  const [showWelcomePopup, setShowWelcomePopup] = useState(false);
+  const [showWelcomePopup, setShowWelcomePopup] = useState(true);
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Check if user has seen the welcome popup before
-  useEffect(() => {
-    const hasSeenWelcome = localStorage.getItem('has-seen-welcome-popup');
-    if (!hasSeenWelcome) {
-      setShowWelcomePopup(true);
-    }
-  }, []);
 
   // Track carousel current slide
   useEffect(() => {
@@ -43,7 +36,6 @@ const Home = () => {
 
   const handleCloseWelcomePopup = () => {
     setShowWelcomePopup(false);
-    localStorage.setItem('has-seen-welcome-popup', 'true');
   };
 
   const pillars = [
