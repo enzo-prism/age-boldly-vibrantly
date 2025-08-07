@@ -109,6 +109,12 @@ const Header = () => {
             Nutrition (WFPB)
           </NavLink>
           <NavLink 
+            to="/welcome-letter" 
+            className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
+          >
+            Welcome Letter
+          </NavLink>
+          <NavLink 
             to="/blog" 
             className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
           >

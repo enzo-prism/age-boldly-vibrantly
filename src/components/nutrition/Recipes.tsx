@@ -10,7 +10,7 @@ const Recipes = () => {
   
   const recipeTags = [
     'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert', 
-    'Quick', 'Budget-Friendly', 'High-Protein', 'Oil-Free'
+    'Budget-Friendly'
   ];
   
   const recipes = [

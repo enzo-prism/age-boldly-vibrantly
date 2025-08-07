@@ -7,7 +7,6 @@ import Protocol from './Protocol';
 import DrCampbell from './DrCampbell';
 import Foods from './Foods';
 import Recipes from './Recipes';
-import Supplements from './Supplements';
 
 const NutritionTabs = () => {
   const [activeTab, setActiveTab] = useState('what-is-wfpb');
@@ -54,12 +53,6 @@ const NutritionTabs = () => {
               >
                 Recipes
               </TabsTrigger>
-              <TabsTrigger 
-                value="supplements" 
-                className={`px-4 py-2 border-b-2 rounded-none ${activeTab === 'supplements' ? 'border-teal text-teal' : 'border-transparent'}`}
-              >
-                Supplements
-              </TabsTrigger>
             </TabsList>
           </div>
           
@@ -85,10 +78,6 @@ const NutritionTabs = () => {
           
           <TabsContent value="recipes">
             <Recipes />
-          </TabsContent>
-          
-          <TabsContent value="supplements">
-            <Supplements />
           </TabsContent>
         </Tabs>
       </div>

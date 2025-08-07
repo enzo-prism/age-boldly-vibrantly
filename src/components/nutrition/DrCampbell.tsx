@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const DrCampbell = () => {
@@ -11,11 +10,21 @@ const DrCampbell = () => {
           Dr. T. Colin Campbell, PhD, Cornell University, Professor Emeritus of Nutritional Biochemistry and co-author of The China Study. He is a biochemist who specializes in the effect of nutrition on long-term health. He is well known for The China Study, the largest study of diet and health ever conducted. In his work he reveals the power of a WFPB diet to prevent and even reverse chronic disease. A truth that inspires my own journey and fuels my passion for sharing this lifestyle.
         </p>
         
+        <div className="bg-teal/10 p-6 rounded-lg border-l-4 border-teal mb-8">
+          <h3 className="text-xl font-bold mb-3">Dr. Campbell's Important Video</h3>
+          <p className="text-gray-700 mb-3">
+            Watch Dr. T. Colin Campbell discuss his groundbreaking research and the principles of whole-food, plant-based nutrition.
+          </p>
+          <p className="text-sm text-gray-500 italic">
+            Video link to be added - please provide the specific Dr. Campbell video you'd like to feature here.
+          </p>
+        </div>
+        
         <div className="bg-teal/10 p-6 rounded-lg border-l-4 border-teal">
-          <blockquote className="text-lg italic leading-relaxed">
-            "The human body is a highly intelligent force of Nature. It will take care of itself if you provide the necessary resources and tend to its external environment."
+          <blockquote className="text-lg italic leading-relaxed mb-4">
+            "The people who ate the most animal-based foods got the most chronic disease... People who ate the most plant-based foods were the healthiest and tended to avoid chronic disease. These results could not be ignored."
           </blockquote>
-          <cite className="block text-right mt-4 font-medium">— T. Colin Campbell, PhD, The Future of Nutrition</cite>
+          <cite className="text-right text-gray-600">— Dr. T. Colin Campbell</cite>
         </div>
         
         <div>

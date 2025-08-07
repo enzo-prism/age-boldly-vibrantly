@@ -124,13 +124,13 @@ const Contact = () => {
 
               <Card className="bg-gradient-to-r from-teal/5 to-coral/5 border-teal/20">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3">What to Expect</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Personalized advice based on your unique situation</li>
-                    <li>• Support and encouragement for your journey</li>
-                    <li>• Resources tailored to your interests and goals</li>
-                    <li>• Connection to our vibrant community</li>
-                  </ul>
+                  <h3 className="font-semibold text-lg mb-3">Important Note About Email</h3>
+                  <p className="text-gray-700 mb-4">
+                    We're currently setting up our email system. If you've sent a message and haven't received a response, please know that we're working to resolve this technical issue.
+                  </p>
+                  <p className="text-gray-600">
+                    We value every message and will respond as soon as our email functionality is fully operational. Thank you for your patience!
+                  </p>
                 </CardContent>
               </Card>
             </div>

@@ -35,7 +35,7 @@ const NewsletterSignup = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Join the Rebellious Aging Movement</h2>
           <p className="text-lg text-gray-700 mb-8">
-            Get exclusive tips, resources, and inspiration delivered straight to your inbox.
+            More rebellious content in the works! Get exclusive tips, resources, and inspiration delivered straight to your inbox.
             We'll help you navigate the journey of aging with purpose and vitality.
           </p>
           

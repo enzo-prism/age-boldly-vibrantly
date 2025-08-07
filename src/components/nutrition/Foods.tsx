@@ -18,6 +18,11 @@ const Foods = () => {
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-teal">
               <p className="text-gray-700">
+                <strong>Note on Macronutrients (including FIBER):</strong> Carbohydrates, proteins, fats, and fiber are the building blocks your body needs in larger amounts for energy, structure, and optimal function.
+              </p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-teal">
+              <p className="text-gray-700">
                 <strong>2.</strong> Because you have zero interest in fading into the background. A plant powered life keeps your glow strong and your energy fierce.
               </p>
             </div>

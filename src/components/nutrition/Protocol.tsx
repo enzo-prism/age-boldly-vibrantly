@@ -12,12 +12,12 @@ const Protocol = () => {
         </p>
         
         <p className="leading-relaxed">
-          By eliminating meat, dairy, oils, and highly processed foods, and focusing instead on nutrient-dense plant foods–especially leafy greens—-Dr. Esselstyn's patients have restored blood flow, reduced inflammation, and, in many cases avoided the need for surgery or medication. His message is clear and compelling: the most powerful tool for protecting your heart is your daily food choices. It is not a quick fix—-it is a lifestyle, and one that offers the potential for profound healing and vitality.
+          By eliminating meat, dairy, oils, and highly processed foods, and focusing instead on nutrient-dense plant foods–especially leafy greens—Dr. Esselstyn's patients have restored blood flow, reduced inflammation, and, in many cases, avoided the need for surgery or medication. His message is clear and compelling: the most powerful tool for protecting your heart is your daily food choices. It is not a quick fix—it is a lifestyle, and one that offers the potential for profound healing and vitality.
         </p>
         
         <div className="bg-teal/10 p-6 rounded-lg border-l-4 border-teal">
           <p className="leading-relaxed">
-            At Rebellious Aging, I deeply honor Dr Esselstyn's evidence– -based approach and incorporate his principles and guidance into my lifestyle. While each of us has unique needs, I believe his work offers a powerful foundation for anyone seeking long term health and vitality—especially as we age. Embracing a WFPB lifestyle is not about restriction—it is about liberation.
+            At Rebellious Aging, I deeply honor Dr Esselstyn's evidence-based approach and incorporate his principles and guidance into my lifestyle. While each of us has unique needs, I believe his work offers a powerful foundation for anyone seeking long term health and vitality—especially as we age. Embracing a WFPB lifestyle is not about restriction—it is about liberation.
           </p>
         </div>
         
@@ -38,6 +38,16 @@ const Protocol = () => {
         </div>
         
         <div className="mt-8">
+          <h3 className="text-2xl font-bold mb-4">Dr. Esselstyn's Important Video</h3>
+          <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal mb-6">
+            <p className="text-gray-700 mb-3">
+              Watch Dr. Esselstyn's important presentation about heart disease prevention and reversal through whole-food, plant-based nutrition.
+            </p>
+            <p className="text-sm text-gray-500 italic">
+              Video link to be added - please provide the specific Dr. Esselstyn video you'd like to feature here.
+            </p>
+          </div>
+          
           <h3 className="text-2xl font-bold mb-4">Dr. Esselstyn's Attention Grabbers</h3>
           <div className="space-y-4">
             <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-coral">
