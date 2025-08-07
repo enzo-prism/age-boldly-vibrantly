@@ -141,9 +141,8 @@
     @apply py-16 md:py-24;
   }
 
-  /* GPU-Accelerated Animation Classes */
+  /* Optimized Animation Classes */
   .gpu-accelerated {
-    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
   }
@@ -152,7 +151,6 @@
     opacity: 0;
     transform: translate3d(0, 60px, 0);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform, opacity;
   }
 
   .animate-on-scroll.in-view {
@@ -164,7 +162,6 @@
     opacity: 0;
     transform: translate3d(-60px, 0, 0);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform, opacity;
   }
 
   .animate-slide-left.in-view {
@@ -176,7 +173,6 @@
     opacity: 0;
     transform: translate3d(60px, 0, 0);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform, opacity;
   }
 
   .animate-slide-right.in-view {
@@ -188,7 +184,6 @@
     opacity: 0;
     transform: scale3d(0.9, 0.9, 1);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform, opacity;
   }
 
   .animate-scale-fade.in-view {
@@ -199,7 +194,6 @@
   .parallax-bg {
     background-size: 120% 120%;
     animation: gradient-shift 8s ease-in-out infinite;
-    will-change: background-position;
   }
 }
 
