@@ -766,6 +766,167 @@ const BlogPost = () => {
       );
     }
 
+    // Blog #7: The Art of Thriving
+    if (postId === 'art-of-thriving-aging-expert') {
+      return (
+        <div className="bg-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-8">
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    April 15, 2025
+                  </div>
+                  <span>•</span>
+                  <span>Blog 7</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                  The Art of Thriving. What an Ageing Expert Wants You to Know
+                </h1>
+              </div>
+              
+              <article className="prose prose-lg max-w-none">
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  I came across an article in the Guardian this morning and I thought it was worthy of a share. 
+                  It was written by Dr. Kerry Burnight. I am inspired by Dr. Kerry's wisdom as I feel it aligns 
+                  with my message here at Rebellious Aging.
+                </p>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Here is my Blog on her article.
+                </p>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  What if ageing wasn't something to fear, fight, or fix. Rather something to expand into with joy, 
+                  purpose, and rebellious spark? Dr. Kerry is one of America's leading gerontologists and believes 
+                  exactly that and as a Rebel I could not agree more.
+                </p>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  In the article, titled "I'm an Expert on Aging. Here is What I Know about Thriving in Later Life," 
+                  Dr Burnight shares the kind of wisdom that deserves a drumroll, and maybe a dance break.
+                </p>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Here is what she says we need to do to truly thrive.
+                </p>
+
+                <div className="bg-teal/10 p-6 rounded-lg mb-8">
+                  <p className="text-gray-800 leading-relaxed mb-4">
+                    Forget about just adding years to your life (lifespan) or even adding life to your years (healthspan). 
+                    Dr. Kerry introduces the reader to a richer, deeper concept. <strong>Joyspan</strong>. Which is living 
+                    with connection, purpose, and the kind of soul deep contentment that makes aging feel like a privilege, 
+                    not a penalty.
+                  </p>
+                  <p className="text-gray-800 font-semibold">
+                    Now that is rebellious.
+                  </p>
+                </div>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Here are her essentials, they are not optional.
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="bg-coral/10 p-6 rounded-lg">
+                    <h3 className="font-semibold text-gray-800 mb-2">Keep learning. Stay curious. Try new things.</h3>
+                    <p className="text-gray-600">
+                      Yes, even if it scares you a little, or a lot.. That is the point. A curious mind keeps us alive, 
+                      engaged, and fabulously unpredictable.
+                    </p>
+                  </div>
+
+                  <div className="bg-coral/10 p-6 rounded-lg">
+                    <h3 className="font-semibold text-gray-800 mb-2">Relationships are the elixir.</h3>
+                    <p className="text-gray-600">
+                      Whether it's rekindling old friendships, hugging tighter, or even starting new connections online, 
+                      being seen and known matters.
+                    </p>
+                  </div>
+
+                  <div className="bg-coral/10 p-6 rounded-lg">
+                    <h3 className="font-semibold text-gray-800 mb-2">Change is a constant companion in later life.</h3>
+                    <p className="text-gray-600">
+                      The key? Flexibility. Grace. Maybe even a sense of humor, when gravity starts getting sassy.
+                    </p>
+                  </div>
+
+                  <div className="bg-coral/10 p-6 rounded-lg">
+                    <h3 className="font-semibold text-gray-800 mb-2">Your life experience has value. Share it.</h3>
+                    <p className="text-gray-600">
+                      Mentor, support, volunteer, or simply smile at someone who looks lost. Giving adds meaning and 
+                      texture to our days.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Dr. Burnright paints a vivid contrast between two women. One is resigned to decline, the other is 
+                  lit up with curiosity and confidence. The difference was not luck or money. It was <strong>Mindset</strong>.
+                </p>
+
+                <div className="bg-teal/10 p-6 rounded-lg mb-8">
+                  <p className="text-gray-800 leading-relaxed">
+                    Reading this article reminded me that the work we are doing here, embracing radiant health, 
+                    confidence and unapologetic style, is not superficial. It's survival. It's joy. It's rebellion.
+                  </p>
+                </div>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  To grow, connect, adapt, and give, that's what we Rebels do best.
+                </p>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Not sure where to begin? Start with one tiny act of rebellion. Try something new. If you need a 
+                  little nudge, I've got your back. Reach out and join our community.
+                </p>
+
+                <div className="bg-coral/10 p-6 rounded-lg mb-8">
+                  <h3 className="font-semibold text-gray-800 mb-2">Feeling inspired?</h3>
+                  <p className="text-gray-600">
+                    For the next seven days, choose one small action to grow, connect, adapt or give. Keep a note, 
+                    share your favorite moment. Let joy surprise you.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg mb-8">
+                  <h3 className="font-semibold text-gray-800 mb-4">Read the Original Article</h3>
+                  <p className="text-gray-600 mb-4">
+                    Read Dr. Kerry Burnight's full article that inspired this blog post:
+                  </p>
+                  <a 
+                    href="https://www.theguardian.com/commentisfree/ng-interactive/2025/jul/18/best-ageing-advice-expert-tips#:~:text=Thriving%20doesn't%20mean%20being,the%20quality%20of%20their%20lives."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-teal-600 hover:text-teal-700 underline"
+                  >
+                    "I'm an Expert on Aging. Here is What I Know about Thriving in Later Life" - The Guardian
+                  </a>
+                </div>
+
+                <p className="text-gray-600 leading-relaxed text-center font-medium">
+                  Sparkle on, Rebels
+                </p>
+              </article>
+              
+              <div className="mt-12 pt-8 border-t border-gray-200">
+                <Link 
+                  to="/blog" 
+                  className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to Blog
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     // Post not found
     return (
     <div className="min-h-screen bg-gray-50 py-12">

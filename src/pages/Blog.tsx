@@ -61,6 +61,15 @@ const Blog = () => {
       dateSort: new Date('2025-04-01'),
       readTime: '15 min read',
       blogNumber: 6
+    },
+    {
+      id: 'art-of-thriving-aging-expert',
+      title: 'The Art of Thriving. What an Ageing Expert Wants You to Know',
+      excerpt: 'Inspired by Dr. Kerry Burnight\'s wisdom on aging, this blog explores the concept of "joyspan" - living with connection, purpose, and soul-deep contentment that makes aging feel like a privilege.',
+      date: '4/15/2025',
+      dateSort: new Date('2025-04-15'),
+      readTime: '12 min read',
+      blogNumber: 7
     }
   ];
 
