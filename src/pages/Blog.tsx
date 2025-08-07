@@ -13,7 +13,8 @@ const Blog = () => {
       excerpt: 'The WFPB lifestyle is NOT a diet. It is a lifestyle which promotes better health, greater energy, and a deeper connection with the way humans chose to nourish themselves.',
       date: '1/29/2025',
       dateSort: new Date('2025-01-29'),
-      readTime: '12 min read'
+      readTime: '12 min read',
+      blogNumber: 3
     },
     {
       id: 'a-love-letter-to-my-closet',
@@ -21,7 +22,8 @@ const Blog = () => {
       excerpt: 'There was a time I dressed to impress. Now? I dress to express. My closet is no longer a holding pen for solid black.',
       date: '6/25/2025',
       dateSort: new Date('2025-06-25'),
-      readTime: '10 min read'
+      readTime: '10 min read',
+      blogNumber: 4
     },
     {
       id: 'rebellious-guide-what-is-on-your-plate',
@@ -29,7 +31,8 @@ const Blog = () => {
       excerpt: 'Let\'s set the table for something deliciously different. I am excited to talk with you about something that has transformed my life - the Whole Food Plant Based (WFPB) lifestyle.',
       date: '6/25/2025',
       dateSort: new Date('2025-06-25'),
-      readTime: '8 min read'
+      readTime: '8 min read',
+      blogNumber: 1
     },
     {
       id: 'the-road-to-success-8-thoughts',
@@ -37,7 +40,17 @@ const Blog = () => {
       excerpt: 'Eight powerful principles that pave the way to success: from hard work and patience to self-confidence and focus. Discover the mindset shifts that transform ordinary into extraordinary.',
       date: '4/4/2025',
       dateSort: new Date('2025-04-04'),
-      readTime: '3 min read'
+      readTime: '3 min read',
+      blogNumber: 2
+    },
+    {
+      id: 'blueberries-and-wrinkles',
+      title: 'Blueberries and Wrinkles',
+      excerpt: 'Coming soon: Discover the powerful connection between antioxidant-rich foods and healthy aging.',
+      date: '5/15/2025',
+      dateSort: new Date('2025-05-15'),
+      readTime: '6 min read',
+      blogNumber: 5
     },
     {
       id: 'gratitude-rebellious-soul',
@@ -45,7 +58,8 @@ const Blog = () => {
       excerpt: 'Yesterday when Enzo and I were recording a video about the three pillars of Rebellious Aging, I blurted out, I must include a fourth pillar, gratitude.',
       date: '7/15/2025',
       dateSort: new Date('2025-07-15'),
-      readTime: '8 min read'
+      readTime: '8 min read',
+      blogNumber: 6
     }
   ];
 
@@ -81,6 +95,8 @@ const Blog = () => {
                         <Calendar className="w-4 h-4" />
                         {post.date}
                       </div>
+                      <span>•</span>
+                      <span>Blog {post.blogNumber}</span>
                       <span>•</span>
                       <span>{post.readTime}</span>
                     </div>

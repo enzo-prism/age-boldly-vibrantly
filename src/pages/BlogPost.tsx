@@ -28,7 +28,7 @@ const BlogPost = () => {
                   4/4/2025
                 </div>
                 <span>•</span>
-                <span>Blog 1</span>
+                <span>Blog 2</span>
                 <span>•</span>
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
@@ -128,7 +128,7 @@ const BlogPost = () => {
                   1/29/2025
                 </div>
                 <span>•</span>
-                <span>Blog 2</span>
+                <span>Blog 3</span>
                 <span>•</span>
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
@@ -421,7 +421,7 @@ const BlogPost = () => {
                   6/25/2025
                 </div>
                 <span>•</span>
-                <span>Blog 3</span>
+                <span>Blog 1</span>
                 <span>•</span>
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
@@ -690,10 +690,58 @@ const BlogPost = () => {
         </div>
       </div>
     );
-  }
+    }
 
-  // Post not found
-  return (
+    if (postId === 'blueberries-and-wrinkles') {
+      return (
+        <div className="bg-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-8">
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    May 15, 2025
+                  </div>
+                  <span>•</span>
+                  <span>Blog 5</span>
+                  <span>•</span>
+                  <span>6 min read</span>
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                  Blueberries and Wrinkles
+                </h1>
+              </div>
+              
+              <article className="prose prose-lg max-w-none">
+                <div className="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg mb-8">
+                  <p className="text-lg font-medium text-amber-800 mb-0">
+                    This exciting blog post is coming soon! We're busy preparing amazing content about the powerful connection between antioxidant-rich foods and healthy aging.
+                  </p>
+                </div>
+                
+                <p className="text-gray-600 text-center py-8">
+                  Stay tuned for insights on how the right foods can help you age rebelliously with confidence and vitality.
+                </p>
+              </article>
+              
+              <div className="mt-12 pt-8 border-t border-gray-200">
+                <Link 
+                  to="/blog" 
+                  className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to Blog
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Post not found
+    return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-4xl text-center">
         <h1 className="text-3xl font-bold mb-4">Post Not Found</h1>
