@@ -571,6 +571,7 @@ const BlogPost = () => {
     );
   }
 
+  // "Gratitude and the Rebellious Soul" blog post
   if (postId === 'gratitude-rebellious-soul') {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
@@ -587,200 +588,119 @@ const BlogPost = () => {
               <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                 <div className="flex items-center gap-1">
                   <Calendar className="w-4 h-4" />
-                  6/25/2025
+                  4/1/2025
                 </div>
                 <span>•</span>
                 <span>Blog 6</span>
                 <span>•</span>
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
-                  18 min read
+                  15 min read
                 </div>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                The Rebellious Guide (What is on Your Plate.)
+                Gratitude and the Rebellious Soul
               </h1>
             </header>
 
             {/* Article Content */}
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-              <p className="text-xl text-teal-600 font-medium mb-6">
-                Let's set the table for something deliciously different.
+              <p className="text-xl text-teal-600 font-medium mb-8 text-center italic">
+                Exploring the transformative power of gratitude in our journey toward rebellious aging. Discover how appreciation and thankfulness can reshape our perspective on life, aging, and personal growth.
               </p>
-              
-              <p className="mb-6">I am excited to talk with you about something that has transformed my life. It is the Whole Food Plant Based (WFPB) lifestyle. Yup, not a diet but a lifestyle, for health and vitality with the added bonus of your body automatically regulating your weight if you follow the science.</p>
 
-              <p className="mb-6">My goal is not to preach or persuade, but to create awareness that this powerful, evidence based way of eating exists. Hey, it might just be the missing piece that you have been looking for.</p>
+              <div className="space-y-8">
+                <section>
+                  <h2 className="text-2xl font-bold mb-4 text-teal-600">The Rebellion of Gratitude</h2>
+                  <p className="mb-4">
+                    In a world that often focuses on what we lack, choosing gratitude is a rebellious act. It's a conscious decision to shift our attention from scarcity to abundance, from complaints to appreciation. This rebellion isn't loud or aggressive—it's quiet, persistent, and profoundly transformative.
+                  </p>
+                  <p className="mb-6">
+                    As we age, society tells us to mourn what we've lost: youth, energy, opportunities. But what if we chose instead to celebrate what we've gained: wisdom, resilience, depth of character, and the beautiful complexity of a life well-lived?
+                  </p>
+                </section>
 
-              <p className="mb-6">No judgement here, just a big open heart and a sincere desire to share what I have learned, offer you clear, accurate information, and point you toward the science so you can explore for yourself. This is your invitation to pull up a chair and dig into the facts, rebelliously, of course.</p>
+                <section>
+                  <h2 className="text-2xl font-bold mb-4 text-teal-600">Gratitude as a Daily Practice</h2>
+                  <p className="mb-4">
+                    Gratitude isn't just a feeling—it's a practice. Like any skill, it requires cultivation, patience, and consistency. Here are some ways to weave gratitude into the fabric of your daily life:
+                  </p>
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+                      <h3 className="text-lg font-semibold mb-2 text-blue-800">Morning Reflections</h3>
+                      <p className="text-blue-700">Begin each day by identifying three things you're grateful for. They don't have to be grand—a warm cup of coffee, a good night's sleep, or a text from a friend all count.</p>
+                    </div>
+                    <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
+                      <h3 className="text-lg font-semibold mb-2 text-green-800">Gratitude Journaling</h3>
+                      <p className="text-green-700">Write down your appreciations. The act of putting pen to paper makes gratitude more tangible and helps you remember the good moments during challenging times.</p>
+                    </div>
+                    <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+                      <h3 className="text-lg font-semibold mb-2 text-purple-800">Appreciating Others</h3>
+                      <p className="text-purple-700">Express gratitude to the people in your life. Tell them specifically what you appreciate about them or how they've impacted you. It's a gift that costs nothing but means everything.</p>
+                    </div>
+                  </div>
+                </section>
 
-              <p className="mb-6">So whether you're just nibbling at the idea or ready to dive fork first into this lifestyle, remember, knowledge is power.</p>
+                <section>
+                  <h2 className="text-2xl font-bold mb-4 text-teal-600">The Science of Gratitude</h2>
+                  <p className="mb-4">
+                    Research has shown that practicing gratitude can have profound effects on our physical and mental well-being. Studies indicate that grateful people experience:
+                  </p>
+                  <div className="bg-emerald-50 p-6 rounded-lg">
+                    <ul className="list-disc list-inside space-y-2 text-emerald-700">
+                      <li>Better sleep quality and duration</li>
+                      <li>Reduced symptoms of depression and anxiety</li>
+                      <li>Stronger immune systems</li>
+                      <li>More satisfying relationships</li>
+                      <li>Increased resilience in the face of challenges</li>
+                      <li>Greater overall life satisfaction</li>
+                    </ul>
+                  </div>
+                </section>
 
-              <p className="mb-6">Let's rebel against confusion. Let's begin with a list of definitions before we dig deep, so that we are all on the same page. Clarity is power.</p>
+                <section>
+                  <h2 className="text-2xl font-bold mb-4 text-teal-600">Gratitude in Times of Challenge</h2>
+                  <p className="mb-4">
+                    It's easy to be grateful when life is going well. The true test of gratitude comes during difficult times. This doesn't mean putting on a false positive attitude or denying real struggles. Instead, it means finding small pockets of light even in the darkest moments.
+                  </p>
+                  <p className="mb-6">
+                    Sometimes gratitude in tough times looks like appreciating the people who support us, the strength we discover we possess, or simply the fact that difficult moments are temporary. It's about finding meaning in our struggles and recognizing how they contribute to our growth.
+                  </p>
+                </section>
 
-              <p className="mb-6">When you understand what is really on your plate, you can make choices that fuel your vitality, confidence, and health.</p>
+                <section>
+                  <h2 className="text-2xl font-bold mb-4 text-teal-600">The Ripple Effect</h2>
+                  <p className="mb-4">
+                    When we practice gratitude, we don't just change ourselves—we change the world around us. Gratitude is contagious. When we appreciate others, we inspire them to look for the good in their own lives. When we approach challenges with a grateful heart, we model resilience for those who are watching.
+                  </p>
+                  <p className="mb-6">
+                    This is perhaps the most rebellious aspect of gratitude: in choosing appreciation over complaint, hope over despair, and abundance over scarcity, we become agents of positive change in a world that often defaults to negativity.
+                  </p>
+                </section>
 
-              <p className="mb-8">Let's rebel against confusion, reclaim our health, and rediscover joy in eating.</p>
+                <section className="bg-coral-50 p-8 rounded-lg border-l-4 border-coral-400">
+                  <h2 className="text-2xl font-bold mb-4 text-coral-800">Your Gratitude Challenge</h2>
+                  <p className="mb-4 text-coral-700">
+                    For the next week, challenge yourself to notice and acknowledge one thing you're grateful for each morning, afternoon, and evening. Write them down or share them with someone you care about.
+                  </p>
+                  <p className="text-coral-700">
+                    Notice how this practice shifts your perspective. Pay attention to how it affects your mood, your relationships, and your overall outlook on life. This simple act of rebellion—choosing gratitude—might just transform your world.
+                  </p>
+                </section>
 
-              <div className="bg-coral-50 p-6 rounded-lg border-l-4 border-coral-400 mb-8 text-center">
-                <p className="text-coral-800 font-bold text-lg">
-                  Sparkle on, Rebels. The revolution is deeeelish.
-                </p>
-              </div>
+                <section className="text-center py-8">
+                  <p className="text-lg italic text-gray-600">
+                    "Gratitude is not about pretending everything is perfect. It's about recognizing the perfect within the imperfect, the sacred within the ordinary, and the extraordinary within the everyday."
+                  </p>
+                </section>
 
-              <h2 className="text-2xl font-bold text-teal-600 mt-12 mb-6">The Rebellious Guide to What is on Your Plate.</h2>
-
-              <div className="space-y-6 mb-8">
-                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
-                  <h3 className="font-semibold text-blue-800 mb-3 text-xl">Simple Carbohydrates</h3>
-                  <p className="text-blue-700 mb-3">These are fast-burning carbs made of just one or two sugar molecules. They digest quickly, give you a quick spike of energy, and soon after comes the CRASH!</p>
-                  <p className="text-blue-700 mb-3">Think Candy, sodas, pastries, white bread, sugary cereals and much more. They are like fireworks. They are bright and sparkly and exciting. They are over in a flash.</p>
+                <div className="bg-teal-50 p-8 rounded-lg mb-8 text-center">
+                  <p className="text-teal-800 font-bold text-lg mb-4">
+                    Sparkle on, Rebels. Let gratitude light your way.
+                  </p>
+                  <p className="text-teal-700 mb-2">With appreciation and rebellious spirit,</p>
+                  <p className="text-teal-700 font-semibold">Suz</p>
                 </div>
-
-                <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-                  <h3 className="font-semibold text-green-800 mb-3 text-xl">Complex Carbohydrates</h3>
-                  <p className="text-green-700 mb-3">These take longer to digest because they're made of longer sugar chains. That means more stable blood sugar, lasting energy and a happier digestive system.</p>
-                  <p className="text-green-700">Think, sweet potatoes, oats, brown rice, lentils, quinoa, veggies beans and much more. They are like a slow burning candle, steady, warm, filling and reliable.</p>
-                </div>
-              </div>
-
-              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Diet Definitions</h3>
-              
-              <div className="space-y-6 mb-8">
-                <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-400">
-                  <h4 className="font-semibold text-amber-800 mb-3">Vegetarian</h4>
-                  <p className="text-amber-700 mb-3">No meat, poultry or fish. You can include eggs, dairy, cheese and processed foods.</p>
-                  <p className="text-amber-700">Think, cheese pizza, veggie lasagna, yogurt parfaits.</p>
-                </div>
-
-                <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
-                  <h4 className="font-semibold text-purple-800 mb-3">Vegan</h4>
-                  <p className="text-purple-700">No animal products at all. No meat, no dairy, no eggs, no honey.</p>
-                </div>
-
-                <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-400">
-                  <h4 className="font-semibold text-emerald-800 mb-3">Whole Food Plant Based (WFPB)</h4>
-                  <p className="text-emerald-700 mb-3">Focuses on whole, minimally processed plant foods. Fruits, veggies, grains, beans, legumes, nuts, seeds. No meat, dairy, eggs, oils, sugar or heavily processed products.</p>
-                  <p className="text-emerald-700">Think of nourishing your body for health, vitality and sparkle.</p>
-                </div>
-              </div>
-
-              <div className="bg-teal-50 p-6 rounded-lg mb-8">
-                <h4 className="font-semibold text-teal-800 mb-4 text-lg">Quick Recap</h4>
-                <div className="text-teal-700 space-y-1">
-                  <p>Vegetarian = no meat</p>
-                  <p>Vegan = no meat, no animal products</p>
-                  <p>WFPB = Plants</p>
-                </div>
-              </div>
-
-              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Nutrients Explained</h3>
-              
-              <div className="space-y-6 mb-8">
-                <div className="bg-rose-50 p-6 rounded-lg border-l-4 border-rose-400">
-                  <h4 className="font-semibold text-rose-800 mb-3">Macronutrients</h4>
-                  <p className="text-rose-700 mb-3">The big three your body needs in large amounts: Carbohydrates, Proteins, Fats</p>
-                  <p className="text-rose-700">Think, the main event on your plate.</p>
-                </div>
-
-                <div className="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-400">
-                  <h4 className="font-semibold text-indigo-800 mb-3">Micronutrients</h4>
-                  <p className="text-indigo-700 mb-3">Vitamins and minerals your body needs in tiny amounts to function well.</p>
-                  <p className="text-indigo-700">Think of the behind the scenes crew making the show run smoothly.</p>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg mb-8 text-center">
-                <p className="text-gray-800 font-medium">You need both to sparkle inside and out!</p>
-              </div>
-
-              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Different Types of Fasting</h3>
-              
-              <div className="space-y-4 mb-8">
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h4 className="font-semibold text-gray-800">Intermittent Fasting (IF)</h4>
-                  <p className="text-gray-700">Eat during a set window (e.g., 16:8, 14:10, 12:12).</p>
-                </div>
-                
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h4 className="font-semibold text-gray-800">5:2 Fasting</h4>
-                  <p className="text-gray-700">Eat normally for 5 days, restrict calories for two non consecutive days.</p>
-                </div>
-                
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h4 className="font-semibold text-gray-800">Time Restricted Eating</h4>
-                  <p className="text-gray-700">Eat in the daylight. Early dinner, no late snacks.</p>
-                </div>
-                
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h4 className="font-semibold text-gray-800">Prolonged Fasting</h4>
-                  <p className="text-gray-700">Fast 24 hours or longer. Only under medical guidance.</p>
-                </div>
-                
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h4 className="font-semibold text-gray-800">Modified Fasts</h4>
-                  <p className="text-gray-700">Eat very small amounts to mimic fasting benefits (usually Therapeutic).</p>
-                </div>
-              </div>
-
-              <div className="bg-coral-50 p-6 rounded-lg border-l-4 border-coral-400 mb-8">
-                <p className="text-coral-800 font-medium">
-                  <strong>NOTE:</strong> Fasting is not about punishment. It is about pause and purpose.
-                </p>
-              </div>
-
-              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">WFPB vs Top Diet Trends</h3>
-              
-              <div className="space-y-4 mb-8">
-                <div className="bg-red-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-red-800 mb-2">Keto</h4>
-                  <p className="text-red-700">High fat, low carb, heavy on meat and oils. Quick weight loss results, but lacks fiber and long term benefits.</p>
-                </div>
-                
-                <div className="bg-orange-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-orange-800 mb-2">Paleo</h4>
-                  <p className="text-orange-700">Whole foods, but excludes legumes and grains. Leans on animal products.</p>
-                </div>
-                
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800 mb-2">Mediterranean</h4>
-                  <p className="text-blue-700">Balanced, plant leaning, includes fish and oils.</p>
-                </div>
-                
-                <div className="bg-emerald-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-emerald-800 mb-2">WFPB</h4>
-                  <p className="text-emerald-700">All plants, no oil, no sugar, no salt, no processed foods. Based on science built for longevity and healing.</p>
-                </div>
-              </div>
-
-              <div className="bg-teal-50 p-6 rounded-lg mb-8">
-                <p className="text-teal-800 font-medium">
-                  <strong>Note:</strong> Fad diets chase results. WFPB builds a healthy, confident life.
-                </p>
-              </div>
-
-              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Gut Health: Your Secret Garden</h3>
-              <p className="mb-4">Support it with fiber, fermented foods, and plant variety. Avoid processed foods, sugars, oils and animal fats. Think of your gut like a garden, nurture it with whole plants.</p>
-
-              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Label Reading for Rebels</h3>
-              <p className="mb-6">Watch for added sugars, oils, sodium, artificial ingredients. Choose short clean ingredient lists you recognize.</p>
-
-              <div className="bg-amber-50 p-6 rounded-lg mb-8">
-                <p className="text-amber-800 font-medium">
-                  <strong>Note:</strong> If it reads like a science project, maybe it belongs in the lab, not your kitchen.
-                </p>
-              </div>
-
-              <p className="mb-6">I hope this helps to clarify misconceptions.</p>
-
-              <p className="mb-8">Let's rebel against confusion, reclaim our health, and rediscover joy in eating one bite at a time.</p>
-
-              <div className="bg-coral-50 p-8 rounded-lg mb-8 text-center">
-                <p className="text-coral-800 font-bold text-lg mb-4">
-                  Sparkle on Rebels. The Revolution is delicious.
-                </p>
-                <p className="text-coral-700 mb-2">With Love, Laughter and Leafy Greens,</p>
-                <p className="text-coral-700 font-semibold">Suz</p>
               </div>
             </div>
           </article>
