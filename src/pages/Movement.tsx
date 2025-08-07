@@ -95,6 +95,53 @@ const Movement = () => {
         </div>
       </section>
 
+      {/* The Rebellious Spirit Lives On */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-coral/5 to-teal/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Image */}
+              <div className="order-1 lg:order-1 w-full animate-slide-left">
+                <div className="rounded-xl overflow-hidden shadow-lg mx-auto max-w-md lg:max-w-none transition-transform duration-700 hover:scale-105">
+                  <img 
+                    src="/lovable-uploads/dd9b9018-e92c-4c8a-8d1a-417f09e618e1.png" 
+                    alt="Vintage poster of a woman riding a motorcycle - representing the timeless rebellious spirit" 
+                    className="w-full h-auto object-cover rounded-xl"
+                  />
+                </div>
+              </div>
+              
+              {/* Text Content */}
+              <div className="order-2 lg:order-2 animate-on-scroll">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center lg:text-left animate-slide-right">
+                  The Rebellious Spirit Lives On
+                </h2>
+                
+                <div className="space-y-4 sm:space-y-5 text-gray-700 text-sm sm:text-base leading-relaxed animate-on-scroll">
+                  <p>
+                    I feel like this vintage poster depicts a younger me. In 1960, during Spring Break from college, I went to Bermuda with a bunch of girlfriends. We rented motor bikes and the rest is history.
+                  </p>
+                  
+                  <div className="bg-white rounded-lg p-4 sm:p-6 border-l-4 border-coral shadow-sm animate-scale-fade">
+                    <p className="italic text-coral font-medium">
+                      I believe it is still me in 2025.
+                    </p>
+                  </div>
+                  
+                  <p>
+                    That adventurous spirit, that willingness to embrace the unknown, that joy in breaking away from the expected path—it hasn't dimmed with age. If anything, it has grown stronger, more intentional, more rebellious.
+                  </p>
+                  
+                  <p>
+                    This is what Rebellious Aging is all about: recognizing that the spark within you doesn't fade with the passing years. It evolves, it deepens, it becomes more authentic. The woman who dared to rent that motorbike in 1960 is the same woman who dares to challenge aging stereotypes today.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* A Rebellious Introduction to Aging */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-teal/5 parallax-bg">
         <div className="container mx-auto px-4">
