@@ -38,6 +38,14 @@ const Blog = () => {
       date: '4/4/2025',
       dateSort: new Date('2025-04-04'),
       readTime: '3 min read'
+    },
+    {
+      id: 'gratitude-rebellious-soul',
+      title: 'Gratitude and the Rebellious Soul (The Quiet Superpower)',
+      excerpt: 'Yesterday when Enzo and I were recording a video about the three pillars of Rebellious Aging, I blurted out, I must include a fourth pillar, gratitude.',
+      date: '7/15/2025',
+      dateSort: new Date('2025-07-15'),
+      readTime: '8 min read'
     }
   ];
 

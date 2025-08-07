@@ -571,6 +571,127 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'gratitude-rebellious-soul') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Link to="/blog" className="text-teal hover:text-teal-dark mb-8 inline-block">
+              ← Back to Blog
+            </Link>
+            
+            <article className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <header className="mb-8">
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                  <span>Blog 6</span>
+                  <span>•</span>
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    7/15/2025
+                  </div>
+                  <span>•</span>
+                  <span>8 min read</span>
+                </div>
+                <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                  Gratitude and the Rebellious Soul (The Quiet Superpower)
+                </h1>
+              </header>
+
+              <div className="prose prose-lg max-w-none">
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Yesterday when Enzo and I were recording a video about the three pillars of Rebellious Aging, I blurted out, I must include a fourth pillar, gratitude. Enzo agreed and so of course a blog about gratitude must follow my outburst.
+                </p>
+
+                <div className="bg-teal/10 p-6 rounded-lg mb-8">
+                  <p className="text-gray-800 font-medium">
+                    Gratitude is a powerful tool, not just for joy, but for health, confidence, and longevity. It's not just about saying thank you. It is about the way we see the world, and the way we show up in it.
+                  </p>
+                </div>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Gratitude is not passive. It is not just being polite or listing what you are thankful for at Thanksgiving dinner (although that does matter). It is more of a mindset, a way of paying attention to what is good and worthy, even in the midst of chaos, change, or aging knees that creak a little louder each year.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Real gratitude acknowledges life as it is, while also celebrating what's still possible. It turns "why me?" into "what now?" and "I used to" into "I get to."
+                </p>
+
+                <div className="bg-green-50 p-6 rounded-lg mb-8">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">The Science Behind Gratitude</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Here is where the sparkle meets the science: practicing gratitude actually rewires your brain. Neuroscientists have found that regularly reflecting on what you are grateful for boosts levels of dopamine and serotonin, the brain's "feel good" chemicals. It even strengthens neural pathways associated with emotional regulation and empathy.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    In other words: the more you practice gratitude, the more natural it becomes to feel joy and connection and peace.
+                  </p>
+                </div>
+
+                <div className="bg-amber-50 p-6 rounded-lg mb-8">
+                  <p className="text-gray-800 font-medium">
+                    A fascinating study from UC Davis found that people who kept a gratitude journal for just ten weeks reported feeling more optimistic, exercising more, and visiting doctors less than those who focused on daily hassles. Yup, that is right, thankfulness might actually be better than a pharmaceutical supplement.
+                  </p>
+                </div>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Gratitude matters, especially as we age. When we are younger, gratitude often feels like a luxury or is ignored completely. As we age? It becomes a necessity.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Gratitude anchors us. It softens the sting of loss and aging. It brings perspective to change. It helps us remember we are still here, still learning, still capable, still able to make an impact. Gratitude is an act of rebellion in a world that tells us aging is declining. No way, we are rising with great health, confidence, grace, style and gumption.
+                </p>
+
+                <div className="bg-coral/10 p-6 rounded-lg mb-8">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Ways to Infuse More Gratitude Into Your Life</h3>
+                  <p className="text-gray-700 mb-4 font-medium">(Without Making It a Chore)</p>
+                  
+                  <ul className="space-y-4 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <span className="text-coral font-bold text-lg">•</span>
+                      <span>Before your feet hit the floor, name one thing you are grateful for. A soft pillow counts. So does waking up.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-coral font-bold text-lg">•</span>
+                      <span>Take a 10 minute stroll and silently thank your body, the trees, the sky or whatever catches your eye.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-coral font-bold text-lg">•</span>
+                      <span>Keep a small notebook by your bed and jot down three things each night that made your day better.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-coral font-bold text-lg">•</span>
+                      <span>Call or text someone and tell them exactly what you appreciate about them. Don't wait.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-coral font-bold text-lg">•</span>
+                      <span>Annoyed that your joints ache after gardening? Flip it to "I am grateful, I am strong enough to dig in the dirt and grow beautiful things."</span>
+                    </li>
+                  </ul>
+                  
+                  <p className="text-gray-700 mt-4 italic">I think you get the point, right?</p>
+                </div>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Gratitude is not a trend. It's a transformation. For the rebellious ager, it is one of the most powerful tools in your kit. Not because it is easy, but because it is real. Gratitude grounds you, heals you, and helps you rise.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mb-8">
+                  So go ahead and make gratitude your daily rebellion. Not just because it is good for your brain (which it is), but because it reminds you how rich your life truly is.
+                </p>
+
+                <div className="text-center py-6">
+                  <p className="text-gray-600 italic">
+                    Sparkle on,<br />
+                    Suz
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">
