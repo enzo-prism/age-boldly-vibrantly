@@ -1,11 +1,14 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { Calendar, ArrowRight } from 'lucide-react';
 
 const Blog = () => {
+  const [sortBy, setSortBy] = useState<'chronological' | 'newest'>('chronological');
+
   const blogPosts = [
     {
       id: 'wfpb-lifestyle-guide',
@@ -63,8 +66,16 @@ const Blog = () => {
     }
   ];
 
-  // Sort blog posts by date in descending order (most recent first)
-  const sortedBlogPosts = [...blogPosts].sort((a, b) => b.dateSort.getTime() - a.dateSort.getTime());
+  // Get sorted posts based on current sort preference
+  const getSortedPosts = () => {
+    if (sortBy === 'chronological') {
+      return [...blogPosts].sort((a, b) => a.blogNumber - b.blogNumber);
+    } else {
+      return [...blogPosts].sort((a, b) => b.dateSort.getTime() - a.dateSort.getTime());
+    }
+  };
+
+  const sortedBlogPosts = getSortedPosts();
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -86,6 +97,29 @@ const Blog = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Sort Toggle */}
+            <div className="mb-8 flex justify-center">
+              <ToggleGroup
+                type="single"
+                value={sortBy}
+                onValueChange={(value) => value && setSortBy(value as 'chronological' | 'newest')}
+                className="border rounded-lg p-1 bg-white shadow-sm"
+              >
+                <ToggleGroupItem
+                  value="chronological"
+                  className="px-4 py-2 rounded-md text-sm font-medium transition-colors data-[state=on]:bg-teal data-[state=on]:text-white"
+                >
+                  Chronological
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="newest"
+                  className="px-4 py-2 rounded-md text-sm font-medium transition-colors data-[state=on]:bg-teal data-[state=on]:text-white"
+                >
+                  Newest First
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+
             <div className="grid gap-8">
               {sortedBlogPosts.map((post) => (
                 <Card key={post.id} className="hover:shadow-lg transition-shadow">
