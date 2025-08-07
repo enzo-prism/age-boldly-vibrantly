@@ -104,8 +104,8 @@ const Movement = () => {
               <div className="order-1 lg:order-1 w-full animate-slide-left">
                 <div className="rounded-xl overflow-hidden shadow-lg mx-auto max-w-md lg:max-w-none transition-transform duration-700 hover:scale-105">
                   <img 
-                    src="/lovable-uploads/8a832304-e046-4aae-a213-eafffeb66f29.png" 
-                    alt="Vintage French FAVOR motorbike poster featuring an elegant woman in pink - 'simple pratique élégant' - embodying the rebellious spirit from 1960 to 2025" 
+                    src="/lovable-uploads/b29c97e6-a6e6-4963-992c-d03f1a2fc876.png" 
+                    alt="Framed vintage French FAVOR motorbike poster with elegant woman on yellow background - 'simple pratique élégant' - the actual poster from the author's personal collection embodying rebellious spirit" 
                     className="w-full h-auto object-cover rounded-xl"
                   />
                 </div>
