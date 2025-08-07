@@ -284,6 +284,123 @@ const BlogPost = () => {
     );
   }
   
+  // Handle the closet blog post (Blog 4)
+  if (postId === 'a-love-letter-to-my-closet') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {/* Back to Blog */}
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
+
+          <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            {/* Article Header */}
+            <header className="mb-8">
+              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  6/25/2025
+                </div>
+                <span>•</span>
+                <span>Blog 4</span>
+                <span>•</span>
+                <div className="flex items-center gap-1">
+                  <Clock className="w-4 h-4" />
+                  10 min read
+                </div>
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                A Love Letter to My Closet
+              </h1>
+            </header>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <p className="text-xl text-coral font-medium mb-6">
+                There was a time I dressed to impress. Now? I dress to express.
+              </p>
+              
+              <p className="mb-6">My closet is no longer a holding pen for solid black. (A guy I worked for once told me, if you want to be taken seriously in this biz, wear black, to say that had an impression on me is an understatement). But truth be known I expect black is the "little black power move of the color world". I drank the Kool Aid and for many years wore black, ONLY. My philosophy has always included, "if a little is good, a lot is better."</p>
+
+              <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400 mb-8">
+                <p className="text-teal-800 font-medium">
+                  My closet is no longer a holding pen for black. It is my personal gallery of courage, mood and sometimes sequins.
+                </p>
+              </div>
+
+              <p className="mb-6">You will spot bright scarves, leopard and zebra prints, bright pink heels, my favorite red party skirt, shirts of many colors, some of which sparkle bright. A shelf of colorful hats, crazy socks, bright purses and chunky colorful jewelry. I am working toward breaking up with black, one step at a time. However, it is a slow agonizing break up because black has so much to give: check this out, after much pondering and thoughtfulness and questioning friends, I came up with a Pro Black List.</p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-8">
+                <h3 className="font-semibold text-gray-800 mb-3">Pro Black List</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• I am in charge.</li>
+                  <li>• I've got mystery - and I am keeping some for myself</li>
+                  <li>• I am deliberate</li>
+                  <li>• I am here to focus</li>
+                  <li>• I know my power and I do not need to shout.</li>
+                </ul>
+                <p className="mt-4 text-gray-600 italic">Hmmmmmmmm?</p>
+              </div>
+
+              <p className="mb-6">This post is a letter to that space, a different time, the jackets that carry memories, the scarves that still smell faintly of old adventures, the shoes that remind me who I was (and still am, just a newer version). It's about the joy of reaching for a piece that makes me feel like me, and the quiet confidence that comes from showing up in something that whispers, "I've still got it but in a sassy classy way."</p>
+
+              <div className="bg-coral-50 p-6 rounded-lg border-l-4 border-coral-400 mb-8">
+                <p className="text-coral-800 font-medium">
+                  I have lived long enough to know the fashion rules, and to BREAK them all. White after Labor Day, of course. Florals and stripes, so good. Red lipstick, a favorite silk blouse with jeans, sneakers and a baseball cap, classy redefined. Why not? Rebels radiate.
+                </p>
+              </div>
+
+              <p className="mb-6">At 83, I no longer wonder, "Can I pull this off?" Instead I wonder? "Do I feel like myself in this and especially spectacular"? If the answer is yes, on, it goes.</p>
+
+              <p className="mb-6">But here's the thing, I didn't just stumble into enjoying fashion. I have been intrigued since I was a little girl. There is a difference, you already know this, between FASHION and STYLE. I think unknowingly I chased the latter.</p>
+
+              <div className="bg-green-50 p-6 rounded-lg mb-8">
+                <h4 className="font-semibold text-green-800 mb-3">The Red Plaid Belt Story</h4>
+                <p className="text-green-700">
+                  I recall being in 7th grade. I only had a few clothing items. I loved creating new outfits from what I had. I enjoyed reinventing what hung in my closet. I would find ways to tweak, change, and reinvent each piece to feel new. The day I used my dad's bright red plaid robe belt and proudly tied it around my waist to change the look of the "same old" was a day I will always remember. The compliments flew and I became unstoppable. It wasn't about labels or trends, it was about attitude, imagination and sass.
+                </p>
+              </div>
+
+              <p className="mb-6">A few months ago, someone dear to me said, in conversation, "Well, you have your own unique style, it's easy for you." I was shocked. At 83, it had never dawned on me that what I'd been doing all of these years, tweaking, layering, adding robe belts like runway sashes, was style. It was not about effortlessness. It was about love.</p>
+
+              <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-400 mb-8">
+                <h4 className="font-semibold text-amber-800 mb-3">Rebellious Whisper</h4>
+                <p className="text-amber-700 mb-4">
+                  So here's my rebellious whisper to you. Don't fade. Don't apologize. Don't tuck yourself into black. Wear the thing you always wanted to wear, the way you want to wear it. The vintage purple hat, the red lipstick, the statement jacket you thought might be "too much". This is your time to SPARKLE, and to radiate unapologetic style.
+                </p>
+                <p className="text-amber-700 font-medium">
+                  Refuse to become invisible. Your closet is a mirror. Let it reflect your energy, your evolution, your essence. Try something unexpected. Let your closet be the playground it was always meant to be.
+                </p>
+              </div>
+
+              <div className="bg-purple-50 p-6 rounded-lg mb-8 text-center">
+                <p className="text-purple-800 text-lg font-medium italic">
+                  What's hanging in your closet that is begging to dance again?
+                </p>
+              </div>
+
+              <div className="text-center bg-coral-50 p-8 rounded-lg">
+                <p className="text-coral-800 font-medium text-lg mb-2">With Love, Laughter and Leafy Greens,</p>
+                <p className="text-coral-600 text-xl font-bold">Suz</p>
+              </div>
+            </div>
+          </article>
+
+          {/* Navigation */}
+          <div className="mt-12 text-center">
+            <Link to="/blog">
+              <Button className="bg-teal hover:bg-teal-dark text-white">
+                Back to All Posts
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  
   // Handle the nutrition blog post (now Blog 3)
   if (postId === 'rebellious-guide-what-is-on-your-plate') {
     return (

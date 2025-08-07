@@ -16,6 +16,14 @@ const Blog = () => {
       readTime: '12 min read'
     },
     {
+      id: 'a-love-letter-to-my-closet',
+      title: 'A Love Letter to My Closet',
+      excerpt: 'There was a time I dressed to impress. Now? I dress to express. My closet is no longer a holding pen for solid black.',
+      date: '6/25/2025',
+      dateSort: new Date('2025-06-25'),
+      readTime: '10 min read'
+    },
+    {
       id: 'rebellious-guide-what-is-on-your-plate',
       title: 'The Rebellious Guide (What is on Your Plate)',
       excerpt: 'Let\'s set the table for something deliciously different. I am excited to talk with you about something that has transformed my life - the Whole Food Plant Based (WFPB) lifestyle.',
