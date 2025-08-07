@@ -104,7 +104,7 @@ const Movement = () => {
               <div className="order-1 lg:order-1 w-full animate-slide-left">
                 <div className="rounded-xl overflow-hidden shadow-lg mx-auto max-w-md lg:max-w-none transition-transform duration-700 hover:scale-105">
                   <img 
-                    src="/lovable-uploads/b29c97e6-a6e6-4963-992c-d03f1a2fc876.png" 
+                    src="/lovable-uploads/a4255d73-0f3b-4b18-ac0d-cd1e985f3292.png" 
                     alt="Framed vintage French FAVOR motorbike poster with elegant woman on yellow background - 'simple pratique élégant' - the actual poster from the author's personal collection embodying rebellious spirit" 
                     className="w-full h-auto object-cover rounded-xl"
                   />
