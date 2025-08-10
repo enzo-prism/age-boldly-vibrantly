@@ -1404,6 +1404,133 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'wearing-who-you-are-style-rebellion') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-background to-background/80 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
+          
+          <article className="prose prose-lg max-w-none">
+            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+              <div className="flex items-center gap-1">
+                <Calendar className="w-4 h-4" />
+                8/7/2025
+              </div>
+              <div className="flex items-center gap-1">
+                <Clock className="w-4 h-4" />
+                9 min read
+              </div>
+              <span className="bg-teal/10 text-teal px-2 py-1 rounded-full text-xs font-medium">
+                Blog #12
+              </span>
+            </div>
+            
+            <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-teal to-teal-dark bg-clip-text text-transparent">
+              Wearing Who You Are, A Style Rebellion
+            </h1>
+            
+            <div className="space-y-6">
+              <p className="text-lg leading-relaxed">
+                Let's be honest. When it comes to aging and fashion, society tends to hand us a beige cardigan and a pair of sensible shoes and whispers, "Please, just fade away". Gracefully, of course.
+              </p>
+              
+              <p className="text-lg leading-relaxed font-medium">
+                Well thanks, but no thank you.
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                Here at Rebellious Aging, we don't tone it down. <strong className="text-teal">WE TURN IT UP.</strong>
+              </p>
+              
+              <div className="bg-teal/5 border-l-4 border-teal p-6 my-8">
+                <p className="text-lg leading-relaxed mb-4">
+                  Style isn't about following the rules. It is about expression, freedom, and yes, fun. It's about waking up looking in the mirror and saying, "That's ME, and I like/love what I see."
+                </p>
+                
+                <p className="text-lg leading-relaxed">
+                  Style isn't just surface stuff, it's a mirror into your inner world. The colors you wear, the shapes you choose, the accessories you throw on, the attitude you exude, well, they all tell a story. And you, dear Rebel are the author.
+                </p>
+              </div>
+              
+              <p className="text-lg leading-relaxed">
+                This is your creation, your calling card, it does not have to make sense to anyone else. It just has to make you feel authentic, proud, and alive.
+              </p>
+              
+              <h2 className="text-2xl font-bold text-teal mt-8 mb-4">What Rebellious Style is NOT</h2>
+              
+              <div className="bg-rose-50 border border-rose-200 p-6 rounded-lg">
+                <ul className="space-y-3 text-lg">
+                  <li>• Rebellious style is not about trends. (Unless you love them).</li>
+                  <li>• It is definitely not about making you look younger. (You have earned your years, wear them with pride and the sassy unapologetic Rebel you are becoming).</li>
+                  <li>• It is not about dressing age-appropriately (whatever that means).</li>
+                </ul>
+              </div>
+              
+              <h2 className="text-2xl font-bold text-teal mt-8 mb-4">What Rebellious Style IS</h2>
+              
+              <div className="bg-teal/10 border border-teal/20 p-6 rounded-lg">
+                <p className="text-lg leading-relaxed mb-4">
+                  But it is the following for sure:
+                </p>
+                <ul className="space-y-3 text-lg">
+                  <li>• Feeling confident in your own skin</li>
+                  <li>• Dressing to match your mood</li>
+                  <li>• Giving yourself permission to try stuff, to play, to show up at breakfast wearing bright red lipstick</li>
+                  <li>• Be authentic, be gorgeous, be unapologetic, be <strong className="text-teal">BOLD</strong></li>
+                </ul>
+              </div>
+              
+              <div className="bg-amber-50 border-2 border-amber-200 p-6 rounded-lg text-center my-8">
+                <p className="text-xl font-bold text-amber-800">
+                  Reminder! "Don't Let The Old Lady In."
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-teal/10 to-teal/5 border border-teal/20 p-8 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-teal mb-4">Your Style Challenge</h3>
+                <p className="text-lg leading-relaxed mb-4">
+                  OK, so, let's start here. What is one item in your closet that feels most like you at the moment? Pull it out, dust it off, try it on. Wear it this week.
+                </p>
+                <p className="text-lg leading-relaxed font-medium text-teal">
+                  Bonus points if it makes you smile when you catch your reflection.
+                </p>
+              </div>
+              
+              <div className="bg-slate-50 border border-slate-200 p-6 rounded-lg">
+                <h3 className="text-xl font-bold mb-4">Coming Up in Style</h3>
+                <p className="text-lg leading-relaxed mb-4">
+                  So if you are ready to rethink your "style story", you are in the right place. We will be talking:
+                </p>
+                <ul className="grid grid-cols-2 gap-2 text-lg">
+                  <li>• Closet clean outs</li>
+                  <li>• Joyful dressing</li>
+                  <li>• Thrifting</li>
+                  <li>• Upstyling</li>
+                  <li>• Bold accessories</li>
+                  <li>• Fab colors</li>
+                  <li className="col-span-2">• Slaying those old rules that say you have to disappear as you age</li>
+                </ul>
+              </div>
+              
+              <div className="text-center py-8">
+                <p className="text-xl font-bold text-teal mb-2">
+                  Let's Dazzle Together.
+                </p>
+                <p className="text-lg italic">
+                  Sparkle on,<br />
+                  Suz
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">

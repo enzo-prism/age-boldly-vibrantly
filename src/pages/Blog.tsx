@@ -106,6 +106,15 @@ const Blog = () => {
       dateSort: new Date('2025-08-07'),
       readTime: '7 min read',
       blogNumber: 11
+    },
+    {
+      id: 'wearing-who-you-are-style-rebellion',
+      title: 'Wearing Who You Are, A Style Rebellion',
+      excerpt: 'When it comes to aging and fashion, society hands us a beige cardigan and whispers "please, just fade away." Well thanks, but no thank you. Here at Rebellious Aging, we don\'t tone it down. WE TURN IT UP.',
+      date: '8/7/2025',
+      dateSort: new Date('2025-08-07'),
+      readTime: '9 min read',
+      blogNumber: 12
     }
   ];
 
