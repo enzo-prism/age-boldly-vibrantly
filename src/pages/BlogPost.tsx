@@ -1531,6 +1531,131 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'bold-sassy-truth-wfpb') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/blog" className="inline-block mb-8">
+            <Button variant="outline" className="text-teal hover:text-teal-dark border-teal hover:border-teal-dark">
+              ← Back to Blog
+            </Button>
+          </Link>
+          
+          <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            <header className="mb-8">
+              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                <span>8/9/2025</span>
+                <span>•</span>
+                <span>Blog 13</span>
+                <span>•</span>
+                <span>10 min read</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+                The Bold, Sassy Truth About a Whole Food Plant Based Lifestyle
+              </h1>
+            </header>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                Who says aging gracefully has to be slow and quiet? Not me. I believe in aging rebelliously. 
+                With a plate full of vibrant colors, flavors, and life giving nutrients. A WFPB lifestyle 
+                isn't just about "rabbit food." Instead it is a delicious rebellion against disease, fatigue, 
+                and mediocrity. And guess what? Science is on our side. Let's take a look at what the research 
+                says about eating plants and living brilliantly.
+              </p>
+
+              <div className="space-y-8">
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Reduced Risk of Chronic Disease</h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    A whole Food Plant Based diet has shown to halt and even reverse coronary artery disease, 
+                    (Esselstyn), lower cancer risk (Campbell's China Study) and improve blood sugar control 
+                    in type 2 diabetes (Greger).
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Improved Digestive Health</h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    Fiber rich plant foods nourish a healthy gut microbiome, improve digestion, and may 
+                    reduce colorectal cancer risk. (Bulsiewicz).
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Lower Blood Pressure and Cholesterol</h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    Plant diets reduce LDL cholesterol and blood pressure without medication side effects.
+                    (Esselstyn, Greger).
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Weight Management and Metabolic Health</h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    Low calorie density makes it easier to maintain a healthy weight while eating satisfying 
+                    portions and not counting calories. (Campbell, Greger).
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Anti-Inflammatory Effects</h2>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    <strong>Antioxidants</strong> (substances that can help protect your cells from damage 
+                    caused by unstable molecules called free radicals. Free radicals are by-products of normal 
+                    cell processes and can contribute to various diseases) and <strong>phytonutrients</strong> 
+                    (naturally occurring compounds found in plants that offer various health benefits) in plants 
+                    reduce chronic inflammation linked to arthritis, heart disease, and cognitive decline 
+                    (Greger, Bulsiewicz).
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Healthspan and Quality of Life</h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    Plant predominant diets are associated with longer lifespan and lower rates of disability 
+                    (Campbell, Greger).
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Improved Energy and Recovery</h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    Better blood flow, oxygen delivery, and reduced oxidative stress, boost stamina and recovery 
+                    (Esselstyn, Greger).
+                  </p>
+                </section>
+              </div>
+
+              <div className="mt-12 p-6 bg-gradient-to-r from-teal/10 to-coral/10 rounded-xl border border-teal/20">
+                <p className="text-lg text-gray-800 leading-relaxed mb-4">
+                  So here's the truth. You can tiptoe through the years, or you can charge in, fork first, 
+                  and claim the health, energy and sparkle you deserve. A WFPB lifestyle isn't just about 
+                  adding years to your life. It is about adding life to your years. The research is clear, 
+                  plants are delicious, and over the top healthy and the only thing missing is your decision 
+                  to take the risk and dive in. So go ahead, and plate up some plants.
+                </p>
+                
+                <p className="text-gray-800 font-medium mb-2">Sparkle on,</p>
+                <p className="text-gray-800 font-bold">Suz</p>
+                
+                <p className="text-sm text-gray-600 mt-4 italic">
+                  Full bibliography available upon request.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <Link to="/blog" className="inline-block mt-8">
+            <Button variant="outline" className="text-teal hover:text-teal-dark border-teal hover:border-teal-dark">
+              ← Back to Blog
+            </Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">
