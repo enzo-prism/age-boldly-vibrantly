@@ -1066,6 +1066,123 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'limiting-beliefs-not-boss') {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <button 
+            onClick={() => window.history.back()} 
+            className="mb-6 text-teal hover:text-teal/80 font-medium"
+          >
+            ← Back to Blog
+          </button>
+          
+          <article className="prose prose-lg max-w-none">
+            <div className="mb-8">
+              <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                <span>8/6/2025</span>
+                <span>•</span>
+                <span>Blog 10</span>
+                <span>•</span>
+                <span>9 min read</span>
+              </div>
+              <h1 className="text-4xl font-bold mb-6">Shhh…That Voice in Your Head is Not the Boss of You</h1>
+            </div>
+
+            <div className="space-y-6">
+              <p>
+                Let's get one thing straight. Those whispers in your head, ya know the ones saying you are too old, too late, not stylish enough, not smart enough, unhealthy, horribly out of shape, not ready, they are NOT the truth. (For those who are interested I will dive deeper into the science of who those sneaky voices belong to.) But for now let's go with this. They are old scripts. They are "hand me down" fears. Quite frankly, they are BORING! It is time to stop letting those outdated voices run the show.
+              </p>
+
+              <p>
+                Limiting beliefs are sneaky. They wear disguises like "being realistic" or "just protecting from disappointment." But what they are really doing is shrinking YOU. They are keeping you from saying yes to that art class, trying a new hairstyle, hitting record on that video idea, or ditching making healthier food choices.
+              </p>
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">
+                <p className="text-lg font-semibold">
+                  Here is the TRUTH bomb. You do not have to believe every thought you think.
+                </p>
+              </div>
+
+              <p>
+                May I suggest you read, <em>"Don't Believe Everything You Think" (Why Your Thinking is the Beginning & End Of Suffering)</em> by Joseph Nguyen.
+              </p>
+
+              <p>
+                That voice in your head? It may sound like you, but it is NOT you. It is a collage of old rules, other people's opinions, and moments when your confidence got a bit bruised. You, my friend, are much better than that.
+              </p>
+
+              <h2 className="text-2xl font-bold mt-8 mb-6">3 Simple Ways to Start Busting Through Limiting Beliefs</h2>
+
+              <div className="bg-teal/10 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">1. Name it to Tame it.</h3>
+                <p>
+                  When a limiting thought pops up, ya know like "I am too old to begin something new", say it out loud. Hearing it with your real voice often will reveal just how silly or outdated that thought is.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">2. Ask: Would I say this to a friend?</h3>
+                <p>
+                  If your best friend came to you at 55, 65, or 83 saying, "I want to try something new," would you ever say, "Nope, too late". Of course not. You must treat yourself with the same compassion.
+                </p>
+              </div>
+
+              <div className="bg-teal/10 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">3. Gather Evidence to the Contrary.</h3>
+                <p className="mb-4">
+                  Write down all the times you did try something new and it went superbly. Or at the least, taught you something important.
+                </p>
+                <p className="font-semibold">
+                  You are not starting from scratch. You are starting from Experience.
+                </p>
+              </div>
+
+              <p>
+                Here's the thing. Confidence is definitely not about having all of the answers. It is more about trusting yourself enough to take the next step. If your knees are knocking and you are breaking out in a sweat, keep going. The great thing is you can be scared and still be powerful. How about this, "self doubt" can ride along for the journey, but it does not get to drive.
+              </p>
+
+              <div className="text-center my-8">
+                <p className="text-xl font-bold">
+                  We Rebels are NOT here to play small.
+                </p>
+                <p className="text-lg mt-4">
+                  We are here to live fully, loudly, and with the kind of sparkle that makes people stop and say, "I want whatever she's got."
+                </p>
+              </div>
+
+              <div className="bg-coral/10 border-l-4 border-coral p-6 my-8">
+                <h3 className="font-bold text-lg mb-4">Call to Action:</h3>
+                <p className="mb-4">
+                  Is there a limiting belief that haunts you? Let it go. Write it down. Tear it up. Better yet burn it. Then take one rebellious action that proves it wrong.
+                </p>
+                <p className="font-semibold">
+                  Need a cheerleader? I am here for you.
+                </p>
+              </div>
+
+              <div className="text-center mt-8">
+                <p className="text-lg italic">
+                  Sparkle on,<br />
+                  Suz
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <div className="mt-12 text-center">
+            <button 
+              onClick={() => window.history.back()}
+              className="bg-teal text-white px-6 py-3 rounded-lg hover:bg-teal/90 transition-colors"
+            >
+              ← Back to Blog
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (postId === 'set-record-straight-wfpb') {
     return (
       <div className="container mx-auto px-4 py-8">

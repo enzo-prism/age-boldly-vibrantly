@@ -88,6 +88,15 @@ const Blog = () => {
       dateSort: new Date('2025-08-04'),
       readTime: '8 min read',
       blogNumber: 9
+    },
+    {
+      id: 'limiting-beliefs-not-boss',
+      title: 'Shhh…That Voice in Your Head is Not the Boss of You',
+      excerpt: 'Let\'s get one thing straight. Those whispers in your head saying you are too old, too late, not stylish enough, they are NOT the truth. They are old scripts, hand-me-down fears, and quite frankly, they are BORING!',
+      date: '8/6/2025',
+      dateSort: new Date('2025-08-06'),
+      readTime: '9 min read',
+      blogNumber: 10
     }
   ];
 
