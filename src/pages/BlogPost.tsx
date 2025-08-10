@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 const BlogPost = () => {
   const { postId } = useParams();
@@ -22,18 +22,8 @@ const BlogPost = () => {
           <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
             {/* Article Header */}
             <header className="mb-8">
-              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  4/4/2025
-                </div>
-                <span>•</span>
+              <div className="text-sm text-gray-500 mb-4">
                 <span>Blog 2</span>
-                <span>•</span>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  3 min read
-                </div>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 The Road to Success: 8 Thoughts
@@ -122,18 +112,8 @@ const BlogPost = () => {
           <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
             {/* Article Header */}
             <header className="mb-8">
-              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  1/29/2025
-                </div>
-                <span>•</span>
+              <div className="text-sm text-gray-500 mb-4">
                 <span>Blog 3</span>
-                <span>•</span>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  12 min read
-                </div>
               </div>
               <div className="text-sm text-gray-500 mb-4 italic">[A work in progress. Revised 1/29/2025]</div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -298,18 +278,8 @@ const BlogPost = () => {
           <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
             {/* Article Header */}
             <header className="mb-8">
-              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  6/25/2025
-                </div>
-                <span>•</span>
+              <div className="text-sm text-gray-500 mb-4">
                 <span>Blog 4</span>
-                <span>•</span>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  10 min read
-                </div>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 A Love Letter to My Closet
@@ -415,18 +385,8 @@ const BlogPost = () => {
           <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
             {/* Article Header */}
             <header className="mb-8">
-              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  6/25/2025
-                </div>
-                <span>•</span>
+              <div className="text-sm text-gray-500 mb-4">
                 <span>Blog 1</span>
-                <span>•</span>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  8 min read
-                </div>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 The Rebellious Guide (What is on Your Plate)
@@ -585,18 +545,8 @@ const BlogPost = () => {
           <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
             {/* Article Header */}
             <header className="mb-8">
-              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  4/1/2025
-                </div>
-                <span>•</span>
+              <div className="text-sm text-gray-500 mb-4">
                 <span>Blog 6</span>
-                <span>•</span>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  15 min read
-                </div>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 Gratitude and the Rebellious Soul
@@ -724,15 +674,8 @@ const BlogPost = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="mb-8">
-                <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    May 15, 2025
-                  </div>
-                  <span>•</span>
+                <div className="text-sm text-gray-500 mb-4">
                   <span>Blog 5</span>
-                  <span>•</span>
-                  <span>6 min read</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
                   Blueberries and Wrinkles
@@ -773,15 +716,8 @@ const BlogPost = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="mb-8">
-                <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    April 15, 2025
-                  </div>
-                  <span>•</span>
+                <div className="text-sm text-gray-500 mb-4">
                   <span>Blog 7</span>
-                  <span>•</span>
-                  <span>12 min read</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
                   The Art of Thriving. What an Ageing Expert Wants You to Know
@@ -940,15 +876,8 @@ const BlogPost = () => {
             
             {/* Article Header */}
             <header className="mb-12">
-              <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  5/1/2025
-                </div>
-                <span>•</span>
+              <div className="text-sm text-gray-500 mb-4">
                 <span>Blog 8</span>
-                <span>•</span>
-                <span>10 min read</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
                 What a Shop Window Taught Me About Aging Gracefully
@@ -1414,15 +1343,7 @@ const BlogPost = () => {
           </Link>
           
           <article className="prose prose-lg max-w-none">
-            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-              <div className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                8/7/2025
-              </div>
-              <div className="flex items-center gap-1">
-                <Clock className="w-4 h-4" />
-                9 min read
-              </div>
+            <div className="text-sm text-muted-foreground mb-6">
               <span className="bg-teal/10 text-teal px-2 py-1 rounded-full text-xs font-medium">
                 Blog #12
               </span>

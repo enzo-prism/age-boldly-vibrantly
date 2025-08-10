@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Blog = () => {
 
@@ -163,15 +163,8 @@ const Blog = () => {
               {sortedBlogPosts.map((post) => (
                 <Card key={post.id} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {post.date}
-                      </div>
-                      <span>•</span>
+                    <div className="text-sm text-gray-500 mb-2">
                       <span>Blog {post.blogNumber}</span>
-                      <span>•</span>
-                      <span>{post.readTime}</span>
                     </div>
                     <CardTitle className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
                       {post.title}
