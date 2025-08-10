@@ -1322,6 +1322,88 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'what-is-behind-limiting-beliefs') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-8">
+            <div className="text-teal mb-2">8/7/2025 • Blog #11 • 7 min read</div>
+            <h1 className="text-4xl font-bold text-gray-800 mb-6">
+              What is Behind Limiting Beliefs?
+            </h1>
+          </div>
+
+          <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+            <p className="text-xl mb-8 text-teal font-medium">
+              The voices that taunt us, saying things like you are too old, or you are not enough, or you'll fail, or they are going to laugh at you, are not a mystical curse.
+            </p>
+
+            <p className="mb-6 text-lg">
+              Here is the science behind it:
+            </p>
+
+            <div className="bg-teal/10 p-6 rounded-lg mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">The Brain's Built-in Alarm System</h2>
+              <p className="mb-4">
+                We evolved to survive, not to shine. Your brain's primary job is to detect threats, like embarrassment, failure, or rejection. So when you think about doing something bold or unfamiliar (like starting a YouTube channel at 83) your brain may shout out, "hold on, stay safe." This is just your amygdala doing its job. Helpful? Typically not.
+              </p>
+              
+              <div className="bg-white p-4 rounded border-l-4 border-teal mt-4">
+                <p className="text-sm italic">
+                  (Your amygdala is a small part of your brain, but it has a big job. It is a major processing center for emotions. It also links your emotions to many other brain abilities. It is a part of the larger network called the limbic system. These are parts of your brain that detect danger. They also play a role in behavior, emotional control and learning. <em>Clevelandclinic.org</em>.)
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-coral/10 p-6 rounded-lg mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">The Inner Critic is a Learned Voice</h2>
+              <p className="mb-4">
+                Most of those critical thoughts are formed in childhood and reinforced over time. Psychologists call this internalized messaging—ideas you absorbed from your parents, teachers, peers, media and society. Messages like: don't draw attention to yourself, act your age, you are not the creative one. These become part of your subconscious belief system, repeated so often they feel like truth. But they are not true or even close. They are simply just well-worn mental grooves.
+              </p>
+              
+              <div className="bg-white p-4 rounded border-l-4 border-coral mt-4">
+                <p className="text-sm italic">
+                  Your subconscious belief systems are deeply ingrained, often unexamined, and can significantly influence thoughts, behaviors, and even physical health. These beliefs, formed in early childhood and beyond, operate largely outside of conscious awareness and can drive actions, shape interpretations of experiences and create self-limiting patterns. Understanding and potentially modifying these beliefs can be a key component of personal growth and positive change. <em>psychologytoday.com</em>, see article, "Are Negative Core Beliefs Wrecking Your Life".
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gray-100 p-6 rounded-lg mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Default Mode Network (DMN)</h2>
+              <p className="mb-4">
+                This is the brain network that lights up when you are not focused on a task. Like when you are daydreaming, remembering, or self-reflecting. It is also where self-critical chatter can thrive. When the DMN is overactive, it can fuel anxious or negative inner dialogue.
+              </p>
+              <p>
+                Good news? Practices like mindfulness, journaling, and cognitive reframing help quiet this network and strengthen more empowering thoughts.
+              </p>
+            </div>
+
+            <div className="bg-gray-800 text-white p-6 rounded-lg mb-8">
+              <h2 className="text-2xl font-bold mb-4">Bottom Line:</h2>
+              <p className="text-lg">
+                Those taunting voices in your head are a mix of subconscious programming, outdated survival wiring, and cultural conditioning. <strong>THEY ARE NOT YOU.</strong> You are the observer, the awareness, the Rebel who gets to decide which thoughts are welcome and <strong>WHICH NEED TO PACK THEIR BAGS AND MOVE ON.</strong>
+              </p>
+            </div>
+
+            <p className="text-center text-lg font-medium text-teal mb-8">
+              Sparkle on,<br />
+              Suz
+            </p>
+          </article>
+
+          <div className="mt-12 text-center">
+            <button 
+              onClick={() => window.history.back()}
+              className="bg-teal text-white px-6 py-3 rounded-lg hover:bg-teal/90 transition-colors"
+            >
+              ← Back to Blog
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">

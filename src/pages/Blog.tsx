@@ -97,6 +97,15 @@ const Blog = () => {
       dateSort: new Date('2025-08-06'),
       readTime: '9 min read',
       blogNumber: 10
+    },
+    {
+      id: 'what-is-behind-limiting-beliefs',
+      title: 'What is Behind Limiting Beliefs?',
+      excerpt: 'The voices that taunt us, saying things like you are too old, or you are not enough, or you\'ll fail, are not a mystical curse. Here\'s the science behind it.',
+      date: '8/7/2025',
+      dateSort: new Date('2025-08-07'),
+      readTime: '7 min read',
+      blogNumber: 11
     }
   ];
 
