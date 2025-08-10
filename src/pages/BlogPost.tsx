@@ -1066,6 +1066,145 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'set-record-straight-wfpb') {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <button 
+            onClick={() => window.history.back()} 
+            className="mb-6 text-teal hover:text-teal/80 font-medium"
+          >
+            ← Back to Blog
+          </button>
+          
+          <article className="prose prose-lg max-w-none">
+            <div className="mb-8">
+              <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                <span>8/4/2025</span>
+                <span>•</span>
+                <span>Blog 9</span>
+                <span>•</span>
+                <span>8 min read</span>
+              </div>
+              <h1 className="text-4xl font-bold mb-6">It's Time to Set the Record Straight Regarding a Whole Food Plant Based Lifestyle</h1>
+            </div>
+
+            <div className="space-y-6">
+              <p>
+                Let's be honest. When you mention to other humans that you are eating mostly plants, the reactions range from curious to downright skeptical. The first question is usually about where do you get your protein? Followed by, isn't it expensive? Followed by the statement, Sounds like a lot of work.
+              </p>
+
+              <p>
+                I know you have been wondering the same. These are my most asked questions. These myths have been around longer than tofu has been on supermarket shelves. Here's the truth. A whole Food Plant Based (WFPB) lifestyle is not extreme, it is evidence-based, empowering, simple, delicious, life changing, health changing, weight changing and doable at any age.
+              </p>
+
+              <h2 className="text-2xl font-bold mt-8 mb-4">Let's Clear the Air.</h2>
+
+              <div className="bg-teal/10 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">Where do you get your protein?</h3>
+                <p className="mb-4">
+                  <strong>Duh, Simple answer:</strong> the same place the animal you just ate got their protein. <strong>PLANTS!</strong> Plants have plenty of protein. Here's a short list in no special order:
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+                  <span>• peanut butter</span>
+                  <span>• soy milk</span>
+                  <span>• oat milk</span>
+                  <span>• lentils</span>
+                  <span>• beans</span>
+                  <span>• tofu</span>
+                  <span>• edamame</span>
+                  <span>• quinoa</span>
+                  <span>• oats</span>
+                  <span>• green peas</span>
+                  <span>• split peas</span>
+                  <span>• potatoes</span>
+                  <span>• kale</span>
+                  <span>• spinach</span>
+                  <span>• broccoli</span>
+                </div>
+                <p className="mt-4 italic">
+                  Most Americans actually consume too much protein (A Future Blog).<br />
+                  Checkout, <a href="https://nutritionfacts.org/protein" className="text-teal hover:underline">NutritionFacts.org/protein</a>
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">It's Too Expensive.</h3>
+                <p className="mb-4">Not if you do not want it to be. Just like anything else you have choices.</p>
+                <p>
+                  <strong>Beans, rice, potatoes, oats, frozen veggies and in season produce</strong> are some of the cheapest and most nutritious foods on the planet. Whole Foods for the win!
+                </p>
+              </div>
+
+              <div className="bg-teal/10 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">It takes too much time to prepare.</h3>
+                <p className="mb-4">Again just like with the Standard American Diet (SAD) you have choices. If you are making an Instagram worthy Buddha bowl or Chef Aj's deelish Chocolate Mint Torte, maybe. (<a href="https://chefaj.com" className="text-teal hover:underline">chefaj.com</a>)</p>
+                <p className="mb-4">
+                  WFPB can be as fast as an unglamorous but nutritious Buddha bowl, as fast as a bowl of chili, or a roasted sweet potato on a bed of greens smothered with your choice of an assortment of veggies topped with a great balsamic or salsa.
+                </p>
+                <p>
+                  <strong>Frozen veggies equal time saving brilliance.</strong> I am having a love affair with organic frozen kale and wild blueberries. Simple as simple is and quicker and healthier than take out. Replace the word EAT with Nourish, for the win.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">It is ONLY for Young People.</h3>
+                <p>
+                  Actually the older we get, the more our bodies benefit from nutrient rich, anti-inflammatory foods. Aches, energy dips, blood pressure spikes? <strong>Plants for the win.</strong>
+                </p>
+              </div>
+
+              <div className="bg-teal/10 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">I Will Feel Deprived.</h3>
+                <p className="mb-4">
+                  Deprived of what, heartburn? Joint pain? Meds? Autoimmune Disease? Heart Disease?
+                </p>
+                <p>
+                  The truth is, many people discover more flavor, satisfaction, and joy in their meals when they go plant based. Your gut microbiome celebrates, your taste buds evolve, your energy returns, your weight stabilizes, your blood flows and your confidence blooms. <strong>Aging with grace and greens for the win.</strong>
+                </p>
+              </div>
+
+              <p className="text-lg">
+                You have nothing to lose and so much to gain. You do not have to know everything to get started. You just have to be open. The WFPB lifestyle is not about perfection it is about progress and possibilities. And trust me, your body will thank you.
+              </p>
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">
+                <p className="text-lg italic font-medium">
+                  From Dr. T. Colin Campbell: "A good diet is THE most powerful weapon against disease and sickness."
+                </p>
+              </div>
+
+              <p className="text-lg font-semibold">
+                Rebel on, eat well, and remember, you've got this.
+              </p>
+
+              <div className="bg-gray-100 p-6 rounded-lg my-8">
+                <h3 className="font-bold text-lg mb-4">Check out the following documentaries:</h3>
+                <ul className="space-y-2">
+                  <li>• Forks Over Knives</li>
+                  <li>• Game Changers</li>
+                  <li>• What the Health</li>
+                  <li>• Plant Pure Nation</li>
+                  <li>• Fat, Sick and Nearly Dead</li>
+                  <li>• You Are What You Eat: A Twin Experiment</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <div className="mt-12 text-center">
+            <button 
+              onClick={() => window.history.back()}
+              className="bg-teal text-white px-6 py-3 rounded-lg hover:bg-teal/90 transition-colors"
+            >
+              ← Back to Blog
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">

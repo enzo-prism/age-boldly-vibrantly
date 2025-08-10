@@ -79,6 +79,15 @@ const Blog = () => {
       dateSort: new Date('2025-05-01'),
       readTime: '10 min read',
       blogNumber: 8
+    },
+    {
+      id: 'set-record-straight-wfpb',
+      title: 'It\'s Time to Set the Record Straight Regarding a Whole Food Plant Based Lifestyle',
+      excerpt: 'Let\'s be honest. When you mention to other humans that you are eating mostly plants, the reactions range from curious to downright skeptical. Time to clear the air and debunk the myths.',
+      date: '8/4/2025',
+      dateSort: new Date('2025-08-04'),
+      readTime: '8 min read',
+      blogNumber: 9
     }
   ];
 
