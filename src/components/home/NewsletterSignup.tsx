@@ -30,33 +30,33 @@ const NewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-teal/10 py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Join the Rebellious Aging Movement</h2>
-          <p className="text-lg text-gray-700 mb-8">
+    <section className="bg-teal/10 section-padding">
+      <div className="container mx-auto container-padding">
+        <div className="max-w-3xl mx-auto text-center text-spacing">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Join the Rebellious Aging Movement</h2>
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             More rebellious content in the works! Get exclusive tips, resources, and inspiration delivered straight to your inbox.
             We'll help you navigate the journey of aging with purpose and vitality.
           </p>
           
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row button-spacing max-w-lg mx-auto">
             <Input
               type="email"
               placeholder="Your email address"
-              className="flex-1"
+              className="flex-1 h-12"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
             <Button 
               type="submit" 
-              className="bg-teal hover:bg-teal-dark text-white transition-colors"
+              className="bg-teal hover:bg-teal-dark text-white transition-colors h-12 px-8"
             >
               Subscribe
             </Button>
           </form>
           
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm text-gray-500">
             We respect your privacy and will never share your information.
             You can unsubscribe at any time.
           </p>

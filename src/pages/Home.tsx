@@ -115,19 +115,19 @@ const Home = () => {
       />
 
       {/* Hero section */}
-      <section className="min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] py-8 md:py-12 lg:py-0">
-        <div className="container mx-auto px-4 h-full">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 h-full items-center">
+      <section className="hero-spacing">
+        <div className="container mx-auto container-padding h-full">
+          <div className="grid lg:grid-cols-2 grid-gap-responsive h-full items-center">
             {/* Text Content */}
             <div className="order-2 lg:order-1 flex flex-col justify-center">
-              <div className="max-w-2xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
+              <div className="max-w-2xl text-spacing">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in">
                   Age Boldly / Live Loudly
                 </h1>
-                <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-600 animate-fade-in" style={{animationDelay: "0.2s"}}>
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-600 animate-fade-in leading-relaxed" style={{animationDelay: "0.2s"}}>
                   Ditch the outdated rules. Rebellious aging is where vibrant health, bold confidence, and signature style take center stage.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
+                <div className="flex flex-col sm:flex-row button-spacing animate-fade-in" style={{animationDelay: "0.4s"}}>
                   <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg min-h-[44px] text-base font-semibold">
                     <Link to="/our-story">Our Story</Link>
                   </Button>
@@ -211,15 +211,17 @@ const Home = () => {
       </section>
 
       {/* Pillars section */}
-      <section id="pillars-section" className="py-16 md:py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 leading-tight">The Three Pillars</h2>
-          <p className="text-center text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto text-base md:text-lg leading-relaxed px-4">
-            Our holistic approach to rebellious aging is built on three foundational pillars that
-            work together to help you create a vibrant, fulfilling life at any age.
-          </p>
+      <section id="pillars-section" className="section-padding bg-gray-50">
+        <div className="container mx-auto container-padding">
+          <div className="text-center prose-spacing mb-12 lg:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">The Three Pillars</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg lg:text-xl leading-relaxed">
+              Our holistic approach to rebellious aging is built on three foundational pillars that
+              work together to help you create a vibrant, fulfilling life at any age.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 grid-gap-responsive">
             {pillars.map((pillar, index) => (
               <PillarCard 
                 key={index}
