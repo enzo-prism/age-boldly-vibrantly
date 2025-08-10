@@ -83,19 +83,19 @@ const Header = () => {
             <DropdownMenuTrigger className="nav-link inline-flex items-center">
               Pillars <ChevronDown className="ml-1 h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                <NavLink to="/pillars/confidence" className="w-full flex items-center gap-2">
+            <DropdownMenuContent className="w-48 bg-background border shadow-md z-[9999] min-w-[200px]">
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/pillars/confidence" className="w-full flex items-center gap-2 px-3 py-2">
                   🌟 Confidence
                 </NavLink>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <NavLink to="/pillars/style" className="w-full flex items-center gap-2">
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/pillars/style" className="w-full flex items-center gap-2 px-3 py-2">
                   👗 Style
                 </NavLink>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <NavLink to="/pillars/health" className="w-full flex items-center gap-2">
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/pillars/health" className="w-full flex items-center gap-2 px-3 py-2">
                   🌱 Health
                 </NavLink>
               </DropdownMenuItem>

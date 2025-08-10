@@ -74,7 +74,7 @@ const Movement = () => {
 
                   <p>I am passionate about the power of plants and the simple brilliance of Hippocrates' wisdom: let food be thy medicine. I think you will enjoy learning more about plant power, never any judgement from me. My goal is to create awareness and plant a seed.</p>
 
-                  <p>My approach to health and aging is grounded in science, and no one has shaped that understanding more than Dr. T. Colin Campbell, PhD. His decades of rigorous research, culminating in the China Study, one of the most comprehensive studies of nutrition. This study illuminates the powerful relationship between diet and disease. His work not only changed the conversation around food but also inspired the founding of the Center for Nutrition Studies, where I am honored to contribute through Whole Communities.</p>
+                  <p>My approach to health and aging is grounded in science, and no one has shaped that understanding more than Dr. T. Colin Campbell, PhD. His decades of rigorous research, culminated in the China Study, one of the most comprehensive studies of nutrition. This study illuminates the powerful relationship between diet and disease. His work not only changed the conversation around food but also inspired the founding of the Center for Nutrition Studies, where I am honored to contribute through Whole Communities.</p>
 
                   <p>I also hold a deep respect for Dr. Caldwell Esselstyn, whose clinical work in preventing and reversing heart disease has brought Dr. Campbell's findings to life in profound ways. His protocol, centered on nutrient- dense, oil-free whole plant foods, demonstrates the healing potential of food when applied with precision and commitment.</p>
 
