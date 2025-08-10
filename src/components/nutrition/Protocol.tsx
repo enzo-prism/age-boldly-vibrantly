@@ -8,7 +8,7 @@ const Protocol = () => {
       
       <div className="prose max-w-none space-y-6">
         <p className="text-lg leading-relaxed">
-          Dr. Caldwell Esselstyn's work has transformed our understanding of heart disease. A distinguished surgeon and researcher at the Cleveland Clinic, he has conducted a long running study on the effects of nutrition on heart health. His findings are remarkable: a Whole Food, Plant-Based, oil free diet not only can prevent the progression of coronary heart disease —it can actually reverse it.
+          Dr. Caldwell Esselstyn's work has transformed our understanding of heart disease. A distinguished surgeon and researcher at the Cleveland Clinic, he has conducted a long running study on the effects of nutrition on heart health. His findings are remarkable: a Whole Food, Plant-Based, oil free diet not only can prevent the progression of coronary heart disease, it can actually reverse it.
         </p>
         
         <p className="leading-relaxed">
