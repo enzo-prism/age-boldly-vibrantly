@@ -1531,6 +1531,141 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'the-new-classic-timeless-style') {
+    return (
+      <main className="min-h-screen bg-gradient-to-br from-teal-50 to-coral-50 py-24">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link 
+            to="/blog" 
+            className="inline-flex items-center text-teal-600 hover:text-teal-700 mb-8 transition-colors"
+          >
+            ← Back to Blog
+          </Link>
+          
+          <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+              <span>8/9/2025</span>
+              <span>•</span>
+              <span>Blog 14</span>
+              <span>•</span>
+              <span>12 min read</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl font-bold text-charcoal mb-8 leading-tight">
+              The New Classic, Timeless Style with a Rebellious Twist
+            </h1>
+            
+            <div className="prose prose-lg max-w-none text-charcoal leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-8">
+                Fashion legends like Coco Chanel, Christian Dior, and Yves Saint Laurent gave the world timeless rules for elegance. As rebels we just give these rules a wink and twist them into something uniquely ours. We have lived long enough to know that style is more than clothes. Style is about attitude, confidence, and a refusal to fade quietly into the background.
+              </p>
+              
+              <p className="mb-8">
+                So let's stroll down the runway of fashion wisdom from a few of the greats. And let's add our own rebellious twist.
+              </p>
+
+              <h2 className="text-2xl font-bold text-teal-600 mt-12 mb-6">Coco Chanel: Timeless Rebellion</h2>
+              
+              <p className="mb-6">
+                I love Coco Chanel's life story. So interesting. She believed in timelessness. Ya know the kind of style that feels right no matter the decade. So keep those timeless pieces if you have them or grab them second hand if you are lucky. But do not let them get dusty. That classic black Chanel jacket? Pair it with ripped jeans and leopard print sneakers. Chanel and pearls…..yummy. Layer those pearls with chunky chains. Remember style does not mean predictable. Shop vintage. So good.
+              </p>
+
+              <div className="bg-teal-50 p-6 rounded-lg my-8">
+                <h3 className="text-lg font-semibold text-teal-700 mb-4">Sassy Quotes from Coco:</h3>
+                <blockquote className="space-y-3 text-teal-800">
+                  <p>"A girl should be two things: classy and fabulous."</p>
+                  <p>"Fashion changes, but style endures."</p>
+                  <p>"Dress shabbily and they remember the dress, dress impeccably and they remember the woman."</p>
+                  <p>"In order to be irreplaceable one must always be different."</p>
+                  <p>"The most courageous act is still to think of yourself."</p>
+                </blockquote>
+              </div>
+
+              <p className="mb-8">
+                Coco's influence extended to accessories. She was a pioneer in mixing high and low, introducing the once radical idea of incorporating costume jewelry into her collections. Embodying her belief that "A woman should mix fake and real. The point of jewelry is not to make a woman look rich but to adorn her; not the same thing." Chanel blended faux pearls and stones with natural elements, redefining the perception of luxury. <em>(InStyle)</em>
+              </p>
+
+              <h2 className="text-2xl font-bold text-coral-600 mt-12 mb-6">Christian Dior: Beauty Through Joy</h2>
+              
+              <p className="mb-6">
+                Dior knew beauty was not about perfection. It was about joy. His distinct style is characterized by romanticism, sophistication, and attention to detail. He is well known for ultra feminine and highly sculpted clothing. This style dominated fashion in the decade following the second world war.
+              </p>
+
+              <div className="bg-coral-50 p-6 rounded-lg my-8">
+                <blockquote className="text-coral-800 space-y-3">
+                  <p>"Happiness is the secret to all beauty; there is no beauty that is attractive without happiness."</p>
+                  <p>"Do not buy much but make sure what you buy is good."</p>
+                </blockquote>
+              </div>
+
+              <p className="mb-8">
+                So my dear Rebel, wear what makes you feel happy <em>today</em>, not what you are used to wearing. If it sparks joy, it belongs on your body, not in a storage bin. Just Do It! Bring the special occasion pieces into everyday life. How about silk to the farmer's market, velvet to coffee with friends.
+              </p>
+
+              <h2 className="text-2xl font-bold text-purple-600 mt-12 mb-6">Yves Saint Laurent: Revolutionary Style</h2>
+              
+              <p className="mb-6">
+                Yves Saint Laurent was renowned for revolutionizing women's fashion. He pushed boundaries by introducing groundbreaking designs like the smoking tuxedo, transparent blouses, switching gender roles and launching ready to wear fashion.
+              </p>
+
+              <div className="bg-purple-50 p-6 rounded-lg my-8">
+                <blockquote className="text-purple-800 space-y-3">
+                  <p>"Fashion fades, style is eternal"</p>
+                  <p>"Trends come and go, we are not here to chase every trend."</p>
+                </blockquote>
+              </div>
+
+              <p className="mb-8">
+                So my dear Rebel, pick the trends you adore and ignore the rest. Style is about curating, not conforming.
+              </p>
+
+              <h2 className="text-2xl font-bold text-charcoal mt-12 mb-6">Your Rebellious Style Guide</h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-teal-600 mb-2">Mix eras fearlessly</h3>
+                  <p>Your favorite vintage blazer with modern sneakers or a Dior dress with a denim jacket.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-teal-600 mb-2">Own your signature</h3>
+                  <p>A trademark accessory, a favorite vintage necklace, stylish headband, gorgeous multicolor wrap, favorite scent, attention grabbing earrings, daring and colorful silky top, or your go to jacket that says, "YOU".</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-teal-600 mb-2">Play with proportion</h3>
+                  <p>Try oversized with fitted, flowing structures.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-teal-600 mb-2">Play with designs</h3>
+                  <p>Plaids with polka dots, bright colored animal prints and fabulous vintage bags.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-teal-600 mb-2">Tell texture stories</h3>
+                  <p>Velvet with denim, silk with leather, linen with chunky knits.</p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-teal-50 to-coral-50 p-8 rounded-lg my-12">
+                <h3 className="text-xl font-bold text-charcoal mb-4">Above all, make JOY your dress code</h3>
+                <p className="mb-4">If it makes you happy it belongs in your rotation.</p>
+                <p className="mb-4">Turn 'special occasion' into 'right now'. Wear silk. Rock the sequins. Strut the velvet.</p>
+                <p className="font-semibold">In the end style is not about following fashion. It is about owning your story. Curate your closet like you curate your life. Do it with confidence, joy, and a whole lot of rebellion. Show the world your unapologetic self.</p>
+              </div>
+
+              <div className="text-center mt-12">
+                <p className="text-lg italic text-teal-600">Sparkle on,</p>
+                <p className="text-xl font-semibold text-charcoal">Suz</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+    );
+  }
+
   if (postId === 'bold-sassy-truth-wfpb') {
     return (
       <div className="min-h-screen bg-gray-50 py-12">

@@ -117,6 +117,15 @@ const Blog = () => {
       blogNumber: 12
     },
     {
+      id: 'the-new-classic-timeless-style',
+      title: 'The New Classic, Timeless Style with a Rebellious Twist',
+      excerpt: 'Fashion legends like Coco Chanel, Christian Dior, and Yves Saint Laurent gave the world timeless rules for elegance. As rebels we just give these rules a wink and twist them into something uniquely ours.',
+      date: '8/9/2025',
+      dateSort: new Date('2025-08-09'),
+      readTime: '12 min read',
+      blogNumber: 14
+    },
+    {
       id: 'bold-sassy-truth-wfpb',
       title: 'The Bold, Sassy Truth About a Whole Food Plant Based Lifestyle',
       excerpt: 'Who says aging gracefully has to be slow and quiet? Not me. I believe in aging rebelliously. With a plate full of vibrant colors, flavors, and life giving nutrients. A WFPB lifestyle isn\'t just about "rabbit food."',
