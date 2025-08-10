@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp } from 'lucide-react';
 import PillarCard from '@/components/home/PillarCard';
 import NewsletterSignup from '@/components/home/NewsletterSignup';
 import WelcomePopup from '@/components/home/WelcomePopup';
@@ -117,7 +116,7 @@ const Home = () => {
       />
 
       {/* Hero section */}
-      <section className="min-h-[90vh] py-12 lg:py-0">
+      <section className="min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] py-8 md:py-12 lg:py-0">
         <div className="container mx-auto px-4 h-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 h-full items-center">
             {/* Text Content */}
@@ -129,25 +128,17 @@ const Home = () => {
                 <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-600 animate-fade-in" style={{animationDelay: "0.2s"}}>
                   Ditch the outdated rules. Rebellious aging is where vibrant health, bold confidence, and signature style take center stage.
                 </p>
-                <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
-                  <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg">
+                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
+                  <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg min-h-[44px] text-base font-semibold">
                     <Link to="/our-story">Our Story</Link>
                   </Button>
                   <Button 
                     onClick={scrollToPillars}
                     variant="outline" 
                     size="lg" 
-                    className="border-teal text-teal hover:bg-teal hover:text-white shadow-sm"
+                    className="border-teal text-teal hover:bg-teal hover:text-white shadow-sm min-h-[44px] text-base font-medium"
                   >
                     Explore the Pillars
-                  </Button>
-                  <Button 
-                    asChild 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-gray-300 text-gray-600 hover:bg-gray-50 shadow-sm"
-                  >
-                    <Link to="/contact">Contact</Link>
                   </Button>
                 </div>
               </div>
@@ -174,10 +165,10 @@ const Home = () => {
                       <CarouselItem key={index} className="pl-0 basis-full">
                         <div className="relative w-full">
                           {(loadedImages.has(index) || preloadedImages.has(index) || index === 0) ? (
-                            <img 
+                           <img 
                               src={image}
                               alt={`Vibrant aging lifestyle ${index + 1}`}
-                              className="w-full h-[50vh] lg:h-[60vh] object-cover transition-opacity duration-1000"
+                              className="w-full h-[45vh] md:h-[50vh] lg:h-[60vh] object-cover transition-opacity duration-1000"
                               style={{
                                 objectPosition: 'center 30%'
                               }}
@@ -189,7 +180,7 @@ const Home = () => {
                               }}
                             />
                           ) : (
-                            <div className="w-full h-[50vh] lg:h-[60vh] bg-gray-200 animate-pulse flex items-center justify-center">
+                            <div className="w-full h-[45vh] md:h-[50vh] lg:h-[60vh] bg-gray-200 animate-pulse flex items-center justify-center">
                               <div className="text-gray-400">Loading...</div>
                             </div>
                           )}
@@ -204,11 +195,12 @@ const Home = () => {
                   {heroImages.map((_, index) => (
                     <div
                       key={index}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                      className={`h-2 md:h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
                         index === currentSlide 
-                          ? 'w-8 bg-white' 
-                          : 'w-1.5 bg-white/40 hover:bg-white/60'
+                          ? 'w-10 md:w-8 bg-white' 
+                          : 'w-2 md:w-1.5 bg-white/40 hover:bg-white/60'
                       }`}
+                      onClick={() => api?.scrollTo(index)}
                     />
                   ))}
                 </div>
@@ -217,22 +209,13 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <button 
-            onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}
-            className="w-10 h-10 flex items-center justify-center bg-teal/20 backdrop-blur-sm rounded-full text-teal hover:bg-teal/30 transition-colors"
-            aria-label="Scroll down"
-          >
-            <ArrowUp className="rotate-180 w-5 h-5" />
-          </button>
-        </div>
       </section>
 
       {/* Pillars section */}
-      <section id="pillars-section" className="py-20 bg-gray-50">
+      <section id="pillars-section" className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">The Three Pillars</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 leading-tight">The Three Pillars</h2>
+          <p className="text-center text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto text-base md:text-lg leading-relaxed px-4">
             Our holistic approach to rebellious aging is built on three foundational pillars that
             work together to help you create a vibrant, fulfilling life at any age.
           </p>
