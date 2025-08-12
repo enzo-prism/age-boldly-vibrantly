@@ -26,6 +26,15 @@ export const videoSeriesData: VideoSeriesContent[] = [
     episodeNumber: 2,
     duration: "7:36",
     publishedDate: "2024-01-22"
+  },
+  {
+    id: "episode-3",
+    title: "You're Never Too Old to Try Something New",
+    description: "Break free from the limiting belief that age defines your possibilities. Discover how to embrace new adventures, learn new skills, and pursue dreams at any stage of life. Your rebellious journey is just beginning!",
+    youtubeId: "lk-PF0XDJfE",
+    episodeNumber: 3,
+    duration: "4:42",
+    publishedDate: "2024-01-29"
   }
 ];
 
