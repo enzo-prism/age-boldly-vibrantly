@@ -56,8 +56,8 @@ export const videoSeriesData: VideoSeriesContent[] = [
   },
   {
     id: "episode-6",
-    title: "Rebellious Aging, VI",
-    description: "Continue your rebellious aging journey with the latest insights and strategies for living boldly after 50. This episode builds on our foundation of challenging conventional aging expectations and embracing your most authentic, vibrant self.",
+    title: "Live Loud: Taking Control of What's on Your Plate",
+    description: "Embrace the power of living loudly and unapologetically while taking full control of what's on your plate—both literally and metaphorically. This episode explores how to make bold choices about your nutrition, your life, and your future, refusing to settle for anything less than what truly nourishes your rebellious spirit.",
     youtubeId: "1MEEGFPcn-I",
     episodeNumber: 6,
     duration: "7:59",
