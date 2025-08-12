@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { VideoCard } from '@/components/home/VideoCard';
+import { videoSeriesData, videoSeriesInfo } from '@/data/videoSeries';
 
 const Blog = () => {
 
@@ -155,10 +157,42 @@ const Blog = () => {
         </div>
       </section>
       
+      {/* Video Series Section */}
+      <section className="section-padding-fluid bg-muted/30">
+        <div className="container-responsive">
+          <div className="text-center mb-space-8 md:mb-space-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-space-4">
+              {videoSeriesInfo.title}
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-space-2">
+              {videoSeriesInfo.subtitle}
+            </p>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              {videoSeriesInfo.description}
+            </p>
+          </div>
+          
+          <div className="grid gap-8 md:gap-12 lg:grid-cols-2 xl:grid-cols-3">
+            {videoSeriesData.map((video) => (
+              <VideoCard key={video.id} video={video} />
+            ))}
+          </div>
+        </div>
+      </section>
+      
       {/* Blog Posts Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="section-padding-fluid">
+        <div className="container-responsive">
           <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-space-8 md:mb-space-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-space-4">
+                Latest Articles
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Discover insights, tips, and stories to support your wellness journey
+              </p>
+            </div>
+            
             <div className="grid gap-8">
               {sortedBlogPosts.map((post) => (
                 <Card key={post.id} className="hover:shadow-lg transition-shadow">
