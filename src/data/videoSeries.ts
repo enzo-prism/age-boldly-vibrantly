@@ -53,6 +53,15 @@ export const videoSeriesData: VideoSeriesContent[] = [
     episodeNumber: 5,
     duration: "15:28",
     publishedDate: "2024-08-12"
+  },
+  {
+    id: "episode-6",
+    title: "Rebellious Aging, VI",
+    description: "Continue your rebellious aging journey with the latest insights and strategies for living boldly after 50. This episode builds on our foundation of challenging conventional aging expectations and embracing your most authentic, vibrant self.",
+    youtubeId: "1MEEGFPcn-I",
+    episodeNumber: 6,
+    duration: "7:59",
+    publishedDate: "2024-08-12"
   }
 ];
 
