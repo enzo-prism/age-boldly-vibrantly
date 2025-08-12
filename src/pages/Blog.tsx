@@ -192,14 +192,10 @@ const Blog = () => {
             {sortedBlogPosts.map((post) => (
               <article key={post.id} className="group">
                 <div className="bg-card border border-border/40 rounded-2xl p-8 sm:p-10 lg:p-12 transition-all duration-500 hover:shadow-2xl hover:shadow-foreground/5 hover:border-border/60">
-                  <div className="flex items-center gap-3 mb-6 text-sm text-muted-foreground font-medium">
-                    <span className="bg-muted px-3 py-1 rounded-full">
+                  <div className="mb-6">
+                    <span className="bg-muted px-3 py-1 rounded-full text-sm text-muted-foreground font-medium">
                       {post.blogNumber.toString().padStart(2, '0')}
                     </span>
-                    <span className="w-1 h-1 bg-muted-foreground/40 rounded-full"></span>
-                    <span>{post.readTime}</span>
-                    <span className="w-1 h-1 bg-muted-foreground/40 rounded-full"></span>
-                    <span>{post.date}</span>
                   </div>
                   
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light leading-tight mb-6 text-foreground group-hover:text-primary transition-colors duration-300">
