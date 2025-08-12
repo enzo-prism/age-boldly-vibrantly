@@ -60,6 +60,7 @@ const Home = () => {
 
   const heroImages = [
     "/lovable-uploads/e383e12d-d193-4b00-864e-4593b167f3f4.png",
+    "/lovable-uploads/a14b531d-8674-4949-9d29-5db73262868d.png",
     "/lovable-uploads/c1463203-92fc-434c-a583-4399bb786c73.png",
     "/lovable-uploads/30b1e0f5-39bd-4e3e-8a1f-6c10d54b384a.png",
     "/lovable-uploads/efa97b78-3cbb-4f8c-b543-050d2d59e578.png",
