@@ -47,8 +47,8 @@ export const videoSeriesData: VideoSeriesContent[] = [
   },
   {
     id: "episode-5",
-    title: "Rebellious Aging, V",
-    description: "Continue your journey of rebellious aging with this latest episode that challenges conventional thinking about what it means to age gracefully. Discover new insights and strategies for living boldly and authentically after 50, breaking free from societal expectations and embracing your most vibrant self.",
+    title: "Nutrition Rebellion: How Healthy Eating Transforms Your Body (And Gets Easier)",
+    description: "Discover how embracing healthy nutrition becomes your secret weapon for rebellious aging. Learn why nourishing your body with whole foods isn't just good for you—it's a complete game-changer that gets easier and more natural once you fully commit. This episode reveals how proper nutrition helps your body heal, energize, and thrive, proving that taking control of what you eat is the ultimate act of rebellion against aging.",
     youtubeId: "WgYUybi8lhQ",
     episodeNumber: 5,
     duration: "15:28",
