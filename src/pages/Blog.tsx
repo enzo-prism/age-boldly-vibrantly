@@ -143,37 +143,32 @@ const Blog = () => {
   const sortedBlogPosts = [...blogPosts].sort((a, b) => a.blogNumber - b.blogNumber);
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="section-padding-fluid bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10">
-        <div className="container-responsive">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-space-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Rebellious Aging Blog
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Where sass and serious meet for wisdom, inspiration, and a whole lot of sparkle.
-            </p>
-          </div>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section - Minimalistic */}
+      <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight mb-6 text-foreground">
+            Blog
+          </h1>
+          <p className="text-lg sm:text-xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
+            Insights on wellness, style, and rebellious aging
+          </p>
         </div>
       </section>
       
-      {/* Video Series Section */}
-      <section className="section-padding-fluid bg-background">
-        <div className="container-responsive">
-          <div className="text-center mb-space-10 md:mb-space-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-space-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+      {/* Video Series Section - Clean & Modern */}
+      <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-4 text-foreground text-center">
               {videoSeriesInfo.title}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-space-3">
-              {videoSeriesInfo.subtitle}
-            </p>
-            <p className="text-muted-foreground max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto text-center">
               {videoSeriesInfo.description}
             </p>
           </div>
           
-          <div className="grid gap-space-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto">
+          <div className="grid gap-8 sm:gap-10 lg:gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {videoSeriesData.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}
@@ -181,66 +176,60 @@ const Blog = () => {
         </div>
       </section>
       
-      {/* Blog Posts Section */}
-      <section className="section-padding-fluid bg-muted/20">
-        <div className="container-responsive">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-space-10 md:mb-space-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-space-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Latest Articles
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Discover insights, tips, and stories to support your wellness journey
-              </p>
-            </div>
-            
-            <div className="grid gap-space-8 lg:gap-space-12">
-              {sortedBlogPosts.map((post) => (
-                <Card key={post.id} className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 border-border/50">
-                  <CardHeader className="space-y-3">
-                    <div className="flex items-center gap-2">
-                      <Badge variant="secondary" className="text-xs font-medium">
-                        Blog {post.blogNumber}
-                      </Badge>
-                      <span className="text-sm text-muted-foreground">•</span>
-                      <span className="text-sm text-muted-foreground">{post.readTime}</span>
-                    </div>
-                    <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight group-hover:text-primary transition-colors">
-                      {post.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between pt-2">
-                      <span className="text-sm text-muted-foreground">
-                        {post.date}
-                      </span>
-                      <Link to={`/blog/${post.id}`}>
-                        <Button className="group/btn bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 inline-flex items-center gap-2">
-                          Read Full Post
-                          <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            
-            {/* Coming Soon Section */}
-            <div className="mt-space-16 bg-card border border-border/50 p-space-8 md:p-space-12 rounded-xl shadow-sm text-center">
-              <div className="w-20 h-20 mx-auto mb-space-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full flex items-center justify-center">
-                <span className="text-3xl">✨</span>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-space-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                More Rebellious Content Coming Soon!
-              </h3>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                We're busy creating more amazing content about confidence, style, health, and rebellious aging. 
-                Stay tuned for expert advice, practical tips, and inspiring stories.
-              </p>
+      {/* Blog Posts Section - Minimal Grid */}
+      <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-16 sm:mb-20 text-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-4 text-foreground">
+              Articles
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
+              Stories and insights for your wellness journey
+            </p>
+          </div>
+          
+          <div className="space-y-12 sm:space-y-16">
+            {sortedBlogPosts.map((post) => (
+              <article key={post.id} className="group">
+                <div className="bg-card border border-border/40 rounded-2xl p-8 sm:p-10 lg:p-12 transition-all duration-500 hover:shadow-2xl hover:shadow-foreground/5 hover:border-border/60">
+                  <div className="flex items-center gap-3 mb-6 text-sm text-muted-foreground font-medium">
+                    <span className="bg-muted px-3 py-1 rounded-full">
+                      {post.blogNumber.toString().padStart(2, '0')}
+                    </span>
+                    <span className="w-1 h-1 bg-muted-foreground/40 rounded-full"></span>
+                    <span>{post.readTime}</span>
+                    <span className="w-1 h-1 bg-muted-foreground/40 rounded-full"></span>
+                    <span>{post.date}</span>
+                  </div>
+                  
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light leading-tight mb-6 text-foreground group-hover:text-primary transition-colors duration-300">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed mb-8 lg:mb-10">
+                    {post.excerpt}
+                  </p>
+                  
+                  <Link to={`/blog/${post.id}`}>
+                    <Button 
+                      variant="ghost" 
+                      className="group/btn h-auto p-0 font-medium text-base text-foreground hover:text-primary transition-all duration-300"
+                    >
+                      Read article
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </Button>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+          
+          {/* Coming Soon - Subtle */}
+          <div className="mt-20 sm:mt-24 text-center">
+            <div className="inline-flex items-center gap-3 text-muted-foreground font-light">
+              <div className="w-8 h-px bg-border"></div>
+              <span className="text-sm">More content coming soon</span>
+              <div className="w-8 h-px bg-border"></div>
             </div>
           </div>
         </div>
