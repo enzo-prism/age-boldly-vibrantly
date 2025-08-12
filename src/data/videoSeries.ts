@@ -11,8 +11,8 @@ export interface VideoSeriesContent {
 export const videoSeriesData: VideoSeriesContent[] = [
   {
     id: "episode-1",
-    title: "Welcome to Our Journey",
-    description: "Join us as we explore the foundations of wellness and discover what it means to live a truly balanced life. This introductory episode sets the stage for our comprehensive video series.",
+    title: "Introduction to Rebellious Aging",
+    description: "Challenge ageist stereotypes and embrace bold living after 50. Discover what it means to live rebelliously and unapologetically, breaking free from society's expectations about aging.",
     youtubeId: "gOiIN6jx_tM",
     episodeNumber: 1,
     duration: "12:34",
@@ -20,8 +20,8 @@ export const videoSeriesData: VideoSeriesContent[] = [
   },
   {
     id: "episode-2",
-    title: "Rebellious Aging, Episode II",
-    description: "Continue the journey with our second episode exploring rebellious aging and challenging conventional wisdom about growing older gracefully.",
+    title: "The Three Pillars of Rebellious Aging",
+    description: "Explore the foundation of rebellious living through our three core pillars: Confidence (A Rebel's Superpower), Style (Dazzle), and Health (Nourish to Flourish). Learn how to thrive boldly in every aspect of life.",
     youtubeId: "Gj6QCF-1uaI",
     episodeNumber: 2,
     duration: "7:36",
@@ -31,6 +31,6 @@ export const videoSeriesData: VideoSeriesContent[] = [
 
 export const videoSeriesInfo = {
   title: "Video Series",
-  subtitle: "Watch our curated wellness journey",
-  description: "Dive deeper into wellness concepts with our video series. Each episode offers practical insights and inspiring stories to support your journey to better health and happiness."
+  subtitle: "Your guide to rebellious aging",
+  description: "Join our empowering video journey that challenges everything you thought you knew about aging. Learn to live boldly, age unapologetically, and thrive after 50 with confidence, style, and vibrant health."
 };
