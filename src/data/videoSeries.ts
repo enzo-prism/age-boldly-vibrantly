@@ -35,6 +35,15 @@ export const videoSeriesData: VideoSeriesContent[] = [
     episodeNumber: 3,
     duration: "4:42",
     publishedDate: "2024-01-29"
+  },
+  {
+    id: "episode-4",
+    title: "Rebel Against Processed Pet Food: Healthier Dogs Through Natural Nutrition",
+    description: "Challenge the pet food industry's processed offerings and discover how feeding your dog unprocessed, natural foods can dramatically improve their health and vitality. Just like rebellious aging for humans, it's time to rebel against conventional pet care and give your furry companion the nutrition they deserve.",
+    youtubeId: "1c010CdjsIc",
+    episodeNumber: 4,
+    duration: "3:48",
+    publishedDate: "2024-02-05"
   }
 ];
 
