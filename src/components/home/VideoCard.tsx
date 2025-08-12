@@ -13,72 +13,48 @@ export const VideoCard = ({ video }: VideoCardProps) => {
   const watchUrl = `https://www.youtube.com/watch?v=${video.youtubeId}`;
 
   return (
-    <Card className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
-      <div className="relative">
-        <div className="aspect-video bg-muted">
-          <iframe
-            src={embedUrl}
-            title={video.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="h-full w-full border-0"
-            loading="lazy"
-          />
+    <div className="group">
+      <div className="relative aspect-video bg-muted rounded-xl overflow-hidden mb-6">
+        <iframe
+          src={embedUrl}
+          title={video.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="h-full w-full border-0"
+          loading="lazy"
+        />
+        <div className="absolute top-4 left-4">
+          <span className="bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium text-muted-foreground">
+            {video.episodeNumber.toString().padStart(2, '0')}
+          </span>
         </div>
-        <Badge 
-          variant="secondary" 
-          className="absolute top-3 left-3 bg-background/90 backdrop-blur-sm"
-        >
-          <Play className="w-3 h-3 mr-1" />
-          Episode {video.episodeNumber}
-        </Badge>
-        <Badge 
-          variant="outline" 
-          className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm"
-        >
-          <Clock className="w-3 h-3 mr-1" />
-          {video.duration}
-        </Badge>
       </div>
       
-      <CardHeader className="space-y-2">
-        <CardTitle className="text-xl font-semibold leading-tight group-hover:text-primary transition-colors">
+      <div className="space-y-3">
+        <h3 className="text-xl font-light leading-tight text-foreground group-hover:text-primary transition-colors duration-300">
           {video.title}
-        </CardTitle>
-      </CardHeader>
-      
-      <CardContent className="space-y-4">
-        <p className="text-muted-foreground leading-relaxed">
+        </h3>
+        
+        <p className="text-muted-foreground font-light leading-relaxed text-sm">
           {video.description}
         </p>
         
         <div className="flex items-center justify-between pt-2">
-          <span className="text-sm text-muted-foreground">
-            {new Date(video.publishedDate).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
+          <span className="text-xs text-muted-foreground font-light">
+            {video.duration}
           </span>
           
-          <Button 
-            variant="outline" 
-            size="sm" 
-            asChild
-            className="hover:bg-primary hover:text-primary-foreground transition-colors"
+          <a 
+            href={watchUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors duration-300 flex items-center gap-1"
           >
-            <a 
-              href={watchUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2"
-            >
-              Watch on YouTube
-              <ExternalLink className="w-3 h-3" />
-            </a>
-          </Button>
+            Watch on YouTube
+            <ExternalLink className="w-3 h-3" />
+          </a>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 };
