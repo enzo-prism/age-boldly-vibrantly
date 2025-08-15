@@ -10,6 +10,7 @@ import {
   CarouselItem,
   CarouselApi,
 } from '@/components/ui/carousel';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import Autoplay from 'embla-carousel-autoplay';
 
 const Home = () => {
@@ -164,26 +165,28 @@ const Home = () => {
                     {heroImages.map((image, index) => (
                       <CarouselItem key={index} className="pl-0 basis-full">
                         <div className="relative w-full">
-                          {(loadedImages.has(index) || preloadedImages.has(index) || index === 0) ? (
-                           <img 
-                              src={image}
-                              alt={`Vibrant aging lifestyle ${index + 1}`}
-                              className="w-full h-[45vh] md:h-[50vh] lg:h-[60vh] object-cover transition-opacity duration-1000"
-                              style={{
-                                objectPosition: 'center 30%'
-                              }}
-                              loading={index === 0 ? "eager" : "lazy"}
-                              onLoad={() => {
-                                if (index !== 0) {
-                                  handleCarouselSelect(index);
-                                }
-                              }}
-                            />
-                          ) : (
-                            <div className="w-full h-[45vh] md:h-[50vh] lg:h-[60vh] bg-gray-200 animate-pulse flex items-center justify-center">
-                              <div className="text-gray-400">Loading...</div>
-                            </div>
-                          )}
+                          <AspectRatio ratio={1} className="bg-gray-200 overflow-hidden">
+                            {(loadedImages.has(index) || preloadedImages.has(index) || index === 0) ? (
+                             <img 
+                                src={image}
+                                alt={`Vibrant aging lifestyle ${index + 1}`}
+                                className="w-full h-full object-cover transition-opacity duration-1000"
+                                style={{
+                                  objectPosition: 'center 30%'
+                                }}
+                                loading={index === 0 ? "eager" : "lazy"}
+                                onLoad={() => {
+                                  if (index !== 0) {
+                                    handleCarouselSelect(index);
+                                  }
+                                }}
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-gray-200 animate-pulse flex items-center justify-center">
+                                <div className="text-gray-400">Loading...</div>
+                              </div>
+                            )}
+                          </AspectRatio>
                         </div>
                       </CarouselItem>
                     ))}
