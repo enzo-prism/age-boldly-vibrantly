@@ -1,24 +1,9 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, MessageCircle, Phone } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Mail, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. Suz will get back to you soon.",
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
@@ -39,48 +24,21 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             
-            {/* Contact Form */}
+            {/* Typeform Embed */}
             <Card className="shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-center">Send a Message</CardTitle>
+                <CardTitle className="text-2xl text-center">Get in Touch</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="Your first name" required />
-                    </div>
-                    <div>
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Your last name" required />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your.email@example.com" required />
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="What's this about?" required />
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Tell me what's on your mind..."
-                      className="min-h-32"
-                      required 
-                    />
-                  </div>
-                  
-                  <Button type="submit" className="w-full bg-teal hover:bg-teal-dark">
-                    Send Message
-                  </Button>
-                </form>
+                <iframe
+                  src="https://fxuqp40sseh.typeform.com/to/DbY1YJrs"
+                  width="100%"
+                  height="600"
+                  frameBorder="0"
+                  allow="camera; microphone; autoplay; encrypted-media;"
+                  title="Contact Form"
+                  className="rounded-lg"
+                />
               </CardContent>
             </Card>
 
@@ -124,12 +82,12 @@ const Contact = () => {
 
               <Card className="bg-gradient-to-r from-teal/5 to-coral/5 border-teal/20">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3">Important Note About Email</h3>
+                  <h3 className="font-semibold text-lg mb-3">Professional Contact Form</h3>
                   <p className="text-gray-700 mb-4">
-                    We're currently setting up our email system. If you've sent a message and haven't received a response, please know that we're working to resolve this technical issue.
+                    Use the form on the left for the best experience when reaching out. Your message will be delivered directly and securely.
                   </p>
                   <p className="text-gray-600">
-                    We value every message and will respond as soon as our email functionality is fully operational. Thank you for your patience!
+                    For urgent matters, you can also reach out via email at suz@rebelwithsuz.com
                   </p>
                 </CardContent>
               </Card>
