@@ -15,6 +15,7 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import WelcomeLetter from "./pages/WelcomeLetter";
+import VideoSeries from "./pages/VideoSeries";
 import PasswordProtection from "./components/PasswordProtection";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => {
               {/* Legacy route redirect */}
               <Route path="/pillars/longevity" element={<Navigate to="/pillars/health" replace />} />
               <Route path="/nutrition" element={<Nutrition />} />
+              <Route path="/video-series" element={<VideoSeries />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:postId" element={<BlogPost />} />
               <Route path="/contact" element={<Contact />} />

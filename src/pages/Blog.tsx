@@ -5,8 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight } from 'lucide-react';
-import { VideoCard } from '@/components/home/VideoCard';
-import { videoSeriesData, videoSeriesInfo } from '@/data/videoSeries';
 
 const Blog = () => {
 
@@ -153,26 +151,6 @@ const Blog = () => {
           <p className="text-lg sm:text-xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
             Insights on wellness, style, and rebellious aging
           </p>
-        </div>
-      </section>
-      
-      {/* Video Series Section - Clean & Modern */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16 sm:mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-4 text-foreground text-center">
-              {videoSeriesInfo.title}
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto text-center">
-              {videoSeriesInfo.description}
-            </p>
-          </div>
-          
-          <div className="grid gap-8 sm:gap-10 lg:gap-12 sm:grid-cols-2 lg:grid-cols-3">
-            {videoSeriesData.map((video) => (
-              <VideoCard key={video.id} video={video} />
-            ))}
-          </div>
         </div>
       </section>
       
