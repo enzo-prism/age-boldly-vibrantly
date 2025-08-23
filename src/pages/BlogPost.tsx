@@ -1711,6 +1711,88 @@ const BlogPost = () => {
       </div>
     );
   }
+  
+  // Handle the blueberries and wrinkles blog post (Blog 5)
+  if (postId === 'blueberries-and-wrinkles') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {/* Back to Blog */}
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
+
+          <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            {/* Article Header */}
+            <header className="mb-8">
+              <div className="text-sm text-gray-500 mb-4">
+                <span>Blog 5</span>
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Blueberries and Wrinkles, The Day I Knew I was Old
+              </h1>
+            </header>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <p className="mb-6">
+                There was no grand epiphany. No milestone birthday. Just a bowl of wild blueberries.
+              </p>
+              
+              <p className="mb-6">
+                I eat at least two cups of these lovelies everyday. I love them, possibly I am addicted. I crave them. I believe they are a part of the reason I have more energy in my 80's than I did in my 40's. They were my anti-aging secret weapon….or so I thought.
+              </p>
+
+              <p className="mb-6">
+                Then one day, recently, actually, I left the house without checking the mirror. I was feeling pretty good. Possibly even fabulous. And then someone said, "You have something blue around your mouth."
+              </p>
+
+              <p className="mb-6">
+                Oh boy, it was not "just around". It was in my mouth lines. Nestled neatly in the deep, confident grooves life has etched around my lips. The wild blueberry juice had settled there like a bold little truth. (I have been eating wild blueberries daily for over 6 years and I had never noticed such a thing happening).
+              </p>
+
+              <div className="bg-coral-50 p-6 rounded-lg border-l-4 border-coral-400 mb-8">
+                <p className="text-coral-800 font-medium text-lg">
+                  And just like that, I knew clearly. I had crossed over. I was officially in the category of "OLD".
+                </p>
+              </div>
+
+              <p className="mb-6">
+                That was the moment my rebellion revved up and here we are.
+              </p>
+
+              <p className="mb-6">
+                I am not rebelling against age itself, but against what the world thinks age should look like, unhealthy, quiet, dismissed, invisible, diminished. For sure not this Rebel.
+              </p>
+
+              <p className="mb-6">
+                I wiped the blue stains from my wrinkles, threw on some lip gloss and continued with wild determination to build my movement with a more serious intention. One that says you can be 83, radiant, healthy, vibrant, wrinkled, bold and blooming, sometimes with blueberry juice as proof.
+              </p>
+
+              <div className="bg-teal-50 p-8 rounded-lg border-l-4 border-teal-400 text-center">
+                <p className="text-teal-800 font-medium text-lg mb-4">
+                  So now? I eat my blueberries with pride. I check the mirror, sure. But I never hide.
+                </p>
+                <p className="text-teal-800 font-bold text-xl">
+                  Because these lines? They have earned the right to sparkle. And this Rebel? She is just getting started.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          {/* Navigation */}
+          <div className="mt-12 text-center">
+            <Link to="/blog">
+              <Button className="bg-teal hover:bg-teal-dark text-white">
+                Back to All Posts
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Post not found
   return (
