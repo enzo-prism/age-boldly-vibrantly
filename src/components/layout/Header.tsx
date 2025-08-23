@@ -114,12 +114,25 @@ const Header = () => {
           >
             Welcome Letter
           </NavLink>
-          <NavLink 
-            to="/blog" 
-            className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
-          >
-            Blog
-          </NavLink>
+          
+          <DropdownMenu>
+            <DropdownMenuTrigger className="nav-link inline-flex items-center">
+              Updates <ChevronDown className="ml-1 h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-48 bg-background border shadow-md z-[9999] min-w-[200px]">
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/blog" className="w-full flex items-center gap-2 px-3 py-2">
+                  📝 Blog
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/video-series" className="w-full flex items-center gap-2 px-3 py-2">
+                  🎥 Video Series
+                </NavLink>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          
           <NavLink 
             to="/contact" 
             className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
@@ -179,13 +192,25 @@ const Header = () => {
               >
                 Nutrition (WFPB)
               </NavLink>
-              <NavLink 
-                to="/blog" 
-                className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Blog
-              </NavLink>
+              <div className="py-2">
+                <div className="font-medium mb-1">Updates</div>
+                <div className="pl-4 flex flex-col space-y-2">
+                  <NavLink 
+                    to="/blog" 
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    📝 Blog
+                  </NavLink>
+                  <NavLink 
+                    to="/video-series" 
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    🎥 Video Series
+                  </NavLink>
+                </div>
+              </div>
               <NavLink 
                 to="/contact" 
                 className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
