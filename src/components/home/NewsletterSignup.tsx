@@ -1,33 +1,7 @@
 
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useToast } from '@/hooks/use-toast';
+import React from 'react';
 
 const NewsletterSignup = () => {
-  const [email, setEmail] = useState('');
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email || !email.includes('@')) {
-      toast({
-        title: "Error",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Here you would normally submit to an API
-    toast({
-      title: "Success!",
-      description: "Thank you for subscribing to our newsletter!",
-    });
-    
-    setEmail('');
-  };
 
   return (
     <section className="bg-teal/10 section-padding">
@@ -39,22 +13,17 @@ const NewsletterSignup = () => {
             We'll help you navigate the journey of aging with purpose and vitality.
           </p>
           
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row button-spacing max-w-lg mx-auto">
-            <Input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 h-12"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+          <div className="max-w-lg mx-auto">
+            <iframe
+              src="https://fxuqp40sseh.typeform.com/to/fRGVxj4g"
+              width="100%"
+              height="500"
+              frameBorder="0"
+              allow="camera; microphone; autoplay; encrypted-media;"
+              title="Newsletter Signup"
+              className="rounded-lg shadow-lg"
             />
-            <Button 
-              type="submit" 
-              className="bg-teal hover:bg-teal-dark text-white transition-colors h-12 px-8"
-            >
-              Subscribe
-            </Button>
-          </form>
+          </div>
           
           <p className="text-sm text-gray-500">
             We respect your privacy and will never share your information.
