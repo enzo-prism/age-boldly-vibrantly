@@ -40,7 +40,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/996bea95-9371-4561-b396-1e00f4198ca3.png" 
             alt="Rebellious Aging Logo" 
-            className="h-12 w-auto transition-transform hover:scale-105"
+            className="h-12 w-auto transition-transform hover:scale-105 animate-logo-glow rounded-lg"
           />
         </NavLink>
 

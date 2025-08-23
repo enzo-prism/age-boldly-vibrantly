@@ -175,6 +175,14 @@ export default {
 					'100%': {
 						backgroundPosition: '0% 50%'
 					}
+				},
+				'logo-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 8px rgba(68, 153, 156, 0.3), 0 0 16px rgba(68, 153, 156, 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 12px rgba(68, 153, 156, 0.5), 0 0 24px rgba(68, 153, 156, 0.3)'
+					}
 				}
 			},
 			animation: {
@@ -187,7 +195,8 @@ export default {
 				'slide-right-fade': 'slide-right-fade 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
 				'scale-fade-in': 'scale-fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
 				'bounce-gentle': 'bounce-gentle 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-				'gradient-shift': 'gradient-shift 8s ease-in-out infinite'
+				'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
+				'logo-glow': 'logo-glow 4s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
