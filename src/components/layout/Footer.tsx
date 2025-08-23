@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Mail, Heart, ArrowRight } from "lucide-react";
+import { Facebook, Instagram, Mail, Heart, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -135,15 +135,6 @@ const Footer = () => {
               >
                 <Instagram size={18} />
                 <span className="sr-only">Instagram</span>
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-10 h-10 bg-teal/10 hover:bg-teal hover:text-white text-teal rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Linkedin size={18} />
-                <span className="sr-only">LinkedIn</span>
               </a>
               <a 
                 href="mailto:suz@rebelwithsuz.com" 
