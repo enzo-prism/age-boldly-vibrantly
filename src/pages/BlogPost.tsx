@@ -1712,6 +1712,7 @@ const BlogPost = () => {
     );
   }
   
+  
   // Handle the blueberries and wrinkles blog post (Blog 5)
   if (postId === 'blueberries-and-wrinkles') {
     return (
