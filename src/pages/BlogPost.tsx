@@ -87,10 +87,9 @@ const BlogPost = () => {
 
           {/* Navigation */}
           <div className="mt-12 text-center">
-            <Link to="/blog">
-              <Button className="bg-teal hover:bg-teal-dark text-white">
-                Back to All Posts
-              </Button>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
             </Link>
           </div>
         </div>
@@ -253,10 +252,9 @@ const BlogPost = () => {
 
           {/* Navigation */}
           <div className="mt-12 text-center">
-            <Link to="/blog">
-              <Button className="bg-teal hover:bg-teal-dark text-white">
-                Back to All Posts
-              </Button>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
             </Link>
           </div>
         </div>
@@ -360,10 +358,9 @@ const BlogPost = () => {
 
           {/* Navigation */}
           <div className="mt-12 text-center">
-            <Link to="/blog">
-              <Button className="bg-teal hover:bg-teal-dark text-white">
-                Back to All Posts
-              </Button>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
             </Link>
           </div>
         </div>
@@ -520,10 +517,9 @@ const BlogPost = () => {
 
           {/* Navigation */}
           <div className="mt-12 text-center">
-            <Link to="/blog">
-              <Button className="bg-teal hover:bg-teal-dark text-white">
-                Back to All Posts
-              </Button>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
             </Link>
           </div>
         </div>
@@ -959,12 +955,10 @@ const BlogPost = () => {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <button 
-            onClick={() => window.history.back()} 
-            className="mb-6 text-teal hover:text-teal/80 font-medium"
-          >
-            ← Back to Blog
-          </button>
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
           
           <article className="prose prose-lg max-w-none">
             <div className="mb-8">
@@ -1076,12 +1070,10 @@ const BlogPost = () => {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <button 
-            onClick={() => window.history.back()} 
-            className="mb-6 text-teal hover:text-teal/80 font-medium"
-          >
-            ← Back to Blog
-          </button>
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
           
           <article className="prose prose-lg max-w-none">
             <div className="mb-8">
@@ -1199,12 +1191,10 @@ const BlogPost = () => {
           </article>
 
           <div className="mt-12 text-center">
-            <button 
-              onClick={() => window.history.back()}
-              className="bg-teal text-white px-6 py-3 rounded-lg hover:bg-teal/90 transition-colors"
-            >
-              ← Back to Blog
-            </button>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
+            </Link>
           </div>
         </div>
       </div>
@@ -1215,6 +1205,10 @@ const BlogPost = () => {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
           <div className="text-center mb-8">
             <div className="text-teal mb-2">8/7/2025 • Blog #11 • 7 min read</div>
             <h1 className="text-4xl font-bold text-gray-800 mb-6">
@@ -1281,12 +1275,10 @@ const BlogPost = () => {
           </article>
 
           <div className="mt-12 text-center">
-            <button 
-              onClick={() => window.history.back()}
-              className="bg-teal text-white px-6 py-3 rounded-lg hover:bg-teal/90 transition-colors"
-            >
-              ← Back to Blog
-            </button>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
+            </Link>
           </div>
         </div>
       </div>
@@ -1744,10 +1736,9 @@ const BlogPost = () => {
 
           {/* Navigation */}
           <div className="mt-12 text-center">
-            <Link to="/blog">
-              <Button className="bg-teal hover:bg-teal-dark text-white">
-                Back to All Posts
-              </Button>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
             </Link>
           </div>
         </div>
