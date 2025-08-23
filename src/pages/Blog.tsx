@@ -134,6 +134,15 @@ const Blog = () => {
       dateSort: new Date('2025-08-09'),
       readTime: '10 min read',
       blogNumber: 13
+    },
+    {
+      id: 'wfpb-lifestyle-book-recommendations',
+      title: 'WFPB Lifestyle Book Recommendations',
+      excerpt: 'A comprehensive collection of essential books from leading plant-based nutrition experts and doctors to guide your whole food plant-based journey.',
+      date: '8/15/2025',
+      dateSort: new Date('2025-08-15'),
+      readTime: '15 min read',
+      blogNumber: 15
     }
   ];
 

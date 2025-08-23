@@ -1762,6 +1762,241 @@ const BlogPost = () => {
     );
   }
 
+  // Handle WFPB Lifestyle Book Recommendations (Blog 15)
+  if (postId === 'wfpb-lifestyle-book-recommendations') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {/* Back to Blog */}
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
+
+          <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            {/* Article Header */}
+            <header className="mb-8">
+              <div className="text-sm text-gray-500 mb-4">
+                <span>Blog 15</span>
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                WFPB Lifestyle Book Recommendations
+              </h1>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                A comprehensive collection of essential books from leading plant-based nutrition experts and doctors to guide your whole food plant-based journey.
+              </p>
+            </header>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <div className="space-y-8">
+                
+                {/* Introduction */}
+                <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400">
+                  <p className="text-teal-800 font-medium text-lg mb-3">
+                    Ready to dive deeper into the science and wisdom behind plant-based living?
+                  </p>
+                  <p className="text-teal-700">
+                    These books from renowned doctors and researchers will transform your understanding of nutrition, health, and the power of plants. Each recommendation comes from leaders who have dedicated their lives to advancing plant-based science and helping people thrive.
+                  </p>
+                </div>
+
+                {/* Dr. T. Colin Campbell */}
+                <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-400">
+                  <h3 className="font-bold text-emerald-800 mb-4 text-xl">Dr. T. Colin Campbell</h3>
+                  <div className="space-y-3">
+                    <div className="bg-white p-4 rounded-md shadow-sm">
+                      <h4 className="font-semibold text-emerald-700 mb-2">The China Study</h4>
+                      <p className="text-emerald-600 text-sm mb-2">The landmark study that changed everything we thought we knew about nutrition.</p>
+                      <a href="https://www.amazon.com/China-Study-Comprehensive-Nutrition-Implications/dp/1932100660" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="text-emerald-600 hover:text-emerald-800 underline">
+                        View on Amazon →
+                      </a>
+                    </div>
+                    <div className="bg-white p-4 rounded-md shadow-sm">
+                      <h4 className="font-semibold text-emerald-700 mb-2">Whole</h4>
+                      <p className="text-emerald-600 text-sm mb-2">Rethinking the science of nutrition and the power of whole foods.</p>
+                      <a href="https://www.amazon.com/Whole-Rethinking-Nutrition-Colin-Campbell/dp/1939529840" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="text-emerald-600 hover:text-emerald-800 underline">
+                        View on Amazon →
+                      </a>
+                    </div>
+                    <div className="bg-white p-4 rounded-md shadow-sm">
+                      <h4 className="font-semibold text-emerald-700 mb-2">The Future of Nutrition</h4>
+                      <p className="text-emerald-600 text-sm mb-2">An intimate look at the science of nutrition from the world's leading expert.</p>
+                      <a href="https://www.amazon.com/Future-Nutrition-Colin-Campbell/dp/1939529972" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="text-emerald-600 hover:text-emerald-800 underline">
+                        View on Amazon →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dr. Caldwell Esselstyn */}
+                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+                  <h3 className="font-bold text-blue-800 mb-4 text-xl">Dr. Caldwell Esselstyn</h3>
+                  <div className="bg-white p-4 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-blue-700 mb-2">Prevent and Reverse Heart Disease</h4>
+                    <p className="text-blue-600 text-sm mb-2">Groundbreaking research showing how to prevent and reverse America's #1 killer.</p>
+                    <a href="https://drcaldwellesselstyn.org" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       className="text-blue-600 hover:text-blue-800 underline">
+                      Visit drcaldwellesselstyn.org → All books available here
+                    </a>
+                  </div>
+                </div>
+
+                {/* Dr. Michael Greger */}
+                <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
+                  <h3 className="font-bold text-red-800 mb-4 text-xl">Dr. Michael Greger</h3>
+                  <div className="bg-white p-4 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-red-700 mb-2">How Not to Die</h4>
+                    <p className="text-red-600 text-sm mb-2">Discover the foods scientifically proven to prevent and reverse disease.</p>
+                    <a href="https://nutritionfacts.org" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       className="text-red-600 hover:text-red-800 underline">
+                      Visit Nutritionfacts.org → All books available here
+                    </a>
+                  </div>
+                </div>
+
+                {/* Dr. Neal Barnard */}
+                <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+                  <h3 className="font-bold text-purple-800 mb-4 text-xl">Dr. Neal Barnard (Physicians Committee For Responsible Medicine)</h3>
+                  <div className="space-y-3">
+                    <p className="text-purple-700 font-medium mb-3">
+                      <a href="https://pcrm.org" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="text-purple-600 hover:text-purple-800 underline">
+                        Visit pcrm.org → All books available here
+                      </a>
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-3">
+                      <div className="bg-white p-3 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-purple-700 text-sm">Dr. Neal Barnard's Program for Reversing Diabetes</h4>
+                      </div>
+                      <div className="bg-white p-3 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-purple-700 text-sm">Foods That Cause You to Lose Weight: The Negative Calorie Effect</h4>
+                      </div>
+                      <div className="bg-white p-3 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-purple-700 text-sm">Reversing Diabetes: The Scientifically Proven System</h4>
+                      </div>
+                      <div className="bg-white p-3 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-purple-700 text-sm">Foods That Fight Pain</h4>
+                      </div>
+                      <div className="bg-white p-3 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-purple-700 text-sm">The Vegan Starter Kit</h4>
+                      </div>
+                      <div className="bg-white p-3 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-purple-700 text-sm">The Cheese Trap</h4>
+                      </div>
+                      <div className="bg-white p-3 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-purple-700 text-sm">Breaking The Food Seduction</h4>
+                      </div>
+                      <div className="bg-white p-3 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-purple-700 text-sm">Your Body in Balance</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dr. Will Bulsiewicz */}
+                <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-400">
+                  <h3 className="font-bold text-amber-800 mb-4 text-xl">Dr. Will Bulsiewicz</h3>
+                  <div className="bg-white p-4 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-amber-700 mb-2">Fiber Fueled</h4>
+                    <p className="text-amber-600 text-sm mb-2">The Plant Based Gut Health Program for Losing Weight, Restoring Your Health, and Optimizing Your Microbiome</p>
+                    <a href="https://theguthealthmd.org" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       className="text-amber-600 hover:text-amber-800 underline">
+                      Visit theguthealthmd.org →
+                    </a>
+                  </div>
+                </div>
+
+                {/* Diabetes Experts */}
+                <div className="bg-cyan-50 p-6 rounded-lg border-l-4 border-cyan-400">
+                  <h3 className="font-bold text-cyan-800 mb-4 text-xl">Diabetes and Autoimmune Experts</h3>
+                  <div className="space-y-3">
+                    <div className="bg-white p-4 rounded-md shadow-sm">
+                      <h4 className="font-semibold text-cyan-700 mb-2">Goodbye Autoimmune Disease, Goodbye Lupus</h4>
+                      <p className="text-cyan-600 text-sm">By Dr. Cyrus Khambatta, PhD, and Roby Barbaro, MPH</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-md shadow-sm">
+                      <h4 className="font-semibold text-cyan-700 mb-2">Mastering Diabetes</h4>
+                      <p className="text-cyan-600 text-sm">The Revolutionary Method to Reverse Insulin Resistance Permanently</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Chef AJ */}
+                <div className="bg-rose-50 p-6 rounded-lg border-l-4 border-rose-400">
+                  <h3 className="font-bold text-rose-800 mb-4 text-xl">Chef AJ</h3>
+                  <div className="bg-white p-4 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-rose-700 mb-2">The Secrets to Ultimate Weight Loss</h4>
+                    <a href="https://chefaj.com" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       className="text-rose-600 hover:text-rose-800 underline">
+                      Visit chefaj.com →
+                    </a>
+                  </div>
+                </div>
+
+                {/* Rachael Brown */}
+                <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
+                  <h3 className="font-bold text-green-800 mb-4 text-xl">Rachael Brown</h3>
+                  <div className="bg-white p-4 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-green-700 mb-2">For Forks Sake</h4>
+                    <p className="text-green-600 text-sm mb-2">A Quick Guide to Healing Yourself and The Planet Through A Plant Based Diet</p>
+                    <a href="https://www.amazon.com/Forks-Sake-Healing-Yourself-Plant-Based/dp/B0B8G2G8FW" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       className="text-green-600 hover:text-green-800 underline">
+                      View on Amazon →
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Conclusion */}
+              <div className="bg-gray-50 p-8 rounded-lg mt-12 text-center">
+                <p className="text-lg font-medium text-teal-600 mb-4">
+                  Your journey to optimal health through plant-based nutrition starts with knowledge.
+                </p>
+                <p className="text-lg font-medium text-coral mb-4">
+                  These books are your roadmap to understanding the science, the why, and the how behind thriving on plants.
+                </p>
+                <p className="text-lg font-medium text-green-600">
+                  Pick one that speaks to you and start reading today. Your future self will thank you.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          {/* Navigation */}
+          <div className="mt-12 text-center">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">
