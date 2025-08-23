@@ -1399,6 +1399,14 @@ const BlogPost = () => {
               </div>
             </div>
           </article>
+          
+          {/* Navigation */}
+          <div className="mt-12 text-center">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
+            </Link>
+          </div>
         </div>
       </div>
     );
@@ -1534,6 +1542,14 @@ const BlogPost = () => {
               </div>
             </div>
           </article>
+          
+          {/* Navigation */}
+          <div className="mt-12 text-center">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
+            </Link>
+          </div>
         </div>
       </main>
     );
