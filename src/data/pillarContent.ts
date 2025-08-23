@@ -62,7 +62,7 @@ export const pillarContent: Record<string, PillarContent> = {
     quizTitle: "The Health Lifestyle Assessment",
     quizDescription: "Evaluate your current lifestyle habits and receive a personalized roadmap to optimize your health span.",
     checklistTitle: "Daily Health Practices Checklist",
-    checklistUrl: "#", // Placeholder URL for health checklist
+    checklistUrl: "https://drive.google.com/file/d/14pJU6bViyM1JWYx5iqvgl3l9kqd__wTY/view?usp=sharing",
     galleryImages: [
       {
         src: "/lovable-uploads/cf105833-6fd8-4909-9750-38675de6241b.png",
