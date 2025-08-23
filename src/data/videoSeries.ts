@@ -38,28 +38,10 @@ export const videoSeriesData: VideoSeriesContent[] = [
   },
   {
     id: "episode-4",
-    title: "Rebel Against Processed Pet Food: Healthier Dogs Through Natural Nutrition",
-    description: "Challenge the pet food industry's processed offerings and discover how feeding your dog unprocessed, natural foods can dramatically improve their health and vitality. Just like rebellious aging for humans, it's time to rebel against conventional pet care and give your furry companion the nutrition they deserve.",
-    youtubeId: "1c010CdjsIc",
-    episodeNumber: 4,
-    duration: "3:48",
-    publishedDate: "2024-02-05"
-  },
-  {
-    id: "episode-5",
-    title: "Nutrition Rebellion: How Healthy Eating Transforms Your Body (And Gets Easier)",
-    description: "Discover how embracing healthy nutrition becomes your secret weapon for rebellious aging. Learn why nourishing your body with whole foods isn't just good for you—it's a complete game-changer that gets easier and more natural once you fully commit. This episode reveals how proper nutrition helps your body heal, energize, and thrive, proving that taking control of what you eat is the ultimate act of rebellion against aging.",
-    youtubeId: "WgYUybi8lhQ",
-    episodeNumber: 5,
-    duration: "15:28",
-    publishedDate: "2024-08-12"
-  },
-  {
-    id: "episode-6",
     title: "Live Loud: Taking Control of What's on Your Plate",
     description: "Embrace the power of living loudly and unapologetically while taking full control of what's on your plate—both literally and metaphorically. This episode explores how to make bold choices about your nutrition, your life, and your future, refusing to settle for anything less than what truly nourishes your rebellious spirit.",
     youtubeId: "1MEEGFPcn-I",
-    episodeNumber: 6,
+    episodeNumber: 4,
     duration: "7:59",
     publishedDate: "2024-08-12"
   }
