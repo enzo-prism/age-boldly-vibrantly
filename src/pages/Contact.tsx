@@ -74,7 +74,7 @@ const Contact = () => {
                     <h3 className="font-semibold text-lg">Social Media</h3>
                     <p className="text-gray-600">Follow for daily inspiration</p>
                     <p className="text-sm text-gray-500 mt-1">
-                      Connect with the community on our social platforms
+                      Connect with the community on our social platforms (coming soon!)
                     </p>
                   </div>
                 </div>
