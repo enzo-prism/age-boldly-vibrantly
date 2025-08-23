@@ -48,7 +48,7 @@ const Blog = () => {
     {
       id: 'blueberries-and-wrinkles',
       title: 'Blueberries and Wrinkles',
-      excerpt: 'Coming soon: Discover the powerful connection between antioxidant-rich foods and healthy aging.',
+      excerpt: 'There was no grand epiphany. No milestone birthday. Just a bowl of wild blueberries. The day I discovered blueberry stains nestled in my wrinkles was the day I knew I had crossed over into "OLD" - and the moment my rebellion truly began.',
       date: '3/15/2025',
       dateSort: new Date('2025-03-15'),
       readTime: '6 min read',
