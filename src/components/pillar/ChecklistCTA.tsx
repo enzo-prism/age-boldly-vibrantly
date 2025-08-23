@@ -19,7 +19,7 @@ const ChecklistCTA: React.FC<ChecklistCTAProps> = ({ content }) => {
             </p>
             <Button 
               className="bg-coral hover:bg-coral-dark text-white"
-              onClick={() => window.open('https://drive.google.com/file/d/1DnpdOVC4Nih7w79CftOvbqgPgVJKw_LL/view?usp=sharing', '_blank')}
+              onClick={() => window.open(content.checklistUrl, '_blank')}
             >
               Download Free PDF
             </Button>

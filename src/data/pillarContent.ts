@@ -4,6 +4,7 @@ export interface PillarContent {
   quizTitle: string;
   quizDescription: string;
   checklistTitle: string;
+  checklistUrl: string;
   galleryImages: Array<{
     src: string;
     description: string;
@@ -17,6 +18,7 @@ export const pillarContent: Record<string, PillarContent> = {
     quizTitle: "The Confidence Self-Assessment",
     quizDescription: "Discover your current confidence level and receive personalized recommendations to build unshakeable self-assurance.",
     checklistTitle: "7-Day Confidence Boosting Checklist",
+    checklistUrl: "https://drive.google.com/file/d/1DnpdOVC4Nih7w79CftOvbqgPgVJKw_LL/view?usp=sharing",
     galleryImages: [
       {
         src: "/lovable-uploads/de04437d-18b0-4eca-86c4-53077d082060.png",
@@ -38,6 +40,7 @@ export const pillarContent: Record<string, PillarContent> = {
     quizTitle: "Discover Your Authentic Style Personality",
     quizDescription: "Take this quiz to uncover your unique style personality and learn how to express yourself authentically through fashion.",
     checklistTitle: "The Rebellious Style Essentials Checklist",
+    checklistUrl: "https://drive.google.com/file/d/1oa-nYeacG8s1A0qABH86tO3A7f1gWK37/view?usp=sharing",
     galleryImages: [
       {
         src: "/lovable-uploads/c520ecf2-2d39-4f88-aada-5c65c62e7081.png",
@@ -59,6 +62,7 @@ export const pillarContent: Record<string, PillarContent> = {
     quizTitle: "The Health Lifestyle Assessment",
     quizDescription: "Evaluate your current lifestyle habits and receive a personalized roadmap to optimize your health span.",
     checklistTitle: "Daily Health Practices Checklist",
+    checklistUrl: "#", // Placeholder URL for health checklist
     galleryImages: [
       {
         src: "/lovable-uploads/cf105833-6fd8-4909-9750-38675de6241b.png",
