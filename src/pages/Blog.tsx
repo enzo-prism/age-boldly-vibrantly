@@ -157,15 +157,6 @@ const Blog = () => {
       {/* Blog Posts Section - Minimal Grid */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-16 sm:mb-20 text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-4 text-foreground">
-              Articles
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
-              Stories and insights for your wellness journey
-            </p>
-          </div>
-          
           <div className="space-y-12 sm:space-y-16">
             {sortedBlogPosts.map((post) => (
               <article key={post.id} className="group">
