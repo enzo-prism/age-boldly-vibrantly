@@ -128,12 +128,17 @@ const Home = () => {
                     <Link to="/our-story">Our Story</Link>
                   </Button>
                   <Button 
-                    asChild
                     variant="outline" 
                     size="lg" 
                     className="border-teal text-teal hover:bg-teal hover:text-white shadow-sm min-h-[44px] text-base font-medium"
+                    onClick={() => {
+                      const pillarsSection = document.getElementById('pillars-section');
+                      if (pillarsSection) {
+                        pillarsSection.scrollIntoView({ behavior: 'auto' });
+                      }
+                    }}
                   >
-                    <Link to="#pillars-section">Explore the Pillars</Link>
+                    Explore the Pillars
                   </Button>
                 </div>
               </div>
