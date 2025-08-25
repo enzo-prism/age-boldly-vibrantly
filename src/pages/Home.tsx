@@ -102,12 +102,6 @@ const Home = () => {
     loadImage(nextIndex);
   };
 
-  const scrollToPillars = () => {
-    const pillarsSection = document.getElementById('pillars-section');
-    if (pillarsSection) {
-      pillarsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <>
@@ -134,12 +128,12 @@ const Home = () => {
                     <Link to="/our-story">Our Story</Link>
                   </Button>
                   <Button 
-                    onClick={scrollToPillars}
+                    asChild
                     variant="outline" 
                     size="lg" 
                     className="border-teal text-teal hover:bg-teal hover:text-white shadow-sm min-h-[44px] text-base font-medium"
                   >
-                    Explore the Pillars
+                    <Link to="#pillars-section">Explore the Pillars</Link>
                   </Button>
                 </div>
               </div>
