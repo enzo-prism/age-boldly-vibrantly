@@ -43,8 +43,8 @@ export const pillarContent: Record<string, PillarContent> = {
     checklistUrl: "https://drive.google.com/file/d/1oa-nYeacG8s1A0qABH86tO3A7f1gWK37/view?usp=sharing",
     galleryImages: [
       {
-        src: "/lovable-uploads/c520ecf2-2d39-4f88-aada-5c65c62e7081.png",
-        description: "Express your unique style with confidence"
+        src: "/lovable-uploads/17f809d1-a0f0-4a27-90d7-c993471f07de.png",
+        description: "Elegant style with sophistication and grace"
       },
       {
         src: "/lovable-uploads/94ed8310-7c9b-41fe-8292-33065ffa56eb.png",
