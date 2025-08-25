@@ -38,14 +38,43 @@ const Protocol = () => {
         </div>
         
         <div className="mt-8">
-          <h3 className="text-2xl font-bold mb-4">Dr. Esselstyn's Important Video</h3>
-          <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal mb-6">
-            <p className="text-gray-700 mb-3">
-              Watch Dr. Esselstyn's important presentation about heart disease prevention and reversal through whole-food, plant-based nutrition.
-            </p>
-            <p className="text-sm text-gray-500 italic">
-              Video link to be added - please provide the specific Dr. Esselstyn video you'd like to feature here.
-            </p>
+          <h3 className="text-2xl font-bold mb-4">Dr. Esselstyn's Important Videos</h3>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal">
+              <p className="text-gray-700 mb-4">
+                Watch Dr. Esselstyn's important presentation about heart disease prevention and reversal through whole-food, plant-based nutrition.
+              </p>
+              <div className="aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/EqKNfyUPzoU"
+                  title="Dr. Esselstyn on Heart Disease Prevention"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal">
+              <p className="text-gray-700 mb-4">
+                Additional insights from Dr. Esselstyn on cardiovascular health and plant-based nutrition.
+              </p>
+              <div className="aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/ZC3wRx4vV7g"
+                  title="Dr. Esselstyn on Cardiovascular Prevention"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+            </div>
           </div>
           
           <h3 className="text-2xl font-bold mb-4">Dr. Esselstyn's Attention Grabbers</h3>
