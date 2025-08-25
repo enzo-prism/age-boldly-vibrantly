@@ -20,6 +20,22 @@ const Home = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Prevent auto-scrolling during initial load
+  useEffect(() => {
+    // Lock scroll temporarily during initial render
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    document.body.style.overflow = 'hidden';
+    
+    const timer = setTimeout(() => {
+      document.body.style.overflow = originalStyle;
+    }, 500); // Allow time for all initial animations to complete
+    
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = originalStyle;
+    };
+  }, []);
+
 
   // Track carousel current slide
   useEffect(() => {
