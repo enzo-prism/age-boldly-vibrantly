@@ -252,23 +252,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
-      {/* Typeform Section */}
-      <section className="bg-teal/10 section-padding">
-        <div className="container mx-auto container-padding">
-          <div className="max-w-3xl mx-auto">
-            <iframe
-              src="https://fxuqp40sseh.typeform.com/to/fRGVxj4g"
-              width="100%"
-              height="500"
-              frameBorder="0"
-              scrolling="no"
-              title="Contact Form"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
     </>
   );
 };
