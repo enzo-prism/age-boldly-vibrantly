@@ -11,7 +11,7 @@ import {
   CarouselApi,
 } from '@/components/ui/carousel';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import Autoplay from 'embla-carousel-autoplay';
+// import Autoplay from 'embla-carousel-autoplay'; // Removed to prevent auto-scrolling
 
 const Home = () => {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
@@ -158,7 +158,7 @@ const Home = () => {
                     skipSnaps: false,
                     watchDrag: true,
                   }}
-                  plugins={[Autoplay({ delay: 4000, stopOnInteraction: true })]}
+                  plugins={[]} // Removed Autoplay to prevent auto-scrolling
                 >
                   <CarouselContent className="-ml-0">
                     {heroImages.map((image, index) => (
