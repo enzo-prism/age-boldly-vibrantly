@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PillarCard from '@/components/home/PillarCard';
-import NewsletterSignup from '@/components/home/NewsletterSignup';
 import WelcomePopup from '@/components/home/WelcomePopup';
 import { Button } from '@/components/ui/button';
 import {
@@ -253,9 +252,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
-      {/* Newsletter Signup */}
-      <NewsletterSignup />
     </>
   );
 };
