@@ -10,14 +10,44 @@ const DrCampbell = () => {
           Dr. T. Colin Campbell, PhD, Cornell University, Professor Emeritus of Nutritional Biochemistry and co-author of The China Study. He is a biochemist who specializes in the effect of nutrition on long-term health. He is well known for The China Study, the largest study of diet and health ever conducted. In his work he reveals the power of a WFPB diet to prevent and even reverse chronic disease. A truth that inspires my own journey and fuels my passion for sharing this lifestyle.
         </p>
         
-        <div className="bg-teal/10 p-6 rounded-lg border-l-4 border-teal mb-8">
-          <h3 className="text-xl font-bold mb-3">Dr. Campbell's Important Video</h3>
-          <p className="text-gray-700 mb-3">
-            Watch Dr. T. Colin Campbell discuss his groundbreaking research and the principles of whole-food, plant-based nutrition.
-          </p>
-          <p className="text-sm text-gray-500 italic">
-            Video link to be added - please provide the specific Dr. Campbell video you'd like to feature here.
-          </p>
+        <div className="space-y-6 mb-8">
+          <h3 className="text-xl font-bold mb-3">Dr. Campbell's Important Videos</h3>
+          
+          <div className="bg-teal/10 p-6 rounded-lg border-l-4 border-teal">
+            <p className="text-gray-700 mb-4">
+              Watch Dr. T. Colin Campbell discuss his groundbreaking research and the principles of whole-food, plant-based nutrition.
+            </p>
+            <div className="aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/WxEzPwu0nWs"
+                title="Dr. T. Colin Campbell on Plant-Based Nutrition"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+          
+          <div className="bg-teal/10 p-6 rounded-lg border-l-4 border-teal">
+            <p className="text-gray-700 mb-4">
+              Additional insights from Dr. Campbell on The China Study and nutritional research.
+            </p>
+            <div className="aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/cto8hAz8RrI"
+                title="Dr. T. Colin Campbell on The China Study"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
         </div>
         
         <div className="bg-teal/10 p-6 rounded-lg border-l-4 border-teal">
