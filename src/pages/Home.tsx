@@ -20,20 +20,7 @@ const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Prevent auto-scrolling during initial load
-  useEffect(() => {
-    // Lock scroll temporarily during initial render
-    const originalStyle = window.getComputedStyle(document.body).overflow;
-    document.body.style.overflow = 'hidden';
-    
-    const timer = setTimeout(() => {
-      document.body.style.overflow = originalStyle;
-    }, 500); // Allow time for all initial animations to complete
-    
-    return () => {
-      clearTimeout(timer);
-      document.body.style.overflow = originalStyle;
-    };
-  }, []);
+  // Removed scroll lock to fix intermittent scrolling issues
 
 
   // Track carousel current slide
@@ -164,11 +151,11 @@ const Home = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Carousel
                   setApi={setApi}
-                  className="w-full touch-pan-y"
+                  className="w-full"
                   opts={{
                     align: "start",
                     loop: true,
-                    dragFree: true,
+                    dragFree: false,
                     containScroll: "trimSnaps",
                     skipSnaps: false,
                     watchDrag: true,
