@@ -1936,6 +1936,33 @@ const BlogPost = () => {
                       <h4 className="font-semibold text-cyan-700 mb-2">Mastering Diabetes</h4>
                       <p className="text-cyan-600 text-sm">The Revolutionary Method to Reverse Insulin Resistance Permanently</p>
                     </div>
+                    <div className="bg-white p-4 rounded-md shadow-sm">
+                      <h4 className="font-semibold text-cyan-700 mb-2">The Alzheimer's Solution</h4>
+                      <p className="text-cyan-600 text-sm mb-2">A 100% Effective Program to Prevent and Reverse Alzheimer's Disease</p>
+                      <p className="text-cyan-600 text-sm mb-2">By Dean Sherzai, M.D. and Ayesha Sherzai, M.D.</p>
+                      <a href="https://thebraindocs.com" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="text-cyan-600 hover:text-cyan-800 underline">
+                        Visit thebraindocs.com →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dr. Brooke Goldner */}
+                <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
+                  <h3 className="font-bold text-orange-800 mb-4 text-xl">Dr. Brooke Goldner, M.D.</h3>
+                  <div className="bg-white p-4 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-orange-700 mb-2">GOODBYE LUPUS</h4>
+                    <p className="text-orange-600 text-sm mb-2">How a Medical Doctor Healed Herself Naturally With Supermarket Foods</p>
+                    <p className="text-orange-600 text-sm mb-2">A physician's personal journey and proven protocol for reversing autoimmune disease through nutrition</p>
+                    <a href="https://goodbyelupus.com" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       className="text-orange-600 hover:text-orange-800 underline">
+                      Visit goodbyelupus.com →
+                    </a>
                   </div>
                 </div>
 
