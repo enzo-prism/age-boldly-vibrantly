@@ -1,5 +1,4 @@
 
-import { useState, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,36 +16,10 @@ import NotFound from "./pages/NotFound";
 import WelcomeLetter from "./pages/WelcomeLetter";
 import VideoSeries from "./pages/VideoSeries";
 import Team from "./pages/Team";
-import PasswordProtection from "./components/PasswordProtection";
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Check if user has already entered the correct password
-    const hasAccess = localStorage.getItem('site-access') === 'granted';
-    setIsAuthenticated(hasAccess);
-    setIsLoading(false);
-  }, []);
-
-  const handlePasswordCorrect = () => {
-    setIsAuthenticated(true);
-  };
-
-  if (isLoading) {
-    return (
-      <div className="fixed inset-0 bg-gradient-to-br from-teal-50 to-coral-50 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600"></div>
-      </div>
-    );
-  }
-
-  if (!isAuthenticated) {
-    return <PasswordProtection onPasswordCorrect={handlePasswordCorrect} />;
-  }
 
   return (
     <QueryClientProvider client={queryClient}>
