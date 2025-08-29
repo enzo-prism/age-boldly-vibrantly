@@ -42,7 +42,7 @@ const Team = () => {
                   Carson Schultz
                 </h2>
                 <p className="text-muted-foreground font-light text-lg">
-                  Photo Credits
+                  Photographer
                 </p>
               </div>
             </div>
