@@ -32,6 +32,21 @@ const Team = () => {
               </div>
             </div>
             
+            {/* Photo Credits */}
+            <div className="text-center space-y-6">
+              <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-teal/20 to-teal/10 flex items-center justify-center">
+                <span className="text-4xl">📷</span>
+              </div>
+              <div>
+                <h2 className="text-3xl font-light mb-2 text-foreground">
+                  Carson Schultz
+                </h2>
+                <p className="text-muted-foreground font-light text-lg">
+                  Photo Credits
+                </p>
+              </div>
+            </div>
+            
             {/* Website Designer */}
             <div className="text-center space-y-6">
               <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-coral/20 to-coral/10 flex items-center justify-center">
