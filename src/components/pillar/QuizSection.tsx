@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
@@ -12,6 +13,7 @@ interface QuizSectionProps {
 }
 
 const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
+  const { pillarId } = useParams<{ pillarId: string }>();
   const [formData, setFormData] = useState({
     rating: '',
     challenge: '',
@@ -36,19 +38,27 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
     setIsSubmitting(true);
     
     try {
+      // Get the pillar type from URL params (confidence, style, health)
+      const pillarType = pillarId || 'confidence';
+      
+      const requestData = {
+        pillarType,
+        rating: parseInt(formData.rating),
+        challenge: formData.challenge,
+        goals: formData.goals,
+        userEmail: formData.userEmail || undefined,
+        userName: formData.userName || undefined,
+      };
+      
+      console.log('Submitting quiz with data:', requestData);
+      
       // Submit quiz to Supabase edge function
       const { data, error } = await supabase.functions.invoke('submit-quiz', {
-        body: {
-          pillarType: content.title.toLowerCase(),
-          rating: parseInt(formData.rating),
-          challenge: formData.challenge,
-          goals: formData.goals,
-          userEmail: formData.userEmail || undefined,
-          userName: formData.userName || undefined,
-        }
+        body: requestData
       });
 
       if (error) {
+        console.error('Supabase function error:', error);
         throw error;
       }
 
@@ -68,9 +78,22 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
       
     } catch (error) {
       console.error('Quiz submission error:', error);
+      
+      let errorMessage = "There was an error submitting your quiz. Please try again.";
+      
+      // Provide more specific error messages
+      if (error && typeof error === 'object' && 'message' in error) {
+        const errorStr = String(error.message);
+        if (errorStr.includes('pillar_type')) {
+          errorMessage = "Invalid pillar type. Please refresh the page and try again.";
+        } else if (errorStr.includes('rating')) {
+          errorMessage = "Please select a rating before submitting.";
+        }
+      }
+      
       toast({
         title: "Submission Failed",
-        description: "There was an error submitting your quiz. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {

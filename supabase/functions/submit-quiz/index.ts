@@ -50,6 +50,16 @@ serve(async (req) => {
       userName
     }: QuizSubmissionRequest = await req.json();
 
+    // Log received data for debugging
+    console.log('Received quiz submission:', { 
+      pillarType, 
+      rating, 
+      challenge: challenge ? 'present' : 'empty', 
+      goals: goals ? 'present' : 'empty', 
+      userEmail: userEmail ? 'present' : 'empty', 
+      userName: userName ? 'present' : 'empty' 
+    });
+
     // Validate required fields
     if (!pillarType || !rating) {
       return new Response(JSON.stringify({ error: 'Missing required fields: pillarType and rating are required' }), {
@@ -59,11 +69,19 @@ serve(async (req) => {
     }
 
     // Validate pillar type
-    if (!['confidence', 'style', 'health'].includes(pillarType)) {
-      return new Response(JSON.stringify({ error: 'Invalid pillar type' }), {
-        status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
+    const validPillarTypes = ['confidence', 'style', 'health'];
+    if (!validPillarTypes.includes(pillarType)) {
+      console.error('Invalid pillar type received:', pillarType, 'Expected one of:', validPillarTypes);
+      return new Response(
+        JSON.stringify({ 
+          error: 'Invalid pillar type',
+          details: `Pillar type '${pillarType}' is not valid. Must be one of: ${validPillarTypes.join(', ')}`
+        }),
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      );
     }
 
     // Validate rating range
