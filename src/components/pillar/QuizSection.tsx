@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
 import { PillarContent } from '@/data/pillarContent';
+import { supabase } from '@/integrations/supabase/client';
 
 interface QuizSectionProps {
   content: PillarContent;
@@ -13,7 +15,9 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
   const [formData, setFormData] = useState({
     rating: '',
     challenge: '',
-    goals: ''
+    goals: '',
+    userEmail: '',
+    userName: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -31,22 +35,47 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Quiz Submitted Successfully!",
-      description: "Thank you for completing the quiz. Suz will personally review your responses and get back to you with personalized advice via email within 24-48 hours.",
-    });
-    
-    setIsSubmitting(false);
-    
-    // Reset form
-    setFormData({
-      rating: '',
-      challenge: '',
-      goals: ''
-    });
+    try {
+      // Submit quiz to Supabase edge function
+      const { data, error } = await supabase.functions.invoke('submit-quiz', {
+        body: {
+          pillarType: content.title.toLowerCase(),
+          rating: parseInt(formData.rating),
+          challenge: formData.challenge,
+          goals: formData.goals,
+          userEmail: formData.userEmail || undefined,
+          userName: formData.userName || undefined,
+        }
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Quiz Submitted Successfully!",
+        description: "Thank you for completing the quiz. Suz will personally review your responses and get back to you with personalized advice via email within 24-48 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        rating: '',
+        challenge: '',
+        goals: '',
+        userEmail: '',
+        userName: ''
+      });
+      
+    } catch (error) {
+      console.error('Quiz submission error:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your quiz. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -105,6 +134,31 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
                     onChange={(e) => setFormData(prev => ({ ...prev, goals: e.target.value }))}
                     rows={4}
                   />
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block font-medium mb-2">
+                      Your Name (Optional)
+                    </label>
+                    <Input 
+                      type="text"
+                      value={formData.userName}
+                      onChange={(e) => setFormData(prev => ({ ...prev, userName: e.target.value }))}
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block font-medium mb-2">
+                      Your Email (Optional)
+                    </label>
+                    <Input 
+                      type="email"
+                      value={formData.userEmail}
+                      onChange={(e) => setFormData(prev => ({ ...prev, userEmail: e.target.value }))}
+                      placeholder="Enter your email for personalized follow-up"
+                    />
+                  </div>
                 </div>
               </div>
               

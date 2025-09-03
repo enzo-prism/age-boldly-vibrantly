@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      quiz_submissions: {
+        Row: {
+          challenge: string | null
+          created_at: string | null
+          goals: string | null
+          id: string
+          pillar_type: string
+          rating: number
+          reviewed: boolean | null
+          reviewer_notes: string | null
+          submitted_at: string | null
+          user_email: string | null
+          user_name: string | null
+        }
+        Insert: {
+          challenge?: string | null
+          created_at?: string | null
+          goals?: string | null
+          id?: string
+          pillar_type: string
+          rating: number
+          reviewed?: boolean | null
+          reviewer_notes?: string | null
+          submitted_at?: string | null
+          user_email?: string | null
+          user_name?: string | null
+        }
+        Update: {
+          challenge?: string | null
+          created_at?: string | null
+          goals?: string | null
+          id?: string
+          pillar_type?: string
+          rating?: number
+          reviewed?: boolean | null
+          reviewer_notes?: string | null
+          submitted_at?: string | null
+          user_email?: string | null
+          user_name?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
