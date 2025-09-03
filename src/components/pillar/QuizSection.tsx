@@ -65,7 +65,7 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
               
               <div className="mt-8">
                 <Button className="bg-teal hover:bg-teal-dark text-white w-full md:w-auto">
-                  Submit & Get Your Results
+                  Submit
                 </Button>
               </div>
             </form>
