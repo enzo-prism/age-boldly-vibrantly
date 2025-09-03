@@ -143,6 +143,15 @@ const Blog = () => {
       dateSort: new Date('2025-08-15'),
       readTime: '15 min read',
       blogNumber: 15
+    },
+    {
+      id: 'boundaries-love-language',
+      title: 'Are Boundaries a Love Language of Sorts?',
+      excerpt: 'The Summer of 2025 has been one long crash course in awkward situations. Some mine, some borrowed from others, but all pointing to one glaring truth, I NEED BOUNDARIES.',
+      date: '8/29/2025',
+      dateSort: new Date('2025-08-29'),
+      readTime: '12 min read',
+      blogNumber: 16
     }
   ];
 

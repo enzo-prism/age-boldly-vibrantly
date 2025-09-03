@@ -2024,6 +2024,177 @@ const BlogPost = () => {
     );
   }
 
+  // Handle the boundaries blog post (Blog 16)
+  if (postId === 'boundaries-love-language') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {/* Back to Blog */}
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
+
+          <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            {/* Article Header */}
+            <header className="mb-8">
+              <div className="text-sm text-gray-500 mb-4">
+                <span>8/29/2025</span>
+              </div>
+              <div className="text-sm text-gray-500 mb-4">
+                <span>Blog 16</span>
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Are Boundaries a Love Language of Sorts?
+              </h1>
+            </header>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <p className="text-xl text-coral font-medium mb-6">
+                The Summer of 2025 has been one long crash course in awkward situations. Some mine, some borrowed from others, but all pointing to one glaring truth, I <strong>NEED BOUNDARIES</strong>. 
+              </p>
+              
+              <p className="mb-6">Watching people I care about struggle to set them, and knowing my own anxiety as I tried and sometimes succeeded but more often than not I failed miserably, showed me just how messy and necessary this work really is. Then on my morning walk today, a thought hit me, what if boundaries are actually a love language? Rather than walls to shut people out, but bridges to keep love, respect and sanity flowing.</p>
+              
+              <p className="mb-6">So let's back up for a moment and ask, what exactly are boundaries and why do we need them?</p>
+
+              <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400 mb-8">
+                <p className="text-teal-800 font-medium mb-4">
+                  Boundaries are the invisible lines that define where you end and the world begins. They are your "Velvet Rope", an invitation-only entrance into your emotional, mental, and physical space. They are not about pushing people out, they are about keeping you standing tall.
+                </p>
+              </div>
+
+              <p className="mb-6">I have decided that boundaries are necessary, I am sure you agree. But, darn, they are trouble to set up and implement.. Without boundaries, life becomes a free for all, and guess who gets the short end of the stick? <strong>YOU. ME.</strong></p>
+
+              <p className="mb-6">Boundaries are not ageist or elitist. Nope they are for every human who wants peace, dignity and joy. If someone tells you that they do not need boundaries, well, chances are they are benefitting from you not having any.</p>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Here are some reasons why you should "bother" setting boundaries:</h3>
+              <ul className="space-y-2 mb-8">
+                <li>• They honor your time and energy.</li>
+                <li>• They prevent burnout and resentment.</li>
+                <li>• They teach others how you want to be treated.</li>
+              </ul>
+
+              <p className="mb-6">I think many avoid creating boundaries out of fear. Yes, fear of conflict, fear of being selfish, fear of not being liked. In the end boundaries don't make you less lovable. They make you more authentic.</p>
+
+              <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-400 mb-8">
+                <p className="text-amber-800 font-medium">
+                  Boundaries actually sparkle. They clearly say, "I value me." People know where they stand. You have more energy and less drama.
+                </p>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                <p className="text-blue-800 mb-3">
+                  I think Brené Brown (<a href="https://brenebrown.com/about/" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://brenebrown.com/about/</a>) says it well:
+                </p>
+                <blockquote className="text-blue-800 italic font-medium">
+                  "Boundaries are a prerequisite for compassion and empathy. We can't connect, unless we are clear about where we end and they begin."
+                </blockquote>
+              </div>
+
+              <p className="mb-6">I think setting boundaries is difficult especially for those of us who have been conditioned to say yes. There can be, will be, often is, pushback. Not everyone will "clap" over your new rules. Oh boy, and then there is the, "be nice voice in your head", that one, for sure, will not quiet easily.</p>
+
+              <div className="bg-coral-50 p-6 rounded-lg border-l-4 border-coral-400 mb-8">
+                <p className="text-coral-800 font-bold text-lg">
+                  But here is the Rebel twist, the discomfort of setting boundaries is nothing compared to the misery of living without them. (Read that one again).
+                </p>
+              </div>
+
+              <p className="mb-6">I have learned so much from the following three amazing teachers.</p>
+
+              <div className="bg-teal-50 p-6 rounded-lg mb-6">
+                <h4 className="font-semibold text-teal-800 mb-3 text-lg">Mel Robbins</h4>
+                <p className="text-teal-700 mb-3">
+                  <a href="https://www.melrobbins.com" className="text-teal-600 underline" target="_blank" rel="noopener noreferrer">https://www.melrobbins.com</a>
+                </p>
+                <p className="text-teal-800 mb-3">
+                  Mel's viral, "LET THEM THEORY" IS the ultimate boundary hack. Someone flakes? Let them. Someone gossips? Let them. It is not your job to control other people. It is your job to control your response.
+                </p>
+                <p className="text-teal-800 font-medium">
+                  This is so cool, so when you pair "Let Them" with "Let Me" as in, let me decide who I want to be and what I will accept. Now the magic, the boundaries shift from scary to empowering.
+                </p>
+              </div>
+
+              <div className="bg-coral-50 p-6 rounded-lg mb-6">
+                <h4 className="font-semibold text-coral-800 mb-3 text-lg">Brené Brown</h4>
+                <p className="text-coral-700 mb-3">
+                  <a href="https://brenebrown.com" className="text-coral-600 underline" target="_blank" rel="noopener noreferrer">brenebrown.com</a>
+                </p>
+                <p className="text-coral-800 font-medium">
+                  People with strong boundaries do not apologize for protecting their peace, resting, or saying "no" when they mean it.
+                </p>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                <h4 className="font-semibold text-blue-800 mb-3 text-lg">Jay Shetty</h4>
+                <p className="text-blue-700 mb-3">
+                  <a href="https://jayshetty.com" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">jayshetty.com</a>
+                </p>
+                <p className="text-blue-800 mb-3">
+                  Jay preaches that boundaries are not selfish, rather they are love in action. He and his wife have a firm rule, no work talk at dinner. Sacred time, sacred energy. Boundaries keep love alive because they build respect.
+                </p>
+                <p className="text-blue-800 font-medium">
+                  Jay says you are NOT responsible for carrying other people's feelings on your back.
+                </p>
+              </div>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">So what do you think? Are Boundaries a Love Language of Sorts?</h3>
+              
+              <p className="mb-6">We usually think of love languages as sweet gestures, words of affirmation, acts of service, gifts, touch or quality time. Here is the rebel truth, boundaries are a love language too.</p>
+
+              <div className="bg-rose-50 p-6 rounded-lg mb-6">
+                <h4 className="font-semibold text-rose-800 mb-3">A love language to yourself</h4>
+                <p className="text-rose-700">A radical act of self respect.</p>
+              </div>
+
+              <div className="bg-purple-50 p-6 rounded-lg mb-6">
+                <h4 className="font-semibold text-purple-800 mb-3">To others</h4>
+                <p className="text-purple-700">Boundaries teach people how to treat you, they remove the guesswork.</p>
+              </div>
+
+              <div className="bg-green-50 p-6 rounded-lg mb-6">
+                <h4 className="font-semibold text-green-800 mb-3">In relationships</h4>
+                <p className="text-green-700">They are love in action, protecting intimacy and sacred time.</p>
+              </div>
+
+              <div className="bg-indigo-50 p-6 rounded-lg mb-8">
+                <h4 className="font-semibold text-indigo-800 mb-3">Across generations</h4>
+                <p className="text-indigo-700">Boundaries don't just protect your energy, they deepen your capacity to love. Yes they say that you can love fiercely without disappearing into someone else's needs.</p>
+              </div>
+
+              <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400 mb-8">
+                <p className="text-teal-800 font-bold text-lg">
+                  Rebels know every strong "no" is actually a braver, louder, "yes" to the relationships that matter most.
+                </p>
+              </div>
+
+              <p className="mb-6">So here's the deal, Rebels. Boundaries are not about pushing people away. They are about keeping yourself intact. They are the difference between living drained and living daringly.</p>
+
+              <p className="mb-6">The beauty of aging rebelliously is that we finally get to drop the guilt, ditch the "good girl" script, and stand tall in our own space. Every "no" you speak is actually a louder "yes" to your health, joy and peace.</p>
+
+              <p className="mb-8">So go ahead and draw the line, shut the door, or leave it wide open when it feels right. Boundaries are not barriers. They are the sparkle lines that make your life shine brighter.</p>
+
+              <div className="bg-gray-50 p-8 rounded-lg text-center">
+                <p className="text-xl font-bold text-coral mb-4">
+                  Sparkle on my dear Rebels.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          {/* Navigation */}
+          <div className="mt-12 text-center">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">
