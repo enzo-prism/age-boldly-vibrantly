@@ -67,6 +67,9 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
                 <Button className="bg-teal hover:bg-teal-dark text-white w-full md:w-auto">
                   Submit
                 </Button>
+                <p className="text-sm text-muted-foreground mt-3 text-center md:text-left">
+                  Suz will personally review your results and get back to you with personalized advice via email
+                </p>
               </div>
             </form>
           </div>
