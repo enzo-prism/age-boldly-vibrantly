@@ -11,7 +11,7 @@ interface QuizSubmissionRequest {
   rating: number;
   challenge: string;
   goals: string;
-  userEmail?: string;
+  userEmail: string;
   userName?: string;
 }
 
@@ -61,8 +61,17 @@ serve(async (req) => {
     });
 
     // Validate required fields
-    if (!pillarType || !rating) {
-      return new Response(JSON.stringify({ error: 'Missing required fields: pillarType and rating are required' }), {
+    if (!pillarType || !rating || !userEmail) {
+      return new Response(JSON.stringify({ error: 'Missing required fields: pillarType, rating, and userEmail are required' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(userEmail)) {
+      return new Response(JSON.stringify({ error: 'Invalid email format' }), {
         status: 400,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
@@ -100,7 +109,7 @@ serve(async (req) => {
         rating: rating,
         challenge: challenge || null,
         goals: goals || null,
-        user_email: userEmail || null,
+        user_email: userEmail,
         user_name: userName || null,
       })
       .select()

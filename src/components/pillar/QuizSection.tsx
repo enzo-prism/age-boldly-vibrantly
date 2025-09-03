@@ -35,6 +35,26 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
       return;
     }
 
+    if (!formData.userEmail || !formData.userEmail.trim()) {
+      toast({
+        title: "Email Required",
+        description: "Please provide your email address so Suz can follow up with personalized advice.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.userEmail)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
     try {
@@ -46,7 +66,7 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
         rating: parseInt(formData.rating),
         challenge: formData.challenge,
         goals: formData.goals,
-        userEmail: formData.userEmail || undefined,
+        userEmail: formData.userEmail.trim(),
         userName: formData.userName || undefined,
       };
       
@@ -173,13 +193,14 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
                   </div>
                   <div>
                     <label className="block font-medium mb-2">
-                      Your Email (Optional)
+                      Your Email <span className="text-red-500">*</span>
                     </label>
                     <Input 
                       type="email"
                       value={formData.userEmail}
                       onChange={(e) => setFormData(prev => ({ ...prev, userEmail: e.target.value }))}
                       placeholder="Enter your email for personalized follow-up"
+                      required
                     />
                   </div>
                 </div>
