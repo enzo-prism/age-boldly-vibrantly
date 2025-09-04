@@ -2196,6 +2196,158 @@ const BlogPost = () => {
   }
 
   // Handle the ditch sweet stuff blog post (Blog 17)
+  if (postId === 'eat-the-olive-not-the-oil') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-8">
+              <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                Blog 18
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                Eat the Olive, Not the Oil
+              </h1>
+              <p className="text-gray-600 text-lg">September 2, 2025</p>
+            </div>
+
+            {/* Article Content */}
+            <article className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                Oil has a shiny reputation. Olive oil, avocado oil, coconut oil, you have seen them all and others marketed as "healthy fats". The truth is oil is oil. Ok some oils might be worse than others but <strong>NO Oil is healthy</strong>.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                At its core, oil is pure fat. EVERY oil, (olive, canola, coconut, avocado, etc.) packs a whopping <strong>4,000 calories per pound</strong>. Compare that to veggies at 100 calories per pound, or fruits at 300 calories per pound), and you can see how quickly oil can add excess calories without filling you up. Oh and it is not just the calories. Oil is a processed food stripped of fiber, protein and most nutrients. When olives, corn, coconuts, or seeds are pressed into oil, almost everything that made them nourishing is removed. What's left? Empty calories with a halo of marketing.
+              </p>
+
+              <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8">
+                <p className="text-amber-800 font-medium text-lg">
+                  <strong>Interesting fact:</strong> It takes approximately 18-20 olives to produce one tablespoon of olive oil.
+                </p>
+              </div>
+
+              <div className="bg-teal-50 p-8 rounded-lg my-8">
+                <h3 className="text-2xl font-bold text-teal-900 mb-6 text-center">Rebel Cheat Sheet: Calories per Pound</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex justify-between items-center py-2 border-b border-teal-200">
+                    <span className="font-medium text-teal-800">Vegetables</span>
+                    <span className="text-teal-700">100 calories per pound</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-teal-200">
+                    <span className="font-medium text-teal-800">Fruits</span>
+                    <span className="text-teal-700">300 calories per pound</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-teal-200">
+                    <span className="font-medium text-teal-800">Beans/Legumes</span>
+                    <span className="text-teal-700">500-600 calories per pound</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-teal-200">
+                    <span className="font-medium text-teal-800">Whole Grains</span>
+                    <span className="text-teal-700">500-600 calories per pound</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-teal-200">
+                    <span className="font-medium text-teal-800">Nuts/Seeds</span>
+                    <span className="text-teal-700">2,500-3,000 calories per pound</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-red-200 bg-red-50 px-4 rounded">
+                    <span className="font-bold text-red-800">Oil</span>
+                    <span className="font-bold text-red-700">4,000 calories per pound</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                <strong>Eat the olive, not the oil.</strong> The olive gives you fiber, vitamins, minerals and antioxidants. The oil gives you, OIL. The same goes for corn(corn oil vs. whole corn), coconuts (coconut oil vs. coconut meat), or sunflower seeds (sunflower oil vs. seeds). I think you are getting the message. When you choose the whole food you're getting the full package of nutrition that nature intended.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Even the much praised olive oil is NOT a whole food. It is calorie dense and nutrient poor compared to eating actual olives. For anyone dealing with cholesterol or heart disease, even small amounts of oil can be harmful.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mb-8">
+                The better option? Enjoy healthy sources of whole fats, avocados, seeds, and nuts. If you are watching cholesterol, keep those in check also. For omega 3s, the best WFPB choice is ground flaxseed sprinkled on your meal.
+              </p>
+
+              <div className="bg-blue-50 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-blue-900 mb-4">Expert Resources:</h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a href="https://nutritionfacts.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 font-medium underline">
+                      Dr Greger: nutritionfacts.org
+                    </a>
+                  </li>
+                  <li>
+                    <span className="text-blue-800 font-medium">Dr Esselstyn: No Oil -- Not Even Olive Oil! - Caldwell Esselstyn MD</span>
+                  </li>
+                  <li>
+                    <span className="text-blue-800 font-medium">Dr Neal Barnard: New Concerns About Olive Oil | Dr. Neal Barnard | The Exam Room Podcast</span>
+                  </li>
+                </ul>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">So what about cooking? Without oil, of course.</h3>
+
+              <div className="bg-green-50 p-6 rounded-lg my-8">
+                <h4 className="text-xl font-bold text-green-900 mb-4">Cooking without oil, Rebel style:</h4>
+                <ul className="space-y-3 text-green-800">
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Saute with broth, wine or water.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Roast veggies on parchment paper or silicone baking mats.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Make creamy dressings from blended cashews, or pureed beans.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Use nut butters or avocados for richness in sauces.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Rebellious Aging isn't about trendy "superfoods." It is about choosing whole foods that nourish, energize, and keep us sparkling strong. Oil does NOT make the cut because it is calorie dense, nutrient poor and <em>not</em> a whole food.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                So next time you're tempted by that shiny bottle, remember: <strong>Eat the Olive, not the Oil.</strong> Your body (and your sparkle) will thank you.
+              </p>
+
+              <div className="bg-purple-50 border-l-4 border-purple-400 p-6 my-8">
+                <p className="text-purple-800 font-medium text-lg italic">
+                  Replace the word "EAT" with the word "Nourish" and see how your perspective changes.
+                </p>
+              </div>
+
+              <div className="bg-gray-100 p-6 rounded-lg mt-12 text-center">
+                <p className="text-gray-700 italic">
+                  With love, laughter and leafy greens,<br />
+                  <span className="font-semibold">Suz</span>
+                </p>
+              </div>
+            </article>
+
+            {/* Navigation */}
+            <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-200">
+              <button
+                onClick={() => window.history.back()}
+                className="text-teal-600 hover:text-teal-700 font-medium flex items-center gap-2 transition-colors"
+              >
+                ← Back to Blog
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (postId === 'ditch-the-sweet-stuff') {
     return (
       <div className="min-h-screen bg-gray-50 py-12">

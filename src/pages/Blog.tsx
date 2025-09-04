@@ -154,6 +154,15 @@ const Blog = () => {
       blogNumber: 16
     },
     {
+      id: 'eat-the-olive-not-the-oil',
+      title: 'Eat the Olive, Not the Oil',
+      excerpt: 'Oil has a shiny reputation. Olive oil, avocado oil, coconut oil, you have seen them all marketed as "healthy fats". The truth is oil is oil. NO Oil is healthy.',
+      date: '9/2/2025',
+      dateSort: new Date('2025-09-02'),
+      readTime: '11 min read',
+      blogNumber: 18
+    },
+    {
       id: 'ditch-the-sweet-stuff',
       title: 'Ditch the Sweet Stuff',
       excerpt: 'Let\'s be honest, sugar is seductive. There is no upside to sugar. It sneaks into your morning coffee, whispers from your cookie jar, and struts through the grocery store in shiny packaging.',
