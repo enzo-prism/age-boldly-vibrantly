@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const WelcomeLetter = () => {
   return (
@@ -41,7 +42,7 @@ const WelcomeLetter = () => {
               </ul>
             </div>
             
-            <p>Check it out, (already up and running) <strong>The Rebel Icon's Blog: Where aging gets reimagined.</strong> (You will find the Rebel's Blog if you click on Updates).</p>
+            <p>Check it out, (already up and running) <Link to="/blog" className="text-teal-600 font-semibold hover:text-teal-700 underline decoration-2 underline-offset-4">The Rebel Icon's Blog: Where aging gets reimagined.</Link> Click the link to explore all the latest posts!</p>
             
             <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400">
               <h3 className="font-semibold text-teal-800 mb-2">A Note from MY Heart</h3>
