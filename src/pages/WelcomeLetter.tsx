@@ -14,48 +14,56 @@ const WelcomeLetter = () => {
           </div>
           
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
-            <h2 className="text-2xl font-bold text-teal-600 mb-4">Welcome, My Dear Rebel</h2>
+            <h2 className="text-2xl font-bold text-teal-600 mb-4">Hey Rebel,</h2>
             
-            <p>I'm so glad you're here.</p>
+            <p>This is not your grandma's aging club. (Well, unless your grannie is fabulous, feisty and rocking life at 85.) But it IS a safe, supportive space for women 55-105 who want to age in the best possible way, healthy, confident, unapologetic, joyful and grateful.</p>
             
-            <p>I created this space not just to share what I've learned over the years, but to open a door—so we can walk through this chapter together. I want to hear your stories. I want to offer support, inspiration, laughter, and the occasional nudge (or hug) when needed. We are better together, and as ladies of a certain age, we're marching side-by-side—pushing back on outdated ideas of what aging should look like.</p>
+            <p>Here we will share wisdom, encourage one another, laugh out loud, and learn side by side. This is a community where your voice matters, your story is honored, and your sparkle shines without apology.</p>
             
-            <p>This space? It's where sass and serious meet for a cup of tea (or a green smoothie).</p>
+            <p>Because this is just the beginning of creating a rebellious aging community, I want you in on the shaping. Leave your email to stay in the loop, (I will send out a weekly update, and never share your email). Please email me directly with questions, suggestions, and ideas for what you would like to see in this growing community.</p>
             
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>The sass gives us permission to play, to break the rules, to sparkle without apology.</li>
-              <li>The serious offers comfort, truth, wisdom, and support for real-life challenges.</li>
-            </ul>
-            
-            <p>And when they come together, they create the magical balance that defines Rebellious Aging.</p>
-            
-            <p>So… I'll go first.</p>
-            
-            <p>I've just closed the 83rd chapter of my life and have begun writing my 84th. Here's what I know for sure, and what I am passionate about sharing with you:</p>
-            
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>The incredible power of plants to nourish your body and bring vibrant health.</li>
-              <li>The importance of igniting your confidence and courage, because you are meant to shine.</li>
-              <li>The joy and magic of creating your personal style, your way of saying to the world, "This is me."</li>
-              <li>The adventure of aging with class and sass, because this ride should be anything but boring.</li>
-              <li>And most of all, the quiet superpower of gratitude—which brightens every day, no matter what.</li>
-            </ul>
-            
-            <p>This isn't a place for judgment. It's a place for wisdom, curiosity, learning, and a merry old time as we gently (or not so gently) smash society's tired image of "old age" to pieces.</p>
-            
-            <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400">
-              <h3 className="font-semibold text-teal-800 mb-2">A Note from My Heart</h3>
-              <p className="text-teal-700">I know that not everyone is blessed with perfect health, resources, or support as they age. Every one of us carries a different story, a different challenge. But I believe—deeply—that it is never too late to start making choices that nourish your body, lift your spirit, and bring you joy.</p>
-              <p className="text-teal-700 mt-4">Wherever you are right now, you are welcome here.</p>
+            <div className="text-center my-6">
+              <a 
+                href="mailto:suz@rebelwithsuz.com" 
+                className="text-teal-600 font-semibold text-lg hover:text-teal-700 underline decoration-2 underline-offset-4"
+              >
+                suz@rebelwithsuz.com
+              </a>
             </div>
             
-            <p>And whenever you're ready to take a next step, share a dream, or simply sit with someone who understands—you've got me.</p>
+            <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400">
+              <h3 className="text-xl font-bold text-teal-800 mb-4">MY Vision / All Input Welcome</h3>
+              <ul className="space-y-2 text-teal-700">
+                <li>• Monthly Zoom "Meet & Greets"</li>
+                <li>• ZOOM teaching moments on eating Whole Food Plant Based, authentic style and extreme confidence.</li>
+                <li>• Guest speakers and member interviews</li>
+                <li>• A member column where YOU can showcase your art, books, fashion, inspirations, or happy moments.</li>
+              </ul>
+            </div>
             
-            <p>So let's keep rebelling.</p>
-            <p>Keep shining.</p>
-            <p>And keep dazzling the world.</p>
+            <p>Check it out, (already up and running) <strong>The Rebel Icon's Blog: Where aging gets reimagined.</strong> (You will find the Rebel's Blog if you click on Updates).</p>
             
-            <p className="text-xl font-medium text-teal-600 italic">With love, laughter, and leafy greens,<br />Suz</p>
+            <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400">
+              <h3 className="font-semibold text-teal-800 mb-2">A Note from MY Heart</h3>
+              <p className="text-teal-700">I know that not everyone is blessed with perfect health, resources, or support as they age. Every one of us carries a different story, a different challenge. But I believe deeply, that it is never too late or too soon to begin making choices that nourish your body, lift your spirit and bring you joy. Please know that wherever you are on your aging life path you are welcome here.</p>
+            </div>
+            
+            <p>So whenever you are ready to take the next step, share a dream or simply sit with someone who understands….this is your <strong>"SPOT"</strong>.</p>
+            
+            <p><strong>Rebellious Aging is not about fading. It's about flipping the script, embracing our power, and sparkling brighter than ever, TOGETHER.</strong></p>
+            <p><strong>We are always better together.</strong></p>
+            
+            <div className="text-center mt-6">
+              <p className="text-xl font-medium text-teal-600 italic">With love, laughter and leafy greens,<br />Suz</p>
+              <div className="mt-4">
+                <a 
+                  href="mailto:suz@rebelwithsuz.com" 
+                  className="text-teal-600 font-semibold text-lg hover:text-teal-700 underline decoration-2 underline-offset-4"
+                >
+                  suz@rebelwithsuz.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

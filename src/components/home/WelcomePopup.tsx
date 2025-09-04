@@ -29,7 +29,7 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) => {
         
         <div className="text-center space-y-4">
           <p className="text-gray-600 leading-relaxed">
-            "I'm so glad you're here. I created this space not just to share what I've learned over the years, but to open a door—so we can walk through this chapter together..."
+            "This is not your grandma's aging club. But it IS a safe, supportive space for women 55-105 who want to age in the best possible way, healthy, confident, unapologetic, joyful and grateful..."
           </p>
           
           <div className="pt-4">
