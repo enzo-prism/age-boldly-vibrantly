@@ -152,6 +152,15 @@ const Blog = () => {
       dateSort: new Date('2025-08-29'),
       readTime: '12 min read',
       blogNumber: 16
+    },
+    {
+      id: 'ditch-the-sweet-stuff',
+      title: 'Ditch the Sweet Stuff',
+      excerpt: 'Let\'s be honest, sugar is seductive. There is no upside to sugar. It sneaks into your morning coffee, whispers from your cookie jar, and struts through the grocery store in shiny packaging.',
+      date: '9/1/2025',
+      dateSort: new Date('2025-09-01'),
+      readTime: '10 min read',
+      blogNumber: 17
     }
   ];
 

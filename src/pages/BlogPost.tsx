@@ -2195,6 +2195,125 @@ const BlogPost = () => {
     );
   }
 
+  // Handle the ditch sweet stuff blog post (Blog 17)
+  if (postId === 'ditch-the-sweet-stuff') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {/* Back to Blog */}
+          <Link to="/blog" className="inline-flex items-center gap-2 text-teal hover:text-teal-dark mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
+
+          <article className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            {/* Article Header */}
+            <header className="mb-8">
+              <div className="text-sm text-gray-500 mb-4">
+                <span>Blog 17</span>
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Ditch the Sweet Stuff
+              </h1>
+              <div className="text-sm text-gray-500">
+                September 1, 2025 • 10 min read
+              </div>
+            </header>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <div className="space-y-8">
+                <p className="text-lg">
+                  Let's be honest, sugar is seductive. There is no upside to sugar.
+                </p>
+
+                <p>
+                  It sneaks into your morning coffee, whispers from your cookie jar, and struts through the grocery store in shiny packaging. Sugar, as sweet and coy, and powerful as it is, is an anti-nutrient. Yup, you heard that right. It has been known to inhibit the absorption of other nutrients. Do not fall into the trap of falling for sugar's buddies, either. You know who I mean, high fructose corn syrup, palm sugar, brown sugar, to name a few and of course there are the chemical sweeteners aspartame, saccharin, sucrose, the list is long. Here's the rebellious truth, sugar is not your friend.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-6">Why Ditch It? (You already know, but here is a refresher.)</h2>
+
+                <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
+                  <p className="text-red-700">
+                    Sugar gives you a quick high, then dumps you in a crash. Overtime, that ride leaves you drained, cranky, and constantly reaching for the next fix.
+                  </p>
+                </div>
+
+                <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
+                  <p className="text-orange-700">
+                    Excess sugar stokes the flames of inflammation in your body, fueling everything from joint pain to accelerated aging.
+                  </p>
+                </div>
+
+                <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
+                  <p className="text-yellow-700">
+                    Sugar hides under dozens of names. Learning to spot it on labels is one of the most rebellious things you can do for your health.
+                  </p>
+                </div>
+
+                <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+                  <p className="text-purple-700">
+                    Too much sugar clouds your memory, fuels cravings, and disrupts sleep. Rebels need clarity, confidence and sparkle, not fog.
+                  </p>
+                </div>
+
+                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+                  <p className="text-blue-700 mb-4">
+                    Click here to learn about sugar from Dr. Greger:
+                  </p>
+                  <a 
+                    href="https://nutritionfacts.org/topics/sugar/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium underline"
+                  >
+                    NutritionFacts.org - Sugar Topics
+                  </a>
+                </div>
+
+                <p>
+                  Breaking up with sugar does not mean never enjoying sweetness again. It means choosing whole, plant based foods that fuel your body instead of draining it. Do not underestimate the ability of fresh fruit to satisfy your craving. Dates and date paste will sweeten up baked goods. Check out the offerings from the Date Lady.
+                </p>
+
+                <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
+                  <p className="text-green-700 mb-4">
+                    For natural sweetening alternatives, visit:
+                  </p>
+                  <a 
+                    href="https://ilovedatelady.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-green-600 hover:text-green-800 font-medium underline"
+                  >
+                    I Love Date Lady
+                  </a>
+                </div>
+
+                <p>
+                  Rebellious Aging isn't about deprivation. It is about freedom. Freedom from cravings, mood swings, and health risks that sugar drags along with it. By saying No to Sugar, you are saying yes to energy, clarity, and confidence at every age.
+                </p>
+
+                <p className="font-medium">
+                  Here's to Rebels who sparkle without the sugar rush.
+                </p>
+
+                {/* Signature */}
+                <div className="bg-gray-100 p-6 rounded-lg mt-12">
+                  <p className="text-gray-700 font-medium">
+                    With love, laughter and leafy greens.
+                  </p>
+                  <p className="text-gray-700 font-bold mt-2">
+                    Suz
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">
