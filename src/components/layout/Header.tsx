@@ -233,7 +233,7 @@ const Header = () => {
                 <MobileNavItem
                   to="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  icon="📞"
+                  icon="📧"
                 >
                   Contact
                 </MobileNavItem>
