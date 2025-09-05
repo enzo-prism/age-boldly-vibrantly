@@ -102,12 +102,43 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <NavLink 
-            to="/nutrition" 
-            className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
-          >
-            Nutrition (WFPB)
-          </NavLink>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="nav-link inline-flex items-center">
+              Nutrition (WFPB) <ChevronDown className="ml-1 h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56 bg-background border shadow-md z-[9999]">
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/nutrition?tab=what-is-wfpb" className="w-full flex items-center gap-2 px-3 py-2">
+                  🌱 What is WFPB?
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/nutrition?tab=benefits" className="w-full flex items-center gap-2 px-3 py-2">
+                  💪 Benefits
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/nutrition?tab=protocol" className="w-full flex items-center gap-2 px-3 py-2">
+                  ❤️ Dr. Esselstyn's Protocol
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/nutrition?tab=dr-campbell" className="w-full flex items-center gap-2 px-3 py-2">
+                  👨‍🔬 Dr. T. Colin Campbell
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/nutrition?tab=foods" className="w-full flex items-center gap-2 px-3 py-2">
+                  🍎 Why & How
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/nutrition?tab=recipes" className="w-full flex items-center gap-2 px-3 py-2">
+                  👩‍🍳 Recipes
+                </NavLink>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <NavLink 
             to="/welcome-letter" 
             className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
@@ -185,13 +216,53 @@ const Header = () => {
                   </NavLink>
                 </div>
               </div>
-              <NavLink 
-                to="/nutrition" 
-                className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Nutrition (WFPB)
-              </NavLink>
+              <div className="py-2">
+                <div className="font-medium mb-1">Nutrition (WFPB)</div>
+                <div className="pl-4 flex flex-col space-y-2">
+                  <NavLink 
+                    to="/nutrition?tab=what-is-wfpb" 
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    🌱 What is WFPB?
+                  </NavLink>
+                  <NavLink 
+                    to="/nutrition?tab=benefits" 
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    💪 Benefits
+                  </NavLink>
+                  <NavLink 
+                    to="/nutrition?tab=protocol" 
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    ❤️ Dr. Esselstyn's Protocol
+                  </NavLink>
+                  <NavLink 
+                    to="/nutrition?tab=dr-campbell" 
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    👨‍🔬 Dr. T. Colin Campbell
+                  </NavLink>
+                  <NavLink 
+                    to="/nutrition?tab=foods" 
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    🍎 Why & How
+                  </NavLink>
+                  <NavLink 
+                    to="/nutrition?tab=recipes" 
+                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    👩‍🍳 Recipes
+                  </NavLink>
+                </div>
+              </div>
               <div className="py-2">
                 <div className="font-medium mb-1">Updates</div>
                 <div className="pl-4 flex flex-col space-y-2">

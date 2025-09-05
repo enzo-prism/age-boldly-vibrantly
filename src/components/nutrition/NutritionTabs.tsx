@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import WhatIsWFPB from './WhatIsWFPB';
@@ -10,12 +11,23 @@ import Foods from './Foods';
 import Recipes from './Recipes';
 
 const NutritionTabs = () => {
-  const [activeTab, setActiveTab] = useState('what-is-wfpb');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tabFromUrl = searchParams.get('tab') || 'what-is-wfpb';
+  const [activeTab, setActiveTab] = useState(tabFromUrl);
+
+  useEffect(() => {
+    setActiveTab(tabFromUrl);
+  }, [tabFromUrl]);
+
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+    setSearchParams({ tab: value });
+  };
 
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
-        <Tabs defaultValue="what-is-wfpb" className="max-w-4xl mx-auto" onValueChange={setActiveTab}>
+        <Tabs value={activeTab} className="max-w-4xl mx-auto" onValueChange={handleTabChange}>
           <div className="border-b mb-6">
             <ScrollArea className="w-full">
               <TabsList className="w-max justify-start bg-transparent h-auto mb-0 p-0 flex-nowrap">
