@@ -170,6 +170,15 @@ const Blog = () => {
       dateSort: new Date('2025-09-01'),
       readTime: '10 min read',
       blogNumber: 17
+    },
+    {
+      id: 'less-salt-more-sparkle',
+      title: 'Less Salt, More Sparkle',
+      excerpt: 'Let\'s be honest: salt has been riding high on its reputation as the magic dust that makes food taste better. Very fancy marketing, but let\'s cut through the hype, Salt is Salt.',
+      date: '9/2/2025',
+      dateSort: new Date('2025-09-02'),
+      readTime: '12 min read',
+      blogNumber: 19
     }
   ];
 

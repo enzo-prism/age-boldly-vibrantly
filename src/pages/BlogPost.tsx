@@ -1285,6 +1285,181 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'less-salt-more-sparkle') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-background to-background/80 py-12">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="bg-card rounded-2xl shadow-xl border border-border/50 overflow-hidden">
+            <div className="p-8 lg:p-12">
+              {/* Header */}
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 bg-muted px-4 py-2 rounded-full text-sm text-muted-foreground mb-6">
+                  <span>Blog #19</span>
+                  <span>•</span>
+                  <span>9/2/2025</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <h1 className="text-4xl lg:text-5xl font-light mb-6 text-foreground leading-tight">
+                  Less Salt, More Sparkle
+                </h1>
+              </div>
+
+              {/* Opening Section */}
+              <div className="prose prose-lg max-w-none mb-8">
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  Let's be honest: salt has been riding high on its reputation as the magic dust that makes food taste better. 
+                  It's in shakers on your table, sprinkled across Instagram food shots, and dressed up as "Himalayan pink" 
+                  or "sea harvested artisan crystals." Very fancy marketing, but let's cut through the hype, <strong>Salt is Salt</strong>. 
+                  If you crave vitality, not sluggishness, it is time to ask the tough question, what's all that sprinkling doing to your sparkle?
+                </p>
+              </div>
+
+              {/* Guidelines Section */}
+              <div className="bg-blue-50/50 dark:bg-blue-950/20 rounded-xl p-6 mb-8 border border-blue-200/50 dark:border-blue-800/30">
+                <h3 className="text-xl font-semibold mb-4 text-foreground">How Much is Enough?</h3>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-3">
+                    <span className="font-semibold text-blue-600 dark:text-blue-400 min-w-[60px]">WHO:</span>
+                    <span className="text-muted-foreground">&lt;2,000 mg sodium/day</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="font-semibold text-blue-600 dark:text-blue-400 min-w-[60px]">AHA:</span>
+                    <span className="text-muted-foreground">Best under 1500 mg/day, max 2,300 mg/day</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="font-semibold text-blue-600 dark:text-blue-400 min-w-[60px]">WFPB:</span>
+                    <span className="text-muted-foreground">Skip the shaker, plants will provide all you need.</span>
+                  </div>
+                </div>
+                <p className="text-sm italic text-muted-foreground mt-4">
+                  The less you shake on, the brighter your health shines.
+                </p>
+              </div>
+
+              {/* Health Impact Section */}
+              <div className="bg-red-50/50 dark:bg-red-950/20 rounded-xl p-6 mb-8 border border-red-200/50 dark:border-red-800/30">
+                <h3 className="text-xl font-semibold mb-4 text-foreground">What Too Much Salt Does</h3>
+                <p className="text-muted-foreground mb-4">
+                  Too much sodium does more than make you thirsty, it raises blood pressure, strains your kidneys, 
+                  dulls your taste buds, and contributes to stomach cancer risk. Over salting quietly steals your healthspan.
+                </p>
+              </div>
+
+              {/* Benefits Section */}
+              <div className="bg-green-50/50 dark:bg-green-950/20 rounded-xl p-6 mb-8 border border-green-200/50 dark:border-green-800/30">
+                <h3 className="text-xl font-semibold mb-4 text-foreground">Cut Back (Eliminate Added Salt) and:</h3>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Protect your heart and arteries</li>
+                  <li>Give your kidneys a break</li>
+                  <li>Retrain your taste buds to savor natural flavors</li>
+                  <li>Kick bloating to the curb</li>
+                  <li>Add vibrant years to your health span</li>
+                </ul>
+              </div>
+
+              {/* Salt Types Reality Check */}
+              <div className="prose prose-lg max-w-none mb-8">
+                <h3 className="text-xl font-semibold mb-4 text-foreground">Salt Types Reality Check</h3>
+                <p className="text-muted-foreground">
+                  So let's talk about salt types. Ya know, pink salt, sea salt, Kosher salt, etc. Don't be fooled 
+                  (for the most part) by marketing sparkle. <strong>Salt is Salt</strong>.
+                </p>
+              </div>
+
+              {/* Flavor Alternatives */}
+              <div className="bg-purple-50/50 dark:bg-purple-950/20 rounded-xl p-6 mb-8 border border-purple-200/50 dark:border-purple-800/30">
+                <h3 className="text-xl font-semibold mb-4 text-foreground">Flavor Does Not Need a Shaker</h3>
+                <p className="text-muted-foreground mb-4">Use your imagination. Try:</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                    <li>Garlic, onion, ginger, chili flakes</li>
+                    <li>Fresh herbs like basil, cilantro, and mint</li>
+                  </ul>
+                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                    <li>Citrus and vinegars for brightness</li>
+                    <li>Nutritional yeast for a savory kick</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Potassium Substitute Warning */}
+              <div className="bg-amber-50/50 dark:bg-amber-950/20 rounded-xl p-6 mb-8 border border-amber-200/50 dark:border-amber-800/30">
+                <h3 className="text-xl font-semibold mb-4 text-foreground">Important Note</h3>
+                <p className="text-muted-foreground">
+                  <strong>NOTE:</strong> Potassium based salt substitutes exist, but they are not for everyone. 
+                  (Please check with your doctor before going down this path especially if you have kidney issues or take certain meds).
+                </p>
+              </div>
+
+              {/* Natural Sodium Sources */}
+              <div className="prose prose-lg max-w-none mb-8">
+                <h3 className="text-xl font-semibold mb-4 text-foreground">Can You Get Too Little Salt?</h3>
+                <p className="text-muted-foreground mb-4">
+                  It's rare. Unless you are an extreme athlete sweating buckets, or under medical restriction, 
+                  your daily plant based meals cover your sodium needs naturally. True deficiency is uncommon.
+                </p>
+                
+                <h4 className="text-lg font-semibold mb-3 text-foreground">Vegetables That Cover Your Sodium Needs</h4>
+                <p className="text-sm text-muted-foreground mb-3">From The National Library of Medicine:</p>
+                <div className="bg-muted/30 rounded-lg p-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Celery, chard, olives, beets, seaweed, peas, dry roasted nuts, chick peas, bran, sweet corn, 
+                    artichoke, broccoli, radish, sweet potato, kale, brussels sprouts…, I think you get the idea. 
+                    Just eat a variety.
+                  </p>
+                </div>
+              </div>
+
+              {/* External Resource */}
+              <div className="bg-card border border-border rounded-xl p-6 mb-8">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Learn More</h3>
+                <a 
+                  href="https://nutritionfacts.org/salt" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 transition-colors underline"
+                >
+                  nutritionfacts.org/salt
+                </a>
+              </div>
+
+              {/* Philosophy Highlight */}
+              <div className="text-center mb-8">
+                <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
+                  <blockquote className="text-xl lg:text-2xl font-light text-foreground leading-relaxed">
+                    "Less Salt, More Sparkle" is not just a slogan, it is a lifestyle. 
+                    <br />
+                    <span className="text-primary font-medium">Flavor with plants not crystals.</span>
+                  </blockquote>
+                </div>
+              </div>
+
+              {/* Signature Closing */}
+              <div className="bg-muted/50 rounded-xl p-6 text-center">
+                <p className="text-lg text-muted-foreground italic">
+                  With love, laughter and leafy greens,
+                  <br />
+                  <span className="font-semibold text-foreground">Suz</span>
+                </p>
+              </div>
+
+              {/* Back to Blog Link */}
+              <div className="mt-12 text-center">
+                <Link 
+                  to="/blog" 
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  ← Back to Blog
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (postId === 'wearing-who-you-are-style-rebellion') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-background to-background/80 py-12">
