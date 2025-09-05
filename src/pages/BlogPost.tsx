@@ -2641,6 +2641,147 @@ const BlogPost = () => {
     );
   }
 
+  if (postId === 'critical-thinking-secret-weapon-rebellious-aging') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/blog">
+            <Button className="bg-teal hover:bg-teal-dark text-white mb-8">
+              ← Back to Blog
+            </Button>
+          </Link>
+          
+          <article className="bg-white rounded-lg shadow-lg p-8">
+            <div className="text-center mb-8">
+              <div className="text-sm text-gray-500 mb-2">Blog #20 • September 2, 2025 • 10 min read</div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-6">Critical Thinking: Your Secret Weapon for Rebellious Aging</h1>
+            </div>
+
+            <div className="prose prose-lg max-w-none space-y-6">
+              <div className="bg-teal-50 border-l-4 border-teal p-6 rounded-r-lg">
+                <p className="text-lg text-gray-800">
+                  Critical Thinking is the rebel's power move. It is the ability to pause, question, and separate truth from noise. So instead of blindly accepting what you are told, ask: What's the evidence? Who benefits if I believe this? That is where the freedom and sparkle live.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                  <blockquote className="text-lg font-medium text-gray-800 mb-2">
+                    "Your brain is wired to protect you, not propel you."
+                  </blockquote>
+                  <cite className="text-sm text-gray-600">— Mel Robbins</cite>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
+                  <blockquote className="text-lg font-medium text-gray-800 mb-2">
+                    "Curiosity is a superpower."
+                  </blockquote>
+                  <cite className="text-sm text-gray-600">— Brené Brown</cite>
+                </div>
+              </div>
+
+              <div className="text-center bg-yellow-50 p-6 rounded-lg">
+                <p className="text-lg text-gray-800">
+                  Together, they remind us that curiosity and courage are the engines of sharp thinking and vibrant living.
+                </p>
+                <p className="text-xl font-semibold text-teal mt-4">
+                  This is all so empowering to me. How about you?
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">How Critical Thinking Fuels My Pillars</h2>
+                
+                <div className="space-y-8">
+                  <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+                    <h3 className="text-xl font-semibold text-green-800 mb-4">Healthspan</h3>
+                    <p className="text-gray-800 mb-4">
+                      Don't fall for every shiny health fad. Critical thinking leads you back to what is proven. In my case embracing a WFPB lifestyle, daily movement and sustainable choices. (Again let me add here that I am sharing what works for me, maybe it will work for you. I am not here to arm wrestle you to believe what I believe, I am here to share my story and plant a seed.) The rest is up to you. No judgement here at all.
+                    </p>
+                    <div className="bg-green-100 p-4 rounded-md">
+                      <p className="font-semibold text-green-800">YOU DO YOU!</p>
+                      <p className="text-green-700 text-sm mt-2">
+                        Do your own research, figure it out, do not follow blindly. I am sharing great resources to help you find YOUR own way. Oh, and always be ready for adjustments and change. Science is a moving, runaway train, never to be stopped. Stay alert.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 className="text-xl font-semibold text-blue-800 mb-4">Confidence</h3>
+                    <p className="text-gray-800 mb-4">
+                      Critical thinking is the filter between society's noise and your own truth. That voice whispering, "You're too old." Is it true, or is it cultural conditioning? By questioning limiting beliefs you reclaim your voice and your confidence.
+                    </p>
+                    <p className="text-gray-800 mb-4">
+                      Mel Robbins teaches that courage grows through action, but critical thinking tells you what actions matter most. Confidence grows when you can say: "I have examined the options, and I chose what is right for me."
+                    </p>
+                    <div className="bg-blue-100 p-4 rounded-md">
+                      <p className="font-semibold text-blue-800">
+                        Please use critical thinking to cut through limiting beliefs and RECLAIM SELF-TRUST.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
+                    <h3 className="text-xl font-semibold text-purple-800 mb-4">Unapologetic Style</h3>
+                    <p className="text-gray-800 mb-4">
+                      Fashion rules say, dress your age. Rebels say, dress your JOY. Critical thinking gives you the freedom to decide what feels authentic and fabulous. At the least, remember to look your very best every day.
+                    </p>
+                    <div className="bg-purple-100 p-4 rounded-md text-center">
+                      <p className="font-semibold text-purple-800">
+                        "Look your best. Feel your best. Be unstoppable. Because showing up beautifully for yourself is the ultimate act of grace."
+                      </p>
+                      <p className="text-purple-700 text-sm mt-2">
+                        Even if it is just you and the dog.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                <p className="text-lg text-gray-800">
+                  Know that critical thinking does not make you cynical. It makes you curious. Big difference. And Curiosity keeps you vibrant, alive, and rebelliously radiant.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Want to dig deeper?</h3>
+                <div className="space-y-3">
+                  <div>
+                    <a 
+                      href="https://melrobbins.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-teal hover:text-teal-dark font-medium underline"
+                    >
+                      The Five Second Rule, Mel Robbins, melrobbins.com
+                    </a>
+                  </div>
+                  <div>
+                    <a 
+                      href="https://brenebrown.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-teal hover:text-teal-dark font-medium underline"
+                    >
+                      Dare to Lead, Brené Brown, brenebrown.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-100 p-6 rounded-lg text-center">
+                <p className="text-lg font-medium text-gray-700">
+                  Age Boldly, Live Loudly,<br />
+                  Suz
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">

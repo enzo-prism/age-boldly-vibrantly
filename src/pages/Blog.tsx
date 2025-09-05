@@ -179,6 +179,15 @@ const Blog = () => {
       dateSort: new Date('2025-09-02'),
       readTime: '12 min read',
       blogNumber: 19
+    },
+    {
+      id: 'critical-thinking-secret-weapon-rebellious-aging',
+      title: 'Critical Thinking: Your Secret Weapon for Rebellious Aging',
+      excerpt: 'Critical Thinking is the rebel\'s power move. It is the ability to pause, question, and separate truth from noise. So instead of blindly accepting what you are told, ask: What\'s the evidence? Who benefits if I believe this? That is where the freedom and sparkle live.',
+      date: '9/2/2025',
+      dateSort: new Date('2025-09-02'),
+      readTime: '10 min read',
+      blogNumber: 20
     }
   ];
 
