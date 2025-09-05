@@ -7,6 +7,7 @@ import GallerySection from '@/components/pillar/GallerySection';
 import NutritionCTA from '@/components/pillar/NutritionCTA';
 import QuizSection from '@/components/pillar/QuizSection';
 import ChecklistCTA from '@/components/pillar/ChecklistCTA';
+import ConnectCTA from '@/components/common/ConnectCTA';
 
 const PillarPage = () => {
   const { pillarId } = useParams<{ pillarId: string }>();
@@ -33,6 +34,8 @@ const PillarPage = () => {
       <QuizSection content={content} />
       
       <ChecklistCTA content={content} />
+      
+      <ConnectCTA />
     </div>
   );
 };

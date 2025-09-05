@@ -4,6 +4,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
+import ConnectCTA from '@/components/common/ConnectCTA';
 
 const BlogPost = () => {
   const { postId } = useParams();
@@ -73,6 +74,8 @@ const BlogPost = () => {
                   <p className="text-emerald-700">Keep your eyes on your goals not on your obstacles.</p>
                 </div>
               </div>
+
+              <ConnectCTA />
 
               <div className="bg-gray-50 p-8 rounded-lg mt-12 text-center">
                 <p className="text-lg font-medium text-teal-600 mb-4">
@@ -240,6 +243,8 @@ const BlogPost = () => {
                   THE KEY IS CONSISTENCY AND PERSEVERANCE.
                 </p>
               </div>
+
+              <ConnectCTA />
 
               <div className="text-center bg-teal-50 p-8 rounded-lg">
                 <h4 className="font-bold text-teal-800 mb-4">Let's Continue the Conversation at Your Convenience.</h4>
@@ -506,6 +511,8 @@ const BlogPost = () => {
               <p>Watch for added sugars, oils, sodium, artificial ingredients. Choose short clean ingredient lists you recognize.</p>
               <p className="font-medium text-teal-600 mt-2">Note: If it reads like a science project, maybe it belongs in the lab, not your kitchen.</p>
 
+              <ConnectCTA />
+
               <div className="bg-gray-50 p-8 rounded-lg mt-12 text-center">
                 <p className="text-lg mb-4">I hope this helps to clarify misconceptions.</p>
                 <p className="text-lg mb-4">Let's rebel against confusion, reclaim our health, and rediscover joy in eating one bite at a time.</p>
@@ -640,6 +647,8 @@ const BlogPost = () => {
                 <p>
                   So go ahead and make gratitude your daily rebellion. Not just because it is good for your brain (which it is), but because it reminds you how rich your life truly is.
                 </p>
+
+                <ConnectCTA />
 
                 <div className="bg-coral-50 p-8 rounded-lg my-8 text-center border-l-4 border-coral-400">
                   <p className="text-coral-800 font-bold text-lg mb-4">
@@ -799,6 +808,8 @@ const BlogPost = () => {
                   </a>
                 </div>
 
+                <ConnectCTA />
+
                 <p className="text-gray-600 leading-relaxed text-center font-medium">
                   Sparkle on, Rebels
                 </p>
@@ -931,6 +942,8 @@ const BlogPost = () => {
                 <p className="mb-0 font-medium">Leave a comment and let's straighten up together.</p>
               </div>
 
+              <ConnectCTA />
+
               <div className="text-center mt-12">
                 <p className="text-xl font-semibold text-coral">Sparkle on,</p>
                 <p className="text-xl font-semibold text-coral">Suz</p>
@@ -1043,6 +1056,8 @@ const BlogPost = () => {
                   Need a cheerleader? I am here for you.
                 </p>
               </div>
+
+              <ConnectCTA />
 
               <div className="text-center mt-8">
                 <p className="text-lg italic">
@@ -1267,6 +1282,8 @@ const BlogPost = () => {
                 Those taunting voices in your head are a mix of subconscious programming, outdated survival wiring, and cultural conditioning. <strong>THEY ARE NOT YOU.</strong> You are the observer, the awareness, the Rebel who gets to decide which thoughts are welcome and <strong>WHICH NEED TO PACK THEIR BAGS AND MOVE ON.</strong>
               </p>
             </div>
+
+            <ConnectCTA />
 
             <p className="text-center text-lg font-medium text-teal mb-8">
               Sparkle on,<br />
@@ -1567,6 +1584,8 @@ const BlogPost = () => {
                 <p className="text-xl font-bold text-teal mb-2">
                   Let's Dazzle Together.
                 </p>
+                <ConnectCTA />
+
                 <p className="text-lg italic">
                   Sparkle on,<br />
                   Suz
@@ -1711,6 +1730,8 @@ const BlogPost = () => {
                 <p className="font-semibold">In the end style is not about following fashion. It is about owning your story. Curate your closet like you curate your life. Do it with confidence, joy, and a whole lot of rebellion. Show the world your unapologetic self.</p>
               </div>
 
+              <ConnectCTA />
+
               <div className="text-center mt-12">
                 <p className="text-lg italic text-teal-600">Sparkle on,</p>
                 <p className="text-xl font-semibold text-charcoal">Suz</p>
@@ -1835,6 +1856,8 @@ const BlogPost = () => {
                   to take the risk and dive in. So go ahead, and plate up some plants.
                 </p>
                 
+                <ConnectCTA />
+
                 <p className="text-gray-800 font-medium mb-2">Sparkle on,</p>
                 <p className="text-gray-800 font-bold">Suz</p>
                 
@@ -2172,6 +2195,8 @@ const BlogPost = () => {
 
               </div>
 
+              <ConnectCTA />
+
               {/* Conclusion */}
               <div className="bg-gray-50 p-8 rounded-lg mt-12 text-center">
                 <p className="text-lg font-medium text-teal-600 mb-4">
@@ -2350,6 +2375,8 @@ const BlogPost = () => {
 
               <p className="mb-8">So go ahead and draw the line, shut the door, or leave it wide open when it feels right. Boundaries are not barriers. They are the sparkle lines that make your life shine brighter.</p>
 
+              <ConnectCTA />
+
               <div className="bg-gray-50 p-8 rounded-lg text-center">
                 <p className="text-xl font-bold text-coral mb-4">
                   Sparkle on my dear Rebels.
@@ -2499,6 +2526,8 @@ const BlogPost = () => {
                   Replace the word "EAT" with the word "Nourish" and see how your perspective changes.
                 </p>
               </div>
+
+              <ConnectCTA />
 
               <div className="bg-gray-100 p-6 rounded-lg mt-12 text-center">
                 <p className="text-gray-700 italic">
@@ -2768,6 +2797,8 @@ const BlogPost = () => {
                   </div>
                 </div>
               </div>
+
+              <ConnectCTA />
 
               <div className="bg-gray-100 p-6 rounded-lg text-center">
                 <p className="text-lg font-medium text-gray-700">

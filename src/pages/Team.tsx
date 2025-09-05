@@ -1,4 +1,5 @@
 import React from 'react';
+import ConnectCTA from '@/components/common/ConnectCTA';
 
 const Team = () => {
   return (
@@ -65,6 +66,8 @@ const Team = () => {
           </div>
         </div>
       </section>
+      
+      <ConnectCTA />
     </div>
   );
 };

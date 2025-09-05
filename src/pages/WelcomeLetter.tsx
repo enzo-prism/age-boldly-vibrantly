@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ConnectCTA from '@/components/common/ConnectCTA';
 
 const WelcomeLetter = () => {
   return (
@@ -68,6 +69,8 @@ const WelcomeLetter = () => {
           </div>
         </div>
       </div>
+      
+      <ConnectCTA />
     </div>
   );
 };

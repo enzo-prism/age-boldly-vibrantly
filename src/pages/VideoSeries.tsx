@@ -1,6 +1,7 @@
 import React from 'react';
 import { VideoCard } from '@/components/home/VideoCard';
 import { videoSeriesData, videoSeriesInfo } from '@/data/videoSeries';
+import ConnectCTA from '@/components/common/ConnectCTA';
 
 const VideoSeries = () => {
   return (
@@ -36,6 +37,8 @@ const VideoSeries = () => {
           </div>
         </div>
       </section>
+      
+      <ConnectCTA />
     </div>
   );
 };

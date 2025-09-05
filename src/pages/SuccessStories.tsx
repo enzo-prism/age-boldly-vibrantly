@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import ConnectCTA from '@/components/common/ConnectCTA';
 
 interface SuccessStory {
   id: number;
@@ -297,6 +298,8 @@ const SuccessStories = () => {
           </div>
         </div>
       </section>
+      
+      <ConnectCTA />
     </div>
   );
 };

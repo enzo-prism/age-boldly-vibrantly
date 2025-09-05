@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 import { useScrollAnimationTrigger } from '@/hooks/useScrollAnimationTrigger';
+import ConnectCTA from '@/components/common/ConnectCTA';
 
 const Movement = () => {
   const heroRef = useScrollAnimation<HTMLElement>({ threshold: 0.3 });
@@ -221,6 +222,8 @@ const Movement = () => {
           </div>
         </div>
       </section>
+      
+      <ConnectCTA />
     </div>;
 };
 
