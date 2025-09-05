@@ -174,8 +174,9 @@ const Header = () => {
 
         {/* Mobile menu dropdown */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-md py-4 animate-fade-in">
-            <nav className="flex flex-col space-y-3 px-4">
+          <div className="lg:hidden fixed top-[80px] left-0 w-full bg-white shadow-md animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto">
+            <div className="py-4 min-h-0">
+              <nav className="flex flex-col space-y-3 px-4">
               <NavLink 
                 to="/" 
                 className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
@@ -288,8 +289,9 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
-              </NavLink>
-            </nav>
+               </NavLink>
+              </nav>
+            </div>
           </div>
         )}
       </div>
