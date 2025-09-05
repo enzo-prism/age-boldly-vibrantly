@@ -22,7 +22,7 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) => {
       <DialogContent className="sm:max-w-md bg-white border-0 shadow-xl fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
         <DialogHeader className="text-center pb-4">
           <div className="text-4xl mb-2">💚</div>
-          <DialogTitle className="text-2xl font-bold text-gray-800 mb-2">
+          <DialogTitle className="text-2xl font-bold text-gray-800 mb-2 text-center">
             Welcome, My Dear Rebel!
           </DialogTitle>
         </DialogHeader>
