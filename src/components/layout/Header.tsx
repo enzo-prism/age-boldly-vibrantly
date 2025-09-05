@@ -9,6 +9,9 @@ import {
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
 import { ChevronDown } from "lucide-react";
+import { AnimatedHamburger } from '@/components/ui/animated-hamburger';
+import { MobileMenuSection } from '@/components/ui/mobile-menu-section';
+import { MobileNavItem } from '@/components/ui/mobile-nav-item';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,24 +48,10 @@ const Header = () => {
         </NavLink>
 
         {/* Mobile menu toggle */}
-        <button 
-          className="lg:hidden text-foreground"
+        <AnimatedHamburger
+          isOpen={isMobileMenuOpen}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor" 
-            className="w-6 h-6"
-          >
-            {isMobileMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            )}
-          </svg>
-        </button>
+        />
 
         {/* Desktop menu */}
         <nav className="hidden lg:flex items-center space-x-1">
@@ -174,122 +163,80 @@ const Header = () => {
 
         {/* Mobile menu dropdown */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed top-[80px] left-0 w-full bg-white shadow-md animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto">
-            <div className="py-4 min-h-0">
-              <nav className="flex flex-col space-y-3 px-4">
-              <NavLink 
-                to="/" 
-                className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Home
-              </NavLink>
-              <NavLink 
-                to="/our-story" 
-                className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Our Story
-              </NavLink>
-              <div className="py-2">
-                <div className="font-medium mb-1">Pillars</div>
-                <div className="pl-4 flex flex-col space-y-2">
-                  <NavLink 
-                    to="/pillars/confidence" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    🌟 Confidence
-                  </NavLink>
-                  <NavLink 
-                    to="/pillars/style" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    👗 Style
-                  </NavLink>
-                  <NavLink 
-                    to="/pillars/health" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    🌱 Health
-                  </NavLink>
-                </div>
-              </div>
-              <div className="py-2">
-                <div className="font-medium mb-1">Nutrition (WFPB)</div>
-                <div className="pl-4 flex flex-col space-y-2">
-                  <NavLink 
-                    to="/nutrition?tab=what-is-wfpb" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    🌱 What is WFPB?
-                  </NavLink>
-                  <NavLink 
-                    to="/nutrition?tab=benefits" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    💪 Benefits
-                  </NavLink>
-                  <NavLink 
-                    to="/nutrition?tab=protocol" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    ❤️ Dr. Esselstyn's Protocol
-                  </NavLink>
-                  <NavLink 
-                    to="/nutrition?tab=dr-campbell" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    👨‍🔬 Dr. T. Colin Campbell
-                  </NavLink>
-                  <NavLink 
-                    to="/nutrition?tab=foods" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    🍎 Why & How
-                  </NavLink>
-                  <NavLink 
-                    to="/nutrition?tab=recipes" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    👩‍🍳 Recipes
-                  </NavLink>
-                </div>
-              </div>
-              <div className="py-2">
-                <div className="font-medium mb-1">Updates</div>
-                <div className="pl-4 flex flex-col space-y-2">
-                  <NavLink 
-                    to="/blog" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    📝 Blog
-                  </NavLink>
-                  <NavLink 
-                    to="/video-series" 
-                    className={({isActive}) => `py-1 flex items-center gap-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    🎥 Video Series
-                  </NavLink>
-                </div>
-              </div>
-              <NavLink 
-                to="/contact" 
-                className={({isActive}) => `py-2 ${isActive ? 'text-teal font-medium' : 'text-foreground'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-               </NavLink>
+          <div className="lg:hidden fixed top-[80px] left-0 w-full bg-background/95 backdrop-blur-md shadow-lg border-b animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto z-[9998]">
+            <div className="min-h-0">
+              <nav className="flex flex-col">
+                {/* Main navigation items */}
+                <MobileNavItem
+                  to="/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  icon="🏠"
+                >
+                  Home
+                </MobileNavItem>
+                
+                <MobileNavItem
+                  to="/our-story"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  icon="📖"
+                >
+                  Our Story
+                </MobileNavItem>
+
+                <MobileNavItem
+                  to="/welcome-letter"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  icon="💌"
+                >
+                  Welcome Letter
+                </MobileNavItem>
+
+                {/* Collapsible sections */}
+                <MobileMenuSection
+                  title="Pillars"
+                  icon="🏛️"
+                  defaultOpen={false}
+                  onItemClick={() => setIsMobileMenuOpen(false)}
+                  items={[
+                    { to: '/pillars/confidence', label: 'Confidence', icon: '🌟' },
+                    { to: '/pillars/style', label: 'Style', icon: '👗' },
+                    { to: '/pillars/health', label: 'Health', icon: '🌱' }
+                  ]}
+                />
+
+                <MobileMenuSection
+                  title="Nutrition (WFPB)"
+                  icon="🥬"
+                  defaultOpen={false}
+                  onItemClick={() => setIsMobileMenuOpen(false)}
+                  items={[
+                    { to: '/nutrition?tab=what-is-wfpb', label: 'What is WFPB?', icon: '🌱' },
+                    { to: '/nutrition?tab=benefits', label: 'Benefits', icon: '💪' },
+                    { to: '/nutrition?tab=protocol', label: "Dr. Esselstyn's Protocol", icon: '❤️' },
+                    { to: '/nutrition?tab=dr-campbell', label: 'Dr. T. Colin Campbell', icon: '👨‍🔬' },
+                    { to: '/nutrition?tab=foods', label: 'Why & How', icon: '🍎' },
+                    { to: '/nutrition?tab=recipes', label: 'Recipes', icon: '👩‍🍳' }
+                  ]}
+                />
+
+                <MobileMenuSection
+                  title="Updates"
+                  icon="📰"
+                  defaultOpen={false}
+                  onItemClick={() => setIsMobileMenuOpen(false)}
+                  items={[
+                    { to: '/blog', label: 'Blog', icon: '📝' },
+                    { to: '/video-series', label: 'Video Series', icon: '🎥' }
+                  ]}
+                />
+
+                <MobileNavItem
+                  to="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  icon="📞"
+                >
+                  Contact
+                </MobileNavItem>
               </nav>
             </div>
           </div>
