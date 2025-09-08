@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Clock, ChefHat, Snowflake, Users } from 'lucide-react';
 
 const Recipes = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -10,7 +13,8 @@ const Recipes = () => {
   
   const recipeTags = [
     'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert', 
-    'Budget-Friendly'
+    'Budget-Friendly', 'No-Bake', 'Make-Ahead', 'Special Occasion', 
+    'Raw', 'Oil-Free', 'Quick', 'High-Protein', 'Gluten-Free'
   ];
   
   const recipes = [
@@ -21,6 +25,8 @@ const Recipes = () => {
       servings: '4',
       source: 'Plant-Based Women Warriors Cookbook P. 157',
       tags: ['Lunch', 'Oil-Free', 'Quick'],
+      prepTime: '15 minutes',
+      difficulty: 'Beginner',
       ingredients: [
         '15 ounces canned cannellini beans (about 1½ cups), canned navy beans, or cooked large lima beans drained and rinsed',
         '1-2 mangoes (about 1½ cups), peeled and diced',
@@ -43,7 +49,10 @@ const Recipes = () => {
       description: 'A nutrient-dense salad by Dr. Joel Fuhrman featuring massaged kale and fresh fruits.',
       servings: '2+',
       source: 'By Dr. Joel Fuhrman',
+      author: 'Dr. Joel Fuhrman',
       tags: ['Lunch', 'Oil-Free', 'High-Protein'],
+      prepTime: '10 minutes',
+      difficulty: 'Beginner',
       ingredients: [
         '1 bunch kale, tough stems and center ribs removed',
         '1 avocado, peeled and chopped',
@@ -69,6 +78,10 @@ const Recipes = () => {
       servings: '6',
       source: 'Plant-Based Woman Warrior Cookbook P. 143',
       tags: ['Dinner', 'Budget-Friendly', 'High-Protein'],
+      prepTime: '15 minutes',
+      totalTime: '45 minutes',
+      difficulty: 'Intermediate',
+      notes: 'I am addicted to this soup. Deelish! Company worthy.',
       ingredients: [
         '1 cup sliced shallots (about 2 large) or one onion sliced',
         '4 cloves chopped garlic',
@@ -101,6 +114,9 @@ const Recipes = () => {
       servings: '8-10 muffins',
       source: '"Prevent and Reverse Heart Disease" P. 133',
       tags: ['Breakfast', 'Dessert', 'Oil-Free'],
+      prepTime: '10 minutes',
+      totalTime: '35 minutes',
+      difficulty: 'Beginner',
       ingredients: [
         '1 cup whole wheat flour',
         '1 cup oat flour',
@@ -129,7 +145,10 @@ const Recipes = () => {
       description: 'A simple and delicious oil-free salad dressing by Jane and Anne Esselstyn.',
       servings: 'Several servings',
       source: 'Jane and Anne Esselstyn',
+      author: 'Jane and Anne Esselstyn',
       tags: ['Quick', 'Oil-Free'],
+      prepTime: '2 minutes',
+      difficulty: 'Beginner',
       ingredients: [
         '3 tablespoons balsamic vinegar',
         '2 tablespoons of Dijon mustard',
@@ -139,18 +158,92 @@ const Recipes = () => {
         'Whisk the ingredients in a bowl or place in a jar and shake until smooth.',
         'Makes several servings.'
       ]
+    },
+    {
+      id: 6,
+      title: 'Mint Chocolate Mousse Torte',
+      description: 'A healthier version of the Frango Mint Pie - elegant, dense, rich, and absolutely delicious. Perfect for entertaining.',
+      author: 'Chef AJ',
+      servings: '12+',
+      source: '"unprocessed" Revitalize Your Health With Whole Foods by Chef AJ, page 132',
+      prepTime: '30 minutes',
+      freezeTime: '4+ hours',
+      totalTime: '4+ hours 30 minutes',
+      difficulty: 'Intermediate',
+      tags: ['Dessert', 'No-Bake', 'Make-Ahead', 'Special Occasion', 'Raw', 'Oil-Free', 'Gluten-Free'],
+      storageInstructions: 'Keeps well in the freezer. Can be made several days before an event.',
+      notes: 'This is my "go to" recipe when I entertain. It always turns out great and is deelish, elegant, dense and rich. I have served 12 and still had leftovers.',
+      components: {
+        filling: {
+          ingredients: [
+            '16 ounces of pitted dried dates',
+            '2 cups unsweetened nondairy milk',
+            '1 tablespoon alcohol-free vanilla extract, or 1 teaspoon vanilla powder',
+            '1-2 teaspoons peppermint extract (depending on how minty you like it)',
+            '½ cup of cocoa powder or carob powder',
+            '12 ounces of walnuts',
+            '½ cup unsweetened coconut'
+          ],
+          instructions: [
+            'Soak the dates in the nondairy milk.',
+            'Process the soaked dates with the vanilla and peppermint extract in a food processor, fitted with an "S" blade until very smooth.',
+            'Add the cocoa powder and process again until smooth, then place the entire mixture in a bowl.',
+            'In the same processor bowl, process the 12 ounces of walnuts until like nut butter.',
+            'Add the coconut and process again.',
+            'Add to the date mixture and combine the ingredients by hand until completely incorporated.'
+          ]
+        },
+        crust: {
+          ingredients: [
+            '2 cups raw walnuts',
+            '¼ cup cocoa powder or carob powder',
+            '2 cups pitted dates',
+            '1 tablespoon alcohol-free vanilla or 1 teaspoon vanilla powder',
+            '1 teaspoon peppermint extract'
+          ],
+          instructions: [
+            'Process the 2 cups of walnuts with the cocoa or carob powder in a food processor fitted with an "S" blade. Do NOT over process or you will have nut butter.',
+            'Add the two cups of dates, a few at a time, until the mixture holds together and you can easily roll it into a ball.',
+            'Add the vanilla and peppermint extracts and process again briefly.',
+            'Press the crust into an 8 or 9 inch springform pan.'
+          ]
+        },
+        garnish: {
+          ingredients: [
+            '½ cup cacao nibs (optional)',
+            'Fresh mint leaves',
+            'Fresh raspberries'
+          ],
+          instructions: [
+            'Spread the filling over the crust.',
+            'Garnish with cacao nibs if desired.',
+            'Freeze until solid.',
+            'Serve with a beautiful mint leaf and fresh raspberries.'
+          ]
+        }
+      }
     }
   ];
   
   const filteredRecipes = recipes.filter(recipe => {
     // Filter by search query
-    const matchesSearch = recipe.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         (recipe.author && recipe.author.toLowerCase().includes(searchQuery.toLowerCase()));
     
     // Filter by tag if one is selected
     const matchesTag = activeFilter ? recipe.tags.includes(activeFilter) : true;
     
     return matchesSearch && matchesTag;
   });
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Beginner': return 'bg-green-100 text-green-800';
+      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'Advanced': return 'bg-red-100 text-red-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
 
   return (
     <div>
@@ -196,55 +289,187 @@ const Recipes = () => {
         {filteredRecipes.length > 0 ? (
           <div className="space-y-6">
             {filteredRecipes.map(recipe => (
-              <div key={recipe.id} className="bg-white rounded-lg shadow-sm border p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">{recipe.title}</h3>
-                    <p className="text-gray-600 mb-2">{recipe.description}</p>
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                      <span>Serves: {recipe.servings}</span>
-                      <span>Source: {recipe.source}</span>
+              <Card key={recipe.id} className="overflow-hidden">
+                <CardHeader>
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-2">{recipe.title}</CardTitle>
+                      {recipe.author && (
+                        <p className="text-sm text-muted-foreground mb-2">by {recipe.author}</p>
+                      )}
+                      <CardDescription>{recipe.description}</CardDescription>
                     </div>
                   </div>
-                </div>
-                
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {recipe.tags.map(tag => (
-                    <Badge 
-                      key={tag} 
-                      variant="outline"
-                      className="text-xs"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-3">Ingredients:</h4>
-                    <ul className="list-disc list-inside space-y-1 text-sm">
-                      {recipe.ingredients.map((ingredient, index) => (
-                        <li key={index}>{ingredient}</li>
-                      ))}
-                    </ul>
+                  
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mt-4">
+                    <div className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      <span>Serves {recipe.servings}</span>
+                    </div>
+                    {recipe.prepTime && (
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{recipe.prepTime}</span>
+                      </div>
+                    )}
+                    {recipe.freezeTime && (
+                      <div className="flex items-center gap-1">
+                        <Snowflake className="w-4 h-4" />
+                        <span>{recipe.freezeTime}</span>
+                      </div>
+                    )}
+                    {recipe.difficulty && (
+                      <div className="flex items-center gap-1">
+                        <ChefHat className="w-4 h-4" />
+                        <Badge className={`${getDifficultyColor(recipe.difficulty)} text-xs`}>
+                          {recipe.difficulty}
+                        </Badge>
+                      </div>
+                    )}
                   </div>
                   
-                  <div>
-                    <h4 className="font-semibold mb-3">Instructions:</h4>
-                    <ol className="space-y-2 text-sm">
-                      {recipe.instructions.map((step, index) => (
-                        <li key={index} className="flex">
-                          <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
-                            {index + 1}
-                          </span>
-                          <span className="leading-relaxed">{step}</span>
-                        </li>
-                      ))}
-                    </ol>
+                  <p className="text-xs text-muted-foreground mt-2">Source: {recipe.source}</p>
+                  
+                  <div className="flex flex-wrap gap-1 mt-3">
+                    {recipe.tags.map(tag => (
+                      <Badge key={tag} variant="outline" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
-                </div>
-              </div>
+                </CardHeader>
+
+                <CardContent>
+                  {recipe.components ? (
+                    <Tabs defaultValue="crust" className="w-full">
+                      <TabsList className="grid w-full grid-cols-3">
+                        <TabsTrigger value="crust">Crust</TabsTrigger>
+                        <TabsTrigger value="filling">Filling</TabsTrigger>
+                        <TabsTrigger value="garnish">Assembly</TabsTrigger>
+                      </TabsList>
+                      
+                      <TabsContent value="crust" className="mt-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Crust Ingredients:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.crust.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Crust Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.crust.instructions.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      
+                      <TabsContent value="filling" className="mt-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Filling Ingredients:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.filling.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Filling Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.filling.instructions.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      
+                      <TabsContent value="garnish" className="mt-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Garnish & Assembly:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.garnish.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Final Assembly:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.garnish.instructions.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                    </Tabs>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-semibold mb-3">Ingredients:</h4>
+                        <ul className="list-disc list-inside space-y-1 text-sm">
+                          {recipe.ingredients?.map((ingredient, index) => (
+                            <li key={index}>{ingredient}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-3">Instructions:</h4>
+                        <ol className="space-y-2 text-sm">
+                          {recipe.instructions?.map((step, index) => (
+                            <li key={index} className="flex">
+                              <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                {index + 1}
+                              </span>
+                              <span className="leading-relaxed">{step}</span>
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {(recipe.notes || recipe.storageInstructions) && (
+                    <div className="mt-6 pt-4 border-t">
+                      {recipe.notes && (
+                        <div className="mb-3">
+                          <h4 className="font-semibold text-sm mb-2">Chef's Notes:</h4>
+                          <p className="text-sm text-muted-foreground italic">{recipe.notes}</p>
+                        </div>
+                      )}
+                      {recipe.storageInstructions && (
+                        <div>
+                          <h4 className="font-semibold text-sm mb-2">Storage:</h4>
+                          <p className="text-sm text-muted-foreground">{recipe.storageInstructions}</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
             ))}
           </div>
         ) : (
