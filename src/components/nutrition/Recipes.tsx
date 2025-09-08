@@ -234,7 +234,7 @@ const Recipes = () => {
     const matchesTag = activeFilter ? recipe.tags.includes(activeFilter) : true;
     
     return matchesSearch && matchesTag;
-  });
+  }).sort((a, b) => b.id - a.id);
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
