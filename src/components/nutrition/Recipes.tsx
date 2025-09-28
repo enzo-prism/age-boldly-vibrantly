@@ -1072,6 +1072,36 @@ const Recipes = () => {
         "MAKE IT YOURS: This is your creation—adjust ingredients based on what you love and what makes you feel amazing. Trust your rebel instincts!",
         "HISTORICAL NOTE: The phrase 'Buddha Bowl' first appears in Martha Stewart's 2013 cookbook 'Meatless'. Before that, similar meals were called grain bowls. The concept signifies balance, mindfulness, and variety in a single meal."
       ]
+    },
+    {
+      id: 35,
+      title: "Oil Free Hummus",
+      author: "Jill Dalton",
+      source: "The Whole Food Plant Based Cooking Show - plantbasedcookingshow.com",
+      description: "A creamy, oil-free hummus made with chickpeas, tahini, and nutritional yeast for a healthy plant-based dip. The optional cashews add extra creaminess.",
+      prepTime: "5 minutes",
+      servings: "4-6",
+      difficulty: "Beginner",
+      tags: ["Snack", "Oil-Free", "Quick", "High-Protein"],
+      category: "appetizers",
+      ingredients: [
+        "28 oz chickpeas (garbanzos), unsalted",
+        "Liquid from one of the cans of chickpeas",
+        "½ cup cashews (optional)",
+        "1 clove garlic",
+        "1 tablespoon Bragg's Liquid Aminos",
+        "¼ cup lemon juice",
+        "¼ cup nutritional yeast",
+        "¼ cup tahini (slightly less)"
+      ],
+      instructions: [
+        "Drain the chickpeas and reserve the liquid from one can.",
+        "Add all ingredients into a high-speed blender or food processor.",
+        "Blend until smooth and creamy, adding reserved chickpea liquid as needed to reach desired consistency.",
+        "Taste and adjust seasonings as needed.",
+        "Serve immediately or refrigerate for up to one week.",
+        "Great with fresh vegetables, pita bread, or as a sandwich spread."
+      ]
     }
   ];
   
