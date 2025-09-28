@@ -189,6 +189,42 @@ const Blog = () => {
       dateSort: new Date('2025-09-02'),
       readTime: '10 min read',
       blogNumber: 20
+    },
+    {
+      id: 'ultra-processed-trap-eat-whole-live-whole',
+      title: 'The Ultra-Processed Trap: Eat Whole, Live Whole',
+      excerpt: 'Did you know that more than HALF of the average American diet comes from ultra-processed food? 70-73% of the U.S. food supply is classified as ultra-processed. Discover why choosing whole foods over factory formulations is your path to vibrant health.',
+      date: '9/15/2025',
+      dateSort: new Date('2025-09-15'),
+      readTime: '12 min read',
+      blogNumber: 21
+    },
+    {
+      id: 'if-not-now-when-new-beginnings',
+      title: 'If Not Now, When? New Beginnings are up to YOU',
+      excerpt: 'Have you ever scrolled through your feed when a phrase suddenly grabs you by the collar? "If not now, when?" stopped me cold. How many women are quietly living on autopilot? Rebellious Aging is about refusing to settle for bland.',
+      date: '9/6/2025',
+      dateSort: new Date('2025-09-06'),
+      readTime: '8 min read',
+      blogNumber: 22
+    },
+    {
+      id: 'optimal-aging-colleen-murphy',
+      title: 'Optimal Aging: As Seen Through the Lens of Princeton Professor Colleen Murphy',
+      excerpt: 'A conversation between journalist Paul Von Zielbauer and Princeton Professor Colleen Murphy distilled the science of aging into practical, myth-busting tips. Exercise is NOT optional, sleep is your overnight cleaning crew, and food myths debunked.',
+      date: '9/20/2025',
+      dateSort: new Date('2025-09-20'),
+      readTime: '10 min read',
+      blogNumber: 23
+    },
+    {
+      id: 'calorie-density-secret-seals-deal',
+      title: 'Calorie Density: The Secret That Seals the Deal',
+      excerpt: 'Managing weight doesn\'t have to be an uphill climb. When you choose the right foods, your body naturally regulates weight. The key is calorie density - the number of calories in a given weight of food. Plants hold the secret to eating until satisfied without overeating.',
+      date: '9/10/2025',
+      dateSort: new Date('2025-09-10'),
+      readTime: '9 min read',
+      blogNumber: 24
     }
   ];
 
