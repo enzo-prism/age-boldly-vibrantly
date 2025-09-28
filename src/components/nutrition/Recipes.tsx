@@ -1592,11 +1592,54 @@ const Recipes = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold mb-3">Ingredients:</h4>
-                        <ul className="list-disc list-inside space-y-1 text-sm">
-                          {recipe.ingredients.map((ingredient, index) => (
-                            <li key={index}>{ingredient}</li>
-                          ))}
-                        </ul>
+                        {/* Check if this is a guide-style recipe with section headers */}
+                        {recipe.ingredients.some(ingredient => 
+                          ingredient.includes(':') && ingredient === ingredient.toUpperCase()
+                        ) ? (
+                          /* Render guide-style recipe with section headers */
+                          <div className="space-y-4">
+                            {recipe.ingredients.map((ingredient, index) => {
+                              if (!ingredient.trim()) return null; // Skip empty strings
+                              
+                              if (ingredient.includes(':') && ingredient === ingredient.toUpperCase()) {
+                                // This is a section header
+                                return (
+                                  <div key={index} className="space-y-2">
+                                    <h5 className="font-bold text-base text-coral bg-coral/10 px-3 py-2 rounded-lg">
+                                      {ingredient}
+                                    </h5>
+                                  </div>
+                                );
+                              } else if (ingredient.includes('(choose')) {
+                                // This is a subsection header
+                                return (
+                                  <div key={index} className="ml-2">
+                                    <h6 className="font-semibold text-sm text-teal mb-1">
+                                      {ingredient}
+                                    </h6>
+                                  </div>
+                                );
+                              } else if (ingredient.startsWith('•')) {
+                                // Regular ingredient item
+                                return (
+                                  <div key={index} className="ml-4">
+                                    <p className="text-sm text-muted-foreground">
+                                      {ingredient}
+                                    </p>
+                                  </div>
+                                );
+                              }
+                              return null;
+                            })}
+                          </div>
+                        ) : (
+                          /* Regular recipe ingredients */
+                          <ul className="list-disc list-inside space-y-1 text-sm">
+                            {recipe.ingredients.map((ingredient, index) => (
+                              <li key={index}>{ingredient}</li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                       <div>
                         <h4 className="font-semibold mb-3">Instructions:</h4>
