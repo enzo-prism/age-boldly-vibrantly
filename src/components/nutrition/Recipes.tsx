@@ -1481,6 +1481,65 @@ const Recipes = () => {
                         </div>
                       )}
                     </div>
+                  ) : recipe.components && recipe.components.tacoBar ? (
+                    <Tabs defaultValue="tacoBar" className="w-full">
+                      <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="tacoBar">Taco Bar Setup</TabsTrigger>
+                        <TabsTrigger value="chorizo">Chorizo (Optional)</TabsTrigger>
+                      </TabsList>
+                      
+                      <TabsContent value="tacoBar" className="mt-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Ingredients:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.tacoBar.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Assembly Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.tacoBar.instructions.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      
+                      <TabsContent value="chorizo" className="mt-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Ingredients:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.chorizo.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.chorizo.instructions.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                    </Tabs>
                   ) : recipe.ingredients ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
