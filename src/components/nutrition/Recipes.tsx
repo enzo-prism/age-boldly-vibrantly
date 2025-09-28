@@ -645,33 +645,39 @@ const Recipes = () => {
             "12 oz. dates about 2 cups",
             "1 Tbsp. cinnamon",
             "1 tsp. Vanilla powder"
+          ],
+          instructions: [
+            "In a food processor fitted with an 'S' blade, process the oats, cinnamon and vanilla bean powder into a flour-like consistency.",
+            "Add the pitted dates and continue processing until the food processor starts to form a ball, and the ingredients are fully combined.",
+            "Empty the food processor into a cheesecake pan and press the dough evenly on the bottom."
           ]
         },
         filling: {
           title: "Filling",
           ingredients: [
             "3 cups frozen wild blueberries defrosted",
-            "12 oz. dates about 2 cups",
+            "12 oz. dates about 2 cups", 
             "3 cups raw cashews soaked",
             "1 cup unsweetened non dairy milk",
-            "¼ cup lemon juice",
-            "Optional Topping: unsweetened low fat coconut"
+            "¼ cup lemon juice"
+          ],
+          instructions: [
+            "Soak cashews for at least 4-6 hours to achieve a super smooth and creamy filling.",
+            "Drain and rinse the cashews.",
+            "In a food processor fitted with the 'S' blade, process the cashews until smooth then add the dates and process again.",
+            "Add the remaining ingredients and process until smooth."
           ]
         }
       },
       instructions: [
-        "Soak Cashews for at least 4-6 hours to achieve a super smooth and creamy filling.",
-        "In a food processor fitted with an 'S' blade, process the oats, cinnamon and vanilla bean powder into a flour-like consistency.",
-        "Add the pitted dates and continue processing until the food processor starts to form a ball, and the ingredients are fully combined.",
-        "Empty the food processor into a cheesecake pan and press the dough evenly on the bottom.",
-        "Drain and rinse the cashews.",
-        "In a food processor fitted with the 'S' blade, process the cashews until smooth then add the dates and process again.",
-        "Add the remaining ingredients and process until smooth.",
-        "Pour evenly over the crust.",
+        "Pour filling evenly over the crust.",
         "Sprinkle the top with unsweetened coconut, if desired.",
-        "Place in freezer until firm."
+        "Place in freezer until firm"
       ],
-      suzNotes: "I have not made this recipe (I typically only include recipes I have made.) That being said, I have tasted this and it is delicious. I have not tried a ChefAJ dessert I have not loved. This cheesecake freezes beautifully."
+      suzNotes: "I have not made this recipe (I typically only include recipes I have made.) That being said, I have tasted this and it is delicious. I have not tried a ChefAJ dessert I have not loved.",
+      notes: "Soak The cashews: Be sure to soak your cashews for at least 4-6 hours to achieve a super smooth and creamy filling. Make Ahead: This cheesecake freezes beautifully, so you can make it in advance and have a ready-to-serve dessert for any occasion. Topping Ideas: For extra flavor and texture, sprinkle the top with unsweetened coconut, or add fresh berries for a pop of color. Enjoy, Suz",
+      source: "Chef AJ chefaj.com",
+      storageInstructions: "Store in freezer until ready to serve. Can be made in advance and frozen for up to 3 months."
     },
     {
       id: 19,
@@ -1529,6 +1535,82 @@ const Recipes = () => {
                         </div>
                       )}
                     </div>
+                  ) : recipe.components && recipe.components.crust && recipe.components.filling && !recipe.components.garnish ? (
+                    <Tabs defaultValue="crust" className="w-full">
+                      <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="crust">Crust</TabsTrigger>
+                        <TabsTrigger value="filling">Filling</TabsTrigger>
+                      </TabsList>
+                      
+                      <TabsContent value="crust" className="mt-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Crust Ingredients:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.crust.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Crust Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.crust.instructions?.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      
+                      <TabsContent value="filling" className="mt-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Filling Ingredients:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.filling.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Filling Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.filling.instructions?.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      
+                      {/* Assembly instructions if they exist */}
+                      {recipe.instructions && recipe.instructions.length > 0 && (
+                        <div className="mt-6 p-4 bg-green-50 rounded-lg">
+                          <h4 className="font-semibold mb-3 text-green-800">Assembly Instructions:</h4>
+                          <ol className="space-y-2 text-sm">
+                            {recipe.instructions.map((step, index) => (
+                              <li key={index} className="flex text-green-700">
+                                <span className="flex-shrink-0 w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                  {index + 1}
+                                </span>
+                                <span className="leading-relaxed">{step}</span>
+                              </li>
+                            ))}
+                          </ol>
+                        </div>
+                      )}
+                    </Tabs>
                   ) : recipe.components && recipe.components.tacoBar ? (
                     <Tabs defaultValue="tacoBar" className="w-full">
                       <TabsList className="grid w-full grid-cols-2">
