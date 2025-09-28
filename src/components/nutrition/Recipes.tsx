@@ -916,6 +916,46 @@ const Recipes = () => {
           ]
         }
       }
+    },
+    {
+      id: 32,
+      title: "Ann's Open Faced Twice Baked Potatoes",
+      author: 'Ann',
+      description: 'Delicious twice-baked potatoes loaded with nutritional yeast, kale, and a savory onion-garlic mixture.',
+      servings: '4-6',
+      source: '"Be a Plant Based Woman Warrior" page 263',
+      category: 'mains',
+      tags: ['Dinner', 'Oil-Free', 'Make-Ahead'],
+      prepTime: '20 minutes',
+      totalTime: '1 hour 30 minutes',
+      difficulty: 'Intermediate',
+      ingredients: [
+        '1 large Japanese sweet potato',
+        '6 medium Yukon Gold potatoes',
+        '1 large sweet onion, cut into 8 chunks',
+        '6 large cloves garlic',
+        '6 tablespoons nutritional yeast',
+        'Pinch of cayenne pepper',
+        '½ teaspoon of ground black pepper',
+        '1 cup of unsweetened almond milk or other non dairy milk or veg broth, as needed',
+        '1 bunch kale, stems removed, leaves chopped and cooked (4-6 cups before cooking), or greens of choice',
+        '3 green onions chopped',
+        'Sweet or smoked paprika, for garnish'
+      ],
+      instructions: [
+        'Preheat the oven to 400°F. Line a sheet pan with parchment paper.',
+        'Poke a knife in each potato before baking. Place all of the potatoes on the parchment lined sheet pan.',
+        'Wrap the onion chunks and peeled whole garlic cloves together in foil. If you wish, place a layer of parchment paper between the foil and the onion and garlic.',
+        'Place the onion and garlic bundle on the sheet pan along with the potatoes and bake for an hour or until the potatoes are soft.',
+        'Carefully unwrap the onion and garlic bundle and place it into a food processor. Be careful unwrapping and saving as much liquid as possible. Blend until smooth, (this will be most of the liquid for the potatoes).',
+        'Once the potatoes are cool enough to handle, cut them in half lengthwise and scoop out the flesh, and place it in a large bowl.',
+        'Place the empty Yukon Gold potato skins in a baking dish.',
+        'With a fork or potato masher, mash the Yukon Golds and the sweet potato until smooth.',
+        'Stir in the onion and garlic liquid, along with the nutritional yeast, and cayenne and pepper. Add the milk or broth as needed.',
+        'Stir in the kale and green onions.',
+        'Add more almond milk or broth if the potatoes seem too thick. You may need a cup or more because nutritional yeast tends to absorb moisture.',
+        'Fill each Yukon Gold potato skin with the mixture, sprinkle with paprika and bake for 30 minutes, until hot.'
+      ]
     }
   ];
   
