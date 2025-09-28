@@ -929,7 +929,7 @@ const Recipes = () => {
                           <div>
                             <h4 className="font-semibold mb-3">Crust Instructions:</h4>
                             <ol className="space-y-2 text-sm">
-                              {recipe.components.crust.instructions.map((step, index) => (
+                              {recipe.components.crust.instructions?.map((step, index) => (
                                 <li key={index} className="flex">
                                   <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
                                     {index + 1}
@@ -955,7 +955,7 @@ const Recipes = () => {
                           <div>
                             <h4 className="font-semibold mb-3">Filling Instructions:</h4>
                             <ol className="space-y-2 text-sm">
-                              {recipe.components.filling.instructions.map((step, index) => (
+                              {recipe.components.filling.instructions?.map((step, index) => (
                                 <li key={index} className="flex">
                                   <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
                                     {index + 1}
@@ -981,7 +981,7 @@ const Recipes = () => {
                           <div>
                             <h4 className="font-semibold mb-3">Assembly Instructions:</h4>
                             <ol className="space-y-2 text-sm">
-                              {recipe.components.garnish.instructions.map((step, index) => (
+                              {recipe.components.garnish.instructions?.map((step, index) => (
                                 <li key={index} className="flex">
                                   <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
                                     {index + 1}
@@ -1048,7 +1048,7 @@ const Recipes = () => {
                           <div>
                             <h5 className="font-medium mb-2 text-green-700">Instructions:</h5>
                             <ol className="space-y-1 text-sm text-green-600">
-                              {recipe.components.dressing.instructions.map((step, index) => (
+                              {recipe.components.dressing.instructions?.map((step, index) => (
                                 <li key={index}>{step}</li>
                               ))}
                             </ol>
@@ -1103,7 +1103,7 @@ const Recipes = () => {
                           <div>
                             <h5 className="font-medium mb-2 text-purple-700">Suz's Modifications:</h5>
                             <ol className="space-y-1 text-sm text-purple-600">
-                              {recipe.components.suzAdjustments.instructions.map((step, index) => (
+                              {recipe.components.suzAdjustments.instructions?.map((step, index) => (
                                 <li key={index}>{index + 1}. {step}</li>
                               ))}
                             </ol>
