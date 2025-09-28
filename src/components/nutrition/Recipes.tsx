@@ -1281,7 +1281,7 @@ const Recipes = () => {
                         <div>
                           <h4 className="font-semibold mb-3">Instructions:</h4>
                           <ol className="space-y-2 text-sm">
-                            {recipe.instructions.map((step, index) => (
+                            {(recipe.instructions || []).map((step, index) => (
                               <li key={index} className="flex">
                                 <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
                                   {index + 1}
@@ -1338,7 +1338,7 @@ const Recipes = () => {
                         <div>
                           <h4 className="font-semibold mb-3">Instructions:</h4>
                           <ol className="space-y-2 text-sm">
-                            {recipe.instructions.map((step, index) => (
+                             {(recipe.instructions || []).map((step, index) => (
                               <li key={index} className="flex">
                                 <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
                                   {index + 1}
@@ -1392,7 +1392,7 @@ const Recipes = () => {
                       <div>
                         <h4 className="font-semibold mb-3">Instructions:</h4>
                         <ol className="space-y-2 text-sm">
-                          {recipe.instructions.map((step, index) => (
+                          {(recipe.instructions || []).map((step, index) => (
                             <li key={index} className="flex">
                               <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
                                 {index + 1}
