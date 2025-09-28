@@ -956,6 +956,68 @@ const Recipes = () => {
         'Add more almond milk or broth if the potatoes seem too thick. You may need a cup or more because nutritional yeast tends to absorb moisture.',
         'Fill each Yukon Gold potato skin with the mixture, sprinkle with paprika and bake for 30 minutes, until hot.'
       ]
+    },
+    {
+      id: 33,
+      title: "Taco Bar",
+      author: 'Plant Based Woman Warrior',
+      description: 'A customizable taco bar with fresh vegetables, beans, and optional chorizo tempeh/tofu for a complete plant-based meal.',
+      servings: '6',
+      source: '"Be a Plant Based Woman Warrior" page 237',
+      category: 'mains',
+      tags: ['Dinner', 'Oil-Free', 'Make-Ahead', 'Gluten-Free', 'Mexican'],
+      prepTime: '30 minutes',
+      totalTime: '45 minutes',
+      difficulty: 'Medium',
+      components: {
+        tacoBar: {
+          title: 'Taco Bar Setup',
+          ingredients: [
+            '12 soft corn tortillas',
+            '3 cups cooked brown rice or quinoa',
+            '2 cups canned black beans, rinsed and warmed',
+            '2 large sweet potatoes, roasted and diced',
+            'Chorizo tofu (optional, see recipe below)',
+            'Your favorite salsa',
+            'Cubed mango',
+            '1 head romaine lettuce, chopped in ribbons',
+            '1 red pepper, diced',
+            '2 carrots, shredded',
+            '2 avocados, sliced or mashed (leave out to make heart disease friendly)',
+            'Hot sauce, your favorite'
+          ],
+          instructions: [
+            'Lay out your taco bar in this order: begin with tortillas, lettuce ribbons, rice, beans, sweet potatoes, tofu (if using), mango, bell pepper, carrots, avocados, followed by salsa and hot sauce.',
+            'Allow guests to assemble their own tacos with their preferred combination of ingredients.',
+            'Serve immediately while ingredients are fresh and warm components are still hot.'
+          ]
+        },
+        chorizo: {
+          title: 'Chorizo Tempeh or Tofu (Optional)',
+          ingredients: [
+            '3 tablespoons chili powder',
+            '1 tablespoon garlic powder',
+            '1 teaspoon cumin',
+            '½ teaspoon turmeric',
+            '1 tablespoon dried oregano',
+            '½ teaspoon smoked paprika',
+            '4 grinds black pepper',
+            '¼ cup apple cider vinegar',
+            '2 tablespoons low sodium tamari',
+            '2 cups diced onion',
+            '12 ounces tempeh or 12 ounces extra firm tofu (press the tofu), crumbled or diced',
+            '½ teaspoon liquid smoke'
+          ],
+          instructions: [
+            'Make the chorizo sauce: In a medium bowl, combine the chili powder, cumin, turmeric, oregano, smoked paprika, pepper, vinegar, tamari, and 3 tablespoons of water.',
+            'In a large non-stick pan over medium high heat, cook the onions (add water to prevent sticking if necessary, no oil). Stir until they are translucent, about 3 minutes.',
+            'Add the crumbled tempeh or tofu and liquid smoke. Stir until well mixed and the tempeh or tofu becomes well browned.',
+            'Lower heat to medium low, and add chorizo sauce. Stir continuously until everything is well coated.',
+            'If the sauce is sticking to the pan too much, add 1 tablespoon of water at a time and decrease the heat to low.',
+            'The chorizo is ready when most of the sauce has cooked off and the tempeh or tofu is well coated and fragrant, about 5-8 minutes.'
+          ]
+        }
+      }
     }
   ];
   
