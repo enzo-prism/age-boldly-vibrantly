@@ -671,7 +671,7 @@ const Recipes = () => {
                 </CardHeader>
 
                 <CardContent>
-                  {recipe.components ? (
+                  {recipe.components && recipe.components.crust && recipe.components.filling && recipe.components.garnish ? (
                     <Tabs defaultValue="crust" className="w-full">
                       <TabsList className="grid w-full grid-cols-3">
                         <TabsTrigger value="crust">Crust</TabsTrigger>
@@ -734,7 +734,7 @@ const Recipes = () => {
                       <TabsContent value="garnish" className="mt-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold mb-3">Garnish & Assembly:</h4>
+                            <h4 className="font-semibold mb-3">Assembly Ingredients:</h4>
                             <ul className="list-disc list-inside space-y-1 text-sm">
                               {recipe.components.garnish.ingredients.map((ingredient, index) => (
                                 <li key={index}>{ingredient}</li>
@@ -742,7 +742,7 @@ const Recipes = () => {
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold mb-3">Final Assembly:</h4>
+                            <h4 className="font-semibold mb-3">Assembly Instructions:</h4>
                             <ol className="space-y-2 text-sm">
                               {recipe.components.garnish.instructions.map((step, index) => (
                                 <li key={index} className="flex">
@@ -756,13 +756,137 @@ const Recipes = () => {
                           </div>
                         </div>
                       </TabsContent>
+                      
+                      {recipe.storageInstructions && (
+                        <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                          <h4 className="font-semibold mb-2 text-blue-800">Storage Instructions:</h4>
+                          <p className="text-sm text-blue-700">{recipe.storageInstructions}</p>
+                        </div>
+                      )}
+                      
+                      {recipe.notes && (
+                        <div className="mt-6 p-4 bg-amber-50 rounded-lg">
+                          <h4 className="font-semibold mb-2 text-amber-800">Chef's Notes:</h4>
+                          <p className="text-sm text-amber-700">{recipe.notes}</p>
+                        </div>
+                      )}
                     </Tabs>
+                  ) : recipe.components && recipe.components.dressing ? (
+                    <div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <h4 className="font-semibold mb-3">Ingredients:</h4>
+                          <ul className="list-disc list-inside space-y-1 text-sm">
+                            {recipe.ingredients.map((ingredient, index) => (
+                              <li key={index}>{ingredient}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-3">Instructions:</h4>
+                          <ol className="space-y-2 text-sm">
+                            {recipe.instructions.map((step, index) => (
+                              <li key={index} className="flex">
+                                <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                  {index + 1}
+                                </span>
+                                <span className="leading-relaxed">{step}</span>
+                              </li>
+                            ))}
+                          </ol>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-6 p-4 bg-green-50 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-green-800">Jane's 3-2-1 Dressing:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <h5 className="font-medium mb-2 text-green-700">Ingredients:</h5>
+                            <ul className="list-disc list-inside space-y-1 text-sm text-green-600">
+                              {recipe.components.dressing.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="font-medium mb-2 text-green-700">Instructions:</h5>
+                            <ol className="space-y-1 text-sm text-green-600">
+                              {recipe.components.dressing.instructions.map((step, index) => (
+                                <li key={index}>{step}</li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {recipe.notes && (
+                        <div className="mt-6 p-4 bg-amber-50 rounded-lg">
+                          <h4 className="font-semibold mb-2 text-amber-800">Chef's Notes:</h4>
+                          <p className="text-sm text-amber-700">{recipe.notes}</p>
+                        </div>
+                      )}
+                    </div>
+                  ) : recipe.components && recipe.components.suzAdjustments ? (
+                    <div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <h4 className="font-semibold mb-3">Ingredients:</h4>
+                          <ul className="list-disc list-inside space-y-1 text-sm">
+                            {recipe.ingredients.map((ingredient, index) => (
+                              <li key={index}>{ingredient}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-3">Instructions:</h4>
+                          <ol className="space-y-2 text-sm">
+                            {recipe.instructions.map((step, index) => (
+                              <li key={index} className="flex">
+                                <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                  {index + 1}
+                                </span>
+                                <span className="leading-relaxed">{step}</span>
+                              </li>
+                            ))}
+                          </ol>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-6 p-4 bg-purple-50 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-purple-800">Suz's Polish Babcia Adjustments:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <h5 className="font-medium mb-2 text-purple-700">Additional Ingredients:</h5>
+                            <ul className="list-disc list-inside space-y-1 text-sm text-purple-600">
+                              {recipe.components.suzAdjustments.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="font-medium mb-2 text-purple-700">Suz's Modifications:</h5>
+                            <ol className="space-y-1 text-sm text-purple-600">
+                              {recipe.components.suzAdjustments.instructions.map((step, index) => (
+                                <li key={index}>{index + 1}. {step}</li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {recipe.notes && (
+                        <div className="mt-6 p-4 bg-amber-50 rounded-lg">
+                          <h4 className="font-semibold mb-2 text-amber-800">Chef's Notes:</h4>
+                          <p className="text-sm text-amber-700">{recipe.notes}</p>
+                        </div>
+                      )}
+                    </div>
                   ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold mb-3">Ingredients:</h4>
                         <ul className="list-disc list-inside space-y-1 text-sm">
-                          {recipe.ingredients?.map((ingredient, index) => (
+                          {recipe.ingredients.map((ingredient, index) => (
                             <li key={index}>{ingredient}</li>
                           ))}
                         </ul>
@@ -770,7 +894,7 @@ const Recipes = () => {
                       <div>
                         <h4 className="font-semibold mb-3">Instructions:</h4>
                         <ol className="space-y-2 text-sm">
-                          {recipe.instructions?.map((step, index) => (
+                          {recipe.instructions.map((step, index) => (
                             <li key={index} className="flex">
                               <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
                                 {index + 1}
@@ -783,20 +907,17 @@ const Recipes = () => {
                     </div>
                   )}
                   
-                  {(recipe.notes || recipe.storageInstructions) && (
-                    <div className="mt-6 pt-4 border-t">
-                      {recipe.notes && (
-                        <div className="mb-3">
-                          <h4 className="font-semibold text-sm mb-2">Chef's Notes:</h4>
-                          <p className="text-sm text-muted-foreground italic">{recipe.notes}</p>
-                        </div>
-                      )}
-                      {recipe.storageInstructions && (
-                        <div>
-                          <h4 className="font-semibold text-sm mb-2">Storage:</h4>
-                          <p className="text-sm text-muted-foreground">{recipe.storageInstructions}</p>
-                        </div>
-                      )}
+                  {!recipe.components && recipe.storageInstructions && (
+                    <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                      <h4 className="font-semibold mb-2 text-blue-800">Storage Instructions:</h4>
+                      <p className="text-sm text-blue-700">{recipe.storageInstructions}</p>
+                    </div>
+                  )}
+                  
+                  {!recipe.components && recipe.notes && (
+                    <div className="mt-6 p-4 bg-amber-50 rounded-lg">
+                      <h4 className="font-semibold mb-2 text-amber-800">Chef's Notes:</h4>
+                      <p className="text-sm text-amber-700">{recipe.notes}</p>
                     </div>
                   )}
                 </CardContent>
@@ -805,16 +926,15 @@ const Recipes = () => {
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-gray-500">No recipes match your search criteria.</p>
+            <p className="text-gray-500 mb-4">No recipes match your search criteria.</p>
             <Button 
-              variant="ghost" 
               onClick={() => {
                 setSearchQuery('');
                 setActiveFilter(null);
               }}
-              className="mt-4"
+              variant="outline"
             >
-              Clear filters
+              Clear Filters
             </Button>
           </div>
         )}
