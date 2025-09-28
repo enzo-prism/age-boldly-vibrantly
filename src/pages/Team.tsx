@@ -48,20 +48,6 @@ const Team = () => {
               </div>
             </div>
             
-            {/* Website Designer */}
-            <div className="text-center space-y-6">
-              <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-coral/20 to-coral/10 flex items-center justify-center">
-                <span className="text-4xl">💻</span>
-              </div>
-              <div>
-                <h2 className="text-3xl font-light mb-2 text-foreground">
-                  Enzo Sison
-                </h2>
-                <p className="text-muted-foreground font-light text-lg">
-                  Website Designer
-                </p>
-              </div>
-            </div>
             
           </div>
         </div>

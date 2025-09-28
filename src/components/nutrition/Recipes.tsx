@@ -775,7 +775,7 @@ const Recipes = () => {
     {
       id: 28,
       title: 'Jalapeño and Corn Muffins',
-      author: 'Enzo - Prevent and Reverse Heart Disease Cookbook',
+      author: 'Prevent and Reverse Heart Disease Cookbook',
       description: 'Savory muffins packed with vegetables, jalapeños, and corn - perfect for breakfast or as a side dish.',
       servings: '12 muffins',
       category: 'baked',
@@ -1022,12 +1022,12 @@ const Recipes = () => {
     {
       id: 34,
       title: "Intro to a Buddha Bowl (Rebel Remix)",
-      author: "Enzo",
+      author: "Rebellious Aging",
       description: "At Rebellious Aging we do not, do bland. A Buddha Bowl is anything but. It's a bold, beautiful burst of color and confidence in a bowl. Created by you in your way for your own enjoyment. Picture vibrant veggies strutting their stuff, grains with grit, plant based powerhouses like chickpeas or tofu showing up strong and a sauce that you love. It is not just food—it is fuel for rebels who nourish with flair, eat with intention, and simply never settle for ordinary.",
       prepTime: "15 minutes",
       servings: "1",
       difficulty: "Beginner",
-      source: "Enzo 6/12/2025",
+      source: "Rebellious Aging 6/12/2025",
       category: "mains",
       tags: ['Lunch', 'Dinner', 'Oil-Free', 'Raw', 'Quick', 'High-Protein', 'Gluten-Free'],
       ingredients: [

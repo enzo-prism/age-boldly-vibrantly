@@ -564,7 +564,7 @@ const BlogPost = () => {
 
               <div className="space-y-6">
                 <p>
-                  Yesterday when Enzo and I were recording a video about the three pillars of Rebellious Aging, I blurted out, I must include a fourth pillar, gratitude. Enzo agreed and so of course a blog about gratitude must follow my outburst.
+                  Yesterday when I was recording a video about the three pillars of Rebellious Aging, I blurted out, I must include a fourth pillar, gratitude. Of course a blog about gratitude must follow my outburst.
                 </p>
 
                 <p>
