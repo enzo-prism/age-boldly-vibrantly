@@ -2813,6 +2813,611 @@ const BlogPost = () => {
     );
   }
 
+  // Blog 21: Ultra-Processed Trap
+  if (postId === 'ultra-processed-trap-eat-whole-live-whole') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/blog" className="inline-flex items-center text-teal hover:text-teal-dark mb-8 transition-colors">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Blog
+          </Link>
+          
+          <article className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-teal to-teal-dark text-white p-8">
+              <div className="flex items-center mb-4">
+                <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Blog 21
+                </span>
+              </div>
+              <h1 className="text-4xl font-bold mb-4">The Ultra-Processed Trap: Eat Whole, Live Whole</h1>
+              <p className="text-xl opacity-90">
+                Discover why choosing whole foods over factory formulations is your path to vibrant health
+              </p>
+            </div>
+            
+            <div className="p-8 space-y-8">
+              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-red-800 mb-2">Shocking Statistics</h3>
+                <p className="text-red-700">
+                  Did you know that more than HALF of the average American diet comes from ultra-processed food (UPF)? 
+                  <strong> 70-73% of the U.S. food supply is classified as ultra-processed.</strong>
+                </p>
+              </div>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">What Are Ultra-Processed Foods?</h2>
+                <p className="text-gray-600 mb-4">
+                  Here is a solid, evidence-based definition of Ultra-Processed Food from NOVA, a food classification system often used in nutrition. Ultra-processed foods (UPFs) are industrial formulations made mostly or entirely from substances extracted from foods (oils, fats, sugar, starch proteins) or derived from food constituents (hydrogenated fats, modified starch) or synthesized in laboratories (flavor enhancers, colorings, emulsifiers, preservatives).
+                </p>
+                <p className="text-gray-600 mb-4">
+                  They contain little or NO intact whole food and are designed to be convenient, hyperpalatable (addictive) and profitable. As you can see, UPFs are not really food—they are chemical formulas created in factories, stuffed with additives, engineered for shelf life and "bliss point" flavor.
+                </p>
+                
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-4">
+                  <h4 className="font-semibold text-orange-800 mb-2">Examples of Ultra-Processed Foods:</h4>
+                  <p className="text-orange-700">
+                    Packaged snacks, sodas, instant noodles, frozen dinners, candy bars, flavored yogurts, processed meats, coffee creamers, alcohol mixers, and many ice cream treats.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">The Numbers Don't Lie</h2>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start">
+                    <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
+                    UPFs make up nearly half of all grocery food purchases and over ⅓ of beverage purchases
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
+                    Around 58% of staples in U.S. leading supermarkets are ultra-processed
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
+                    Ultra-processed foods equal 55% of U.S. diets. For kids? 62%
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
+                    UPFs now make up 54% of calories consumed at home
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Why Processed Foods Pack on the Pounds</h2>
+                <p className="text-gray-600 mb-4">
+                  You've heard it before: "Calories are calories." Except they're not. A groundbreaking NIH trial (2019) gave participants diets matched for calories, sugar, fat, and fiber. When eating ultra-processed foods, participants ate 500 more calories per day and gained weight. On unprocessed diets, they lost weight without even trying.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Because processed foods are engineered to be hyper-palatable and easy to overeat, they bypass satiety signals, leaving you hungry for more. Whole foods, due to fiber content, take longer to chew, digest more slowly, and leave you satisfied.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">What Your Body Actually Craves</h2>
+                <p className="text-gray-600 mb-4">
+                  Your body is NOT craving additives or flavor enhancers. It's asking for:
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-800 mb-2">Plant Proteins</h4>
+                    <p className="text-green-700">Beans, lentils, and soy for muscle building and repair</p>
+                  </div>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-blue-800 mb-2">Omega-3 Fatty Acids</h4>
+                    <p className="text-blue-700">Flax, chia, and walnuts to quiet inflammation</p>
+                  </div>
+                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-800 mb-2">Antioxidants</h4>
+                    <p className="text-purple-700">Colorful fruits and veggies to fight oxidative stress</p>
+                  </div>
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-yellow-800 mb-2">Fiber</h4>
+                    <p className="text-yellow-700">Essential for gut health and microbiome balance</p>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Reclaiming Energy and Healthspan</h2>
+                <p className="text-gray-600 mb-4">
+                  Ultra-processed foods often come fortified, but that's like "taping the roof back on after a storm." Whole foods provide the full package your body needs, wants, recognizes, and knows how to use.
+                </p>
+                <p className="text-gray-600">
+                  When you choose plants over processed, you're not just avoiding harm—you're actively choosing vitality, energy, and long-term health. Your body will thank you with clearer thinking, better sleep, and the kind of energy that makes you feel truly alive.
+                </p>
+              </section>
+
+              <ConnectCTA />
+
+              <div className="bg-gray-100 p-6 rounded-lg text-center">
+                <p className="text-lg font-medium text-gray-700">
+                  Eat Whole, Live Whole,<br />
+                  Suz
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
+
+  // Blog 22: If Not Now, When?
+  if (postId === 'if-not-now-when-new-beginnings') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/blog" className="inline-flex items-center text-teal hover:text-teal-dark mb-8 transition-colors">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Blog
+          </Link>
+          
+          <article className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-teal to-teal-dark text-white p-8">
+              <div className="flex items-center mb-4">
+                <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Blog 22
+                </span>
+              </div>
+              <h1 className="text-4xl font-bold mb-4">If Not Now, When? New Beginnings are up to YOU</h1>
+              <p className="text-xl opacity-90">
+                Rebellious Aging is about refusing to settle for bland and daring to choose NOW
+              </p>
+            </div>
+            
+            <div className="p-8 space-y-8">
+              <section>
+                <p className="text-lg text-gray-600 mb-6 italic">
+                  "Have you ever scrolled through your feed, half distracted, when a phrase suddenly leaps out and grabs you by the collar? That's what happened to me the other day with these four words: 'If not now, when?'"
+                </p>
+                <p className="text-gray-600 mb-4">
+                  It stopped me cold.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  And then I wondered, how many women are quietly living on autopilot? Autopilot looks safe. Basically you stick with the same foods, the same routines, the same "it is what it is" attitude. You don't rock the boat, you choose not to ruffle the feathers. You accept aches, sluggish mornings, creeping doubts, and an uninspired wardrobe as the way things are.
+                </p>
+              </section>
+
+              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-red-800 mb-2">The Hard Truth</h3>
+                <p className="text-red-700">
+                  Autopilot might keep you coasting, comfortable, and even safe, BUT it also keeps you stuck.
+                </p>
+              </div>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">What is Rebellious Aging?</h2>
+                <p className="text-gray-600 mb-4">
+                  In my mind, Rebellious Aging is about refusing to settle for bland, or the "too late for me" story. It's about daring to choose NOW, ME, and an exciting future. (Remember, refuse to let the old lady in).
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Every plant-powered meal is a choice for vibrancy tomorrow. Setting boundaries and speaking up builds the muscle of self-belief, and choosing color, sparkle and play in how you present yourself shifts your energy and how people see you.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  This is not about chasing youth. It's about claiming the fullness of life that is still in front of you today.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Breaking the "Too Late" Lie</h2>
+                <p className="text-gray-600 mb-4">
+                  One of the greatest lies we tell ourselves is "it's too late." You know, too late to change our health, too late to reinvent our style, too late to say NO or YES. But here's the TRUTH: You only ever have one moment to work with. And that moment is NOW.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  I challenge you to seize this moment, with eyes wide open and begin to make your dreams a reality. One small change at a time.
+                </p>
+              </section>
+
+              <div className="bg-teal-50 border border-teal-200 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-teal-800 mb-4">What Would Shift If You Stopped Waiting?</h3>
+                <p className="text-teal-700 mb-3">
+                  What's one thing you've been putting off because you think it's too late? What tiny step can you take today to improve your health, confidence, style, or any dream you're dreaming?
+                </p>
+                <p className="text-teal-700 text-sm">
+                  (Please email me and let's discuss the possibilities: suz@rebelwithsuz.com)
+                </p>
+              </div>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Motivation Through the Rebellious Aging Lens</h2>
+                <p className="text-gray-600 mb-4">
+                  Motivation is not waiting for the perfect moment—it's created in the moment. By choosing a "spark" today, you create more fuel for tomorrow.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-blue-800 mb-2">Intrinsic Motivation</h4>
+                    <p className="text-blue-700">
+                      Doing something because it feels good, meaningful, or aligns with who you are. For example, choosing plants because they give you energy to sparkle.
+                    </p>
+                  </div>
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-orange-800 mb-2">Extrinsic Motivation</h4>
+                    <p className="text-orange-700">
+                      Doing something for an outside reward or to avoid pain. For example, eating well because your doctor said you should.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-gray-600 mb-4">
+                  Rebellious Aging leans into intrinsic motivation. Finding joy, self-expression, and personal rebellion in health, confidence, and style. This is what lasts.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Resources to Help You Begin</h2>
+                <div className="space-y-4">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-800 mb-2">BJ Fogg's Behavior Model (Stanford)</h4>
+                    <p className="text-green-700 mb-2">Motivation + ability + a trigger = action</p>
+                    <p className="text-green-600 text-sm">behaviormodel.org</p>
+                  </div>
+                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-800 mb-2">James Clear, Atomic Habits</h4>
+                    <p className="text-purple-700 mb-2">Motivation follows action. Even tiny rebellious steps.</p>
+                    <p className="text-purple-600 text-sm">jamesclear.com</p>
+                  </div>
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-yellow-800 mb-2">Self-Determination Theory</h4>
+                    <p className="text-yellow-700 mb-2">True motivation flourishes when we feel autonomy (choice), competence (capability), and connection (community)</p>
+                    <p className="text-yellow-600 text-sm">selfdeterminationtheory.org</p>
+                  </div>
+                </div>
+              </section>
+
+              <div className="bg-gradient-to-r from-teal to-teal-dark text-white p-6 rounded-lg text-center">
+                <h3 className="text-2xl font-bold mb-4">NOW IS YOUR MOMENT</h3>
+                <p className="text-lg mb-2">
+                  Rebels don't wait for the perfect moment—they create it.
+                </p>
+                <p className="text-lg">
+                  They choose plants over autopilot, boldness over complacency, sparkle over safe.
+                </p>
+              </div>
+
+              <ConnectCTA />
+
+              <div className="bg-gray-100 p-6 rounded-lg text-center">
+                <p className="text-lg font-medium text-gray-700">
+                  With Love, Laughter and Leafy Greens,<br />
+                  Suz
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
+
+  // Blog 23: Optimal Aging
+  if (postId === 'optimal-aging-colleen-murphy') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/blog" className="inline-flex items-center text-teal hover:text-teal-dark mb-8 transition-colors">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Blog
+          </Link>
+          
+          <article className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-teal to-teal-dark text-white p-8">
+              <div className="flex items-center mb-4">
+                <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Blog 23
+                </span>
+              </div>
+              <h1 className="text-4xl font-bold mb-4">Optimal Aging: As Seen Through the Lens of Princeton Professor Colleen Murphy</h1>
+              <p className="text-xl opacity-90">
+                A conversation that distilled the science of aging into practical, myth-busting tips
+              </p>
+            </div>
+            
+            <div className="p-8 space-y-8">
+              <section>
+                <p className="text-gray-600 mb-4">
+                  If you've been following me for a while you know I refuse to age quietly. For me aging is intentional, aging is active, and if you let it, downright sparkly. Recently I stumbled on a conversation between journalist Paul Von Zielbauer and Colleen Murphy, author of "How We Age." Their exchange distilled the science of aging into practical, surprising and sometimes myth-busting tips.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  To me it felt like a roadmap for rebels who refuse to coast into their later years on autopilot.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Exercise is NOT Optional</h2>
+                <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-4">
+                  <p className="text-red-700 font-semibold">
+                    It's the #1 longevity tool we have.
+                  </p>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Colleen Murphy emphasizes strength training. You know, push, pull, squat, lift. Muscles don't just move us, they release chemicals that fuel brain health, support mitochondria, and help us stay sharp.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Think of every lunge and curl as a deposit in your future vitality bank.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Sleep: Your Overnight Cleaning Crew</h2>
+                <p className="text-gray-600 mb-4">
+                  Sleep deprivation doesn't just make us cranky—it DAMAGES THE BRAIN. During deep sleep, your brain literally takes out the trash, flushing toxins that build up during the day.
+                </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-blue-800 mb-2">Sleep Requirements</h4>
+                  <p className="text-blue-700">
+                    Most of us need 7-8 hours of sleep (sorry, four-hour sleepers, you're rare unicorns). Think of sleep as your overnight spa treatment for both body and brain.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Food Myths Debunked</h2>
+                
+                <div className="space-y-4 mb-6">
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-yellow-800 mb-2">Caloric Restriction (CR)</h4>
+                    <p className="text-yellow-700">
+                      In lab animals, eating less extends lifespan. But in humans? Murphy calls it "a terrible way to live."
+                    </p>
+                  </div>
+                  
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-orange-800 mb-2">Intermittent Fasting (IF)</h4>
+                    <p className="text-orange-700">
+                      Trendy, yes. Effective? The jury is out. While some see benefits, others risk muscle loss. Monitoring what you eat, choosing whole, fiber-rich foods, may work just as well without side effects.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-teal-50 border border-teal-200 rounded-lg p-4 mb-4">
+                  <p className="text-teal-700 font-medium">
+                    How about this: Replace the word "Eat" with the word "NOURISH" and see how your perspective changes.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Brain Health Reality Check</h2>
+                <p className="text-gray-600 mb-4">
+                  We all want to stay sharp, but Murphy points out that brain games often only make you better at brain games. Doing crosswords helps with crosswords, not necessarily memory.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Instead, movement, quality sleep, and social connection are more powerful protectors against cognitive decline. So don't just exercise your brain—it's much better to exercise your whole body.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">What's on the Horizon</h2>
+                <p className="text-gray-600 mb-4">
+                  The science of aging is buzzing with potential new tools:
+                </p>
+                <ul className="space-y-3 text-gray-600 mb-6">
+                  <li className="flex items-start">
+                    <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
+                    GLP-1 drugs, like Ozempic, used for diabetes and weight loss, may carry aging benefits also
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
+                    Metformin—the TAME trial is studying this common diabetes drug for its anti-aging potential
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
+                    Rapamycin may mimic the effects of caloric restriction without the misery
+                  </li>
+                </ul>
+                
+                <p className="text-gray-600">
+                  Instead of chasing pills and potions, we can lean on what Dr. Esselstyn calls the body's "remarkable healing capacity" when fueled by plants. Dr. T. Colin Campbell's research confirms it: whole, plant-based foods are our foundation.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Rebel's Guide to Starting Today</h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-800 mb-2">1. Add Movement</h4>
+                    <p className="text-green-700">Add one strength workout per week</p>
+                  </div>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-blue-800 mb-2">2. Protect Sleep</h4>
+                    <p className="text-blue-700">Treat it like a non-negotiable meeting</p>
+                  </div>
+                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-800 mb-2">3. Choose Whole Foods</h4>
+                    <p className="text-purple-700">Eat foods that come from nature, not a factory</p>
+                  </div>
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-yellow-800 mb-2">4. Stay Connected</h4>
+                    <p className="text-yellow-700">Stay curious, social, grateful, and joyful</p>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Resources</h2>
+                <div className="space-y-2 text-gray-600">
+                  <p>• Full article: agingwithstrength@substack.com</p>
+                  <p>• Dr. Esselstyn: dresselstyn.com</p>
+                  <p>• T. Colin Campbell: nutritionstudies.org</p>
+                  <p>• PCRM: pcrm.org</p>
+                </div>
+              </section>
+
+              <div className="bg-gradient-to-r from-teal to-teal-dark text-white p-6 rounded-lg text-center">
+                <p className="text-lg mb-4">
+                  Colleen Murphy's research confirms what many of us rebels already sense: aging well is not about magic pills or endless deprivation. It's about AWARENESS, INTENTIONAL daily choices, movement, rest, nourishment, joy and gratefulness.
+                </p>
+                <p className="text-xl font-bold">
+                  So let's not just age in place. Let's Rebel, Reign and Sparkle.
+                </p>
+              </div>
+
+              <ConnectCTA />
+
+              <div className="bg-gray-100 p-6 rounded-lg text-center">
+                <p className="text-lg font-medium text-gray-700">
+                  Age Boldly, Live Loudly,<br />
+                  Suz
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
+
+  // Blog 24: Calorie Density
+  if (postId === 'calorie-density-secret-seals-deal') {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/blog" className="inline-flex items-center text-teal hover:text-teal-dark mb-8 transition-colors">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Blog
+          </Link>
+          
+          <article className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-teal to-teal-dark text-white p-8">
+              <div className="flex items-center mb-4">
+                <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Blog 24
+                </span>
+              </div>
+              <h1 className="text-4xl font-bold mb-4">Calorie Density: The Secret That Seals the Deal</h1>
+              <p className="text-xl opacity-90">
+                When you choose the right foods, your body naturally regulates weight without the struggle
+              </p>
+            </div>
+            
+            <div className="p-8 space-y-8">
+              <section>
+                <p className="text-gray-600 mb-4">
+                  Have you ever felt like managing your weight is a constant uphill climb? Counting calories, measuring portions, avoiding carbs, dodging fats, eliminating sugar. It can be exhausting.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  The truth is, when you choose the right foods, your body naturally regulates your weight. Good news, right? No more obsessing. No more deprivation.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">What is Calorie Density?</h2>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-4">
+                  <p className="text-blue-700 font-semibold">
+                    Calorie density is simply the number of calories in a given weight of food, usually measured per pound.
+                  </p>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Foods with a lower calorie density provide fewer calories for the same volume. This means you can eat until you're satisfied without overeating. Here lies the beauty of eating plants.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Calorie Density by Food Category</h2>
+                <div className="grid md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-800 mb-2">Vegetables</h4>
+                    <p className="text-green-700 text-2xl font-bold">~100 calories/lb</p>
+                  </div>
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-yellow-800 mb-2">Fruits</h4>
+                    <p className="text-yellow-700 text-2xl font-bold">~300 calories/lb</p>
+                  </div>
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-orange-800 mb-2">Whole Grains & Legumes</h4>
+                    <p className="text-orange-700 text-2xl font-bold">400-600 calories/lb</p>
+                  </div>
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-red-800 mb-2">Animal Products & Processed Foods</h4>
+                    <p className="text-red-700 text-2xl font-bold">1,200-4,000 calories/lb</p>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <p className="text-gray-700 font-medium">
+                    The higher the calorie density, the easier it is to take in excess calories long before your body signals fullness.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">The Plant Advantage</h2>
+                <p className="text-gray-600 mb-4">
+                  Whole, plant-based foods are naturally low in calorie density. Fill your plate with vegetables and fruits, whole grains, beans, nuts and seeds, and you'll feel full before you can overeat.
+                </p>
+                
+                <div className="bg-teal-50 border border-teal-200 rounded-lg p-6 mb-4">
+                  <h4 className="font-semibold text-teal-800 mb-2">Dr. Caldwell Esselstyn's Wisdom</h4>
+                  <p className="text-teal-700">
+                    "You can eat all the vegetables, legumes, whole grains and fruits you want until you are comfortably full. There is no calorie counting, no portion control, no hunger."
+                  </p>
+                </div>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-purple-800 mb-2">Dr. T. Colin Campbell's Research</h4>
+                  <p className="text-purple-700">
+                    Author of "The China Study" showed through decades of research that populations eating mostly plants had lower rates of obesity and chronic disease. Why? Because their food patterns were low in calorie density and high in nutrition.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Plants' Secret Weapons</h2>
+                <p className="text-gray-600 mb-4">
+                  Plants include 2 secret weapons missing from meat and processed foods: fiber and water.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-800 mb-2">Fiber</h4>
+                    <p className="text-green-700">
+                      Slows digestion, stabilizes blood sugar, and sends you the "I am full" signal
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-blue-800 mb-2">Water</h4>
+                    <p className="text-blue-700">
+                      Adds bulk without calories, which also aids in digestion
+                    </p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 mt-4">
+                  Together, water and fiber act like nature's built-in portion control.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Freedom, Not Restriction</h2>
+                <p className="text-gray-600 mb-4">
+                  The power of calorie density is definitely not about restriction—it's about freedom. Imagine enjoying big, colorful plates of food, feeling full, and watching your weight settle naturally. That's the JOY of a WFPB lifestyle.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  You don't have to eat less. You just have to eat differently. PLANTS FOR THE WIN.
+                </p>
+                <p className="text-gray-600">
+                  Your body will thank you for making the switch, with energy, vitality, and balance that fad diets could never deliver or sustain. Your body finds balance, and you get to enjoy food with freedom.
+                </p>
+              </section>
+
+              <ConnectCTA />
+
+              <div className="bg-gray-100 p-6 rounded-lg text-center">
+                <p className="text-lg font-medium text-gray-700">
+                  With Love, Laughter and Leafy Greens,<br />
+                  Suz
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
+
   // Post not found
   return (
     <div className="min-h-screen bg-gray-50 py-12">
