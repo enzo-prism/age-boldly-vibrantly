@@ -878,35 +878,44 @@ const Recipes = () => {
       tags: ['dessert', 'frozen', 'chocolate', 'peanut-butter', 'no-bake'],
       prepTime: '15 mins',
       difficulty: 'Medium',
-      ingredients: [
-        '**Crumbles:**',
-        '1½ cups dates',
-        '1 tsp vanilla',
-        '1 cup almond meal or raw almonds', 
-        '½ cup peanut butter',
-        '',
-        '**Nice Cream:**',
-        '4 frozen bananas',
-        '1 tsp vanilla',
-        '4 tbsp cocoa powder (or less to taste)',
-        '1 cup unsweetened almond milk or plant milk of choice'
-      ],
-      instructions: [
-        '**Make the Crumbles:**',
-        'Mix all crumble ingredients together in a food processor or blender until combined.',
-        '',
-        '**Make the Nice Cream:**', 
-        'Blend all nice cream ingredients together in a blender until smooth.',
-        '',
-        '**Assemble:**',
-        'Scoop a layer of nice cream into the bottom of a cup or glass.',
-        'Sprinkle chunks of crumbles over the nice cream.',
-        'Add another layer of nice cream.',
-        'Top with more crumbles and enjoy immediately.',
-        '',
-        '**Storage:**',
-        'Keep extra crumbles in the fridge to use for your next blizzard.'
-      ]
+      ingredients: [],
+      storageInstructions: 'Keep extra crumbles in the fridge to use for your next blizzard.',
+      components: {
+        crumbles: {
+          title: 'Crumbles',
+          ingredients: [
+            '1½ cups dates',
+            '1 tsp vanilla',
+            '1 cup almond meal or raw almonds', 
+            '½ cup peanut butter'
+          ],
+          instructions: [
+            'Mix all crumble ingredients together in a food processor or blender until combined.'
+          ]
+        },
+        niceCream: {
+          title: 'Nice Cream',
+          ingredients: [
+            '4 frozen bananas',
+            '1 tsp vanilla',
+            '4 tbsp cocoa powder (or less to taste)',
+            '1 cup unsweetened almond milk or plant milk of choice'
+          ],
+          instructions: [
+            'Blend all nice cream ingredients together in a blender until smooth.'
+          ]
+        },
+        assembly: {
+          title: 'Assembly',
+          ingredients: [],
+          instructions: [
+            'Scoop a layer of nice cream into the bottom of a cup or glass.',
+            'Sprinkle chunks of crumbles over the nice cream.',
+            'Add another layer of nice cream.',
+            'Top with more crumbles and enjoy immediately.'
+          ]
+        }
+      }
     }
   ];
   
@@ -1128,6 +1137,110 @@ const Recipes = () => {
                             <h4 className="font-semibold mb-3">Assembly Instructions:</h4>
                             <ol className="space-y-2 text-sm">
                               {recipe.components.garnish.instructions?.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      
+                      {recipe.storageInstructions && (
+                        <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                          <h4 className="font-semibold mb-2 text-blue-800">Storage Instructions:</h4>
+                          <p className="text-sm text-blue-700">{recipe.storageInstructions}</p>
+                        </div>
+                      )}
+                      
+                      {recipe.notes && (
+                        <div className="mt-6 p-4 bg-amber-50 rounded-lg">
+                          <h4 className="font-semibold mb-2 text-amber-800">Chef's Notes:</h4>
+                          <p className="text-sm text-amber-700">{recipe.notes}</p>
+                        </div>
+                      )}
+                     </Tabs>
+                  ) : recipe.components && recipe.components.crumbles && recipe.components.niceCream && recipe.components.assembly ? (
+                    <Tabs defaultValue="crumbles" className="w-full">
+                      <TabsList className="grid w-full grid-cols-3">
+                        <TabsTrigger value="crumbles">Crumbles</TabsTrigger>
+                        <TabsTrigger value="niceCream">Nice Cream</TabsTrigger>
+                        <TabsTrigger value="assembly">Assembly</TabsTrigger>
+                      </TabsList>
+                      
+                      <TabsContent value="crumbles" className="mt-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Crumbles Ingredients:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.crumbles.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Crumbles Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.crumbles.instructions?.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      
+                      <TabsContent value="niceCream" className="mt-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Nice Cream Ingredients:</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              {recipe.components.niceCream.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Nice Cream Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.niceCream.instructions?.map((step, index) => (
+                                <li key={index} className="flex">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
+                                    {index + 1}
+                                  </span>
+                                  <span className="leading-relaxed">{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      
+                      <TabsContent value="assembly" className="mt-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold mb-3">Assembly Ingredients:</h4>
+                            {recipe.components.assembly.ingredients.length > 0 ? (
+                              <ul className="list-disc list-inside space-y-1 text-sm">
+                                {recipe.components.assembly.ingredients.map((ingredient, index) => (
+                                  <li key={index}>{ingredient}</li>
+                                ))}
+                              </ul>
+                            ) : (
+                              <p className="text-sm text-muted-foreground">No additional ingredients needed for assembly.</p>
+                            )}
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-3">Assembly Instructions:</h4>
+                            <ol className="space-y-2 text-sm">
+                              {recipe.components.assembly.instructions?.map((step, index) => (
                                 <li key={index} className="flex">
                                   <span className="flex-shrink-0 w-6 h-6 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium mr-3 mt-0.5">
                                     {index + 1}
