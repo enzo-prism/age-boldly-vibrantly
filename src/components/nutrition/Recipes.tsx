@@ -10,11 +10,23 @@ import { Clock, ChefHat, Snowflake, Users } from 'lucide-react';
 const Recipes = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState('all');
   
   const recipeTags = [
     'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert', 
     'Budget-Friendly', 'No-Bake', 'Make-Ahead', 'Special Occasion', 
     'Raw', 'Oil-Free', 'Quick', 'High-Protein', 'Gluten-Free'
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Recipes', icon: '🍽️' },
+    { id: 'dressings', name: 'Salad Dressings', icon: '🥗' },
+    { id: 'appetizers', name: 'Appetizers/Snacks', icon: '🥜' },
+    { id: 'salads', name: 'Salads', icon: '🥬' },
+    { id: 'soups', name: 'Soups', icon: '🍲' },
+    { id: 'mains', name: 'Main Dishes', icon: '🍽️' },
+    { id: 'baked', name: 'Muffins/Breads', icon: '🧁' },
+    { id: 'desserts', name: 'Desserts', icon: '🍰' }
   ];
   
   const recipes = [
@@ -24,6 +36,7 @@ const Recipes = () => {
       description: 'A refreshing and nutritious salad combining cannellini beans with tropical fruits and fresh mint.',
       servings: '4',
       source: 'Plant-Based Women Warriors Cookbook P. 157',
+      category: 'salads',
       tags: ['Lunch', 'Oil-Free', 'Quick'],
       prepTime: '15 minutes',
       difficulty: 'Beginner',
@@ -50,6 +63,7 @@ const Recipes = () => {
       servings: '2+',
       source: 'By Dr. Joel Fuhrman',
       author: 'Dr. Joel Fuhrman',
+      category: 'salads',
       tags: ['Lunch', 'Oil-Free', 'High-Protein'],
       prepTime: '10 minutes',
       difficulty: 'Beginner',
@@ -77,6 +91,7 @@ const Recipes = () => {
       description: 'A hearty, company-worthy soup that\'s absolutely delicious and nutritious.',
       servings: '6',
       source: 'Plant-Based Woman Warrior Cookbook P. 143',
+      category: 'soups',
       tags: ['Dinner', 'Budget-Friendly', 'High-Protein'],
       prepTime: '15 minutes',
       totalTime: '45 minutes',
@@ -113,6 +128,7 @@ const Recipes = () => {
       description: 'Heart-healthy muffins from "Prevent and Reverse Heart Disease" - perfect for breakfast or snacks.',
       servings: '8-10 muffins',
       source: '"Prevent and Reverse Heart Disease" P. 133',
+      category: 'baked',
       tags: ['Breakfast', 'Dessert', 'Oil-Free'],
       prepTime: '10 minutes',
       totalTime: '35 minutes',
@@ -146,6 +162,7 @@ const Recipes = () => {
       servings: 'Several servings',
       source: 'Jane and Anne Esselstyn',
       author: 'Jane and Anne Esselstyn',
+      category: 'dressings',
       tags: ['Quick', 'Oil-Free'],
       prepTime: '2 minutes',
       difficulty: 'Beginner',
@@ -170,6 +187,7 @@ const Recipes = () => {
       freezeTime: '4+ hours',
       totalTime: '4+ hours 30 minutes',
       difficulty: 'Intermediate',
+      category: 'desserts',
       tags: ['Dessert', 'No-Bake', 'Make-Ahead', 'Special Occasion', 'Raw', 'Oil-Free', 'Gluten-Free'],
       storageInstructions: 'Keeps well in the freezer. Can be made several days before an event.',
       notes: 'This is my "go to" recipe when I entertain. It always turns out great and is deelish, elegant, dense and rich. I have served 12 and still had leftovers.',
@@ -230,6 +248,7 @@ const Recipes = () => {
       author: 'Rip Esselstyn',
       servings: '1½ cups',
       source: 'plantstrong.com',
+      category: 'soups',
       tags: ['Dinner', 'Quick', 'Oil-Free'],
       prepTime: '10 minutes',
       difficulty: 'Beginner',
@@ -254,6 +273,7 @@ const Recipes = () => {
       author: 'Mary McDougall',
       servings: '6-8',
       source: 'mcdougall.com',
+      category: 'soups',
       tags: ['Dinner', 'Budget-Friendly', 'Oil-Free'],
       prepTime: '10 minutes',
       totalTime: '45 minutes',
@@ -288,6 +308,7 @@ const Recipes = () => {
       author: 'Ann and Jane Esselstyn',
       servings: '1¼ cups',
       source: 'Ann and Jane Esselstyn',
+      category: 'appetizers',
       tags: ['Snack', 'Quick', 'Oil-Free', 'High-Protein'],
       prepTime: '5 minutes',
       difficulty: 'Beginner',
@@ -313,6 +334,7 @@ const Recipes = () => {
       author: 'Forks Over Knives',
       servings: '4 burgers',
       source: 'Forks Over Knives',
+      category: 'mains',
       tags: ['Lunch', 'Dinner', 'High-Protein', 'Quick'],
       prepTime: '15 minutes',
       totalTime: '35 minutes',
@@ -345,6 +367,7 @@ const Recipes = () => {
       description: 'A delicious and nutritious dip with spinach, avocado, and seasonings - perfect with fresh veggies or chips.',
       servings: '4-6',
       source: 'Unknown (but it is deeelish! - Suz)',
+      category: 'appetizers',
       tags: ['Snack', 'Quick', 'Oil-Free', 'Raw'],
       prepTime: '5 minutes',
       difficulty: 'Beginner',
@@ -374,6 +397,7 @@ const Recipes = () => {
       author: 'Ann Esselstyn',
       servings: '4-6',
       source: 'Ann Esselstyn',
+      category: 'salads',
       tags: ['Lunch', 'Oil-Free', 'High-Protein', 'Raw'],
       prepTime: '15 minutes',
       difficulty: 'Beginner',
@@ -412,6 +436,7 @@ const Recipes = () => {
       author: 'plantyou.com',
       servings: '6',
       source: 'plantyou.com',
+      category: 'soups',
       tags: ['Dinner', 'Budget-Friendly', 'Oil-Free', 'High-Protein'],
       prepTime: '15 minutes',
       totalTime: '40 minutes',
@@ -444,6 +469,7 @@ const Recipes = () => {
       author: 'Rip Esselstyn',
       servings: '6-8',
       source: 'plantstrong.com',
+      category: 'soups',
       tags: ['Dinner', 'High-Protein', 'Oil-Free'],
       prepTime: '15 minutes',
       totalTime: '30 minutes',
@@ -477,6 +503,7 @@ const Recipes = () => {
       author: 'Heather McDougall (with Suz\'s modifications)',
       servings: '8-10 cups',
       source: 'forksoverknives.com/recipes/ and drmcdougall.com',
+      category: 'soups',
       tags: ['Dinner', 'Budget-Friendly', 'Oil-Free'],
       prepTime: '20 minutes',
       totalTime: '60 minutes',
@@ -526,6 +553,7 @@ const Recipes = () => {
       author: 'Diana Shultz (Minimalist Baker\'s Everyday Cooking)',
       servings: '4 sandwiches',
       source: 'Forks Over Knives/Minimalist Baker\'s Everyday Cooking',
+      category: 'mains',
       tags: ['Lunch', 'High-Protein', 'Quick', 'Oil-Free'],
       prepTime: '15 minutes',
       difficulty: 'Beginner',
@@ -563,6 +591,7 @@ const Recipes = () => {
       servings: 4,
       prepTime: "30 minutes",
       difficulty: "Beginner",
+      category: 'mains',
       tags: ["Dinner", "Mexican", "Bowl", "Protein-Rich"],
       ingredients: [
         "1½ cups Mexican Rice",
@@ -605,6 +634,7 @@ const Recipes = () => {
       servings: 8,
       prepTime: "30 minutes (plus 4-6 hours soaking)",
       difficulty: "Intermediate",
+      category: 'desserts',
       tags: ["Dessert", "Raw", "No-Bake", "Vegan", "Elegant"],
       ingredients: [],
       components: {
@@ -651,6 +681,7 @@ const Recipes = () => {
       servings: 6,
       prepTime: "20 minutes",
       difficulty: "Beginner",
+      category: 'salads',
       tags: ["Salad", "Fresh", "Mexican", "Quick"],
       ingredients: [
         "2 15 oz cans black beans, rinsed and drained",
@@ -691,6 +722,7 @@ const Recipes = () => {
       servings: 4,
       prepTime: "15 minutes",
       difficulty: "Beginner",
+      category: 'salads',
       tags: ["Salad", "Fresh", "Italian", "Quick", "Elegant"],
       ingredients: [
         "3 large heirloom tomatoes",
@@ -717,6 +749,7 @@ const Recipes = () => {
       servings: "Makes about 4 cups",
       prepTime: "20 min prep, 60 min cook",
       difficulty: "Beginner",
+      category: 'mains',
       tags: ["Sauce", "Italian", "Base Recipe", "Make-Ahead"],
       ingredients: [
         "2 Tbsp water",
@@ -737,59 +770,116 @@ const Recipes = () => {
         "Bring to a boil, reduce heat and simmer for about 1 hour, stirring occasionally. DO NOT COVER.",
         "Serve over your choice of pasta."
       ],
-      suzNotes: "This is simple, healthy and really tasty. This may be made ahead and reheated. It also freezes well."
+       suzNotes: "This is simple, healthy and really tasty. This may be made ahead and reheated. It also freezes well."
+    },
+    // Missing recipes from document - Coming Soon
+    {
+      id: 23,
+      title: 'Asian Chopped Salad with Sesame Ginger Dressing',
+      description: 'A crisp and vibrant Asian-inspired salad with fresh vegetables and tangy dressing.',
+      servings: 'Coming Soon',
+      category: 'salads',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
     },
     {
-      id: 22,
-      title: "Mint Chocolate Mousse Torte",
-      description: "Chef AJ's elegant raw dessert with a walnut-chocolate crust and rich mint chocolate mousse filling.",
-      author: "Chef AJ (chefaj.com)",
-      servings: 12,
-      prepTime: "45 minutes (plus freezing time)",
-      difficulty: "Intermediate",
-      tags: ["Dessert", "Raw", "Elegant", "Chocolate", "No-Bake"],
-      ingredients: [],
-      components: {
-        filling: {
-          title: "Filling",
-          ingredients: [
-            "16 ounces of pitted dried Dates",
-            "2 cups unsweetened nondairy milk (Soak the dates in the nondairy milk)",
-            "1 tablespoon alcohol-free VANILLA EXTRACT, or 1 teaspoon Vanilla Powder",
-            "1-2 teaspoons PEPPERMINT EXTRACT (depending on how minty you like it)",
-            "½ cup of COCOA POWDER or CAROB POWDER",
-            "12 ounces of WALNUTS",
-            "½ cup unsweetened COCONUT"
-          ]
-        },
-        crust: {
-          title: "Crust",
-          ingredients: [
-            "2 cups raw WALNUTS",
-            "¼ cup COCOA POWDER or CAROB POWDER",
-            "2 cups pitted DATES",
-            "1 tablespoon alcohol-free VANILLA or 1 teaspoon VANILLA POWDER",
-            "1 teaspoon PEPPERMINT EXTRACT"
-          ]
-        },
-        garnish: {
-          title: "Garnish (Optional)",
-          ingredients: [
-            "½ cup CACAO NIBS",
-            "Fresh Mint Leaves and Raspberries"
-          ]
-        }
-      },
-      instructions: [
-        "To make the filling, process the soaked dates with the vanilla and peppermint extract in a food processor, fitted with an 'S' blade until very smooth, add the cocoa powder and process again until smooth, then place the entire mixture in a bowl.",
-        "In the same processor bowl, process the 12 ounces of walnuts until like nut butter. Add the coconut and process again. Add to the date mixture and combine the ingredients by hand until completely incorporated.",
-        "To make the crust, process the 2 cups of walnuts with the cocoa or carob powder in a food processor fitted with an 'S' blade. Do NOT over process or you will have nut butter.",
-        "Add the two cups of dates, a few at a time, until the mixture holds together and you can easily roll it into a ball. Add the vanilla and peppermint extracts and process again briefly.",
-        "Press the crust into an 8 or 9 inch springform pan.",
-        "Spread the filling over the top, garnish with cacao nibs, and freeze until solid.",
-        "Serve with a beautiful mint leaf and fresh raspberries."
-      ],
-      suzNotes: "This is my 'go to' recipe when I entertain. It always turns out great, it is deelish, elegant, dense and rich. I have served 12 and still had leftovers. It keeps well in the freezer and I have made it several days before an event."
+      id: 24,
+      title: 'Buddha Bowl',
+      description: 'A nourishing bowl with balanced nutrients and colorful vegetables.',
+      servings: 'Coming Soon',
+      category: 'salads',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
+    },
+    {
+      id: 25,
+      title: 'Light and Easy Marinara',
+      description: 'A lighter version of traditional marinara sauce.',
+      servings: 'Coming Soon',
+      category: 'mains',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
+    },
+    {
+      id: 26,
+      title: 'Taco Bar',
+      description: 'Everything you need to set up a healthy taco bar.',
+      servings: 'Coming Soon',
+      category: 'mains',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
+    },
+    {
+      id: 27,
+      title: "Ann's Open Faced Twice Baked Potatoes",
+      description: 'Delicious twice-baked potatoes with healthy toppings.',
+      servings: 'Coming Soon',
+      category: 'mains',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
+    },
+    {
+      id: 28,
+      title: 'Jalapeno and Corn Muffins',
+      description: 'Spicy and sweet muffins with jalapenos and corn.',
+      servings: 'Coming Soon',
+      category: 'baked',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
+    },
+    {
+      id: 29,
+      title: 'Vegan Banana Bread',
+      description: 'Moist and delicious vegan banana bread.',
+      servings: 'Coming Soon',
+      category: 'baked',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
+    },
+    {
+      id: 30,
+      title: "Chef Aj's Oatmeal Cookies",
+      description: 'Healthy oatmeal cookies with no added oils.',
+      servings: 'Coming Soon',
+      category: 'desserts',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
+    },
+    {
+      id: 31,
+      title: 'Vegan Peanut Butter Cup Blizzard',
+      description: 'A healthy version of the classic dessert.',
+      servings: 'Coming Soon',
+      category: 'desserts',
+      tags: ['Coming Soon'],
+      prepTime: 'Coming Soon',
+      difficulty: 'Coming Soon',
+      ingredients: ['Recipe coming soon...'],
+      instructions: ['This recipe will be added soon.']
     }
   ];
   
@@ -801,8 +891,16 @@ const Recipes = () => {
     // Filter by tag if one is selected
     const matchesTag = activeFilter ? recipe.tags.includes(activeFilter) : true;
     
-    return matchesSearch && matchesTag;
+    // Filter by category if one is selected
+    const matchesCategory = activeCategory === 'all' ? true : recipe.category === activeCategory;
+    
+    return matchesSearch && matchesTag && matchesCategory;
   }).sort((a, b) => b.id - a.id);
+
+  const getRecipeCountForCategory = (categoryId: string) => {
+    if (categoryId === 'all') return recipes.length;
+    return recipes.filter(recipe => recipe.category === categoryId).length;
+  };
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -827,6 +925,27 @@ const Recipes = () => {
           <p className="mb-6">
             Here you will find a few of my favorite recipes—dishes I return to because they are nutritious and delicious and 100% plant-powered.
           </p>
+        </div>
+        
+        {/* Category Tabs */}
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold mb-4">Browse by Category</h3>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {categories.map(category => (
+              <Button
+                key={category.id}
+                variant={activeCategory === category.id ? "default" : "outline"}
+                className="flex items-center gap-2"
+                onClick={() => setActiveCategory(category.id)}
+              >
+                <span>{category.icon}</span>
+                <span>{category.name}</span>
+                <span className="ml-1 text-xs bg-white/20 px-1.5 py-0.5 rounded-full">
+                  {getRecipeCountForCategory(category.id)}
+                </span>
+              </Button>
+            ))}
+          </div>
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
