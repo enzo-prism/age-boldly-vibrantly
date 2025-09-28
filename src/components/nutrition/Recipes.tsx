@@ -1018,6 +1018,54 @@ const Recipes = () => {
           ]
         }
       }
+    },
+    {
+      id: 34,
+      title: "Intro to a Buddha Bowl (Rebel Remix)",
+      author: "Enzo",
+      description: "At Rebellious Aging we do not, do bland. A Buddha Bowl is anything but. It's a bold, beautiful burst of color and confidence in a bowl. Created by you in your way for your own enjoyment. Picture vibrant veggies strutting their stuff, grains with grit, plant based powerhouses like chickpeas or tofu showing up strong and a sauce that you love. It is not just food—it is fuel for rebels who nourish with flair, eat with intention, and simply never settle for ordinary.",
+      prepTime: "15 minutes",
+      servings: "1",
+      difficulty: "Beginner",
+      source: "Enzo 6/12/2025",
+      category: "mains",
+      tags: ['Lunch', 'Dinner', 'Oil-Free', 'Raw', 'Quick', 'High-Protein', 'Gluten-Free'],
+      ingredients: [
+        "BUILDING BLOCKS FOR YOUR REBEL BOWL:",
+        "",
+        "BASE GRAINS (choose 1-2):",
+        "• Quinoa, brown rice, wild rice, farro, or cauliflower rice",
+        "",
+        "PLANT POWERHOUSES (choose 1-2):",
+        "• Chickpeas, black beans, lentils, hemp hearts, or marinated tofu",
+        "",
+        "RAINBOW VEGETABLES (choose at least 10):",
+        "• Bell peppers, cherry tomatoes, cucumbers, carrots, beets",
+        "• Broccoli, snap peas, corn, avocado, red onion",
+        "• Sweet potato, zucchini, radishes, sprouts",
+        "",
+        "GREENS FOUNDATION (choose at least 3):",
+        "• Kale, arugula, red cabbage, spinach, mixed greens",
+        "",
+        "CRUNCH FACTOR (choose 1-2):",
+        "• Chopped nuts, seeds (pumpkin, sunflower, hemp), roasted chickpeas",
+        "",
+        "DRESSING OPTIONS:",
+        "• Esselstyn 321 Dressing",
+        "• Oil-free flavored balsamic vinegar",
+        "• Your favorite plant-based dressing"
+      ],
+      instructions: [
+        "EMBRACE THE REBEL PHILOSOPHY: Remember, this is not just food—it's fuel for rebels who nourish with flair, eat with intention, and never settle for ordinary. You're eating the rainbow, nourishing your body, and feeling fabulous—no rules, just balance and bliss.",
+        "BALANCE IS KEY: Aim to include grains, legumes, vegetables, fruits, nuts/seeds, and greens in your bowl. Think variety and nutrition working together.",
+        "TEXTURE IS EVERYTHING: Combining different textures (the more the merrier) is key to a deliciously fabulous bowl. Mix soft with crunchy, fresh with roasted.",
+        "SUZ'S METHOD: Begin with a large wooden bowl and fill it with greens of choice, typically at least three. Favorites include kale, arugula, and red cabbage.",
+        "LOAD IT UP: Add at least 10 chopped vegetables to create a vibrant, nutrient-dense foundation.",
+        "ADD THE CRUNCH: Sprinkle with chopped nuts or seeds for texture and healthy fats.",
+        "DRESS LIGHTLY: Lightly drizzle with Esselstyn 321 Dressing or your favorite oil-free, flavored balsamic vinegar.",
+        "MAKE IT YOURS: This is your creation—adjust ingredients based on what you love and what makes you feel amazing. Trust your rebel instincts!",
+        "HISTORICAL NOTE: The phrase 'Buddha Bowl' first appears in Martha Stewart's 2013 cookbook 'Meatless'. Before that, similar meals were called grain bowls. The concept signifies balance, mindfulness, and variety in a single meal."
+      ]
     }
   ];
   
