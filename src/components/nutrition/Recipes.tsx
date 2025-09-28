@@ -1102,6 +1102,57 @@ const Recipes = () => {
         "Serve immediately or refrigerate for up to one week.",
         "Great with fresh vegetables, pita bread, or as a sandwich spread."
       ]
+    },
+    {
+      id: 36,
+      title: "Asian Chopped Salad with Sesame Ginger Dressing",
+      author: "veganhuggs.com",
+      description: "A fresh, crunchy salad with crisp vegetables and a flavorful sesame ginger dressing that brings Asian-inspired flavors to your table.",
+      prepTime: "15 minutes",
+      servings: "6",
+      difficulty: "Beginner",
+      source: "veganhuggs.com",
+      category: "salads",
+      tags: ['Lunch', 'Dinner', 'Oil-Free', 'Quick', 'Gluten-Free'],
+      components: {
+        dressing: {
+          ingredients: [
+            "2 tablespoons low sodium tamari (sub. soy sauce)",
+            "3½ tablespoons rice vinegar",
+            "1½ tablespoons toasted sesame oil (I used 1 drop just to get the flavor)",
+            "1 tablespoon agave (I subbed maple syrup)",
+            "1 clove garlic, minced",
+            "½ tablespoon ginger, minced",
+            "2½ tablespoons liquid from canned mandarin oranges",
+            "1 tablespoon sesame seeds"
+          ],
+          instructions: [
+            "Whisk together tamari, rice vinegar, sesame oil, and agave in a small bowl.",
+            "Add minced garlic and ginger, mixing well.",
+            "Stir in the mandarin orange liquid and sesame seeds.",
+            "Set aside to let flavors meld while preparing the salad."
+          ]
+        }
+      },
+      ingredients: [
+        "1 cup frozen shelled edamame, thawed",
+        "1 large head (12 oz) romaine lettuce, shredded (about 7 cups)",
+        "1½ cups red cabbage, shredded",
+        "1½ cups carrots (julienne/matchstick or shredded)",
+        "⅓ cup green onions, sliced thin",
+        "½ cup sliced almonds, raw or toasted",
+        "1 (10 oz) can mandarin oranges, reserve liquid",
+        "½ cup crispy noodles for topping"
+      ],
+      instructions: [
+        "Prepare all vegetables by shredding the romaine lettuce and red cabbage, julienning or shredding the carrots, and slicing the green onions.",
+        "Thaw the edamame and drain the mandarin oranges, reserving the liquid for the dressing.",
+        "In a large salad bowl, combine the romaine lettuce, red cabbage, carrots, green onions, and edamame.",
+        "Add the mandarin oranges and sliced almonds to the salad.",
+        "Drizzle with the prepared sesame ginger dressing and toss gently to combine.",
+        "Top with crispy noodles just before serving for maximum crunch."
+      ],
+      suzNotes: "I found that ½ the amount of this delicious dressing was enough. Add dressing cautiously."
     }
   ];
   
