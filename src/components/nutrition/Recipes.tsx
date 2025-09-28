@@ -222,6 +222,337 @@ const Recipes = () => {
           ]
         }
       }
+    },
+    {
+      id: 7,
+      title: 'Lo Mein Noodle Sauce',
+      description: 'A healthy version of lo mein sauce with toasted sesame seeds and walnuts, perfect with brown rice noodles.',
+      author: 'Rip Esselstyn',
+      servings: '1½ cups',
+      source: 'plantstrong.com',
+      tags: ['Dinner', 'Quick', 'Oil-Free'],
+      prepTime: '10 minutes',
+      difficulty: 'Beginner',
+      notes: 'I serve with Brown Rice Noodles. You can purchase noodles online or at Whole Foods. Delicious. - Suz',
+      ingredients: [
+        '⅓ cup sesame seeds toasted in a DRY skillet, until lightly browned and fragrant',
+        '⅓ to ½ cup walnuts',
+        '⅓ cup low-sodium tamari',
+        '⅓ cup 100% pure maple syrup',
+        '1 tablespoon minced fresh ginger',
+        '2 tablespoons water',
+        '½ teaspoon sriracha, or more to taste (OPTIONAL)'
+      ],
+      instructions: [
+        'In a food processor or high speed blender, combine all ingredients and blend until smooth and uniform in texture.'
+      ]
+    },
+    {
+      id: 8,
+      title: 'McDougall Wellness Soup',
+      description: 'A nourishing vegetable soup with nutritional yeast and seasonings, perfect for a comforting meal.',
+      author: 'Mary McDougall',
+      servings: '6-8',
+      source: 'mcdougall.com',
+      tags: ['Dinner', 'Budget-Friendly', 'Oil-Free'],
+      prepTime: '10 minutes',
+      totalTime: '45 minutes',
+      difficulty: 'Beginner',
+      notes: 'I use 8 cups broth, 4 tablespoons nutritional yeast, and add a tablespoon of allspice and spinach and arugula at the end. - Suz',
+      ingredients: [
+        '1 onion, chopped',
+        '6 cups veg broth (I use 8 cups)',
+        '2 carrots, sliced',
+        '2 cups red potatoes, cubed',
+        '2 tablespoons Nutritional Yeast (I use 4 tablespoons)',
+        '2 teaspoons soy sauce (optional)',
+        '½ teaspoon marjoram',
+        '½ teaspoon sage',
+        '¼ teaspoon thyme',
+        'Several twists of fresh ground pepper',
+        '2 cups broccoli florets',
+        '2 cups cauliflower'
+      ],
+      instructions: [
+        'Place the onion and ¼ cup of the broth in a large pot.',
+        'Cook, stirring frequently, until the onion softens, about 2-3 minutes.',
+        'Add remaining broth and the carrots and potatoes, nutritional yeast, soy sauce and seasonings.',
+        'Bring to a boil, reduce heat, cover and cook for 20 minutes.',
+        'Add broccoli and cauliflower and continue to cook another 20 minutes.'
+      ]
+    },
+    {
+      id: 9,
+      title: 'Hummus',
+      description: 'A classic hummus recipe with chickpeas, tahini, and aquafaba for the perfect creamy texture.',
+      author: 'Ann and Jane Esselstyn',
+      servings: '1¼ cups',
+      source: 'Ann and Jane Esselstyn',
+      tags: ['Snack', 'Quick', 'Oil-Free', 'High-Protein'],
+      prepTime: '5 minutes',
+      difficulty: 'Beginner',
+      storageInstructions: 'Store in a sealed container in the fridge for up to 5 days.',
+      ingredients: [
+        '15 oz canned low or no salt chickpeas (reserve aquafaba)',
+        '2 cloves garlic or to taste',
+        '2 tablespoons lemon juice',
+        '1-2 tablespoons low sodium tamari',
+        '2 tablespoons tahini, optional',
+        '¼ teaspoon cumin',
+        '2 squirts hot sauce',
+        '¼-½ cup aquafaba, the reserved chickpea liquid'
+      ],
+      instructions: [
+        'In a food processor or high speed blender, place garlic, lemon juice, tamari, tahini (if using), cumin and ¼ cup more of aquafaba until the hummus is a desired consistency.'
+      ]
+    },
+    {
+      id: 10,
+      title: 'Five Ingredient Veggie Burger',
+      description: 'Simple black bean burgers with only five main ingredients, perfect for a quick and satisfying meal.',
+      author: 'Forks Over Knives',
+      servings: '4 burgers',
+      source: 'Forks Over Knives',
+      tags: ['Lunch', 'Dinner', 'High-Protein', 'Quick'],
+      prepTime: '15 minutes',
+      totalTime: '35 minutes',
+      difficulty: 'Beginner',
+      ingredients: [
+        '2 cups no salt added black beans, drained and liquid reserved',
+        '1 medium onion-quartered',
+        '½ cup quick cooking rolled oats',
+        '1 tablespoon lime juice',
+        '2 teaspoons chile powder',
+        'Salt and pepper',
+        '4 100% whole wheat hamburger buns, split and toasted',
+        'Romaine lettuce',
+        '1 large tomato sliced',
+        '4 red onion slices',
+        'Condiments of your choosing'
+      ],
+      instructions: [
+        'In a food processor combine the first 5 ingredients through chili powder. Pulse until chunky but NOT pureed.',
+        'Add a small amount of reserved bean liquid, if the mixture seems dry or is not sticking together. The mixture should be moist but NOT wet. Season with S&P.',
+        'With wet hands, shape mixture into four 3½ inch patties. Chill at least 20 minutes.',
+        'In a large nonstick skillet cook burgers over medium-high heat for 8-10 minutes or until burgers are lightly browned and cooked through, turning only once.',
+        'Serve burgers on hamburger buns of your choice.',
+        'Add lettuce, tomato, and onion slices and condiments if using.'
+      ]
+    },
+    {
+      id: 11,
+      title: 'Spinach and Avocado Dip',
+      description: 'A delicious and nutritious dip with spinach, avocado, and seasonings - perfect with fresh veggies or chips.',
+      servings: '4-6',
+      source: 'Unknown (but it is deeelish! - Suz)',
+      tags: ['Snack', 'Quick', 'Oil-Free', 'Raw'],
+      prepTime: '5 minutes',
+      difficulty: 'Beginner',
+      ingredients: [
+        '2 cups baby spinach',
+        '1 avocado, cut in chunks',
+        '2 tablespoons flat leaf parsley, chopped',
+        '1 tablespoon lemon juice',
+        '1 tablespoon nutritional yeast',
+        '¼ teaspoon ground cumin',
+        '1 garlic clove chopped or grated',
+        '1 pinch of chili flakes',
+        'Salt and pepper (optional)',
+        'Fresh cut veggies or tortilla chips'
+      ],
+      instructions: [
+        'In a food processor pulse together the spinach, avocado, parsley, lemon juice, nutritional yeast, cumin, garlic and chili flakes until somewhat smooth but still chunky, about 20 seconds.',
+        'Use a spatula to scrape it down and pulse again.',
+        'Transfer to a mixing bowl, season with salt and pepper and mix.',
+        'Serve with freshly cut veggies or tortilla chips.'
+      ]
+    },
+    {
+      id: 12,
+      title: 'Super Salad',
+      description: 'Dr. Esselstyn\'s favorite superfood salad with kale, Napa cabbage, and Jane\'s 3-2-1 dressing.',
+      author: 'Ann Esselstyn',
+      servings: '4-6',
+      source: 'Ann Esselstyn',
+      tags: ['Lunch', 'Oil-Free', 'High-Protein', 'Raw'],
+      prepTime: '15 minutes',
+      difficulty: 'Beginner',
+      notes: 'A favorite of Dr. Esselstyn',
+      ingredients: [
+        '1½ bunches of kale, leaves stripped of spines, chopped in fine strips (almost like ribbons)',
+        '½ head of Napa cabbage, finely shredded or chopped',
+        '¼ red onion, thinly sliced',
+        '½ cup grape tomatoes, halved',
+        '3-4 carrots, peeled and grated',
+        '1 cup raw edamame, shelled',
+        '1 cup blueberries',
+        '½ cup red pepper chopped'
+      ],
+      instructions: [
+        'Combine all ingredients and toss with your favorite dressing.',
+        'Or try Jane Esselstyn\'s family favorite 3-2-1 dressing.'
+      ],
+      components: {
+        dressing: {
+          ingredients: [
+            '3 tablespoons of balsamic vinegar',
+            '2 tablespoons mustard of choice',
+            '1 tablespoon maple syrup'
+          ],
+          instructions: [
+            'Mix all ingredients in a small bowl and whisk until smooth.'
+          ]
+        }
+      }
+    },
+    {
+      id: 13,
+      title: 'Vegan Cabbage Soup',
+      description: 'A light, flavorful detoxing soup that comes together in less than 40 minutes using simple WFPB ingredients.',
+      author: 'plantyou.com',
+      servings: '6',
+      source: 'plantyou.com',
+      tags: ['Dinner', 'Budget-Friendly', 'Oil-Free', 'High-Protein'],
+      prepTime: '15 minutes',
+      totalTime: '40 minutes',
+      difficulty: 'Beginner',
+      notes: 'I have added ¼ lb. of mushrooms, 1 tablespoon of allspice, 1 extra onion, 1 extra can of tomatoes and 2 handfuls of baby kale. It is deelish either way. - Suz',
+      ingredients: [
+        '4 cloves garlic',
+        '4 yukon gold potatoes',
+        '2 carrots, diced',
+        '2 stalks celery, diced',
+        '1 yellow onion, diced',
+        '1 tsp. ginger',
+        '1½ tsp. garlic powder',
+        '8 cups vegetable broth',
+        '1½ cups diced canned tomatoes',
+        '½ cup green cabbage finely chopped',
+        '500 grams extra firm tofu pressed and chopped'
+      ],
+      instructions: [
+        'Add garlic and onion to a pot over medium heat and cook until translucent, approximately 3 minutes.',
+        'Add the potatoes, carrots, celery and spices to the pot, stir and cook for an additional 5 minutes, until soft.',
+        'Add the vegetable broth, diced tomatoes and cabbage to the pot. Bring to a boil, then simmer for 25 minutes until everything is cooked through.',
+        'Add the tofu in the end, if using.'
+      ]
+    },
+    {
+      id: 14,
+      title: 'Sweet Holy Deliciousness Soup',
+      description: 'A comforting soup with lentils, sweet potatoes, and kale that can be served over whole grains.',
+      author: 'Rip Esselstyn',
+      servings: '6-8',
+      source: 'plantstrong.com',
+      tags: ['Dinner', 'High-Protein', 'Oil-Free'],
+      prepTime: '15 minutes',
+      totalTime: '30 minutes',
+      difficulty: 'Beginner',
+      notes: 'Suz substitutions were for convenience only. I love this soup. - Suz',
+      ingredients: [
+        '2 large onions, chopped',
+        '6 large garlic cloves, chopped',
+        '2 pinches crushed red pepper flakes',
+        '½ teaspoon ground turmeric',
+        '1 teaspoon garam masala (I substituted allspice)',
+        '6 cups low sodium vegetable broth',
+        '1 cup dried red lentils (I used green lentils)',
+        '2 large sweet potatoes, peeled and cut into cubes',
+        '2 bunches kale or greens of choice, stripped and spines discarded and cut into bite-sized pieces (I used kale and arugula)',
+        'Freshly ground black pepper to taste'
+      ],
+      instructions: [
+        'In a soup pot, water, stir fry the onions and garlic for a few minutes, until the onions are limp. Add the pepper flakes, turmeric and garam masala and stir to coat the onions and garlic.',
+        'Add the vegetable broth and lentils and bring to a boil.',
+        'Decrease the heat to low, cover and simmer until the lentils are fully cooked and the sweet potatoes are tender, about 5-10 minutes.',
+        'Add the kale and cook 5 minutes more, or until the kale is soft.',
+        'Season with black pepper to taste.',
+        'Serve on its own or over a mound of cooked whole grains.'
+      ]
+    },
+    {
+      id: 15,
+      title: 'Suz\'s Polish Babcia\'s Noodle Soup',
+      description: 'A comforting vegan noodle soup with Suz\'s personal Polish touches that tastes like "chicken" noodle soup.',
+      author: 'Heather McDougall (with Suz\'s modifications)',
+      servings: '8-10 cups',
+      source: 'forksoverknives.com/recipes/ and drmcdougall.com',
+      tags: ['Dinner', 'Budget-Friendly', 'Oil-Free'],
+      prepTime: '20 minutes',
+      totalTime: '60 minutes',
+      difficulty: 'Beginner',
+      notes: 'This luscious vegan noodle soup tastes like comfort in a bowl and an awful lot like "chicken" noodle soup!',
+      ingredients: [
+        '1 cup chopped onion',
+        '1 cup chopped celery',
+        '1 cup chopped carrots',
+        '6 cups vegetable stock',
+        '1 teaspoon low-sodium tamari or soy sauce',
+        '½ teaspoon dried marjoram, crushed',
+        '½ teaspoon dried thyme, crushed',
+        'Freshly ground black pepper',
+        '3 cups dried brown rice fettuccine noodles or whole wheat pasta broken'
+      ],
+      instructions: [
+        'Combine the onion, celery, carrots, stock, tamari, marjoram, sage, thyme and pepper in a 4qt Dutch oven. Bring to boil over high heat.',
+        'Reduce heat to medium-low; cover and simmer for 20 minutes.',
+        'Stir in noodles; return to a boil. Cook for 10 minutes more or until noodles are tender.'
+      ],
+      components: {
+        suzAdjustments: {
+          ingredients: [
+            'Whole onion for braising',
+            'Plant Strong broth',
+            '1-2 Tablespoons low sodium tamari',
+            '1 teaspoon of Turmeric for color',
+            '1 tablespoon of whole allspice',
+            'Pad Thai noodles (cooked separately)',
+            'Fresh chopped parsley'
+          ],
+          instructions: [
+            'Braise the whole onion on all sides on the stove top burner. Then cut in quarters or eighths and drop in the soup pot.',
+            'Use really good veg stock (I use Plant Strong broth.)',
+            'Add extra tamari and turmeric for color and flavor.',
+            'Add allspice and fresh parsley while cooking.',
+            'Cook noodles separately and add to serving bowls.'
+          ]
+        }
+      }
+    },
+    {
+      id: 16,
+      title: 'No Tuna Salad Sandwich',
+      description: 'A vegan version of tuna salad using chickpeas with extra tang and flavor from pickles and capers.',
+      author: 'Diana Shultz (Minimalist Baker\'s Everyday Cooking)',
+      servings: '4 sandwiches',
+      source: 'Forks Over Knives/Minimalist Baker\'s Everyday Cooking',
+      tags: ['Lunch', 'High-Protein', 'Quick', 'Oil-Free'],
+      prepTime: '15 minutes',
+      difficulty: 'Beginner',
+      ingredients: [
+        '1 (15 oz) can chickpeas, rinsed and drained',
+        '3 tablespoons tahini',
+        '1 teaspoon Dijon or mustard of choice',
+        '1 tablespoon maple syrup',
+        '¼ cup diced red onions',
+        '¼ diced celery',
+        '¼ diced pickle',
+        '1 teaspoon capers drained and loosely chopped',
+        'Salt and pepper',
+        '1 tablespoon roasted unsalted sunflower seeds (optional)',
+        '8 slices whole grain bread',
+        'Mustard',
+        'Romaine Lettuce',
+        'Tomato, sliced',
+        'Red onion sliced'
+      ],
+      instructions: [
+        'Place the chickpeas in a bowl and mash with a fork, leaving a few beans whole.',
+        'Add tahini, mustard, maple syrup, red onion, celery, pickle, capers, S&P and sunflower seeds if using. Mix to incorporate.',
+        'Taste and adjust seasonings as needed.',
+        'Toast bread as desired and prepare any other sandwich toppings such as lettuce, tomato, onion, avocado.',
+        'Scoop a healthy amount of the mixture (about ½ cup) onto one slice of bread. Add desired toppings and top with a second slice and repeat the process for additional sandwiches.'
+      ]
     }
   ];
   
