@@ -552,7 +552,244 @@ const Recipes = () => {
         'Taste and adjust seasonings as needed.',
         'Toast bread as desired and prepare any other sandwich toppings such as lettuce, tomato, onion, avocado.',
         'Scoop a healthy amount of the mixture (about ½ cup) onto one slice of bread. Add desired toppings and top with a second slice and repeat the process for additional sandwiches.'
-      ]
+      ],
+      suzNotes: "I like to add sunflower seeds for extra crunch and nutrition."
+    },
+    {
+      id: 17,
+      title: "Vegan Taco Bowl",
+      description: "A colorful and nutritious taco bowl with seasoned tofu, fresh vegetables, and a creamy yogurt-based dressing.",
+      author: "plantyou.com",
+      servings: 4,
+      prepTime: "30 minutes",
+      difficulty: "Beginner",
+      tags: ["Dinner", "Mexican", "Bowl", "Protein-Rich"],
+      ingredients: [
+        "1½ cups Mexican Rice",
+        "1 avocado, stoned, peeled and diced",
+        "1 cup cilantro finely chopped",
+        "2 tomatoes, diced",
+        "1 red onion diced",
+        "1 cup black beans drained and rinsed",
+        "1 pack firm tofu grated",
+        "1 packet taco seasoning"
+      ],
+      components: {
+        dressing: {
+          title: "Dressing",
+          ingredients: [
+            "1 cup unsweetened vegan yogurt",
+            "¾ teaspoon paprika",
+            "¾ teaspoon chili powder",
+            "1 teaspoon onion powder",
+            "1 teaspoon garlic powder",
+            "1 teaspoon apple cider vinegar",
+            "½ teaspoon ground cumin"
+          ]
+        }
+      },
+      instructions: [
+        "Toss tofu with seasoning.",
+        "Spread it on a lined baking sheet and bake at 375 for 15 minutes.",
+        "Prep the rest of the ingredients and add them to a bowl.",
+        "Whisk all of the dressing ingredients together in a bowl.",
+        "Once the grated tofu is ready, add it to the ingredient bowl, pour in the dressing and serve immediately."
+      ],
+      suzNotes: "I have doubled the apple cider vinegar, added 1 teaspoon Maple syrup, bake tofu at 400 but watch closely. I serve this on a bed of chopped Romaine lettuce. I offer additions of sliced avocado, chopped onions, chopped cilantro, salsa, guac and tortilla chips."
+    },
+    {
+      id: 18,
+      title: "Raw Blueberry Cheesecake",
+      description: "An elegant raw dessert with a nutty oat crust and creamy cashew-blueberry filling that's naturally sweetened.",
+      author: "Chef AJ (chefaj.com)",
+      servings: 8,
+      prepTime: "30 minutes (plus 4-6 hours soaking)",
+      difficulty: "Intermediate",
+      tags: ["Dessert", "Raw", "No-Bake", "Vegan", "Elegant"],
+      ingredients: [],
+      components: {
+        crust: {
+          title: "Crust",
+          ingredients: [
+            "2 cups oats (if you are strictly following a raw food diet use sprouted oats)",
+            "12 oz. dates about 2 cups",
+            "1 Tbsp. cinnamon",
+            "1 tsp. Vanilla powder"
+          ]
+        },
+        filling: {
+          title: "Filling",
+          ingredients: [
+            "3 cups frozen wild blueberries defrosted",
+            "12 oz. dates about 2 cups",
+            "3 cups raw cashews soaked",
+            "1 cup unsweetened non dairy milk",
+            "¼ cup lemon juice",
+            "Optional Topping: unsweetened low fat coconut"
+          ]
+        }
+      },
+      instructions: [
+        "Soak Cashews for at least 4-6 hours to achieve a super smooth and creamy filling.",
+        "In a food processor fitted with an 'S' blade, process the oats, cinnamon and vanilla bean powder into a flour-like consistency.",
+        "Add the pitted dates and continue processing until the food processor starts to form a ball, and the ingredients are fully combined.",
+        "Empty the food processor into a cheesecake pan and press the dough evenly on the bottom.",
+        "Drain and rinse the cashews.",
+        "In a food processor fitted with the 'S' blade, process the cashews until smooth then add the dates and process again.",
+        "Add the remaining ingredients and process until smooth.",
+        "Pour evenly over the crust.",
+        "Sprinkle the top with unsweetened coconut, if desired.",
+        "Place in freezer until firm."
+      ],
+      suzNotes: "I have not made this recipe (I typically only include recipes I have made.) That being said, I have tasted this and it is delicious. I have not tried a ChefAJ dessert I have not loved. This cheesecake freezes beautifully."
+    },
+    {
+      id: 19,
+      title: "Avocado Black Bean Corn Salad",
+      description: "A fresh and vibrant salad combining black beans, corn, tomatoes, and avocado with a zesty lime dressing.",
+      author: "Melissa Huggins (veganhuggs.com)",
+      servings: 6,
+      prepTime: "20 minutes",
+      difficulty: "Beginner",
+      tags: ["Salad", "Fresh", "Mexican", "Quick"],
+      ingredients: [
+        "2 15 oz cans black beans, rinsed and drained",
+        "2 avocados, seeded and cubed",
+        "2 cups corn, fresh or frozen (thawed)",
+        "2 cups cherry tomatoes, halved",
+        "½ cup diced red onion",
+        "⅓ cup cilantro, rough chopped"
+      ],
+      components: {
+        dressing: {
+          title: "Dressing",
+          ingredients: [
+            "⅓ cup fresh lime juice",
+            "3 tablespoons olive oil (I leave out)",
+            "1 teaspoon maple syrup (any sweetener)",
+            "2 tablespoons fresh cilantro, finely chopped",
+            "½ teaspoon granulated garlic",
+            "½ teaspoon chili powder",
+            "1 teaspoon sea salt (I leave out)",
+            "Ground pepper to taste"
+          ]
+        }
+      },
+      instructions: [
+        "In a small bowl, whisk the lime juice, olive oil, sweetener of choice, cilantro, chili powder, granulated garlic, salt and pepper.",
+        "Place all veggies in a large bowl (except the avocado) and pour the dressing over them. Toss gently to combine well.",
+        "Add the avocado on top and toss gently or just leave them on top. Taste for seasoning and add more if needed.",
+        "Serve immediately with fresh pita bread, tortilla chips or a side of rice."
+      ],
+      suzNotes: "Avocados that are just ripe work the best and will not get mushy in the salad. Squeeze a little lime on the fresh cut avocado to reduce browning. To keep the salad looking vibrant, toss with the dressing, tomatoes, and avocado just before serving."
+    },
+    {
+      id: 20,
+      title: "Avocado Caprese Salad",
+      description: "A twist on the classic Caprese salad, substituting avocado for mozzarella with fresh tomatoes and basil.",
+      author: "Recipe source unclear",
+      servings: 4,
+      prepTime: "15 minutes",
+      difficulty: "Beginner",
+      tags: ["Salad", "Fresh", "Italian", "Quick", "Elegant"],
+      ingredients: [
+        "3 large heirloom tomatoes",
+        "2 medium-sized avocados",
+        "½ cup fresh basil",
+        "1-2 tsp. Extra virgin olive oil (optional, I leave out)",
+        "Sea salt and pepper to taste"
+      ],
+      instructions: [
+        "Cut the tomatoes into thick discs and set aside.",
+        "Cut the avocado across the middle (not lengthways) and remove the pit.",
+        "Peel off the skin and cut into discs, about the same thickness as the tomato.",
+        "Arrange the tomato slices on a plate or platter and top with avocado.",
+        "Place a basil leaf on each, then drizzle with lemon juice and optional olive oil.",
+        "Season as desired and serve immediately."
+      ],
+      suzNotes: "Instead of the EVOO I used a bit of Balsamic Glaze. I marked this recipe, deelish/ easy peasey/ shows well. A great source for deelish SOS free balsamic vinegars is California Balsamics. californiabalsamics.com. Show stoppers for sure."
+    },
+    {
+      id: 21,
+      title: "Marinara Sauce",
+      description: "Mary McDougall's simple and healthy marinara sauce that's been a family favorite for over thirty years.",
+      author: "Mary McDougall (drmcdougall.com)",
+      servings: "Makes about 4 cups",
+      prepTime: "20 min prep, 60 min cook",
+      difficulty: "Beginner",
+      tags: ["Sauce", "Italian", "Base Recipe", "Make-Ahead"],
+      ingredients: [
+        "2 Tbsp water",
+        "2 onions, chopped",
+        "4 cloves garlic, crushed",
+        "½ pound mushrooms, chopped",
+        "2-15 ounce cans tomato sauce",
+        "15 ounce can chopped tomatoes",
+        "1½ Tbsp parsley flakes",
+        "2 tsp oregano",
+        "1 tsp basil",
+        "Dash of salt, if desired"
+      ],
+      instructions: [
+        "Place the water, onions, garlic and mushrooms in a large pot.",
+        "Cook, stirring frequently, until onions soften and begin to take on a golden color, about 10 minutes.",
+        "Stir in remaining ingredients.",
+        "Bring to a boil, reduce heat and simmer for about 1 hour, stirring occasionally. DO NOT COVER.",
+        "Serve over your choice of pasta."
+      ],
+      suzNotes: "This is simple, healthy and really tasty. This may be made ahead and reheated. It also freezes well."
+    },
+    {
+      id: 22,
+      title: "Mint Chocolate Mousse Torte",
+      description: "Chef AJ's elegant raw dessert with a walnut-chocolate crust and rich mint chocolate mousse filling.",
+      author: "Chef AJ (chefaj.com)",
+      servings: 12,
+      prepTime: "45 minutes (plus freezing time)",
+      difficulty: "Intermediate",
+      tags: ["Dessert", "Raw", "Elegant", "Chocolate", "No-Bake"],
+      ingredients: [],
+      components: {
+        filling: {
+          title: "Filling",
+          ingredients: [
+            "16 ounces of pitted dried Dates",
+            "2 cups unsweetened nondairy milk (Soak the dates in the nondairy milk)",
+            "1 tablespoon alcohol-free VANILLA EXTRACT, or 1 teaspoon Vanilla Powder",
+            "1-2 teaspoons PEPPERMINT EXTRACT (depending on how minty you like it)",
+            "½ cup of COCOA POWDER or CAROB POWDER",
+            "12 ounces of WALNUTS",
+            "½ cup unsweetened COCONUT"
+          ]
+        },
+        crust: {
+          title: "Crust",
+          ingredients: [
+            "2 cups raw WALNUTS",
+            "¼ cup COCOA POWDER or CAROB POWDER",
+            "2 cups pitted DATES",
+            "1 tablespoon alcohol-free VANILLA or 1 teaspoon VANILLA POWDER",
+            "1 teaspoon PEPPERMINT EXTRACT"
+          ]
+        },
+        garnish: {
+          title: "Garnish (Optional)",
+          ingredients: [
+            "½ cup CACAO NIBS",
+            "Fresh Mint Leaves and Raspberries"
+          ]
+        }
+      },
+      instructions: [
+        "To make the filling, process the soaked dates with the vanilla and peppermint extract in a food processor, fitted with an 'S' blade until very smooth, add the cocoa powder and process again until smooth, then place the entire mixture in a bowl.",
+        "In the same processor bowl, process the 12 ounces of walnuts until like nut butter. Add the coconut and process again. Add to the date mixture and combine the ingredients by hand until completely incorporated.",
+        "To make the crust, process the 2 cups of walnuts with the cocoa or carob powder in a food processor fitted with an 'S' blade. Do NOT over process or you will have nut butter.",
+        "Add the two cups of dates, a few at a time, until the mixture holds together and you can easily roll it into a ball. Add the vanilla and peppermint extracts and process again briefly.",
+        "Press the crust into an 8 or 9 inch springform pan.",
+        "Spread the filling over the top, garnish with cacao nibs, and freeze until solid.",
+        "Serve with a beautiful mint leaf and fresh raspberries."
+      ],
+      suzNotes: "This is my 'go to' recipe when I entertain. It always turns out great, it is deelish, elegant, dense and rich. I have served 12 and still had leftovers. It keeps well in the freezer and I have made it several days before an event."
     }
   ];
   
