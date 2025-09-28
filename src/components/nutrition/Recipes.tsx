@@ -1432,7 +1432,7 @@ const Recipes = () => {
                         <div>
                           <h4 className="font-semibold mb-3">Ingredients:</h4>
                           <ul className="list-disc list-inside space-y-1 text-sm">
-                            {recipe.ingredients.map((ingredient, index) => (
+                            {recipe.ingredients?.map((ingredient, index) => (
                               <li key={index}>{ingredient}</li>
                             ))}
                           </ul>
@@ -1481,7 +1481,7 @@ const Recipes = () => {
                         </div>
                       )}
                     </div>
-                  ) : (
+                  ) : recipe.ingredients ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold mb-3">Ingredients:</h4>
@@ -1504,6 +1504,10 @@ const Recipes = () => {
                           ))}
                         </ol>
                       </div>
+                    </div>
+                  ) : (
+                    <div className="text-center py-8 text-gray-500">
+                      <p>Recipe structure not supported</p>
                     </div>
                   )}
                   
