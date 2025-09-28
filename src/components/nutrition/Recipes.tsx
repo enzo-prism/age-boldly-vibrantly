@@ -1045,14 +1045,16 @@ const Recipes = () => {
                               ))}
                             </ul>
                           </div>
-                          <div>
-                            <h5 className="font-medium mb-2 text-green-700">Instructions:</h5>
-                            <ol className="space-y-1 text-sm text-green-600">
-                              {recipe.components.dressing.instructions?.map((step, index) => (
-                                <li key={index}>{step}</li>
-                              ))}
-                            </ol>
-                          </div>
+                          {recipe.components.dressing.instructions && (
+                            <div>
+                              <h5 className="font-medium mb-2 text-green-700">Instructions:</h5>
+                              <ol className="space-y-1 text-sm text-green-600">
+                                {recipe.components.dressing.instructions.map((step, index) => (
+                                  <li key={index}>{step}</li>
+                                ))}
+                              </ol>
+                            </div>
+                          )}
                         </div>
                       </div>
                       
