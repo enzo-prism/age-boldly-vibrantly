@@ -772,67 +772,6 @@ const Recipes = () => {
       ],
        suzNotes: "This is simple, healthy and really tasty. This may be made ahead and reheated. It also freezes well."
     },
-    // Missing recipes from document - Coming Soon
-    {
-      id: 23,
-      title: 'Asian Chopped Salad with Sesame Ginger Dressing',
-      description: 'A crisp and vibrant Asian-inspired salad with fresh vegetables and tangy dressing.',
-      servings: 'Coming Soon',
-      category: 'salads',
-      tags: ['Coming Soon'],
-      prepTime: 'Coming Soon',
-      difficulty: 'Coming Soon',
-      ingredients: ['Recipe coming soon...'],
-      instructions: ['This recipe will be added soon.']
-    },
-    {
-      id: 24,
-      title: 'Buddha Bowl',
-      description: 'A nourishing bowl with balanced nutrients and colorful vegetables.',
-      servings: 'Coming Soon',
-      category: 'salads',
-      tags: ['Coming Soon'],
-      prepTime: 'Coming Soon',
-      difficulty: 'Coming Soon',
-      ingredients: ['Recipe coming soon...'],
-      instructions: ['This recipe will be added soon.']
-    },
-    {
-      id: 25,
-      title: 'Light and Easy Marinara',
-      description: 'A lighter version of traditional marinara sauce.',
-      servings: 'Coming Soon',
-      category: 'mains',
-      tags: ['Coming Soon'],
-      prepTime: 'Coming Soon',
-      difficulty: 'Coming Soon',
-      ingredients: ['Recipe coming soon...'],
-      instructions: ['This recipe will be added soon.']
-    },
-    {
-      id: 26,
-      title: 'Taco Bar',
-      description: 'Everything you need to set up a healthy taco bar.',
-      servings: 'Coming Soon',
-      category: 'mains',
-      tags: ['Coming Soon'],
-      prepTime: 'Coming Soon',
-      difficulty: 'Coming Soon',
-      ingredients: ['Recipe coming soon...'],
-      instructions: ['This recipe will be added soon.']
-    },
-    {
-      id: 27,
-      title: "Ann's Open Faced Twice Baked Potatoes",
-      description: 'Delicious twice-baked potatoes with healthy toppings.',
-      servings: 'Coming Soon',
-      category: 'mains',
-      tags: ['Coming Soon'],
-      prepTime: 'Coming Soon',
-      difficulty: 'Coming Soon',
-      ingredients: ['Recipe coming soon...'],
-      instructions: ['This recipe will be added soon.']
-    },
     {
       id: 28,
       title: 'Jalapeño and Corn Muffins',
