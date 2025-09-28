@@ -1034,7 +1034,7 @@ const Recipes = () => {
       servings: "1",
       difficulty: "Beginner",
       source: "Rebellious Aging 6/12/2025",
-      category: "mains",
+      category: "salads",
       tags: ['Lunch', 'Dinner', 'Oil-Free', 'Raw', 'Quick', 'High-Protein', 'Gluten-Free'],
       ingredients: [
         "BUILDING BLOCKS FOR YOUR REBEL BOWL:",
