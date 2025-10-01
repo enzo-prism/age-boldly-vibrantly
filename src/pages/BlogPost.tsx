@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import calorieDensityChart from '@/assets/calorie-density-chart.png';
 
 const BlogPost = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -744,6 +745,14 @@ const BlogPost = () => {
             Whole grains & legumes 400-600 calories/lb.<br />
             Animal products and processed 1,200-4,000
           </p>
+          
+          <div className="my-8 flex justify-center">
+            <img 
+              src={calorieDensityChart} 
+              alt="Calorie density comparison chart showing vegetables at 100 calories per pound, fruits at 300 calories per pound, whole grains at 400-600 calories per pound, and animal products and processed foods at 1,200-4,000 calories per pound"
+              className="max-w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
           
           <p>
             Therefore, the higher the calorie density, the easier it is to take in excess calories long before your body signals fullness.
