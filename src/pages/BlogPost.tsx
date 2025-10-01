@@ -3016,7 +3016,7 @@ const BlogPost = () => {
                   Blog 22
                 </span>
               </div>
-              <h1 className="text-4xl font-bold mb-4">If Not Now, When? New Beginnings are up to YOU</h1>
+              <h1 className="text-4xl font-bold mb-4">If Not Now, When?</h1>
               <p className="text-xl opacity-90">
                 Rebellious Aging is about refusing to settle for bland and daring to choose NOW
               </p>
@@ -3025,7 +3025,7 @@ const BlogPost = () => {
             <div className="p-8 space-y-8">
               <section>
                 <p className="text-lg text-gray-600 mb-6 italic">
-                  "Have you ever scrolled through your feed, half distracted, when a phrase suddenly leaps out and grabs you by the collar? That's what happened to me the other day with these four words: 'If not now, when?'"
+                  Have you ever scrolled through your feed, half distracted, when a phrase suddenly leaps out and grabs you by the collar? That is what happened to me the other day with these four words, "If not now, when?"
                 </p>
                 <p className="text-gray-600 mb-4">
                   It stopped me cold.
@@ -3038,75 +3038,47 @@ const BlogPost = () => {
               <div className="bg-red-50 border border-red-200 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-red-800 mb-2">The Hard Truth</h3>
                 <p className="text-red-700">
-                  Autopilot might keep you coasting, comfortable, and even safe, BUT it also keeps you stuck.
+                  But here's the hard truth, autopilot might keep you coasting, and comfortable, and even safe, BUT, it also keeps you stuck.
                 </p>
               </div>
 
               <section>
                 <h2 className="text-2xl font-bold mb-4 text-gray-800">What is Rebellious Aging?</h2>
                 <p className="text-gray-600 mb-4">
-                  In my mind, Rebellious Aging is about refusing to settle for bland, or the "too late for me" story. It's about daring to choose NOW, ME, and an exciting future. (Remember, refuse to let the old lady in).
+                  In my mind, Rebellious Aging is about refusing to settle for bland, or the "too late for me" story. It is about daring to choose NOW, ME, and an exciting future. (Remember, refuse to let the old lady in).
                 </p>
                 <p className="text-gray-600 mb-4">
-                  Every plant-powered meal is a choice for vibrancy tomorrow. Setting boundaries and speaking up builds the muscle of self-belief, and choosing color, sparkle and play in how you present yourself shifts your energy and how people see you.
-                </p>
-                <p className="text-gray-600 mb-4">
-                  This is not about chasing youth. It's about claiming the fullness of life that is still in front of you today.
+                  Every plant powered meal is a choice for vibrancy tomorrow. Setting boundaries and speaking up builds the muscle of self belief, and choosing color, sparkle and play in how you present yourself shifts your energy and how people see you. This is not about chasing youth. It is about claiming the fullness of life that is still in front of you today.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">Breaking the "Too Late" Lie</h2>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">The "Too Late" Lie</h2>
                 <p className="text-gray-600 mb-4">
-                  One of the greatest lies we tell ourselves is "it's too late." You know, too late to change our health, too late to reinvent our style, too late to say NO or YES. But here's the TRUTH: You only ever have one moment to work with. And that moment is NOW.
+                  One of the greatest lies we tell ourselves is "it is too late." Ya know, too late to change our health, too late to reinvent our style, too late to say NO or YES. But here's the TRUTH. Y'all only ever have one moment to work with. And that moment is NOW. I challenge you to seize this moment, with eyes wide open and begin to make your dreams a reality. One small change at a time.
                 </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Let's Explore Some Ideas</h2>
                 <p className="text-gray-600 mb-4">
-                  I challenge you to seize this moment, with eyes wide open and begin to make your dreams a reality. One small change at a time.
+                  What is one thing you've been putting off because you think it is too late? What tiny step can you take today to improve your health, confidence or style or any dream you are dreaming. (Please email me and let's discuss the possibilities. suz@rebelwithsuz.com).
                 </p>
               </section>
 
               <div className="bg-teal-50 border border-teal-200 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-teal-800 mb-4">What Would Shift If You Stopped Waiting?</h3>
-                <p className="text-teal-700 mb-3">
-                  What's one thing you've been putting off because you think it's too late? What tiny step can you take today to improve your health, confidence, style, or any dream you're dreaming?
-                </p>
-                <p className="text-teal-700 text-sm">
-                  (Please email me and let's discuss the possibilities: suz@rebelwithsuz.com)
+                <h3 className="text-xl font-bold text-teal-800 mb-4">WHAT WOULD SHIFT if you stopped waiting and started choosing?</h3>
+                <p className="text-teal-700">
+                  Motivation is not waiting for the perfect moment, it is created in the moment. By choosing a "spark" today, you create more fuel for tomorrow.
                 </p>
               </div>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">Motivation Through the Rebellious Aging Lens</h2>
-                <p className="text-gray-600 mb-4">
-                  Motivation is not waiting for the perfect moment—it's created in the moment. By choosing a "spark" today, you create more fuel for tomorrow.
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-blue-800 mb-2">Intrinsic Motivation</h4>
-                    <p className="text-blue-700">
-                      Doing something because it feels good, meaningful, or aligns with who you are. For example, choosing plants because they give you energy to sparkle.
-                    </p>
-                  </div>
-                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-orange-800 mb-2">Extrinsic Motivation</h4>
-                    <p className="text-orange-700">
-                      Doing something for an outside reward or to avoid pain. For example, eating well because your doctor said you should.
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-gray-600 mb-4">
-                  Rebellious Aging leans into intrinsic motivation. Finding joy, self-expression, and personal rebellion in health, confidence, and style. This is what lasts.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">Resources to Help You Begin</h2>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Resources to Help You Begin Your New Adventure</h2>
                 <div className="space-y-4">
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-green-800 mb-2">BJ Fogg's Behavior Model (Stanford)</h4>
-                    <p className="text-green-700 mb-2">Motivation + ability + a trigger = action</p>
+                    <h4 className="font-semibold text-green-800 mb-2">BJ Fogg's, Behavior Model (Stanford)</h4>
+                    <p className="text-green-700 mb-2">Motivation + ability + a trigger = action.</p>
                     <p className="text-green-600 text-sm">behaviormodel.org</p>
                   </div>
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
@@ -3115,21 +3087,55 @@ const BlogPost = () => {
                     <p className="text-purple-600 text-sm">jamesclear.com</p>
                   </div>
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-yellow-800 mb-2">Self-Determination Theory</h4>
+                    <h4 className="font-semibold text-yellow-800 mb-2">Deci & Ryan 1985-present</h4>
                     <p className="text-yellow-700 mb-2">True motivation flourishes when we feel autonomy (choice), competence (capability), and connection (community)</p>
                     <p className="text-yellow-600 text-sm">selfdeterminationtheory.org</p>
                   </div>
                 </div>
               </section>
 
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Motivation through the Rebellious Aging Lens</h2>
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-blue-800 mb-2">Intrinsic motion</h4>
+                    <p className="text-blue-700">
+                      Intrinsic motion is doing something because it feels good, meaningful or aligns with who you are. For example choosing plants because they give you energy to sparkle.
+                    </p>
+                  </div>
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-orange-800 mb-2">Extrinsic motion</h4>
+                    <p className="text-orange-700">
+                      Extrinsic motion is doing something for an outside reward or to avoid pain. For example eating well because your doctor said you should.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-gray-600 mb-4">
+                  Rebellious Aging leans into intrinsic motivation. You know what I mean, right? Finding joy, self expression, and personal rebellion in health, confidence and style. This is what lasts.
+                </p>
+                
+                <p className="text-gray-600 mb-4">
+                  Motivation is the bridge between thinking about change and actually living it. The autopilot way of life feels safe because it requires no motivation but also delivers no sparkle.
+                </p>
+                
+                <p className="text-gray-600 mb-4 font-semibold">
+                  So therefore: # Motivation = The Spark Behind Action.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">So ask yourself, "if not now, when?"</h2>
+                <p className="text-gray-600 mb-4">
+                  Rebels do not wait for the perfect moment, they create it. They choose plants over autopilot, boldness over complacency, sparkle over safe.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  So take this as your nudge, your reminder, your invitation. Because rebels do not coast. They choose, they sparkle and they thrive.
+                </p>
+              </section>
+
               <div className="bg-gradient-to-r from-teal to-teal-dark text-white p-6 rounded-lg text-center">
-                <h3 className="text-2xl font-bold mb-4">NOW IS YOUR MOMENT</h3>
-                <p className="text-lg mb-2">
-                  Rebels don't wait for the perfect moment—they create it.
-                </p>
-                <p className="text-lg">
-                  They choose plants over autopilot, boldness over complacency, sparkle over safe.
-                </p>
+                <h3 className="text-2xl font-bold mb-4">NOW IS YOUR MOMENT.</h3>
               </div>
 
               <ConnectCTA />
