@@ -2838,26 +2838,22 @@ const BlogPost = () => {
             
             <div className="p-8 space-y-8">
               <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-red-800 mb-2">Shocking Statistics</h3>
+                <h3 className="text-xl font-bold text-red-800 mb-2">Shocking Truth</h3>
                 <p className="text-red-700">
-                  Did you know that more than HALF of the average American diet comes from ultra-processed food (UPF)? 
-                  <strong> 70-73% of the U.S. food supply is classified as ultra-processed.</strong>
+                  Did you know that more than <strong>HALF</strong> of the average American diet comes from ultra-processed food (UPF), (junk food?)
                 </p>
               </div>
 
               <section>
                 <h2 className="text-2xl font-bold mb-4 text-gray-800">What Are Ultra-Processed Foods?</h2>
                 <p className="text-gray-600 mb-4">
-                  Here is a solid, evidence-based definition of Ultra-Processed Food from NOVA, a food classification system often used in nutrition. Ultra-processed foods (UPFs) are industrial formulations made mostly or entirely from substances extracted from foods (oils, fats, sugar, starch proteins) or derived from food constituents (hydrogenated fats, modified starch) or synthesized in laboratories (flavor enhancers, colorings, emulsifiers, preservatives).
-                </p>
-                <p className="text-gray-600 mb-4">
-                  They contain little or NO intact whole food and are designed to be convenient, hyperpalatable (addictive) and profitable. As you can see, UPFs are not really food—they are chemical formulas created in factories, stuffed with additives, engineered for shelf life and "bliss point" flavor.
+                  Here is a solid, evidence-based definition of Ultra-Processed Food from (NOVA) a food classification system often used in nutrition. Ultra-processed foods (UPF's) are industrial formulations made mostly or entirely from substances extracted from foods (oils, fats, sugar, starch proteins, or derived from food constituents (hydrogenated fats, modified starch) or synthesized in laboratories (flavor enhancers, colorings, emulsifiers, preservatives). They contain little or NO intact whole food and are designed to be convenient, hyperpalatable (addictive) and you guessed it, PROFITABLE. As you can see UPF's are not really food, they are chemical formulas. They are created in factories, stuffed with additives, engineered for shelf life and "bliss point" flavor. They are more chemistry than nourishment.
                 </p>
                 
                 <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-4">
-                  <h4 className="font-semibold text-orange-800 mb-2">Examples of Ultra-Processed Foods:</h4>
+                  <h4 className="font-semibold text-orange-800 mb-2">Examples:</h4>
                   <p className="text-orange-700">
-                    Packaged snacks, sodas, instant noodles, frozen dinners, candy bars, flavored yogurts, processed meats, coffee creamers, alcohol mixers, and many ice cream treats.
+                    Packaged snacks, sodas, instant noodles, frozen dinners, candy bars, flavored yogurts, and processed meats, coffee creamers, alcohol mixers, and many ice cream treats to name a few.
                   </p>
                 </div>
               </section>
@@ -2867,65 +2863,124 @@ const BlogPost = () => {
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
                     <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
-                    UPFs make up nearly half of all grocery food purchases and over ⅓ of beverage purchases
+                    <span><strong>70-73%</strong> of the U.S. food supply is classified as ultra-processed. <em>(Northeastern University Network Science Institute and Food Tank using the same data)</em></span>
                   </li>
                   <li className="flex items-start">
                     <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
-                    Around 58% of staples in U.S. leading supermarkets are ultra-processed
+                    <span>UPF's make up nearly <strong>half of all grocery food purchases</strong>, and over <strong>⅓ of beverage purchases</strong>. <em>(Global Food Research Program)</em></span>
                   </li>
                   <li className="flex items-start">
                     <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
-                    Ultra-processed foods equal 55% of U.S. diets. For kids? 62%
+                    <span>Around <strong>58%</strong> of staples in U.S. leading supermarkets are ultra processed, which is higher than a comparable measure in Europe.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
-                    UPFs now make up 54% of calories consumed at home
+                    <span>Ultra-processed foods equal <strong>55%</strong> of U.S. diets. Kids? <strong>62%</strong> <em>(CDC)</em>. Here is the kicker: processed food plus animal products equal <strong>ZERO FIBER</strong>. Fiber is only found in plants and it's your guts best friend.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-teal text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">•</span>
+                    <span>Even at home, UPF's are on the rise. Now making up <strong>54%</strong> of calories of food consumed at home, while minimally processed foods are steadily declining <em>(Johns Hopkins Public Health)</em>.</span>
                   </li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">Why Processed Foods Pack on the Pounds</h2>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">The Animal Products Connection</h2>
                 <p className="text-gray-600 mb-4">
-                  You've heard it before: "Calories are calories." Except they're not. A groundbreaking NIH trial (2019) gave participants diets matched for calories, sugar, fat, and fiber. When eating ultra-processed foods, participants ate 500 more calories per day and gained weight. On unprocessed diets, they lost weight without even trying.
+                  While not identical, processed foods and many animal products share traits that work against our health.
                 </p>
-                <p className="text-gray-600 mb-4">
-                  Because processed foods are engineered to be hyper-palatable and easy to overeat, they bypass satiety signals, leaving you hungry for more. Whole foods, due to fiber content, take longer to chew, digest more slowly, and leave you satisfied.
+                <ul className="space-y-2 text-gray-600 ml-6 list-disc">
+                  <li>They are high in saturated fat.</li>
+                  <li>Overly processed.</li>
+                  <li>Loaded with preservatives and salt.</li>
+                  <li>Diluted nutrient value.</li>
+                  <li><strong>Fiber Free</strong></li>
+                </ul>
+                <p className="text-gray-600 mt-4">
+                  Both animal products and processed foods completely lack fiber. Fiber is only found in plants and it is essential for gut health, satiety, stable blood sugar and lowering cholesterol.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold mb-4 text-gray-800">What Your Body Actually Craves</h2>
                 <p className="text-gray-600 mb-4">
-                  Your body is NOT craving additives or flavor enhancers. It's asking for:
+                  Your body is NOT CRAVING additives or flavor enhancers. No it is not. It is asking for:
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-green-800 mb-2">Plant Proteins</h4>
-                    <p className="text-green-700">Beans, lentils, and soy for muscle building and repair</p>
+                    <h4 className="font-semibold text-green-800 mb-2">Protein</h4>
+                    <p className="text-green-700">From beans, lentils and soy</p>
                   </div>
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <h4 className="font-semibold text-blue-800 mb-2">Omega-3 Fatty Acids</h4>
-                    <p className="text-blue-700">Flax, chia, and walnuts to quiet inflammation</p>
+                    <p className="text-blue-700">Flax, chia and walnuts to quiet inflammation</p>
                   </div>
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
                     <h4 className="font-semibold text-purple-800 mb-2">Antioxidants</h4>
-                    <p className="text-purple-700">Colorful fruits and veggies to fight oxidative stress</p>
+                    <p className="text-purple-700">From colorful fruits and veggies to fight oxidative stress</p>
                   </div>
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                     <h4 className="font-semibold text-yellow-800 mb-2">Fiber</h4>
-                    <p className="text-yellow-700">Essential for gut health and microbiome balance</p>
+                    <p className="text-yellow-700">Necessary for gut health and microbiome balance</p>
                   </div>
                 </div>
+                <p className="text-gray-600 mb-4">
+                  Read <strong>Fiber Fueled</strong> by Dr Will Bulsiewicz. <a href="http://theplantfedgut.com" target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">theplantfedgut.com</a>. In addition your body needs micronutrients like magnesium, zinc, calcium and vitamins that whole foods deliver naturally.
+                </p>
+                <p className="text-gray-600">
+                  Ultra-processed foods often come fortified but that is like "taping the roof back on after a storm. Whole foods provide the full package your body needs, wants and recognizes and knows how to use.
+                </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">Reclaiming Energy and Healthspan</h2>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Why Processed Foods Pack on the Pounds</h2>
                 <p className="text-gray-600 mb-4">
-                  Ultra-processed foods often come fortified, but that's like "taping the roof back on after a storm." Whole foods provide the full package your body needs, wants, recognizes, and knows how to use.
+                  You have heard it before: "Calories are calories." <strong>Except they are not.</strong> A groundbreaking NIH trial (2019) gave participants diets matched for calories, sugar, fat, and fiber. When eating ultraprocessed foods, participants ate <strong>500 more calories per day</strong> and gained weight. On unprocessed diets, they lost weight without even trying.
                 </p>
-                <p className="text-gray-600">
-                  When you choose plants over processed, you're not just avoiding harm—you're actively choosing vitality, energy, and long-term health. Your body will thank you with clearer thinking, better sleep, and the kind of energy that makes you feel truly alive.
+                <p className="text-gray-600 mb-4">
+                  Because processed foods are engineered to be hyper-palatable, and easy to overeat, they bypass satiety signals, leaving you hungry for more. On the other hand, whole foods due to the fiber content take longer to chew, digest more slowly and leave you satisfied.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Your Brain Connection is Hijacked by Flavor Labs</h2>
+                <p className="text-gray-600 mb-4">
+                  It is not just your waistline, UPF's target your brain's reward system, lighting up dopamine receptors much like addictive substances are known to do.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">SPARKLE LONGER</h2>
+                <p className="text-gray-600 mb-4">
+                  Here at Rebellious Aging we do not just want to live longer, we want to <strong>SPARKLE LONGER</strong>. Escaping the ultra-processed trap is about reclaiming energy, confidence, and healthspan. It is about eating in a way that helps us move, laugh, and thrive into our 70's, 80's and beyond.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Practical Steps to Escape the Trap</h2>
+                <p className="text-gray-600 mb-4">
+                  So my dear Rebel, I suggest you:
+                </p>
+                <ul className="space-y-2 text-gray-600 ml-6 list-disc">
+                  <li>Shop the perimeter of the grocery store (fruits, veggies, grains and legumes)</li>
+                  <li>Cook at home, even simple meals can outshine packaged ones</li>
+                  <li>Swap an apple for a granola bar, hummus instead of ranch dip, oats instead of a sugary cereal</li>
+                  <li>Best to eat whole foods, foods with ingredients you recognize, and remember to read labels</li>
+                </ul>
+              </section>
+
+              <div className="bg-teal/10 border border-teal/20 rounded-lg p-6">
+                <p className="text-gray-700 text-lg mb-4">
+                  Ultra-processed foods may be convenient, but they steal from your health. Whole foods on the other hand give back with energy, and resilience.
+                </p>
+                <p className="text-gray-700 font-semibold">
+                  Read, <strong>"Ultra-Processed People"</strong> by Chris Van Tulleken
+                </p>
+              </div>
+
+              <section>
+                <p className="text-xl text-gray-700 font-medium text-center">
+                  So step out of the trap, <strong>Eat Whole, Live Whole.</strong>
                 </p>
               </section>
 
@@ -2933,7 +2988,7 @@ const BlogPost = () => {
 
               <div className="bg-gray-100 p-6 rounded-lg text-center">
                 <p className="text-lg font-medium text-gray-700">
-                  Eat Whole, Live Whole,<br />
+                  With love, laughter and leafy greens,<br />
                   Suz
                 </p>
               </div>
