@@ -641,10 +641,48 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">Critical Thinking: Your Secret Weapon for Rebellious Aging</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>The wellness industry is full of noise, trends, and questionable advice.</p>
-          <p>Your secret weapon? Critical thinking.</p>
-          <p>Question everything. Demand evidence. Trust science. That's how rebels stay sharp.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Critical Thinking is the rebel's power move. It is the ability to pause, question, and separate truth from noise. So instead of blindly accepting what you are told, ask: What's the evidence? Who benefits if I believe this? That is where the freedom and sparkle live.
+          </p>
+          
+          <p>
+            Mel Robbins says, "Your brain is wired to protect you, not propel you. Brene' Brown adds,"Curiosity is a superpower." Together, they remind us that curiosity and courage are the engines of sharp thinking and vibrant living.
+          </p>
+          
+          <p>
+            This is all so empowering to me. How about you?
+          </p>
+          
+          <p>
+            Here is how I feel critical thinking fuels my pillars.
+          </p>
+          
+          <p>
+            <strong>Healthspan</strong><br />
+            Don't fall for every shiny health fad. Critical thinking leads you back to what is proven. In my case embracing a WFPB lifestyle, daily movement and sustainable choices. (Again let me add here that I am sharing what works for me, maybe it will work for you. I am not here to arm wrestle you to believe what I believe, I am here to share my story and plant a seed.) The rest is up to you. No judgement here at all. YOU DO YOU! Do your own research, figure it out, do not follow blindly. I am sharing great resources to help you find YOUR own way. Oh, and always be ready for adjustments and change. Science is a moving, runaway train, never to be stopped. Stay alert.
+          </p>
+          
+          <p>
+            <strong>Confidence</strong><br />
+            Critical thinking is the filter between society's noise and your own truth. That voice whispering, "You're too old. Is it true, or is it cultural conditioning? By questioning limiting beliefs you reclaim your voice and your confidence. Mel Robbins teaches that courage grows through action, but critical thinking tells you what actions matter most. Confidence grows when you can say: "I have examined the options, and I chose what is right for me." Please use critical thinking to cut through limiting beliefs and RECLAIM SELF-TRUST.
+          </p>
+          
+          <p>
+            <strong>Unapologetic Style</strong><br />
+            Fashion rules say, dress your age. Rebels say, dress your JOY. Critical thinking gives you the freedom to decide what feels authentic and fabulous. At the least, remember to look your very best every day. "Look your best. Feel your best. Be unstoppable. Because showing up beautifully for yourself is the ultimate act of grace".) Even if it is just you and the dog. Know that critical thinking does not make you cynical. It makes you curious. Big difference. And Curiosity keeps you vibrant, alive, and rebelliously radiant.
+          </p>
+          
+          <p>
+            <strong>Want to dig deeper?</strong><br />
+            The Five Second Rule, Mel Robbins, melrobbins.com<br />
+            Dare to Lead, Brene' Brown, brenebrown.com
+          </p>
+          
+          <p>
+            Age Boldly, Live Loudly,<br />
+            Suz
+          </p>
         </div>
 
         {nextPost && (
