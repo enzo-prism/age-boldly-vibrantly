@@ -1064,10 +1064,45 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">Are Boundaries a Love Language of Sorts?</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Setting boundaries isn't selfish—it's self-respect.</p>
-          <p>When you protect your time, energy, and values, you're saying "I matter" loud and clear.</p>
-          <p>Boundaries are how you love yourself well. And that, rebels, is the ultimate act of care.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>The Summer of 2025 has been one long crash course in awkward situations. Some mine, some borrowed from others, but all pointing to one glaring truth, I NEED BOUNDARIES. Watching people I care about struggle to set them, and knowing my own anxiety as I tried and sometimes succeeded but more often than not I failed miserably, showed me just how messy and necessary this work really is. Then on my morning walk today, a thought hit me, what if boundaries are actually a love language? Rather than walls to shut people out, but bridges to keep love, respect and sanity flowing.</p>
+          
+          <p>So let's back up for a moment and ask, what exactly are boundaries and why do we need them?</p>
+          
+          <p>Boundaries are the invisible lines that define where you end and the world begins. They are your "Velvet Rope", an invitation-only entrance into your emotional, mental, and physical space. They are not about pushing people out, they are about keeping you standing tall.</p>
+          
+          <p>I have decided that boundaries are necessary, I am sure you agree. But, darn, they are trouble to set up and implement.. Without boundaries, life becomes a free for all, and guess who gets the short end of the stick? YOU. ME.</p>
+          
+          <p>Boundaries are not ageist or elitist. Nope they are for every human who wants peace, dignity and joy. If someone tells you that they do not need boundaries, well, chances are they are benefitting from you not having any.</p>
+          
+          <p>Here are some reasons why you should "bother" setting boundaries.</p>
+          <p>*They honor your time and energy.</p>
+          <p>*They prevent burnout and resentment.</p>
+          <p>*They teach others how you want to be treated.</p>
+          
+          <p>I think many avoid creating boundaries out of fear. Yes, fear of conflict, fear of being selfish, fear of not being liked. In the end boundaries don't make you less lovable. They make you more authentic.</p>
+          
+          <p>Boundaries actually sparkle. They clearly say, "I value me." People know where they stand. You have more energy and less drama. I think Brene' Brown (<a href="https://brenebrown.com/about/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://brenebrown.com/about/</a>) says it well. "Boundaries are a prerequisite for compassion and empathy. We can't connect, unless we are clear about where we end and they begin."</p>
+          
+          <p>I think setting boundaries is difficult especially for those of us who have been conditioned to say yes. There can be, will be, often is, pushback. Not everyone will "clap" over your new rules. Oh boy, and then there is the, "be nice voice in your head", that one, for sure, will not quiet easily.</p>
+          
+          <p>But here is the Rebel twist, the discomfort of setting boundaries is nothing compared to the misery of living without them. (Read that one again).</p>
+          
+          <p>I have learned so much from the following three amazing teachers.</p>
+          
+          <p><strong>Mel Robbins</strong> (<a href="https://www.melrobbins.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.melrobbins.com</a>), Mel's viral, "LET THEM THEORY" IS the ultimate boundary hack. Someone flakes? Let them.  Someone gossips? Let them. It is not your job to control other people. It is your job to control your response. This is so cool, so when you pair "Let Them" with "Let Me" as in, let me decide who I want to be and what I will accept. Now the magic, the boundaries shift from scary to empowering.</p>
+          
+          <p><strong>Brene' Brown</strong> (brenebrown.com), People with strong boundaries do not apologize for protecting their peace, resting, or saying "no" when they mean it.</p>
+          
+          <p><strong>Jay Shetty</strong> (<a href="https://jayshetty.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">jayshetty.com</a>) preaches that boundaries are not selfish, rather they are love in action. He and his wife have a firm rule, no work talk at dinner. Sacred time, sacred energy. Boundaries keep love alive because they build respect. Jay says you are NOT responsible for carrying other people's feelings on your back.</p>
+          
+          <p>So what do you think? Are Boundaries a Love Language of Sorts? We usually think of love languages as  sweet gestures, words of affirmation,  acts of service, gifts, touch or quality time. Here is the rebel truth, boundaries are a love language too. A love language to yourself, a radical act of self respect. To others, boundaries teach people how to treat you, they remove the guesswork. In relationships they are love in action, protecting intimacy and sacred time. Across generations, boundaries don't just protect your energy, they deepen your capacity to love. Yes they say that you can love fiercely without disappearing into someone else's needs.</p>
+          
+          <p>Rebels know every strong "no" is actually a braver, louder, "yes" to the relationships that matter most.</p>
+          
+          <p>So here's the deal, Rebels. Boundaries are not about pushing people away. They are about keeping yourself intact. They are the difference between living drained and living daringly. The beauty of aging rebelliously is that we finally get to drop the guilt, ditch the "good girl" script, and stand tall in our own space. Every "no" you speak is actually a louder "yes" to your health, joy and peace. So go ahead and draw the line, shut the door, or leave it wide open when it feels right. Boundaries are not barriers. They are the sparkle lines that make your life shine brighter.</p>
+          
+          <p>Sparkle on my dear Rebels.</p>
         </div>
 
         {nextPost && (
