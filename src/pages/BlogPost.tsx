@@ -720,15 +720,17 @@ const BlogPost = () => {
 
           <p>Motivation is not waiting for the perfect moment, it is created in the moment. By choosing a "spark" today, you create more fuel for tomorrow.</p>
 
-          <p>Check out these resources to help you begin your new adventure.<br />
-          BJ Fogg's, Behavior Model (Stanford) behaviormodel.org Motivation + ability + a trigger =action.</p>
+          <p>Check out these resources to help you begin your new adventure.</p>
+
+          <p>BJ Fogg's, Behavior Model (Stanford) behaviormodel.org Motivation + ability + a trigger =action.</p>
 
           <p>James Clear, Atomic Habits, jamesclear.com  Motivation follows action. Even tiny rebellious steps.</p>
 
           <p>Deci & Ryan 1985-present. True motivation flourishes when we feel autonomy (choice), competence (capability), and connection (community) selfdeterminationtheory.org.</p>
 
-          <p>Motivation through the Rebellious Aging Lens.<br />
-          Intrinsic motion is doing something because it feels good, meaningful or aligns with who you are. For example choosing plants because they give you energy to sparkle.</p>
+          <p>Motivation through the Rebellious Aging Lens.</p>
+
+          <p>Intrinsic motion is doing something because it feels good, meaningful or aligns with who you are. For example choosing plants because they give you energy to sparkle.</p>
 
           <p>Extrinsic motion is doing something for an outside reward or to avoid pain. For example eating well because your doctor said you should.</p>
 
@@ -736,7 +738,7 @@ const BlogPost = () => {
 
           <p>Motivation is the bridge between thinking about change and actually living it. The autopilot way of life feels safe because it requires no motivation but also delivers no sparkle.</p>
 
-          <p>So therefore: # Motivation = The Spark Behind Action.</p>
+          <p>So therefore: Motivation = The Spark Behind Action.</p>
 
           <p>So ask yourself, "if not now, when?"</p>
 
