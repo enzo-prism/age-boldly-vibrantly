@@ -50,10 +50,187 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">The Rebellious Guide (What is on Your Plate)</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>What's on your plate is more than just food—it's a declaration of how you choose to live.</p>
-          <p>Every meal is an opportunity to rebel against autopilot living and choose vibrant health.</p>
-          <p>This guide will help you understand the power of plant-based nutrition and how it fuels a rebellious, thriving life.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Let's set the table for something deliciously different.
+          </p>
+          
+          <p>
+            I am excited to talk with you about something that has transformed my life. It is the Whole Food Plant Based (WFPB) lifestyle. Yup, not a diet but a lifestyle, for health and vitality with the added bonus of your body automatically regulating your weight if you follow the science.
+          </p>
+          
+          <p>
+            My goal is not to preach or persuade, but to create awareness that this powerful, evidence based way of eating exists. Hey, it might just be the missing piece that you have been looking for.
+          </p>
+          
+          <p>
+            No judgement here, just a big open heart and a sincere desire to share what I have learned, offer you clear, accurate information, and point you toward the science so you can explore for yourself. This is your invitation to pull up a chair and dig into the facts, rebelliously, of course.
+          </p>
+          
+          <p>
+            So whether you're just nibbling at the idea or ready to dive fork first into this lifestyle, remember, knowledge is power.
+          </p>
+          
+          <p>
+            Let's rebel against confusion. Let's begin with a list of definitions before we dig deep, so that we are all on the same page. Clarity is power.
+          </p>
+          
+          <p>
+            When you understand what is really on your plate, you can make choices that fuel your vitality, confidence, and health.
+          </p>
+          
+          <p>
+            Let's rebel against confusion, reclaim our health, and rediscover joy in eating.
+          </p>
+          
+          <p>
+            Sparkle on, Rebels. The revolution is deeeelish.
+          </p>
+          
+          <p className="text-xl font-semibold mt-8">
+            The Rebellious Guide to What is on Your Plate.
+          </p>
+          
+          <p>
+            <strong>Simple Carbohydrates</strong><br />
+            These are fast-burning carbs made of just one or two sugar molecules. They digest quickly, give you a quick spike of energy, and soon after comes the CRASH!<br />
+            Think Candy, sodas, pastries, white bread, sugary cereals and much more. They are like fireworks. They are bright and sparkly and exciting. They are over in a flash.
+          </p>
+          
+          <p>
+            <strong>Complex Carbohydrates</strong><br />
+            These take longer to digest because they're made of longer sugar chains. That means more stable blood sugar, lasting energy and a happier digestive system.<br />
+            Think, sweet potatoes, oats, brown rice, lentils, quinoa, veggies beans and much more.<br />
+            They are like a slow burning candle, steady, warm, filling and reliable.
+          </p>
+          
+          <p>
+            <strong>Vegetarian</strong><br />
+            No meat, poultry or fish. You can include eggs, dairy, cheese and processed foods.<br />
+            Think, cheese pizza, veggie lasagna, yogurt parfaits.
+          </p>
+          
+          <p>
+            <strong>Vegan</strong><br />
+            No animal products at all. No meat, no dairy, no eggs, no honey.
+          </p>
+          
+          <p>
+            <strong>Whole Food Plant Based (WFPB)</strong><br />
+            Focuses on whole, minimally processed plant foods. Fruits, veggies, grains, beans, legumes, nuts, seeds. No meat, dairy, eggs, oils, sugar or heavily processed products.<br />
+            Think of nourishing your body for health, vitality and sparkle.
+          </p>
+          
+          <p>
+            <strong>Quick Recap</strong><br />
+            Vegetarian=no meat<br />
+            Vegan= no meat, no animal products<br />
+            WFPB=Plants
+          </p>
+          
+          <p>
+            <strong>Macronutrients</strong><br />
+            The big three your body needs in large amounts<br />
+            Carbohydrates, Proteins, Fats<br />
+            Think, the main event on your plate.
+          </p>
+          
+          <p>
+            <strong>Micronutrients</strong><br />
+            Vitamins and minerals your body needs in tiny amounts to function well.<br />
+            Think of the behind the scenes crew making the show run smoothly.
+          </p>
+          
+          <p>
+            You need both to sparkle inside and out!
+          </p>
+          
+          <p className="text-lg font-semibold mt-6">
+            Different Types of Fasting
+          </p>
+          
+          <p>
+            <strong>Intermittent Fasting (IF)</strong><br />
+            Eat during a set window (e.g., 16:8, 14:10, 12:12).
+          </p>
+          
+          <p>
+            <strong>5:2 Fasting.</strong> Eat normally for 5 days, restrict calories for two non consecutive days.
+          </p>
+          
+          <p>
+            <strong>Time Restricted Eating</strong><br />
+            Eat in the daylight. Early dinner, no late snacks.
+          </p>
+          
+          <p>
+            <strong>Prolonged Fasting</strong><br />
+            Fast 24 hours or longer. Only under medical guidance.
+          </p>
+          
+          <p>
+            <strong>Modified Fasts</strong><br />
+            Eat very small amounts to mimic fasting benefits ( usually Therapeutic).
+          </p>
+          
+          <p>
+            NOTE: Fasting is not about punishment. It is about pause and purpose.
+          </p>
+          
+          <p className="text-lg font-semibold mt-6">
+            WFPB vs Top Diet Trends
+          </p>
+          
+          <p>
+            <strong>Keto:</strong> High fat, low carb, heavy on meat and oils. Quick weight loss results, but lacks fiber and long term benefits.
+          </p>
+          
+          <p>
+            <strong>Paleo:</strong> Whole foods, but excludes legumes and grains. Leans on animal products.
+          </p>
+          
+          <p>
+            <strong>Mediterranean:</strong> Balanced, plant leaning, includes fish and oils.
+          </p>
+          
+          <p>
+            <strong>WFPB:</strong> All plants, no oil, no sugar, no salt, no processed foods. Based on science built for longevity and healing.
+          </p>
+          
+          <p>
+            Note: Fad diets chase results. WFPB builds a healthy, confident life.
+          </p>
+          
+          <p>
+            <strong>Gut Health: Your Secret Garden</strong><br />
+            Support it with fiber, fermented foods ,and plant variety. Avoid processed foods, sugars, oils and animal fats. Think of your gut like a garden, nurture it with whole plants.
+          </p>
+          
+          <p>
+            <strong>Label Reading for Rebels</strong><br />
+            Watch for added sugars, oils, sodium, artificial ingredients. Choose short clean ingredient lists you recognize
+          </p>
+          
+          <p>
+            Note: If it reads like a science project, maybe it belongs in the lab, not your kitchen.
+          </p>
+          
+          <p>
+            I hope this helps to clarify misconceptions.
+          </p>
+          
+          <p>
+            Let's rebel against confusion, reclaim our health, and rediscover joy in eating one bite at a time.
+          </p>
+          
+          <p>
+            Sparkle on Rebels. The Revolution is delicious.
+          </p>
+          
+          <p>
+            With Love, Laughter and Leafy Greens,<br />
+            Suz
+          </p>
         </div>
 
         {nextPost && (
