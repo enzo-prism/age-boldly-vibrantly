@@ -1205,10 +1205,84 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">Eat the Olive, Not the Oil</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Olive oil might be trendy, but olives themselves are where the magic is.</p>
-          <p>Whole foods deliver fiber, nutrients, and satisfaction that oils simply can't match.</p>
-          <p>Skip the bottle. Grab the whole food. Your body knows the difference.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Oil has a shiny reputation. Olive oil, avocado oil, coconut oil, you have seen them all and others marketed as "healthy fats". The truth is oil is oil. Ok some oils might be worse than others but NO Oil is healthy.
+          </p>
+          
+          <p>
+            At its core, oil is pure fat. EVERY oil, (olive, canola, coconut, avocado, etc.) packs a whopping 4,000 calories per pound. Compare that to veggies at 100 calories per pound, or fruits at 300 calories per pound), and you can see how quickly oil can add excess calories without filling you up. Oh and it is not just the calories. Oil is a processed food stripped of fiber, protein and most nutrients. When olives, corn, coconuts, or seeds are pressed into oil, almost everything that made them nourishing is removed. What's left? Empty calories with a halo of marketing.
+          </p>
+
+          <p>
+            <strong>Interesting fact:</strong> It takes approximately 18-20 olives to produce one tablespoon of olive oil.
+          </p>
+
+          <p>
+            <strong>Rebel Cheat Sheet: Calories per Pound</strong><br />
+            Vegetables: 100 calories per pound<br />
+            Fruits: 300 calories per pound<br />
+            Beans/Legumes: 500-600 calories per pound<br />
+            Whole Grains: 500-600 calories per pound<br />
+            Nuts/seeds: 2,500-3,000 calories per pound<br />
+            Oil: 4000 calories per pound
+          </p>
+
+          <p>
+            Eat the olive, not the oil. The olive gives you fiber, vitamins, minerals and antioxidants. The oil gives you, OIL. The same goes for corn(corn oil vs. whole corn), coconuts (coconut oil vs. coconut meat), or sunflower seeds (sunflower oil vs. seeds). I think you are getting the message. When you choose the whole food you're getting the full package of nutrition that nature intended.
+          </p>
+
+          <p>
+            Even the much praised olive oil is NOT a whole food. It is calorie dense and nutrient poor compared to eating actual olives. For anyone dealing with cholesterol or heart disease, even small amounts of oil can be harmful.
+          </p>
+
+          <p>
+            The better option? Enjoy healthy sources of whole fats, avocados, seeds, and nuts. If you are watching cholesterol, keep those in check also. For omega 3s, the best WFPB choice is ground flaxseed sprinkled on your meal.
+          </p>
+
+          <p>
+            <strong>Dr Greger:</strong> <a href="https://nutritionfacts.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">nutritionfacts.org</a>
+          </p>
+
+          <p>
+            <strong>Dr Esselstyn:</strong> <a href="https://www.dresselstyn.com/site/no-oil-not-even-olive-oil/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">No Oil -- Not Even Olive Oil! - Caldwell Esselstyn MD</a>
+          </p>
+
+          <p>
+            <strong>Dr Neal Barnard:</strong> <a href="https://www.youtube.com/watch?v=LbtwwZP4Yfs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">New Concerns About Olive Oil | Dr. Neal Barnard | The Exam Room Podcast</a>
+          </p>
+
+          <p>
+            <strong>So what about cooking? Without oil, of course.</strong>
+          </p>
+
+          <p>
+            <strong>Cooking without oil, Rebel style.</strong><br />
+            Saute with broth, wine or water.<br />
+            Roast veggies on parchment paper or silicone baking mats.<br />
+            Make creamy dressings from blended cashews, or pureed beans.<br />
+            Use nut butters or avocados for richness in sauces.
+          </p>
+
+          <p>
+            Rebellious Aging isn't about trendy "superfoods." It is about choosing whole foods that nourish, energize, and keep us sparkling strong. Oil does NOT make the cut because it is calorie dense, nutrient poor and a whole food.
+          </p>
+
+          <p>
+            So next time you're tempted by that shiny bottle, remember: Eat the Olive, not the Oil. Your body (and your sparkle) will thank you.
+          </p>
+
+          <p>
+            Replace the word "EAT" with the word "Nourish" and see how your perspective changes.
+          </p>
+
+          <p>
+            With love, laughter and leafy greens,
+          </p>
+
+          <p>
+            Suz
+          </p>
         </div>
 
         {nextPost && (
