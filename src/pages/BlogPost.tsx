@@ -771,12 +771,59 @@ const BlogPost = () => {
         <div className="mb-4">
           <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 23}</span>
         </div>
-        <h1 className="text-4xl font-bold mb-8">Optimal Aging: As Seen Through the Lens of Princeton Professor Colleen Murphy</h1>
+        <h1 className="text-4xl font-bold mb-8">Optimal Aging (As seen through the lens of a conversation between journalist Paul Von Zielbauer and Princeton Professor and author Colleen Murphy)</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>What does it mean to age optimally? According to leading researchers like Princeton's Dr. Colleen Murphy, it's about cellular health, lifestyle choices, and longevity strategies.</p>
-          <p>Science is clear: how you age is largely within your control.</p>
-          <p>Optimal aging isn't luck—it's intentional living.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>If you have been following me for a while you know I refuse to age quietly. For me aging is intentional, aging is active, and if you let 'it', downright sparkly. Recently I stumbled on a conversation between journalist Paul Von Zielbauer and Colleen Murphy, author of How We Age. (How We Age on Amazon | Amazon.com® Official Site) Their exchange distilled the science of aging into practical, surprising and sometimes, myth busting tips. To me it felt like a roadmap for rebels who refuse to coast into their later years on autopilot.</p>
+          
+          <p>The conversation centers around non-negotiables and debunking food myths and concludes with potential new tools. Like EXERCISE IS NOT OPTIONAL, SLEEP is YOUR OVERNIGHT CLEANING CREW and FOOD FADS, MYTHS and TRUTHS and WHAT'S ON THE HORIZON.</p>
+          
+          <p><strong>Exercise is NOT optional.</strong> It is the #1 longevity tool we have. Colleen Murphy emphasizes strength training. Ya know, push, pull, squat, lift. Muscles do not just move us, they release chemicals that fuel brain health, support mitochondria, and help us stay sharp. Think of every lunge and curl as a deposit in your future vitality bank.</p>
+          
+          <p><strong>Sleep deprivation doesn't just make us cranky, it DAMAGES THE BRAIN.</strong> During deep sleep, your brain literally takes out the trash, flushing toxins that build up during the day. Most of us need 7-8 hours of sleep (sorry, four hour sleepers, you are rare unicorns). Think of sleep as your overnight spa treatment for both body and brain.</p>
+          
+          <p><strong>Caloric Restriction (CR).</strong> In lab animals, eating less extends lifespan. But in humans? Murphy calls it "a terrible way to live".</p>
+          
+          <p><strong>Intermittent Fasting (IF).</strong> Trendy, yes. Effective? The jury is out. While some see benefits, others risk muscle loss. Monitoring what you eat, choosing whole, fiber rich foods, may work just as well without side effects.</p>
+          
+          <p>How about this: Replace the word Eat with the word NOURISH and see how your perspective changes.</p>
+          
+          <p>We all want to stay sharp, but Murphy points out that brain games often only make you better at brain games. Doing crosswords helps with crosswords, not necessarily memory. Instead movement, quality sleep and social connection are more powerful protectors against cognitive decline. So don't just exercise your brain, it's much better to exercise your whole body.</p>
+          
+          <p><strong>Here are some things you might be interested in as the science of aging is buzzing with potential new tools.</strong></p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>GLP-1 drugs, like Ozempic, which are used for diabetes and weight loss, may carry aging benefits also.</li>
+            <li>Metformin, the TAME trial is studying the common diabetes drug for its anti aging potential.</li>
+            <li>Rapamycin ('Raplogs') may mimic the effects of caloric restriction without the misery.</li>
+          </ul>
+          
+          <p>Instead of chasing pills and potions, we can lean on what Dr. Esselstyn calls the body's "remarkable healing capacity" when fueled by plants. Dr. T. Colin Campbell's research confirms it: whole, plant based foods, regular movement, and restorative sleep do more to protect and energize us than any chemical fix. These simple, powerful and sustainable choices are the real horizon of healthy aging.</p>
+          
+          <p><strong>Rebel's Guide to Starting Today</strong></p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Add one strength workout per week</li>
+            <li>Protect your sleep, treat it like a non-negotiable meeting.</li>
+            <li>Eat foods that come from nature, not a factory.</li>
+            <li>Stay curious, social, grateful, and joyful.</li>
+          </ul>
+          
+          <p>Colleen Murphy's research confirms what many of us rebels already sense: aging well is not about magic pills or endless deprivation. It is more about AWARENESS, INTENTIONAL daily choices, movement, rest, nourishment, joy and gratefulness. Aging is inevitable.</p>
+          
+          <p><strong>So let's not just age in place. Let's Rebel, Reign and Sparkle.</strong></p>
+          
+          <p>You can access the full article here: <a href="https://agingwithstrength.substack.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">agingwithstrength@substack.com</a></p>
+          
+          <p>What is one "healthspan choice" you will commit to this week, more movement, better sleep, or maybe swapping out a processed snack for something whole and nutritious and delicious.</p>
+          
+          <p><strong>Checkout:</strong></p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><a href="https://dresselstyn.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">dresselstyn.com</a></li>
+            <li><a href="https://nutritionstudies.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">nutritionstudies.org</a></li>
+            <li><a href="https://pcrm.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">pcrm.org</a></li>
+            <li><a href="https://plantstrong.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">plantstrong.com</a></li>
+          </ul>
+          
+          <p><strong>With Love, Laughter, and leafy greens</strong><br />Suz</p>
         </div>
 
         {nextPost && (
