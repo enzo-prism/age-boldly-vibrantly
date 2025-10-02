@@ -219,7 +219,7 @@ const Blog = () => {
       date: '9/10/2025',
       dateSort: new Date('2025-09-10'),
       readTime: '9 min read',
-      blogNumber: 25
+      blogNumber: 24
     }
   ];
 
