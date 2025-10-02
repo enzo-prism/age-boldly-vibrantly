@@ -474,12 +474,46 @@ const BlogPost = () => {
         <div className="mb-4">
           <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 7}</span>
         </div>
-        <h1 className="text-4xl font-bold mb-8">The Art of Thriving: What an Aging Expert Wants You to Know</h1>
+        <h1 className="text-4xl font-bold mb-8">The Art of Thriving. What an Ageing Expert Wants You to Know</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Aging isn't something that happens to you—it's something you actively participate in.</p>
-          <p>The experts agree: what you eat, how you move, and how you think about yourself determines whether you age or thrive.</p>
-          <p>The rebellious choice? Thrive. Always thrive.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>I came across an article in the Guardian this morning and I thought it was worthy of a share. It was written by Dr. Kerry Burnight. I am inspired by Dr. Kerry's wisdom as I feel it aligns with my message here at Rebellious Aging.</p>
+
+          <p>Here is my Blog on her article.</p>
+
+          <p>What if ageing wasn't something to fear, fight, or fix. Rather something to expand into with joy, purpose, and rebellious spark? Dr. Kerry is one of America's leading gerontologists and believes exactly that and as a Rebel I could not agree more.</p>
+
+          <p>In the article, titled "I'm an Expert on Aging. Here is What I Know about Thriving in Later Life," Dr Burnight shares the kind of wisdom that deserves a drumroll, and maybe a dance break.</p>
+
+          <p>Here is what she says we need to do to truly thrive.</p>
+
+          <p><strong>Forget about just adding years to your life (lifespan) or even adding life to your years (healthspan).</strong> Dr. Kerry introduces the reader to a richer, deeper concept. Joyspan. Which is living with connection, purpose, and the kind of soul deep contentment that makes aging feel like a privilege, not a penalty.</p>
+
+          <p>Now that is rebellious.</p>
+
+          <p><strong>Here are her essentials, they are not optional.</strong></p>
+
+          <p><strong>Keep learning.</strong> Stay curious. Try new things. Yes, even if it scares you a little, or a lot.. That is the point. A curious mind keeps us alive, engaged, and fabulously unpredictable.</p>
+
+          <p><strong>Relationships are the elixir.</strong> Whether it's rekindling old friendships, hugging tighter, or even starting new connections online, being seen and known matters.</p>
+
+          <p><strong>Change is a constant companion in later life.</strong> The key? Flexibility. Grace. Maybe even a sense of humor, when gravity starts getting sassy.</p>
+
+          <p><strong>Your life experience has value.</strong> Share it. Mentor, support, volunteer, or simply smile at someone who looks lost. Giving adds meaning and texture to our days.</p>
+
+          <p>Dr. Burnright paints a vivid contrast between two women. One is resigned to decline, the other is lit up with curiosity and confidence. The difference was not luck or money. It was Mindset.</p>
+
+          <p>Reading this article reminded me that the work we are doing here, embracing radiant health, confidence and unapologetic style, is not superficial. It's survival. It's joy. It's rebellion.</p>
+
+          <p>To grow, connect, adapt, and give, that 's what we Rebels do best.</p>
+
+          <p>Not sure where to begin? Start with one tiny act of rebellion. Try something new. If you need a little nudge, I've got your back. Reach out and join our community.</p>
+
+          <p><strong>Feeling inspired?</strong> For the next seven days, choose one small action to grow, connect, adapt or give. Keep a note, share your favorite moment. Let joy surprise you.</p>
+
+          <p><a href="https://www.theguardian.com/commentisfree/ng-interactive/2025/jul/18/best-ageing-advice-expert-tips#:~:text=Thriving%20doesn't%20mean%20being,the%20quality%20of%20their%20lives." target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Read the full Guardian article here</a></p>
+
+          <p><strong>Sparkle on, Rebels</strong></p>
         </div>
 
         {nextPost && (
