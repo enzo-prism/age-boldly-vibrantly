@@ -1308,10 +1308,66 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">Less Salt, More Sparkle</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Too much salt dulls your taste buds—and your health.</p>
-          <p>But cutting back doesn't mean bland food. It means discovering the natural flavors you've been missing.</p>
-          <p>Less salt, more life. More sparkle.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Let's be honest: salt has been riding high on its reputation as the magic dust that makes food taste better. It's in shakers on your table, sprinkled across Instagram food shots, and dressed up as "Himalayan pink" or "sea harvested artisan crystals." Very fancy marketing, but let's cut through the hype, Salt is Salt. If you crave vitality, not sluggishness, it is time to ask the tough question, what's all that sprinkling doing to your sparkle?
+          </p>
+
+          <p>
+            <strong>How Much is Enough?</strong><br />
+            WHO: &lt;2,000 mg sodium/day<br />
+            AHA: Best under 1500 mg/day, max 2,300 mg/day<br />
+            WFPB: Skip the shaker, plants will provide all you need.<br />
+            The less you shake on, the brighter your health shines.
+          </p>
+
+          <p>
+            Too much sodium does more than make you thirsty, it raises blood pressure, strains your kidneys, dulls your taste buds, and contributes to stomach cancer risk. Over salting quietly steals your healthspan.
+          </p>
+
+          <p>
+            So cut back (eliminate added salt) and protect your heart and arteries, give your kidneys a break, retrain your taste buds to savor natural flavors, kick bloating to the curb and add vibrant years to your health span.
+          </p>
+
+          <p>
+            So let's talk about salt types. Ya know, pink salt, sea salt, Kosher salt, etc. Don't be fooled (for the most part) by marketing sparkle. <strong>Salt is Salt.</strong>
+          </p>
+
+          <p>
+            <strong>Flavor does not need a shaker.</strong> Use your imagination. Try garlic, onion, ginger, chili flakes. Fresh herbs like basil, cilantro, and mint. Use citrus and vinegars for brightness and nutritional yeast for a savory kick.
+          </p>
+
+          <p>
+            <strong>NOTE:</strong> Potassium based salt substitutes exist, but they are not for everyone. (Please check with your doctor before going down this path especially if you have kidney issues or take certain meds).
+          </p>
+
+          <p>
+            <strong>Can you get too little salt?</strong> It's rare. Unless you are an extreme athlete sweating buckets, or under medical restriction, your daily plant based meals cover your sodium needs naturally. True deficiency is uncommon.
+          </p>
+
+          <p>
+            From The National Library of Medicine, the following are some of the vegetables that cover your sodium needs. Celery, chard, olives, beets, seaweed, peas, dry roasted nuts, chick peas, bran, sweet corn, artichoke, broccoli, radish, sweet potato, kale, brussels sprouts…, I think you get the idea. Just eat a variety.
+          </p>
+
+          <p>
+            <a 
+              href="https://nutritionfacts.org/topics/salt/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-coral hover:text-coral-dark underline"
+            >
+              nutritionfacts.org/salt
+            </a>
+          </p>
+
+          <p>
+            "Less Salt, More Sparkle", is not just a slogan, it is a lifestyle. Flavor with plants not crystals.
+          </p>
+
+          <p>
+            <strong>With love, laughter and leafy greens,<br />
+            Suz</strong>
+          </p>
         </div>
 
         {nextPost && (
