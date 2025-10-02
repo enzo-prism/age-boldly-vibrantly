@@ -983,10 +983,62 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">WFPB Lifestyle Book Recommendations</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Knowledge is power, and these books are your roadmap to a thriving plant-based life.</p>
-          <p>From the science behind nutrition to practical meal planning, these reads will inspire and equip you for the journey ahead.</p>
-          <p>Ready to dive in? Your next favorite book is waiting.</p>
+        <div className="prose max-w-none space-y-6 mb-16">
+          <div className="space-y-2">
+            <p><strong>Dr. T Colin Campbell</strong></p>
+            <p>The China Study <a href="https://www.amazon.com/China-Study-Comprehensive-Nutrition-Implications/dp/1932100660" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.amazon.com/China-Study-Comprehensive-Nutrition-Implications/dp/1932100660</a></p>
+            <p>Whole <a href="https://www.amazon.com/Whole-Rethinking-Nutrition-Colin-Campbell/dp/1939529840" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.amazon.com/Whole-Rethinking-Nutrition-Colin-Campbell/dp/1939529840</a></p>
+            <p>The Future of Nutrition <a href="https://www.amazon.com/Whole-Rethinking-Nutrition-Colin-Campbell/dp/1939529840" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.amazon.com/Whole-Rethinking-Nutrition-Colin-Campbell/dp/1939529840</a></p>
+          </div>
+
+          <div className="space-y-2">
+            <p><strong>Dr. Caldwell Esselstyn</strong></p>
+            <p>Prevent and Reverse Heart Disease</p>
+            <p>drcaldwellesselstyn.org  All books are available on this website.</p>
+          </div>
+
+          <div className="space-y-2">
+            <p><strong>Dr. Michael Greger</strong></p>
+            <p>How Not to Die</p>
+            <p>Nutritionfacts.org  All books available here.</p>
+          </div>
+
+          <div className="space-y-2">
+            <p><strong>Dr. Neal Barnard (Physicians Committee For Responsible Medicine)</strong></p>
+            <p>pcrm.org All of his books are available on this site.</p>
+            <p>Dr. Neal Barnard's Program for Reversing Diabetes</p>
+            <p>Foods That Cause You to Lose Weight: The Negative Calorie Effect</p>
+            <p>Reversing Diabetes: The Scientifically Proven System for Reversing Diabetes Without Drugs</p>
+            <p>Foods That Fight Pain: New Stratagies for Maximum Pain Relief</p>
+            <p>The Vegan Starter Kit: Everything You Need to Know About Plant-Based Eating</p>
+            <p>The Cheese Trap: How Breaking a Surprising Addiction Will Help You Lose Weight,Gain Energy and Get Healthy</p>
+            <p>Breaking The Food Seduction: The Hidden Reasons Behind Food Cravings, and 7 Steps to End Them Naturally</p>
+            <p>Your Body in Balance:The New Science of Hormones and Health</p>
+          </div>
+
+          <div className="space-y-2">
+            <p><strong>Dr. Will Bulsiewicz</strong></p>
+            <p>Fiber Fueled, The Plant Based Gut Health Program for Losing Weight, Restoring Your Health, and Optimizing Your Microbiome</p>
+            <p>theguthealthmd.org</p>
+          </div>
+
+          <div className="space-y-2">
+            <p><strong>Goodbye Autoimmune Disease, Goodbye Lupus</strong></p>
+            <p>Dr. Cyrus Khambatta, PhD, Roby Barbaro, MPH</p>
+            <p>Mastering Diabetes, The Revolutionary Method to Reverse Insulin Resistance Permanently.</p>
+          </div>
+
+          <div className="space-y-2">
+            <p><strong>Chef AJ</strong></p>
+            <p>The Secrets to Ultimate Weight Loss</p>
+            <p>chefaj.com</p>
+          </div>
+
+          <div className="space-y-2">
+            <p><strong>Rachael Brown</strong></p>
+            <p>For Forks Sake , A Quick GUIDE TO HEALING YOURSELF AND The Planet Through A Plant Based Diet</p>
+            <p><a href="https://www.amazon.com/Forks-Sake-Healing-Yourself-Plant-Based/dp/B0B8G2G8FW" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.amazon.com/Forks-Sake-Healing-Yourself-Plant-Based/dp/B0B8G2G8FW</a></p>
+          </div>
         </div>
 
         {nextPost && (
