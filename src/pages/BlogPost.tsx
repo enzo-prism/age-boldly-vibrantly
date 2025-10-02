@@ -618,10 +618,36 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">It's Time to Set the Record Straight Regarding a Whole Food Plant Based Lifestyle</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Let's clear up the myths: A whole-food plant-based lifestyle isn't restrictive, boring, or extreme.</p>
-          <p>It's abundant, delicious, and backed by science.</p>
-          <p>It's time to stop listening to the noise and start trusting the evidence—and your body.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>Let's be honest. When you mention to other humans that you are eating mostly plants, the reactions range from curious to downright skeptical. The first question is usually about where do you get your protein? Followed by, isn't it expensive? Followed by the statement, Sounds like a lot of work.</p>
+
+          <p>I know you have been wondering the same. These are my most asked questions. These myths have been around longer than tofu has been on supermarket shelves. Here's the truth. A whole Food Plant Based (WFPB) lifestyle is not extreme, it is evidence-based, empowering, simple, delicious, life changing, health changing, weight changing and doable at any age.</p>
+
+          <p><strong>Let's Clear the Air.</strong></p>
+
+          <p><strong>Where do you get your protein?</strong> Duh, Simple answer: the same place the animal you just ate got their protein. PLANTS! Plants have plenty of protein. Here's a short list in no special order: peanut butter, soy milk, oat milk, lentils, beans, tofu, edamame, quinoa, oats, green peas, split peas, potatoes, kale, spinach and broccoli are all solid sources. Most Americans actually consume too much protein (A Future Blog). Checkout, NutritionFacts.org/protein</p>
+
+          <p><strong>It's Too Expensive.</strong> Not if you do not want it to be. Just like anything else you have choices. Beans, rice, potatoes, oats, frozen veggies and in season produce are some of the cheapest and most nutritious foods on the planet. Whole Foods for the win!</p>
+
+          <p><strong>It takes too much time to prepare.</strong> Again just like with the Standard American Diet (SAD) you have choices. If you are making an Instagram worthy Buddha bowl or Chef Aj's deelish Chocolate Mint Torte, maybe. (chefaj.com) WFPB can be as fast as an unglamorous but nutritious Buddha bowl, as fast as a bowl of chili, or a roasted sweet potato on a bed of greens smothered with your choice of an assortment of veggies topped with a great balsamic or salsa. Frozen veggies equal time saving brilliance. I am having a love affair with organic frozen kale and wild blueberries. Simple as simple is and quicker and healthier than take out. Replace the word EAT with Nourish, for the win.</p>
+
+          <p><strong>It is ONLY for Young People.</strong> Actually the older we get, the more our bodies benefit from nutrient rich, anti-inflammatory foods. Aches, energy dips, blood pressure spikes? Plants for the win.</p>
+
+          <p><strong>I Will Feel Deprived.</strong> Deprived of what, heartburn? Joint pain? Meds? Autoimmune Disease? Heart Disease. The truth is, many people discover more flavor, satisfaction, and joy in their meals when they go plant based. Your gut microbiome celebrates, your taste buds evolve, your energy returns, your weight stabilizes, your blood flows and your confidence blooms. Aging with grace and greens for the win.</p>
+
+          <p>You have nothing to lose and so much to gain. You do not have to know everything to get started. You just have to be open. The WFPB lifestyle is not about perfection it is about progress and possibilities. And trust me, your body will thank you.</p>
+
+          <p><strong>From Dr. T. Colin Campbell,</strong> A good diet is THE most powerful weapon against disease and sickness.</p>
+
+          <p>Rebel on, eat well, and remember, you've got this.</p>
+
+          <p><strong>Check out the following documentaries:</strong><br/>
+          Forks Over Knives<br/>
+          Game Changers<br/>
+          What the Health<br/>
+          Plant Pure Nation<br/>
+          Fat, Sick and Nearly Dead<br/>
+          You Are What You Eat: A Twin Experiment</p>
         </div>
 
         {nextPost && (
