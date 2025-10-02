@@ -898,10 +898,66 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">The New Classic: Timeless Style with a Rebellious Twist</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Classic doesn't have to mean boring. Timeless doesn't mean invisible.</p>
-          <p>The new classic is about combining elegance with edge, tradition with a twist.</p>
-          <p>It's wearing what makes you feel like yourself—confidently, unapologetically, and with a little sparkle.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>Fashion legends like Coco Channel, Christian Dior, and Yves St Laurent gave the world timeless rules for elegance. As rebels we just give these rules a wink and twist them into something uniquely ours. We have lived long enough to know that style is more than clothes. Style is about attitude, confidence, and a refusal to fade quietly into the background.</p>
+
+          <p>So let's stroll down the runway of fashion wisdom from a few of the greats. And let's add our own rebellious twist.</p>
+
+          <p>I love Coco Chanel's life story. So interesting. She believed in timelessness. Ya know the kind of style that feels right no matter the decade.<br/>
+          So keep those timeless pieces if you have them or grab them second hand if you are lucky. But do not let them get dusty. That classic black Chanel jacket? Pair it with ripped jeans and leopard print sneakers. Chanel and pearls…..yummy. Layer those pearls with chunky chains. Remember style does not mean predictable.<br/>
+          Shop vintage. So good.</p>
+
+          <p>These sassy quotes from Coco, are priceless.</p>
+
+          <p>"A girl should be two things:classy and fabulous." <strong>Coco</strong></p>
+
+          <p>"Fashion changes, but style endures." <strong>Coco</strong></p>
+
+          <p>"Dress shabbily and they remember the dress, dress impeccably and they remember the woman." <strong>Coco</strong></p>
+
+          <p>"In order to be irreplaceable one must always be different." <strong>Coco</strong></p>
+
+          <p>"The most courageous act is still to think of yourself." <strong>Coco</strong></p>
+
+          <p>Coco's influence extended to accessories. She was a pioneer in mixing high and low, introducing the once radical idea of incorporating costume jewelry into her collections.<br/>
+          Embodying her belief that "That a woman should mix fake and real. The point of jewelry is not to make a woman look rich but to adorn her; not the same thing." Chanel blended faux pearls and stones with natural elements, redefining the perception of luxury. (InStyle)</p>
+
+          <p>Dior knew beauty was not about perfection. It was about joy. His distinct style is characterized by romanticism, sophistication, and attention to detail. He is well known for ultra feminine and highly sculpted clothing. This style dominated fashion in the decade following the second world war.</p>
+
+          <p>"Happiness is the secret to all beauty; there is no beauty that is attractive without happiness." <strong>Dior</strong></p>
+
+          <p>"Do not buy much but make sure what you buy is good." <strong>Dior</strong></p>
+
+          <p>So my dear Rebel, wear what makes you feel happy *today*, not what you are used to wearing. If it sparks joy, it belongs on your body, not in a storage bin. Just Do It! Bring the special occasion pieces into everyday life. How about silk to the farmer's market, velvet to coffee with friends.</p>
+
+          <p>Yves Saint Laurent, was renowned for revolutionizing women's fashion. He pushed boundaries by introducing groundbreaking designs like the smoking tuxedo, transparent blouses, switching gender roles and launching ready to wear fashion.</p>
+
+          <p>"Fashion fades, style is eternal" <strong>YSL</strong></p>
+
+          <p>Trends come and go, we are not here to chase every trend.<strong>YSL</strong></p>
+
+          <p>So my dear Rebel, pick the trends you adore and ignore the rest.</p>
+
+          <p>Style is about curating, not conforming.</p>
+
+          <p>Mix eras fearlessly. Your favorite vintage blazer with modern sneakers or a Dior dress with a denim jacket.</p>
+
+          <p>Own your signature, a trademark accessory, a favorite vintage necklace, stylish headband, gorgeous multicolor wrap, favorite scent, attention grabbing earrings, daring and colorful silky top, or your go to jacket that says, "YOU".</p>
+
+          <p>Play with proportion. Try oversized with fitted, flowing structures.</p>
+
+          <p>Play with designs, plaids with polka dots, bright colored animal prints and fabulous vintage bags.</p>
+
+          <p>Tell texture stories. Velvet with denim, silk with leather, linen with chunky knits.</p>
+
+          <p>Above all, make JOY your dress code. If it makes you happy it belongs in your rotation.</p>
+
+          <p>Turn 'special occasion' into 'right now'. Wear silk. Rock the sequins. Strut the velvet.</p>
+
+          <p>In the end style is not about following fashion. It is about owning your story. Curate your closet like you curate your life. Do it with confidence, joy, and a whole lot of rebellion. Show the world your unapologetic self.</p>
+
+          <p>Sparkle on,<br/>
+          Suz</p>
         </div>
 
         {nextPost && (
