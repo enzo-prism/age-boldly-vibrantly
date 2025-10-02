@@ -739,10 +739,31 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">What is Behind Limiting Beliefs?</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Behind every limiting belief is fear—fear of failure, judgment, or the unknown.</p>
-          <p>But behind that fear? A rebel waiting to break free.</p>
-          <p>Understanding where your beliefs come from is the first step to dismantling them.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>The voices that taunt us, saying things like you are too old, or you are not enough, or you'll fail, or they are going to laugh at you, are not a mystical curse.</p>
+
+          <p>Here is the science behind it,</p>
+
+          <p><strong>The Brain's Built in Alarm System</strong><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We evolved to survive, not to shine. Your brain's primary job is to detect threats, like embarrassment, failure, or rejection. So when you think about doing something bold or unfamiliar (like starting a YouTube channel at 83) your brain may shout out, hold on, stay safe. This is just your amygdala doing its job. Helpful? Typically not.</p>
+
+          <p>(Your amygdala is a small part of your brain, but it has a big job. It is a major processing center for emotions. It also links your emotions to many other brain abilities. It is a part of the larger network called the limbic system. These are parts of your brain that detect danger. They also play a role in behavior, emotional control and learning. Clevelandclinic.org.)</p>
+
+          <p><strong>The Inner Critic is a Learned Voice</strong><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Most of those critical thoughts are formed in childhood and reinforced over time. Psychologists call this internalized messaging, ideas you absorbed from your parents, teachers, peers, media and society. Messages like, don't draw attention to yourself, act your age, you are not the creative one. These become part of your subconscious belief system, repeated so often they feel like truth. But they are not true or even close. They are simply just well worn-mental grooves.</p>
+
+          <p>Your subconscious belief systems are deeply ingrained, often unexamined, and can significantly influence thoughts, behaviors, and even physical health. These beliefs, formed in early childhood and beyond, operate largely outside of conscious awareness and can drive actions, shape interpretations of experiences and create self limiting patterns. Understanding and potentially modifying these beliefs can be a key component of personal growth and positive change. psychologytoday.com , see article, "Are Negative Core Beliefs Wrecking Your Life".</p>
+
+          <p><strong>Default Mode Network (DMN)</strong><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the brain network that lights up when you are not focused on a task. Like when you are daydreaming, remembering, or self reflecting. It is also where self critical chatter can thrive. When the DMN is overactive, it can fuel anxious or negative inner dialogue.</p>
+
+          <p>Good news? Practices like mindfulness, journaling, and cognitive reframing help quiet this network and strengthen more empowering thoughts.</p>
+
+          <p><strong>Bottom Line:</strong><br/>
+          Those taunting voices in your head are a mix of subconscious programming, outdated survival wiring, and cultural conditioning. THEY ARE NOT YOU. You are the observer, the awareness, the Rebel who gets to decide which thoughts are welcome and WHICH NEED TO PACK THEIR BAGS AND MOVE ON.</p>
+
+          <p>Sparkle on,<br/>
+          Suz</p>
         </div>
 
         {nextPost && (
