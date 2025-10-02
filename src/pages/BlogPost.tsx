@@ -496,12 +496,41 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">A Love Letter to My Closet</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Dear Closet,</p>
-          <p>You've been my silent witness through seasons of change, holding more than just clothes—you hold stories, transformations, and the courage to show up as myself.</p>
-          <p>You've taught me that what we wear isn't superficial—it's how we honor ourselves, express our truth, and step into each day with intention.</p>
-          <p>Thank you for reminding me that style is rebellion, self-expression is power, and authenticity never goes out of fashion.</p>
-          <p>With love and sparkle,<br />Suz</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>There was a time I dressed to impress. Now? I dress to express.</p>
+
+          <p>My closet is no longer a holding pen for solid black. (A guy I worked for once told me, if you want to be taken seriously in this biz, wear black, to say that had an impression on me is an understatement). But truth be known I expect black is the "little black power move of the color world". I drank the Kool Aid and for many years wore black, ONLY. My philosophy has always included, "if a little is good, a lot is better."</p>
+
+          <p>My closet is no longer a holding pen for black. It is my personal gallery of courage, mood and sometimes sequins. You will spot bright scarves, leopard and zebra prints, bright pink heels, my favorite red party skirt, shirts of many colors, some of which sparkle bright. A shelf of colorful hats, crazy socks, bright purses and chunky colorful jewelry. I am working toward breaking up with black, one step at a time. However, it is a slow agonizing break up because black has so much to give: check this out, after much pondering and thoughtfulness and questioning friends, I came up with a Pro Black List.</p>
+
+          <p>
+            <strong>I am in charge.</strong><br />
+            <strong>I've got mystery - and I am keeping some for myself</strong><br />
+            <strong>I am deliberate</strong><br />
+            <strong>I am here to focus</strong><br />
+            <strong>I know my power and I do not need to shout.</strong><br />
+            Hmmmmmmmm?
+          </p>
+
+          <p>This post is a letter to that space, a different time, the jackets that carry memories, the scarves that still smell faintly of old adventures, the shoes that remind me who I was (and still am, just a newer version). It's about the joy of reaching for a piece that makes me feel like me, and the quiet confidence that comes from showing up in something that whispers, "I've still got it but in a sassy classy way."</p>
+
+          <p>I have lived long enough to know the fashion rules, and to BREAK them all. White after Labor Day, of course. Florals and stripes, so good. Red lipstick, a favorite silk blouse with jeans, sneakers and a baseball cap, classy redefined. Why not? Rebels radiate.</p>
+
+          <p>At 83, I no longer wonder, "Can I pull this off?" Instead I wonder? "Do I feel like myself in this and especially spectacular"? If the answer is yes, on, it goes.</p>
+
+          <p>But here's the thing, I didn't just stumble into enjoying fashion. I have been intrigued since I was a little girl. There is a difference, you already know this, between FASHION and STYLE. I think unknowingly I chased the latter.</p>
+
+          <p>I recall being in 7th grade. I only had a few clothing items. I loved creating new outfits from what I had. I enjoyed reinventing what hung in my closet. I would find ways to tweak, change, and reinvent each piece to feel new. The day I used my dad's bright red plaid robe belt and proudly tied it around my waist to change the look of the "same old" was a day I will always remember. The compliments flew and I became unstoppable. It wasn't about labels or trends, it was about attitude, imagination and sass.</p>
+
+          <p>A few months ago, someone dear to me said, in conversation, "Well, you have your own unique style, it's easy for you." I was shocked. At 83, it had never dawned on me that what I'd been doing all of these years, tweaking, layering, adding robe belts like runway sashes, was style. It was not about effortlessness. It was about love.</p>
+
+          <p>So here's my rebellious whisper to you. Don't fade. Don't apologize. Don't tuck yourself into black. Wear the thing you always wanted to wear, the way you want to wear it. The vintage purple hat, the red lipstick, the statement jacket you thought might be "too much". This is your time to SPARKLE, and to radiate unapologetic style.</p>
+
+          <p>Refuse to become invisible. Your closet is a mirror. Let it reflect your energy, your evolution, your essence. Try something unexpected. Let your closet be the playground it was always meant to be.</p>
+
+          <p>What's hanging in your closet that is begging to dance again?</p>
+
+          <p><strong>With Love, Laughter and Leafy Greens,<br />Suz</strong></p>
         </div>
 
         {nextPost && (
