@@ -1128,10 +1128,58 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">Ditch the Sweet Stuff</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Sugar is everywhere—and it's sabotaging your health, energy, and longevity.</p>
-          <p>Ditching refined sugar isn't about deprivation. It's about reclaiming your vitality.</p>
-          <p>Your body—and your future self—will thank you.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Let's be honest, sugar is seductive. There is no upside to sugar.
+          </p>
+          
+          <p>
+            It sneaks into your morning coffee, whispers from your cookie jar, and struts through the grocery store in shiny packaging. Sugar, as sweet and coy, and powerful as it is, is an anti-nutrient. Yup, you heard that right. It has been known to inhibit the absorption of other nutrients. Do not fall into the trap of falling for sugar's buddies, either. You know who I mean, high fructose corn syrup, palm sugar, brown sugar, to name a few and of course there are the chemical sweeteners aspartame, saccharin, sucrose, the list is long. Here's the rebellious truth, sugar is not your friend.
+          </p>
+
+          <p>
+            <strong>Why Ditch It? (You already know, but here is a refresher.)</strong>
+          </p>
+
+          <p>
+            Sugar gives you a quick high, then dumps you in a crash. Overtime, that ride leaves you drained, cranky, and constantly reaching for the next fix.
+          </p>
+
+          <p>
+            Excess sugar stokes the flames of inflammation in your body, fueling everything from joint pain to accelerated aging.
+          </p>
+
+          <p>
+            Sugar hides under dozens of names. Learning to spot it on labels is one of the most rebellious things you can do for your health.
+          </p>
+
+          <p>
+            Too much sugar clouds your memory, fuels cravings, and disrupts sleep. Rebels need clarity, confidence and sparkle, not fog.
+          </p>
+
+          <p>
+            Click here to learn about sugar from Dr. Greger. <a href="https://nutritionfacts.org/topics/sugar/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://nutritionfacts.org/topics/sugar/</a>
+          </p>
+
+          <p>
+            Breaking up with sugar does not mean never enjoying sweetness again. It means choosing whole, plant based foods that fuel your body instead of draining it. Do not underestimate the ability of fresh fruit to satisfy your craving. Dates and date paste will sweeten up baked goods. Check out the offerings from the Date Lady. <a href="https://ilovedatelady.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">ilovedatelady.com</a>
+          </p>
+
+          <p>
+            Rebellious Aging isn't about deprivation. It is about freedom. Freedom from cravings, mood swings, and health risks that sugar drags along with it. By saying No to Sugar, you are saying yes to energy, clarity, and confidence at every age.
+          </p>
+
+          <p>
+            Here's to Rebels who sparkle without the sugar rush.
+          </p>
+
+          <p>
+            With love, laughter and leafy greens.
+          </p>
+
+          <p>
+            Suz
+          </p>
         </div>
 
         {nextPost && (
