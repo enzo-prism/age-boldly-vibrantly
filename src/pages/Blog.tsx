@@ -219,7 +219,7 @@ const Blog = () => {
       date: '9/10/2025',
       dateSort: new Date('2025-09-10'),
       readTime: '9 min read',
-      blogNumber: 24
+      blogNumber: 25
     }
   ];
 
@@ -237,7 +237,11 @@ const Blog = () => {
               to={`/blog/${post.id}`}
               className="block hover:opacity-70 transition-opacity"
             >
-              <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
+              <h2 className="text-2xl font-semibold mb-2">
+                <span className="text-primary font-bold">#{post.blogNumber}</span>
+                {' - '}
+                {post.title}
+              </h2>
               <p className="text-muted-foreground">{post.excerpt}</p>
             </Link>
           </article>

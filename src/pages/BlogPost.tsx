@@ -30,7 +30,7 @@ const BlogPost = () => {
     { id: 'ultra-processed-trap-eat-whole-live-whole', blogNumber: 21, title: 'The Ultra-Processed Trap: Eat Whole, Live Whole' },
     { id: 'if-not-now-when-new-beginnings', blogNumber: 22, title: 'If Not Now, When? New Beginnings are up to YOU' },
     { id: 'optimal-aging-colleen-murphy', blogNumber: 23, title: 'Optimal Aging: As Seen Through the Lens of Princeton Professor Colleen Murphy' },
-    { id: 'calorie-density-secret-seals-deal', blogNumber: 24, title: 'Calorie Density: The Secret That Seals the Deal' }
+    { id: 'calorie-density-secret-seals-deal', blogNumber: 25, title: 'Calorie Density: The Secret That Seals the Deal' }
   ];
   
   // Find current post and next post
@@ -45,6 +45,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 1}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">The Rebellious Guide (What is on Your Plate)</h1>
         
         <div className="space-y-4 mb-16">
@@ -71,6 +74,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 2}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">The Road to Success: 8 Thoughts</h1>
         
         <div className="space-y-6 mb-16">
@@ -136,6 +142,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 3}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">A Quick Introduction and Guide to a Whole-Food Plant-Based (WFPB) Lifestyle</h1>
         
         <div className="space-y-4 mb-16">
@@ -161,6 +170,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 4}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">A Love Letter to My Closet</h1>
         
         <div className="space-y-4 mb-16">
@@ -189,6 +201,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 5}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Blueberries and Wrinkles</h1>
         
         <div className="space-y-4 mb-16">
@@ -215,6 +230,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 6}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Gratitude and the Rebellious Soul</h1>
         
         <div className="space-y-4 mb-16">
@@ -241,6 +259,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 7}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">The Art of Thriving: What an Aging Expert Wants You to Know</h1>
         
         <div className="space-y-4 mb-16">
@@ -267,6 +288,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 8}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">What a Shop Window Taught Me About Aging Gracefully</h1>
         
         <div className="space-y-4 mb-16">
@@ -293,6 +317,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 9}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">It's Time to Set the Record Straight Regarding a Whole Food Plant Based Lifestyle</h1>
         
         <div className="space-y-4 mb-16">
@@ -319,6 +346,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 10}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Shhh…That Voice in Your Head is Not the Boss of You</h1>
         
         <div className="space-y-4 mb-16">
@@ -345,6 +375,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 11}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">What is Behind Limiting Beliefs?</h1>
         
         <div className="space-y-4 mb-16">
@@ -371,6 +404,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 12}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Wearing Who You Are: A Style Rebellion</h1>
         
         <div className="space-y-4 mb-16">
@@ -397,6 +433,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 13}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">The Bold, Sassy Truth About a Whole Food Plant Based Lifestyle</h1>
         
         <div className="space-y-4 mb-16">
@@ -423,6 +462,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 14}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">The New Classic: Timeless Style with a Rebellious Twist</h1>
         
         <div className="space-y-4 mb-16">
@@ -449,6 +491,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 15}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">WFPB Lifestyle Book Recommendations</h1>
         
         <div className="space-y-4 mb-16">
@@ -475,6 +520,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 16}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Are Boundaries a Love Language of Sorts?</h1>
         
         <div className="space-y-4 mb-16">
@@ -501,6 +549,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 17}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Ditch the Sweet Stuff</h1>
         
         <div className="space-y-4 mb-16">
@@ -527,6 +578,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 18}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Eat the Olive, Not the Oil</h1>
         
         <div className="space-y-4 mb-16">
@@ -553,6 +607,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 19}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Less Salt, More Sparkle</h1>
         
         <div className="space-y-4 mb-16">
@@ -579,6 +636,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 20}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Critical Thinking: Your Secret Weapon for Rebellious Aging</h1>
         
         <div className="space-y-4 mb-16">
@@ -605,6 +665,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 21}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">The Ultra-Processed Trap: Eat Whole, Live Whole</h1>
         
         <div className="space-y-4 mb-16">
@@ -631,6 +694,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 22}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">If Not Now, When?</h1>
         
         <div className="prose max-w-none space-y-4 mb-16">
@@ -702,6 +768,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 23}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Optimal Aging: As Seen Through the Lens of Princeton Professor Colleen Murphy</h1>
         
         <div className="space-y-4 mb-16">
@@ -728,6 +797,9 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 25}</span>
+        </div>
         <h1 className="text-4xl font-bold mb-8">Calorie Density: The Secret That Seals the Deal</h1>
         
         <div className="space-y-4 mb-16">
