@@ -789,10 +789,35 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">Wearing Who You Are: A Style Rebellion</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Your style is your statement. It's how you show up in the world before you say a word.</p>
-          <p>Wearing who you are—unapologetically—is an act of rebellion against conformity and invisibility.</p>
-          <p>Dress for yourself. Dress for joy. Dress to sparkle.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>Let's be honest. When it comes to aging and fashion, society tends to hand us a beige cardigan and a pair of sensible shoes and whispers, "Please, just fade away". Gracefully, of course.</p>
+
+          <p>Well thanks, but no thank you.</p>
+
+          <p>Here at Rebellious Aging, we don't tone it down. <strong>WE TURN IT up.</strong><br/>
+          Style isn't about following the rules. It is about expression, freedom, and yes, fun. It's about waking up looking in the mirror and saying, "That's ME, and I like/love what I see."</p>
+
+          <p>Style isn't just surface stuff, it's a mirror into your inner world. The colors you wear, the shapes you choose, the accessories you throw on, the attitude you exude, well, they all tell a story. And you, dear Rebel are the author.</p>
+
+          <p>This is your creation, your calling card, it does not have to make sense to anyone else. It just has to make you feel authentic, proud, and alive.</p>
+
+          <p>Rebellious style is not about trends. (Unless you love them).<br/>
+          It is definitely not about making you look younger. ( You have earned your years, wear them with pride and the sassy unapologetic Rebel you are becoming).</p>
+
+          <p>It is not about dressing age-appropriately (whatever that means).</p>
+
+          <p>But it is the following for sure. Feeling confident in your own skin. Dressing to match your mood. Giving yourself permission to try stuff, to play, to show up at breakfast wearing bright red lipstick. Be authentic, be gorgeous, be unapologetic, be <strong>BOLD</strong>.</p>
+
+          <p><strong>Reminder!</strong> "Don't Let The Old Lady In."</p>
+
+          <p>OK, so, let's start here. What is one item in your closet that feels most like you at the moment?  Pull it out, dust it off, try it on. Wear it this week. Bonus points if it makes you smile when you catch your reflection.</p>
+
+          <p>So if you are ready to rethink your "style story", you are in the right place. We will be talking closet clean outs, joyful dressing, thrifting, upstyling, bold accessories, fab colors and slaying those old rules that say you have to disappear as you age.</p>
+
+          <p>Let's Dazzle Together.</p>
+
+          <p>Sparkle on,<br/>
+          Suz</p>
         </div>
 
         {nextPost && (
