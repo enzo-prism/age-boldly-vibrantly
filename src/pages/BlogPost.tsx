@@ -673,10 +673,47 @@ const BlogPost = () => {
         </div>
         <h1 className="text-4xl font-bold mb-8">Shhh…That Voice in Your Head is Not the Boss of You</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>That voice that says "I'm too old," "It's too late," "I can't"? It's lying.</p>
-          <p>Limiting beliefs are just stories you've repeated so many times you started believing them.</p>
-          <p>Time to rewrite the script. You're not too anything—you're exactly ready.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>Let's get one thing straight. Those whispers in your head, ya know the ones saying you are too old, too late, not stylish enough, not smart enough, unhealthy, horribly out of shape, not ready, they are NOT the truth. (For those who are interested I will dive deeper into the science of who those sneaky voices belong to.) But for now let's go with this. They are old scripts. They are "hand me down" fears. Quite frankly, they are BORING! It is time to stop letting those outdated voices run the show.</p>
+
+          <p>Limiting beliefs are sneaky. They wear disguises like "being realistic" or "just protecting from disappointment." But what they are really doing is shrinking YOU. They are keeping you from saying yes to that art class, trying a new hairstyle, hitting record on that video idea, or ditching making healthier food choices.</p>
+
+          <p>Here is the TRUTH bomb. You do not have to believe every thought you think. May I suggest you read, "Don't Believe Everything You Think" (Why Your Thinking is the Beginning & End Of Suffering) by Joseph Nguyen.</p>
+
+          <p>That voice in your head? It may sound like you, but it is NOT you. It is a collage of old rules, other people's opinions, and moments when your confidence got a bit bruised. You, my friend, are much better than that.</p>
+
+          <p><strong>3 Simple Ways to Start Busting Through Limiting Beliefs.</strong></p>
+
+          <p><strong>Name it to Tame it.</strong><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When a limiting thought pops up, ya know like "I am too old to<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin something new", say it out loud. Hearing it with your<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;real voice often will reveal just how silly or outdated that<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thought is.</p>
+
+          <p><strong>Ask: Would I say this to a friend?</strong><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If your best friend came to you at 55, 65, or 83 saying, "I want<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to try something new," would you ever say, "Nope, too late".<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Of course not. You must treat yourself with the same<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compassion.</p>
+
+          <p><strong>Gather Evidence to the Contrary.</strong><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write down all the times you did try something new and it<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;went superbly. Or at the least, taught you something<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;important.<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You are not starting from scratch. You are starting from<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Experience.</p>
+
+          <p>Here's the thing. Confidence is definitely not about having all of the answers. It is more about trusting yourself enough to take the next step. If your knees are knocking and you are breaking out in a sweat, keep going. The great thing is you can be scared and still be powerful. How about this, "self doubt" can ride along for the journey, but it does not get to drive.</p>
+
+          <p>We Rebels are NOT here to play small.</p>
+
+          <p>We are here to live fully, loudly, and with the kind of sparkle that makes people stop and say, "I want whatever she's got."</p>
+
+          <p><strong>Call to Action:</strong><br/>
+          Is there a limiting belief that haunts you? Let it go. Write it down. Tear it up. Better yet burn it. Then take one rebellious action that proves it wrong. Need a cheerleader? I am here for you.</p>
+
+          <p>Sparkle on,<br/>
+          Suz</p>
         </div>
 
         {nextPost && (
