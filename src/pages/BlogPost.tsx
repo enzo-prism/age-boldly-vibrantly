@@ -410,12 +410,47 @@ const BlogPost = () => {
         <div className="mb-4">
           <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 6}</span>
         </div>
-        <h1 className="text-4xl font-bold mb-8">Gratitude and the Rebellious Soul</h1>
+        <h1 className="text-4xl font-bold mb-8">Gratitude and the Rebellious Soul (The Quiet Superpower)</h1>
         
-        <div className="space-y-4 mb-16">
-          <p>Gratitude isn't passive—it's a rebellious act in a world that profits from dissatisfaction.</p>
-          <p>When you choose to be grateful for your body, your health, your journey, you refuse to buy into the narrative that you're not enough.</p>
-          <p>Rebels know that gratitude and ambition can coexist. You can love where you are and still reach for more.</p>
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>Yesterday when Enzo and I were recording a video about the three pillars of Rebellious Aging, I blurted out, I must include a fourth pillar, gratitude. Enzo agreed and so of course a blog about gratitude must follow my outburst.</p>
+
+          <p>Gratitude is a powerful tool, not just for joy, but for health, confidence, and longevity. It's not just about saying thank you. It is about the way we see the world, and the way we show up in it.</p>
+
+          <p>Gratitude is not passive. It is not just being polite or listing what you are thankful for at Thanksgiving dinner (although that does matter). It is more of a mindset, a way of paying attention to what is good and worthy, even in the midst of chaos, change, or aging knees that creak a little louder each year.</p>
+
+          <p>Real gratitude acknowledges life as it is, while also celebrating what's still possible. It turns "why me?" into "what now?" and "I used to" into "I get to."</p>
+
+          <p><strong>Here is where the sparkle meets the science: practicing gratitude actually rewires your brain.</strong><br />
+          Neuroscientists have found that regularly reflecting on what you are grateful for boosts levels of dopamine and serotonin, the brain's "feel good" chemicals. It even strengthens neural pathways associated with emotional regulation and empathy. In other words: the more you practice gratitude, the more natural it becomes to feel joy and connection and peace.</p>
+
+          <p>A fascinating study from UC Davis found that people who kept a gratitude journal for just ten weeks reported feeling more optimistic, exercising more, and visiting doctors less than those who focused on daily hassles. Yup, that is right, thankfulness might actually be better than a pharmaceutical supplement.</p>
+
+          <p><strong>Gratitude matters, especially as we age.</strong> When we are younger, gratitude often feels like a luxury or is ignored completely. As we age? It becomes a necessity.</p>
+
+          <p>Gratitude anchors us. It softens the sting of loss and aging. It brings perspective to change. It helps us remember we are still here, still learning, still capable, still able to make an impact. Gratitude is an act of rebellion in a world that tells us aging is declining. No way, we are rising with great health, confidence, grace, style and gumption.</p>
+
+          <p><strong>Here are a few ways to infuse more gratitude into your life.<br />
+          (Without Making It a Chore)</strong></p>
+
+          <p><strong>*Before your feet hit the floor, name one thing you are grateful for.</strong> A soft pillow counts. So does waking up.</p>
+
+          <p><strong>*Take a 10 minute stroll and silently thank your body, the trees, the sky or whatever catches your eye.</strong></p>
+
+          <p><strong>* Keep a small notebook by your bed and jot down three things each night that made your day better.</strong></p>
+
+          <p><strong>* Call or text someone and tell them exactly what you appreciate about them.</strong> Don't wait.</p>
+
+          <p><strong>*Annoyed that your joints ache after gardening?</strong> Flip it to "I am grateful, I am strong enough to dig in the dirt and grow beautiful things."</p>
+
+          <p>I think you get the point, right?</p>
+
+          <p>Gratitude is not a trend. It's a transformation. For the rebellious ager, it is one of the most powerful tools in your kit. Not because it is easy, but because it is real. Gratitude grounds you, heals you, and helps you rise.</p>
+
+          <p>So go ahead and make gratitude your daily rebellion. Not just because it is good for your brain (which it is), but because it reminds you how rich your life truly is.</p>
+
+          <p><strong>Sparkle on,<br />
+          Suz</strong></p>
         </div>
 
         {nextPost && (
