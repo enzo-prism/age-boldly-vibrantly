@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -12,8 +12,70 @@ interface QuizSectionProps {
   content: PillarContent;
 }
 
+declare global {
+  interface Window {
+    tf?: {
+      load?: () => void;
+      reload?: () => void;
+    };
+  }
+}
+
 const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
   const { pillarId } = useParams<{ pillarId: string }>();
+  const typeformEmbeds: Record<string, string> = {
+    confidence: '01K7MB2JPFFBBQYR354JVHSAZP',
+    style: '01K7MBJYZ6KNAJAYPS2P1364PN',
+    health: '01K7MBQQJ3SQJKTM3T3SPQKZC3',
+  };
+
+  const typeformId = pillarId ? typeformEmbeds[pillarId] : undefined;
+
+  useEffect(() => {
+    if (!typeformId) return;
+
+    const scriptSrc = "https://embed.typeform.com/next/embed.js";
+    const ensureTypeformLoaded = () => {
+      if (window.tf && typeof window.tf.load === 'function') {
+        window.tf.load();
+      }
+    };
+
+    const existingScript = document.querySelector<HTMLScriptElement>(`script[src="${scriptSrc}"]`);
+
+    if (existingScript) {
+      if (window.tf && typeof window.tf.load === 'function') {
+        ensureTypeformLoaded();
+        return;
+      }
+
+      const handleExistingLoad = () => {
+        ensureTypeformLoaded();
+      };
+
+      existingScript.addEventListener('load', handleExistingLoad, { once: true });
+
+      return () => {
+        existingScript.removeEventListener('load', handleExistingLoad);
+      };
+    }
+
+    const script = document.createElement('script');
+    script.src = scriptSrc;
+    script.async = true;
+
+    const handleNewLoad = () => {
+      ensureTypeformLoaded();
+    };
+
+    script.addEventListener('load', handleNewLoad, { once: true });
+    document.body.appendChild(script);
+
+    return () => {
+      script.removeEventListener('load', handleNewLoad);
+    };
+  }, [typeformId]);
+
   const [formData, setFormData] = useState({
     rating: '',
     challenge: '',
@@ -131,94 +193,106 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
           </p>
           
           <div className="bg-white p-8 rounded-lg shadow-sm">
-            <form onSubmit={handleSubmit}>
+            {typeformId ? (
               <div className="space-y-6">
-                <div>
-                  <label className="block font-medium mb-2">
-                    1. How would you rate your current level of {content.title.toLowerCase()}?
-                  </label>
-                  <div className="space-y-2">
-                    {[1, 2, 3, 4, 5].map((value) => (
-                      <div key={value} className="flex items-center">
-                        <input 
-                          type="radio" 
-                          id={`q1-${value}`} 
-                          name="question1" 
-                          value={value}
-                          checked={formData.rating === value.toString()}
-                          onChange={(e) => setFormData(prev => ({ ...prev, rating: e.target.value }))}
-                          className="mr-3 h-4 w-4 text-teal focus:ring-teal"
-                        />
-                        <label htmlFor={`q1-${value}`}>
-                          {value} - {value === 1 ? 'Very Low' : value === 5 ? 'Very High' : ''}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block font-medium mb-2">
-                    2. What is your biggest challenge related to {content.title.toLowerCase()}?
-                  </label>
-                  <Textarea 
-                    value={formData.challenge}
-                    onChange={(e) => setFormData(prev => ({ ...prev, challenge: e.target.value }))}
-                    rows={4}
-                  />
-                </div>
-                
-                <div>
-                  <label className="block font-medium mb-2">
-                    3. What would improving your {content.title.toLowerCase()} allow you to do or experience?
-                  </label>
-                  <Textarea 
-                    value={formData.goals}
-                    onChange={(e) => setFormData(prev => ({ ...prev, goals: e.target.value }))}
-                    rows={4}
-                  />
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block font-medium mb-2">
-                      Your Name (Optional)
-                    </label>
-                    <Input 
-                      type="text"
-                      value={formData.userName}
-                      onChange={(e) => setFormData(prev => ({ ...prev, userName: e.target.value }))}
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block font-medium mb-2">
-                      Your Email <span className="text-red-500">*</span>
-                    </label>
-                    <Input 
-                      type="email"
-                      value={formData.userEmail}
-                      onChange={(e) => setFormData(prev => ({ ...prev, userEmail: e.target.value }))}
-                      placeholder="Enter your email for personalized follow-up"
-                      required
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-8">
-                <Button 
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-teal hover:bg-teal-dark text-white w-full md:w-auto"
-                >
-                  {isSubmitting ? "Submitting..." : "Submit"}
-                </Button>
-                <p className="text-sm text-muted-foreground mt-3 text-center md:text-left">
-                  Suz will personally review your results and get back to you with personalized advice via email
+                <div
+                  data-tf-live={typeformId}
+                  className="w-full min-h-[600px]"
+                />
+                <p className="text-sm text-muted-foreground text-center">
+                  The self-assessment opens above. Complete the prompts to receive personalized guidance from Suz.
                 </p>
               </div>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <div className="space-y-6">
+                  <div>
+                    <label className="block font-medium mb-2">
+                      1. How would you rate your current level of {content.title.toLowerCase()}?
+                    </label>
+                    <div className="space-y-2">
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <div key={value} className="flex items-center">
+                          <input 
+                            type="radio" 
+                            id={`q1-${value}`} 
+                            name="question1" 
+                            value={value}
+                            checked={formData.rating === value.toString()}
+                            onChange={(e) => setFormData(prev => ({ ...prev, rating: e.target.value }))}
+                            className="mr-3 h-4 w-4 text-teal focus:ring-teal"
+                          />
+                          <label htmlFor={`q1-${value}`}>
+                            {value} - {value === 1 ? 'Very Low' : value === 5 ? 'Very High' : ''}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="block font-medium mb-2">
+                      2. What is your biggest challenge related to {content.title.toLowerCase()}?
+                    </label>
+                    <Textarea 
+                      value={formData.challenge}
+                      onChange={(e) => setFormData(prev => ({ ...prev, challenge: e.target.value }))}
+                      rows={4}
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block font-medium mb-2">
+                      3. What would improving your {content.title.toLowerCase()} allow you to do or experience?
+                    </label>
+                    <Textarea 
+                      value={formData.goals}
+                      onChange={(e) => setFormData(prev => ({ ...prev, goals: e.target.value }))}
+                      rows={4}
+                    />
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block font-medium mb-2">
+                        Your Name (Optional)
+                      </label>
+                      <Input 
+                        type="text"
+                        value={formData.userName}
+                        onChange={(e) => setFormData(prev => ({ ...prev, userName: e.target.value }))}
+                        placeholder="Enter your name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block font-medium mb-2">
+                        Your Email <span className="text-red-500">*</span>
+                      </label>
+                      <Input 
+                        type="email"
+                        value={formData.userEmail}
+                        onChange={(e) => setFormData(prev => ({ ...prev, userEmail: e.target.value }))}
+                        placeholder="Enter your email for personalized follow-up"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <Button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-teal hover:bg-teal-dark text-white w-full md:w-auto"
+                  >
+                    {isSubmitting ? "Submitting..." : "Submit"}
+                  </Button>
+                  <p className="text-sm text-muted-foreground mt-3 text-center md:text-left">
+                    Suz will personally review your results and get back to you with personalized advice via email
+                  </p>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>
