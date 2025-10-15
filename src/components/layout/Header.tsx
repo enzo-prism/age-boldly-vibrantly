@@ -67,6 +67,12 @@ const Header = () => {
           >
             Our Story
           </NavLink>
+          <NavLink 
+            to="/facebook-group" 
+            className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
+          >
+            Facebook Group
+          </NavLink>
 
           <DropdownMenu>
             <DropdownMenuTrigger className="nav-link inline-flex items-center">
@@ -182,7 +188,13 @@ const Header = () => {
                 >
                   Our Story
                 </MobileNavItem>
-
+                <MobileNavItem
+                  to="/facebook-group"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  icon="💬"
+                >
+                  Facebook Group
+                </MobileNavItem>
                 <MobileNavItem
                   to="/welcome-letter"
                   onClick={() => setIsMobileMenuOpen(false)}

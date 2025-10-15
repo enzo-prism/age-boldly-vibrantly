@@ -4,6 +4,49 @@ import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnim
 import { useScrollAnimationTrigger } from '@/hooks/useScrollAnimationTrigger';
 import ConnectCTA from '@/components/common/ConnectCTA';
 
+const suzTimeline = [
+  {
+    year: '1964',
+    title: 'B.A. Biochemistry',
+  },
+  {
+    year: '1998',
+    title: 'Transitioned to a vegetarian lifestyle',
+  },
+  {
+    year: '2018',
+    title: 'Transitioned to a vegan lifestyle',
+  },
+  {
+    year: '2020',
+    title: 'Whole Food Plant Based awakening',
+    description: 'Became deeply curious about how a whole food plant based lifestyle could transform long-term health and vitality.',
+    highlights: [
+      'Documentary: Forks Over Knives',
+      'Books: The China Study (Dr. T. Colin Campbell) & Prevent and Reverse Heart Disease (Dr. Caldwell Esselstyn)',
+      'Transitioned fully to a whole food plant based lifestyle guided by leading research',
+    ],
+  },
+  {
+    year: '2021',
+    title: 'Plant Based Nutrition Certificate, eCornell',
+  },
+  {
+    year: '2021 - Present',
+    title: 'Moderator, Whole Communities, T. Colin Campbell Center for Nutrition Studies',
+  },
+  {
+    year: '2023',
+    title: 'Jay Shetty Certified Life and Success Coach',
+    description: 'Accredited by the Association for Coaches.',
+  },
+  {
+    year: '2024',
+    title: 'Women Rocking Business Graduate & Food and Sustainability Certificate',
+    description: "Completed Sage Lavine's Women Rocking Business course and earned the Food and Sustainability Certificate from the T. Colin Campbell Center for Nutrition Studies.",
+  },
+];
+
 const Movement = () => {
   const heroRef = useScrollAnimation<HTMLElement>({ threshold: 0.3 });
   const { ref: titleRef, isInView: titleInView, getItemStyle } = useStaggeredAnimation<HTMLDivElement>(2, { threshold: 0.5 });
@@ -138,6 +181,66 @@ const Movement = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Suz's CV */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto space-y-10">
+            <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed animate-on-scroll">
+              <div>
+                <p className="text-sm uppercase tracking-[0.3em] text-teal-600 font-semibold mb-2">Suz's CV</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">In Case You Are Curious</h2>
+              </div>
+              <p>My journey has been fuelled by curiosity. Curiosity about how food, mindset, style, and movement shape the way we age and thrive. Over the years, that curiosity led me from a degree in biochemistry to exploring mindfulness, coaching, sustainability, and the power of plants to transform health and confidence.</p>
+              <p>I have spent the past 7 years deeply immersed in reading, listening, studying, and taking courses on the value of a plant-strong lifestyle, blending science, healing compassion, and personal growth.</p>
+            </div>
+
+            <div className="relative">
+              <div className="hidden sm:block absolute left-4 top-0 bottom-0 w-px bg-teal/20" aria-hidden="true" />
+              <ul className="space-y-6 sm:space-y-8">
+                {suzTimeline.map((item, index) => (
+                  <li
+                    key={`${item.year}-${index}`}
+                    className="bg-white border border-teal/20 rounded-lg shadow-sm p-6 sm:p-8 relative animate-on-scroll"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:gap-6">
+                      <div className="flex items-center gap-3 mb-4 sm:mb-0">
+                        <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal/10 text-teal font-semibold">
+                          {index + 1}
+                        </span>
+                        <div>
+                          <p className="text-sm font-semibold text-teal uppercase tracking-wide">{item.year}</p>
+                          <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{item.title}</h3>
+                        </div>
+                      </div>
+                      <div className="flex-1 space-y-3 text-gray-700 text-sm sm:text-base">
+                        {item.description && <p>{item.description}</p>}
+                        {item.highlights && (
+                          <ul className="space-y-2">
+                            {item.highlights.map((highlight, highlightIndex) => (
+                              <li key={highlightIndex} className="flex items-start gap-2">
+                                <span className="mt-1 h-2 w-2 rounded-full bg-teal" />
+                                <span>{highlight}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-5 bg-teal/5 border border-teal/20 rounded-lg p-6 sm:p-8 text-gray-700 text-base sm:text-lg leading-relaxed animate-on-scroll">
+              <p>My adventure continues. I love my work as a moderator at the T. Colin Campbell Center for Nutrition Studies, Whole Communities. I co-host two Zoom events each month: "Getting Your Project Started" with the newly added "Coaches Corner" and "Wisdom in Action" (a group for all members of CNS 70+).</p>
+              <p>Twice a month I post articles in Whole Communities regarding food access and food justice, keeping the conversation grounded in real-world impact.</p>
+              <p>I love to share the transformation I have seen in my own health as I transitioned toward plants. My journey has been long. My slips were abundant, my eventual success astounding. No judgement ever from me. Just a passion to share what I know transformed me into a healthy, lively, vibrant, engaged human. I will point you to science-backed evidence, how to begin the lifestyle, programs to jumpstart the process, books to read, documentaries to watch, people to chat with, recipes to try—the rest is up to you.</p>
+              <p className="font-semibold text-teal-800">My goal: create awareness.</p>
             </div>
           </div>
         </div>

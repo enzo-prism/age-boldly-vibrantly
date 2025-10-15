@@ -17,6 +17,7 @@ import NotFound from "./pages/NotFound";
 import WelcomeLetter from "./pages/WelcomeLetter";
 import VideoSeries from "./pages/VideoSeries";
 import Team from "./pages/Team";
+import FacebookGroup from "./pages/FacebookGroup";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => {
               <Route path="/blog/:postId" element={<BlogPost />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/facebook-group" element={<FacebookGroup />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
