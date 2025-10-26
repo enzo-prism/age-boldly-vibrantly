@@ -1,9 +1,41 @@
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import ConnectCTA from '@/components/common/ConnectCTA';
 
 const WelcomeLetter = () => {
+  const [showTypeform, setShowTypeform] = useState(false);
+  const typeformRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      setShowTypeform(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setShowTypeform(true);
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '0px 0px 200px 0px' });
+
+    const current = typeformRef.current;
+    if (current) {
+      observer.observe(current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -54,16 +86,30 @@ const WelcomeLetter = () => {
 
             <div className="bg-gray-50 border border-teal-200 p-6 rounded-lg">
               <p className="font-semibold text-teal-800">PS. Please share your email here so that you will receive important updates as Rebellious Aging grows. (I will not share your email).</p>
-              <div className="mt-4">
-                <iframe
-                  src="https://fxuqp40sseh.typeform.com/to/fRGVxj4g"
-                  width="100%"
-                  height="600"
-                  frameBorder="0"
-                  allow="camera; microphone; autoplay; encrypted-media;"
-                  title="Stay in Touch Typeform"
-                  className="rounded-lg"
-                />
+              <div className="mt-4" ref={typeformRef}>
+                {showTypeform ? (
+                  <iframe
+                    src="https://fxuqp40sseh.typeform.com/to/fRGVxj4g"
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    allow="camera; microphone; autoplay; encrypted-media;"
+                    title="Stay in Touch Typeform"
+                    className="rounded-lg"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center gap-4 rounded-lg border border-dashed border-teal-200 bg-white p-6 text-center text-teal-700">
+                    <p className="font-medium">
+                      Scroll down or tap the button below to load the email sign-up form when you're ready.
+                    </p>
+                    <Button
+                      className="bg-teal text-white hover:bg-teal-dark"
+                      onClick={() => setShowTypeform(true)}
+                    >
+                      Load Sign-up Form Now
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
