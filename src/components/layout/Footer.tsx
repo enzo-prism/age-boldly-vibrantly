@@ -11,6 +11,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import { FACEBOOK_GROUP_URL } from '@/lib/constants';
 
 const Footer = () => {
   const [showSocialDialog, setShowSocialDialog] = useState(false);
@@ -88,13 +89,15 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/facebook-group" 
+                <a
+                  href={FACEBOOK_GROUP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform">Facebook Group</span>
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
+                </a>
               </li>
               <li>
                 <Link 

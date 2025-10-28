@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import ConnectCTA from '@/components/common/ConnectCTA';
+import { FACEBOOK_GROUP_URL } from '@/lib/constants';
 
 const WelcomeLetter = () => {
   return (
@@ -37,7 +38,7 @@ const WelcomeLetter = () => {
               <div className="mt-4 flex justify-center">
                 <Button asChild className="bg-teal text-white hover:bg-teal-dark">
                   <a
-                    href="https://www.facebook.com/groups/1497629461551095/"
+                    href={FACEBOOK_GROUP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -65,7 +66,7 @@ const WelcomeLetter = () => {
               So whenever you are ready to take the next step, share a dream, or simply sit with someone who understands join me at{' '}
               <a
                 className="text-teal-600 font-semibold hover:underline"
-                href="https://www.facebook.com/groups/1497629461551095/"
+                href={FACEBOOK_GROUP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >

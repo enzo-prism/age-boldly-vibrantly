@@ -12,6 +12,7 @@ import { ChevronDown } from "lucide-react";
 import { AnimatedHamburger } from '@/components/ui/animated-hamburger';
 import { MobileMenuSection } from '@/components/ui/mobile-menu-section';
 import { MobileNavItem } from '@/components/ui/mobile-nav-item';
+import { FACEBOOK_GROUP_URL } from '@/lib/constants';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,12 +68,14 @@ const Header = () => {
           >
             Our Story
           </NavLink>
-          <NavLink 
-            to="/facebook-group" 
-            className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
+          <a
+            href={FACEBOOK_GROUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
           >
             Facebook Group
-          </NavLink>
+          </a>
 
           <DropdownMenu>
             <DropdownMenuTrigger className="nav-link inline-flex items-center">
@@ -189,7 +192,7 @@ const Header = () => {
                   Our Story
                 </MobileNavItem>
                 <MobileNavItem
-                  to="/facebook-group"
+                  href={FACEBOOK_GROUP_URL}
                   onClick={() => setIsMobileMenuOpen(false)}
                   icon="💬"
                 >

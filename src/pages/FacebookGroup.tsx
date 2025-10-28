@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import { Sparkles, Users, Heart, Leaf, MessageCircle, Laugh } from 'lucide-react';
+import { FACEBOOK_GROUP_URL } from '@/lib/constants';
 
 const highlightCards = [
   {
@@ -52,7 +53,7 @@ const FacebookGroup = () => {
                 className="bg-teal text-white hover:bg-teal-dark min-w-[220px]"
               >
                 <a
-                  href="https://www.facebook.com/groups/1497629461551095/"
+                  href={FACEBOOK_GROUP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -190,7 +191,7 @@ const FacebookGroup = () => {
               className="bg-teal text-white hover:bg-teal-dark"
             >
               <a
-                href="https://www.facebook.com/groups/1497629461551095/"
+                href={FACEBOOK_GROUP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
