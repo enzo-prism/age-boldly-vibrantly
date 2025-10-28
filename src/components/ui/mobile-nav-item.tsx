@@ -6,7 +6,7 @@ interface MobileNavItemProps {
   to?: string;
   href?: string;
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   icon?: string;
 }
 
@@ -33,7 +33,7 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         className={cn(baseClasses, "text-foreground hover:text-primary")}
-        onClick={onClick}
+        onClick={(event) => onClick?.(event)}
       >
         {icon && <span className="text-lg flex-shrink-0">{icon}</span>}
         <span>{children}</span>
@@ -56,7 +56,7 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({
             : "text-foreground hover:text-primary"
         )
       }
-      onClick={onClick}
+      onClick={(event) => onClick?.(event)}
     >
       {icon && (
         <span className="text-lg flex-shrink-0">{icon}</span>

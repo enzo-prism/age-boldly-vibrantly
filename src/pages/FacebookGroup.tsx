@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import { Sparkles, Users, Heart, Leaf, MessageCircle, Laugh } from 'lucide-react';
-import { FACEBOOK_GROUP_URL } from '@/lib/constants';
+import { FACEBOOK_GROUP_URL, handleFacebookGroupNavigation } from '@/lib/facebook';
 
 const highlightCards = [
   {
@@ -56,6 +56,7 @@ const FacebookGroup = () => {
                   href={FACEBOOK_GROUP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handleFacebookGroupNavigation}
                 >
                   Join the Private Group
                 </a>
@@ -194,6 +195,7 @@ const FacebookGroup = () => {
                 href={FACEBOOK_GROUP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleFacebookGroupNavigation}
               >
                 Join the Private Facebook Group
               </a>

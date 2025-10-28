@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import ConnectCTA from '@/components/common/ConnectCTA';
-import { FACEBOOK_GROUP_URL } from '@/lib/constants';
+import { FACEBOOK_GROUP_URL, handleFacebookGroupNavigation } from '@/lib/facebook';
 
 const WelcomeLetter = () => {
   return (
@@ -41,6 +41,7 @@ const WelcomeLetter = () => {
                     href={FACEBOOK_GROUP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleFacebookGroupNavigation}
                   >
                     Continue the Conversation on Facebook
                   </a>
@@ -69,6 +70,7 @@ const WelcomeLetter = () => {
                 href={FACEBOOK_GROUP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleFacebookGroupNavigation}
               >
                 the Facebook Group
               </a>

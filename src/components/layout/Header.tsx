@@ -12,7 +12,7 @@ import { ChevronDown } from "lucide-react";
 import { AnimatedHamburger } from '@/components/ui/animated-hamburger';
 import { MobileMenuSection } from '@/components/ui/mobile-menu-section';
 import { MobileNavItem } from '@/components/ui/mobile-nav-item';
-import { FACEBOOK_GROUP_URL } from '@/lib/constants';
+import { FACEBOOK_GROUP_URL, handleFacebookGroupNavigation } from '@/lib/facebook';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,6 +73,7 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link"
+            onClick={handleFacebookGroupNavigation}
           >
             Facebook Group
           </a>
@@ -193,7 +194,12 @@ const Header = () => {
                 </MobileNavItem>
                 <MobileNavItem
                   href={FACEBOOK_GROUP_URL}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(event) =>
+                    handleFacebookGroupNavigation(event, {
+                      onSuccess: () => setIsMobileMenuOpen(false),
+                      onFailure: () => setIsMobileMenuOpen(false),
+                    })
+                  }
                   icon="💬"
                 >
                   Facebook Group
