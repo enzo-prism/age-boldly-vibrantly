@@ -30,7 +30,8 @@ const BlogPost = () => {
     { id: 'ultra-processed-trap-eat-whole-live-whole', blogNumber: 21, title: 'The Ultra-Processed Trap: Eat Whole, Live Whole' },
     { id: 'if-not-now-when-new-beginnings', blogNumber: 22, title: 'If Not Now, When? New Beginnings are up to YOU' },
     { id: 'optimal-aging-colleen-murphy', blogNumber: 23, title: 'Optimal Aging: As Seen Through the Lens of Princeton Professor Colleen Murphy' },
-    { id: 'calorie-density-secret-seals-deal', blogNumber: 24, title: 'Calorie Density: The Secret That Seals the Deal' }
+    { id: 'calorie-density-secret-seals-deal', blogNumber: 24, title: 'Calorie Density: The Secret That Seals the Deal' },
+    { id: 'join-rebellious-aging-facebook-group', blogNumber: 25, title: 'Let\'s Continue the Conversation: Join The PRIVATE, Rebellious Aging Facebook Group' }
   ];
   
   // Find current post and next post
@@ -1859,7 +1860,7 @@ const BlogPost = () => {
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
         <div className="mb-4">
-          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 25}</span>
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 24}</span>
         </div>
         <h1 className="text-4xl font-bold mb-8">Calorie Density: The Secret That Seals the Deal</h1>
         
@@ -1917,6 +1918,88 @@ const BlogPost = () => {
           
           <p className="font-semibold">
             With Love Laughter and Leafy Greens,<br />
+            Suz
+          </p>
+        </div>
+
+        {nextPost && (
+          <div className="border-t pt-8">
+            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
+            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
+              {nextPost.title}
+            </Link>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Blog 25: Join Rebellious Aging Facebook Group
+  if (postId === 'join-rebellious-aging-facebook-group') {
+    return (
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+        
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 25}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Let's Continue the Conversation: Join The PRIVATE, Rebellious Aging Facebook Group</h1>
+        
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            There is something special about women coming together to share stories, laughter, and encouragement as we define what it means to age.
+          </p>
+          
+          <p>
+            That is exactly what is happening in my new private Facebook group, "Rebellious Aging". This is a gathering space for women 55-105 who are ready to Eat Powerfully, Live Loudly, and Age Boldly.
+          </p>
+          
+          <p>
+            I created this private group to expand the usefulness of my website and to take the ideas from the site to a private community where we can connect with other women who share curiosity and the courage to live vibrantly.
+          </p>
+          
+          <p>
+            I will be posting new content in the RA Facebook group five days a week.
+          </p>
+          
+          <p>
+            I will respond to your posts, questions, and concerns daily.
+          </p>
+          
+          <p>
+            My posts will vary, but they will almost always include one of my pillars: health, confidence, style, and gratefulness.
+          </p>
+          
+          <p><strong>Look forward to:</strong></p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Tips, resources, videos, recipes, and inspiration for a whole food plant based lifestyle</li>
+            <li>Confidence and mindset prompts</li>
+            <li>Style and self-expression ideas</li>
+            <li>Gratitude reflections</li>
+            <li>Real stories from real women living this lifestyle</li>
+          </ul>
+          
+          <p>
+            This is about joining in. You are invited to post your story, comment, ask questions, raise concerns, share your favorite resources, or offer encouragement to others.
+          </p>
+          
+          <p>
+            Together, let's explore what it means to embrace a healthy, confident, authentic, stylish, and grateful life, one post, one spark, one conversation at a time.
+          </p>
+          
+          <p>
+            Because this is a PRIVATE, women-only space, you will be asked three questions before joining. They are simple things; give your simplest answer. The intention here is to help keep the community safe and positive for all members.
+          </p>
+          
+          <p>
+            If this sounds like a place for you to thrive, please join here: _____________________
+          </p>
+          
+          <p>
+            Let's have some fun, learn new things, and encourage one another. Let's rewrite the story of aging with sparkle.
+          </p>
+          
+          <p className="font-semibold">
             Suz
           </p>
         </div>

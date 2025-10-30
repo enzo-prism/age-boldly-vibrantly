@@ -220,6 +220,15 @@ const Blog = () => {
       dateSort: new Date('2025-09-10'),
       readTime: '9 min read',
       blogNumber: 24
+    },
+    {
+      id: 'join-rebellious-aging-facebook-group',
+      title: 'Let\'s Continue the Conversation: Join The PRIVATE, Rebellious Aging Facebook Group',
+      excerpt: 'Step into a private Facebook community where women 55-105 gather to share stories, support, and the courage to live vibrantly while eating powerfully, living loudly, and aging boldly.',
+      date: '10/29/2025',
+      dateSort: new Date('2025-10-29'),
+      readTime: '5 min read',
+      blogNumber: 25
     }
   ];
 
