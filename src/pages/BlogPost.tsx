@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import calorieDensityChart from '@/assets/calorie-density-chart.png';
+import { Button } from '@/components/ui/button';
 
 const BlogPost = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -1992,8 +1993,20 @@ const BlogPost = () => {
           </p>
           
           <p>
-            If this sounds like a place for you to thrive, please join here: _____________________
+            If this sounds like a place for you to thrive, click below to request access.
           </p>
+          
+          <div className="pt-2">
+            <Button asChild>
+              <a
+                href="https://www.facebook.com/groups/1497629461551095/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join the Facebook Group
+              </a>
+            </Button>
+          </div>
           
           <p>
             Let's have some fun, learn new things, and encourage one another. Let's rewrite the story of aging with sparkle.
