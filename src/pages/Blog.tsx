@@ -229,6 +229,15 @@ const Blog = () => {
       dateSort: new Date('2025-10-29'),
       readTime: '5 min read',
       blogNumber: 25
+    },
+    {
+      id: 'strength-and-balance-for-the-win',
+      title: 'Strength and Balance for the Win!',
+      excerpt: 'As we age, movement becomes about confidence, balance, and extending our health span; strength and steady footing keep us vibrant.',
+      date: '11/15/2025',
+      dateSort: new Date('2025-11-15'),
+      readTime: '9 min read',
+      blogNumber: 26
     }
   ];
 

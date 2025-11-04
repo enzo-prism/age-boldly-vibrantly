@@ -32,7 +32,8 @@ const BlogPost = () => {
     { id: 'if-not-now-when-new-beginnings', blogNumber: 22, title: 'If Not Now, When? New Beginnings are up to YOU' },
     { id: 'optimal-aging-colleen-murphy', blogNumber: 23, title: 'Optimal Aging: As Seen Through the Lens of Princeton Professor Colleen Murphy' },
     { id: 'calorie-density-secret-seals-deal', blogNumber: 24, title: 'Calorie Density: The Secret That Seals the Deal' },
-    { id: 'join-rebellious-aging-facebook-group', blogNumber: 25, title: 'Let\'s Continue the Conversation: Join The PRIVATE, Rebellious Aging Facebook Group' }
+    { id: 'join-rebellious-aging-facebook-group', blogNumber: 25, title: 'Let\'s Continue the Conversation: Join The PRIVATE, Rebellious Aging Facebook Group' },
+    { id: 'strength-and-balance-for-the-win', blogNumber: 26, title: 'Strength and Balance for the Win!' }
   ];
   
   // Find current post and next post
@@ -2010,6 +2011,83 @@ const BlogPost = () => {
           
           <p>
             Let's have some fun, learn new things, and encourage one another. Let's rewrite the story of aging with sparkle.
+          </p>
+          
+          <p className="font-semibold">
+            Suz
+          </p>
+        </div>
+
+        {nextPost && (
+          <div className="border-t pt-8">
+            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
+            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
+              {nextPost.title}
+            </Link>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Blog 26: Strength and Balance for the Win!
+  if (postId === 'strength-and-balance-for-the-win') {
+    return (
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+        
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 26}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Strength and Balance for the Win!</h1>
+        
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            As we age, exercise stops being about burning calories and becomes about building confidence, balance, and health span.
+          </p>
+          
+          <p>
+            I have read it in countless studies, and I have lived it in my own body. Strength and balance training are not just important, they are essential.
+          </p>
+          
+          <p>
+            After 50, our muscles start whispering reminders that they need attention. Every decade we lose roughly 3-5% of muscle mass unless we deliberately work to keep it. That loss shows up as less energy, slower metabolism, and a greater risk of falling.
+          </p>
+          
+          <p>
+            But the good news? It can be reversible. Lifting weights, even light ones, signals to your body, "I still need this strength!" Strength training protects bones, boosts metabolism, and supports posture. This is not about sculpting. It is about staying independent, capable, and vibrant.
+          </p>
+          
+          <p>
+            The power of balance is one of the first things we lose as we age, yet it is the key to moving confidently through life. I try to weave balance work into my day, not just while I am working out. (Yoga poses and brushing my teeth balancing on one foot and walking in a straight line toe to heel, heel to toe while standing erect).
+          </p>
+          
+          <p>
+            A strong core and steady footing keep us upright, but balance also teaches patience and presence. It reminds us that aging gracefully is not about standing still; it is about staying centered and grounded while life moves around us.
+          </p>
+          
+          <p>
+            Walking is simple, steady, and transformational. Besides strength training and yoga three times a week, I walk 2-3 miles every day. More on the weekends. Walking clears my head, connects me with nature, and gently strengthens my heart and legs. It is an easy and simple form of movement, but it delivers so much: better circulation, sharper mood, steadier sleep.
+          </p>
+          
+          <p>
+            If I could give one piece of advice to anyone 55+ it would be this: <strong>NEVER UNDERESTIMATE THE POWER OF A DAILY WALK.</strong> Even a few blocks count. The goal is not speed or distance; it is consistency. Start slow and watch yourself get strong.
+          </p>
+          
+          <p>
+            Stretching is underrated. However it is what keeps us supple and pain free. It is also one of the kindest things you can do for yourself. Five minutes of stretching is so rewarding and beneficial. You will see and feel your progress in days. There are so many great stretches. The best are the ones you will do. Remember it is not about flexibility; it is about fluidity.
+          </p>
+          
+          <p>
+            I like schedules. They keep me honest. For me working out is self care in the best form and non-negotiable. The best form of exercise is the one you will do. Just keep moving. The secret again is consistency. Movement, in any form, should be non-negotiable, like brushing your teeth or saying thank you.
+          </p>
+          
+          <p>
+            All too often we have grown to think of working out as a chore or worse punishment, or as a form of guilt. But movement is not punishment. It is gratitude in motion.
+          </p>
+          
+          <p>
+            So move however you can. Stretch if you cannot walk. Walk if you cannot lift. Whatever you do, keep moving. Motion keeps us in touch with vitality and vitality is what keeps us rebellious.
           </p>
           
           <p className="font-semibold">
