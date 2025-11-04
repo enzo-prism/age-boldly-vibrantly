@@ -1,50 +1,90 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import calorieDensityChart from '@/assets/calorie-density-chart.png';
 import { Button } from '@/components/ui/button';
+import { getBlogPostById, getNextBlogPost } from '@/data/blogPosts';
+import { buildMetaDescription, buildSeoTitle, getCanonicalUrl } from '@/lib/seo';
+import { siteMetadata } from '@/lib/siteMetadata';
 
 const BlogPost = () => {
   const { postId } = useParams<{ postId: string }>();
-  
-  // Blog post metadata for navigation
-  const blogPostsMetadata = [
-    { id: 'rebellious-guide-what-is-on-your-plate', blogNumber: 1, title: 'The Rebellious Guide (What is on Your Plate)' },
-    { id: 'the-road-to-success-8-thoughts', blogNumber: 2, title: 'The Road to Success: 8 Thoughts' },
-    { id: 'wfpb-lifestyle-guide', blogNumber: 3, title: 'A Quick Introduction and Guide to a Whole-Food Plant-Based (WFPB) Lifestyle' },
-    { id: 'a-love-letter-to-my-closet', blogNumber: 4, title: 'A Love Letter to My Closet' },
-    { id: 'blueberries-and-wrinkles', blogNumber: 5, title: 'Blueberries and Wrinkles' },
-    { id: 'gratitude-rebellious-soul', blogNumber: 6, title: 'Gratitude and the Rebellious Soul' },
-    { id: 'art-of-thriving-aging-expert', blogNumber: 7, title: 'The Art of Thriving. What an Ageing Expert Wants You to Know' },
-    { id: 'shop-window-aging-gracefully', blogNumber: 8, title: 'What a Shop Window Taught Me About Aging Gracefully' },
-    { id: 'set-record-straight-wfpb', blogNumber: 9, title: 'It\'s Time to Set the Record Straight Regarding a Whole Food Plant Based Lifestyle' },
-    { id: 'limiting-beliefs-not-boss', blogNumber: 10, title: 'Shhh…That Voice in Your Head is Not the Boss of You' },
-    { id: 'what-is-behind-limiting-beliefs', blogNumber: 11, title: 'What is Behind Limiting Beliefs?' },
-    { id: 'wearing-who-you-are-style-rebellion', blogNumber: 12, title: 'Wearing Who You Are, A Style Rebellion' },
-    { id: 'bold-sassy-truth-wfpb', blogNumber: 13, title: 'The Bold, Sassy Truth About a Whole Food Plant Based Lifestyle' },
-    { id: 'the-new-classic-timeless-style', blogNumber: 14, title: 'The New Classic, Timeless Style with a Rebellious Twist' },
-    { id: 'wfpb-lifestyle-book-recommendations', blogNumber: 15, title: 'WFPB Lifestyle Book Recommendations' },
-    { id: 'boundaries-love-language', blogNumber: 16, title: 'Are Boundaries a Love Language of Sorts?' },
-    { id: 'ditch-the-sweet-stuff', blogNumber: 17, title: 'Ditch the Sweet Stuff' },
-    { id: 'eat-the-olive-not-the-oil', blogNumber: 18, title: 'Eat the Olive, Not the Oil' },
-    { id: 'less-salt-more-sparkle', blogNumber: 19, title: 'Less Salt, More Sparkle' },
-    { id: 'critical-thinking-secret-weapon-rebellious-aging', blogNumber: 20, title: 'Critical Thinking: Your Secret Weapon for Rebellious Aging' },
-    { id: 'ultra-processed-trap-eat-whole-live-whole', blogNumber: 21, title: 'The Ultra-Processed Trap: Eat Whole, Live Whole' },
-    { id: 'if-not-now-when-new-beginnings', blogNumber: 22, title: 'If Not Now, When? New Beginnings are up to YOU' },
-    { id: 'optimal-aging-colleen-murphy', blogNumber: 23, title: 'Optimal Aging: As Seen Through the Lens of Princeton Professor Colleen Murphy' },
-    { id: 'calorie-density-secret-seals-deal', blogNumber: 24, title: 'Calorie Density: The Secret That Seals the Deal' },
-    { id: 'join-rebellious-aging-facebook-group', blogNumber: 25, title: 'Let\'s Continue the Conversation: Join The PRIVATE, Rebellious Aging Facebook Group' },
-    { id: 'strength-and-balance-for-the-win', blogNumber: 26, title: 'Strength and Balance for the Win!' }
-  ];
-  
-  // Find current post and next post
-  const currentPost = blogPostsMetadata.find(post => post.id === postId);
-  const nextPost = currentPost 
-    ? blogPostsMetadata.find(post => post.blogNumber === currentPost.blogNumber + 1)
-    : null;
+  const canonicalPath = postId ? `/blog/${postId}` : '/blog';
+  const currentPost = postId ? getBlogPostById(postId) : undefined;
+
+  if (!currentPost) {
+    const fallbackTitle = buildSeoTitle('Blog Post Not Found');
+    const fallbackDescription = buildMetaDescription(
+      'The blog post you are looking for does not exist. Explore more rebellious insights in our blog archive.'
+    );
+    const canonicalUrl = getCanonicalUrl(canonicalPath);
+    const socialImage = siteMetadata.defaultSocialImage;
+
+    return (
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Helmet>
+          <title>{fallbackTitle}</title>
+          <meta name="description" content={fallbackDescription} />
+          {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+          {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+          <meta property="og:title" content={fallbackTitle} />
+          <meta property="og:description" content={fallbackDescription} />
+          <meta property="og:type" content="website" />
+          {socialImage && <meta property="og:image" content={socialImage} />}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={fallbackTitle} />
+          <meta name="twitter:description" content={fallbackDescription} />
+          {siteMetadata.twitterHandle && (
+            <meta name="twitter:site" content={siteMetadata.twitterHandle} />
+          )}
+          {socialImage && <meta name="twitter:image" content={socialImage} />}
+        </Helmet>
+
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+        <h1 className="text-4xl font-bold mb-4">Blog Post Not Found</h1>
+        <p>The blog post you're looking for doesn't exist.</p>
+      </div>
+    );
+  }
+
+  const nextPost = getNextBlogPost(currentPost.blogNumber);
+  const canonicalUrl = getCanonicalUrl(canonicalPath);
+  const metaDescription = buildMetaDescription(currentPost.seoDescription, currentPost.excerpt);
+  const seoTitle = buildSeoTitle(currentPost.title);
+  const publishedTime = currentPost.dateSort.toISOString();
+  const socialImage = siteMetadata.defaultSocialImage;
+
+  const sharedHead = (
+    <Helmet>
+      <title>{seoTitle}</title>
+      <meta name="description" content={metaDescription} />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      <meta property="og:title" content={seoTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="article" />
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {socialImage && <meta property="og:image" content={socialImage} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      {siteMetadata.twitterHandle && (
+        <meta name="twitter:site" content={siteMetadata.twitterHandle} />
+      )}
+      {socialImage && <meta name="twitter:image" content={socialImage} />}
+    </Helmet>
+  );
+
+  const withSeo = (node: React.ReactNode) => (
+    <>
+      {sharedHead}
+      {node}
+    </>
+  );
 
   // Blog 1: Rebellious Guide
   if (postId === 'rebellious-guide-what-is-on-your-plate') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -250,7 +290,7 @@ const BlogPost = () => {
 
   // Blog 2: The Road to Success
   if (postId === 'the-road-to-success-8-thoughts') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -318,7 +358,7 @@ const BlogPost = () => {
 
   // Blog 3: WFPB Lifestyle Guide
   if (postId === 'wfpb-lifestyle-guide') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -490,7 +530,7 @@ const BlogPost = () => {
 
   // Blog 4: A Love Letter to My Closet
   if (postId === 'a-love-letter-to-my-closet') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -550,7 +590,7 @@ const BlogPost = () => {
 
   // Blog 5: Blueberries and Wrinkles
   if (postId === 'blueberries-and-wrinkles') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -579,7 +619,7 @@ const BlogPost = () => {
 
   // Blog 6: Gratitude and the Rebellious Soul
   if (postId === 'gratitude-rebellious-soul') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -643,7 +683,7 @@ const BlogPost = () => {
 
   // Blog 7: The Art of Thriving
   if (postId === 'art-of-thriving-aging-expert') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -706,7 +746,7 @@ const BlogPost = () => {
 
   // Blog 8: Shop Window
   if (postId === 'shop-window-aging-gracefully') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -785,7 +825,7 @@ const BlogPost = () => {
 
   // Blog 9: Set Record Straight
   if (postId === 'set-record-straight-wfpb') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -840,7 +880,7 @@ const BlogPost = () => {
 
   // Blog 10: Limiting Beliefs
   if (postId === 'limiting-beliefs-not-boss') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -906,7 +946,7 @@ const BlogPost = () => {
 
   // Blog 11: What is Behind Limiting Beliefs
   if (postId === 'what-is-behind-limiting-beliefs') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -956,7 +996,7 @@ const BlogPost = () => {
 
   // Blog 12: Wearing Who You Are
   if (postId === 'wearing-who-you-are-style-rebellion') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1010,7 +1050,7 @@ const BlogPost = () => {
 
   // Blog 13: Bold Sassy Truth
   if (postId === 'bold-sassy-truth-wfpb') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1065,7 +1105,7 @@ const BlogPost = () => {
 
   // Blog 14: The New Classic
   if (postId === 'the-new-classic-timeless-style') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1150,7 +1190,7 @@ const BlogPost = () => {
 
   // Blog 15: Book Recommendations
   if (postId === 'wfpb-lifestyle-book-recommendations') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1231,7 +1271,7 @@ const BlogPost = () => {
 
   // Blog 16: Boundaries
   if (postId === 'boundaries-love-language') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1295,7 +1335,7 @@ const BlogPost = () => {
 
   // Blog 17: Ditch the Sweet Stuff
   if (postId === 'ditch-the-sweet-stuff') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1372,7 +1412,7 @@ const BlogPost = () => {
 
   // Blog 18: Eat the Olive
   if (postId === 'eat-the-olive-not-the-oil') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1475,7 +1515,7 @@ const BlogPost = () => {
 
   // Blog 19: Less Salt
   if (postId === 'less-salt-more-sparkle') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1560,7 +1600,7 @@ const BlogPost = () => {
 
   // Blog 20: Critical Thinking
   if (postId === 'critical-thinking-secret-weapon-rebellious-aging') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1627,7 +1667,7 @@ const BlogPost = () => {
 
   // Blog 21: Ultra-Processed Trap
   if (postId === 'ultra-processed-trap-eat-whole-live-whole') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1705,7 +1745,7 @@ const BlogPost = () => {
 
 // Blog 22: If Not Now, When?
   if (postId === 'if-not-now-when-new-beginnings') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1781,7 +1821,7 @@ const BlogPost = () => {
 
   // Blog 23: Optimal Aging
   if (postId === 'optimal-aging-colleen-murphy') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1857,7 +1897,7 @@ const BlogPost = () => {
 
   // Blog 24: Calorie Density
   if (postId === 'calorie-density-secret-seals-deal') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -1938,7 +1978,7 @@ const BlogPost = () => {
 
   // Blog 25: Join Rebellious Aging Facebook Group
   if (postId === 'join-rebellious-aging-facebook-group') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -2032,7 +2072,7 @@ const BlogPost = () => {
 
   // Blog 26: Strength and Balance for the Win!
   if (postId === 'strength-and-balance-for-the-win') {
-    return (
+    return withSeo(
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         
@@ -2108,7 +2148,7 @@ const BlogPost = () => {
   }
 
   // Default/404
-  return (
+  return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
       <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
       <h1 className="text-4xl font-bold mb-4">Blog Post Not Found</h1>
