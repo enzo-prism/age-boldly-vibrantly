@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { getSortedBlogPosts } from '@/data/blogPosts';
-import { buildMetaDescription, buildSeoTitle, getCanonicalUrl } from '@/lib/seo';
+import { buildMetaDescription, buildSeoTitle, getCanonicalUrl, resolveSocialImage } from '@/lib/seo';
 import { siteMetadata } from '@/lib/siteMetadata';
 
 const Blog = () => {
@@ -12,7 +12,7 @@ const Blog = () => {
     'Explore the Rebellious Aging blog for science-backed insights, strength, style, and mindset guidance to help women 55+ live vibrantly.'
   );
   const canonicalUrl = getCanonicalUrl('/blog');
-  const socialImage = siteMetadata.defaultSocialImage;
+  const socialImage = resolveSocialImage(siteMetadata.defaultSocialImage);
 
   return (
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

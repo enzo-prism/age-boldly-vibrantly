@@ -5,7 +5,7 @@ import calorieDensityChart from '@/assets/calorie-density-chart.png';
 import { BlogPostFooter } from '@/components/blog/BlogPostFooter';
 import { Button } from '@/components/ui/button';
 import { getBlogPostById, getNextBlogPost } from '@/data/blogPosts';
-import { buildMetaDescription, buildSeoTitle, getCanonicalUrl } from '@/lib/seo';
+import { buildMetaDescription, buildSeoTitle, getCanonicalUrl, resolveSocialImage } from '@/lib/seo';
 import { siteMetadata } from '@/lib/siteMetadata';
 
 const BlogPost = () => {
@@ -53,7 +53,7 @@ const BlogPost = () => {
   const metaDescription = buildMetaDescription(currentPost.seoDescription, currentPost.excerpt);
   const seoTitle = buildSeoTitle(currentPost.title);
   const publishedTime = currentPost.dateSort.toISOString();
-  const socialImage = siteMetadata.defaultSocialImage;
+  const socialImage = resolveSocialImage(siteMetadata.defaultSocialImage);
 
   const sharedHead = (
     <Helmet>

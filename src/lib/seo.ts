@@ -31,12 +31,32 @@ export const buildMetaDescription = (description?: string, fallback?: string) =>
   return truncateDescription(base);
 };
 
+export const resolveAbsoluteUrl = (value?: string | null) => {
+  if (!value) {
+    return undefined;
+  }
+
+  if (value.startsWith('http://') || value.startsWith('https://')) {
+    return value;
+  }
+
+  const base = siteMetadata.baseUrl?.replace(/\/$/, '');
+  if (!base) {
+    return value;
+  }
+
+  const normalized = value.startsWith('/') ? value : `/${value}`;
+  return `${base}${normalized}`;
+};
+
+export const resolveSocialImage = (imagePath?: string | null) => resolveAbsoluteUrl(imagePath);
+
 export const getCanonicalUrl = (path: string) => {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  const base = siteMetadata.baseUrl?.replace(/\/$/, '');
+  const absolute = resolveAbsoluteUrl(normalizedPath);
 
-  if (base) {
-    return `${base}${normalizedPath}`;
+  if (absolute) {
+    return absolute;
   }
 
   if (typeof window !== 'undefined') {
@@ -45,4 +65,3 @@ export const getCanonicalUrl = (path: string) => {
 
   return undefined;
 };
-
