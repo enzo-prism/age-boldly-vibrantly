@@ -2147,6 +2147,95 @@ const BlogPost = () => {
     );
   }
 
+  // Blog 27: Style Still Counts
+  if (postId === 'style-still-counts-make-it-yours-at-every-age') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+        
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 27}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Style Still Counts, Make it Yours at Every Age</h1>
+        
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Some people want us to believe that after a certain age, women simply fade into the background. That attractiveness is a function of fertility. Wait a second!
+          </p>
+
+          <p>
+            Here is the truth: Women are only invisible if they want to be.
+          </p>
+
+          <p>
+            Do not let a myth, not grounded in fact, change who you think you are. Perhaps we are in the midst of a shift. I hope so. Because as we get older we actually have more space, more time, clarity, and freedom to focus on our style, our personal look.
+          </p>
+
+          <p>
+            Never take this lightly. How you present is important. It is your calling card. The most important person it should be important to is YOU. Be your best and look your best every single day. You will reap unimaginable benefits and rewards.
+          </p>
+
+          <p>
+            Know your style. Know the difference between what you are attracted to or find attractive on others and what looks good on you. There is a big difference between these. Do not be afraid to step it up if you like. Why not? This is your time to shine bright. The beauty of aging rebelliously is that the rules no longer apply. You get to write your own now.
+          </p>
+
+          <p>
+            Ignore fast fashion, mostly. Those toss away pieces? They are not your friends. Instead, interpret fashion individually, for your taste, your body, and your comfort. Ask: am I purchasing something I love, that will look good on my fabulous body? Or am I buying a style I love but will not love me back?
+          </p>
+
+          <p>
+            Keep it simple. Invest in pieces with attention to cut and detail. Purchase only items that flatter YOU. Buy items that will still feel fabulous season after season.
+          </p>
+
+          <p>
+            How about a challenge? Pause new purchases for six months. It will be a relief, I promise you. Have fun playing in your closet. Pretend it is a store and you are putting outfits together for display. Figure out what you wear the most. Pay attention, take notes, and get a donate bag at the ready. Be ruthless. By the end you will have a solid overview of what you truly love, a cleaned out and tidy closet, and more importantly the style or styles that work for you. Now you will be ready to shop with clarity and discernment.
+          </p>
+
+          <p>
+            You will now move from spontaneous buying and short lived adornments to deliberate, meaningful choices. When you begin to buy well, and combine the best of today with exquisite vintage or thoughtfully chosen pieces, you will create a personalized wardrobe full of meaning and memory.
+          </p>
+
+          <p>
+            I recently came across The Seven Steps of Elegance, inspired by Marlene Dietrich.
+          </p>
+
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Know who you are and dress from that place.</li>
+            <li>Opt for quality of line over quantity of trend.</li>
+            <li>Let your clothes fit you, not the other way around.</li>
+            <li>Choose detail that whispers rather than shouts.</li>
+            <li>Build a wardrobe that lasts beyond seasons.</li>
+            <li>Honor your body with cuts and fabrics that love you back.</li>
+            <li>Wear your style with confidence, the greatest accessory of all.</li>
+          </ol>
+
+          <p>
+            Remember, your style, your sparkle. YOU are visible. You matter. Let your style reflect your spirit - bold, joyful, strong, and unapologetically you.
+          </p>
+
+          <p className="italic">
+            "I am not a has been, I am a will be." - Lauren Bacall
+          </p>
+
+          <p>Sparkle on.</p>
+
+          <p className="font-semibold">
+            Suz
+          </p>
+        </div>
+
+        {nextPost && (
+          <div className="border-t pt-8">
+            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
+            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
+              {nextPost.title}
+            </Link>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

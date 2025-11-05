@@ -243,6 +243,16 @@ export const blogPosts: BlogPostMetadata[] = [
     dateSort: new Date('2025-11-15'),
     readTime: '9 min read',
     blogNumber: 26
+  },
+  {
+    id: 'style-still-counts-make-it-yours-at-every-age',
+    title: 'Style Still Counts, Make it Yours at Every Age',
+    excerpt: 'Refuse invisibility: curate a wardrobe that loves you back, shop with intention, and let personal style shine brighter with every decade.',
+    date: '11/30/2025',
+    dateSort: new Date('2025-11-30'),
+    readTime: '8 min read',
+    blogNumber: 27,
+    seoDescription: 'Style has no expiration date - declutter with purpose, invest in flattering pieces, and embrace elegance that reflects your rebellious spirit.'
   }
 ];
 
@@ -252,4 +262,3 @@ export const getNextBlogPost = (blogNumber: number) =>
   blogPosts.find((post) => post.blogNumber === blogNumber + 1);
 
 export const getSortedBlogPosts = () => [...blogPosts].sort((a, b) => a.blogNumber - b.blogNumber);
-
