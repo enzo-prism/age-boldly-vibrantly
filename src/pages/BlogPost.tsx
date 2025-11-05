@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import calorieDensityChart from '@/assets/calorie-density-chart.png';
+import { BlogPostFooter } from '@/components/blog/BlogPostFooter';
 import { Button } from '@/components/ui/button';
 import { getBlogPostById, getNextBlogPost } from '@/data/blogPosts';
 import { buildMetaDescription, buildSeoTitle, getCanonicalUrl } from '@/lib/seo';
@@ -276,14 +277,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -344,14 +342,11 @@ const BlogPost = () => {
           <p>Sparkle on, Rebels. Your success story is waiting to be written.</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -516,14 +511,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -576,14 +568,11 @@ const BlogPost = () => {
           <p><strong>With Love, Laughter and Leafy Greens,<br />Suz</strong></p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -605,14 +594,11 @@ const BlogPost = () => {
           <p>Your skin, your health, your vitality—they're all reflections of the choices you make daily. Choose plants. Choose sparkle. Choose you.</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -669,14 +655,11 @@ const BlogPost = () => {
           Suz</strong></p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -732,14 +715,11 @@ const BlogPost = () => {
           <p><strong>Sparkle on, Rebels</strong></p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -811,14 +791,11 @@ const BlogPost = () => {
           Suz</strong></p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -866,14 +843,11 @@ const BlogPost = () => {
           You Are What You Eat: A Twin Experiment</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -932,14 +906,11 @@ const BlogPost = () => {
           Suz</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -982,14 +953,11 @@ const BlogPost = () => {
           Suz</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1036,14 +1004,11 @@ const BlogPost = () => {
           Suz</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1091,14 +1056,11 @@ const BlogPost = () => {
           <p><em>Full bibliography available upon request.</em></p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1176,14 +1138,11 @@ const BlogPost = () => {
           Suz</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1257,14 +1216,11 @@ const BlogPost = () => {
           </div>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1321,14 +1277,11 @@ const BlogPost = () => {
           <p>Sparkle on my dear Rebels.</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1398,14 +1351,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1501,14 +1451,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1586,14 +1533,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1653,14 +1597,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1731,14 +1672,11 @@ const BlogPost = () => {
           Suz</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1807,14 +1745,11 @@ const BlogPost = () => {
           Suz</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1883,14 +1818,11 @@ const BlogPost = () => {
           <p><strong>With Love, Laughter, and leafy greens</strong><br />Suz</p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -1964,14 +1896,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -2058,14 +1987,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -2135,14 +2061,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
@@ -2224,14 +2147,11 @@ const BlogPost = () => {
           </p>
         </div>
 
-        {nextPost && (
-          <div className="border-t pt-8">
-            <p className="text-sm text-muted-foreground mb-2">Next Article</p>
-            <Link to={`/blog/${nextPost.id}`} className="text-xl hover:underline">
-              {nextPost.title}
-            </Link>
-          </div>
-        )}
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
       </div>
     );
   }
