@@ -2156,6 +2156,245 @@ const BlogPost = () => {
     );
   }
 
+  // Blog 28: Following the Science
+  if (postId === 'following-the-science-and-your-common-sense') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+        
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 28}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Following the Science (and Your Common Sense)</h1>
+        
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Science is ever changing. That is what makes it so exciting—and also so confusing. Every week there seems to be
+            a new headline claiming to have the “secret” to health or the final word on nutrition. Scroll long enough and
+            you will meet passionate experts, charismatic influencers, and “data-driven” gurus all shouting their own truth.
+          </p>
+
+          <p>
+            Some mean well. Others have something to sell. Sadly, a few are simply dangerous. Even respected institutions can
+            lose sight of objectivity because money, power, and prestige can and will complicate pure science. Truly, it is not
+            easy to know what—or who—to believe. Most people do not have the time or inclination to dig into the research behind
+            the research. Following the money helps, but even that can get tricky. So I approach most things with curiosity and,
+            yes, a pinch of skepticism. We all need to get better at this.
+          </p>
+
+          <p>
+            Over the years I have dug deep and feel comfortable following two of the greats in the plant movement:
+            <strong> Dr. T. Colin Campbell</strong> from Cornell University and founder of The Center for Nutrition Studies, and
+            <strong> Dr. Caldwell Esselstyn</strong> from the Cleveland Clinic and author of <em>Prevent and Reverse Heart Disease</em>.
+            These two “oldies but goodies” are in their 90s, still writing, researching, and thriving. Their families have lived a
+            Whole Food Plant Based (WFPB) lifestyle for 55+ years, grounded in evidence—not hype.
+          </p>
+
+          <p>
+            That being said, I continue to pay attention to as many legitimate physicians and researchers as I can. Following a
+            WFPB lifestyle has served me well—that is that. My goal is not to convert or convince but to create awareness.
+            This is why “Health” is the very first pillar of Rebellious Aging. I have witnessed transformation in myself and in
+            others, and I simply want people to know this path exists, even if it feels too big a change right now.
+          </p>
+
+          <p>
+            Please do not ever follow blindly. I will continue to give you resources and references. Be the CEO of your own health.
+            Ask questions. Stay curious. Be open, but remain a bit skeptical. That is the rebel way.
+          </p>
+
+          <p className="italic">
+            Even 83-year-old Grannies can be a bit sketch sometimes.
+          </p>
+
+          <p className="font-semibold">
+            ***Suz
+          </p>
+        </div>
+
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
+      </div>
+    );
+  }
+
+  // Blog 29: Graceful? Maybe. Rebellious? Definitely.
+  if (postId === 'graceful-maybe-rebellious-definitely') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+        
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 29}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Graceful? Maybe. Rebellious? Definitely.</h1>
+        
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Every now and then an article comes along that clicks. When I read Farley Ledgerwood’s piece on aging gracefully, I
+            felt an instant yes—an emphatic share. It echoed what I believe deep down: aging is not fading away. It is stepping
+            into who we really are. Graceful? Maybe. But for rebels like us, it is about doing it boldly, consciously, and with
+            sparkle.
+          </p>
+
+          <p className="font-semibold">
+            What Graceful Aging Really Means: 6 Things to Stop Doing by 60
+          </p>
+
+          <p>
+            Aging is not a slow fade. It is a bold, brightly lit shift. Loving our next decades means letting go of what no longer
+            serves us. Start here:
+          </p>
+
+          <div className="space-y-3">
+            <p>
+              <strong>1. Stop treating movement as optional.</strong><br />
+              Move because you love how alive you feel after. Walk, stretch, play tug with your pup, or dance the polka around your
+              living room. Motion is a celebration, not a punishment.
+            </p>
+
+            <p>
+              <strong>2. Stop eating like you are 25.</strong><br />
+              That metabolism is history. Nourishment matters more than ever. Embrace vibrant, Whole Food, Plant Based choices.
+              Let your plate reflect your dignity and your delight.
+            </p>
+
+            <p>
+              <strong>3. Stop bottling up emotions.</strong><br />
+              Holding back hurts. Sleep, spirit, and grace all suffer. Journal. Talk. Release. Let your inner world be heard,
+              soothed, and aligned with who you are now.
+            </p>
+
+            <p className="italic">
+              “Aging is not a retreat, it’s a reveal!”
+            </p>
+
+            <p>
+              <strong>4. Stop saying yes when you mean no.</strong><br />
+              Your time and energy are sacred. Guard your calendar. Say no kindly but firmly when something does not light you up.
+              Make space for what does.
+            </p>
+
+            <p>
+              <strong>5. Stop comparing your timeline to everyone else’s.</strong><br />
+              Comparison steals your momentum. Your path is your own. Measure progress against yesterday, not someone else’s
+              highlight reel.
+            </p>
+
+            <p>
+              <strong>6. Stop clinging to grudges and regrets.</strong><br />
+              Emotional weight slows you down. Forgiveness frees your future self. Clean out the attic of your heart and lean into
+              what’s ahead.
+            </p>
+          </div>
+
+          <p>
+            Pick one habit this week and begin there. Small steps compound into confidence. When you move, eat, feel, say yes to
+            YOU, and let go—you are not aging. You are arriving.
+          </p>
+
+          <p>
+            Read the full article here:{' '}
+            <a
+              href="https://geediting.com/kir-people-who-age-gracefully-often-stop-doing-these-6-things-by-the-time-they-hit-60/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-coral hover:text-coral-dark underline"
+            >
+              geediting.com
+            </a>
+          </p>
+
+          <p>
+            Sparkle on,
+            <br />
+            Suz
+          </p>
+        </div>
+
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
+      </div>
+    );
+  }
+
+  // Blog 30: How the Food Supply Stacks the Deck Against You!
+  if (postId === 'how-the-food-supply-stacks-the-deck-against-you') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+        
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 30}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">How the Food Supply Stacks the Deck Against You!</h1>
+        
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            We have long been told that if our waistlines expand, the culprit is willpower or personal discipline. A growing body
+            of research invites a more compassionate—and accurate—view: the broader food environment is playing a much larger role
+            than we have been led to believe.
+          </p>
+
+          <p>
+            In a recent CNN piece, nutrition scientist Kevin Hall, PhD (author of <em>Food Intelligence</em>), argues that it is
+            time to stop the self-blame and start looking outward. The food system itself is designed in ways that promote excess.
+          </p>
+
+          <p className="font-semibold">Kevin Hall’s key takeaways:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Genetics influence body size, but they have not changed much in decades, while obesity rates have skyrocketed.</li>
+            <li>The modern food system creates a calorie glut, converting vast surpluses of corn, soy, wheat, and rice into ultra-processed foods (UPFs).</li>
+            <li>UPFs are engineered for taste, convenience, and profit—high calorie, low satiety, hyper-palatable, and addictive.</li>
+            <li>Hall’s studies show that people consume hundreds more calories per day when their diets are heavy in UPFs, even when nutrient profiles match.</li>
+          </ul>
+
+          <p>
+            So, it is not simply “eat less and move more.” Our environment makes overeating easy and resisting incredibly difficult.
+            Let’s shift from shame to strategy, advocate for better food access, make small daily changes, and extend grace to ourselves.
+          </p>
+
+          <p className="font-semibold">A few practical tips:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Scan your food environment and notice which choices are quietly undermining your health.</li>
+            <li>Choose more whole foods when possible—fill your plate with ingredients you recognize.</li>
+            <li>Read labels. If it sounds like a lab experiment, it probably behaves like one inside your body.</li>
+          </ul>
+
+          <p>
+            If you have been blaming yourself for your waistline, stop. The system is stacked against us—but awareness gives us
+            power. Choose wisely, kindly, and strategically, and remember to sparkle on.
+          </p>
+
+          <p>
+            Read the full article here:{' '}
+            <a
+              href="https://www.cnn.com/2025/09/22/health/food-intelligence-kevin-hall-wellness"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-coral hover:text-coral-dark underline"
+            >
+              cnn.com
+            </a>
+          </p>
+
+          <p className="font-semibold">*** Suz</p>
+        </div>
+
+        <BlogPostFooter
+          currentPost={currentPost}
+          nextPost={nextPost}
+          canonicalUrl={canonicalUrl}
+        />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

@@ -253,6 +253,36 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '8 min read',
     blogNumber: 27,
     seoDescription: 'Style has no expiration date - declutter with purpose, invest in flattering pieces, and embrace elegance that reflects your rebellious spirit.'
+  },
+  {
+    id: 'following-the-science-and-your-common-sense',
+    title: 'Following the Science (and Your Common Sense)',
+    excerpt: 'Science evolves, gurus shout, and agendas creep in—here’s how Suz navigates the noise by trusting evidence, curiosity, and a WFPB lifestyle that has stood the test of decades.',
+    date: '12/15/2025',
+    dateSort: new Date('2025-12-15'),
+    readTime: '6 min read',
+    blogNumber: 28,
+    seoDescription: 'Cut through nutrition confusion with curiosity, credible mentors like Dr. Campbell and Dr. Esselstyn, and your own common sense.'
+  },
+  {
+    id: 'graceful-maybe-rebellious-definitely',
+    title: 'Graceful? Maybe. Rebellious? Definitely.',
+    excerpt: 'Inspired by Farley Ledgerwood’s reminder that aging isn’t fading, Suz shares six habits to drop after 60 so you can move, nourish, feel, and say yes to yourself with a rebellious glow.',
+    date: '12/30/2025',
+    dateSort: new Date('2025-12-30'),
+    readTime: '7 min read',
+    blogNumber: 29,
+    seoDescription: 'Let go of optional movement, 25-year-old eating, people pleasing, comparisons, bottled emotions, and grudges so your next decades feel bold, conscious, and sparkling.'
+  },
+  {
+    id: 'how-the-food-supply-stacks-the-deck-against-you',
+    title: 'How the Food Supply Stacks the Deck Against You!',
+    excerpt: 'Nutrition scientist Kevin Hall, PhD, explains why today’s ultra-processed food environment makes overeating effortless, and why compassion plus strategy—not shame—belongs at the center of the conversation.',
+    date: '1/10/2026',
+    dateSort: new Date('2026-01-10'),
+    readTime: '6 min read',
+    blogNumber: 30,
+    seoDescription: 'Shift from self-blame to awareness as UPFs, engineered calories, and system-level incentives fuel weight gain—and learn small steps to reclaim agency.'
   }
 ];
 
