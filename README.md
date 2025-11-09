@@ -48,6 +48,7 @@ pnpm install   # or npm install
 
 npm run dev    # start Vite dev server on http://localhost:5173
 npm run lint   # TypeScript + React linting via eslint.config.js
+npm run sitemap # regenerate public/sitemap.xml from routes + blog posts
 npm run build  # production build + blog prerender (runs `npm run prerender`)
 npm run preview
 ```
@@ -78,6 +79,7 @@ Blog content is managed in two places:
 After editing blog content run:
 
 ```bash
+npm run sitemap  # refresh sitemap with new blog URLs
 npm run build    # regenerates dist
 npm run prerender
 ```

@@ -39,4 +39,4 @@ Disallow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://rebelwithsuz.com/sitemap.xml
+Sitemap: https://rebelliousaging.com/sitemap.xml
