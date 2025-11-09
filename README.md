@@ -41,6 +41,35 @@ Key conventions:
 
 ---
 
+## Core Experience Map
+
+- **Home (`src/pages/Home.tsx`)** – Carousel hero, pillar overview, and repeated CTAs that route visitors toward Our Story or the individual pillars.
+- **Our Story / Movement (`src/pages/Movement.tsx`)** – Narrative, credentials, and the “Why” behind the rebellion, including scroll-triggered timelines.
+- **Pillars (`/pillars/:pillarId`)** – Confidence, Style, and Health all read from the same data model for hero copy, galleries, quizzes, and downloadable checklists.
+- **Nutrition (`src/pages/Nutrition.tsx`)** – Query-param-driven tabs that educate on WFPB foundations, benefits, Esselstyn/Campbell guidance, “why & how,” and recipes.
+- **Blog (`/blog` + `/blog/:postId`)** – Metadata list plus inlined long-form posts with canonical tags, share buttons, and next-article links.
+- **Video Series (`src/pages/VideoSeries.tsx`)** – Card grid fed by `src/data/videoSeries.ts` to highlight current and future episodes.
+- **Community touchpoints** – Welcome Letter, Contact (Typeform embed), Facebook Group landing page, and the reusable `ConnectCTA` ensure email + FB funnels stay consistent site-wide.
+
+Use this map when adding new sections so the navigation, voice, and CTAs remain cohesive.
+
+---
+
+## Content Data Reference
+
+| Content type | Location | Purpose |
+|--------------|----------|---------|
+| Blog metadata | `src/data/blogPosts.ts` | Drives the blog archive, sitemap generation, SEO fields, and “next article” navigation. |
+| Blog articles | `src/pages/BlogPost.tsx` | Each post lives in its own `if (postId === 'slug')` block—always wrap new copy with `<BlogPostFooter>` for share actions. |
+| Pillar content | `src/data/pillarContent.ts` | Hero text, gallery images, quiz titles, and checklist links for Confidence/Style/Health. |
+| Video episodes | `src/data/videoSeries.ts` | Add/update YouTube metadata here to refresh the video grid without touching layout code. |
+| Site metadata | `src/lib/siteMetadata.ts` | Central place for `baseUrl`, default descriptions, and social images. |
+| Facebook group link/logic | `src/lib/facebook.ts` + `src/lib/constants.ts` | Keeps outbound navigation consistent (open in new tab + fallback toast). |
+
+After editing these files, rerun `npm run sitemap` (if blog metadata changed) and `npm run build` to keep the prerendered HTML and sitemap aligned.
+
+---
+
 ## Getting Started
 
 ```bash
