@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
+# Rebellious Aging Web Application
 
-## Project info
+Rebellious Aging is a Vite + React site that helps women 55+ “age boldly, live loudly” through three pillars—Confidence, Style, and Health. The app houses long-form editorial content (blogs, pillar landing pages, nutrition guides), embedded Typeforms, and a Supabase-backed quiz submission flow.
 
-**URL**: https://lovable.dev/projects/70c11877-8f66-4c17-9bbd-c6cbb234bee5
+---
 
-## How can I edit this code?
+## Tech Stack
 
-There are several ways of editing your application.
+- **Build tooling:** Vite 5, TypeScript, React 18, SWC-based JSX transform
+- **UI:** Tailwind CSS, shadcn/ui components, Radix Primitives, Framer Motion
+- **State & data:** TanStack Query, custom hooks, local data files under `src/data`
+- **Content tooling:** React Helmet for per-page SEO, custom prerender script
+- **Backend integrations:** Supabase Edge Function (`supabase/functions/submit-quiz`) + database table `quiz_submissions`, embedded Typeforms for contact/newsletter
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/70c11877-8f66-4c17-9bbd-c6cbb234bee5) and start prompting.
+## Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+  App.tsx               // Routes + providers
+  components/           // Layout, home, pillar, nutrition, ui primitives
+  data/                 // blogPosts, pillarContent, videoSeries metadata
+  hooks/                // Scroll, mobile, toast utilities
+  lib/                  // SEO helpers, constants, Facebook helpers
+  pages/                // Top-level routes (Home, Pillars, Blog, etc.)
+  integrations/         // Supabase typed client
+scripts/
+  prerender.tsx         // Injects SEO tags into /blog static HTML after build
+supabase/
+  config.toml           // Project + function config
+  functions/            // Edge functions (submit-quiz)
+  migrations/           // SQL migrations for quiz_submissions
 ```
 
-**Edit a file directly in GitHub**
+Key conventions:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Use the `@/` alias (configured in `tsconfig.json`) for internal imports.
+- Tailwind + shadcn components live under `src/components/ui`.
+- Keep generated Supabase files (`src/integrations/supabase/*`) read-only—regenerate via Supabase CLI if credentials change.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Getting Started
 
-## What technologies are used for this project?
+```bash
+pnpm install   # or npm install
 
-This project is built with:
+npm run dev    # start Vite dev server on http://localhost:5173
+npm run lint   # TypeScript + React linting via eslint.config.js
+npm run build  # production build + blog prerender (runs `npm run prerender`)
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Environment variables (create `.env`):
 
-## How can I deploy this project?
+```
+VITE_SUPABASE_URL=<public-url>
+VITE_SUPABASE_ANON_KEY=<anon-key>
+```
 
-Simply open [Lovable](https://lovable.dev/projects/70c11877-8f66-4c17-9bbd-c6cbb234bee5) and click on Share -> Publish.
+The Supabase Edge function expects `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` to be available when deployed via the Supabase CLI.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## Blog Management
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Blog content is managed in two places:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. **Metadata list:** `src/data/blogPosts.ts`
+   - Add a new object with `id`, `title`, `excerpt`, `date`, `readTime`, `blogNumber`, and optional `seoDescription`.
+   - Keep `blogNumber` sequential; list order drives navigation + prerender outputs.
+
+2. **Long-form article:** `src/pages/BlogPost.tsx`
+   - Each post has a dedicated `if (postId === '<slug>')` block.
+   - Copy the structure from an existing post (Helmet metadata is handled automatically via helpers).
+
+After editing blog content run:
+
+```bash
+npm run build    # regenerates dist
+npm run prerender
+```
+
+The prerender script rewrites `dist/blog/**/index.html` with fully populated `<head>` tags for SEO.
+
+---
+
+## Forms, Quizzes & Integrations
+
+- **Quiz submission:** `src/components/pillar/QuizSection.tsx` posts to the Supabase Edge function (`supabase/functions/submit-quiz/index.ts`). The table schema, policies, and indexes are defined under `supabase/migrations/`.
+- **Typeforms:** Contact, newsletter, and quiz fallback embeds load Typeform’s `embed.js`. If you add new embeds, reuse the loader logic in `QuizSection`.
+- **Facebook CTA:** Use helper utilities in `src/lib/facebook.ts` for consistent popup + fallback behavior anywhere you link to the private group.
+
+---
+
+## SEO & Sharing
+
+- Site-wide metadata lives in `src/lib/siteMetadata.ts`.
+- Utility helpers (buildSeoTitle, buildMetaDescription, getCanonicalUrl) sit under `src/lib/seo.ts` and are reused across pages and in `scripts/prerender.tsx`.
+- Blog-specific share buttons live in `src/components/blog/BlogShareActions.tsx`.
+
+---
+
+## Deployment
+
+1. `npm run build` — compiles Vite output.
+2. `npm run prerender` — injects blog `<head>` metadata into the built HTML.
+3. Deploy `/dist` to your hosting platform (Lovable “Share → Publish”, Netlify, Vercel, etc.).
+
+Supabase function (`submit-quiz`) can be deployed with:
+
+```bash
+supabase functions deploy submit-quiz
+```
+
+Ensure `supabase/config.toml` matches the project ID you deploy to.
+
+---
+
+## Contributing Tips
+
+- Follow existing formatting (2-space indentation, semicolons on TypeScript files).
+- Keep lint clean (`npm run lint`) before opening a PR.
+- Document any new scripts or commands inside this README so future contributors can discover them quickly.
+
+Happy building, and sparkle on! ✨
