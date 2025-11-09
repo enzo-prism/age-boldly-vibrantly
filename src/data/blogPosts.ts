@@ -48,8 +48,8 @@ export const blogPosts: BlogPostMetadata[] = [
   },
   {
     id: 'blueberries-and-wrinkles',
-    title: 'Blueberries and Wrinkles',
-    excerpt: 'There was no grand epiphany. No milestone birthday. Just a bowl of wild blueberries. The day I discovered blueberry stains nestled in my wrinkles was the day I knew I had crossed over into "OLD" - and the moment my rebellion truly began.',
+    title: 'Blueberries and Wrinkles, The Day I Knew I was Old.',
+    excerpt: 'One bowl of wild blueberries, a casual walk out the door, and a bold little truth tucked into the confident grooves around my mouth—that was the day I knew I had crossed into "old" and the moment my rebellion revved up.',
     date: '3/15/2025',
     dateSort: new Date('2025-03-15'),
     readTime: '6 min read',
@@ -166,7 +166,7 @@ export const blogPosts: BlogPostMetadata[] = [
   {
     id: 'eat-the-olive-not-the-oil',
     title: 'Eat the Olive, Not the Oil',
-    excerpt: 'Oil has a shiny reputation. Olive oil, avocado oil, coconut oil, you have seen them all marketed as "healthy fats". The truth is oil is oil. NO Oil is healthy.',
+    excerpt: 'Oil has a shiny reputation. Olive oil, avocado oil, coconut oil—sure, they are marketed as “healthy fats,” but the truth is oil is oil and even the “best” versions are still calorie-dense, nutrient-poor processed foods.',
     date: '9/2/2025',
     dateSort: new Date('2025-09-02'),
     readTime: '11 min read',
