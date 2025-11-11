@@ -33,6 +33,8 @@ supabase/
   migrations/           // SQL migrations for quiz_submissions
 ```
 
+Additional architectural context lives in `docs/project-overview.md`.
+
 Key conventions:
 
 - Use the `@/` alias (configured in `tsconfig.json`) for internal imports.

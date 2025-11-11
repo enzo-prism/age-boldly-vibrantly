@@ -2365,6 +2365,100 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 31: Losing Weight Without Losing Your Sparkle
+  if (postId === 'losing-weight-without-losing-your-sparkle') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 31}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Losing Weight Without Losing Your Sparkle</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            We have all seen the headlines promising a “miracle weight loss diet” or a “magic fix.” But the truth? Most weight loss
+            plans leave you tired, hungry, and drained of joy—the very opposite of sparkle.
+          </p>
+
+          <p>
+            A Whole Food Plant Based (WFPB) lifestyle turns that story on its head. Eating plants is definitely not about restriction
+            or guilt. Nope! It is about abundance: colorful plates, delicious meals, steady energy, and a renewed sense of confidence
+            in your body.
+          </p>
+
+          <p>
+            This is NOT a diet. It is a return to the way our bodies were designed to thrive. A WFPB approach focuses on eating foods
+            as close to their natural form as possible—vegetables, fruits, whole grains, beans, lentils, nuts, and seeds—while letting
+            go of animal products (cheers for the animals) and ultra-processed foods.
+          </p>
+
+          <p>Here is the secret: this is not about what you give up. It is about what you gain.</p>
+
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>You gain energy</strong> because your body runs beautifully on nutrient-rich, fiber-filled foods.
+            </li>
+            <li>
+              <strong>You gain freedom</strong> because there is no calorie counting or endless tracking. Enjoy until you are comfortably full.
+            </li>
+            <li>
+              <strong>You gain peace of mind</strong> knowing you are caring for your body, the animals, the planet, and your future self.
+            </li>
+          </ul>
+
+          <p>
+            Science backs this up. Study after study shows people following WFPB lifestyles lose more weight than those on deficit,
+            restrictive, or low-carb plans—and they keep it off. Why? Because the food is naturally low in calorie density but rich in
+            fiber and nutrients.
+          </p>
+
+          <p>Weight loss is yet another bonus of eating WFPB. How, you ask?</p>
+
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>It fills you up, not out.</strong> Fiber, only found in plants, slows digestion, stabilizes blood sugar, and keeps you satisfied longer.
+            </li>
+            <li>
+              <strong>It is nutrient dense, not calorie dense.</strong> A baked potato and a handful of chips come from the same plant, but only one nourishes you.
+            </li>
+            <li>
+              <strong>It supports your metabolism.</strong> Plant-based diets improve insulin sensitivity and lower inflammation—two keys to unlocking your body’s natural fat-burning rhythm.
+            </li>
+            <li>
+              <strong>It changes your relationship with food.</strong> Once you begin eating for nourishment and vitality, “dieting” feels outdated. WFPB living brings back joy, taste, and freedom.
+            </li>
+          </ul>
+
+          <p>
+            As we age, metabolism shifts, hormones change, and muscle mass declines. That does not mean we are doomed to gain weight—it
+            means we must fuel wisely. WFPB living helps counter those changes. Antioxidants and phytonutrients support hormones,
+            reduce inflammation, and keep us glowing.
+          </p>
+
+          <p>
+            Weight loss does not need to feel like deprivation. It can be a celebration of health, freedom, and joy. A WFPB lifestyle
+            lets you lose weight naturally while gaining energy, confidence, vibrancy, and improved health.
+          </p>
+
+          <p>
+            WFPB eating is not about counting calories. It is about counting on yourself to make choices that honor the beautiful,
+            confident, authentic woman you are. Every colorful meal, every extra serving of greens, every moment you choose plants over
+            animals and ultra-processed foods is a quiet act of rebellion against the myths of dieting and aging.
+          </p>
+
+          <p>Sparkle on,</p>
+          <p>
+            <em>Suz</em>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

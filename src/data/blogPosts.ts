@@ -283,6 +283,16 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '6 min read',
     blogNumber: 30,
     seoDescription: 'Shift from self-blame to awareness as UPFs, engineered calories, and system-level incentives fuel weight gain—and learn small steps to reclaim agency.'
+  },
+  {
+    id: 'losing-weight-without-losing-your-sparkle',
+    title: 'Losing Weight Without Losing Your Sparkle',
+    excerpt: 'Weight loss does not have to dim your joy. A Whole Food Plant Based lifestyle lets you trade restriction for color, freedom, and sparkle while the science quietly supports lasting results.',
+    date: '1/25/2026',
+    dateSort: new Date('2026-01-25'),
+    readTime: '9 min read',
+    blogNumber: 31,
+    seoDescription: 'Discover how a Whole Food Plant Based lifestyle delivers natural weight loss, steady energy, and confidence without calorie counting or deprivation.'
   }
 ];
 
