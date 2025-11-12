@@ -2,10 +2,22 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MessageCircle } from 'lucide-react';
+import Seo from '@/components/seo/Seo';
+import { getSeoRouteByPath } from '@/data/seoRoutes';
 
 const Contact = () => {
+  const seoConfig = getSeoRouteByPath('/contact');
+  const [showForm, setShowForm] = React.useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      {seoConfig && (
+        <Seo
+          title={seoConfig.title}
+          description={seoConfig.description}
+          canonicalPath={seoConfig.path}
+        />
+      )}
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-r from-teal/10 to-coral/10">
         <div className="container mx-auto px-4 text-center">
@@ -30,15 +42,31 @@ const Contact = () => {
                 <CardTitle className="text-2xl text-center">Get in Touch</CardTitle>
               </CardHeader>
               <CardContent>
-                <iframe
-                  src="https://fxuqp40sseh.typeform.com/to/DbY1YJrs"
-                  width="100%"
-                  height="600"
-                  frameBorder="0"
-                  allow="camera; microphone; autoplay; encrypted-media;"
-                  title="Contact Form"
-                  className="rounded-lg"
-                />
+                {showForm ? (
+                  <iframe
+                    src="https://fxuqp40sseh.typeform.com/to/DbY1YJrs"
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    allow="camera; microphone; autoplay; encrypted-media;"
+                    title="Contact Form"
+                    className="rounded-lg"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center text-center gap-4 py-12">
+                    <p className="text-muted-foreground max-w-md">
+                      Load the secure Typeform when you&apos;re ready to reach out. It appears instantly and keeps your data private.
+                    </p>
+                    <button
+                      onClick={() => setShowForm(true)}
+                      className="px-6 py-3 rounded-full bg-teal text-white font-semibold hover:bg-teal/90 transition-colors"
+                    >
+                      Open Contact Form
+                    </button>
+                  </div>
+                )}
               </CardContent>
             </Card>
 

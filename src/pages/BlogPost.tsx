@@ -1,12 +1,13 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import calorieDensityChart from '@/assets/calorie-density-chart.png';
 import { BlogPostFooter } from '@/components/blog/BlogPostFooter';
 import { Button } from '@/components/ui/button';
 import { getBlogPostById, getNextBlogPost } from '@/data/blogPosts';
 import { buildMetaDescription, buildSeoTitle, getCanonicalUrl, resolveSocialImage } from '@/lib/seo';
 import { siteMetadata } from '@/lib/siteMetadata';
+import Seo from '@/components/seo/Seo';
+import { buildArticleJsonLd } from '@/lib/structuredData';
 
 const BlogPost = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -14,32 +15,20 @@ const BlogPost = () => {
   const currentPost = postId ? getBlogPostById(postId) : undefined;
 
   if (!currentPost) {
-    const fallbackTitle = buildSeoTitle('Blog Post Not Found');
     const fallbackDescription = buildMetaDescription(
       'The blog post you are looking for does not exist. Explore more rebellious insights in our blog archive.'
     );
     const canonicalUrl = getCanonicalUrl(canonicalPath);
-    const socialImage = siteMetadata.defaultSocialImage;
 
     return (
       <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
-        <Helmet>
-          <title>{fallbackTitle}</title>
-          <meta name="description" content={fallbackDescription} />
-          {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-          {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-          <meta property="og:title" content={fallbackTitle} />
-          <meta property="og:description" content={fallbackDescription} />
-          <meta property="og:type" content="website" />
-          {socialImage && <meta property="og:image" content={socialImage} />}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={fallbackTitle} />
-          <meta name="twitter:description" content={fallbackDescription} />
-          {siteMetadata.twitterHandle && (
-            <meta name="twitter:site" content={siteMetadata.twitterHandle} />
-          )}
-          {socialImage && <meta name="twitter:image" content={socialImage} />}
-        </Helmet>
+        <Seo
+          title="Blog Post Not Found"
+          description={fallbackDescription}
+          canonicalPath={canonicalPath}
+          canonicalUrl={canonicalUrl}
+          noindex
+        />
 
         <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
         <h1 className="text-4xl font-bold mb-4">Blog Post Not Found</h1>
@@ -51,34 +40,30 @@ const BlogPost = () => {
   const nextPost = getNextBlogPost(currentPost.blogNumber);
   const canonicalUrl = getCanonicalUrl(canonicalPath);
   const metaDescription = buildMetaDescription(currentPost.seoDescription, currentPost.excerpt);
-  const seoTitle = buildSeoTitle(currentPost.title);
   const publishedTime = currentPost.dateSort.toISOString();
   const socialImage = resolveSocialImage(siteMetadata.defaultSocialImage);
 
-  const sharedHead = (
-    <Helmet>
-      <title>{seoTitle}</title>
-      <meta name="description" content={metaDescription} />
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      <meta property="og:title" content={seoTitle} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="article" />
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {socialImage && <meta property="og:image" content={socialImage} />}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={seoTitle} />
-      <meta name="twitter:description" content={metaDescription} />
-      {siteMetadata.twitterHandle && (
-        <meta name="twitter:site" content={siteMetadata.twitterHandle} />
-      )}
-      {socialImage && <meta name="twitter:image" content={socialImage} />}
-    </Helmet>
-  );
+  const articleJsonLd =
+    canonicalUrl &&
+    buildArticleJsonLd({
+      title: buildSeoTitle(currentPost.title),
+      description: metaDescription,
+      canonicalUrl,
+      image: socialImage,
+      datePublished: publishedTime,
+    });
 
   const withSeo = (node: React.ReactNode) => (
     <>
-      {sharedHead}
+      <Seo
+        title={currentPost.title}
+        description={metaDescription}
+        canonicalPath={canonicalPath}
+        canonicalUrl={canonicalUrl}
+        ogType="article"
+        publishedTime={publishedTime}
+        jsonLd={articleJsonLd}
+      />
       {node}
     </>
   );
@@ -2451,6 +2436,137 @@ Use nut butters or avocados for richness in sauces.`}
           <p>Sparkle on,</p>
           <p>
             <em>Suz</em>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 32: Retirement! Fade or Focus
+  if (postId === 'retirement-fade-or-focus') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 32}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Retirement! Fade or Focus</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Retirement carries a shimmering promise of free time and fresh adventures, yet it can also stir up foggier emotions:
+            “Who will I be without my title?” “What will my days look like?” Today I want to offer a gentle map so you can step
+            toward this milestone with curiosity, confidence, and plenty of sparkle.
+          </p>
+
+          <p>
+            Think of this as a guided tour: what retirement feels like at first glance, how to prepare beyond the financials,
+            the sobering statistics we cannot ignore, practical ways to thrive (not just survive), and what I—at 83—am learning
+            about rewriting work on my own terms.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-10">1. Retirement at First Glance</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>Relief &amp; Freedom:</strong> After decades of responsibility, you finally have permission to slow down,
+              choose, and explore. That feels delicious.
+            </li>
+            <li>
+              <strong>Loss of Structure or Identity:</strong> If your work defined you (and for many of us it did), stepping away can
+              feel like a giant blank space. It is common to ask, “Who am I now?”
+            </li>
+            <li>
+              <strong>Mixed Emotions:</strong> Joy, uncertainty, financial questions, purpose questions—they can all coexist. Nothing
+              has gone wrong; it simply means you care about this next season.
+            </li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold mt-10">2. Retirement Prep Matters</h2>
+          <p>
+            Retirement should feel like stepping onto a new plateau, not falling off a cliff. Dialing in logistics (finances, health)
+            is essential, but so is tending to the emotional and mental landscape (meaning, structure, identity). Begin well before
+            your final office party so you have time to experiment.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>Reinvention:</strong> Consider retirement a launchpad for passion projects, volunteering, travel, or deeper
+              family life.
+            </li>
+            <li>
+              <strong>Social Shifts:</strong> Work brings built-in community; leaving means creating new rhythms of connection.
+            </li>
+            <li>
+              <strong>The Nibble · Wiggle · Dazzle Philosophy:</strong> Ease into change, experiment, and remember there is always
+              room to sparkle—at every stage.
+            </li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold mt-10">3. Sobering Statistics</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Only <strong>11%</strong> of financial planners say their clients are emotionally prepared for retirement—even when the
+              money side looks good (Financial Planning Association, 2025).
+            </li>
+            <li>
+              Just <strong>35%</strong> of non-retirees feel their savings are on track (Pension Consultants, 2025).
+            </li>
+            <li>
+              <strong>20%</strong> of Americans 50+ have zero retirement savings, and <strong>61%</strong> worry they will not have
+              enough (AARP, 2024).
+            </li>
+            <li>
+              Around <strong>60%</strong> of retirees feel comfortable relying on Social Security alone, yet most non-retirees do not
+              expect that comfort (Gallup, 2024).
+            </li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold mt-10">4. Practical Ways to Retire (Not Just Financially)</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>Reflect on Identity:</strong> Ask, “What gave me joy at work? How can I translate that feeling now?”
+            </li>
+            <li>
+              <strong>Design an Ideal Day:</strong> Map movement, meals, creativity, connection, and rest.
+            </li>
+            <li>
+              <strong>Do a Financial Reality Check:</strong> Know your numbers, get advice, and adjust lifestyle expectations early.
+            </li>
+            <li>
+              <strong>Plan for Health &amp; Activity:</strong> Stay moving, stay curious, and stay socially engaged.
+            </li>
+            <li>
+              <strong>Experiment Now:</strong> Try phased retirement, part-time work, or new hobbies while you still have a familiar
+              scaffold underneath you.
+            </li>
+            <li>
+              <strong>Stay Flexible:</strong> Desires evolve; let curiosity be your compass.
+            </li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold mt-10">5. What I Am Learning</h2>
+          <p>
+            At 83, I am not fading out—I am focusing in. I still coach, mentor, consult, and shout about Whole Food Plant Based living.
+            I launched Rebellious Aging, built this very website, and opened a private Facebook group for fellow rebels. Retirement, for
+            me, is permission to prioritize the work that matters most.
+          </p>
+          <p>
+            Retirement is not the end of relevance; it is the beginning of intentional impact. Gratitude, health, courage, and community
+            keep the spark alive.
+          </p>
+
+          <p className="text-xl font-semibold mt-10">The Wrap Up</p>
+          <p>
+            Retirement is not an exit—it is a doorway. With preparation, curiosity, and courage, you can walk through it with a bounce
+            in your step, vibrant health, and authentic confidence. If you need a companion read, I recommend{' '}
+            <em>From Strength to Strength</em> by Arthur C. Brooks.
+          </p>
+
+          <p>Rebel on,</p>
+          <p>
+            <em>— Suz</em>
           </p>
         </div>
 

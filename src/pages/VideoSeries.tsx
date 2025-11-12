@@ -2,10 +2,21 @@ import React from 'react';
 import { VideoCard } from '@/components/home/VideoCard';
 import { videoSeriesData, videoSeriesInfo } from '@/data/videoSeries';
 import ConnectCTA from '@/components/common/ConnectCTA';
+import Seo from '@/components/seo/Seo';
+import { getSeoRouteByPath } from '@/data/seoRoutes';
 
 const VideoSeries = () => {
+  const seoConfig = getSeoRouteByPath('/video-series');
+
   return (
     <div className="min-h-screen bg-background">
+      {seoConfig && (
+        <Seo
+          title={seoConfig.title}
+          description={seoConfig.description}
+          canonicalPath={seoConfig.path}
+        />
+      )}
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         <div className="max-w-4xl mx-auto text-center">

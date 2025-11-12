@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PillarCard from '@/components/home/PillarCard';
-import WelcomePopup from '@/components/home/WelcomePopup';
+import WelcomeBanner from '@/components/home/WelcomeBanner';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import { Button } from '@/components/ui/button';
 import {
@@ -11,14 +11,17 @@ import {
   CarouselApi,
 } from '@/components/ui/carousel';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import Seo from '@/components/seo/Seo';
+import { getSeoRouteByPath } from '@/data/seoRoutes';
+import { buildOrganizationJsonLd, buildWebSiteJsonLd } from '@/lib/structuredData';
 // import Autoplay from 'embla-carousel-autoplay'; // Removed to prevent auto-scrolling
 
 const Home = () => {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
   const [preloadedImages, setPreloadedImages] = useState<Set<number>>(new Set());
-  const [showWelcomePopup, setShowWelcomePopup] = useState(true);
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const homeSeo = getSeoRouteByPath('/');
 
   // Prevent auto-scrolling during initial load
   // Removed scroll lock to fix intermittent scrolling issues
@@ -36,10 +39,6 @@ const Home = () => {
       setCurrentSlide(api.selectedScrollSnap());
     });
   }, [api]);
-
-  const handleCloseWelcomePopup = () => {
-    setShowWelcomePopup(false);
-  };
 
   const pillars = [
     {
@@ -108,10 +107,15 @@ const Home = () => {
 
   return (
     <>
-      <WelcomePopup 
-        isOpen={showWelcomePopup} 
-        onClose={handleCloseWelcomePopup} 
-      />
+      {homeSeo && (
+        <Seo
+          title={homeSeo.title}
+          description={homeSeo.description}
+          canonicalPath={homeSeo.path}
+          jsonLd={[buildOrganizationJsonLd(), buildWebSiteJsonLd()]}
+        />
+      )}
+      <WelcomeBanner />
 
       {/* Hero section */}
       <section className="hero-spacing">
@@ -177,6 +181,7 @@ const Home = () => {
                                   objectPosition: 'center 30%'
                                 }}
                                 loading={index === 0 ? "eager" : "lazy"}
+                                decoding="async"
                                 onLoad={() => {
                                   if (index !== 0) {
                                     handleCarouselSelect(index);

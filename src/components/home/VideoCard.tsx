@@ -1,7 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Play, Clock } from "lucide-react";
+import React from "react";
+import { ExternalLink, Play } from "lucide-react";
 import type { VideoSeriesContent } from "@/data/videoSeries";
 
 interface VideoCardProps {
@@ -11,18 +9,42 @@ interface VideoCardProps {
 export const VideoCard = ({ video }: VideoCardProps) => {
   const embedUrl = `https://www.youtube.com/embed/${video.youtubeId}`;
   const watchUrl = `https://www.youtube.com/watch?v=${video.youtubeId}`;
+  const [isPlayerVisible, setIsPlayerVisible] = React.useState(false);
+  const thumbUrl = `https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`;
 
   return (
     <div className="group">
       <div className="relative aspect-video bg-muted rounded-xl overflow-hidden mb-6">
-        <iframe
-          src={embedUrl}
-          title={video.title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="h-full w-full border-0"
-          loading="lazy"
-        />
+        {isPlayerVisible ? (
+          <iframe
+            src={`${embedUrl}?autoplay=1`}
+            title={video.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="h-full w-full border-0"
+            loading="lazy"
+          />
+        ) : (
+          <button
+            type="button"
+            className="h-full w-full relative group focus:outline-none"
+            onClick={() => setIsPlayerVisible(true)}
+            aria-label={`Play ${video.title}`}
+          >
+            <img
+              src={thumbUrl}
+              alt={video.title}
+              className="h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="bg-white/90 text-teal rounded-full w-16 h-16 flex items-center justify-center shadow-lg transition-transform group-hover:scale-105">
+                <Play className="w-6 h-6 fill-teal text-teal" />
+              </div>
+            </div>
+          </button>
+        )}
         <div className="absolute top-4 left-4">
           <span className="bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium text-muted-foreground">
             {video.episodeNumber.toString().padStart(2, '0')}

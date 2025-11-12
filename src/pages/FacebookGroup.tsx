@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import { Sparkles, Users, Heart, Leaf, MessageCircle, Laugh } from 'lucide-react';
 import { FACEBOOK_GROUP_URL, handleFacebookGroupNavigation } from '@/lib/facebook';
+import Seo from '@/components/seo/Seo';
+import { getSeoRouteByPath } from '@/data/seoRoutes';
 
 const highlightCards = [
   {
@@ -31,8 +33,17 @@ const insideHighlights = [
 ];
 
 const FacebookGroup = () => {
+  const seoConfig = getSeoRouteByPath('/facebook-group');
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-teal/5 to-white pt-24">
+      {seoConfig && (
+        <Seo
+          title={seoConfig.title}
+          description={seoConfig.description}
+          canonicalPath={seoConfig.path}
+        />
+      )}
       {/* Hero */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4">

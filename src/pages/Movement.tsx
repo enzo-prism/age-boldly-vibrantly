@@ -3,6 +3,9 @@ import { Button } from '@/components/ui/button';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 import { useScrollAnimationTrigger } from '@/hooks/useScrollAnimationTrigger';
 import ConnectCTA from '@/components/common/ConnectCTA';
+import Seo from '@/components/seo/Seo';
+import { getSeoRouteByPath } from '@/data/seoRoutes';
+import { buildOrganizationJsonLd } from '@/lib/structuredData';
 
 const suzTimeline = [
   {
@@ -50,11 +53,20 @@ const suzTimeline = [
 const Movement = () => {
   const heroRef = useScrollAnimation<HTMLElement>({ threshold: 0.3 });
   const { ref: titleRef, isInView: titleInView, getItemStyle } = useStaggeredAnimation<HTMLDivElement>(2, { threshold: 0.5 });
+  const seoConfig = getSeoRouteByPath('/our-story');
   
   // Initialize scroll animation triggers
   useScrollAnimationTrigger();
 
   return <div className="min-h-screen gpu-accelerated">
+      {seoConfig && (
+        <Seo
+          title={seoConfig.title}
+          description={seoConfig.description}
+          canonicalPath={seoConfig.path}
+          jsonLd={buildOrganizationJsonLd()}
+        />
+      )}
       {/* Hero Section */}
       <section 
         ref={heroRef.ref}
@@ -131,7 +143,13 @@ const Movement = () => {
               {/* Image */}
               <div className="order-1 lg:order-2 w-full animate-slide-right">
                 <div className="rounded-xl overflow-hidden shadow-lg mx-auto max-w-md lg:max-w-none transition-transform duration-700 hover:scale-105">
-                  <img src="https://i.imgur.com/p1YPvQo.jpg" alt="Suz smiling confidently, embodying the Rebellious Aging lifestyle" className="w-full h-auto object-cover aspect-square sm:aspect-[4/5] lg:aspect-auto lg:h-full" />
+                  <img
+                    src="https://i.imgur.com/p1YPvQo.jpg"
+                    alt="Suz smiling confidently, embodying the Rebellious Aging lifestyle"
+                    className="w-full h-auto object-cover aspect-square sm:aspect-[4/5] lg:aspect-auto lg:h-full"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
             </div>
@@ -151,6 +169,8 @@ const Movement = () => {
                     src="/lovable-uploads/a4255d73-0f3b-4b18-ac0d-cd1e985f3292.png" 
                     alt="Framed vintage French FAVOR motorbike poster with elegant woman on yellow background - 'simple pratique élégant' - the actual poster from the author's personal collection embodying rebellious spirit" 
                     className="w-full h-auto object-cover rounded-xl"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

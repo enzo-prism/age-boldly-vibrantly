@@ -3,10 +3,23 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import { FACEBOOK_GROUP_URL, handleFacebookGroupNavigation } from '@/lib/facebook';
+import Seo from '@/components/seo/Seo';
+import { getSeoRouteByPath } from '@/data/seoRoutes';
+import { buildOrganizationJsonLd } from '@/lib/structuredData';
 
 const WelcomeLetter = () => {
+  const seoConfig = getSeoRouteByPath('/welcome-letter');
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
+      {seoConfig && (
+        <Seo
+          title={seoConfig.title}
+          description={seoConfig.description}
+          canonicalPath={seoConfig.path}
+          jsonLd={buildOrganizationJsonLd()}
+        />
+      )}
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
           <div className="text-center mb-8">

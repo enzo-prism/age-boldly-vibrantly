@@ -3,6 +3,7 @@ import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { blogPosts } from '../src/data/blogPosts';
+import { seoRoutes } from '../src/data/seoRoutes';
 import { buildMetaDescription, buildSeoTitle, resolveAbsoluteUrl } from '../src/lib/seo';
 import { siteMetadata } from '../src/lib/siteMetadata';
 
@@ -30,18 +31,44 @@ const removeDefaultHeadTags = (html: string) => {
 interface RouteConfig {
   path: string;
   output: string;
+  buildHead: () => string;
 }
+
+const toOutputPath = (path: string) => {
+  if (path === '/' || path === '') {
+    return 'index.html';
+  }
+
+  return join(path.replace(/^\//, ''), 'index.html');
+};
 
 const getRoutes = (): RouteConfig[] => {
   const postRoutes = blogPosts.map((post) => ({
     path: `${BLOG_BASE_PATH}/${post.id}`,
-    output: join('blog', post.id, 'index.html')
+    output: join('blog', post.id, 'index.html'),
+    buildHead: () => createBlogPostHead(post.id),
   }));
 
-  return [
-    { path: BLOG_BASE_PATH, output: join('blog', 'index.html') },
-    ...postRoutes
-  ];
+  const blogIndexRoute: RouteConfig = {
+    path: BLOG_BASE_PATH,
+    output: join('blog', 'index.html'),
+    buildHead: createBlogIndexHead,
+  };
+
+  const staticRoutes = seoRoutes.map<RouteConfig>((route) => ({
+    path: route.path,
+    output: toOutputPath(route.path),
+    buildHead: () =>
+      buildHeadContent({
+        title: buildSeoTitle(route.title),
+        description: buildMetaDescription(route.description),
+        canonicalUrl: resolveAbsoluteUrl(route.path),
+        ogType: route.ogType ?? 'website',
+        image: route.image,
+      }),
+  }));
+
+  return [...staticRoutes, blogIndexRoute, ...postRoutes];
 };
 
 interface HeadContent {
@@ -50,13 +77,14 @@ interface HeadContent {
   canonicalUrl?: string;
   ogType: 'website' | 'article';
   publishedTime?: string;
+  image?: string;
 }
 
-const buildHeadContent = ({ title, description, canonicalUrl, ogType, publishedTime }: HeadContent) => {
+const buildHeadContent = ({ title, description, canonicalUrl, ogType, publishedTime, image }: HeadContent) => {
   const safeTitle = escapeHtml(title);
   const safeDescription = escapeHtml(description);
   const safeCanonical = canonicalUrl ? escapeHtml(canonicalUrl) : undefined;
-  const socialImage = resolveAbsoluteUrl(siteMetadata.defaultSocialImage);
+  const socialImage = resolveAbsoluteUrl(image ?? siteMetadata.defaultSocialImage);
   const safeSocialImage = socialImage ? escapeHtml(socialImage) : undefined;
   const safePublishedTime = publishedTime ? escapeHtml(publishedTime) : undefined;
   const safeTwitterHandle = siteMetadata.twitterHandle ? escapeHtml(siteMetadata.twitterHandle) : undefined;
@@ -122,10 +150,7 @@ const createBlogPostHead = (postId: string) => {
 };
 
 const createStaticPage = async (route: RouteConfig, template: string) => {
-  const head =
-    route.path === BLOG_BASE_PATH
-      ? createBlogIndexHead()
-      : createBlogPostHead(route.path.replace(`${BLOG_BASE_PATH}/`, ''));
+  const head = route.buildHead();
 
   const sanitizedHead = removeDefaultHeadTags(template);
   const finalHtml = sanitizedHead.replace(

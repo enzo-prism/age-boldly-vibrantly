@@ -293,6 +293,16 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '9 min read',
     blogNumber: 31,
     seoDescription: 'Discover how a Whole Food Plant Based lifestyle delivers natural weight loss, steady energy, and confidence without calorie counting or deprivation.'
+  },
+  {
+    id: 'retirement-fade-or-focus',
+    title: 'Retirement! Fade or Focus',
+    excerpt: 'Retirement can feel exhilarating and disorienting at the same time. Let’s map the emotional landscape, prepare beyond finances, and enter this new chapter with curiosity, structure, and sparkle.',
+    date: '3/10/2026',
+    dateSort: new Date('2026-03-10'),
+    readTime: '9 min read',
+    blogNumber: 32,
+    seoDescription: 'Learn how to prepare emotionally, mentally, and practically for retirement so you trade fading away for focused reinvention, connection, and purpose.'
   }
 ];
 

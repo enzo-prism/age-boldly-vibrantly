@@ -1,9 +1,20 @@
 import React from 'react';
 import ConnectCTA from '@/components/common/ConnectCTA';
+import Seo from '@/components/seo/Seo';
+import { getSeoRouteByPath } from '@/data/seoRoutes';
 
 const Team = () => {
+  const seoConfig = getSeoRouteByPath('/team');
+
   return (
     <div className="min-h-screen bg-background">
+      {seoConfig && (
+        <Seo
+          title={seoConfig.title}
+          description={seoConfig.description}
+          canonicalPath={seoConfig.path}
+        />
+      )}
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
         <div className="max-w-4xl mx-auto text-center">

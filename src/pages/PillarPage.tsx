@@ -8,6 +8,7 @@ import NutritionCTA from '@/components/pillar/NutritionCTA';
 import QuizSection from '@/components/pillar/QuizSection';
 import ChecklistCTA from '@/components/pillar/ChecklistCTA';
 import ConnectCTA from '@/components/common/ConnectCTA';
+import Seo from '@/components/seo/Seo';
 
 const PillarPage = () => {
   const { pillarId } = useParams<{ pillarId: string }>();
@@ -22,9 +23,15 @@ const PillarPage = () => {
   }
 
   const content = pillarContent[pillarId];
+  const canonicalPath = `/pillars/${pillarId}`;
 
   return (
     <div>
+      <Seo
+        title={content.title}
+        description={content.description}
+        canonicalPath={canonicalPath}
+      />
       <PillarHero content={content} />
 
       <GallerySection content={content} />

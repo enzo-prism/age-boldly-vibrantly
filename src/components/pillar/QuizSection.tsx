@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -31,8 +31,30 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
 
   const typeformId = pillarId ? typeformEmbeds[pillarId] : undefined;
 
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [isQuizVisible, setIsQuizVisible] = useState(false);
+
   useEffect(() => {
-    if (!typeformId) return;
+    const target = sectionRef.current;
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsQuizVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(target);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!typeformId || !isQuizVisible) return;
 
     const scriptSrc = "https://embed.typeform.com/next/embed.js";
     const ensureTypeformLoaded = () => {
@@ -74,7 +96,7 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
     return () => {
       script.removeEventListener('load', handleNewLoad);
     };
-  }, [typeformId]);
+  }, [typeformId, isQuizVisible]);
 
   const [formData, setFormData] = useState({
     rating: '',
@@ -184,7 +206,7 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">{content.quizTitle}</h2>
@@ -194,15 +216,26 @@ const QuizSection: React.FC<QuizSectionProps> = ({ content }) => {
           
           <div className="bg-white p-8 rounded-lg shadow-sm">
             {typeformId ? (
-              <div className="space-y-6">
-                <div
-                  data-tf-live={typeformId}
-                  className="w-full min-h-[600px]"
-                />
-                <p className="text-sm text-muted-foreground text-center">
-                  The self-assessment opens above. Complete the prompts to receive personalized guidance from Suz.
-                </p>
-              </div>
+              isQuizVisible ? (
+                <div className="space-y-6">
+                  <div
+                    data-tf-live={typeformId}
+                    className="w-full min-h-[600px]"
+                  />
+                  <p className="text-sm text-muted-foreground text-center">
+                    The self-assessment opens above. Complete the prompts to receive personalized guidance from Suz.
+                  </p>
+                </div>
+              ) : (
+                <div className="flex flex-col items-center gap-4 text-center py-8">
+                  <p className="text-muted-foreground max-w-md">
+                    Tap the button below to load the interactive quiz when you&apos;re ready.
+                  </p>
+                  <Button onClick={() => setIsQuizVisible(true)} className="bg-teal text-white hover:bg-teal/90">
+                    Load Quiz
+                  </Button>
+                </div>
+              )
             ) : (
               <form onSubmit={handleSubmit}>
                 <div className="space-y-6">

@@ -1,0 +1,79 @@
+export interface SeoRouteConfig {
+  path: string;
+  title: string;
+  description: string;
+  ogType?: 'website' | 'article';
+  image?: string;
+}
+
+export const seoRoutes: SeoRouteConfig[] = [
+  {
+    path: '/',
+    title: 'Age Boldly / Live Loudly',
+    description:
+      'Rebellious Aging helps women 55+ expand confidence, style, and health through storytelling, plant-powered living, and an active community.',
+  },
+  {
+    path: '/our-story',
+    title: 'Our Story',
+    description:
+      'Meet Suz and discover how Rebellious Aging challenges outdated rules with science-backed lifestyle shifts rooted in compassion.',
+  },
+  {
+    path: '/welcome-letter',
+    title: 'Welcome Letter',
+    description:
+      'A heartfelt welcome from Suz inviting women 55-105 to join a bold movement centered on community, plant-strong nourishment, and confidence.',
+  },
+  {
+    path: '/nutrition',
+    title: 'Whole-Food Plant-Based Nutrition',
+    description:
+      'Explore the what, why, and how of Whole-Food, Plant-Based (WFPB) living with protocols, benefits, recipes, and expert-backed guidance.',
+  },
+  {
+    path: '/video-series',
+    title: 'Video Series',
+    description:
+      'Watch the latest Rebellious Aging video conversations packed with plant-powered tips, confidence boosts, and style inspiration.',
+  },
+  {
+    path: '/team',
+    title: 'Team',
+    description:
+      'Meet the collaborators and creatives bringing the Rebellious Aging vision to life through photography, storytelling, and design.',
+  },
+  {
+    path: '/contact',
+    title: 'Contact Suz',
+    description:
+      'Reach out to Suz for plant-based guidance, speaking inquiries, or personalized support on your rebellious aging journey.',
+  },
+  {
+    path: '/facebook-group',
+    title: 'Private Facebook Community',
+    description:
+      'Join the private Rebellious Aging Facebook group for daily inspiration, accountability, and plant-strong conversation.',
+  },
+  {
+    path: '/pillars/confidence',
+    title: 'Confidence Pillar',
+    description:
+      'Ditch limiting beliefs and rebuild unshakable confidence with quizzes, checklists, and personalized support.',
+  },
+  {
+    path: '/pillars/style',
+    title: 'Style Pillar',
+    description:
+      'Express signature style with playful guidance, curated resources, and the Rebellious Aging style checklist.',
+  },
+  {
+    path: '/pillars/health',
+    title: 'Health Pillar',
+    description:
+      'Fuel longevity with Whole-Food, Plant-Based foundations, nutrition tools, and a daily health checklist.',
+  },
+];
+
+export const getSeoRouteByPath = (path: string) =>
+  seoRoutes.find((route) => route.path === path);
