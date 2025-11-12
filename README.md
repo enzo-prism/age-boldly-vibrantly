@@ -9,7 +9,7 @@ Rebellious Aging is a Vite + React site that helps women 55+ “age boldly, live
 - **Build tooling:** Vite 5, TypeScript, React 18, SWC-based JSX transform
 - **UI:** Tailwind CSS, shadcn/ui components, Radix Primitives, Framer Motion
 - **State & data:** TanStack Query, custom hooks, local data files under `src/data`
-- **Content tooling:** React Helmet for per-page SEO, custom prerender script
+- **Content tooling:** Shared `<Seo>` component (Helmet + JSON-LD), structured data helpers, and a prerender script that injects metadata into static HTML
 - **Backend integrations:** Supabase Edge Function (`supabase/functions/submit-quiz`) + database table `quiz_submissions`, embedded Typeforms for contact/newsletter
 
 ---
@@ -19,10 +19,12 @@ Rebellious Aging is a Vite + React site that helps women 55+ “age boldly, live
 ```
 src/
   App.tsx               // Routes + providers
-  components/           // Layout, home, pillar, nutrition, ui primitives
+  components/           // Layout, home, pillar, nutrition, ui primitives, seo helpers
+    seo/                // Shared <Seo> wrapper
   data/                 // blogPosts, pillarContent, videoSeries metadata
+    seoRoutes.ts        // Canonical metadata per static route
   hooks/                // Scroll, mobile, toast utilities
-  lib/                  // SEO helpers, constants, Facebook helpers
+  lib/                  // SEO helpers, structured data, constants, Facebook helpers
   pages/                // Top-level routes (Home, Pillars, Blog, etc.)
   integrations/         // Supabase typed client
 scripts/
@@ -45,7 +47,7 @@ Key conventions:
 
 ## Core Experience Map
 
-- **Home (`src/pages/Home.tsx`)** – Carousel hero, pillar overview, and repeated CTAs that route visitors toward Our Story or the individual pillars.
+- **Home (`src/pages/Home.tsx`)** – Carousel hero, inline Welcome Banner (no blocking modal), pillar overview, and repeated CTAs that route visitors toward Our Story or the individual pillars.
 - **Our Story / Movement (`src/pages/Movement.tsx`)** – Narrative, credentials, and the “Why” behind the rebellion, including scroll-triggered timelines.
 - **Pillars (`/pillars/:pillarId`)** – Confidence, Style, and Health all read from the same data model for hero copy, galleries, quizzes, and downloadable checklists.
 - **Nutrition (`src/pages/Nutrition.tsx`)** – Query-param-driven tabs that educate on WFPB foundations, benefits, Esselstyn/Campbell guidance, “why & how,” and recipes.
@@ -65,10 +67,12 @@ Use this map when adding new sections so the navigation, voice, and CTAs remain 
 | Blog articles | `src/pages/BlogPost.tsx` | Each post lives in its own `if (postId === 'slug')` block—always wrap new copy with `<BlogPostFooter>` for share actions. |
 | Pillar content | `src/data/pillarContent.ts` | Hero text, gallery images, quiz titles, and checklist links for Confidence/Style/Health. |
 | Video episodes | `src/data/videoSeries.ts` | Add/update YouTube metadata here to refresh the video grid without touching layout code. |
-| Site metadata | `src/lib/siteMetadata.ts` | Central place for `baseUrl`, default descriptions, and social images. |
+| Site metadata | `src/lib/siteMetadata.ts` | Central place for `baseUrl`, default descriptions, social images, and social profile links. |
+| Structured data builders | `src/lib/structuredData.ts` | Generates Organization, WebSite, Article, and FAQ JSON-LD payloads. |
+| Route SEO config | `src/data/seoRoutes.ts` | Canonical metadata for static routes, reused by the `<Seo>` component and prerender script. |
 | Facebook group link/logic | `src/lib/facebook.ts` + `src/lib/constants.ts` | Keeps outbound navigation consistent (open in new tab + fallback toast). |
 
-After editing these files, rerun `npm run sitemap` (if blog metadata changed) and `npm run build` to keep the prerendered HTML and sitemap aligned.
+After editing these files, rerun `npm run sitemap` (if blog metadata changed) and `npm run build` (which also runs `npm run prerender`) to keep the prerendered HTML and sitemap aligned.
 
 ---
 
@@ -111,11 +115,10 @@ After editing blog content run:
 
 ```bash
 npm run sitemap  # refresh sitemap with new blog URLs
-npm run build    # regenerates dist
-npm run prerender
+npm run build    # regenerates dist and runs prerender automatically
 ```
 
-The prerender script rewrites `dist/blog/**/index.html` with fully populated `<head>` tags for SEO.
+The prerender script rewrites both `/blog` and every static route under `dist/**/index.html` with fully populated `<head>` tags for SEO.
 
 ---
 
@@ -127,19 +130,30 @@ The prerender script rewrites `dist/blog/**/index.html` with fully populated `<h
 
 ---
 
-## SEO & Sharing
+## SEO Workflow
 
-- Site-wide metadata lives in `src/lib/siteMetadata.ts`.
-- Utility helpers (buildSeoTitle, buildMetaDescription, getCanonicalUrl) sit under `src/lib/seo.ts` and are reused across pages and in `scripts/prerender.tsx`.
-- Blog-specific share buttons live in `src/components/blog/BlogShareActions.tsx`.
+- Site-wide defaults live in `src/lib/siteMetadata.ts`; update the social profiles array whenever handles change.
+- Use the shared `<Seo>` component (`src/components/seo/Seo.tsx`) on every page. Pass `jsonLd` when you want Organization, WebSite, Article, or FAQ schema—helpers live in `src/lib/structuredData.ts`.
+- Static routes derive their canonical metadata from `src/data/seoRoutes.ts`. Keep that file in sync with any new path so runtime rendering and `scripts/prerender.tsx` stay aligned.
+- Blog share buttons live in `src/components/blog/BlogShareActions.tsx`, and blog metadata (including `seoDescription`) powers both the archive and Article schema.
+- After adjustments, run `npm run build` to regenerate `dist/` plus the prerendered HTML for every static route and blog post.
+
+## Performance & Embed Guardrails
+
+- Home now uses `WelcomeBanner` instead of an auto-opening modal—avoid blocking interstitials on initial load.
+- Embeds are lazy by default:
+  - Contact Typeform loads when visitors click “Open Contact Form”.
+  - Pillar quizzes wait for intersection, then load the Typeform script.
+  - Video cards show a clickable thumbnail before mounting the YouTube iframe.
+- Follow the same approach for any new third-party widget: provide a helpful placeholder, load scripts on intent, and gate global loaders so they only execute once.
+- Analytics scripts (GTM/Hotjar) are deferred via `requestIdleCallback` in `index.html`. If you add more trackers, piggyback on that defer mechanism.
 
 ---
 
 ## Deployment
 
-1. `npm run build` — compiles Vite output.
-2. `npm run prerender` — injects blog `<head>` metadata into the built HTML.
-3. Deploy `/dist` to your hosting platform (Lovable “Share → Publish”, Netlify, Vercel, etc.).
+1. `npm run build` — runs the sitemap generator, compiles Vite output, and prerenders every static/blog route.
+2. Deploy `/dist` to your hosting platform (Lovable “Share → Publish”, Netlify, Vercel, etc.).
 
 Supabase function (`submit-quiz`) can be deployed with:
 
