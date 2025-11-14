@@ -303,6 +303,46 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '9 min read',
     blogNumber: 32,
     seoDescription: 'Learn how to prepare emotionally, mentally, and practically for retirement so you trade fading away for focused reinvention, connection, and purpose.'
+  },
+  {
+    id: 'plants-do-not-disappoint',
+    title: 'Plants Do NOT Disappoint',
+    excerpt: 'Plants show up honest, vibrant, and nourishing—invite them onto your plate to restore energy without conditions.',
+    date: '4/1/2026',
+    dateSort: new Date('2026-04-01'),
+    readTime: '6 min read',
+    blogNumber: 33,
+    seoDescription: 'Why whole, unprocessed plants never disappoint and how welcoming more of them into your kitchen sparks honest nourishment at any age.'
+  },
+  {
+    id: 'motion-is-not-negotiable',
+    title: 'Motion is Not Negotiable',
+    excerpt: 'Movement is essential self-care—here’s how Suz keeps showing up with walking, strength, balance, and playful consistency.',
+    date: '5/1/2026',
+    dateSort: new Date('2026-05-01'),
+    readTime: '8 min read',
+    blogNumber: 34,
+    seoDescription: 'Discover why motion stays non-negotiable for Suz and how simple, steady routines keep bodies strong, sharp, and joyful at any age.'
+  },
+  {
+    id: 'lifestyle-medicine-six-pillars',
+    title: 'Lifestyle Medicine: The Six Pillars',
+    excerpt: 'Lifestyle Medicine offers six evidence-backed pillars—food, movement, sleep, stress, connection, and low-risk choices—to help you age rebelliously.',
+    date: '6/1/2026',
+    dateSort: new Date('2026-06-01'),
+    readTime: '10 min read',
+    blogNumber: 35,
+    seoDescription: 'Explore the six Lifestyle Medicine pillars from ACLM and how simple daily habits power food-as-medicine, movement, rest, calm, community, and safer choices.'
+  },
+  {
+    id: 'seven-day-balance-challenge',
+    title: '7 Day Balance Challenge',
+    excerpt: 'Seven bite-sized daily balance drills to boost confidence, stability, and freedom in one focused week.',
+    date: '7/1/2026',
+    dateSort: new Date('2026-07-01'),
+    readTime: '4 min read',
+    blogNumber: 37,
+    seoDescription: 'Follow Suz’s 7-day balance challenge—stand, walk, shift, and steady yourself with simple daily drills for lifelong stability.'
   }
 ];
 

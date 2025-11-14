@@ -2575,6 +2575,355 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 33: Plants Do NOT Disappoint
+  if (postId === 'plants-do-not-disappoint') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 33}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Plants Do NOT Disappoint</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            If there’s one thing I have learned in decades of living, reading, researching, cooking, and experimenting, it’s this:
+            plants do not disappoint.
+          </p>
+
+          <p>
+            They are honest, authentic, and humble. They show up as they are—vibrant, colorful, and full of life to share—and they ask
+            so little in return. Give them sun, water, care, and love and they reward you tenfold. When we invite them into our
+            kitchens and onto our plates, they nourish, restore, and energize without conditions.
+          </p>
+
+          <p>I have never heard a head of kale make false promises. I have never seen an apple hide fine print. Plants simply support life.</p>
+
+          <p>
+            Nutrition science evolves constantly, but one truth stays steady: the more plants we eat, the better we do. Study after
+            study shows that diets rich in whole, unprocessed plant foods reduce the risk of heart disease, diabetes, autoimmune
+            disease, and even depression. No hype. No drama. Just nature doing its quiet, dependable work.
+          </p>
+
+          <p>
+            And here is the beautiful thing: plants don’t judge. They don’t care if you’re 25 or 85, a gourmet cook, or someone who can
+            barely boil water. They meet you where you are and, without hesitation, begin transforming you from the inside out, one
+            bite at a time.
+          </p>
+
+          <p>
+            We live in a world full of letdowns, quick fixes that don’t fix, products that overpromise, and food that pretends to
+            nourish while slowly draining our vitality.
+          </p>
+
+          <p>
+            Every time I slice open a ripe tomato, watch a handful of spinach wilt in a pan, or bite into a juicy apple, I am reminded
+            that nature doesn’t need a marketing campaign. Nature can school us all on how to deliver.
+          </p>
+
+          <p>
+            Of course plants will not always be perfect—sometimes they are misshapen or a little bruised—but they are real, they are
+            alive, and they keep their promises.
+          </p>
+
+          <p>
+            So here is my thing: I will keep sharing what I have learned about the Whole Food Plant Based lifestyle. Not to convince or
+            convert you, but to show what is possible when we trust the simple, honest gifts that nature gives us.
+          </p>
+
+          <p>
+            You do not need to overhaul your life overnight. Just start. Invite more plants to your table and replace the word “EAT”
+            with “NOURISH” to see how your perspective changes.
+          </p>
+
+          <p>The plants you invite in will:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Show up</li>
+            <li>Heal</li>
+            <li>Not disappoint.</li>
+          </ul>
+
+          <p>In good health,</p>
+          <p>
+            <em>Suz</em>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 34: Motion is Not Negotiable
+  if (postId === 'motion-is-not-negotiable') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 34}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Motion is Not Negotiable</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Since then, my rhythm has been simpler: motion is not negotiable.
+          </p>
+
+          <p>
+            Let’s be honest—the older we get, the easier it is to think about moving instead of actually doing it. But here is the
+            truth I have learned over a lifetime of experiments, injuries, routines, and reboots: MOTION IS NON NEGOTIABLE.
+          </p>
+
+          <p>
+            Our bodies are designed to move. Movement keeps joints lubricated, minds sharp, moods steady, and bones strong. Yet for
+            many women of “a certain age,” movement becomes optional because we are busy, distracted, or simply unaware of the benefits.
+          </p>
+
+          <p>I say NO. Movement is NOT optional. It is essential self-care.</p>
+
+          <p>
+            I have been moving one way or another since 1979—the year I trained for and finished the Paul Mason Marathon in Saratoga,
+            California. It was exhilarating, exhausting, enlightening, and the moment I knew running was “one and done.”
+          </p>
+
+          <p>But the habit of moving stuck.</p>
+
+          <p>
+            For eight wonderful years I traded running for road biking. I rode 20 miles a day for training and stretched to 25–60 mile
+            rides on the weekends. Freedom on two wheels! Then in 2010 everything changed when my husband had a life-altering cycling
+            accident. I hung up my helmet and never looked back.
+          </p>
+
+          <p>
+            Today I walk 2–3 miles every day with my sidekick Gabe. Three times a week—Sunday, Tuesday, and Thursday—I lift weights,
+            work on balance, stretch, and practice yoga. These routines are my non-negotiables. My happy time. My me time.
+          </p>
+
+          <p>It is not just about working out. It is about showing up for myself.</p>
+
+          <p>The science is clear, and the evidence keeps growing:</p>
+          <p>
+            <strong>Strength training</strong> maintains muscle mass, bone density, and metabolism. It is the best defense against
+            frailty and falls.
+          </p>
+          <p>
+            <strong>Walking</strong> improves heart health, brain function, and mood. Thirty minutes a day can lower dementia risk.
+          </p>
+          <p>
+            <strong>Stretching and balance</strong> preserve flexibility and confidence so we can keep doing what we love—gracefully.
+          </p>
+          <p>
+            <strong>Consistency beats intensity.</strong> Three steady days a week can change your life more than sporadic bursts.
+          </p>
+
+          <p>
+            Beyond science, movement reminds us that we are alive. It connects us to our bodies, these incredible vessels that have
+            carried us through decades of living.
+          </p>
+
+          <p>
+            Here is the secret: do not make it complicated. Make it automatic. Treat your movement routine like brushing your teeth—it
+            is simply what you do.
+          </p>
+
+          <p className="text-lg font-semibold mt-8">Start Here</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Stretch every morning. Before coffee, reach, twist, bend, and breathe for two minutes.</li>
+            <li>Walk daily. Around the block, to the mailbox, with a friend, with your dog—rain just means grab an umbrella.</li>
+            <li>Add balance work. Stand on one leg for a minute or heel-to-toe walk across the room.</li>
+            <li>Lift something. Groceries, soup cans, hand weights—it all builds strength.</li>
+            <li>Schedule movement like an appointment and protect it fiercely.</li>
+          </ul>
+
+          <p>
+            The magic happens when you stop negotiating with yourself. Movement does not need special equipment or fancy outfits. It
+            just needs you willing to move. Hop out of bed, lie down on the floor, stretch, and get up to practice that balance work.
+          </p>
+
+          <p>
+            You have got this. Remember, the best exercise for you is the one you will do. Extra points if you polka around your living
+            room—just move, have fun, and do it!
+          </p>
+
+          <p>
+            <em>Suz</em>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 35: Lifestyle Medicine: The Six Pillars
+  if (postId === 'lifestyle-medicine-six-pillars') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 35}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Lifestyle Medicine: The Six Pillars</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            If aging has taught us anything, it is that we do not need complicated rules. We need simple truths, good habits, and a
+            dash of rebellious flair. Enter Lifestyle Medicine—the science-backed, common-sense approach that asks, “What if feeling
+            fantastic is actually possible?”
+          </p>
+
+          <p>
+            How did we stray so far, believing prescriptions and procedures were our only hope? It is not about perfection. It is about
+            steady, joyful actions that add vitality to your day and years to your life.
+          </p>
+
+          <p>
+            The American College of Lifestyle Medicine (ACLM) trains, certifies, and supports clinicians who prevent, treat, and even
+            reverse chronic disease through evidence-based lifestyle changes. They stand for science, empowerment, prevention, and a
+            better future for everyone.
+          </p>
+
+          <p className="text-lg font-semibold mt-8">The Six Pillars of Lifestyle Medicine</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Food as Medicine</li>
+            <li>Move Your Body</li>
+            <li>Restorative Sleep</li>
+            <li>Stress Management</li>
+            <li>Social Connection</li>
+            <li>Avoiding Risky Substances</li>
+          </ul>
+
+          <p>Let’s take a look at each pillar with simple ways to bring them into your day.</p>
+
+          <h2 className="text-2xl font-semibold">Food as Medicine</h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Add more fruits and veggies to your day.</li>
+            <li>Try a plant-based version of your favorite meal.</li>
+            <li>Keep fruit and chopped veggies visible and handy.</li>
+            <li>Start every meal with something green.</li>
+            <li>Make water your new bestie.</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold">Move Your Body</h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Walk 10 minutes after meals.</li>
+            <li>Stretch while the coffee brews.</li>
+            <li>Practice balance daily.</li>
+            <li>Dance in the kitchen.</li>
+            <li>Try Tai Chi, yoga, or gentle strength training.</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold">Restorative Sleep</h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Go to bed 30 minutes earlier.</li>
+            <li>Keep your room cool and dark.</li>
+            <li>Limit screens before bed.</li>
+            <li>Create a bedtime ritual.</li>
+            <li>Limit caffeine.</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold">Stress Management</h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Try a two-minute breathing exercise.</li>
+            <li>Journal or practice gratitude.</li>
+            <li>Walk outside daily.</li>
+            <li>Listen to calming music.</li>
+            <li>Give yourself a “worry window.”</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold">Social Connection</h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Call one friend a week.</li>
+            <li>Join a group or community event.</li>
+            <li>Invite a neighbor for tea.</li>
+            <li>Share small acts of kindness.</li>
+            <li>Stay engaged and curious.</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold">Avoid Risky Substances</h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Limit or avoid alcohol.</li>
+            <li>Swap in sparkling water.</li>
+            <li>Build supportive environments.</li>
+            <li>Celebrate healthy habits.</li>
+            <li>Seek help if needed—strength, never shame.</li>
+          </ul>
+
+          <p className="text-lg font-semibold mt-8">The Rebellious Aging Wrap-up</p>
+          <p>
+            You do not need perfection; you need small steps taken daily, aligned with the life you want to live. Rebellious Aging
+            means choosing vitality, confidence, connection, and joy every single day.
+          </p>
+
+          <p>Eat powerfully. Live loudly. Age boldly.</p>
+
+          <p>
+            <strong>SUZ</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 37: 7 Day Balance Challenge
+  if (postId === 'seven-day-balance-challenge') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 37}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">7 Day Balance Challenge</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Balance is confidence. It is freedom. And like every other part of rebellious aging, it is built through small daily reps.
+            This seven-day challenge keeps things simple so you can weave stability into your routine in just a few focused minutes.
+          </p>
+
+          <p className="text-lg font-semibold">Day 1 · Stand on One Foot</p>
+          <p>Hold for 10–20 seconds per side. Use a counter for safety and breathe steadily.</p>
+
+          <p className="text-lg font-semibold">Day 2 · Heel to Toe Walk</p>
+          <p>Walk across the room placing each heel directly in front of the opposite toe like you are on a balance beam.</p>
+
+          <p className="text-lg font-semibold">Day 3 · Weight Shifting</p>
+          <p>Shift your weight side-to-side for one or two minutes, feeling your feet anchor into the floor.</p>
+
+          <p className="text-lg font-semibold">Day 4 · Slow Motion Walking</p>
+          <p>Take 10 slow steps forward, lifting and placing each foot with intention.</p>
+
+          <p className="text-lg font-semibold">Day 5 · Stand to Sit Without Hands</p>
+          <p>Use your legs and core to sit and stand 5–10 times, keeping your chest proud and movement controlled.</p>
+
+          <p className="text-lg font-semibold">Day 6 · Tiptoe Balance</p>
+          <p>Rise onto your toes for five seconds, lower, and repeat 5–8 times to recruit ankles and calves.</p>
+
+          <p className="text-lg font-semibold">Day 7 · Eyes Closed Balance</p>
+          <p>Stand near a counter, close your eyes for two seconds, then open. Repeat five times to train confidence without visual cues.</p>
+
+          <p>Small daily balance practice builds strength, stability, and freedom.</p>
+
+          <p>
+            Eat powerfully. Live loudly. Age boldly.
+          </p>
+
+          <p>
+            <strong>SUZ</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
