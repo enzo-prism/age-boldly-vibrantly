@@ -2667,9 +2667,6 @@ Use nut butters or avocados for richness in sauces.`}
         <h1 className="text-4xl font-bold mb-8">Motion is Not Negotiable</h1>
 
         <div className="prose max-w-none space-y-4 mb-16">
-          <p>
-            Since then, my rhythm has been simpler: motion is not negotiable.
-          </p>
 
           <p>
             Let’s be honest—the older we get, the easier it is to think about moving instead of actually doing it. But here is the
