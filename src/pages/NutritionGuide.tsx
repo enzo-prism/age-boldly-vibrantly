@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Seo from '@/components/seo/Seo';
 import { Button } from '@/components/ui/button';
+import { getSeoRouteByPath } from '@/data/seoRoutes';
 
 const HERO_DESCRIPTION =
   'What you put on your plate can change how you feel in your body, how clearly you think, and how boldly you live in every decade. A whole-food, plant-based lifestyle isn’t about punishment or perfection. It’s about giving your future self a fighting chance — with real food, from real plants, that loves you back.';
@@ -91,13 +92,17 @@ const NutritionGuide = () => {
     }
   }, []);
 
+  const seoConfig = getSeoRouteByPath('/pillars/health/nutrition-guide');
+
   return (
     <div className="bg-background">
-      <Seo
-        title="Whole-Food, Plant-Based Guide"
-        description="A joyful WFPB roadmap tailored to rebellious agers—what to eat, what to crowd out, and how to keep your Health pillar sparkling."
-        canonicalPath="/pillars/health/nutrition-guide"
-      />
+      {seoConfig && (
+        <Seo
+          title={seoConfig.title}
+          description={seoConfig.description}
+          canonicalPath={seoConfig.path}
+        />
+      )}
 
       <section className="bg-gradient-to-b from-teal/20 to-white py-20">
         <div className="container mx-auto px-4">

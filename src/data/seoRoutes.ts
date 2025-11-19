@@ -38,12 +38,6 @@ export const seoRoutes: SeoRouteConfig[] = [
       'Dive into what to eat, what to crowd out, and how to read labels like a rebel with a printable WFPB roadmap for rebellious agers.',
   },
   {
-    path: '/video-series',
-    title: 'Video Series',
-    description:
-      'Watch the latest Rebellious Aging video conversations packed with plant-powered tips, confidence boosts, and style inspiration.',
-  },
-  {
     path: '/team',
     title: 'Team',
     description:
@@ -60,6 +54,24 @@ export const seoRoutes: SeoRouteConfig[] = [
     title: 'Private Facebook Community',
     description:
       'Join the private Rebellious Aging Facebook group for daily inspiration, accountability, and plant-strong conversation.',
+  },
+  {
+    path: '/video-series',
+    title: 'Rebel Video Series',
+    description:
+      'Stream short, rebellious conversations with Suz covering confidence, style, whole-food living, and community.',
+  },
+  {
+    path: '/blog',
+    title: 'Rebellious Aging Blog',
+    description:
+      'Catch up on Suz’s long-form reflections on gratitude, nourishment, style, mindset, and rebellious aging.',
+  },
+  {
+    path: '/404',
+    title: 'Page Not Found',
+    description:
+      'This page has gone rogue. Head back to the pillars, blog, or nutrition guide to keep aging rebelliously.',
   },
   {
     path: '/pillars/confidence',

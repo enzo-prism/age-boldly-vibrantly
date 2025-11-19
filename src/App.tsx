@@ -55,7 +55,8 @@ export const AppRoutes = () => (
       <Route path="/team" element={<Team />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/facebook-group" element={<FacebookGroup />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/404" element={<NotFound />} />
+      <Route path="*" element={<Navigate to="/404" replace />} />
     </Routes>
   </Layout>
 );

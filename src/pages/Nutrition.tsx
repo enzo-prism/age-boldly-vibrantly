@@ -8,7 +8,6 @@ import Seo from '@/components/seo/Seo';
 import { getSeoRouteByPath } from '@/data/seoRoutes';
 import { buildFaqJsonLd } from '@/lib/structuredData';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const Nutrition = () => {
   const seoConfig = getSeoRouteByPath('/nutrition');
