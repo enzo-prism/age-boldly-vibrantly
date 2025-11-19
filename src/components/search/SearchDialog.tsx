@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Loader2, Search as SearchIcon, X } from 'lucide-react';
 
 import type { SearchDocument, SearchType } from '@/data/searchRecords';
@@ -53,9 +53,13 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
   const resolvedOpen = open ?? internalOpen;
   const setOpen = onOpenChange ?? setInternalOpen;
   const [query, setQuery] = useState('');
+  const location = useLocation();
   const navigate = useNavigate();
   const { search, docs, loading, error, ensureIndex } = useSearch();
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const focusPageSearch = useRef(() => {
+    window.dispatchEvent(new CustomEvent('focus-search-input'));
+  }).current;
 
   const results = useMemo(() => search(query), [query, search]);
 
@@ -81,6 +85,10 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
     const onKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault();
+        if (location.pathname.startsWith('/search')) {
+          focusPageSearch();
+          return;
+        }
         setOpen(true);
         void ensureIndex();
       }
@@ -88,10 +96,15 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
 
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [ensureIndex, setOpen]);
+  }, [ensureIndex, setOpen, location.pathname, focusPageSearch]);
 
   useEffect(() => {
     if (!resolvedOpen) {
+      return;
+    }
+
+    if (location.pathname.startsWith('/search')) {
+      setOpen(false);
       return;
     }
 
@@ -102,7 +115,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
     return () => {
       document.body.style.overflow = previousOverflow;
     };
-  }, [resolvedOpen]);
+  }, [resolvedOpen, location.pathname, setOpen]);
 
   const handleSelect = (item: SearchDocument) => {
     setOpen(false);
@@ -112,7 +125,16 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
 
   const quickLinks = docs.slice(0, 6);
 
-  const trigger = renderTrigger ? renderTrigger(() => setOpen(true)) : null;
+  const openHandler = () => {
+    if (location.pathname.startsWith('/search')) {
+      focusPageSearch();
+      return;
+    }
+    setOpen(true);
+    void ensureIndex();
+  };
+
+  const trigger = renderTrigger ? renderTrigger(openHandler) : null;
 
   return (
     <>

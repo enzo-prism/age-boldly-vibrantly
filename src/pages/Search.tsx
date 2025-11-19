@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Search as SearchIcon, Loader2 } from 'lucide-react';
 
@@ -24,6 +24,7 @@ const Search = () => {
   const [query, setQuery] = useState(initialQuery);
   const [selectedTypes, setSelectedTypes] = useState<SearchType[]>([]);
   const { search, loading, error, ensureIndex } = useSearch();
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     setQuery(initialQuery);
@@ -32,6 +33,17 @@ const Search = () => {
   useEffect(() => {
     void ensureIndex();
   }, [ensureIndex]);
+
+  useEffect(() => {
+    const listener = () => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+        inputRef.current.select();
+      }
+    };
+    window.addEventListener('focus-search-input', listener);
+    return () => window.removeEventListener('focus-search-input', listener);
+  }, []);
 
   const seoConfig = getSeoRouteByPath('/search');
 
@@ -70,6 +82,7 @@ const Search = () => {
           <div className="relative">
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
             <Input
+              ref={inputRef}
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
