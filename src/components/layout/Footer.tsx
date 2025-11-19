@@ -74,6 +74,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
+                  to="/pillars/health/nutrition-guide" 
+                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="text-xl">🥗</span>
+                  <span className="group-hover:translate-x-1 transition-transform">Nutrition Guide</span>
+                </Link>
+              </li>
+              <li>
+                <Link 
                   to="/pillars/gratitude" 
                   className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
                 >
@@ -115,6 +124,15 @@ const Footer = () => {
                   className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform">Nutrition (WFPB)</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/pillars/health/nutrition-guide" 
+                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform">WFPB Guide</span>
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>

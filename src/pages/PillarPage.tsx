@@ -1,15 +1,15 @@
 
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { pillarContent } from '@/data/pillarContent';
 import PillarHero from '@/components/pillar/PillarHero';
 import GallerySection from '@/components/pillar/GallerySection';
-import NutritionCTA from '@/components/pillar/NutritionCTA';
 import QuizSection from '@/components/pillar/QuizSection';
 import ChecklistCTA from '@/components/pillar/ChecklistCTA';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import Seo from '@/components/seo/Seo';
 import GratitudePillar from '@/components/pillar/GratitudePillar';
+import { Button } from '@/components/ui/button';
 
 const PillarPage = () => {
   const { pillarId } = useParams<{ pillarId: string }>();
@@ -41,7 +41,22 @@ const PillarPage = () => {
 
       <GallerySection content={content} />
 
-      {pillarId === 'health' && <NutritionCTA />}
+      {pillarId === 'health' && (
+        <div className="container mx-auto px-4 py-12">
+          <div className="bg-gradient-to-r from-teal/10 to-white border border-teal/20 rounded-3xl p-8 flex flex-col lg:flex-row gap-6 items-start justify-between">
+            <div>
+              <p className="uppercase text-xs tracking-[0.3em] text-teal font-semibold">Deeper Dive</p>
+              <h2 className="text-3xl font-bold mt-2 mb-4">Whole-Food, Plant-Based Guide</h2>
+              <p className="text-gray-700 max-w-2xl">
+                Explore exactly what to pile on your plate, what to crowd out, and how to shop, label-read, and stay sparkly as you embrace WFPB living.
+              </p>
+            </div>
+            <Button asChild>
+              <Link to="/pillars/health/nutrition-guide">Read the Guide</Link>
+            </Button>
+          </div>
+        </div>
+      )}
 
       <QuizSection content={content} />
       

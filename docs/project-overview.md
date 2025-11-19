@@ -14,7 +14,8 @@ This document captures the key technical touchpoints and current state of the Re
 - **Key pages:**
   - `Home`: Hero carousel, inline Welcome Banner (non-blocking), “Four Pillars” cards, and a global contact CTA.
   - `Movement` (`/our-story`): Scroll animations + Suz timeline using custom hooks in `src/hooks`.
-  - `PillarPage` (`/pillars/:pillarId`): Data-driven hero/gallery/quiz/checklist segments shared by Confidence, Style, and Health (data lives in `src/data/pillarContent.ts`), plus a bespoke Gratitude experience built with long-form sections and CTA anchors.
+  - `PillarPage` (`/pillars/:pillarId`): Data-driven hero/gallery/quiz/checklist segments shared by Confidence, Style, and Health (data lives in `src/data/pillarContent.ts`), plus a bespoke Gratitude experience and a Health-specific link to the WFPB Nutrition Guide.
+  - `/pillars/health/nutrition-guide`: Long-form Whole-Food, Plant-Based roadmap tailored to rebellious agers with CTAs back into the pillars.
   - `Nutrition`: Query-param-synced tabs covering WFPB foundations, benefits, Dr. Esselstyn/Dr. Campbell material, a “Why & How” manifesto, and recipe catalog.
   - `Blog` + `BlogPost`: Metadata-driven archive and a monolithic post renderer with dedicated JSX blocks per slug.
   - Community funnels: Video Series, Welcome Letter, Contact (Typeform), Facebook Group landing, Team, etc.

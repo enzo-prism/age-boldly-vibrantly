@@ -49,7 +49,7 @@ Key conventions:
 
 - **Home (`src/pages/Home.tsx`)** – Carousel hero, inline Welcome Banner (no blocking modal), pillar overview, and repeated CTAs that route visitors toward Our Story or the individual pillars.
 - **Our Story / Movement (`src/pages/Movement.tsx`)** – Narrative, credentials, and the “Why” behind the rebellion, including scroll-triggered timelines.
-- **Pillars (`/pillars/:pillarId`)** – Confidence, Style, and Health share a common data model for hero copy, galleries, quizzes, and downloadable checklists, while Gratitude features a custom long-form experience built around rebellious practices.
+- **Pillars (`/pillars/:pillarId`)** – Confidence, Style, and Health share a common data model for hero copy, galleries, quizzes, and downloadable checklists, while Gratitude features a custom long-form experience built around rebellious practices and Health links to the dedicated WFPB Nutrition Guide.
 - **Nutrition (`src/pages/Nutrition.tsx`)** – Query-param-driven tabs that educate on WFPB foundations, benefits, Esselstyn/Campbell guidance, “why & how,” and recipes.
 - **Blog (`/blog` + `/blog/:postId`)** – Metadata list plus inlined long-form posts with canonical tags, share buttons, and next-article links.
 - **Video Series (`src/pages/VideoSeries.tsx`)** – Card grid fed by `src/data/videoSeries.ts` to highlight current and future episodes.

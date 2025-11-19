@@ -32,6 +32,12 @@ export const seoRoutes: SeoRouteConfig[] = [
       'Explore the what, why, and how of Whole-Food, Plant-Based (WFPB) living with protocols, benefits, recipes, and expert-backed guidance.',
   },
   {
+    path: '/pillars/health/nutrition-guide',
+    title: 'Whole-Food, Plant-Based Guide',
+    description:
+      'Dive into what to eat, what to crowd out, and how to read labels like a rebel with a printable WFPB roadmap for rebellious agers.',
+  },
+  {
     path: '/video-series',
     title: 'Video Series',
     description:

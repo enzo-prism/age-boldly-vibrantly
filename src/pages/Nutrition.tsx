@@ -6,6 +6,8 @@ import ConnectCTA from '@/components/common/ConnectCTA';
 import Seo from '@/components/seo/Seo';
 import { getSeoRouteByPath } from '@/data/seoRoutes';
 import { buildFaqJsonLd } from '@/lib/structuredData';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Nutrition = () => {
   const seoConfig = getSeoRouteByPath('/nutrition');
@@ -38,6 +40,20 @@ const Nutrition = () => {
         />
       )}
       <NutritionHero />
+      <section className="container mx-auto px-4 py-12">
+        <div className="bg-coral/10 border border-coral/20 rounded-3xl p-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-coral font-semibold">Need a printable roadmap?</p>
+            <h2 className="text-3xl font-bold mt-2">Whole-Food, Plant-Based Guide</h2>
+            <p className="text-gray-700 max-w-3xl">
+              Dive deep into what to eat, what to crowd out, and how to read labels like a rebel on our dedicated nutrition guide page.
+            </p>
+          </div>
+          <Button asChild className="self-start">
+            <Link to="/pillars/health/nutrition-guide">Explore the Guide</Link>
+          </Button>
+        </div>
+      </section>
       <NutritionTabs />
       <ConnectCTA />
     </div>

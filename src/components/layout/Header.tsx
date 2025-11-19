@@ -117,6 +117,11 @@ const Header = () => {
                 </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/pillars/health/nutrition-guide" className="w-full flex items-center gap-2 px-3 py-2">
+                  🥗 Nutrition Guide
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
                 <NavLink to="/nutrition?tab=benefits" className="w-full flex items-center gap-2 px-3 py-2">
                   💪 Benefits
                 </NavLink>
@@ -227,6 +232,7 @@ const Header = () => {
                     { to: '/pillars/confidence', label: 'Confidence', icon: '🌟' },
                     { to: '/pillars/style', label: 'Style', icon: '👗' },
                     { to: '/pillars/health', label: 'Health', icon: '🌱' },
+                    { to: '/pillars/health/nutrition-guide', label: 'Nutrition Guide', icon: '🥗' },
                     { to: '/pillars/gratitude', label: 'Gratitude', icon: '💖' }
                   ]}
                 />
@@ -238,6 +244,7 @@ const Header = () => {
                   onItemClick={() => setIsMobileMenuOpen(false)}
                   items={[
                     { to: '/nutrition?tab=what-is-wfpb', label: 'What is WFPB?', icon: '🌱' },
+                    { to: '/pillars/health/nutrition-guide', label: 'Nutrition Guide', icon: '🥗' },
                     { to: '/nutrition?tab=benefits', label: 'Benefits', icon: '💪' },
                     { to: '/nutrition?tab=protocol', label: "Dr. Esselstyn's Protocol", icon: '❤️' },
                     { to: '/nutrition?tab=dr-campbell', label: 'Dr. T. Colin Campbell', icon: '👨‍🔬' },
