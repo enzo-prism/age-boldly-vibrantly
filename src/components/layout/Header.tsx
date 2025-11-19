@@ -108,6 +108,39 @@ const Header = () => {
 
           <DropdownMenu>
             <DropdownMenuTrigger className="nav-link inline-flex items-center">
+              Resources <ChevronDown className="ml-1 h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56 bg-background border shadow-md z-[9999]">
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/pillars/health/nutrition-guide" className="w-full flex items-center gap-2 px-3 py-2">
+                  🥗 Nutrition Guide
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/pillars/gratitude" className="w-full flex items-center gap-2 px-3 py-2">
+                  💖 Gratitude Pillar
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/video-series" className="w-full flex items-center gap-2 px-3 py-2">
+                  🎥 Video Series
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/welcome-letter" className="w-full flex items-center gap-2 px-3 py-2">
+                  💌 Welcome Letter
+                </NavLink>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/blog" className="w-full flex items-center gap-2 px-3 py-2">
+                  📝 Blog
+                </NavLink>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="nav-link inline-flex items-center">
               Nutrition (WFPB) <ChevronDown className="ml-1 h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 bg-background border shadow-md z-[9999]">
@@ -250,6 +283,20 @@ const Header = () => {
                     { to: '/nutrition?tab=dr-campbell', label: 'Dr. T. Colin Campbell', icon: '👨‍🔬' },
                     { to: '/nutrition?tab=foods', label: 'Why & How', icon: '🍎' },
                     { to: '/nutrition?tab=recipes', label: 'Recipes', icon: '👩‍🍳' }
+                  ]}
+                />
+
+                <MobileMenuSection
+                  title="Resources"
+                  icon="📚"
+                  defaultOpen={false}
+                  onItemClick={() => setIsMobileMenuOpen(false)}
+                  items={[
+                    { to: '/pillars/health/nutrition-guide', label: 'Nutrition Guide', icon: '🥗' },
+                    { to: '/pillars/gratitude', label: 'Gratitude Pillar', icon: '💖' },
+                    { to: '/video-series', label: 'Video Series', icon: '🎥' },
+                    { to: '/welcome-letter', label: 'Welcome Letter', icon: '💌' },
+                    { to: '/blog', label: 'Blog', icon: '📝' }
                   ]}
                 />
 

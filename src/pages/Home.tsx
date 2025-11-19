@@ -67,6 +67,33 @@ const Home = () => {
     }
   ];
 
+  const featuredGuides = [
+    {
+      title: 'Whole-Food, Plant-Based Guide',
+      description: 'Dive into what to eat, what to crowd out, and how to keep your Health pillar thriving.',
+      link: '/pillars/health/nutrition-guide',
+      icon: '🥗'
+    },
+    {
+      title: 'Gratitude Pillar',
+      description: 'Ground your rebellion in joy with daily gratitude practices tailored to women 55–105.',
+      link: '/pillars/gratitude',
+      icon: '💖'
+    },
+    {
+      title: 'Video Series',
+      description: 'Watch Suz riff on confidence, style, and health in bite-sized, rebellious episodes.',
+      link: '/video-series',
+      icon: '🎥'
+    },
+    {
+      title: 'Welcome Letter',
+      description: 'New here? Start with Suz’s heartfelt invitation to age boldly and live loudly.',
+      link: '/welcome-letter',
+      icon: '💌'
+    }
+  ];
+
   const heroImages = [
     "/lovable-uploads/e383e12d-d193-4b00-864e-4593b167f3f4.png",
     "/lovable-uploads/a14b531d-8674-4949-9d29-5db73262868d.png",
@@ -238,7 +265,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-gap-responsive">
+          <div className="grid grid-cols-1 sm:grid-cols-2 grid-gap-responsive">
             {pillars.map((pillar, index) => (
               <PillarCard 
                 key={index}
@@ -247,6 +274,30 @@ const Home = () => {
                 icon={pillar.icon}
                 link={pillar.link}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container mx-auto container-padding">
+          <div className="text-center prose-spacing mb-12">
+            <p className="uppercase text-xs tracking-[0.3em] text-teal font-semibold">Guides & Resources</p>
+            <h2 className="text-3xl md:text-4xl font-bold">Follow Suz’s Recommended Starting Points</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              From gratitude rituals to whole-food plates, these guides link every pillar together so you can keep moving through the movement.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 grid-gap-responsive">
+            {featuredGuides.map((guide) => (
+              <div key={guide.title} className="border border-gray-200 rounded-3xl p-6 shadow-sm bg-white flex flex-col">
+                <div className="text-4xl mb-4">{guide.icon}</div>
+                <h3 className="text-2xl font-semibold mb-2">{guide.title}</h3>
+                <p className="text-gray-600 flex-1">{guide.description}</p>
+                <Button asChild variant="link" className="justify-start px-0 mt-4 text-teal">
+                  <Link to={guide.link}>Explore →</Link>
+                </Button>
+              </div>
             ))}
           </div>
         </div>

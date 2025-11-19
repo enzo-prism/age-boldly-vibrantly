@@ -166,6 +166,37 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Guides */}
+          <div>
+            <h4 className="font-bold text-foreground mb-6 text-lg">Guides & Stories</h4>
+            <ul className="space-y-4">
+              <li>
+                <Link to="/pillars/health/nutrition-guide" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Whole-Food Guide</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/pillars/gratitude" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Gratitude Pillar</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/video-series" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Video Series</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Rebel Blog</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Connect With Suz */}
           <div>
             <h4 className="font-bold text-foreground mb-6 text-lg">Connect With Suz</h4>

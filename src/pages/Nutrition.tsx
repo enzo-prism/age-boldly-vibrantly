@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import NutritionHero from '@/components/nutrition/NutritionHero';
 import NutritionTabs from '@/components/nutrition/NutritionTabs';
 import ConnectCTA from '@/components/common/ConnectCTA';
@@ -52,6 +53,21 @@ const Nutrition = () => {
           <Button asChild className="self-start">
             <Link to="/pillars/health/nutrition-guide">Explore the Guide</Link>
           </Button>
+        </div>
+      </section>
+      <section className="container mx-auto px-4 pb-12">
+        <div className="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm">
+          <p className="text-gray-700">
+            Pair this guide with the{' '}
+            <Link to="/pillars/health" className="text-teal font-semibold hover:underline">
+              Health Pillar
+            </Link>{' '}
+            and dive into real-life stories on our{' '}
+            <Link to="/blog" className="text-teal font-semibold hover:underline">
+              blog archive
+            </Link>{' '}
+            for veggie-fueled inspiration.
+          </p>
         </div>
       </section>
       <NutritionTabs />

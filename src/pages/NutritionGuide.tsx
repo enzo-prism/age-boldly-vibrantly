@@ -105,6 +105,17 @@ const NutritionGuide = () => {
             <p className="text-sm uppercase tracking-[0.2em] text-teal">🌿 Whole-Food, Plant-Based Guide</p>
             <h1 className="text-4xl md:text-5xl font-bold">Fuel for Your Rebellious Aging Journey</h1>
             <p className="text-lg text-gray-700">{HERO_DESCRIPTION}</p>
+            <p className="text-sm text-gray-500">
+              Prefer the overview? Visit the{' '}
+              <Link to="/nutrition" className="text-teal font-semibold hover:underline">
+                Nutrition page
+              </Link>{' '}
+              or head back to the{' '}
+              <Link to="/pillars/health" className="text-teal font-semibold hover:underline">
+                Health pillar
+              </Link>
+              .
+            </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <Button variant="outline" asChild>
               <a
