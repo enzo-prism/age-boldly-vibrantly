@@ -2921,6 +2921,258 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 38: The Pleasure Trap
+  if (postId === 'the-pleasure-trap-why-it-is-not-your-fault') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 38}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">The Pleasure Trap (Why it is NOT Your Fault)</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            If you ever wondered why sticking to healthy habits feels so hard, especially in a world packed with shiny
+            packages and drive-through temptations, you must read Dr. Doug Lisle’s book <em>The Pleasure Trap</em>. He is the
+            staff psychologist and director of research at TrueNorth, and he just may have the answer that will surprise you.
+          </p>
+
+          <p>
+            One thing is for sure: it is not you. It is biology. It is the environment. And it is the way the two collide.
+          </p>
+
+          <p>
+            Lisle explains that we are wired with three ancient instincts:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Seek maximum pleasure.</li>
+            <li>Avoid pain.</li>
+            <li>Conserve energy.</li>
+          </ul>
+
+          <p>
+            These instincts helped us survive scarcity. Today? They get hijacked.
+          </p>
+
+          <p className="text-lg font-semibold">The Modern World Sets the Trap</p>
+          <p>
+            Highly processed foods, sugary treats, salty snacks, and anything engineered for a “bliss point” send dopamine
+            skyrocketing far beyond what nature intended. Suddenly, natural foods taste bland, cravings feel overpowering,
+            and the saddest part is we blame ourselves for lacking willpower. We have all been there, and Lisle’s message is
+            powerful: you are not weak—you are responding normally to an abnormal environment.
+          </p>
+
+          <p className="text-lg font-semibold">The Three Pleasure Traps</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>Hyper-Processed Foods:</strong> Designed to overstimulate the brain’s reward system and make whole foods seem
+              boring until you reset your palate.
+            </li>
+            <li>
+              <strong>Sedentary Living:</strong> Our brains adore conserving energy, and modern life makes stillness the path of least
+              resistance.
+            </li>
+            <li>
+              <strong>Stimulation Everywhere:</strong> Screens, sugar, caffeine, and convenience deliver a daily dopamine overload that
+              becomes the default.
+            </li>
+          </ul>
+
+          <p>
+            According to Lisle and his co-author Dr. Alan Goldhamer, founder of{' '}
+            <a href="https://www.healthpromoting.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              TrueNorth Health
+            </a>, the answer is not judgment, shame, or white-knuckled willpower. It is about creating an environment where
+            healthy choices are the simple choices. Shift to whole natural foods (give your taste buds time to recalibrate),
+            build simple routines, make temptations harder to access, move your body, and trust your brain to rediscover true
+            pleasure.
+          </p>
+
+          <p>
+            The good news? Once you recognize the trap, no matter your age, you can step out of it. Stepping out means more energy,
+            fewer cravings, easier weight control, clearer thinking, more joy in motion, and a deep sense of personal power. This is
+            the heart of Rebellious Aging. You are never too old to reclaim your spark, and the sooner the better.
+          </p>
+
+          <p>
+            Know this and believe it: the pleasure trap is not a life sentence. It is a sneaky detour. Your biology is brilliant, not
+            broken. When you feed it whole foods, movement, and a calmer pace, it shines—and you do too.
+          </p>
+
+          <p>I recommend this book.</p>
+
+          <p>
+            <strong>***SUZ</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 39: B12
+  if (postId === 'b12-the-little-vitamin-with-a-big-job') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 39}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">B12, The Little Vitamin With A Big Job</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Vitamin B12 may be tiny, but it plays a massive role in how well we age. It fuels energy production, protects nerve
+            function, sharpens cognition and memory, builds healthy red blood cells, and even supports emotional well-being. Dr.
+            Michael Greger emphasizes that B12 is not optional.
+          </p>
+
+          <p>
+            <a href="https://nutritionfacts.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              NutritionFacts.org
+            </a>{' '}
+            is packed with Dr. Greger’s research on B12, and it completely shifted how I view this “little” vitamin.
+          </p>
+
+          <p>
+            Deficiency symptoms often mimic what society labels as “normal aging.” Do not overlook lingering fatigue, brain fog,
+            tingling, or memory slips. They are whispers that your body needs help.
+          </p>
+
+          <p>
+            We need to supplement—especially on a predominantly plant-based diet. Dr. Greger calls this non-negotiable by age 50, and
+            if you are plant-based, start now regardless of age.
+          </p>
+
+          <p>
+            Why supplement? B12 is made by bacteria, not animals. Historically, humans ingested it from soil and water. Our modern,
+            sanitized world removed those natural sources. As Greger says, “Modern life is too clean to rely on nature for B12.”
+          </p>
+
+          <p className="text-lg font-semibold">Good to Know</p>
+          <p>
+            After age 50, stomach acid often declines, making it harder to extract B12 from food—even animal sources. Older adults are
+            at higher risk regardless of diet. Dr. Greger recommends cyanocobalamin because it is stable, effective, well-studied, and
+            affordable.
+          </p>
+
+          <p className="text-lg font-semibold">Signs You May Need Your Levels Checked</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Low energy</li>
+            <li>Brain fog</li>
+            <li>Tingling in hands and feet</li>
+            <li>Mood changes</li>
+            <li>Balance issues</li>
+            <li>Anemia</li>
+          </ul>
+
+          <p className="text-lg font-semibold">The Best Ways to Check Your B12 Status</p>
+          <ol className="list-decimal pl-6 space-y-4">
+            <li>
+              <strong>Serum Vitamin B12:</strong> The most common test and an okay starting point, but not the most accurate. You can have
+              normal blood levels and still be deficient, especially if you are older, vegan, or have digestive issues.
+            </li>
+            <li>
+              <strong>Methylmalonic Acid (MMA):</strong> The gold standard. It shows whether your cells are actually getting enough B12
+              and catches deficiencies even when serum levels look normal.
+            </li>
+            <li>
+              <strong>Homocysteine (HCY):</strong> Helpful as supporting data but not as specific as MMA.
+            </li>
+          </ol>
+
+          <p className="text-lg font-semibold">How Often Should You Get Tested?</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              If you are supplementing consistently, test every 1–2 years.
+            </li>
+            <li>
+              If you are not supplementing, do it ASAP.
+            </li>
+            <li>
+              If symptoms appear—fatigue, numbness, tingling, memory changes—test immediately.
+            </li>
+          </ul>
+
+          <p>
+            Wrap Up: one little tablet, big peace of mind. B12 deficiency is common, preventable, and easy to correct. A small
+            supplement can boost energy, protect your brain, support your nerves, and help you stay vibrant, curious, and confident.
+            That is Rebellious Aging.
+          </p>
+
+          <p>In good health,</p>
+
+          <p>
+            <strong>***Suz</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 40: Rest Days
+  if (postId === 'the-secret-strength-of-rest-days') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 40}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">The Secret Strength of Rest Days, Why Pausing Makes You Powerful</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            If there is one myth women 55+ are breaking, it is the idea that we must push harder every day to stay stronger. “No pain,
+            no gain”? Yikes. No thank you. Rest does not mean you are slacking; it means you are being smart.
+          </p>
+
+          <p>
+            I walk 2–3 miles every weekday and 4–5 miles on weekends. I lift weights, practice balance, stretch, and treat exercise as
+            non-negotiable. And here is what I know to be true: you cannot build strength without rest. You cannot gain balance without
+            recovery. You cannot glow if you are always depleted. Your body needs a break. Rest days keep the excitement alive and
+            prevent overdoing it.
+          </p>
+
+          <p className="text-lg font-semibold">Why Rest Days Matter—Especially After 55</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Muscles repair during rest, not during workouts.</li>
+            <li>Rest keeps your hormones happy.</li>
+            <li>Rest prevents injury.</li>
+            <li>Rest improves balance and coordination.</li>
+            <li>Rest boosts motivation and excitement.</li>
+          </ul>
+
+          <p>
+            When it comes to exercise, more is not always better. Your body and mind need time to recover.
+          </p>
+
+          <p>
+            Rest-day possibilities? Light walking, gentle stretching, slow yoga, outdoor time, reading, journaling—you get the idea.
+          </p>
+
+          <p>
+            A Rebellious Reminder: Rest is not quitting. Rest is strategy.
+          </p>
+
+          <p>Sparkle on,</p>
+
+          <p>
+            <strong>***Suz</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

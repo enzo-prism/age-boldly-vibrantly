@@ -343,6 +343,36 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '4 min read',
     blogNumber: 37,
     seoDescription: 'Follow Suz’s 7-day balance challenge—stand, walk, shift, and steady yourself with simple daily drills for lifelong stability.'
+  },
+  {
+    id: 'the-pleasure-trap-why-it-is-not-your-fault',
+    title: 'The Pleasure Trap (Why it is NOT Your Fault)',
+    excerpt: 'Discover Dr. Doug Lisle’s framework for understanding why modern food, sedentary defaults, and endless stimulation hijack biology—and how to step out of the trap.',
+    date: '8/1/2026',
+    dateSort: new Date('2026-08-01'),
+    readTime: '7 min read',
+    blogNumber: 38,
+    seoDescription: 'Learn how The Pleasure Trap explains cravings, why willpower isn’t broken, and how whole foods plus gentle routines reset biology at any age.'
+  },
+  {
+    id: 'b12-the-little-vitamin-with-a-big-job',
+    title: 'B12, The Little Vitamin With A Big Job',
+    excerpt: 'Why vitamin B12 is essential for energy, cognition, nerves, and emotional resilience—and how smart supplementation keeps rebels thriving past 50.',
+    date: '9/1/2026',
+    dateSort: new Date('2026-09-01'),
+    readTime: '8 min read',
+    blogNumber: 39,
+    seoDescription: 'Dr. Greger’s B12 guidance explained: spot deficiency signs, choose cyanocobalamin, and test smarter so aging boldly never runs on empty.'
+  },
+  {
+    id: 'the-secret-strength-of-rest-days',
+    title: 'The Secret Strength of Rest Days, Why Pausing Makes You Powerful',
+    excerpt: 'Discover how strategic rest keeps workouts joyful, hormones balanced, and bodies thriving—because pausing is power, not quitting.',
+    date: '10/1/2026',
+    dateSort: new Date('2026-10-01'),
+    readTime: '5 min read',
+    blogNumber: 40,
+    seoDescription: 'Learn why women 55+ need intentional rest days to prevent injury, sharpen balance, and stay motivated in the Rebellious Aging movement.'
   }
 ];
 
