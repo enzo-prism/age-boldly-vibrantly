@@ -75,6 +75,12 @@ const Home = () => {
       icon: '🥗'
     },
     {
+      title: 'Rebellious Aging Blog',
+      description: 'Explore long-form stories, science-backed insights, and updates that weave every pillar together.',
+      link: '/blog',
+      icon: '📝'
+    },
+    {
       title: 'Gratitude Pillar',
       description: 'Ground your rebellion in joy with daily gratitude practices tailored to women 55–105.',
       link: '/pillars/gratitude',

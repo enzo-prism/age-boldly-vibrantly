@@ -20,6 +20,7 @@ import VideoSeries from "./pages/VideoSeries";
 import Team from "./pages/Team";
 import FacebookGroup from "./pages/FacebookGroup";
 import NutritionGuide from "./pages/NutritionGuide";
+import Search from "./pages/Search";
 
 const defaultQueryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ export const AppRoutes = () => (
       <Route path="/pillars/health/nutrition-guide" element={<NutritionGuide />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:postId" element={<BlogPost />} />
+      <Route path="/search" element={<Search />} />
       <Route path="/team" element={<Team />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/facebook-group" element={<FacebookGroup />} />

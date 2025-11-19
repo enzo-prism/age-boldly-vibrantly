@@ -68,6 +68,12 @@ export const seoRoutes: SeoRouteConfig[] = [
       'Catch up on Suz’s long-form reflections on gratitude, nourishment, style, mindset, and rebellious aging.',
   },
   {
+    path: '/search',
+    title: 'Search Rebellious Aging',
+    description:
+      'Search pillars, nutrition guides, blog posts, and videos to find exactly what you need on Rebellious Aging.',
+  },
+  {
     path: '/404',
     title: 'Page Not Found',
     description:

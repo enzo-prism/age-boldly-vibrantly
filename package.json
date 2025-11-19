@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run sitemap && vite build && npm run prerender",
+    "build": "npm run sitemap && npm run build:search && vite build && npm run prerender",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "prerender": "tsx scripts/prerender.tsx",
-    "sitemap": "tsx scripts/generate-sitemap.ts"
+    "sitemap": "tsx scripts/generate-sitemap.ts",
+    "build:search": "tsx scripts/build-search-index.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -52,6 +53,7 @@
     "framer-motion": "^12.23.6",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.462.0",
+    "minisearch": "^7.2.0",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",

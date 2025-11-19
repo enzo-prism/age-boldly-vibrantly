@@ -8,15 +8,17 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import { AnimatedHamburger } from '@/components/ui/animated-hamburger';
 import { MobileMenuSection } from '@/components/ui/mobile-menu-section';
 import { MobileNavItem } from '@/components/ui/mobile-nav-item';
 import { FACEBOOK_GROUP_URL, handleFacebookGroupNavigation } from '@/lib/facebook';
+import { SearchDialog } from '@/components/search/SearchDialog';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -174,6 +176,25 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-teal hover:bg-teal/10 lg:hidden"
+            onClick={() => setIsSearchOpen(true)}
+            aria-label="Open search"
+          >
+            <Search className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-teal text-teal hover:bg-teal hover:text-white hidden lg:inline-flex"
+            onClick={() => setIsSearchOpen(true)}
+          >
+            <Search className="h-4 w-4 mr-2" />
+            Search
+          </Button>
+
           <NavLink 
             to="/contact" 
             className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
@@ -214,6 +235,15 @@ const Header = () => {
                   icon="💬"
                 >
                   Facebook Group
+                </MobileNavItem>
+                <MobileNavItem
+                  onClick={() => {
+                    setIsSearchOpen(true);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  icon="🔍"
+                >
+                  Search
                 </MobileNavItem>
                 <MobileNavItem
                   to="/welcome-letter"
@@ -277,6 +307,7 @@ const Header = () => {
           </div>
         )}
       </div>
+      <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
     </header>
   );
 };
