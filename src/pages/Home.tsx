@@ -58,6 +58,12 @@ const Home = () => {
       description: "Implement science-backed strategies for vibrant physical health, mental sharpness, and emotional wellbeing as you age.",
       icon: "🌱",
       link: "/pillars/health"
+    },
+    {
+      title: "Gratitude",
+      description: "Ground yourself in joy, resilience, and perspective with practices that turn everyday moments into fuel for rebellious aging.",
+      icon: "💖",
+      link: "/pillars/gratitude"
     }
   ];
 
@@ -128,7 +134,7 @@ const Home = () => {
                   Age Boldly / Live Loudly
                 </h1>
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-600 animate-fade-in leading-relaxed" style={{animationDelay: "0.2s"}}>
-                  Ditch the outdated rules. Rebellious aging is where vibrant health, bold confidence, and signature style take center stage.
+                  Ditch the outdated rules. Rebellious aging is where vibrant health, bold confidence, grounded gratitude, and signature style take center stage.
                 </p>
                 <div className="flex flex-col sm:flex-row button-spacing animate-fade-in" style={{animationDelay: "0.4s"}}>
                   <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg min-h-[44px] text-base font-semibold">
@@ -225,14 +231,14 @@ const Home = () => {
       <section id="pillars-section" className="section-padding bg-gray-50">
         <div className="container mx-auto container-padding">
           <div className="text-center prose-spacing mb-12 lg:mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">The Three Pillars</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">The Four Pillars</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg lg:text-xl leading-relaxed">
-              Our holistic approach to rebellious aging is built on three foundational pillars that
+              Our holistic approach to rebellious aging is built on four foundational pillars that
               work together to help you create a vibrant, fulfilling life at any age.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 grid-gap-responsive">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-gap-responsive">
             {pillars.map((pillar, index) => (
               <PillarCard 
                 key={index}

@@ -98,6 +98,11 @@ const Header = () => {
                   🌱 Health
                 </NavLink>
               </DropdownMenuItem>
+              <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
+                <NavLink to="/pillars/gratitude" className="w-full flex items-center gap-2 px-3 py-2">
+                  💖 Gratitude
+                </NavLink>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -221,7 +226,8 @@ const Header = () => {
                   items={[
                     { to: '/pillars/confidence', label: 'Confidence', icon: '🌟' },
                     { to: '/pillars/style', label: 'Style', icon: '👗' },
-                    { to: '/pillars/health', label: 'Health', icon: '🌱' }
+                    { to: '/pillars/health', label: 'Health', icon: '🌱' },
+                    { to: '/pillars/gratitude', label: 'Gratitude', icon: '💖' }
                   ]}
                 />
 

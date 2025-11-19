@@ -12,9 +12,9 @@ This document captures the key technical touchpoints and current state of the Re
 ## Routing & Features
 - **Layout:** Sticky animated header, framer-motion page transitions, and a footer with medical disclaimer plus social/email CTAs.
 - **Key pages:**
-  - `Home`: Hero carousel, inline Welcome Banner (non-blocking), “Three Pillars” cards, and a global contact CTA.
+  - `Home`: Hero carousel, inline Welcome Banner (non-blocking), “Four Pillars” cards, and a global contact CTA.
   - `Movement` (`/our-story`): Scroll animations + Suz timeline using custom hooks in `src/hooks`.
-  - `PillarPage` (`/pillars/:pillarId`): Data-driven hero/gallery/quiz/checklist segments shared by confidence, style, and health (data lives in `src/data/pillarContent.ts`).
+  - `PillarPage` (`/pillars/:pillarId`): Data-driven hero/gallery/quiz/checklist segments shared by Confidence, Style, and Health (data lives in `src/data/pillarContent.ts`), plus a bespoke Gratitude experience built with long-form sections and CTA anchors.
   - `Nutrition`: Query-param-synced tabs covering WFPB foundations, benefits, Dr. Esselstyn/Dr. Campbell material, a “Why & How” manifesto, and recipe catalog.
   - `Blog` + `BlogPost`: Metadata-driven archive and a monolithic post renderer with dedicated JSX blocks per slug.
   - Community funnels: Video Series, Welcome Letter, Contact (Typeform), Facebook Group landing, Team, etc.

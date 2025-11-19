@@ -41,9 +41,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* The Three Pillars */}
+          {/* The Four Pillars */}
           <div>
-            <h4 className="font-bold text-foreground mb-6 text-lg">The Three Pillars</h4>
+            <h4 className="font-bold text-foreground mb-6 text-lg">The Four Pillars</h4>
             <ul className="space-y-4">
               <li>
                 <Link 
@@ -70,6 +70,15 @@ const Footer = () => {
                 >
                   <span className="text-xl">🌱</span>
                   <span className="group-hover:translate-x-1 transition-transform">Health</span>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/pillars/gratitude" 
+                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="text-xl">💖</span>
+                  <span className="group-hover:translate-x-1 transition-transform">Gratitude</span>
                 </Link>
               </li>
             </ul>

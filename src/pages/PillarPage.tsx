@@ -9,9 +9,14 @@ import QuizSection from '@/components/pillar/QuizSection';
 import ChecklistCTA from '@/components/pillar/ChecklistCTA';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import Seo from '@/components/seo/Seo';
+import GratitudePillar from '@/components/pillar/GratitudePillar';
 
 const PillarPage = () => {
   const { pillarId } = useParams<{ pillarId: string }>();
+
+  if (pillarId === 'gratitude') {
+    return <GratitudePillar />;
+  }
   
   if (!pillarId || !pillarContent[pillarId]) {
     return (

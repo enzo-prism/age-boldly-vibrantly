@@ -73,6 +73,12 @@ export const seoRoutes: SeoRouteConfig[] = [
     description:
       'Fuel longevity with Whole-Food, Plant-Based foundations, nutrition tools, and a daily health checklist.',
   },
+  {
+    path: '/pillars/gratitude',
+    title: 'Gratitude Pillar',
+    description:
+      'Discover how gratitude becomes a rebellious daily practice that fuels joy, resilience, and purpose in every season of life.',
+  },
 ];
 
 export const getSeoRouteByPath = (path: string) =>

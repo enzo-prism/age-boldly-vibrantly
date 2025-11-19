@@ -1,6 +1,6 @@
 # Rebellious Aging Web Application
 
-Rebellious Aging is a Vite + React site that helps women 55+ “age boldly, live loudly” through three pillars—Confidence, Style, and Health. The app houses long-form editorial content (blogs, pillar landing pages, nutrition guides), embedded Typeforms, and a Supabase-backed quiz submission flow.
+Rebellious Aging is a Vite + React site that helps women 55+ “age boldly, live loudly” through four pillars—Confidence, Style, Health, and Gratitude. The app houses long-form editorial content (blogs, pillar landing pages, nutrition guides), embedded Typeforms, and a Supabase-backed quiz submission flow.
 
 ---
 
@@ -49,7 +49,7 @@ Key conventions:
 
 - **Home (`src/pages/Home.tsx`)** – Carousel hero, inline Welcome Banner (no blocking modal), pillar overview, and repeated CTAs that route visitors toward Our Story or the individual pillars.
 - **Our Story / Movement (`src/pages/Movement.tsx`)** – Narrative, credentials, and the “Why” behind the rebellion, including scroll-triggered timelines.
-- **Pillars (`/pillars/:pillarId`)** – Confidence, Style, and Health all read from the same data model for hero copy, galleries, quizzes, and downloadable checklists.
+- **Pillars (`/pillars/:pillarId`)** – Confidence, Style, and Health share a common data model for hero copy, galleries, quizzes, and downloadable checklists, while Gratitude features a custom long-form experience built around rebellious practices.
 - **Nutrition (`src/pages/Nutrition.tsx`)** – Query-param-driven tabs that educate on WFPB foundations, benefits, Esselstyn/Campbell guidance, “why & how,” and recipes.
 - **Blog (`/blog` + `/blog/:postId`)** – Metadata list plus inlined long-form posts with canonical tags, share buttons, and next-article links.
 - **Video Series (`src/pages/VideoSeries.tsx`)** – Card grid fed by `src/data/videoSeries.ts` to highlight current and future episodes.

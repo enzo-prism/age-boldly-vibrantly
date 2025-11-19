@@ -18,6 +18,7 @@ const STATIC_ROUTES: StaticRouteConfig[] = [
   { path: '/pillars/confidence', changefreq: 'monthly', priority: 0.9 },
   { path: '/pillars/style', changefreq: 'monthly', priority: 0.9 },
   { path: '/pillars/health', changefreq: 'monthly', priority: 0.9 },
+  { path: '/pillars/gratitude', changefreq: 'monthly', priority: 0.9 },
   { path: '/nutrition', changefreq: 'weekly', priority: 0.8 },
   { path: '/video-series', changefreq: 'monthly', priority: 0.6 },
   { path: '/blog', changefreq: 'daily', priority: 0.8 },

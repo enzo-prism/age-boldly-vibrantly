@@ -110,7 +110,7 @@ const Resources = () => {
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-center">
                       <span className="mr-2 text-lg">•</span>
-                      30-Day Action Plan for all three pillars
+                      30-Day Action Plan for all four pillars
                     </li>
                     <li className="flex items-center">
                       <span className="mr-2 text-lg">•</span>
