@@ -122,24 +122,14 @@ const NutritionGuide = () => {
               .
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
-            <Button variant="outline" asChild>
-              <a
-                href="https://drive.google.com/file/d/1TYcwstsRDXrVoZs1TSCg6_3JVK_XqtjK/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="min-w-[220px] text-center"
-              >
-                📄 Download Printable Guide
-              </a>
-            </Button>
-            <Button className="min-w-[200px]" onClick={jumpToPlate}>
-              🍽️ Jump to What to Eat
-            </Button>
-            <Button asChild variant="secondary" className="min-w-[220px]">
-              <a href="https://www.nutritionstudies.org/" target="_blank" rel="noopener noreferrer" className="text-center">
-                🔗 Visit NutritionStudies.org
-              </a>
-            </Button>
+              <Button className="min-w-[200px]" onClick={jumpToPlate}>
+                🍽️ Jump to What to Eat
+              </Button>
+              <Button asChild variant="secondary" className="min-w-[220px]">
+                <a href="https://www.nutritionstudies.org/" target="_blank" rel="noopener noreferrer" className="text-center">
+                  🔗 Visit NutritionStudies.org
+                </a>
+              </Button>
             </div>
             <div className="mt-8 flex justify-center">
               <img
