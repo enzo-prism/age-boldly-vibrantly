@@ -3173,6 +3173,251 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 41: The 15 Second Shock
+  if (postId === 'the-15-second-shock-why-food-matters') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 41}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">The 15 Second Shock, Why Food Matters</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            I was sitting quietly watching the news, when a TV ad from the American Cancer Society nearly knocked me off my chair. It
+            got my attention for sure.
+          </p>
+
+          <p>Are you READY? "Every 15 seconds, someone in the United States is diagnosed with cancer."</p>
+
+          <p>
+            Fifteen seconds? I actually said it out loud to Gabe. Ya know, one Mississippi, two Mississippi... Yikes. By 15
+            Mississippi, someone's life is changed forever.
+          </p>
+
+          <p>
+            Honestly? It terrified me. Not because I live in fear, but because it hit me how urgently we need to take care of the one
+            body we get. How much power we actually have. And how often we underestimate it.
+          </p>
+
+          <p>
+            Upon further glance, the American Cancer Society estimates over 2 million new cancer diagnoses in 2025 in the United
+            States. When you do the math, that truly is one diagnosis roughly every 15-16 seconds.
+          </p>
+
+          <p>For my friends and readers in Canada, the numbers are no gentler. In 2024 a new cancer diagnosis occurred about every 2 minutes.</p>
+
+          <p>The good news? Aging does not have to mean becoming passive participants in our own decline.</p>
+
+          <p>
+            Lifestyle, especially what we eat, plays a powerful role in shaping our long-term risk. No guarantees. Not magic. But
+            influence. And influence is enough to change the trajectory of life.
+          </p>
+
+          <p className="text-lg font-semibold">Ultra Processed Foods, Our Modern TRAP</p>
+          <p>UPFs are your packaged snacks, instant meals, sugary drinks, fast foods - the things engineered to sit on a shelf longer than your houseplants.</p>
+
+          <p>
+            Studies have linked high UPF consumption to increased risk of several cancers, including breast, colorectal, and ovarian.
+            One major review found that just a 10% increase in UPF intake was associated with a 13% higher risk of all cancers. And
+            here is the kicker: UPFs push out the foods that protect us.
+          </p>
+
+          <p className="text-lg font-semibold">Why the Whole Food Plant Based Lifestyle Matters, Especially Now!</p>
+          <p>A WFPB lifestyle is not about perfection. It is about crowdsourcing nutrients from nature instead of factories.</p>
+
+          <p>The evidence consistently shows that WFPB diets:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Lower inflammation</li>
+            <li>Strengthen the immune system</li>
+            <li>Support healthier weight</li>
+            <li>Improve gut health</li>
+            <li>Increase fiber intake</li>
+            <li>Deliver antioxidants that help protect cells</li>
+          </ul>
+
+          <p>
+            The message is clear: crowd out UPFs by adding more colorful, beautiful plants. Add movement to help keep your hormones
+            balanced, decrease inflammation, and support weight stability.
+          </p>
+
+          <p>SEE. YOU ARE NOT POWERLESS. NOT EVEN CLOSE.</p>
+
+          <p>Cancer is complex.</p>
+          <p>Genetics matter.</p>
+          <p>Environment matters.</p>
+          <p>Random chance is real.</p>
+
+          <p>
+            But lifestyle, especially food, is one of the pieces we can choose. For women 55-105, choosing plants, movement, vibrancy,
+            confidence, and gratefulness is not just prevention; it is a declaration:
+          </p>
+
+          <p>"I am aging with intention."</p>
+          <p>"I am aging with power."</p>
+          <p>"Watch me ROAR."</p>
+
+          <p>Why not take a gentle, curious look at your plate today? Start there. No perfection. Only progress.</p>
+
+          <p>You have got this.</p>
+
+          <p>
+            <strong>***Suz</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 42: The Quiet Magic of Consistency
+  if (postId === 'the-quiet-magic-of-consistency') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 42}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">The Quiet Magic of Consistency</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            I recently heard Dr. Brooke Goldner on Instagram say something so simple, so clear, so piercingly true that I stopped
+            scrolling and just sat with it.
+          </p>
+
+          <p>"Results are about consistency."</p>
+
+          <p>SO:</p>
+          <p>Not intensity.</p>
+          <p>Not perfection.</p>
+          <p>Not grand plans.</p>
+
+          <p>Consistency.</p>
+
+          <p>One sentence, one special word and it lit me up.</p>
+
+          <p>
+            We spend so much time trying to "get motivated", "get disciplined", or "get back on track" when the real transformation
+            comes from the quiet little actions we take again and again. It is the small choices that can change a life. Especially
+            after 55.
+          </p>
+
+          <p>Consistency is the quiet hero.</p>
+
+          <p>Consistency does not make big promises.</p>
+
+          <p>It does not brag.</p>
+
+          <p>It does not show up with fireworks and a marching band.</p>
+
+          <p>But here is the thing: it works every time.</p>
+
+          <p>It works in the kitchen.</p>
+
+          <p>It works in your muscles.</p>
+
+          <p>It works in your mindset.</p>
+
+          <p>It works on your confidence.</p>
+
+          <p>It works for your health.</p>
+
+          <p>Consistency is the friend who whispers, "Let's try again tomorrow." And that whisper holds more power than any motivational speech.</p>
+
+          <p>
+            We often think transformation requires big moves, dramatic overhauls, and massive effort. But that is not how real humans,
+            especially real, grown, wise, seasoned humans, change.
+          </p>
+
+          <p>Transformation happens when you decide to:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Walk every morning even when you do not feel like it.</li>
+            <li>Add one more whole plant to your plate.</li>
+            <li>Stretch for 5 minutes.</li>
+            <li>Drink water before coffee.</li>
+            <li>Put on that fabulous, special outfit that makes you feel alive.</li>
+            <li>Choose compassion over criticism.</li>
+            <li>Practice gratitude, not perfection.</li>
+            <li>Keep your promises to yourself.</li>
+          </ul>
+
+          <p>The small things done repeatedly matter more than the big things done occasionally. It is the daily drip that fills the well.</p>
+
+          <p>
+            The world tells older women to slow down. To fade out. To become invisible. To quiet down. But we, the Rebels, know the
+            truth. Aging with good health, great confidence, style, and gratitude is an intentional choice.
+          </p>
+
+          <p>One walk at a time.</p>
+
+          <p>One nourishing meal at a time.</p>
+
+          <p>One thought at a time.</p>
+
+          <p>One sparkle at a time.</p>
+
+          <p>
+            You do not have to overhaul your life. You just have to keep showing up for yourself every single day, believing that only
+            you can influence the world in your own special way and that you are worth showing up for.
+          </p>
+
+          <p>
+            Adopting a whole food plant based lifestyle is not a one day event. It is a gentle pattern. A consistent rhythm. A way of
+            saying "I honor my body by nourishing it well".
+          </p>
+
+          <p>You do not need daily hour long workouts or perfect splits. You just need movement. Daily movement.</p>
+
+          <p>Style becomes effortless when it reflects who you are consistently.</p>
+
+          <p>Confidence grows when you show up as your authentic self.</p>
+
+          <p>Self-respect deepens when you consistently choose YOU.</p>
+
+          <p>Dazzle is not an outfit. It is a daily practice.</p>
+
+          <p>
+            As for me: I walk Gabe daily pushing for 10,000 steps. I lift, stretch, and work on balance 3x a week. Not because I am so
+            disciplined but because it keeps me alive, vibrant, strong, and sane. These things are non-negotiable because they create
+            the Rebel I want to be. I did not get here overnight. Consistency brought me here gently day by day. And consistency will
+            carry me forward.
+          </p>
+
+          <p>A message for each of you here at Rebellious Aging:</p>
+          <p>You do not need perfection.</p>
+          <p>You do not need to be younger.</p>
+          <p>You do not need to be faster.</p>
+          <p>You do not need to be anyone other than who you are.</p>
+
+          <p>You just need to keep taking the next small step to get you where you dream to be.</p>
+
+          <p>
+            Whatever you dream of - better health, stronger confidence, a plant powered life, style that sparks joy, boundaries that
+            protect your heart - it will come from consistency. Not from pressure. Not guilt. But the quiet magic of showing up for
+            yourself.
+          </p>
+
+          <p>So today choose one small thing that you would like to become a big thing and do it again tomorrow. And the next day. And the next day.</p>
+
+          <p>Let consistency shape your glow, your health, your power, and your life.</p>
+
+          <p>You have got this,</p>
+
+          <p>
+            <strong>***Suz</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

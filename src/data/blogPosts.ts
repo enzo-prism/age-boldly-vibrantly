@@ -373,6 +373,26 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '5 min read',
     blogNumber: 40,
     seoDescription: 'Learn why women 55+ need intentional rest days to prevent injury, sharpen balance, and stay motivated in the Rebellious Aging movement.'
+  },
+  {
+    id: 'the-15-second-shock-why-food-matters',
+    title: 'The 15 Second Shock, Why Food Matters',
+    excerpt: 'A jarring 15-second cancer statistic is a wake-up call to crowd out ultra-processed foods with colorful plants, movement, and intention.',
+    date: '11/1/2026',
+    dateSort: new Date('2026-11-01'),
+    readTime: '7 min read',
+    blogNumber: 41,
+    seoDescription: 'Every 15 seconds a new cancer diagnosis lands - here is why food, movement, and choosing whole plants give you influence over your health span.'
+  },
+  {
+    id: 'the-quiet-magic-of-consistency',
+    title: 'The Quiet Magic of Consistency',
+    excerpt: 'Consistency is the quiet hero that transforms health, confidence, and style through small daily actions after 55.',
+    date: '12/1/2026',
+    dateSort: new Date('2026-12-01'),
+    readTime: '9 min read',
+    blogNumber: 42,
+    seoDescription: 'Discover how small, repeated choices around plants, movement, style, and self-compassion create rebellious results after 55.'
   }
 ];
 
