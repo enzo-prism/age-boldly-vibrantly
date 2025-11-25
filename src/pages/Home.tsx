@@ -192,7 +192,7 @@ const Home = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row button-spacing animate-fade-in" style={{animationDelay: "0.4s"}}>
                   <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg min-h-[44px] text-base font-semibold">
-                    <Link to="/our-story">Our Story</Link>
+                    <Link to="/our-story">💌 Our Story</Link>
                   </Button>
                   <Button
                     variant="outline"
@@ -205,7 +205,7 @@ const Home = () => {
                       }
                     }}
                   >
-                    Search
+                    🔍 Search
                   </Button>
                 </div>
               </div>
