@@ -393,6 +393,36 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '9 min read',
     blogNumber: 42,
     seoDescription: 'Discover how small, repeated choices around plants, movement, style, and self-compassion create rebellious results after 55.'
+  },
+  {
+    id: 'the-weekend-epiphany-why-resting-is-the-new-rebellion',
+    title: 'The Weekend Epiphany, Why Resting is the New Rebellion',
+    excerpt: 'A quiet Saturday wake-up call turned weekends into sacred time for joy, softness, and honoring what truly nourishes you.',
+    date: '1/1/2027',
+    dateSort: new Date('2027-01-01'),
+    readTime: '10 min read',
+    blogNumber: 43,
+    seoDescription: 'Reclaim weekends as rebellion—listen to your body, set boundaries with rest, and let joy-filled pauses fuel a vibrant life.'
+  },
+  {
+    id: 'thanksgiving-recipes-plantstrong-favorites',
+    title: 'Thanksgiving Recipes',
+    excerpt: 'Suz shares her plantstrong Thanksgiving lineup—garlicky mashed potatoes, mushroom gravy, sweet potato casserole, super salad, pumpkin pie tart, stuffing, and cornbread.',
+    date: '2/1/2027',
+    dateSort: new Date('2027-02-01'),
+    readTime: '14 min read',
+    blogNumber: 44,
+    seoDescription: 'Plantstrong Thanksgiving favorites with Ann Esselstyn’s mashed potatoes and gravy, sweet potato casserole, super salad, pumpkin pie tart, stuffing, and corn muffins.'
+  },
+  {
+    id: 'when-joy-and-sorrow-share-a-seat-at-the-table',
+    title: 'When Joy and Sorrow Share a Seat at the Table',
+    excerpt: 'Holidays can hold belly laughs and tears at once—let joy and grief sit together so love keeps flowing.',
+    date: '3/1/2027',
+    dateSort: new Date('2027-03-01'),
+    readTime: '7 min read',
+    blogNumber: 45,
+    seoDescription: 'Suz reflects on holidays after loss, how tears are love in motion, and why joy and sorrow can share space without canceling each other out.'
   }
 ];
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PillarCard from '@/components/home/PillarCard';
 import WelcomeBanner from '@/components/home/WelcomeBanner';
+import LatestBlogBadge from '@/components/home/LatestBlogBadge';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import { Button } from '@/components/ui/button';
 import {
@@ -163,6 +164,9 @@ const Home = () => {
             {/* Text Content */}
             <div className="order-2 lg:order-1 flex flex-col justify-center">
               <div className="max-w-2xl text-spacing">
+                <div className="mb-4">
+                  <LatestBlogBadge />
+                </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in">
                   Age Boldly / Live Loudly
                 </h1>

@@ -3418,6 +3418,404 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 43: The Weekend Epiphany, Why Resting is the New Rebellion
+  if (postId === 'the-weekend-epiphany-why-resting-is-the-new-rebellion') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 43}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">The Weekend Epiphany, Why Resting is the New Rebellion</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>For nine years now, I have lived alone with my best pal Gabe.</p>
+
+          <p>
+            Nine years of building, creating, learning, supporting others, coaching, moderating, writing, dreaming and pouring my heart into
+            Rebellious Aging, Whole Communities, my website and everything in between.
+          </p>
+
+          <p>And for nine years my weekends have looked exactly like my weekdays. YIKES!</p>
+
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Work.</li>
+            <li>Thinking about work.</li>
+            <li>Catching up on work.</li>
+            <li>Creating more work.</li>
+            <li>Reading stuff relating to work.</li>
+            <li>Dreaming up new ideas.</li>
+          </ul>
+
+          <p>
+            Weekends were just an extension of effort. A chance to finally "get caught up." A place where I folded more tasks into every
+            spare corner, telling myself this was all a "good thing".
+          </p>
+
+          <p>
+            Recently, something shifted. Not wholly in my mind, but also in my body. My body began whispering to me. Then nudging. Then
+            finally saying, "Enough. This pace is no longer serving you." And for the first time, in a long time, I listened.
+          </p>
+
+          <p>The epiphany that happened on Saturday morning. It started simply.</p>
+
+          <p>
+            A quiet Saturday morning. Me, half-awake. No obligations. No deadlines. No events. And a voice inside me, gentle but firm, said:
+          </p>
+
+          <ul className="list-disc pl-6 space-y-1">
+            <li>"Why don't you sleep in?"</li>
+            <li>"Why don't you take an extended hike with Gabe today, it is a gorgeous day?"</li>
+            <li>"Why don't you call the "Street Ladies" and go to dinner in town?"</li>
+            <li>"Why don't you relax and enjoy what you have accomplished?"</li>
+          </ul>
+
+          <p>
+            If you have known me long enough you know I AM QUITE WEARY OF THE VOICE IN MY HEAD. I ONCE READ THAT THE "VOICE" IS FOR
+            SURVIVAL NOT HAPPINESS. WOW! This voice I was hearing as I lay in my bed was not laziness, or quitting. The voice was wisdom.
+            Perhaps a wisdom that has been maturing in me for decades and was finally ready to be heard.
+          </p>
+
+          <p>My body wasn't breaking down, IT WAS WAKING UP!</p>
+
+          <p>
+            The truth? My body was not tired. Nope! It was tired of being ignored. Every bit of resistance, every ounce of weekend
+            unmotivation wasn't failure, it was information. My body wasn't saying "STOP." It was saying:
+          </p>
+
+          <ul className="list-disc pl-6 space-y-1">
+            <li>"Choose differently."</li>
+            <li>"Honor yourself."</li>
+            <li>"Make space for joy."</li>
+            <li>"Let yourself live."</li>
+          </ul>
+
+          <p>And SO I DID.</p>
+
+          <p>
+            This is all new to me and I am treading lightly. Over the last few weekends, I have been experimenting, playing, and
+            learning what it means to reclaim Saturdays and Sundays. Not as catch up zones but as SACRED TIME. And oh what joy I have
+            found.
+          </p>
+
+          <p>Here is what my weekends look like now (two weekends in):</p>
+
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Sleeping in without guilt.</li>
+            <li>Reading a book until I feel drowsy...and then taking the nap.</li>
+            <li>Much longer neighborhood walks and hikes with Gabe.</li>
+            <li>Walking into our sweet town and enjoying the vibe, the activity, the experience.</li>
+            <li>Lunch at a quaint cafe', just because.</li>
+            <li>Calling a friend and going out to dinner.</li>
+            <li>Longer, more on point, unrushed visits with my man.</li>
+            <li>
+              Sitting in quiet reflection, celebrating what I have done well and releasing my missteps (Instead of the other way around
+              which I am queen of).
+            </li>
+            <li>
+              Thinking of actually taking up "Nature Journaling". A magical practice I learned from my friend Barb Root. (This is so
+              amazing, I recommend you give it a try.) I can connect you with Barb for an intro to nature journaling).
+            </li>
+            <li>Doing whatever feels good in the moment, not whatever I thought "should" be done.</li>
+          </ul>
+
+          <p>I am not abandoning my purpose. I am honoring it, by honoring myself.</p>
+
+          <p>Did you know that we were not put here to GRIND.</p>
+
+          <p>This part is important:</p>
+
+          <p>
+            Women of my generation were conditioned to keep going. To push through. To push ourselves. To be productive, even in our
+            rest. To fill the silence. And through all of that noise, somewhere I or we forgot:
+          </p>
+
+          <p>Weekends are not rewards.</p>
+          <p>They are rights.</p>
+          <p>We need softness.</p>
+          <p>We need joy.</p>
+          <p>We need pauses.</p>
+          <p>We need time that is not measured by OUTPUT.</p>
+
+          <p>A vibrant life, the one you and I believe in so fiercely, is built as much in rest as in action.</p>
+
+          <p>SO, Here is my New Weekend philosophy. (Two weekends in).</p>
+
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Be slow.</li>
+            <li>Be thoughtful.</li>
+            <li>Be joyful.</li>
+            <li>Be playful.</li>
+            <li>Be lazy.</li>
+            <li>Be unstructured.</li>
+            <li>Be spontaneous.</li>
+            <li>Be free.</li>
+          </ul>
+
+          <p>Not every weekend will look the same. I love that! How about you?</p>
+
+          <p>The structure I follow now is simple:</p>
+
+          <ul className="list-disc pl-6 space-y-1">
+            <li>If it feels nourishing, I say yes.</li>
+            <li>If it feels draining, I say NO.</li>
+          </ul>
+
+          <p>That is my new boundary. My new compass. My new weekend epiphany. AND the good news is it's changing me in all the right ways.</p>
+
+          <p>Let rest be your new act of power.</p>
+
+          <p>Let weekends become your sanctuary.</p>
+
+          <p>Let joy return to your calendar.</p>
+
+          <p>A weekend well spent brings a week of content.</p>
+
+          <p>
+            <strong>***Suz</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 44: Thanksgiving Recipes
+  if (postId === 'thanksgiving-recipes-plantstrong-favorites') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 44}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-8">Thanksgiving Recipes</h1>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>I am getting many requests for my Thanksgiving recipes. Here are a few of my plantstrong favorites and I will be making these again this Thanksgiving.</p>
+
+          <h3>Good Garlicky Mashed Potatoes (Ann Esselstyn, Pg. 138, The Prevent and Reverse Heart Disease Cookbook)</h3>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>6 medium gold potatoes</li>
+            <li>6 tablespoons nutritional yeast</li>
+            <li>2 teaspoons fresh garlic (2-3 cloves)</li>
+            <li>2 cups non-dairy milk (I use the potato cooking water as needed since I do not do milk of any sort)</li>
+            <li>1 teaspoon dried rosemary (sometimes I use fresh)</li>
+            <li>Freshly ground black pepper to taste</li>
+          </ul>
+          <ol className="list-decimal pl-6 space-y-1">
+            <li>Cut the potatoes, including the skin, into 1 inch chunks. Place them into a large pot, cover with water, and bring to a boil. Cook until tender, about 10 minutes.</li>
+            <li>Drain the potatoes (save the liquid), transfer to a large bowl, and mash.</li>
+            <li>Add the nutritional yeast, garlic, and liquid of choice. Mash until smooth, adding extra liquid as needed since nutritional yeast soaks it up.</li>
+            <li>Stir in the rosemary and black pepper to taste.</li>
+            <li>Ann recommends folding in 1-2 cups of finely chopped cooked kale. I may try that this year.</li>
+          </ol>
+
+          <h3>Ann Esselstyn's Mommy's Mushroom Gravy</h3>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>1 onion, chopped</li>
+            <li>2-3 garlic cloves, minced</li>
+            <li>12 ounces sliced mushrooms</li>
+            <li>2 cups vegetable broth</li>
+            <li>2 teaspoons white miso</li>
+            <li>2 tablespoons whole wheat flour or gluten-free flour mixture</li>
+            <li>2 tablespoons low sodium tamari or soy sauce</li>
+            <li>2 tablespoons cooking sherry (optional, I use it)</li>
+            <li>Black pepper to taste</li>
+          </ul>
+          <ol className="list-decimal pl-6 space-y-1">
+            <li>Saute the onion and garlic with a bit of water or veggie broth until they begin to caramelize, 4-5 minutes.</li>
+            <li>Add sliced mushrooms. They should release liquid, but supplement with water or broth if needed. Cook until mushrooms are soft.</li>
+            <li>In a separate bowl, whisk the vegetable broth, miso, flour, tamari or soy sauce, cooking sherry, and any extra broth until smooth.</li>
+            <li>Add the wet ingredients to the mushrooms and continue to stir.</li>
+            <li>Cook down the mix to your liking and finish with black pepper.</li>
+          </ol>
+
+          <h3>Sweet Potato Casserole (eatplant-based.com)</h3>
+          <p>Base:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>5 sweet potatoes</li>
+            <li>1 cup non-dairy milk (soy or almond)</li>
+            <li>1/4 cup maple or date syrup</li>
+            <li>1/4 teaspoon nutmeg</li>
+            <li>1 tablespoon ground cinnamon</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1 tablespoon vanilla extract</li>
+          </ul>
+          <p>Topping:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>1 1/4 cups old-fashioned gluten-free rolled oats</li>
+            <li>3 tablespoons whole wheat or other gluten-free flour</li>
+            <li>1/4 cup non-dairy milk</li>
+            <li>1 cup chopped raw pecans (optional)</li>
+            <li>1/4 cup maple syrup</li>
+            <li>1 teaspoon cinnamon</li>
+            <li>1/4 teaspoon salt</li>
+          </ul>
+          <ol className="list-decimal pl-6 space-y-1">
+            <li>Cook the sweet potatoes until soft but not mushy by boiling or baking. Once cooked and cooled, peel and place in a large bowl.</li>
+            <li>Preheat the oven to 350.</li>
+            <li>Mash the sweet potatoes with a potato masher or hand mixer. Add the remaining base ingredients and mix. Keep topping ingredients separate.</li>
+            <li>For the topping, blend rolled oats until coarsely chopped. Combine with the remaining topping ingredients in a bowl. The flour should be damp, not dry or very wet; add more non-dairy milk if needed. It should stay crumbly.</li>
+            <li>Spread the topping over the sweet potatoes in a casserole dish. Bake about 30 minutes until golden brown. Cool slightly before serving and serve warm.</li>
+          </ol>
+          <p>Tips and tricks:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Use a 2 quart casserole dish.</li>
+            <li>Nut-free: pecans are optional.</li>
+            <li>Make ahead: cover well and keep in the fridge until ready to bake.</li>
+            <li>Storage: store leftovers in an airtight container in the fridge for 5-7 days.</li>
+          </ul>
+
+          <h3>Super Salad with Balsamic Dressing (EatPlant-Based)</h3>
+          <p>Salad:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>1 bunch of kale, stripped off stems</li>
+            <li>1/2 head Napa cabbage, finely shredded or chopped</li>
+            <li>3-4 carrots, peeled and grated</li>
+            <li>1/4 red onion, thinly sliced</li>
+            <li>1/2 cup grape tomatoes, sliced in half</li>
+            <li>1 cup raw edamame, shelled</li>
+            <li>1 cup fresh blueberries</li>
+          </ul>
+          <p>Balsamic dressing:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>3 tablespoons balsamic vinegar</li>
+            <li>2 tablespoons brown mustard</li>
+            <li>1 tablespoon maple syrup</li>
+            <li>1 tablespoon fresh lemon juice</li>
+          </ul>
+          <p>Toss salad in dressing and serve.</p>
+
+          <h3>Pumpkin Pie Tart (Forks Over Knives)</h3>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>1 1/2 cups rolled oats (gluten-free works)</li>
+            <li>1/4 cup flaxseed meal, divided</li>
+            <li>3 tablespoons almond butter</li>
+            <li>1 cup unsweetened plant milk, divided</li>
+            <li>1 15 oz can pumpkin</li>
+            <li>1/3 cup chopped, pitted whole dates</li>
+            <li>1/4 cup pure maple syrup</li>
+            <li>2 tablespoons arrowroot powder</li>
+            <li>2 teaspoons pumpkin pie spice</li>
+            <li>1 teaspoon pure vanilla extract</li>
+            <li>1/4 teaspoon sea salt</li>
+          </ul>
+          <ol className="list-decimal pl-6 space-y-1">
+            <li>Preheat oven to 375.</li>
+            <li>In a food processor, combine oats, 3 tablespoons flaxseed meal, and almond butter. Pulse until mixed. With the processor running, slowly add 2-4 tablespoons of milk until the mixture clings together and is slightly moistened.</li>
+            <li>Press the mixture onto the bottom and up the sides of a 9 inch tart pan with a removable bottom.</li>
+            <li>For the filling, combine the remaining 1 tablespoon flaxseed meal with 1/4 cup water and let stand for 5 minutes.</li>
+            <li>Add the flax mixture to a food processor with pumpkin, 3/4 cup milk, dates, maple syrup, arrowroot, pumpkin pie spice, vanilla, and salt. Process until smooth and spread into the crust.</li>
+            <li>Bake 50-55 minutes or until the filling is set. Cool on a wire rack for 30 minutes, then chill 2-8 hours. Serve.</li>
+          </ol>
+
+          <h3>Stuffing</h3>
+          <p>I wing this using a seasoned stuffing mix (gluten-free works). Follow the directions for the mix.</p>
+          <p>I always include sauteed onions, celery, kale, mushrooms, and carrots. Combine everything and toss in some unsweetened dried cranberries (not too many). Bake in a 350-375 oven until heated through and a bit crunchy on top.</p>
+
+          <h3>Corn Muffins</h3>
+          <p>Serve with maple syrup sweetened honey butter. (There is a recipe in the recipe file on the website.)</p>
+
+          <p>
+            This is the second year since I was married (2/6/65) that I am not having Thanksgiving at my house. My daughter invited us all
+            to her house where almost the whole family will gather, dogs included. (We will miss Peyton who is studying abroad in Portugal
+            with Villanova).
+          </p>
+          <p>I will bring all of the above to Andrea's house as we have a mixed group...there will be the traditional Thanksgiving fixins plus the above. I love Thanksgiving. How about you?</p>
+
+          <p>Enjoy,</p>
+
+          <p>
+            <strong>***Suz***</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 45: When Joy and Sorrow Share a Seat at the Table
+  if (postId === 'when-joy-and-sorrow-share-a-seat-at-the-table') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 45}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">When Joy and Sorrow Share a Seat at the Table</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>The holidays have a way of stirring up memories. Some sweet, some painful and some so intertwined that they make us laugh and tear up in the same breath.</p>
+
+          <p>This week a very dear long time friend texted me: "I am hosting Thanksgiving this year. I hope I can hold back the tears."</p>
+
+          <p>Her husband passed away over a year ago.</p>
+
+          <p>Her words made me stop and wonder. Can we be genuinely happy and deeply sad in the same moment?</p>
+
+          <p>I believe the answer is yes. And I believe that not only is it possible but it is actually healing.</p>
+
+          <p>Grief doesn’t really leave, it kind of softens. Grief is not a one and done chapter. It doesn’t wrap itself up neatly and fly away when the calendar flips.</p>
+
+          <p>Grief is love that has nowhere to go. It is the echo of a life shared. And during the holidays, that echo is loud.</p>
+
+          <p>
+            But I think it is possible to laugh from your belly and still feel that tug in your heart. Yup you can cook the meal, pour the
+            hot cider, set the table, put on your party shoes and be excited for the doorbell to ring and still miss the person who is not
+            there. YES, YOU can feel joy without betraying your sorrow.
+          </p>
+
+          <p>The heart can hold both Sorrow and JOY.</p>
+
+          <p>
+            Tears do not cancel out joy. My friend worried that tears might ruin the day. NOPE, on the flip, tears do not take away anything.
+            Tears add meaning in the most authentic and JOYFUL way.
+          </p>
+
+          <p>Tears say:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>"I loved someone deeply."</li>
+            <li>"I am still finding my way."</li>
+            <li>"I am doing the brave thing, even though it hurts."</li>
+          </ul>
+
+          <p>
+            So why not let joy and sorrow sit together? Let tears come. They are just love in liquid form. But let smiles come too. They are
+            proof you are still living forward.
+          </p>
+
+          <p>
+            So go ahead with love in your heart, share memories, say their name, tell funny stories, that all keeps them close. Let others
+            help you, you do not have to be the strong one every moment. And most of all, make space for the messy mix. The human heart can
+            multi-task.
+          </p>
+
+          <p>
+            I think aging brings wisdom, courage, resilience and yes even loss. But it also brings a deeper understanding of the human
+            heart. If this holiday season brings you both JOY and SORROW, let it. It just means you have lived, loved and continue to grow
+            in your own special time and way.
+          </p>
+
+          <p>AND IF TEARS FALL...LET THEM SPARKLE.</p>
+
+          <p>Hugs,</p>
+
+          <p>
+            <strong>***Suz***</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
