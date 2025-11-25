@@ -4,6 +4,7 @@ import PillarCard from '@/components/home/PillarCard';
 import WelcomeBanner from '@/components/home/WelcomeBanner';
 import LatestBlogBadge from '@/components/home/LatestBlogBadge';
 import ConnectCTA from '@/components/common/ConnectCTA';
+import { getSortedBlogPosts } from '@/data/blogPosts';
 import { Button } from '@/components/ui/button';
 import {
   Carousel,
@@ -111,6 +112,11 @@ const Home = () => {
     "/lovable-uploads/34f618fe-81a8-41b5-8235-6f432ce55ce7.png",
     "/lovable-uploads/6adf3183-9e2d-4253-98d4-ec336f1daa3e.png"
   ];
+
+  const latestBlogs = getSortedBlogPosts()
+    .slice()
+    .sort((a, b) => b.blogNumber - a.blogNumber)
+    .slice(0, 10);
 
   // Preload the second image immediately
   useEffect(() => {
@@ -310,6 +316,50 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-gray-50">
+        <div className="container mx-auto container-padding space-y-8">
+          <div className="text-center prose-spacing max-w-3xl mx-auto">
+            <p className="uppercase text-xs tracking-[0.3em] text-teal font-semibold">Latest From the Blog</p>
+            <h2 className="text-3xl md:text-4xl font-bold">Fresh posts, delivered rebelliously</h2>
+            <p className="text-gray-600">
+              Swipe through the newest stories on confidence, style, gratitude, and plant-strong living.
+            </p>
+          </div>
+
+          <Carousel
+            className="w-full"
+            opts={{
+              align: 'start',
+              loop: true,
+              dragFree: true,
+            }}
+          >
+            <CarouselContent className="-ml-4 md:-ml-6">
+              {latestBlogs.map((post) => (
+                <CarouselItem
+                  key={post.id}
+                  className="pl-4 md:pl-6 basis-[85%] sm:basis-1/2 lg:basis-1/3"
+                >
+                  <Link
+                    to={`/blog/${post.id}`}
+                    className="block h-full rounded-3xl border border-gray-200 bg-white p-5 shadow-sm hover:-translate-y-1 hover:shadow-md transition"
+                  >
+                    <div className="flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.15em] text-teal font-semibold mb-2">
+                      <span>Blog #{post.blogNumber}</span>
+                      <span className="text-gray-300">•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 line-clamp-2">{post.title}</h3>
+                    <p className="text-gray-600 text-sm line-clamp-3 mb-4">{post.excerpt}</p>
+                    <div className="text-teal font-semibold text-sm">Read post →</div>
+                  </Link>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
 
