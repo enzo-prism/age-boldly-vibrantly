@@ -194,18 +194,18 @@ const Home = () => {
                   <Button asChild size="lg" className="bg-teal hover:bg-teal-dark text-white shadow-lg min-h-[44px] text-base font-semibold">
                     <Link to="/our-story">Our Story</Link>
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
+                  <Button
+                    variant="outline"
+                    size="lg"
                     className="border-teal text-teal hover:bg-teal hover:text-white shadow-sm min-h-[44px] text-base font-medium"
                     onClick={() => {
-                      const pillarsSection = document.getElementById('pillars-section');
-                      if (pillarsSection) {
-                        pillarsSection.scrollIntoView({ behavior: 'auto' });
+                      const searchSection = document.getElementById('search-section');
+                      if (searchSection) {
+                        searchSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                       }
                     }}
                   >
-                    Explore the Pillars
+                    Search
                   </Button>
                 </div>
               </div>
@@ -374,7 +374,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section id="search-section" className="section-padding">
         <div className="container mx-auto container-padding space-y-6">
           <div className="text-center prose-spacing max-w-3xl mx-auto">
             <p className="uppercase text-xs tracking-[0.3em] text-teal font-semibold">Search</p>
