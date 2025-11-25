@@ -109,6 +109,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/nutrition?tab=what-is-wfpb"
+                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform">What is WFPB?</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/pillars/health/nutrition-guide"
                   className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
                 >
@@ -119,6 +128,36 @@ const Footer = () => {
               <li>
                 <Link to="/nutrition" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
                   <span className="group-hover:translate-x-1 transition-transform">Nutrition (WFPB)</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/nutrition?tab=benefits" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Benefits</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/nutrition?tab=protocol" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Dr. Esselstyn's Protocol</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/nutrition?tab=dr-campbell" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Dr. T. Colin Campbell</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/nutrition?tab=foods" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Why &amp; How</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/nutrition?tab=recipes" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Recipes</span>
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>
