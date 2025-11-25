@@ -24,84 +24,138 @@ const Footer = () => {
     <footer className="bg-gradient-to-br from-teal/5 to-coral/5 pt-20 pb-8">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
-          {/* Brand Section */}
-          <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold text-teal mb-4">
-              Rebellious Aging
-            </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Breaking stereotypes and redefining what it means to age gracefully. 
-              Join our community of vibrant individuals living their best lives at every stage.
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-10 mb-14">
+          {/* Brand */}
+          <div className="lg:col-span-2 space-y-4">
+            <h3 className="text-2xl font-bold text-teal">Rebellious Aging</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Breaking stereotypes and redefining what it means to age gracefully. Join a community of vibrant women living boldly at every
+              stage.
             </p>
             <div className="flex items-center gap-2 text-coral font-medium">
               <Heart size={18} className="fill-current" />
               <span>Age boldly, live vibrantly</span>
             </div>
+            <div className="flex gap-3 pt-2">
+              <button
+                onClick={handleSocialClick}
+                className="w-10 h-10 bg-teal/10 hover:bg-teal hover:text-white text-teal rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
+                <Facebook size={18} />
+                <span className="sr-only">Facebook</span>
+              </button>
+              <button
+                onClick={handleSocialClick}
+                className="w-10 h-10 bg-teal/10 hover:bg-teal hover:text-white text-teal rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
+                <Instagram size={18} />
+                <span className="sr-only">Instagram</span>
+              </button>
+              <a
+                href="mailto:suz@rebelwithsuz.com"
+                className="w-10 h-10 bg-coral/10 hover:bg-coral hover:text-white text-coral rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
+                <Mail size={18} />
+                <span className="sr-only">Email</span>
+              </a>
+            </div>
           </div>
 
-          {/* The Four Pillars */}
-          <div>
-            <h4 className="font-bold text-foreground mb-6 text-lg">The Four Pillars</h4>
-            <ul className="space-y-4">
+          {/* Pillar Columns */}
+          <div className="space-y-4">
+            <h4 className="font-bold text-foreground text-lg flex items-center gap-2">
+              <span className="text-xl">🌟</span> Confidence
+            </h4>
+            <ul className="space-y-3">
               <li>
-                <Link 
-                  to="/pillars/confidence" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="text-xl">🌟</span>
-                  <span className="group-hover:translate-x-1 transition-transform">Confidence</span>
+                <Link to="/pillars/confidence" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Confidence Pillar</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/pillars/style" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="text-xl">👗</span>
-                  <span className="group-hover:translate-x-1 transition-transform">Style</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/pillars/health" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="text-xl">🌱</span>
-                  <span className="group-hover:translate-x-1 transition-transform">Health</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/pillars/health/nutrition-guide" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="text-xl">🥗</span>
-                  <span className="group-hover:translate-x-1 transition-transform">Nutrition Guide</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/pillars/gratitude" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="text-xl">💖</span>
-                  <span className="group-hover:translate-x-1 transition-transform">Gratitude</span>
+                <Link to="/welcome-letter" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Welcome Letter</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources & Community */}
-          <div>
-            <h4 className="font-bold text-foreground mb-6 text-lg">Resources & Community</h4>
-            <ul className="space-y-4">
+          <div className="space-y-4">
+            <h4 className="font-bold text-foreground text-lg flex items-center gap-2">
+              <span className="text-xl">👗</span> Style
+            </h4>
+            <ul className="space-y-3">
               <li>
-                <Link 
-                  to="/our-story" 
+                <Link to="/pillars/style" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Style Pillar</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-bold text-foreground text-lg flex items-center gap-2">
+              <span className="text-xl">🌱</span> Health
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/pillars/health" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Health Pillar</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/pillars/health/nutrition-guide"
                   className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
                 >
+                  <span className="group-hover:translate-x-1 transition-transform">Nutrition Guide</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/nutrition" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Nutrition (WFPB)</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-bold text-foreground text-lg flex items-center gap-2">
+              <span className="text-xl">💖</span> Gratitude
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/pillars/gratitude" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Gratitude Pillar</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/pillars/health/nutrition-guide" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Food as Gratitude</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-bold text-foreground text-lg">More Suz</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/contact" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Get in Touch</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/our-story" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
                   <span className="group-hover:translate-x-1 transition-transform">Our Story</span>
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
@@ -119,66 +173,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link 
-                  to="/nutrition" 
-                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">Nutrition (WFPB)</span>
-                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/pillars/health/nutrition-guide" 
-                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">WFPB Guide</span>
-                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/blog" 
-                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">Blog & Stories</span>
-                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/team" 
-                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">Team</span>
-                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
-                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">Get in Touch</span>
-                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Guides */}
-          <div>
-            <h4 className="font-bold text-foreground mb-6 text-lg">Guides & Stories</h4>
-            <ul className="space-y-4">
-              <li>
-                <Link to="/pillars/health/nutrition-guide" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
-                  <span className="group-hover:translate-x-1 transition-transform">Whole-Food Guide</span>
-                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <Link to="/pillars/gratitude" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
-                  <span className="group-hover:translate-x-1 transition-transform">Gratitude Pillar</span>
+                <Link to="/blog" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                  <span className="group-hover:translate-x-1 transition-transform">Blog</span>
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>
@@ -188,44 +184,7 @@ const Footer = () => {
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>
-              <li>
-                <Link to="/blog" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
-                  <span className="group-hover:translate-x-1 transition-transform">Rebel Blog</span>
-                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
             </ul>
-          </div>
-
-          {/* Connect With Suz */}
-          <div>
-            <h4 className="font-bold text-foreground mb-6 text-lg">Connect With Suz</h4>
-            <p className="text-gray-600 mb-6 text-sm">
-              Follow along for daily inspiration, tips, and real talk about aging rebelliously.
-            </p>
-            <div className="flex gap-4 mb-6">
-              <button
-                onClick={handleSocialClick}
-                className="w-10 h-10 bg-teal/10 hover:bg-teal hover:text-white text-teal rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Facebook size={18} />
-                <span className="sr-only">Facebook</span>
-              </button>
-              <button
-                onClick={handleSocialClick}
-                className="w-10 h-10 bg-teal/10 hover:bg-teal hover:text-white text-teal rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Instagram size={18} />
-                <span className="sr-only">Instagram</span>
-              </button>
-              <a 
-                href="mailto:suz@rebelwithsuz.com" 
-                className="w-10 h-10 bg-coral/10 hover:bg-coral hover:text-white text-coral rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Mail size={18} />
-                <span className="sr-only">Email</span>
-              </a>
-            </div>
           </div>
         </div>
 
