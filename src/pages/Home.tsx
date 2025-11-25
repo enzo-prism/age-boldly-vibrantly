@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import PillarCard from '@/components/home/PillarCard';
 import WelcomeBanner from '@/components/home/WelcomeBanner';
 import LatestBlogBadge from '@/components/home/LatestBlogBadge';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import { getSortedBlogPosts } from '@/data/blogPosts';
+import { useSearch } from '@/hooks/useSearch';
 import { Button } from '@/components/ui/button';
 import {
   Carousel,
@@ -16,6 +17,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import Seo from '@/components/seo/Seo';
 import { getSeoRouteByPath } from '@/data/seoRoutes';
 import { buildOrganizationJsonLd, buildWebSiteJsonLd } from '@/lib/structuredData';
+import { Search, Loader2 } from 'lucide-react';
 // import Autoplay from 'embla-carousel-autoplay'; // Removed to prevent auto-scrolling
 
 const Home = () => {
@@ -23,6 +25,9 @@ const Home = () => {
   const [preloadedImages, setPreloadedImages] = useState<Set<number>>(new Set());
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+  const { search, ensureIndex, loading: searchLoading } = useSearch();
   const homeSeo = getSeoRouteByPath('/');
 
   // Prevent auto-scrolling during initial load
@@ -117,6 +122,12 @@ const Home = () => {
     .slice()
     .sort((a, b) => b.blogNumber - a.blogNumber)
     .slice(0, 10);
+
+  const searchResults = useMemo(() => (searchQuery ? search(searchQuery).slice(0, 5) : []), [searchQuery, search]);
+
+  useEffect(() => {
+    void ensureIndex();
+  }, [ensureIndex]);
 
   // Preload the second image immediately
   useEffect(() => {
@@ -360,6 +371,67 @@ const Home = () => {
               ))}
             </CarouselContent>
           </Carousel>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container mx-auto container-padding space-y-6">
+          <div className="text-center prose-spacing max-w-3xl mx-auto">
+            <p className="uppercase text-xs tracking-[0.3em] text-teal font-semibold">Search</p>
+            <h2 className="text-3xl md:text-4xl font-bold">Find anything on Rebellious Aging</h2>
+            <p className="text-gray-600">
+              Looking for a specific blog, pillar, or video? Search the site right here.
+            </p>
+          </div>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const trimmed = searchQuery.trim();
+              if (trimmed) {
+                navigate(`/search?q=${encodeURIComponent(trimmed)}`);
+              }
+            }}
+            className="max-w-3xl mx-auto"
+          >
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search blog, pillars, nutrition guide, video series…"
+                className="w-full rounded-full border border-gray-200 bg-white px-11 py-3.5 text-base shadow-sm focus:border-teal focus:ring-2 focus:ring-teal/20 transition"
+              />
+              {searchLoading && (
+                <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 animate-spin text-muted-foreground" />
+              )}
+            </div>
+          </form>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {(searchQuery ? searchResults : latestBlogs.slice(0, 4)).map((item) => (
+              <Link
+                key={item.id}
+                to={item.path ?? `/blog/${item.id}`}
+                className="block rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:-translate-y-1 hover:shadow-md transition"
+              >
+                <div className="flex items-center gap-2 mb-2 text-xs uppercase tracking-[0.12em] text-teal font-semibold">
+                  <span>{item.type ?? 'blog'}</span>
+                  {('blogNumber' in item && item.blogNumber) ? <span className="text-gray-300">•</span> : null}
+                  {('blogNumber' in item && item.blogNumber) ? <span>Blog #{(item as any).blogNumber}</span> : null}
+                </div>
+                <h3 className="text-lg font-semibold mb-2 line-clamp-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">{item.summary ?? item.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button asChild variant="outline" className="border-teal text-teal hover:bg-teal hover:text-white">
+              <Link to={searchQuery ? `/search?q=${encodeURIComponent(searchQuery.trim())}` : '/search'}>Open full search →</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
