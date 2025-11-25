@@ -338,6 +338,11 @@ const Home = () => {
             <p className="text-gray-600">
               Swipe through the newest stories on confidence, style, gratitude, and plant-strong living.
             </p>
+            <div className="mt-4">
+              <Button asChild variant="outline" className="border-teal text-teal hover:bg-teal hover:text-white">
+                <Link to="/blog">View all posts →</Link>
+              </Button>
+            </div>
           </div>
 
           <Carousel
