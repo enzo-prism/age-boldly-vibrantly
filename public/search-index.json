@@ -769,6 +769,20 @@
     "updatedAt": "2027-03-01T00:00:00.000Z"
   },
   {
+    "id": "blog:passing-the-baton-thanksgiving-reflection",
+    "type": "blog",
+    "title": "Passing the Baton, A Thanksgiving Reflection",
+    "path": "/blog/passing-the-baton-thanksgiving-reflection",
+    "summary": "Suz reflects on passing the Thanksgiving hosting legacy to her daughter, embracing change while keeping gratitude and warmth at the heart of the holiday.",
+    "content": "Blog #46: Passing the Baton, A Thanksgiving Reflection. After 61 years of hosting, Suz hands the Thanksgiving baton to her daughter—honoring legacy, joy, and the evolution of family traditions.",
+    "tags": [
+      "blog",
+      "blog-46",
+      "46"
+    ],
+    "updatedAt": "2027-03-15T00:00:00.000Z"
+  },
+  {
     "id": "video:episode-1",
     "type": "video",
     "title": "Introduction to Rebellious Aging (Episode 1)",

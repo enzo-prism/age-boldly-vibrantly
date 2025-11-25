@@ -423,6 +423,16 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '7 min read',
     blogNumber: 45,
     seoDescription: 'Suz reflects on holidays after loss, how tears are love in motion, and why joy and sorrow can share space without canceling each other out.'
+  },
+  {
+    id: 'passing-the-baton-thanksgiving-reflection',
+    title: 'Passing the Baton, A Thanksgiving Reflection',
+    excerpt: 'After 61 years of hosting, Suz hands the Thanksgiving baton to her daughter—honoring legacy, joy, and the evolution of family traditions.',
+    date: '3/15/2027',
+    dateSort: new Date('2027-03-15'),
+    readTime: '9 min read',
+    blogNumber: 46,
+    seoDescription: 'Suz reflects on passing the Thanksgiving hosting legacy to her daughter, embracing change while keeping gratitude and warmth at the heart of the holiday.'
   }
 ];
 

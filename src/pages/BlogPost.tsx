@@ -3816,6 +3816,83 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 46: Passing the Baton, A Thanksgiving Reflection
+  if (postId === 'passing-the-baton-thanksgiving-reflection') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 46}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">Passing the Baton, A Thanksgiving Reflection</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Thanksgiving has always been my favorite holiday, simple, heartfelt, and overflowing with gratitude. My sweet momma was the
+            Queen of Thanksgiving. She taught me, by example, how to welcome people into your home and create a day that feels cherished,
+            warm and unforgettable. Her table was never about perfection. It was all about presence. (Someone once told me, perhaps my mom,
+            when hosting, never worry about what you put on the table, the key to success is who you put on the chairs.)
+          </p>
+
+          <p>
+            When I married and moved from upstate New York to California in 1965, my husband and I shared our first Thanksgiving alone in a
+            lovely restaurant. We didn’t know anyone, YET. By the next Thanksgiving our tiny, one bedroom apartment was bursting with
+            friends, laughter, mismatched dishes and the beginning of a tradition that lasted more than SIX DECADES.
+          </p>
+
+          <p>
+            For 61 years, with only a very few (4) exceptions, my home has been the hub of Thanksgiving. I have roasted the turkeys, mashed
+            the taters, baked the sweet potatoes, made the green bean casserole and baked the pies. I welcomed the guests and carried my
+            mom’s baton with pride and purpose.
+          </p>
+
+          <p>
+            BUT, this year I will not be hosting. HMMMMMM? Serious “emotional reflex” at the thought. I won’t even share all of the dark
+            thoughts that surfaced but they ended with, “the old lady is gaining ground”. Soooooooooo after a long discussion with that
+            voice in my head, ya know the one that is wired for survival not happiness, I emerged victorious. I got my s_ _ t together and
+            realized what a wonderful gift I was just given by my sweet, daughter’s offer to host. But I must be perfectly honest, passing
+            the baton felt emotional. It made me feel old. A little empty. A little without purpose. I am so happy I caught myself. Why
+            would I deny my sweet girl the absolute delight and joy that comes with hosting Thanksgiving. Why did I refuse, at first, to
+            hear the excitement in her voice. The joy. The pride. Sometimes I can be a “hamster brain”. It took me a while (several days)
+            before I knew, with a joyful heart that my job was done. But I was finally ok. I knew with a full heart that the legacy had
+            taken root.
+          </p>
+
+          <p>
+            She is becoming her generation’s queen of Thanksgiving! One proud momma here. I hope I taught her well. Especially this one
+            thing, no matter how much you plan and prepare when the doorbell rings the party takes on a life of its own. Just go with it. It
+            will never be as you imagined but I know it will be warm, welcoming and delicious.
+          </p>
+
+          <p>
+            Watching her prepare with a joyful heart, planning, decorating, cooking and soon welcoming, is one of the most beautiful gifts I
+            could receive.
+          </p>
+
+          <p>
+            Surely family holiday traditions are not meant to be the same. They are meant to evolve, to grow, to be loved by the next pair of
+            hands. There is definitely a buzz of anticipation in the air, with excitement over the coming Thanksgiving day at AA. (Aunt A).
+          </p>
+
+          <p>So this year, I will sit at her beautiful table with a full and grateful heart.</p>
+
+          <p>
+            Happy Thanksgiving my Rebellious friends. May your day be filled with love, family, friends, and gratitude that spans
+            generations.
+          </p>
+
+          <p>
+            <strong>***Suz***</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
