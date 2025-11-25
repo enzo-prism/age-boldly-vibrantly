@@ -110,7 +110,7 @@ const WelcomeLetter = () => {
               <div className="mt-4 flex justify-center">
                 <Button asChild className="bg-teal text-white hover:bg-teal-dark">
                   <a
-                    href="https://fxuqp40sseh.typeform.com/to/fRGVxj4g"
+                    href="https://fxuqp40sseh.typeform.com/to/DbY1YJrs"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

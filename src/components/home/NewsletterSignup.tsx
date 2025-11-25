@@ -15,7 +15,7 @@ const NewsletterSignup = () => {
           
           <div className="max-w-lg mx-auto">
             <iframe
-              src="https://fxuqp40sseh.typeform.com/to/fRGVxj4g"
+              src="https://fxuqp40sseh.typeform.com/to/DbY1YJrs"
               width="100%"
               height="500"
               frameBorder="0"
