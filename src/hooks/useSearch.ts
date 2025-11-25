@@ -12,6 +12,7 @@ interface SearchResultItem extends SearchDocument {
 }
 
 const SEARCH_INDEX_PATH = '/search-index.json';
+const INDEX_VERSION = import.meta.env?.VITE_APP_VERSION ?? '';
 
 const createMiniSearch = (docs: SearchDocument[]) => {
   const instance = new MiniSearch<SearchDocument>({
@@ -44,7 +45,8 @@ export const useSearch = () => {
     setError(null);
 
     try {
-      const response = await fetch(SEARCH_INDEX_PATH, { cache: 'no-store' });
+      const url = INDEX_VERSION ? `${SEARCH_INDEX_PATH}?v=${INDEX_VERSION}` : SEARCH_INDEX_PATH;
+      const response = await fetch(url, { cache: 'no-store' });
       if (!response.ok) {
         throw new Error(`Unable to load search index (${response.status})`);
       }
@@ -58,6 +60,12 @@ export const useSearch = () => {
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Search index failed to load.';
       setError(message);
+
+      // Lightweight fallback: build a minimal index from whatever docs we already have
+      if (!miniSearch && docsRef.current.length) {
+        const instance = createMiniSearch(docsRef.current);
+        setMiniSearch(instance);
+      }
     } finally {
       setLoading(false);
     }

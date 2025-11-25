@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { 
   DropdownMenu, 
@@ -14,11 +14,13 @@ import { MobileMenuSection } from '@/components/ui/mobile-menu-section';
 import { MobileNavItem } from '@/components/ui/mobile-nav-item';
 import { FACEBOOK_GROUP_URL, handleFacebookGroupNavigation } from '@/lib/facebook';
 import { SearchDialog } from '@/components/search/SearchDialog';
+import { Sheet, SheetContent } from '@/components/ui/sheet';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -238,7 +240,7 @@ const Header = () => {
                 </MobileNavItem>
                 <MobileNavItem
                   onClick={() => {
-                    setIsSearchOpen(true);
+                    navigate('/search');
                     setIsMobileMenuOpen(false);
                   }}
                   icon="🔍"
@@ -307,7 +309,17 @@ const Header = () => {
           </div>
         )}
       </div>
-      <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
+      {/* Desktop dialog; mobile uses sheet wrapper for full-screen feel */}
+      <div className="hidden lg:block">
+        <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
+      </div>
+      <div className="lg:hidden">
+        <Sheet open={isSearchOpen} onOpenChange={setIsSearchOpen}>
+          <SheetContent side="bottom" className="p-0 h-[85vh] max-h-[720px] overflow-hidden">
+            <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 };

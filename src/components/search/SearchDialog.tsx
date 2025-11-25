@@ -98,6 +98,25 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [ensureIndex, setOpen, location.pathname, focusPageSearch]);
 
+  // Prefetch the index at idle time so mobile opens feel fast
+  useEffect(() => {
+    const schedule =
+      typeof window !== 'undefined' && 'requestIdleCallback' in window
+        ? (fn: () => void) => (window as any).requestIdleCallback(fn, { timeout: 1500 })
+        : (fn: () => void) => window.setTimeout(fn, 500);
+
+    const cancel =
+      typeof window !== 'undefined' && 'cancelIdleCallback' in window
+        ? (id: number) => (window as any).cancelIdleCallback(id)
+        : (id: number) => window.clearTimeout(id);
+
+    const id = schedule(() => {
+      void ensureIndex();
+    });
+
+    return () => cancel(id as number);
+  }, [ensureIndex]);
+
   useEffect(() => {
     if (!resolvedOpen) {
       return;
@@ -136,6 +155,9 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
 
   const trigger = renderTrigger ? renderTrigger(openHandler) : null;
 
+  const isMobile = typeof window !== 'undefined' ? window.matchMedia('(max-width: 1023px)').matches : false;
+  const contentWidth = isMobile ? 'w-full h-full rounded-none border-0' : 'w-[min(100vw-1.5rem,720px)] max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-4rem)] rounded-2xl sm:rounded-xl border border-border';
+
   return (
     <>
       {trigger}
@@ -143,7 +165,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
         open={resolvedOpen}
         onOpenChange={setOpen}
         hideCloseButton
-        contentClassName="w-[min(100vw-1.5rem,720px)] max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-4rem)] rounded-2xl sm:rounded-xl border border-border"
+        contentClassName={contentWidth}
       >
         <div className="flex items-center justify-between px-3 py-2 border-b">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
