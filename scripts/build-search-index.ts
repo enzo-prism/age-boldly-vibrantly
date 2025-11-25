@@ -74,8 +74,8 @@ const buildBlogDocs = (): SearchDocument[] =>
     title: post.title,
     path: `/blog/${post.id}`,
     summary: post.seoDescription ?? post.excerpt,
-    content: post.excerpt,
-    tags: ['blog'],
+    content: `Blog #${post.blogNumber}: ${post.title}. ${post.excerpt}`,
+    tags: ['blog', `blog-${post.blogNumber}`, post.blogNumber.toString()],
     updatedAt: post.dateSort?.toISOString(),
   }));
 

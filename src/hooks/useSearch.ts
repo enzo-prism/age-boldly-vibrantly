@@ -44,7 +44,7 @@ export const useSearch = () => {
     setError(null);
 
     try {
-      const response = await fetch(SEARCH_INDEX_PATH, { cache: 'force-cache' });
+      const response = await fetch(SEARCH_INDEX_PATH, { cache: 'no-store' });
       if (!response.ok) {
         throw new Error(`Unable to load search index (${response.status})`);
       }
@@ -71,6 +71,7 @@ export const useSearch = () => {
     (query: string, filters?: SearchFilters): SearchResultItem[] => {
       const trimmed = query.trim();
       const docs = docsRef.current;
+      const parseDate = (value?: string) => (value ? new Date(value).getTime() : 0);
 
       const matchesFilters = (doc: SearchDocument) => {
         if (filters?.types?.length && !filters.types.includes(doc.type)) {
@@ -90,7 +91,10 @@ export const useSearch = () => {
         return docs.filter(matchesFilters).slice(0, 20).map((doc) => ({ ...doc, score: 0 }));
       }
 
-      const rawResults = miniSearch.search(trimmed, { combineWith: 'AND' }) as SearchResult[];
+      let rawResults = miniSearch.search(trimmed, { combineWith: 'AND' }) as SearchResult[];
+      if (!rawResults.length) {
+        rawResults = miniSearch.search(trimmed, { combineWith: 'OR' }) as SearchResult[];
+      }
 
       return rawResults
         .map((result) => {
@@ -98,7 +102,13 @@ export const useSearch = () => {
           return doc ? { ...doc, score: result.score ?? 0 } : null;
         })
         .filter((item): item is SearchResultItem => Boolean(item))
-        .filter(matchesFilters);
+        .filter(matchesFilters)
+        .sort((a, b) => {
+          if (b.score !== a.score) {
+            return b.score - a.score;
+          }
+          return parseDate(b.updatedAt) - parseDate(a.updatedAt);
+        });
     },
     [miniSearch]
   );
