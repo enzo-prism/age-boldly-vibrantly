@@ -3893,6 +3893,181 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 47: Time is Calling. Are You Listening?
+  if (postId === 'time-is-calling-are-you-listening') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 47}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">Time is Calling. Are You Listening?</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            There comes a point in life, often quietly, sometimes all at once, when all of a sudden we become aware of time in a new way. No,
+            not just the time on the clock, or the number on the calendar, but the untenable truth that our time is finite. Not in a morbid
+            way, in a clarifying way. Almost like a soft whisper asking: "What will you do with your time left?"
+          </p>
+
+          <p>
+            Psychologists call this time perspective. The emotional and mental lens through which we view our past, present, and future.
+          </p>
+
+          <p>
+            This is how I like to look at it. How we feel about time is how we use it. And as women in the richest chapters of our lives we
+            have choices. Will we drift? Or will we align our actions with what truly matters?
+          </p>
+
+          <p>When you feel time differently, you live differently.</p>
+
+          <p>
+            In our younger years, time felt endless, there was always a "later", a "someday", a "next year". But now there is an awareness and
+            honesty that changes things. We become more intentional. More discerning. More of what feels worth our minutes, and what
+            definitely does not. Time shifts from background noise to guiding force and I look at that as a gift.
+          </p>
+
+          <p>Time is not chasing us, it is inviting us. It is inviting us to be aware of it.</p>
+
+          <p>So:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Stop wasting energy on what drains you.</li>
+            <li>Choose joy without apology.</li>
+            <li>Use your voice openly, boldly, loudly.</li>
+            <li>Prioritize health and movement.</li>
+            <li>Create instead of consume.</li>
+            <li>Savor instead of rush.</li>
+          </ul>
+
+          <p>
+            Be mindful with every tick of the clock. Ask yourself, "Is this how you want to spend the rest of your life?" When the answer is
+            YES, you will feel it in your bones. When the answer is NO, time nudges you to adjust.
+          </p>
+
+          <p>So what does it look like to live in alignment with time?</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Be honest about what matters now, not 10 years from now.</li>
+            <li>Say yes only when your heart truly says yes.</li>
+            <li>Let go of someday.</li>
+            <li>Nurture only warm and reciprocal friendships.</li>
+            <li>Invest in your health like your time depends on it, it does.</li>
+            <li>Do one small thing daily that your future self will appreciate.</li>
+          </ul>
+
+          <p>We REBELS 55+ know a truth the young do not know, YET.</p>
+
+          <p>
+            Time becomes more meaningful as it becomes more limited. And this is not something to fear, it is actually something to honor.
+            When we align our actions with time, we stop living on autopilot. We step into purpose, clarity and freedom.
+          </p>
+
+          <p>I REPEAT: Time and the clock are not the enemy, they are the teacher. Time becomes more meaningful as it becomes more limited.</p>
+
+          <p>When we align our actions with time, we STOP living on autopilot. We step into purpose, clarity and freedom.</p>
+
+          <p>
+            So I encourage you to live each day with intention, choose wisely, love deeply and always strive to be your best authentic self
+            every minute of each day.
+          </p>
+
+          <p>Hugs,</p>
+
+          <p>
+            <strong>Suz</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 48: The Original Rebellious Ager, Diane Keaton
+  if (postId === 'the-original-rebellious-ager-diane-keaton') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 48}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">The Original Rebellious Ager, Diane Keaton</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            I am sure we are all in agreement that we have lots to learn from this fabulous lady. She was definitely a woman who made being
+            YOURSELF a fashion superpower. I have wondered what we could learn from her.
+          </p>
+
+          <p>There are fashion icons a plenty and there is Diane Keaton, absolutely a category of 1.</p>
+
+          <p>
+            In my mind she remains the queen of personal style: hats, tailored menswear, wide belts, turtlenecks, dramatic coats and
+            unmistakable black and white confidence. She did not follow fashion. Nope, for me she was fashion. She appeared unafraid to show
+            up exactly as she wanted to be seen. UNAPOLOGETICALLY!
+          </p>
+
+          <p>Your style becomes iconic the moment you stop asking permission.</p>
+
+          <p>
+            <strong>Noteworthy:</strong>
+          </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>
+              Diane&apos;s consistent menswear inspired look was not repetition, it was self-definition. She turned her personal uniform into a
+              power statement. She found her lane and claimed it. Consistency creates confidence.
+            </li>
+            <li>
+              She used accessories like exclamation points. Hats, oversized glasses, bold oversized belts, quirky shoes. Accessories are not
+              after thoughts, they are punctuation. They say, I know who I am.
+            </li>
+            <li>
+              She knew the power of tailoring. She wore clothes that fit with intention. Tailoring elevates everything, and she was great at
+              honoring her shape, without relying on trends.
+            </li>
+            <li>Age is not a style expiration date. Her incredible style only sharpened with age. She dressed for creativity not chronology.</li>
+            <li>
+              Diane dressed in collaboration with herself. She said, "Style is about choices you make to express yourself". Her clothes are
+              expressions not costumes.
+            </li>
+            <li>
+              She brought humor and humanity into fashion. Her playful approach reminds us that fashion should be fun. When you smile while
+              dressing, know it is a sign you have chosen well.
+            </li>
+          </ul>
+
+          <p className="text-lg font-semibold">Lessons learned from the fabulous Diane Keaton</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Own your own signature style. In fact, rock it.</li>
+            <li>Repeat outfits proudly.</li>
+            <li>Accessorize with intention.</li>
+            <li>Let your personality lead.</li>
+            <li>Choose tailoring over trends.</li>
+            <li>NEVER, apologize for standing out.</li>
+          </ul>
+
+          <p>Diane Keaton showed us that style does not fade with age, personality strengthens it.</p>
+
+          <p>
+            I am convinced that fashion is the visible expression of your inner rebellion. So whether your style is classic, colorful, boho,
+            elegant, minimalist, dramatic, or whimsical take a page from Diane. Wear it fully. Wear it freely. WEAR IT FABULOUSLY.
+          </p>
+
+          <p>Hugs,</p>
+
+          <p>
+            <strong>Suz xo</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

@@ -783,6 +783,34 @@
     "updatedAt": "2027-03-15T00:00:00.000Z"
   },
   {
+    "id": "blog:time-is-calling-are-you-listening",
+    "type": "blog",
+    "title": "Time is Calling. Are You Listening?",
+    "path": "/blog/time-is-calling-are-you-listening",
+    "summary": "Suz invites rebels to treat time as a clarifying teacher—choose joy, health, your voice, and alignment with what matters most.",
+    "content": "Blog #47: Time is Calling. Are You Listening?. Feeling the finiteness of time becomes a gift to live intentionally with joy, movement, and bold choices.",
+    "tags": [
+      "blog",
+      "blog-47",
+      "47"
+    ],
+    "updatedAt": "2027-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "blog:the-original-rebellious-ager-diane-keaton",
+    "type": "blog",
+    "title": "The Original Rebellious Ager, Diane Keaton",
+    "path": "/blog/the-original-rebellious-ager-diane-keaton",
+    "summary": "Style lessons from Diane Keaton on signature uniforms, bold accessories, tailoring, humor, and unapologetic self-expression.",
+    "content": "Blog #48: The Original Rebellious Ager, Diane Keaton. Diane Keaton’s menswear-inspired uniform, bold accessories, and humor show how to own your lane with confidence at any age.",
+    "tags": [
+      "blog",
+      "blog-48",
+      "48"
+    ],
+    "updatedAt": "2027-04-15T00:00:00.000Z"
+  },
+  {
     "id": "video:episode-1",
     "type": "video",
     "title": "Introduction to Rebellious Aging (Episode 1)",

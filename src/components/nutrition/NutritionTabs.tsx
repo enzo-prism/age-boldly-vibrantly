@@ -7,6 +7,7 @@ import WhatIsWFPB from './WhatIsWFPB';
 import Benefits from './Benefits';
 import Protocol from './Protocol';
 import DrCampbell from './DrCampbell';
+import DrGoldner from './DrGoldner';
 import Foods from './Foods';
 import Recipes from './Recipes';
 
@@ -56,6 +57,12 @@ const NutritionTabs = () => {
                   Dr. T. Colin Campbell
                 </TabsTrigger>
                 <TabsTrigger 
+                  value="dr-goldner" 
+                  className={`px-4 py-2 border-b-2 rounded-none whitespace-nowrap ${activeTab === 'dr-goldner' ? 'border-teal text-teal' : 'border-transparent'}`}
+                >
+                  Dr. Brooke Goldner, MD
+                </TabsTrigger>
+                <TabsTrigger 
                   value="foods" 
                   className={`px-4 py-2 border-b-2 rounded-none whitespace-nowrap ${activeTab === 'foods' ? 'border-teal text-teal' : 'border-transparent'}`}
                 >
@@ -86,6 +93,10 @@ const NutritionTabs = () => {
           
           <TabsContent value="dr-campbell">
             <DrCampbell />
+          </TabsContent>
+
+          <TabsContent value="dr-goldner">
+            <DrGoldner />
           </TabsContent>
           
           <TabsContent value="foods">

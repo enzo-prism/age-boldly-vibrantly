@@ -433,6 +433,26 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '9 min read',
     blogNumber: 46,
     seoDescription: 'Suz reflects on passing the Thanksgiving hosting legacy to her daughter, embracing change while keeping gratitude and warmth at the heart of the holiday.'
+  },
+  {
+    id: 'time-is-calling-are-you-listening',
+    title: 'Time is Calling. Are You Listening?',
+    excerpt: 'Feeling the finiteness of time can be a clarifying gift—align your choices with what matters, and live with intentional joy and boldness.',
+    date: '4/1/2027',
+    dateSort: new Date('2027-04-01'),
+    readTime: '6 min read',
+    blogNumber: 47,
+    seoDescription: 'Suz invites rebels 55+ to honor time as a teacher—choose joy, use your voice, invest in health, and align daily actions with what matters most.'
+  },
+  {
+    id: 'the-original-rebellious-ager-diane-keaton',
+    title: 'The Original Rebellious Ager, Diane Keaton',
+    excerpt: 'Diane Keaton turned a personal uniform into power. Here are the style lessons she teaches about confidence, tailoring, humor, and standing out unapologetically.',
+    date: '4/15/2027',
+    dateSort: new Date('2027-04-15'),
+    readTime: '7 min read',
+    blogNumber: 48,
+    seoDescription: 'Learn Diane Keaton’s rebel style playbook—signature looks, bold accessories, sharp tailoring, and humor—so you can own your lane at any age.'
   }
 ];
 
