@@ -787,8 +787,8 @@
     "type": "blog",
     "title": "Time is Calling. Are You Listening?",
     "path": "/blog/time-is-calling-are-you-listening",
-    "summary": "Suz invites rebels to treat time as a clarifying teacher—choose joy, health, your voice, and alignment with what matters most.",
-    "content": "Blog #47: Time is Calling. Are You Listening?. Feeling the finiteness of time becomes a gift to live intentionally with joy, movement, and bold choices.",
+    "summary": "Suz invites rebels 55+ to honor time as a teacher—choose joy, use your voice, invest in health, and align daily actions with what matters most.",
+    "content": "Blog #47: Time is Calling. Are You Listening?. Feeling the finiteness of time can be a clarifying gift—align your choices with what matters, and live with intentional joy and boldness.",
     "tags": [
       "blog",
       "blog-47",
@@ -801,14 +801,42 @@
     "type": "blog",
     "title": "The Original Rebellious Ager, Diane Keaton",
     "path": "/blog/the-original-rebellious-ager-diane-keaton",
-    "summary": "Style lessons from Diane Keaton on signature uniforms, bold accessories, tailoring, humor, and unapologetic self-expression.",
-    "content": "Blog #48: The Original Rebellious Ager, Diane Keaton. Diane Keaton’s menswear-inspired uniform, bold accessories, and humor show how to own your lane with confidence at any age.",
+    "summary": "Learn Diane Keaton’s rebel style playbook—signature looks, bold accessories, sharp tailoring, and humor—so you can own your lane at any age.",
+    "content": "Blog #48: The Original Rebellious Ager, Diane Keaton. Diane Keaton turned a personal uniform into power. Here are the style lessons she teaches about confidence, tailoring, humor, and standing out unapologetically.",
     "tags": [
       "blog",
       "blog-48",
       "48"
     ],
     "updatedAt": "2027-04-15T00:00:00.000Z"
+  },
+  {
+    "id": "blog:a-rebellious-aging-guide-to-dressing-like-you-mean-it",
+    "type": "blog",
+    "title": "A Rebellious Aging Guide to Dressing Like YOU Mean It",
+    "path": "/blog/a-rebellious-aging-guide-to-dressing-like-you-mean-it",
+    "summary": "A rebellious aging style manifesto: wear what makes your soul hum, refuse invisibility, and blend comfort with bold expression without apology.",
+    "content": "Blog #49: A Rebellious Aging Guide to Dressing Like YOU Mean It. Claim your right to be seen—dress with color, signature pieces, and unapologetic confidence that feels like you.",
+    "tags": [
+      "blog",
+      "blog-49",
+      "49"
+    ],
+    "updatedAt": "2027-05-01T00:00:00.000Z"
+  },
+  {
+    "id": "blog:when-the-voice-gets-loud-limiting-beliefs",
+    "type": "blog",
+    "title": "When the Voice Gets Loud/ A Rebellious Aging Reflection on Limiting Beliefs",
+    "path": "/blog/when-the-voice-gets-loud-limiting-beliefs",
+    "summary": "Limiting beliefs shout loudly at any age—learn how to move before fear freezes you, borrow courage from Brene Brown and Mel Robbins, and choose new thoughts.",
+    "content": "Blog #50: When the Voice Gets Loud/ A Rebellious Aging Reflection on Limiting Beliefs. Even at 83.5, the old whispers try to shrink us. Here is how to answer them with courage, action, and self-compassion.",
+    "tags": [
+      "blog",
+      "blog-50",
+      "50"
+    ],
+    "updatedAt": "2027-05-30T00:00:00.000Z"
   },
   {
     "id": "video:episode-1",

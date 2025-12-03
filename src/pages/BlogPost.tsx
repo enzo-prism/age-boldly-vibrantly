@@ -4068,6 +4068,158 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 49: A Rebellious Aging Guide to Dressing Like YOU Mean It
+  if (postId === 'a-rebellious-aging-guide-to-dressing-like-you-mean-it') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 49}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">A Rebellious Aging Guide to Dressing Like YOU Mean It</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            I could be wrong here, but I believe there comes a moment in a woman’s life, somewhere between wisdom gained and patience lost,
+            when she realizes something powerful. She realizes she no longer needs permission to look and feel incredible. Welcome to that
+            moment.
+          </p>
+
+          <p>
+            As Rebellious Agers, we are rewriting outdated ideas about how women of any age should dress, let alone women our age. But let’s
+            stick to us for now. This chapter of life calls loudly for mischief, mystery, confidence, maybe a little bling and a wardrobe
+            that reflects YOU and says here I am in the best possible way.
+          </p>
+
+          <p>
+            The way that makes you feel awesome and know that, that awesomeness and confidence is catchy. Here is how I am looking at style
+            right now.
+          </p>
+
+          <p className="text-lg font-semibold">My rebellious style reminders</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Wear what makes your soul hum. If it lifts your energy and makes you smile, it belongs on you.</li>
+            <li>DON’T dress to disappear. Presence is in. Shrinking is out.</li>
+            <li>
+              Absolutely claim a signature piece. Statement glasses, bold earrings, a scarf or wrap that sings—whatever it is, choose it and
+              wear it.
+            </li>
+            <li>Please do not follow every trend. Remember trends are suggestions not requirements.</li>
+            <li>Do play with color. Color is medicine for the soul. Allow it to wake up your spirit.</li>
+            <li>Do NOT apologize for being seen. You are not too much. You are exactly perfect and a smile to the world.</li>
+            <li>
+              Do choose comfort AND style. Yes they go together. Figure it out. Comfort is the new luxury, and it belongs to you.
+            </li>
+            <li>Do not save outfits for special occasions. You are no longer in kindergarten. Wear the clothes NOW. You are the occasion.</li>
+            <li>Don’t ignore fit. Tailoring is magic. Let your clothes honor your body.</li>
+            <li>Do trust your mirror. And your intuition. (WYKYK)</li>
+          </ul>
+
+          <p>
+            Fashion is not vanity, it is expression AND identity. It is declaring without a doubt that YOU ARE HERE. YOU ARE VIBRANT. AND
+            THAT YOU ARE NOT DONE SHINING.
+          </p>
+
+          <p>
+            To me Rebellious Aging means showing up as the fullest and most authentic version of ourselves. Unapologetically, courageously,
+            and always with sparkle.
+          </p>
+
+          <p>Hugs,</p>
+
+          <p>
+            <strong>Suz xo</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 50: When the Voice Gets Loud/ A Rebellious Aging Reflection on Limiting Beliefs
+  if (postId === 'when-the-voice-gets-loud-limiting-beliefs') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 50}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">When the Voice Gets Loud/ A Rebellious Aging Reflection on Limiting Beliefs</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            Lately I have been wrestling greatly with those sneaky, "sketch", familiar whispers that tell me to stay small. Ya know the ones,
+            right? "Who do YOU think you are?" "Why would anyone pay attention to you?" "You are so OLD, stay in your lane. Don&apos;t be so
+            out there."
+          </p>
+
+          <p>And so it goes, the chorus of limiting beliefs. You have heard it, right?</p>
+
+          <p>
+            The truth is, even at 83.5, even with decades of life, learning, loss, ups and downs, strength, weakness, and lots of sparkle
+            behind me, those old voices still pop up often and with vigor and determination. They are persistent. They are loud. And they are
+            wrong—and only to be put immediately in their rightful place, OUT OF YOUR WAY.
+          </p>
+
+          <p>I know I am not alone.</p>
+
+          <p>
+            Brene Brown reminds us that "Vulnerability is not weakness. It is our greatest measure of courage." So maybe sharing ourselves and
+            our ideas and our joy and our spunk is vulnerable. For sure it is exposing and at the same time, possibly brave.
+          </p>
+
+          <p>
+            Brene teaches us that being willing to be seen is the most courageous act of all. When we step forward trembling, we are not being
+            fragile, we are being fierce. (I needed that, how about you?)
+          </p>
+
+          <p>
+            Mel Robbins reminds us: "YOU are one decision away from a completely different life." Yup, limiting beliefs freeze us. Mel calls
+            it the hesitation trap. She has her 5 second window theory; in that 5 seconds fear talks louder than our dreams.
+          </p>
+
+          <p>
+            So what the heck is the antidote? Tough up AND act anyway. Move before the limiting belief can shut you down. (I am actually here
+            because of Mel&apos;s 5 Second Rule, a crazy story for another day). Take the tiny step, post the message, start the project.
+            Share the spark.
+          </p>
+
+          <p>Courage first, confidence later.</p>
+
+          <p>
+            Buddha teaches: "What you think, you become." Limiting beliefs are not just thoughts, they are patterns that shape who we allow
+            ourselves to be. Buddha reminds us that these beliefs are illusions. They are simply stories, not destiny.
+          </p>
+
+          <p>So change your thoughts. Change your path. Observe the fear. Loosen its grip. Choose compassion and dissolve the judgment.</p>
+
+          <p>
+            Jay Shetty says, "Don&apos;t let other people&apos;s doubts become your reality." But here is the twist. Sometimes the "other
+            people" live in our own minds. They are echoes from years ago, from culture, from conditioning, and many from moments that were
+            not our fault. Jay teaches that we must separate identity from the noise.
+          </p>
+
+          <p>Truth is we are not our limiting beliefs. We are the awareness behind them.</p>
+
+          <p>Remember, our brains are not wired for happiness. They are wired for survival.</p>
+
+          <p>Hugs,</p>
+
+          <p>
+            <strong>Suz xo</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

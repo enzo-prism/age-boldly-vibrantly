@@ -453,6 +453,28 @@ export const blogPosts: BlogPostMetadata[] = [
     readTime: '7 min read',
     blogNumber: 48,
     seoDescription: 'Learn Diane Keaton’s rebel style playbook—signature looks, bold accessories, sharp tailoring, and humor—so you can own your lane at any age.'
+  },
+  {
+    id: 'a-rebellious-aging-guide-to-dressing-like-you-mean-it',
+    title: 'A Rebellious Aging Guide to Dressing Like YOU Mean It',
+    excerpt: 'Claim your right to be seen—dress with color, signature pieces, and unapologetic confidence that feels like you.',
+    date: '5/1/2027',
+    dateSort: new Date('2027-05-01'),
+    readTime: '6 min read',
+    blogNumber: 49,
+    seoDescription:
+      'A rebellious aging style manifesto: wear what makes your soul hum, refuse invisibility, and blend comfort with bold expression without apology.'
+  },
+  {
+    id: 'when-the-voice-gets-loud-limiting-beliefs',
+    title: 'When the Voice Gets Loud/ A Rebellious Aging Reflection on Limiting Beliefs',
+    excerpt: 'Even at 83.5, the old whispers try to shrink us. Here is how to answer them with courage, action, and self-compassion.',
+    date: '5/30/2027',
+    dateSort: new Date('2027-05-30'),
+    readTime: '8 min read',
+    blogNumber: 50,
+    seoDescription:
+      'Limiting beliefs shout loudly at any age—learn how to move before fear freezes you, borrow courage from Brene Brown and Mel Robbins, and choose new thoughts.'
   }
 ];
 
