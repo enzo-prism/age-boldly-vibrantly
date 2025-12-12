@@ -18,14 +18,12 @@ const STATIC_PATHS = new Set([
   '/our-story',
   '/welcome-letter',
   '/nutrition',
-  '/pillars/health/nutrition-guide',
   '/video-series',
   '/blog',
   '/contact',
   '/facebook-group',
   '/team',
   '/search',
-  '/pillars/gratitude',
 ]);
 
 const buildStaticPageDocs = (): SearchDocument[] => {

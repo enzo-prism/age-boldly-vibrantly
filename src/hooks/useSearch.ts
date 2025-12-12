@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import MiniSearch, { type SearchResult } from 'minisearch';
 import type { SearchDocument, SearchType } from '@/data/searchRecords';
 
@@ -14,6 +14,62 @@ interface SearchResultItem extends SearchDocument {
 const SEARCH_INDEX_PATH = '/search-index.json';
 const INDEX_VERSION = import.meta.env?.VITE_APP_VERSION ?? '';
 
+const FIELD_BOOSTS = {
+  title: 3,
+  tags: 2,
+  summary: 1.2,
+  content: 1,
+  section: 1,
+};
+
+const OR_MIN_SCORE = 5;
+const OR_RELATIVE_CUTOFF = 0.3;
+
+const normalizeQuery = (raw: string) => {
+  let query = raw.toLowerCase();
+  query = query.replace(/[-_]+/g, ' ');
+  query = query.replace(/\s+/g, ' ').trim();
+
+  const replacements: Array<[RegExp, string]> = [
+    [/\bplantbased\b/g, 'plant based'],
+    [/\bwfpb\b/g, 'whole food plant based'],
+    [/\bwholefood\b/g, 'whole food'],
+    [/\boilfree\b/g, 'oil free'],
+  ];
+
+  replacements.forEach(([pattern, replacement]) => {
+    query = query.replace(pattern, replacement);
+  });
+
+  return query;
+};
+
+const getFuzzyForQuery = (normalized: string, tokenCount: number) => {
+  if (!normalized) return 0;
+  if (tokenCount <= 1) {
+    return normalized.length <= 3 ? 0 : 0.1;
+  }
+  if (tokenCount >= 3) {
+    return 0.25;
+  }
+  return 0.18;
+};
+
+const getTypeBoostForQuery = (normalized: string) => {
+  const wantsVideo = /\b(video|episode|watch|series)\b/.test(normalized);
+  const wantsPillar = /\b(pillar|quiz|checklist)\b/.test(normalized);
+  const wantsBlog = /\b(blog|post)\b/.test(normalized);
+  const wantsResource = /\b(guide|nutrition|resource|download)\b/.test(normalized);
+
+  return (type: SearchType) => {
+    if (wantsVideo && type === 'video') return 1.5;
+    if (wantsPillar && type === 'pillar') return 1.4;
+    if (wantsBlog && type === 'blog') return 1.3;
+    if (wantsResource && (type === 'resource' || type === 'page')) return 1.3;
+    return 1;
+  };
+};
+
 const createMiniSearch = (docs: SearchDocument[]) => {
   const instance = new MiniSearch<SearchDocument>({
     fields: ['title', 'summary', 'content', 'tags', 'section'],
@@ -28,103 +84,163 @@ const createMiniSearch = (docs: SearchDocument[]) => {
   return instance;
 };
 
+interface SearchStoreState {
+  loading: boolean;
+  error: string | null;
+  docs: SearchDocument[];
+  miniSearch: MiniSearch<SearchDocument> | null;
+}
+
+let storeState: SearchStoreState = {
+  loading: false,
+  error: null,
+  docs: [],
+  miniSearch: null,
+};
+
+let docsCache: SearchDocument[] = [];
+let docMapCache: Record<string, SearchDocument> = {};
+let ensurePromise: Promise<void> | null = null;
+const listeners = new Set<() => void>();
+
+const emitStoreUpdate = () => {
+  listeners.forEach((listener) => listener());
+};
+
+const setStoreState = (partial: Partial<SearchStoreState>) => {
+  storeState = { ...storeState, ...partial };
+  emitStoreUpdate();
+};
+
+const ensureIndex = async () => {
+  if (storeState.miniSearch || storeState.loading) {
+    return ensurePromise ?? Promise.resolve();
+  }
+
+  if (!ensurePromise) {
+    setStoreState({ loading: true, error: null });
+
+    ensurePromise = (async () => {
+      try {
+        const url = INDEX_VERSION ? `${SEARCH_INDEX_PATH}?v=${INDEX_VERSION}` : SEARCH_INDEX_PATH;
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Unable to load search index (${response.status})`);
+        }
+        const docs = (await response.json()) as SearchDocument[];
+        docsCache = docs;
+        docMapCache = Object.fromEntries(docs.map((doc) => [doc.id, doc]));
+
+        const instance = createMiniSearch(docs);
+        setStoreState({ docs, miniSearch: instance });
+      } catch (err) {
+        const message = err instanceof Error ? err.message : 'Search index failed to load.';
+        setStoreState({ error: message });
+
+        if (!storeState.miniSearch && docsCache.length) {
+          const instance = createMiniSearch(docsCache);
+          setStoreState({ miniSearch: instance });
+        }
+      } finally {
+        setStoreState({ loading: false });
+        ensurePromise = null;
+      }
+    })();
+  }
+
+  return ensurePromise;
+};
+
+const searchIndex = (query: string, filters?: SearchFilters): SearchResultItem[] => {
+  const normalized = normalizeQuery(query);
+  const docs = docsCache;
+  const miniSearch = storeState.miniSearch;
+  const parseDate = (value?: string) => (value ? new Date(value).getTime() : 0);
+
+  const matchesFilters = (doc: SearchDocument) => {
+    if (filters?.types?.length && !filters.types.includes(doc.type)) {
+      return false;
+    }
+    if (filters?.tags?.length) {
+      const docTags = doc.tags ?? [];
+      const hasAllTags = filters.tags.every((tag) => docTags.includes(tag));
+      if (!hasAllTags) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  if (!normalized || !miniSearch) {
+    return docs.filter(matchesFilters).slice(0, 20).map((doc) => ({ ...doc, score: 0 }));
+  }
+
+  const tokens = normalized.split(' ').filter(Boolean);
+  const tokenCount = tokens.length;
+  const fuzzy = getFuzzyForQuery(normalized, tokenCount);
+  const searchOptions = {
+    prefix: true,
+    fuzzy,
+    boost: FIELD_BOOSTS,
+  } as const;
+
+  let rawResults = miniSearch.search(normalized, { ...searchOptions, combineWith: 'AND' }) as SearchResult[];
+
+  if (!rawResults.length && tokenCount >= 2) {
+    const orResults = miniSearch.search(normalized, { ...searchOptions, combineWith: 'OR' }) as SearchResult[];
+    const topScore = orResults[0]?.score ?? 0;
+    if (topScore >= OR_MIN_SCORE) {
+      rawResults = orResults.filter((result) => (result.score ?? 0) >= topScore * OR_RELATIVE_CUTOFF);
+    }
+  }
+
+  const getTypeBoost = getTypeBoostForQuery(normalized);
+
+  return rawResults
+    .map((result) => {
+      const doc = docMapCache[result.id];
+      if (!doc) {
+        return null;
+      }
+      const baseScore = result.score ?? 0;
+      return { ...doc, score: baseScore * getTypeBoost(doc.type) };
+    })
+    .filter((item): item is SearchResultItem => Boolean(item))
+    .filter(matchesFilters)
+    .sort((a, b) => {
+      if (b.score !== a.score) {
+        return b.score - a.score;
+      }
+      return parseDate(b.updatedAt) - parseDate(a.updatedAt);
+    });
+};
+
 export const useSearch = () => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [docs, setDocs] = useState<SearchDocument[]>([]);
-  const [miniSearch, setMiniSearch] = useState<MiniSearch<SearchDocument> | null>(null);
-  const docsRef = useRef<SearchDocument[]>([]);
-  const docMapRef = useRef<Record<string, SearchDocument>>({});
+  const [state, setState] = useState(storeState);
 
-  const ensureIndex = useCallback(async () => {
-    if (miniSearch || loading) {
-      return;
-    }
-
-    setLoading(true);
-    setError(null);
-
-    try {
-      const url = INDEX_VERSION ? `${SEARCH_INDEX_PATH}?v=${INDEX_VERSION}` : SEARCH_INDEX_PATH;
-      const response = await fetch(url, { cache: 'no-store' });
-      if (!response.ok) {
-        throw new Error(`Unable to load search index (${response.status})`);
-      }
-      const docs = (await response.json()) as SearchDocument[];
-      docsRef.current = docs;
-      setDocs(docs);
-      docMapRef.current = Object.fromEntries(docs.map((doc) => [doc.id, doc]));
-
-      const instance = createMiniSearch(docs);
-      setMiniSearch(instance);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : 'Search index failed to load.';
-      setError(message);
-
-      // Lightweight fallback: build a minimal index from whatever docs we already have
-      if (!miniSearch && docsRef.current.length) {
-        const instance = createMiniSearch(docsRef.current);
-        setMiniSearch(instance);
-      }
-    } finally {
-      setLoading(false);
-    }
-  }, [miniSearch, loading]);
+  useEffect(() => {
+    const listener = () => {
+      setState(storeState);
+    };
+    listeners.add(listener);
+    return () => {
+      listeners.delete(listener);
+    };
+  }, []);
 
   useEffect(() => {
     void ensureIndex();
-  }, [ensureIndex]);
+  }, []);
 
   const search = useCallback(
-    (query: string, filters?: SearchFilters): SearchResultItem[] => {
-      const trimmed = query.trim();
-      const docs = docsRef.current;
-      const parseDate = (value?: string) => (value ? new Date(value).getTime() : 0);
-
-      const matchesFilters = (doc: SearchDocument) => {
-        if (filters?.types?.length && !filters.types.includes(doc.type)) {
-          return false;
-        }
-        if (filters?.tags?.length) {
-          const docTags = doc.tags ?? [];
-          const hasAllTags = filters.tags.every((tag) => docTags.includes(tag));
-          if (!hasAllTags) {
-            return false;
-          }
-        }
-        return true;
-      };
-
-      if (!trimmed || !miniSearch) {
-        return docs.filter(matchesFilters).slice(0, 20).map((doc) => ({ ...doc, score: 0 }));
-      }
-
-      let rawResults = miniSearch.search(trimmed, { combineWith: 'AND' }) as SearchResult[];
-      if (!rawResults.length) {
-        rawResults = miniSearch.search(trimmed, { combineWith: 'OR' }) as SearchResult[];
-      }
-
-      return rawResults
-        .map((result) => {
-          const doc = docMapRef.current[result.id];
-          return doc ? { ...doc, score: result.score ?? 0 } : null;
-        })
-        .filter((item): item is SearchResultItem => Boolean(item))
-        .filter(matchesFilters)
-        .sort((a, b) => {
-          if (b.score !== a.score) {
-            return b.score - a.score;
-          }
-          return parseDate(b.updatedAt) - parseDate(a.updatedAt);
-        });
-    },
-    [miniSearch]
+    (query: string, filters?: SearchFilters) => searchIndex(query, filters),
+    []
   );
 
   return {
-    loading,
-    error,
-    docs,
+    loading: state.loading,
+    error: state.error,
+    docs: state.docs,
     search,
     ensureIndex,
   };

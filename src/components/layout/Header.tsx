@@ -14,7 +14,6 @@ import { MobileMenuSection } from '@/components/ui/mobile-menu-section';
 import { MobileNavItem } from '@/components/ui/mobile-nav-item';
 import { FACEBOOK_GROUP_URL, handleFacebookGroupNavigation } from '@/lib/facebook';
 import { SearchDialog } from '@/components/search/SearchDialog';
-import { Sheet, SheetContent } from '@/components/ui/sheet';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -309,17 +308,7 @@ const Header = () => {
           </div>
         )}
       </div>
-      {/* Desktop dialog; mobile uses sheet wrapper for full-screen feel */}
-      <div className="hidden lg:block">
-        <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
-      </div>
-      <div className="lg:hidden">
-        <Sheet open={isSearchOpen} onOpenChange={setIsSearchOpen}>
-          <SheetContent side="bottom" className="p-0 h-[85vh] max-h-[720px] overflow-hidden">
-            <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
-          </SheetContent>
-        </Sheet>
-      </div>
+      <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
     </header>
   );
 };

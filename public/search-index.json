@@ -40,16 +40,6 @@
     ]
   },
   {
-    "id": "page:/pillars/health/nutrition-guide",
-    "type": "page",
-    "title": "Whole-Food, Plant-Based Guide",
-    "path": "/pillars/health/nutrition-guide",
-    "summary": "Dive into what to eat, what to crowd out, and how to read labels like a rebel with a printable WFPB roadmap for rebellious agers.",
-    "tags": [
-      "page"
-    ]
-  },
-  {
     "id": "page:/team",
     "type": "page",
     "title": "Team",
@@ -105,16 +95,6 @@
     "title": "Search Rebellious Aging",
     "path": "/search",
     "summary": "Search pillars, nutrition guides, blog posts, and videos to find exactly what you need on Rebellious Aging.",
-    "tags": [
-      "page"
-    ]
-  },
-  {
-    "id": "page:/pillars/gratitude",
-    "type": "page",
-    "title": "Gratitude Pillar",
-    "path": "/pillars/gratitude",
-    "summary": "Discover how gratitude becomes a rebellious daily practice that fuels joy, resilience, and purpose in every season of life.",
     "tags": [
       "page"
     ]
