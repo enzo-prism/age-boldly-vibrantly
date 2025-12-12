@@ -29,6 +29,8 @@ const typeLabel: Record<SearchType, string> = {
   blog: 'Blog',
   video: 'Video',
   resource: 'Resources',
+  section: 'Sections',
+  recipe: 'Recipes',
 };
 
 const typeEmoji: Record<SearchType, string> = {
@@ -37,6 +39,8 @@ const typeEmoji: Record<SearchType, string> = {
   blog: '📝',
   video: '🎥',
   resource: '📚',
+  section: '📌',
+  recipe: '🍽️',
 };
 
 interface ResultGroup {
@@ -70,6 +74,8 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
       blog: [],
       video: [],
       resource: [],
+      section: [],
+      recipe: [],
     };
 
     results.forEach((item) => {

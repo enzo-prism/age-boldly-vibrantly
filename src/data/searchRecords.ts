@@ -1,4 +1,4 @@
-export type SearchType = 'page' | 'pillar' | 'blog' | 'video' | 'resource';
+export type SearchType = 'page' | 'pillar' | 'blog' | 'video' | 'resource' | 'section' | 'recipe';
 
 export interface SearchDocument {
   id: string;

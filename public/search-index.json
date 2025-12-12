@@ -133,6 +133,726 @@
     ]
   },
   {
+    "id": "section:nutrition:what-is-wfpb",
+    "type": "section",
+    "title": "What is Whole-Food, Plant-Based Nutrition?",
+    "path": "/nutrition?tab=what-is-wfpb",
+    "summary": "Learn what WFPB means, what foods it includes, and how it differs from typical vegan or vegetarian diets.",
+    "tags": [
+      "nutrition",
+      "section",
+      "nutrition",
+      "wfpb",
+      "whole-food",
+      "plant-based"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "section:nutrition:benefits",
+    "type": "section",
+    "title": "Benefits of Whole-Food, Plant-Based Nutrition",
+    "path": "/nutrition?tab=benefits",
+    "summary": "Explore the science-backed benefits of WFPB eating for heart health, weight management, energy, and longevity.",
+    "tags": [
+      "nutrition",
+      "section",
+      "nutrition",
+      "benefits",
+      "health",
+      "longevity"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "section:nutrition:protocol",
+    "type": "section",
+    "title": "Dr. Caldwell Esselstyn's Protocol",
+    "path": "/nutrition?tab=protocol",
+    "summary": "A heart-healthy, oil-free WFPB protocol focused on preventing and reversing coronary artery disease.",
+    "tags": [
+      "nutrition",
+      "section",
+      "nutrition",
+      "esselstyn",
+      "protocol",
+      "heart-health",
+      "oil-free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "section:nutrition:dr-campbell",
+    "type": "section",
+    "title": "Dr. T. Colin Campbell, PhD",
+    "path": "/nutrition?tab=dr-campbell",
+    "summary": "Key insights from Dr. Campbell and The China Study on WFPB nutrition and chronic disease prevention.",
+    "tags": [
+      "nutrition",
+      "section",
+      "nutrition",
+      "campbell",
+      "china-study",
+      "research"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "section:nutrition:dr-goldner",
+    "type": "section",
+    "title": "Dr. Brooke Goldner, MD",
+    "path": "/nutrition?tab=dr-goldner",
+    "summary": "Learn about Dr. Goldner’s Hyper Nourishing Healing Protocol and her plant-based approach to disease reversal.",
+    "tags": [
+      "nutrition",
+      "section",
+      "nutrition",
+      "goldner",
+      "healing-protocol",
+      "greens",
+      "disease-reversal"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "section:nutrition:foods",
+    "type": "section",
+    "title": "Why & How: Your Plant-Powered Rebellion",
+    "path": "/nutrition?tab=foods",
+    "summary": "Why WFPB matters and practical steps to start, from pantry basics to crowding out ultra-processed foods.",
+    "tags": [
+      "nutrition",
+      "section",
+      "nutrition",
+      "why",
+      "how",
+      "getting-started",
+      "plant-powered"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "section:nutrition:recipes",
+    "type": "section",
+    "title": "Recipes",
+    "path": "/nutrition?tab=recipes",
+    "summary": "Browse plant-strong, oil-free recipes organized by category and tag to make WFPB living delicious and easy.",
+    "tags": [
+      "nutrition",
+      "section",
+      "nutrition",
+      "recipes",
+      "recipe",
+      "wfpb",
+      "meal"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:orange-mango-bean-salad",
+    "type": "recipe",
+    "title": "Orange Mango Bean Salad",
+    "path": "/nutrition?tab=recipes#recipe-orange-mango-bean-salad",
+    "summary": "A refreshing and nutritious salad combining cannellini beans with tropical fruits and fresh mint.",
+    "tags": [
+      "recipe",
+      "salads",
+      "Lunch",
+      "Oil-Free",
+      "Quick"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:kale-and-red-cabbage-salad-with-apples-and-dried-cherries",
+    "type": "recipe",
+    "title": "Kale and Red Cabbage Salad with Apples and Dried Cherries",
+    "path": "/nutrition?tab=recipes#recipe-kale-and-red-cabbage-salad-with-apples-and-dried-cherries",
+    "summary": "A nutrient-dense salad by Dr. Joel Fuhrman featuring massaged kale and fresh fruits.",
+    "tags": [
+      "recipe",
+      "salads",
+      "Lunch",
+      "Oil-Free",
+      "High-Protein"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:big-bean-barley-and-sweet-potato-soup",
+    "type": "recipe",
+    "title": "Big Bean Barley and Sweet Potato Soup",
+    "path": "/nutrition?tab=recipes#recipe-big-bean-barley-and-sweet-potato-soup",
+    "summary": "A hearty, company-worthy soup that's absolutely delicious and nutritious.",
+    "tags": [
+      "recipe",
+      "soups",
+      "Dinner",
+      "Budget-Friendly",
+      "High-Protein"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:blueberry-muffins",
+    "type": "recipe",
+    "title": "Blueberry Muffins",
+    "path": "/nutrition?tab=recipes#recipe-blueberry-muffins",
+    "summary": "Heart-healthy muffins from \"Prevent and Reverse Heart Disease\" - perfect for breakfast or snacks.",
+    "tags": [
+      "recipe",
+      "baked",
+      "Breakfast",
+      "Dessert",
+      "Oil-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:3-2-1-salad-dressing",
+    "type": "recipe",
+    "title": "3-2-1 Salad Dressing",
+    "path": "/nutrition?tab=recipes#recipe-3-2-1-salad-dressing",
+    "summary": "A simple and delicious oil-free salad dressing by Jane and Anne Esselstyn.",
+    "tags": [
+      "recipe",
+      "dressings",
+      "Quick",
+      "Oil-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:mint-chocolate-mousse-torte",
+    "type": "recipe",
+    "title": "Mint Chocolate Mousse Torte",
+    "path": "/nutrition?tab=recipes#recipe-mint-chocolate-mousse-torte",
+    "summary": "A healthier version of the Frango Mint Pie - elegant, dense, rich, and absolutely delicious. Perfect for entertaining.",
+    "tags": [
+      "recipe",
+      "desserts",
+      "Dessert",
+      "No-Bake",
+      "Make-Ahead",
+      "Special Occasion",
+      "Raw",
+      "Oil-Free",
+      "Gluten-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:lo-mein-noodle-sauce",
+    "type": "recipe",
+    "title": "Lo Mein Noodle Sauce",
+    "path": "/nutrition?tab=recipes#recipe-lo-mein-noodle-sauce",
+    "summary": "A healthy version of lo mein sauce with toasted sesame seeds and walnuts, perfect with brown rice noodles.",
+    "tags": [
+      "recipe",
+      "soups",
+      "Dinner",
+      "Quick",
+      "Oil-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:mcdougall-wellness-soup",
+    "type": "recipe",
+    "title": "McDougall Wellness Soup",
+    "path": "/nutrition?tab=recipes#recipe-mcdougall-wellness-soup",
+    "summary": "A nourishing vegetable soup with nutritional yeast and seasonings, perfect for a comforting meal.",
+    "tags": [
+      "recipe",
+      "soups",
+      "Dinner",
+      "Budget-Friendly",
+      "Oil-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:hummus",
+    "type": "recipe",
+    "title": "Hummus",
+    "path": "/nutrition?tab=recipes#recipe-hummus",
+    "summary": "A classic hummus recipe with chickpeas, tahini, and aquafaba for the perfect creamy texture.",
+    "tags": [
+      "recipe",
+      "appetizers",
+      "Snack",
+      "Quick",
+      "Oil-Free",
+      "High-Protein"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:five-ingredient-veggie-burger",
+    "type": "recipe",
+    "title": "Five Ingredient Veggie Burger",
+    "path": "/nutrition?tab=recipes#recipe-five-ingredient-veggie-burger",
+    "summary": "Simple black bean burgers with only five main ingredients, perfect for a quick and satisfying meal.",
+    "tags": [
+      "recipe",
+      "mains",
+      "Lunch",
+      "Dinner",
+      "High-Protein",
+      "Quick"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:spinach-and-avocado-dip",
+    "type": "recipe",
+    "title": "Spinach and Avocado Dip",
+    "path": "/nutrition?tab=recipes#recipe-spinach-and-avocado-dip",
+    "summary": "A delicious and nutritious dip with spinach, avocado, and seasonings - perfect with fresh veggies or chips.",
+    "tags": [
+      "recipe",
+      "appetizers",
+      "Snack",
+      "Quick",
+      "Oil-Free",
+      "Raw"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:super-salad",
+    "type": "recipe",
+    "title": "Super Salad",
+    "path": "/nutrition?tab=recipes#recipe-super-salad",
+    "summary": "Dr. Esselstyn's favorite superfood salad with kale, Napa cabbage, and Jane's 3-2-1 dressing.",
+    "tags": [
+      "recipe",
+      "salads",
+      "Lunch",
+      "Oil-Free",
+      "High-Protein",
+      "Raw"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:vegan-cabbage-soup",
+    "type": "recipe",
+    "title": "Vegan Cabbage Soup",
+    "path": "/nutrition?tab=recipes#recipe-vegan-cabbage-soup",
+    "summary": "A light, flavorful detoxing soup that comes together in less than 40 minutes using simple WFPB ingredients.",
+    "tags": [
+      "recipe",
+      "soups",
+      "Dinner",
+      "Budget-Friendly",
+      "Oil-Free",
+      "High-Protein"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:sweet-holy-deliciousness-soup",
+    "type": "recipe",
+    "title": "Sweet Holy Deliciousness Soup",
+    "path": "/nutrition?tab=recipes#recipe-sweet-holy-deliciousness-soup",
+    "summary": "A comforting soup with lentils, sweet potatoes, and kale that can be served over whole grains.",
+    "tags": [
+      "recipe",
+      "soups",
+      "Dinner",
+      "High-Protein",
+      "Oil-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:suz-s-polish-babcia-s-noodle-soup",
+    "type": "recipe",
+    "title": "Suz's Polish Babcia's Noodle Soup",
+    "path": "/nutrition?tab=recipes#recipe-suz-s-polish-babcia-s-noodle-soup",
+    "summary": "A comforting vegan noodle soup with Suz's personal Polish touches that tastes like \"chicken\" noodle soup.",
+    "tags": [
+      "recipe",
+      "soups",
+      "Dinner",
+      "Budget-Friendly",
+      "Oil-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:no-tuna-salad-sandwich",
+    "type": "recipe",
+    "title": "No Tuna Salad Sandwich",
+    "path": "/nutrition?tab=recipes#recipe-no-tuna-salad-sandwich",
+    "summary": "A vegan version of tuna salad using chickpeas with extra tang and flavor from pickles and capers.",
+    "tags": [
+      "recipe",
+      "mains",
+      "Lunch",
+      "High-Protein",
+      "Quick",
+      "Oil-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:vegan-taco-bowl",
+    "type": "recipe",
+    "title": "Vegan Taco Bowl",
+    "path": "/nutrition?tab=recipes#recipe-vegan-taco-bowl",
+    "summary": "A colorful and nutritious taco bowl with seasoned tofu, fresh vegetables, and a creamy yogurt-based dressing.",
+    "tags": [
+      "recipe",
+      "mains",
+      "Dinner",
+      "Mexican",
+      "Bowl",
+      "Protein-Rich"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:raw-blueberry-cheesecake",
+    "type": "recipe",
+    "title": "Raw Blueberry Cheesecake",
+    "path": "/nutrition?tab=recipes#recipe-raw-blueberry-cheesecake",
+    "summary": "An elegant raw dessert with a nutty oat crust and creamy cashew-blueberry filling that's naturally sweetened.",
+    "tags": [
+      "recipe",
+      "desserts",
+      "Dessert",
+      "Raw",
+      "No-Bake",
+      "Vegan",
+      "Elegant"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:avocado-black-bean-corn-salad",
+    "type": "recipe",
+    "title": "Avocado Black Bean Corn Salad",
+    "path": "/nutrition?tab=recipes#recipe-avocado-black-bean-corn-salad",
+    "summary": "A fresh and vibrant salad combining black beans, corn, tomatoes, and avocado with a zesty lime dressing.",
+    "tags": [
+      "recipe",
+      "salads",
+      "Salad",
+      "Fresh",
+      "Mexican",
+      "Quick"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:avocado-caprese-salad",
+    "type": "recipe",
+    "title": "Avocado Caprese Salad",
+    "path": "/nutrition?tab=recipes#recipe-avocado-caprese-salad",
+    "summary": "A twist on the classic Caprese salad, substituting avocado for mozzarella with fresh tomatoes and basil.",
+    "tags": [
+      "recipe",
+      "salads",
+      "Salad",
+      "Fresh",
+      "Italian",
+      "Quick",
+      "Elegant"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:marinara-sauce",
+    "type": "recipe",
+    "title": "Marinara Sauce",
+    "path": "/nutrition?tab=recipes#recipe-marinara-sauce",
+    "summary": "Mary McDougall's simple and healthy marinara sauce that's been a family favorite for over thirty years.",
+    "tags": [
+      "recipe",
+      "mains",
+      "Sauce",
+      "Italian",
+      "Base Recipe",
+      "Make-Ahead"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:jalape-o-and-corn-muffins",
+    "type": "recipe",
+    "title": "Jalapeño and Corn Muffins",
+    "path": "/nutrition?tab=recipes#recipe-jalape-o-and-corn-muffins",
+    "summary": "Savory muffins packed with vegetables, jalapeños, and corn - perfect for breakfast or as a side dish.",
+    "tags": [
+      "recipe",
+      "baked",
+      "savory",
+      "muffins",
+      "vegetables",
+      "spicy",
+      "oil-free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:vegan-banana-bread",
+    "type": "recipe",
+    "title": "Vegan Banana Bread",
+    "path": "/nutrition?tab=recipes#recipe-vegan-banana-bread",
+    "summary": "A wholesome banana bread made with oat flour and flax seeds - perfectly moist and naturally sweetened.",
+    "tags": [
+      "recipe",
+      "baked",
+      "bread",
+      "banana",
+      "oil-free",
+      "whole-grain",
+      "breakfast"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:chef-aj-s-oatmeal-cookies",
+    "type": "recipe",
+    "title": "Chef Aj's Oatmeal Cookies",
+    "path": "/nutrition?tab=recipes#recipe-chef-aj-s-oatmeal-cookies",
+    "summary": "Simple and healthy oatmeal cookies made with just 4 ingredients - no oil, sugar, or flour needed!",
+    "tags": [
+      "recipe",
+      "desserts",
+      "dessert",
+      "cookies",
+      "oil-free",
+      "sugar-free",
+      "simple"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:vegan-peanut-butter-cup-blizzard",
+    "type": "recipe",
+    "title": "Vegan Peanut Butter Cup Blizzard",
+    "path": "/nutrition?tab=recipes#recipe-vegan-peanut-butter-cup-blizzard",
+    "summary": "A delicious frozen treat that combines peanut butter crumbles with chocolate nice cream for the perfect healthy dessert.",
+    "tags": [
+      "recipe",
+      "desserts",
+      "dessert",
+      "frozen",
+      "chocolate",
+      "peanut-butter",
+      "no-bake"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:ann-s-open-faced-twice-baked-potatoes",
+    "type": "recipe",
+    "title": "Ann's Open Faced Twice Baked Potatoes",
+    "path": "/nutrition?tab=recipes#recipe-ann-s-open-faced-twice-baked-potatoes",
+    "summary": "Delicious twice-baked potatoes loaded with nutritional yeast, kale, and a savory onion-garlic mixture.",
+    "tags": [
+      "recipe",
+      "mains",
+      "Dinner",
+      "Oil-Free",
+      "Make-Ahead"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:taco-bar",
+    "type": "recipe",
+    "title": "Taco Bar",
+    "path": "/nutrition?tab=recipes#recipe-taco-bar",
+    "summary": "A customizable taco bar with fresh vegetables, beans, and optional chorizo tempeh/tofu for a complete plant-based meal.",
+    "tags": [
+      "recipe",
+      "mains",
+      "Dinner",
+      "Oil-Free",
+      "Make-Ahead",
+      "Gluten-Free",
+      "Mexican"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:intro-to-a-buddha-bowl-rebel-remix",
+    "type": "recipe",
+    "title": "Intro to a Buddha Bowl (Rebel Remix)",
+    "path": "/nutrition?tab=recipes#recipe-intro-to-a-buddha-bowl-rebel-remix",
+    "summary": "At Rebellious Aging we do not, do bland. A Buddha Bowl is anything but. It's a bold, beautiful burst of color and confidence in a bowl. Created by you in your way for your own enjoyment. Picture vibrant veggies strutting their stuff, grains with grit, plant based powerhouses like chickpeas or tofu showing up strong and a sauce that you love. It is not just food—it is fuel for rebels who nourish with flair, eat with intention, and simply never settle for ordinary.",
+    "tags": [
+      "recipe",
+      "salads",
+      "Lunch",
+      "Dinner",
+      "Oil-Free",
+      "Raw",
+      "Quick",
+      "High-Protein",
+      "Gluten-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:oil-free-hummus",
+    "type": "recipe",
+    "title": "Oil Free Hummus",
+    "path": "/nutrition?tab=recipes#recipe-oil-free-hummus",
+    "summary": "A creamy, oil-free hummus made with chickpeas, tahini, and nutritional yeast for a healthy plant-based dip. The optional cashews add extra creaminess.",
+    "tags": [
+      "recipe",
+      "appetizers",
+      "Snack",
+      "Oil-Free",
+      "Quick",
+      "High-Protein"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "recipe:asian-chopped-salad-with-sesame-ginger-dressing",
+    "type": "recipe",
+    "title": "Asian Chopped Salad with Sesame Ginger Dressing",
+    "path": "/nutrition?tab=recipes#recipe-asian-chopped-salad-with-sesame-ginger-dressing",
+    "summary": "A fresh, crunchy salad with crisp vegetables and a flavorful sesame ginger dressing that brings Asian-inspired flavors to your table.",
+    "tags": [
+      "recipe",
+      "salads",
+      "Lunch",
+      "Dinner",
+      "Oil-Free",
+      "Quick",
+      "Gluten-Free"
+    ],
+    "section": "nutrition"
+  },
+  {
+    "id": "section:nutrition-guide:what-is-wfpb",
+    "type": "section",
+    "title": "📘 What Is a Whole-Food, Plant-Based Lifestyle?",
+    "path": "/pillars/health/nutrition-guide#what-is-wfpb",
+    "summary": "A clear definition of WFPB and what foods belong on your plate.",
+    "tags": [
+      "nutrition-guide",
+      "section",
+      "nutrition-guide",
+      "wfpb",
+      "plant-based",
+      "whole-food"
+    ],
+    "section": "nutrition-guide"
+  },
+  {
+    "id": "section:nutrition-guide:why-it-matters",
+    "type": "section",
+    "title": "💪 Why It Matters Even More as We Age",
+    "path": "/pillars/health/nutrition-guide#why-it-matters",
+    "summary": "How plant-strong eating supports health span, energy, and longevity as we age.",
+    "tags": [
+      "nutrition-guide",
+      "section",
+      "nutrition-guide",
+      "health-span",
+      "longevity"
+    ],
+    "section": "nutrition-guide"
+  },
+  {
+    "id": "section:nutrition-guide:rebel-plate",
+    "type": "section",
+    "title": "🥗 Your Rebel Plate: What to Pile On (Eat in Abundance)",
+    "path": "/pillars/health/nutrition-guide#rebel-plate",
+    "summary": "The food groups to eat freely and generously on a WFPB lifestyle.",
+    "tags": [
+      "nutrition-guide",
+      "section",
+      "nutrition-guide",
+      "rebel-plate",
+      "abundance"
+    ],
+    "section": "nutrition-guide"
+  },
+  {
+    "id": "section:nutrition-guide:crowd-out",
+    "type": "section",
+    "title": "🚫 What to Crowd Out (Avoid as Much as You Can)",
+    "path": "/pillars/health/nutrition-guide#crowd-out",
+    "summary": "Foods to minimize so plants can take center stage.",
+    "tags": [
+      "nutrition-guide",
+      "section",
+      "nutrition-guide",
+      "crowd-out",
+      "avoid"
+    ],
+    "section": "nutrition-guide"
+  },
+  {
+    "id": "section:nutrition-guide:b12",
+    "type": "section",
+    "title": "🧬 A Quick Note on Vitamin B12",
+    "path": "/pillars/health/nutrition-guide#b12",
+    "summary": "Why B12 matters on a WFPB diet and how to supplement safely.",
+    "tags": [
+      "nutrition-guide",
+      "section",
+      "nutrition-guide",
+      "b12",
+      "supplement"
+    ],
+    "section": "nutrition-guide"
+  },
+  {
+    "id": "section:nutrition-guide:labels",
+    "type": "section",
+    "title": "🔍 How to Read Labels Like a Rebel",
+    "path": "/pillars/health/nutrition-guide#labels",
+    "summary": "Simple rules for choosing packaged foods when you need them.",
+    "tags": [
+      "nutrition-guide",
+      "section",
+      "nutrition-guide",
+      "labels",
+      "shopping"
+    ],
+    "section": "nutrition-guide"
+  },
+  {
+    "id": "section:nutrition-guide:first-steps",
+    "type": "section",
+    "title": "✨ Three Simple First Steps",
+    "path": "/pillars/health/nutrition-guide#first-steps",
+    "summary": "Practical first moves to start WFPB without overwhelm.",
+    "tags": [
+      "nutrition-guide",
+      "section",
+      "nutrition-guide",
+      "first-steps",
+      "getting-started"
+    ],
+    "section": "nutrition-guide"
+  },
+  {
+    "id": "section:nutrition-guide:connecting",
+    "type": "section",
+    "title": "🌈 Connecting This to Your Rebellious Aging Journey",
+    "path": "/pillars/health/nutrition-guide#connecting",
+    "summary": "How WFPB supports the four pillars: Health, Confidence, Style, and Gratitude.",
+    "tags": [
+      "nutrition-guide",
+      "section",
+      "nutrition-guide",
+      "pillars",
+      "rebellious-aging"
+    ],
+    "section": "nutrition-guide"
+  },
+  {
     "id": "blog:rebellious-guide-what-is-on-your-plate",
     "type": "blog",
     "title": "The Rebellious Guide (What is on Your Plate)",

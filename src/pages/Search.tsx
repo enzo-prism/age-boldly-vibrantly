@@ -16,6 +16,8 @@ const typeFilters: Array<{ type: SearchType; label: string }> = [
   { type: 'blog', label: 'Blog' },
   { type: 'video', label: 'Video' },
   { type: 'resource', label: 'Resources' },
+  { type: 'section', label: 'Sections' },
+  { type: 'recipe', label: 'Recipes' },
 ];
 
 const RECENT_KEY = 'ra-recent-searches';

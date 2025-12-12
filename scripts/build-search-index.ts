@@ -3,6 +3,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { blogPosts } from '../src/data/blogPosts';
+import { nutritionTabs } from '../src/data/nutritionTabs';
+import { recipes, slugifyRecipeTitle } from '../src/data/recipes';
+import { nutritionGuideSections } from '../src/data/nutritionGuideSections';
 import { pillarContent } from '../src/data/pillarContent';
 import { seoRoutes } from '../src/data/seoRoutes';
 import { videoSeriesData } from '../src/data/videoSeries';
@@ -89,11 +92,50 @@ const buildVideoDocs = (): SearchDocument[] =>
     updatedAt: video.publishedDate,
   }));
 
+const buildNutritionTabDocs = (): SearchDocument[] =>
+  nutritionTabs.map<SearchDocument>((tab) => ({
+    id: `section:nutrition:${tab.id}`,
+    type: 'section',
+    title: tab.title,
+    path: `/nutrition?tab=${tab.id}`,
+    summary: tab.summary,
+    tags: ['nutrition', 'section', ...tab.tags],
+    section: 'nutrition',
+  }));
+
+const buildRecipeDocs = (): SearchDocument[] =>
+  recipes.map<SearchDocument>((recipe) => {
+    const slug = slugifyRecipeTitle(recipe.title);
+    return {
+      id: `recipe:${slug}`,
+      type: 'recipe',
+      title: recipe.title,
+      path: `/nutrition?tab=recipes#recipe-${slug}`,
+      summary: recipe.description,
+      tags: ['recipe', recipe.category, ...(recipe.tags ?? [])],
+      section: 'nutrition',
+    };
+  });
+
+const buildNutritionGuideSectionDocs = (): SearchDocument[] =>
+  nutritionGuideSections.map<SearchDocument>((section) => ({
+    id: `section:nutrition-guide:${section.id}`,
+    type: 'section',
+    title: section.title,
+    path: `/pillars/health/nutrition-guide#${section.id}`,
+    summary: section.summary,
+    tags: ['nutrition-guide', 'section', ...section.tags],
+    section: 'nutrition-guide',
+  }));
+
 const buildSearchIndex = (): SearchDocument[] => {
   const gratitudeDoc = buildGratitudeDoc();
   const docs: SearchDocument[] = [
     ...buildStaticPageDocs(),
     ...buildPillarDocs(),
+    ...buildNutritionTabDocs(),
+    ...buildRecipeDocs(),
+    ...buildNutritionGuideSectionDocs(),
     ...buildBlogDocs(),
     ...buildVideoDocs(),
     {

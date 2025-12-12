@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Seo from '@/components/seo/Seo';
 import { Button } from '@/components/ui/button';
 import { getSeoRouteByPath } from '@/data/seoRoutes';
+import { nutritionGuideSections } from '@/data/nutritionGuideSections';
 
 const HERO_DESCRIPTION =
   'What you put on your plate can change how you feel in your body, how clearly you think, and how boldly you live in every decade. A whole-food, plant-based lifestyle isn’t about punishment or perfection. It’s about giving your future self a fighting chance — with real food, from real plants, that loves you back.';
@@ -85,6 +86,17 @@ const CTA_LINKS = [
 ];
 
 const NutritionGuide = () => {
+  const [
+    whatIsWfpb,
+    whyItMatters,
+    rebelPlate,
+    crowdOut,
+    b12Section,
+    labelsSection,
+    firstStepsSection,
+    connectingSection,
+  ] = nutritionGuideSections;
+
   const jumpToPlate = React.useCallback(() => {
     const section = document.getElementById('rebel-plate');
     if (section) {
@@ -145,8 +157,8 @@ const NutritionGuide = () => {
       </section>
 
       <div className="container mx-auto px-4 py-16 space-y-16">
-        <section className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold">📘 What Is a Whole-Food, Plant-Based Lifestyle?</h2>
+        <section id={whatIsWfpb.id} className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-3xl font-bold">{whatIsWfpb.title}</h2>
           <p className="text-lg text-gray-700">
             When I say whole-food, plant-based (WFPB), I mean mostly foods that look like they came from the earth, not a factory. Think whole and
             ancient grains; vegetables (especially greens); fruits; beans, peas, and lentils; plus nuts and seeds.
@@ -161,8 +173,8 @@ const NutritionGuide = () => {
           </p>
         </section>
 
-        <section className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold">💪 Why It Matters Even More as We Age</h2>
+        <section id={whyItMatters.id} className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-3xl font-bold">{whyItMatters.title}</h2>
           <p className="text-lg text-gray-700">
             As we move through our 50s, 60s, 70s, and beyond, the stakes get higher—and the good news is our bodies are still listening. Shifting toward
             WFPB eating can lower risk of chronic disease, support healthier blood pressure and cholesterol, stabilize weight and energy without crash
@@ -173,9 +185,9 @@ const NutritionGuide = () => {
           </p>
         </section>
 
-        <section id="rebel-plate" className="max-w-4xl mx-auto space-y-6">
+        <section id={rebelPlate.id} className="max-w-4xl mx-auto space-y-6">
           <div>
-            <h2 className="text-3xl font-bold">🥗 Your Rebel Plate: What to Pile On (Eat in Abundance)</h2>
+            <h2 className="text-3xl font-bold">{rebelPlate.title}</h2>
             <p className="text-lg text-gray-700">
               Let’s start with the fun part: what you can enjoy freely and generously. Build most meals from these groups:
             </p>
@@ -204,8 +216,8 @@ const NutritionGuide = () => {
           </div>
         </section>
 
-        <section className="max-w-4xl mx-auto space-y-4">
-            <h2 className="text-3xl font-bold">🚫 What to Crowd Out (Avoid as Much as You Can)</h2>
+        <section id={crowdOut.id} className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-3xl font-bold">{crowdOut.title}</h2>
           <p className="text-lg text-gray-700">
             The standard Western diet is loaded with meat, dairy, refined carbs, oils, and ultra-processed foods. Crowd these out so you can have more of what you truly want:
           </p>
@@ -219,16 +231,16 @@ const NutritionGuide = () => {
           </p>
         </section>
 
-        <section className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold">🧬 A Quick Note on Vitamin B12</h2>
+        <section id={b12Section.id} className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-3xl font-bold">{b12Section.title}</h2>
           <p className="text-lg text-gray-700">
             Vitamin B12 is made by microbes, not plants. Modern sanitation removes natural sources, so if you are mostly WFPB, chat with your healthcare provider about a B12 supplement
             that fits your needs. It is a simple, inexpensive way to protect nerves, blood, and brain.
           </p>
         </section>
 
-        <section className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold">🔍 How to Read Labels Like a Rebel</h2>
+        <section id={labelsSection.id} className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-3xl font-bold">{labelsSection.title}</h2>
           <p className="text-lg text-gray-700">
             Packaged food happens. When it does, flip it over and ask:
           </p>
@@ -239,8 +251,8 @@ const NutritionGuide = () => {
           </ul>
         </section>
 
-        <section className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold">✨ Three Simple First Steps</h2>
+        <section id={firstStepsSection.id} className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-3xl font-bold">{firstStepsSection.title}</h2>
           <p className="text-lg text-gray-700">You do not have to overhaul everything. Start where you are.</p>
           <div className="space-y-4">
             {FIRST_STEPS.map((step) => (
@@ -252,8 +264,8 @@ const NutritionGuide = () => {
           </div>
         </section>
 
-        <section className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold">🌈 Connecting This to Your Rebellious Aging Journey</h2>
+        <section id={connectingSection.id} className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-3xl font-bold">{connectingSection.title}</h2>
           <p className="text-lg text-gray-700">
             Choosing WFPB living honors your Health pillar, builds Confidence in what you can still do, supports your Style (clothes simply feel better on a well-nourished body),
             and deepens Gratitude for a body that keeps showing up. You are not “too late.” You are right on time.

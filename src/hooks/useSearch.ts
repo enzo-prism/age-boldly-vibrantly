@@ -60,8 +60,12 @@ const getTypeBoostForQuery = (normalized: string) => {
   const wantsPillar = /\b(pillar|quiz|checklist)\b/.test(normalized);
   const wantsBlog = /\b(blog|post)\b/.test(normalized);
   const wantsResource = /\b(guide|nutrition|resource|download)\b/.test(normalized);
+  const wantsRecipe = /\b(recipe|recipes|cook|cooking|meal|meals|dessert|desserts|salad|salads|soup|soups|muffin|muffins)\b/.test(normalized);
+  const wantsSection = /\b(tab|section|protocol|benefits|labels|b12|rebel plate|crowd out|first steps)\b/.test(normalized) || wantsResource;
 
   return (type: SearchType) => {
+    if (wantsRecipe && type === 'recipe') return 1.6;
+    if (wantsSection && type === 'section') return 1.35;
     if (wantsVideo && type === 'video') return 1.5;
     if (wantsPillar && type === 'pillar') return 1.4;
     if (wantsBlog && type === 'blog') return 1.3;
