@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Loader2, Search as SearchIcon, X } from 'lucide-react';
+import { Loader2, X } from 'lucide-react';
 
 import type { SearchDocument, SearchType } from '@/data/searchRecords';
 import { useSearch } from '@/hooks/useSearch';
@@ -106,21 +106,37 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
 
   // Prefetch the index at idle time so mobile opens feel fast
   useEffect(() => {
-    const schedule =
-      typeof window !== 'undefined' && 'requestIdleCallback' in window
-        ? (fn: () => void) => (window as any).requestIdleCallback(fn, { timeout: 1500 })
-        : (fn: () => void) => window.setTimeout(fn, 500);
+    type IdleHandle = number;
+    type IdleDeadline = { didTimeout: boolean; timeRemaining: () => number };
+    type IdleCallback = (deadline: IdleDeadline) => void;
+    type IdleOptions = { timeout?: number };
 
-    const cancel =
-      typeof window !== 'undefined' && 'cancelIdleCallback' in window
-        ? (id: number) => (window as any).cancelIdleCallback(id)
-        : (id: number) => window.clearTimeout(id);
+    const supportsIdleCallback =
+      typeof window !== 'undefined' && 'requestIdleCallback' in window && 'cancelIdleCallback' in window;
+
+    const schedule: (fn: () => void) => IdleHandle = supportsIdleCallback
+      ? (fn) =>
+          (
+            window as Window & {
+              requestIdleCallback: (callback: IdleCallback, options?: IdleOptions) => IdleHandle;
+            }
+          ).requestIdleCallback(() => fn(), { timeout: 1500 })
+      : (fn) => window.setTimeout(fn, 500);
+
+    const cancel: (id: IdleHandle) => void = supportsIdleCallback
+      ? (id) =>
+          (
+            window as Window & {
+              cancelIdleCallback: (handle: IdleHandle) => void;
+            }
+          ).cancelIdleCallback(id)
+      : (id) => window.clearTimeout(id);
 
     const id = schedule(() => {
       void ensureIndex();
     });
 
-    return () => cancel(id as number);
+    return () => cancel(id);
   }, [ensureIndex]);
 
   useEffect(() => {
@@ -173,29 +189,28 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
         hideCloseButton
         contentClassName={contentWidth}
       >
-        <div className="flex items-center justify-between px-3 py-2 border-b">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <SearchIcon className="h-4 w-4" />
-            <span>Search pillars, nutrition, blog, videos</span>
-          </div>
+        <div className="relative">
+          <CommandInput
+            ref={inputRef}
+            value={query}
+            onValueChange={(value) => {
+              setQuery(value);
+              void ensureIndex();
+            }}
+            placeholder="Search pillars, nutrition, blog, videos..."
+            className="pr-12"
+          />
           <Button
+            type="button"
             variant="ghost"
             size="icon"
+            className="absolute right-3 top-1/2 h-9 w-9 -translate-y-1/2 text-muted-foreground hover:text-foreground"
             onClick={() => setOpen(false)}
             aria-label="Close search"
           >
             <X className="h-4 w-4" />
           </Button>
         </div>
-        <CommandInput
-          ref={inputRef}
-          value={query}
-          onValueChange={(value) => {
-            setQuery(value);
-            void ensureIndex();
-          }}
-          placeholder="Search pillars, nutrition, blog, or videos..."
-        />
         <CommandList className="max-h-[calc(100vh-10rem)] sm:max-h-[500px]">
           {loading && (
             <div className="flex items-center gap-2 p-4 text-sm text-muted-foreground">
@@ -260,12 +275,12 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
             </>
           )}
         </CommandList>
-        <div className="flex items-center justify-between px-4 py-2 border-t text-xs text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <SearchIcon className="h-4 w-4" />
-            <span>Search pillars, nutrition, blog, resources, and videos</span>
+        <div className="hidden sm:flex items-center justify-between px-4 py-2 border-t text-xs text-muted-foreground">
+          <div className="flex items-center gap-1">
+            <kbd className="px-1.5 py-0.5 rounded bg-muted">Esc</kbd>
+            <span className="ml-1">to close</span>
           </div>
-          <div className="hidden sm:flex items-center gap-1">
+          <div className="flex items-center gap-1">
             <kbd className="px-1.5 py-0.5 rounded bg-muted">⌘</kbd>
             <kbd className="px-1.5 py-0.5 rounded bg-muted">K</kbd>
           </div>
