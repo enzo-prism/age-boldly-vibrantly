@@ -31,14 +31,29 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://rebelliousaging.com/pillars/gratitude</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://rebelliousaging.com/nutrition</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/pillars/health/nutrition-guide</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://rebelliousaging.com/video-series</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/search</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://rebelliousaging.com/blog</loc>
@@ -249,6 +264,108 @@
   <url>
     <loc>https://rebelliousaging.com/blog/retirement-fade-or-focus</loc>
     <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/plants-do-not-disappoint</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/motion-is-not-negotiable</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/lifestyle-medicine-six-pillars</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/seven-day-balance-challenge</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/the-pleasure-trap-why-it-is-not-your-fault</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/b12-the-little-vitamin-with-a-big-job</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/the-secret-strength-of-rest-days</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/the-15-second-shock-why-food-matters</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/the-quiet-magic-of-consistency</loc>
+    <lastmod>2026-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/the-weekend-epiphany-why-resting-is-the-new-rebellion</loc>
+    <lastmod>2027-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/thanksgiving-recipes-plantstrong-favorites</loc>
+    <lastmod>2027-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/when-joy-and-sorrow-share-a-seat-at-the-table</loc>
+    <lastmod>2027-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/passing-the-baton-thanksgiving-reflection</loc>
+    <lastmod>2027-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/time-is-calling-are-you-listening</loc>
+    <lastmod>2027-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/the-original-rebellious-ager-diane-keaton</loc>
+    <lastmod>2027-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/a-rebellious-aging-guide-to-dressing-like-you-mean-it</loc>
+    <lastmod>2027-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rebelliousaging.com/blog/when-the-voice-gets-loud-limiting-beliefs</loc>
+    <lastmod>2027-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
