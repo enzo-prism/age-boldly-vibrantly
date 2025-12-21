@@ -26,6 +26,12 @@ export const seoRoutes: SeoRouteConfig[] = [
       'A heartfelt welcome from Suz inviting women 55-105 to join a bold movement centered on community, plant-strong nourishment, and confidence.',
   },
   {
+    path: '/starter-kit',
+    title: 'Rebellious Aging Starter Kit',
+    description:
+      'A gentle starter kit for women 55-105 to begin with Nibble, Wiggle, Dazzle, and Gratefulness in the Rebellious Aging journey.',
+  },
+  {
     path: '/nutrition',
     title: 'Whole-Food Plant-Based Nutrition',
     description:

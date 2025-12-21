@@ -20,6 +20,7 @@ const STATIC_PATHS = new Set([
   '/',
   '/our-story',
   '/welcome-letter',
+  '/starter-kit',
   '/nutrition',
   '/video-series',
   '/blog',

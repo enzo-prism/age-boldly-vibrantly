@@ -21,6 +21,7 @@ import Team from "./pages/Team";
 import FacebookGroup from "./pages/FacebookGroup";
 import NutritionGuide from "./pages/NutritionGuide";
 import Search from "./pages/Search";
+import StarterKit from "./pages/StarterKit";
 
 const defaultQueryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ export const AppRoutes = () => (
       <Route path="/" element={<Home />} />
       <Route path="/our-story" element={<Movement />} />
       <Route path="/welcome-letter" element={<WelcomeLetter />} />
+      <Route path="/starter-kit" element={<StarterKit />} />
       <Route path="/pillars/:pillarId" element={<PillarPage />} />
       {/* Legacy route redirect */}
       <Route path="/pillars/longevity" element={<Navigate to="/pillars/health" replace />} />

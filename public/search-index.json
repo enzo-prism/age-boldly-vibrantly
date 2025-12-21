@@ -30,6 +30,16 @@
     ]
   },
   {
+    "id": "page:/starter-kit",
+    "type": "page",
+    "title": "Rebellious Aging Starter Kit",
+    "path": "/starter-kit",
+    "summary": "A gentle starter kit for women 55-105 to begin with Nibble, Wiggle, Dazzle, and Gratefulness in the Rebellious Aging journey.",
+    "tags": [
+      "page"
+    ]
+  },
+  {
     "id": "page:/nutrition",
     "type": "page",
     "title": "Whole-Food Plant-Based Nutrition",
