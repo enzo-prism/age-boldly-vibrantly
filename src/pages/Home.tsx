@@ -456,6 +456,23 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="section-padding bg-teal/5">
+        <div className="container mx-auto container-padding">
+          <div className="rounded-3xl border border-teal/20 bg-white p-8 md:p-10 shadow-sm flex flex-col lg:flex-row items-start lg:items-center gap-6">
+            <div className="flex-1 space-y-3">
+              <p className="uppercase text-xs tracking-[0.3em] text-teal font-semibold">Starter Kit</p>
+              <h2 className="text-3xl md:text-4xl font-bold">Rebellious Aging Starter Kit</h2>
+              <p className="text-gray-600 max-w-2xl">
+                A gentle beginning for women 55-105. Nibble. Wiggle. Dazzle. Be Grateful.
+              </p>
+            </div>
+            <Button asChild className="bg-teal text-white hover:bg-teal-dark">
+              <Link to="/starter-kit">Go to the starter kit</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <ConnectCTA />
     </>
   );
