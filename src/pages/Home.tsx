@@ -327,6 +327,22 @@ const Home = () => {
               </div>
             ))}
           </div>
+          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-3xl border border-teal/20 bg-teal/5 px-6 py-5">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-teal font-semibold">New</p>
+              <h3 className="text-xl font-semibold text-gray-900 mt-2">Rebellious Aging Starter Kit</h3>
+              <p className="text-gray-600 mt-1">
+                A gentle beginning for women 55-105: Nibble, Wiggle, Dazzle, Gratefulness.
+              </p>
+            </div>
+            <Button
+              asChild
+              variant="outline"
+              className="border-teal text-teal hover:bg-teal hover:text-white"
+            >
+              <Link to="/starter-kit">View starter kit</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
