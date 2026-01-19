@@ -4220,6 +4220,84 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 51: Beginning Again. A Gentle Reminder for the Year Ahead
+  if (postId === 'beginning-again-gentle-reminder-year-ahead') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 51}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">Beginning Again. A Gentle Reminder for the Year Ahead</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>January has a way of arriving boldly.</p>
+
+          <p>
+            Everywhere we turn, we are told it&apos;s time to reinvent ourselves, to fix what is broken, tighten the reins, and come charging
+            out of the gate with bold resolutions and bigger goals. As if the turning of the calendar demands urgency.
+          </p>
+
+          <p>I am thinking, but what if it doesn&apos;t?</p>
+
+          <p>What if the most rebellious thing we could do at the start of a new year is begin GENTLY?</p>
+
+          <p>As we age, many of us discover something powerful.</p>
+
+          <p>We don&apos;t need more force, we need more discernment.</p>
+
+          <p>We don&apos;t need louder voices, we need to listen inward.</p>
+
+          <p>We don&apos;t need to become someone new, we need to come home to ourselves.</p>
+
+          <p>This is the heart of Rebellious Aging.</p>
+
+          <p>
+            Aging isn&apos;t a race against time. It&apos;s a relationship with it. And like any meaningful relationship, it thrives on
+            attention, honesty, and care and NOT pressure.
+          </p>
+
+          <p>So how about this? Instead of resolutions, I&apos;m inviting a gentle rebellion.</p>
+
+          <p>A rebellion against the &quot;Hustle Culture&quot; that tells us slower means weaker.</p>
+
+          <p>A rebellion against the idea that January is a deadline.</p>
+
+          <p>A rebellion against outdated beliefs that aging should make us smaller, quieter, and less curious.</p>
+
+          <p>
+            Gentle rebellion looks like nourishment instead of punishment. Movement that feels respectful, not forced. Confidence that grows
+            quietly, rooted in self-trust rather than comparison.
+          </p>
+
+          <p>It looks like allowing yourself to re-enter mid-month, mid-thought, mid-life, without apology.</p>
+
+          <p>
+            If you are feeling behind, you are not. If you are unsure where to begin, you already have. Beginning again doesn&apos;t require a
+            clean slate, it only asks for an honest starting place.
+          </p>
+
+          <p>
+            So let me leave you with one simple reflection as we move into the year ahead. What would it look like to treat this year as a
+            relationship with yourself, rather than a project to manage?
+          </p>
+
+          <p>Ya know, NO RUSH, NO RIGHT ANSWER, JUST CURIOSITY.</p>
+
+          <p>Let&apos;s begin again, right where we are.</p>
+
+          <p>
+            <strong>Suz</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
