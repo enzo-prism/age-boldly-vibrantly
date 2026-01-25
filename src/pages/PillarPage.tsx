@@ -74,12 +74,18 @@ const PillarPage = () => {
               <p className="uppercase text-xs tracking-[0.3em] text-teal font-semibold">Deeper Dive</p>
               <h2 className="text-3xl font-bold mt-2 mb-4">Whole-Food, Plant-Based Guide</h2>
               <p className="text-gray-700 max-w-2xl">
-                Explore exactly what to pile on your plate, what to crowd out, and how to shop, label-read, and stay sparkly as you embrace WFPB living.
+                Explore exactly what to pile on your plate, what to crowd out, and how to shop, label-read, and stay sparkly as you embrace
+                WFPB living. Then browse the resource guide for documentaries, books, and talks to keep the momentum going.
               </p>
             </div>
-            <Button asChild>
-              <Link to="/pillars/health/nutrition-guide">Read the Guide</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button asChild>
+                <Link to="/pillars/health/nutrition-guide">Read the Guide</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/pillars/health/resource-guide">Explore Resources</Link>
+              </Button>
+            </div>
           </div>
         </div>
       )}

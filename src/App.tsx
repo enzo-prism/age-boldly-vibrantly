@@ -20,6 +20,7 @@ import VideoSeries from "./pages/VideoSeries";
 import Team from "./pages/Team";
 import FacebookGroup from "./pages/FacebookGroup";
 import NutritionGuide from "./pages/NutritionGuide";
+import WfpbResourceGuide from "./pages/WfpbResourceGuide";
 import Search from "./pages/Search";
 import StarterKit from "./pages/StarterKit";
 
@@ -53,6 +54,7 @@ export const AppRoutes = () => (
       <Route path="/nutrition" element={<Nutrition />} />
       <Route path="/video-series" element={<VideoSeries />} />
       <Route path="/pillars/health/nutrition-guide" element={<NutritionGuide />} />
+      <Route path="/pillars/health/resource-guide" element={<WfpbResourceGuide />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:postId" element={<BlogPost />} />
       <Route path="/search" element={<Search />} />

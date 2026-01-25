@@ -4298,6 +4298,325 @@ Use nut butters or avocados for richness in sauces.`}
     );
   }
 
+  // Blog 52: Meet Enzo: A Collaboration Across Generations
+  if (postId === 'meet-enzo-collaboration-across-generations') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 52}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">Meet Enzo: A Collaboration Across Generations</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            One of the greatest gifts of this chapter of my life has been learning that meaningful work doesn&apos;t have to stay within
+            generational lines.
+          </p>
+
+          <p>
+            I want to introduce you to Enzo Sison, my creative partner and the person who has helped bring Rebellious Aging to life in ways I
+            could not have done on my own.
+          </p>
+
+          <p>
+            Enzo is a graduate of Cal Poly and the founder of Design Prism (design-prism.com), where he helps people and organizations
+            translate ideas into clean, functional, and meaningful digital spaces. He brings clarity, patience, and an uncanny ability to
+            turn a swirl of my random thoughts into something structured and usable.
+          </p>
+
+          <p>
+            Beyond his design work, Enzo is also training for the 2028 Olympics in pole vaulting as part of the Philippine Team, an endeavor
+            that requires discipline, focus, and long-term vision. Those qualities show up in our work together every single day.
+          </p>
+
+          <p>
+            Enzo created my website and my private Facebook community, but his role goes far beyond design. He listens. He asks thoughtful
+            questions. He encourages and discourages. He keeps me grounded when my ideas run ahead of logistics. He also drives me to my
+            &quot;talks&quot;, is my tech support and cheerfully schleps when needed. Cheers for Enzo!
+          </p>
+
+          <p>
+            What I cherish most about working with Enzo is the mutual respect. I bring many decades of lived experience, perspective, and
+            purpose. He brings modern tools, technical expertise, and calm execution. Neither is more important than the other. Together we
+            create forward motion.
+          </p>
+
+          <p>
+            This partnership is proof that age is not a barrier, it is in fact an asset. When generations collaborate with trust and
+            curiosity, something meaningful happens.
+          </p>
+
+          <p>
+            I am grateful for Enzo, for our shared work, and for what we continue to build one thoughtful step at a time.
+          </p>
+
+          <p>
+            <strong>Suz xo</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 53: The Protein Panic: Are We Really Not Getting Enough?
+  if (postId === 'protein-panic-are-we-really-not-getting-enough') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 53}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">The Protein Panic: Are We Really Not Getting Enough?</h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            If you have been listening to health conversations lately, you might think protein is in dangerously short supply.
+          </p>
+
+          <p>Protein Bars.</p>
+          <p>Protein Shakes.</p>
+          <p>Protein Coffee.</p>
+          <p>Protein Everything.</p>
+
+          <p>
+            And almost without fail, when people begin to consider eating more plants, the question pops up:
+          </p>
+
+          <p>&quot;But will I get enough protein?&quot;</p>
+
+          <p>Let&apos;s slow this down and look at what science and real life actually tell us.</p>
+
+          <p className="text-lg font-semibold">An honest question</p>
+
+          <p>Have you ever met someone or heard of someone in the United States who was hospitalized for protein deficiency?</p>
+
+          <p>Most of us haven&apos;t. And that is not a coincidence.</p>
+
+          <p>
+            Protein deficiency is extremely rare in developed countries like the U.S. What we see far more often is the opposite problem:
+            too much protein, especially from animal sources, along with too little fiber and too few protective plant compounds.
+          </p>
+
+          <p className="text-lg font-semibold">How much protein do we really need?</p>
+
+          <p>
+            Most adults need approximately 0.8 grams of protein per kilogram of body weight. For many people, that comes out to roughly 45-70
+            grams per day, depending on size, age, and activity level.
+          </p>
+
+          <p>Here is the key takeaway: Most Americans already exceed this amount by a wide margin.</p>
+
+          <p>And yes, this includes people who eat mostly or entirely plants.</p>
+
+          <p className="text-lg font-semibold">What the science says (without the hype)</p>
+
+          <p>
+            One of the clearest voices in this conversation is Christopher Gardner, a respected nutrition researcher at Stanford University.
+          </p>
+
+          <p>
+            Dr. Gardner has spent decades studying dietary patterns. He has studied omnivores, vegetarians, vegans, low-carb, and low-fat
+            diets, and his message is consistently reassuring: if people eat a balanced, calorie-adequate diet, protein intake takes care of
+            itself.
+          </p>
+
+          <p>
+            Beans, lentils, tofu, tempeh, whole grains, vegetables, fruits, nuts, and seeds all contain protein. When you eat enough food
+            and a variety to meet your energy needs, you almost automatically meet your protein needs as well.
+          </p>
+
+          <p>There is no special &quot;protein magic&quot; reserved for animal foods.</p>
+
+          <p className="text-lg font-semibold">The real concern isn&apos;t too little protein</p>
+
+          <p>It&apos;s too much, particularly from animal sources.</p>
+
+          <p>Excess protein, especially when it crowds out fiber-rich foods, has been associated with:</p>
+
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Increased kidney stress (especially for those with underlying kidney issues)</li>
+            <li>Higher calcium loss from bones</li>
+            <li>
+              Elevated IGF-1 levels (Insulin-like Growth Factor 1). Low levels are linked to heart disease and high levels are linked to
+              certain cancers.
+            </li>
+            <li>Increased inflammation and cardiovascular strain when protein comes largely from red and processed meats</li>
+          </ul>
+
+          <p>
+            Plant protein, on the other hand, comes packaged with fiber, antioxidants, phytonutrients, and anti-inflammatory compounds,
+            nutrients that most of us need far more of.
+          </p>
+
+          <p className="text-lg font-semibold">What happens on a whole-food, plant-based diet?</p>
+
+          <p>People who eat a whole-food, plant-based diet consistently meet their protein needs while also:</p>
+
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Improving cholesterol levels</li>
+            <li>Supporting gut health</li>
+            <li>Reducing inflammation</li>
+            <li>Lowering the risk of heart disease and type 2 diabetes</li>
+          </ul>
+
+          <p>In other words: You don&apos;t need to chase protein. You simply need to eat real food.</p>
+
+          <p>
+            So if you are eating a variety of whole plant foods, enough calories for your body, beans, lentils, whole grains, fruits,
+            veggies, nuts, and seeds, you are getting enough protein.
+          </p>
+
+          <p>The &quot;PROTEIN PANIC&quot; sells products, but it does not reflect reality.</p>
+
+          <p>Confidence not fear belongs on your plate.</p>
+
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=mhJDUqZ3ZKc"
+              className="text-primary underline underline-offset-4"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Watch Dr. Christopher Gardner
+            </a>
+          </p>
+
+          <p>
+            <strong>Suz xo</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
+  // Blog 54: Unapologetic Style: What If 2026 is the Year You Stop Asking Permission
+  if (postId === 'unapologetic-style-2026-stop-asking-permission') {
+    return withSeo(
+      <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">
+        <Link to="/blog" className="text-sm hover:underline mb-8 inline-block">← Back to Blog</Link>
+
+        <div className="mb-4">
+          <span className="text-primary font-bold text-lg">Blog #{currentPost?.blogNumber || 54}</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4">
+          Unapologetic Style: What If 2026 is the Year You Stop Asking Permission
+        </h1>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>As we step into 2026, I want to make something clear:</p>
+
+          <p>
+            This is not the year to fade quietly into sensible neutrals and invisible choices. This is the year to show up with curiosity,
+            confidence, and maybe a little swagger.
+          </p>
+
+          <p>
+            Unapologetic style is my third pillar for a reason. It is not about chasing trends or dressing &quot;age-appropriately&quot;
+            (whatever that is supposed to mean). It&apos;s about using clothing, color, texture, and personal flair as a form of
+            self-expression and self-respect.
+          </p>
+
+          <p className="text-lg font-semibold">Let&apos;s talk 2026 style energy (not rules)</p>
+
+          <p>
+            Fashion forecasters agree on one thing for 2026. Individuality is in. Polish meets playfulness. Comfort no longer apologizes.
+          </p>
+
+          <p>
+            You will see a blend of relaxed silhouettes with intentional structure, flowing layers paired with bold accents, timeless basics
+            elevated by one confident statement. Brooches for certain.
+          </p>
+
+          <p>So be clear here, you don&apos;t need a new wardrobe. You need a new point of view.</p>
+
+          <p className="text-lg font-semibold">The colors are speaking, are you listening?</p>
+
+          <p>The color story for 2026 is deliciously expressive.</p>
+
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Rich berries and plums (hello confidence)</li>
+            <li>Warm terracotta and clay tones (grounded and strong)</li>
+            <li>Soft but luminous blues and greens (calm with presence)</li>
+            <li>Classic black and white, used boldly not timidly</li>
+          </ul>
+
+          <p>
+            Remember color isn&apos;t frivolous, color is communication, and in 2026, it says &quot;I am still here, and I am enjoying
+            myself.&quot;
+          </p>
+
+          <p className="text-lg font-semibold">Unapologetic style is an inside job</p>
+
+          <p>
+            Here is the part fashion magazines rarely talk about. When we begin to feel vibrant in our bodies, ya know nourished, moving,
+            energized, our style will naturally shift. Shoulders lift. Choices get braver. The mirror becomes less of a critic and more of a
+            collaborator. Right?
+          </p>
+
+          <p>
+            Unapologetic style isn&apos;t about impressing others. Nope! It is about aligning the outside with how you feel on the inside.
+          </p>
+
+          <p className="text-lg font-semibold">A gentle rebel tip (no pressure allowed)</p>
+
+          <p>Before buying anything new, try this:</p>
+
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Put on one outfit you already own</li>
+            <li>Add one unexpected element, like a scarf, bold necklace, color pop, brooch, fabulous gloves, or a jacket</li>
+          </ul>
+
+          <p>
+            Ask yourself, do I feel more like me and in sync with a new look for a new year with my own stuff but with a new spin? That&apos;s
+            the signal, follow it.
+          </p>
+
+          <p className="text-lg font-semibold">And while we are in this moment, let&apos;s whisper about thrifting</p>
+
+          <p>
+            There for sure is something quietly rebellious about finding treasure where others may overlook it. Thrifting invites
+            creativity, sustainability, and storytelling. And it removes the pressure to &quot;keep up&quot;. We will talk more about this
+            soon, after I have a gab session with my granddaughter Carson who lives in Boston and is my thrifting inspiration.
+          </p>
+
+          <p className="text-lg font-semibold">A question for you as we begin 2026</p>
+
+          <p>What if this is the year you stop feeling compelled to explain your choices?</p>
+
+          <p>No disclaimers.</p>
+
+          <p>No &quot;I know I&apos;m too old for this, but...&quot;.</p>
+
+          <p>No apologies.</p>
+
+          <p>Just presence. Personality. And how about a little sparkle.</p>
+
+          <p>Unapologetic style isn&apos;t about fashion. It is about permission.</p>
+
+          <p>And in case you were wondering</p>
+
+          <p>You already have it.</p>
+
+          <p>
+            <strong>Suz xo</strong>
+          </p>
+        </div>
+
+        <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      </div>
+    );
+  }
+
   // Default/404
   return withSeo(
     <div className="min-h-screen bg-background px-4 py-12 max-w-3xl mx-auto">

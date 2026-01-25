@@ -487,6 +487,42 @@ export const blogPosts: BlogPostMetadata[] = [
     blogNumber: 51,
     seoDescription:
       'A gentle rebellion for the new year: begin without hustle, listen inward, and treat aging as a relationship with time, not a race.'
+  },
+  {
+    id: 'meet-enzo-collaboration-across-generations',
+    title: 'Meet Enzo: A Collaboration Across Generations',
+    excerpt:
+      'Meet Enzo Sison, the creative partner helping bring Rebellious Aging to life, and the cross-generational collaboration behind it.',
+    date: '1/2/2026',
+    dateSort: new Date('2026-01-02'),
+    readTime: '4 min read',
+    blogNumber: 52,
+    seoDescription:
+      'Meet Enzo Sison and the cross-generational partnership that turns Rebellious Aging ideas into grounded, meaningful work.'
+  },
+  {
+    id: 'protein-panic-are-we-really-not-getting-enough',
+    title: 'The Protein Panic: Are We Really Not Getting Enough?',
+    excerpt:
+      'Protein panic is everywhere, but deficiency is rare in the U.S. A balanced, calorie-adequate diet meets protein needs without hype.',
+    date: '1/3/2026',
+    dateSort: new Date('2026-01-03'),
+    readTime: '7 min read',
+    blogNumber: 53,
+    seoDescription:
+      'The protein panic is overblown. Most adults already meet protein needs, especially with a balanced, calorie-adequate plant-forward diet.'
+  },
+  {
+    id: 'unapologetic-style-2026-stop-asking-permission',
+    title: 'Unapologetic Style: What If 2026 is the Year You Stop Asking Permission',
+    excerpt:
+      '2026 is the year to stop asking permission and start expressing yourself through bold, confident style and intentional choices.',
+    date: '1/4/2026',
+    dateSort: new Date('2026-01-04'),
+    readTime: '6 min read',
+    blogNumber: 54,
+    seoDescription:
+      'Unapologetic style for 2026: stop asking permission, embrace color, confident statements, and fashion that matches your inner energy.'
   }
 ];
 

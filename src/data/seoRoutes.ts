@@ -44,6 +44,12 @@ export const seoRoutes: SeoRouteConfig[] = [
       'Dive into what to eat, what to crowd out, and how to read labels like a rebel with a printable WFPB roadmap for rebellious agers.',
   },
   {
+    path: '/pillars/health/resource-guide',
+    title: 'Whole-Food, Plant-Based Resource Guide',
+    description:
+      'A curated library of documentaries, books, cookbooks, websites, and talks to explore WFPB living at your own pace.',
+  },
+  {
     path: '/team',
     title: 'Team',
     description:

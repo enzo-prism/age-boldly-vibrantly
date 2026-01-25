@@ -126,6 +126,10 @@ const NutritionGuide = () => {
               Prefer the overview? Visit the{' '}
               <Link to="/nutrition" className="text-teal font-semibold hover:underline">
                 Nutrition page
+              </Link>
+              , explore the{' '}
+              <Link to="/pillars/health/resource-guide" className="text-teal font-semibold hover:underline">
+                Resource Guide
               </Link>{' '}
               or head back to the{' '}
               <Link to="/pillars/health" className="text-teal font-semibold hover:underline">

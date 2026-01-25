@@ -120,6 +120,15 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link
+                  to="/pillars/health/resource-guide"
+                  className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform">Resource Guide</span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
                 <Link to="/nutrition" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
                   <span className="group-hover:translate-x-1 transition-transform">Nutrition (WFPB)</span>
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
