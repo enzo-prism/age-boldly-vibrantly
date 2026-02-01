@@ -58,6 +58,95 @@ export const buildArticleJsonLd = ({
   datePublished,
 });
 
+interface RecipeParams {
+  name: string;
+  description: string;
+  canonicalUrl?: string;
+  image?: string;
+  author?: string;
+  ingredients: string[];
+  instructions: string[];
+  prepTime?: string;
+  cookTime?: string;
+  totalTime?: string;
+  recipeYield?: string;
+  recipeCategory?: string;
+  keywords?: string;
+}
+
+const toIsoDuration = (value?: string) => {
+  if (!value) return undefined;
+  const matches = [...value.matchAll(/(\d+(?:\.\d+)?)\s*(hour|hr|hrs|minute|min|mins)/gi)];
+  if (!matches.length) return undefined;
+  let hours = 0;
+  let minutes = 0;
+
+  matches.forEach((match) => {
+    const amount = parseFloat(match[1]);
+    const unit = match[2].toLowerCase();
+    if (unit.startsWith('hour') || unit.startsWith('hr')) {
+      hours += amount;
+    } else {
+      minutes += amount;
+    }
+  });
+
+  if (!hours && !minutes) return undefined;
+
+  let iso = 'PT';
+  if (hours) {
+    iso += `${hours}H`;
+  }
+  if (minutes) {
+    iso += `${minutes}M`;
+  }
+  return iso;
+};
+
+export const buildRecipeJsonLd = ({
+  name,
+  description,
+  canonicalUrl,
+  image,
+  author,
+  ingredients,
+  instructions,
+  prepTime,
+  cookTime,
+  totalTime,
+  recipeYield,
+  recipeCategory,
+  keywords,
+}: RecipeParams) => {
+  const prepTimeIso = toIsoDuration(prepTime);
+  const cookTimeIso = toIsoDuration(cookTime);
+  const totalTimeIso = toIsoDuration(totalTime);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name,
+    description,
+    image: image ? resolveAbsoluteUrl(image) : resolveAbsoluteUrl(siteMetadata.defaultSocialImage),
+    author: {
+      '@type': 'Person',
+      name: author ?? 'Suzanne (Suz)',
+    },
+    mainEntityOfPage: canonicalUrl,
+    recipeIngredient: ingredients,
+    recipeInstructions: instructions.map((text) => ({
+      '@type': 'HowToStep',
+      text,
+    })),
+    ...(prepTimeIso ? { prepTime: prepTimeIso } : {}),
+    ...(cookTimeIso ? { cookTime: cookTimeIso } : {}),
+    ...(totalTimeIso ? { totalTime: totalTimeIso } : {}),
+    ...(recipeYield ? { recipeYield } : {}),
+    ...(recipeCategory ? { recipeCategory } : {}),
+    ...(keywords ? { keywords } : {}),
+  };
+};
+
 interface Question {
   question: string;
   answer: string;

@@ -3,6 +3,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { blogPosts } from '../src/data/blogPosts';
+import { recipes, slugifyRecipeTitle } from '../src/data/recipes';
 import { siteMetadata } from '../src/lib/siteMetadata';
 
 interface StaticRouteConfig {
@@ -23,6 +24,7 @@ const STATIC_ROUTES: StaticRouteConfig[] = [
   { path: '/nutrition', changefreq: 'weekly', priority: 0.8 },
   { path: '/pillars/health/nutrition-guide', changefreq: 'monthly', priority: 0.8 },
   { path: '/video-series', changefreq: 'monthly', priority: 0.6 },
+  { path: '/recipes', changefreq: 'weekly', priority: 0.8 },
   { path: '/search', changefreq: 'weekly', priority: 0.5 },
   { path: '/blog', changefreq: 'daily', priority: 0.8 },
   { path: '/team', changefreq: 'yearly', priority: 0.4 },
@@ -78,11 +80,19 @@ const generateSitemap = async () => {
     })
   );
 
+  const recipeEntries = recipes.map((recipe) =>
+    buildUrlEntry(toAbsoluteUrl(`/recipes/${slugifyRecipeTitle(recipe.title)}`), {
+      changefreq: 'monthly',
+      priority: 0.6,
+    })
+  );
+
   const xmlContent = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...staticEntries,
     ...blogEntries,
+    ...recipeEntries,
     '</urlset>',
     '',
   ].join('\n');

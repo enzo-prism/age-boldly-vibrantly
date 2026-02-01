@@ -6,6 +6,10 @@ export interface Recipe {
   source: string;
   category: string;
   tags: string[];
+  image?: string;
+  imageAlt?: string;
+  storageInstructions?: string;
+  suzNotes?: string;
   prepTime?: string;
   totalTime?: string;
   cookTime?: string;
@@ -15,6 +19,14 @@ export interface Recipe {
   notes?: string;
   ingredients: string[];
   instructions: string[];
+  components?: Record<
+    string,
+    {
+      title?: string;
+      ingredients: string[];
+      instructions?: string[];
+    }
+  >;
 }
 
 export const slugifyRecipeTitle = (title: string) =>

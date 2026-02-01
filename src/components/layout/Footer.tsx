@@ -159,7 +159,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/nutrition?tab=recipes" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
+                <Link to="/recipes" className="flex items-center gap-2 text-gray-600 hover:text-teal transition-colors group">
                   <span className="group-hover:translate-x-1 transition-transform">Recipes</span>
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>

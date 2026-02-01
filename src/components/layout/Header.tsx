@@ -151,12 +151,18 @@ const Header = () => {
                 </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="focus:bg-accent focus:text-accent-foreground">
-                <NavLink to="/nutrition?tab=recipes" className="w-full flex items-center gap-2 px-3 py-2">
+                <NavLink to="/recipes" className="w-full flex items-center gap-2 px-3 py-2">
                   👩‍🍳 Recipes
                 </NavLink>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <NavLink 
+            to="/recipes" 
+            className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
+          >
+            Recipes
+          </NavLink>
           <NavLink 
             to="/welcome-letter" 
             className={({isActive}) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
@@ -258,6 +264,13 @@ const Header = () => {
                 >
                   Welcome Letter
                 </MobileNavItem>
+                <MobileNavItem
+                  to="/recipes"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  icon="🍽️"
+                >
+                  Recipes
+                </MobileNavItem>
 
                 {/* Collapsible sections */}
                 <MobileMenuSection
@@ -288,7 +301,7 @@ const Header = () => {
                     { to: '/nutrition?tab=protocol', label: "Dr. Esselstyn's Protocol", icon: '❤️' },
                     { to: '/nutrition?tab=dr-campbell', label: 'Dr. T. Colin Campbell', icon: '👨‍🔬' },
                     { to: '/nutrition?tab=foods', label: 'Why & How', icon: '🍎' },
-                    { to: '/nutrition?tab=recipes', label: 'Recipes', icon: '👩‍🍳' }
+                    { to: '/recipes', label: 'Recipes', icon: '👩‍🍳' }
                   ]}
                 />
 

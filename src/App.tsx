@@ -23,6 +23,8 @@ import NutritionGuide from "./pages/NutritionGuide";
 import WfpbResourceGuide from "./pages/WfpbResourceGuide";
 import Search from "./pages/Search";
 import StarterKit from "./pages/StarterKit";
+import Recipes from "./pages/Recipes";
+import RecipeDetail from "./pages/RecipeDetail";
 
 const defaultQueryClient = new QueryClient();
 
@@ -55,6 +57,8 @@ export const AppRoutes = () => (
       <Route path="/video-series" element={<VideoSeries />} />
       <Route path="/pillars/health/nutrition-guide" element={<NutritionGuide />} />
       <Route path="/pillars/health/resource-guide" element={<WfpbResourceGuide />} />
+      <Route path="/recipes" element={<Recipes />} />
+      <Route path="/recipes/:slug" element={<RecipeDetail />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:postId" element={<BlogPost />} />
       <Route path="/search" element={<Search />} />
