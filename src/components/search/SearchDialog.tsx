@@ -59,12 +59,15 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
   const setOpen = onOpenChange ?? setInternalOpen;
   const [query, setQuery] = useState('');
   const [activeType, setActiveType] = useState<SearchType | 'all'>('all');
+  const [isPinned, setIsPinned] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
   const { search, docs, loading, error, ensureIndex } = useSearch();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
   const hasUserScrolledRef = useRef(false);
+  const userScrollIntentRef = useRef(false);
+  const programmaticScrollRef = useRef(false);
   const focusPageSearch = useRef(() => {
     window.dispatchEvent(new CustomEvent('focus-search-input'));
   }).current;
@@ -173,24 +176,40 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
     };
   }, [resolvedOpen, location.pathname, setOpen]);
 
+  const markUserScrollIntent = () => {
+    userScrollIntentRef.current = true;
+    hasUserScrolledRef.current = true;
+    setIsPinned(false);
+  };
+
   useEffect(() => {
     if (!resolvedOpen) {
       return;
     }
     hasUserScrolledRef.current = false;
+    userScrollIntentRef.current = false;
+    setIsPinned(true);
     if (listRef.current) {
+      programmaticScrollRef.current = true;
       listRef.current.scrollTop = 0;
+      requestAnimationFrame(() => {
+        programmaticScrollRef.current = false;
+      });
     }
   }, [resolvedOpen]);
 
   useEffect(() => {
-    if (!resolvedOpen || hasUserScrolledRef.current) {
+    if (!resolvedOpen || !isPinned || hasUserScrolledRef.current) {
       return;
     }
     if (listRef.current) {
+      programmaticScrollRef.current = true;
       listRef.current.scrollTop = 0;
+      requestAnimationFrame(() => {
+        programmaticScrollRef.current = false;
+      });
     }
-  }, [activeType, query, results.length, resolvedOpen]);
+  }, [activeType, isPinned, query, results.length, resolvedOpen]);
 
   const handleSelect = (item: SearchDocument) => {
     setOpen(false);
@@ -246,6 +265,18 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
               setQuery(value);
               void ensureIndex();
             }}
+            onKeyDown={(event) => {
+              if (
+                event.key === 'ArrowDown' ||
+                event.key === 'ArrowUp' ||
+                event.key === 'PageDown' ||
+                event.key === 'PageUp' ||
+                event.key === 'Home' ||
+                event.key === 'End'
+              ) {
+                markUserScrollIntent();
+              }
+            }}
             placeholder="Search recipes, blog posts, pillars, nutrition..."
             className="pr-12"
           />
@@ -283,8 +314,26 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
         <CommandList
           ref={listRef}
           onScroll={(event) => {
-            hasUserScrolledRef.current = event.currentTarget.scrollTop > 2;
+            if (programmaticScrollRef.current) {
+              return;
+            }
+            const nextScrollTop = event.currentTarget.scrollTop;
+            if (isPinned && !userScrollIntentRef.current && nextScrollTop > 0) {
+              programmaticScrollRef.current = true;
+              event.currentTarget.scrollTop = 0;
+              requestAnimationFrame(() => {
+                programmaticScrollRef.current = false;
+              });
+              return;
+            }
+            if (userScrollIntentRef.current && nextScrollTop > 2) {
+              hasUserScrolledRef.current = true;
+              setIsPinned(false);
+            }
           }}
+          onWheel={markUserScrollIntent}
+          onTouchStart={markUserScrollIntent}
+          onPointerDown={markUserScrollIntent}
           className="max-h-[calc(100vh-10rem)] sm:max-h-[500px]"
         >
           {loading && (
