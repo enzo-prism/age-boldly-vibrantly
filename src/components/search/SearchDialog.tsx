@@ -176,7 +176,9 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
     navigate(item.path);
   };
 
-  const quickLinks = activeType === 'all' ? docs.slice(0, 6) : docs.filter((doc) => doc.type === activeType).slice(0, 6);
+  const featuredRecipes = useMemo(() => docs.filter((doc) => doc.type === 'recipe').slice(0, 6), [docs]);
+  const quickLinks =
+    activeType === 'all' ? docs.slice(0, 6) : docs.filter((doc) => doc.type === activeType).slice(0, 6);
 
   const openHandler = () => {
     if (location.pathname.startsWith('/search')) {
@@ -214,7 +216,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
               setQuery(value);
               void ensureIndex();
             }}
-            placeholder="Search pillars, nutrition, blog, videos..."
+            placeholder="Search recipes, blog posts, pillars, nutrition..."
             className="pr-12"
           />
           <Button
@@ -268,6 +270,27 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
               <CommandEmpty>
                 {emptyMessage}
               </CommandEmpty>
+              {!query && activeType === 'all' && featuredRecipes.length > 0 && (
+                <>
+                  <CommandGroup heading="🍽️ Featured Recipes">
+                    {featuredRecipes.map((item) => (
+                      <CommandItem key={item.id} onSelect={() => handleSelect(item)}>
+                        <div className="flex flex-col gap-1">
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium">{item.title}</span>
+                            <Badge variant="secondary" className="text-xs capitalize">
+                              Recipe
+                            </Badge>
+                          </div>
+                          <p className="text-xs text-muted-foreground line-clamp-2">{item.summary}</p>
+                        </div>
+                        <CommandShortcut>🍽️</CommandShortcut>
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                  {groupedResults.length > 0 && <CommandSeparator />}
+                </>
+              )}
               {groupedResults.map((group, index) => (
                 <React.Fragment key={group.type}>
                   {index > 0 && <CommandSeparator />}
