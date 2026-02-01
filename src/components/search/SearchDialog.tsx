@@ -4,6 +4,7 @@ import { Loader2, X } from 'lucide-react';
 
 import type { SearchDocument, SearchType } from '@/data/searchRecords';
 import { useSearch } from '@/hooks/useSearch';
+import { cn } from '@/lib/utils';
 import {
   CommandDialog,
   CommandEmpty,
@@ -62,6 +63,8 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
   const navigate = useNavigate();
   const { search, docs, loading, error, ensureIndex } = useSearch();
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const listRef = useRef<HTMLDivElement | null>(null);
+  const hasUserScrolledRef = useRef(false);
   const focusPageSearch = useRef(() => {
     window.dispatchEvent(new CustomEvent('focus-search-input'));
   }).current;
@@ -170,6 +173,25 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
     };
   }, [resolvedOpen, location.pathname, setOpen]);
 
+  useEffect(() => {
+    if (!resolvedOpen) {
+      return;
+    }
+    hasUserScrolledRef.current = false;
+    if (listRef.current) {
+      listRef.current.scrollTop = 0;
+    }
+  }, [resolvedOpen]);
+
+  useEffect(() => {
+    if (!resolvedOpen || hasUserScrolledRef.current) {
+      return;
+    }
+    if (listRef.current) {
+      listRef.current.scrollTop = 0;
+    }
+  }, [activeType, query, results.length, resolvedOpen]);
+
   const handleSelect = (item: SearchDocument) => {
     setOpen(false);
     setQuery('');
@@ -179,6 +201,14 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
   const featuredRecipes = useMemo(() => docs.filter((doc) => doc.type === 'recipe').slice(0, 6), [docs]);
   const quickLinks =
     activeType === 'all' ? docs.slice(0, 6) : docs.filter((doc) => doc.type === activeType).slice(0, 6);
+  const topResultId = useMemo(() => {
+    if (!query && activeType === 'all' && featuredRecipes.length > 0) {
+      return featuredRecipes[0]?.id;
+    }
+    return results[0]?.id ?? null;
+  }, [activeType, featuredRecipes, query, results]);
+  const itemClass = (id?: string) =>
+    cn('border border-transparent rounded-lg', id && id === topResultId && 'border-teal/30 bg-teal/10');
 
   const openHandler = () => {
     if (location.pathname.startsWith('/search')) {
@@ -250,7 +280,13 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
             </Button>
           </div>
         </div>
-        <CommandList className="max-h-[calc(100vh-10rem)] sm:max-h-[500px]">
+        <CommandList
+          ref={listRef}
+          onScroll={(event) => {
+            hasUserScrolledRef.current = event.currentTarget.scrollTop > 2;
+          }}
+          className="max-h-[calc(100vh-10rem)] sm:max-h-[500px]"
+        >
           {loading && (
             <div className="flex items-center gap-2 p-4 text-sm text-muted-foreground">
               <Loader2 className="h-4 w-4 animate-spin" />
@@ -274,7 +310,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
                 <>
                   <CommandGroup heading="🍽️ Featured Recipes">
                     {featuredRecipes.map((item) => (
-                      <CommandItem key={item.id} onSelect={() => handleSelect(item)}>
+                      <CommandItem key={item.id} onSelect={() => handleSelect(item)} className={itemClass(item.id)}>
                         <div className="flex flex-col gap-1">
                           <div className="flex items-center gap-2">
                             <span className="font-medium">{item.title}</span>
@@ -296,7 +332,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
                   {index > 0 && <CommandSeparator />}
                   <CommandGroup heading={`${typeEmoji[group.type]} ${typeLabel[group.type]}`}>
                     {group.items.map((item) => (
-                      <CommandItem key={item.id} onSelect={() => handleSelect(item)}>
+                      <CommandItem key={item.id} onSelect={() => handleSelect(item)} className={itemClass(item.id)}>
                         <div className="flex flex-col gap-1">
                           <div className="flex items-center gap-2">
                             <span className="font-medium">{item.title}</span>
@@ -317,7 +353,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
               {!query && groupedResults.length === 0 && quickLinks.length > 0 && (
                 <CommandGroup heading="⭐ Featured">
                   {quickLinks.map((item) => (
-                    <CommandItem key={item.id} onSelect={() => handleSelect(item)}>
+                    <CommandItem key={item.id} onSelect={() => handleSelect(item)} className={itemClass(item.id)}>
                       <div className="flex flex-col gap-1">
                         <div className="flex items-center gap-2">
                           <span className="font-medium">{item.title}</span>
