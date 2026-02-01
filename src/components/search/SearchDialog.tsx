@@ -57,6 +57,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
   const resolvedOpen = open ?? internalOpen;
   const setOpen = onOpenChange ?? setInternalOpen;
   const [query, setQuery] = useState('');
+  const [activeType, setActiveType] = useState<SearchType | 'all'>('all');
   const location = useLocation();
   const navigate = useNavigate();
   const { search, docs, loading, error, ensureIndex } = useSearch();
@@ -65,7 +66,10 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
     window.dispatchEvent(new CustomEvent('focus-search-input'));
   }).current;
 
-  const results = useMemo(() => search(query), [query, search]);
+  const results = useMemo(
+    () => search(query, activeType === 'all' ? undefined : { types: [activeType] }),
+    [query, search, activeType]
+  );
 
   const groupedResults: ResultGroup[] = useMemo(() => {
     const groups: Record<SearchType, SearchDocument[]> = {
@@ -172,7 +176,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
     navigate(item.path);
   };
 
-  const quickLinks = docs.slice(0, 6);
+  const quickLinks = activeType === 'all' ? docs.slice(0, 6) : docs.filter((doc) => doc.type === activeType).slice(0, 6);
 
   const openHandler = () => {
     if (location.pathname.startsWith('/search')) {
@@ -187,6 +191,11 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
 
   const isMobile = typeof window !== 'undefined' ? window.matchMedia('(max-width: 1023px)').matches : false;
   const contentWidth = isMobile ? 'w-full h-full rounded-none border-0' : 'w-[min(100vw-1.5rem,720px)] max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-4rem)] rounded-2xl sm:rounded-xl border border-border';
+  const emptyMessage = query
+    ? 'No matches found.'
+    : activeType === 'recipe'
+      ? 'Browse recipes or start typing to search.'
+      : 'Start typing to search or use a quick link.';
 
   return (
     <>
@@ -219,6 +228,26 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
             <X className="h-4 w-4" />
           </Button>
         </div>
+        <div className="px-4 pb-2 pt-1 border-b">
+          <div className="flex flex-wrap gap-2">
+            <Button
+              type="button"
+              size="sm"
+              variant={activeType === 'all' ? 'secondary' : 'ghost'}
+              onClick={() => setActiveType('all')}
+            >
+              All
+            </Button>
+            <Button
+              type="button"
+              size="sm"
+              variant={activeType === 'recipe' ? 'secondary' : 'ghost'}
+              onClick={() => setActiveType('recipe')}
+            >
+              Recipes
+            </Button>
+          </div>
+        </div>
         <CommandList className="max-h-[calc(100vh-10rem)] sm:max-h-[500px]">
           {loading && (
             <div className="flex items-center gap-2 p-4 text-sm text-muted-foreground">
@@ -237,7 +266,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
           {!loading && !error && (
             <>
               <CommandEmpty>
-                {query ? 'No matches found.' : 'Start typing to search or use a quick link.'}
+                {emptyMessage}
               </CommandEmpty>
               {groupedResults.map((group, index) => (
                 <React.Fragment key={group.type}>
