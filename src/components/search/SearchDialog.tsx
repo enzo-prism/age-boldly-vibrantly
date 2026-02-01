@@ -77,13 +77,21 @@ export const SearchDialog: React.FC<SearchDialogProps> = ({
       section: [],
       recipe: [],
     };
+    const groupOrder = new Map<SearchType, number>();
 
-    results.forEach((item) => {
+    results.forEach((item, index) => {
       groups[item.type]?.push(item);
+      if (!groupOrder.has(item.type)) {
+        groupOrder.set(item.type, index);
+      }
     });
 
     return Object.entries(groups)
       .filter(([, items]) => items.length > 0)
+      .sort(
+        ([typeA], [typeB]) =>
+          (groupOrder.get(typeA as SearchType) ?? 0) - (groupOrder.get(typeB as SearchType) ?? 0)
+      )
       .map(([type, items]) => ({ type: type as SearchType, items }));
   }, [results]);
 

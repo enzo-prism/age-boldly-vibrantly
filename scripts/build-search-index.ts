@@ -137,12 +137,26 @@ const buildNutritionTabDocs = (): SearchDocument[] =>
 const buildRecipeDocs = (): SearchDocument[] =>
   recipes.map<SearchDocument>((recipe) => {
     const slug = slugifyRecipeTitle(recipe.title);
+    const ingredientText = recipe.ingredients?.join(' ') ?? '';
+    const instructionText = recipe.instructions?.join(' ') ?? '';
+    const content = [
+      recipe.description,
+      recipe.notes,
+      recipe.category,
+      ...(recipe.tags ?? []),
+      ingredientText,
+      instructionText,
+    ]
+      .filter(Boolean)
+      .join(' ');
+
     return {
       id: `recipe:${slug}`,
       type: 'recipe',
       title: recipe.title,
       path: `/nutrition?tab=recipes#recipe-${slug}`,
       summary: recipe.description,
+      content,
       tags: ['recipe', recipe.category, ...(recipe.tags ?? [])],
       section: 'nutrition',
     };

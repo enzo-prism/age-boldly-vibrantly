@@ -25,6 +25,57 @@ const FIELD_BOOSTS = {
 const OR_MIN_SCORE = 5;
 const OR_RELATIVE_CUTOFF = 0.3;
 
+const GENERIC_TERMS = new Set([
+  'a',
+  'an',
+  'and',
+  'for',
+  'how',
+  'in',
+  'of',
+  'on',
+  'or',
+  'the',
+  'to',
+  'with',
+  'without',
+  'recipe',
+  'recipes',
+  'cook',
+  'cooking',
+  'meal',
+  'meals',
+  'video',
+  'videos',
+  'blog',
+  'blogs',
+  'post',
+  'posts',
+  'guide',
+  'guides',
+  'resource',
+  'resources',
+  'pillar',
+  'pillars',
+]);
+
+const TERM_BOOSTS: Record<string, number> = {
+  recipe: 0.35,
+  recipes: 0.35,
+  blog: 0.5,
+  blogs: 0.5,
+  post: 0.5,
+  posts: 0.5,
+  video: 0.5,
+  videos: 0.5,
+  guide: 0.55,
+  guides: 0.55,
+  resource: 0.55,
+  resources: 0.55,
+  pillar: 0.6,
+  pillars: 0.6,
+};
+
 const normalizeQuery = (raw: string) => {
   let query = raw.toLowerCase();
   query = query.replace(/[-_]+/g, ' ');
@@ -35,6 +86,17 @@ const normalizeQuery = (raw: string) => {
     [/\bwfpb\b/g, 'whole food plant based'],
     [/\bwholefood\b/g, 'whole food'],
     [/\boilfree\b/g, 'oil free'],
+    [/\breciepe\b/g, 'recipe'],
+    [/\breceipe\b/g, 'recipe'],
+    [/\brecepie\b/g, 'recipe'],
+    [/\breciep\b/g, 'recipe'],
+    [/\brecipp\b/g, 'recipe'],
+    [/\brecipie\b/g, 'recipe'],
+    [/\brecipies\b/g, 'recipes'],
+    [/\bpotatoes\b/g, 'potato'],
+    [/\btomatoes\b/g, 'tomato'],
+    [/\bberries\b/g, 'berry'],
+    [/\bsweetpotato\b/g, 'sweet potato'],
   ];
 
   replacements.forEach(([pattern, replacement]) => {
@@ -60,7 +122,7 @@ const getTypeBoostForQuery = (normalized: string) => {
   const wantsPillar = /\b(pillar|quiz|checklist)\b/.test(normalized);
   const wantsBlog = /\b(blog|post)\b/.test(normalized);
   const wantsResource = /\b(guide|nutrition|resource|download)\b/.test(normalized);
-  const wantsRecipe = /\b(recipe|recipes|cook|cooking|meal|meals|dessert|desserts|salad|salads|soup|soups|muffin|muffins)\b/.test(normalized);
+  const wantsRecipe = /\b(recipe|recipes|reciepe|receipe|recepie|recipie|cook|cooking|meal|meals|dessert|desserts|salad|salads|soup|soups|muffin|muffins)\b/.test(normalized);
   const wantsSection = /\b(tab|section|protocol|benefits|labels|b12|rebel plate|crowd out|first steps)\b/.test(normalized) || wantsResource;
 
   return (type: SearchType) => {
@@ -180,21 +242,33 @@ const searchIndex = (query: string, filters?: SearchFilters): SearchResultItem[]
   }
 
   const tokens = normalized.split(' ').filter(Boolean);
-  const tokenCount = tokens.length;
-  const fuzzy = getFuzzyForQuery(normalized, tokenCount);
+  const requiredTokens = tokens.filter((token) => !GENERIC_TERMS.has(token));
+  const searchTokens = requiredTokens.length ? requiredTokens : tokens;
+  const tokenCount = searchTokens.length;
+  const searchQuery = searchTokens.join(' ');
+  const fuzzy = getFuzzyForQuery(searchQuery, tokenCount);
   const searchOptions = {
     prefix: true,
     fuzzy,
     boost: FIELD_BOOSTS,
+    boostTerm: (term: string) => TERM_BOOSTS[term] ?? 1,
   } as const;
 
-  let rawResults = miniSearch.search(normalized, { ...searchOptions, combineWith: 'AND' }) as SearchResult[];
+  let rawResults = miniSearch.search(searchQuery, { ...searchOptions, combineWith: 'AND' }) as SearchResult[];
 
   if (!rawResults.length && tokenCount >= 2) {
-    const orResults = miniSearch.search(normalized, { ...searchOptions, combineWith: 'OR' }) as SearchResult[];
+    const orResults = miniSearch.search(searchQuery, { ...searchOptions, combineWith: 'OR' }) as SearchResult[];
     const topScore = orResults[0]?.score ?? 0;
     if (topScore >= OR_MIN_SCORE) {
       rawResults = orResults.filter((result) => (result.score ?? 0) >= topScore * OR_RELATIVE_CUTOFF);
+    } else if (requiredTokens.length && requiredTokens.length !== tokens.length) {
+      const relaxedResults = miniSearch.search(normalized, { ...searchOptions, combineWith: 'OR' }) as SearchResult[];
+      const relaxedTop = relaxedResults[0]?.score ?? 0;
+      if (relaxedTop) {
+        rawResults = relaxedResults.filter(
+          (result) => (result.score ?? 0) >= relaxedTop * OR_RELATIVE_CUTOFF
+        );
+      }
     }
   }
 
