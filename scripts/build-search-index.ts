@@ -2,7 +2,11 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+
 import { blogPosts } from '../src/data/blogPosts';
+import { blogPostContent } from '../src/data/blogPostContent';
 import { nutritionTabs } from '../src/data/nutritionTabs';
 import { recipes, slugifyRecipeTitle } from '../src/data/recipes';
 import { nutritionGuideSections } from '../src/data/nutritionGuideSections';
@@ -29,6 +33,27 @@ const STATIC_PATHS = new Set([
   '/team',
   '/search',
 ]);
+
+const decodeEntities = (value: string) =>
+  value
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
+
+const stripMarkup = (markup: string) =>
+  decodeEntities(
+    markup
+      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ')
+  )
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const extractText = (node: React.ReactNode) =>
+  stripMarkup(renderToStaticMarkup(React.createElement(React.Fragment, null, node)));
 
 const buildStaticPageDocs = (): SearchDocument[] => {
   return seoRoutes
@@ -70,16 +95,21 @@ const buildGratitudeDoc = (): SearchDocument | null => {
 };
 
 const buildBlogDocs = (): SearchDocument[] =>
-  blogPosts.map<SearchDocument>((post) => ({
-    id: `blog:${post.id}`,
-    type: 'blog',
-    title: post.title,
-    path: `/blog/${post.id}`,
-    summary: post.seoDescription ?? post.excerpt,
-    content: `Blog #${post.blogNumber}: ${post.title}. ${post.excerpt}`,
-    tags: ['blog', `blog-${post.blogNumber}`, post.blogNumber.toString()],
-    updatedAt: post.dateSort?.toISOString(),
-  }));
+  blogPosts.map<SearchDocument>((post) => {
+    const contentEntry = blogPostContent[post.id];
+    const bodyText = contentEntry ? extractText(contentEntry.body) : '';
+
+    return {
+      id: `blog:${post.id}`,
+      type: 'blog',
+      title: post.title,
+      path: `/blog/${post.id}`,
+      summary: post.seoDescription ?? post.excerpt,
+      content: bodyText || `Blog #${post.blogNumber}: ${post.title}. ${post.excerpt}`,
+      tags: ['blog', `blog-${post.blogNumber}`, post.blogNumber.toString()],
+      updatedAt: post.dateSort?.toISOString(),
+    };
+  });
 
 const buildVideoDocs = (): SearchDocument[] =>
   videoSeriesData.map<SearchDocument>((video) => ({
@@ -129,8 +159,25 @@ const buildNutritionGuideSectionDocs = (): SearchDocument[] =>
     section: 'nutrition-guide',
   }));
 
+const buildResourceGuideDoc = (): SearchDocument | null => {
+  const resourceRoute = seoRoutes.find((route) => route.path === '/pillars/health/resource-guide');
+  if (!resourceRoute) {
+    return null;
+  }
+
+  return {
+    id: 'resource:resource-guide',
+    type: 'resource',
+    title: resourceRoute.title,
+    path: resourceRoute.path,
+    summary: resourceRoute.description,
+    tags: ['nutrition', 'resource', 'health', 'guide'],
+  };
+};
+
 const buildSearchIndex = (): SearchDocument[] => {
   const gratitudeDoc = buildGratitudeDoc();
+  const resourceGuideDoc = buildResourceGuideDoc();
   const docs: SearchDocument[] = [
     ...buildStaticPageDocs(),
     ...buildPillarDocs(),
@@ -148,6 +195,7 @@ const buildSearchIndex = (): SearchDocument[] => {
         'What to eat, what to crowd out, and label-reading tips for a whole-food, plant-based lifestyle that supports the Health pillar.',
       tags: ['nutrition', 'guide', 'health'],
     },
+    ...(resourceGuideDoc ? [resourceGuideDoc] : []),
     ...(gratitudeDoc ? [gratitudeDoc] : []),
   ];
 
