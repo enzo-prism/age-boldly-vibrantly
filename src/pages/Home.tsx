@@ -6,6 +6,7 @@ import LatestBlogBadge from '@/components/home/LatestBlogBadge';
 import ConnectCTA from '@/components/common/ConnectCTA';
 import { getSortedBlogPosts } from '@/data/blogPosts';
 import { useSearch } from '@/hooks/useSearch';
+import type { SearchType } from '@/data/searchRecords';
 import { Button } from '@/components/ui/button';
 import {
   Carousel,
@@ -26,8 +27,9 @@ const Home = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeSearchType, setActiveSearchType] = useState<SearchType | 'all'>('all');
   const navigate = useNavigate();
-  const { search, ensureIndex, loading: searchLoading } = useSearch();
+  const { search, ensureIndex, loading: searchLoading, docs } = useSearch();
   const homeSeo = getSeoRouteByPath('/');
 
   // Prevent auto-scrolling during initial load
@@ -123,7 +125,49 @@ const Home = () => {
     .sort((a, b) => b.blogNumber - a.blogNumber)
     .slice(0, 10);
 
-  const searchResults = useMemo(() => (searchQuery ? search(searchQuery).slice(0, 5) : []), [searchQuery, search]);
+  const searchResults = useMemo(
+    () =>
+      searchQuery
+        ? search(searchQuery, activeSearchType === 'all' ? undefined : { types: [activeSearchType] }).slice(0, 5)
+        : [],
+    [activeSearchType, searchQuery, search]
+  );
+  const featuredRecipes = useMemo(
+    () => docs.filter((doc) => doc.type === 'recipe').slice(0, 2),
+    [docs]
+  );
+  const featuredVideos = useMemo(
+    () => docs.filter((doc) => doc.type === 'video').slice(0, 2),
+    [docs]
+  );
+  const featuredPillars = useMemo(
+    () => docs.filter((doc) => doc.type === 'pillar').slice(0, 2),
+    [docs]
+  );
+  const featuredBlogs = useMemo(
+    () =>
+      latestBlogs.slice(0, 2).map((post) => ({
+        id: `blog:${post.id}`,
+        title: post.title,
+        summary: post.excerpt,
+        path: `/blog/${post.id}`,
+        type: 'blog' as const,
+        blogNumber: post.blogNumber,
+      })),
+    [latestBlogs]
+  );
+  const defaultItems = useMemo(
+    () => {
+      if (activeSearchType === 'recipe') return featuredRecipes;
+      if (activeSearchType === 'blog') return featuredBlogs;
+      if (activeSearchType === 'video') return featuredVideos;
+      if (activeSearchType === 'pillar') return featuredPillars;
+      return [...featuredRecipes, ...featuredBlogs];
+    },
+    [activeSearchType, featuredBlogs, featuredPillars, featuredRecipes, featuredVideos]
+  );
+  const displayItems = searchQuery ? searchResults : defaultItems;
+  const topItemId = displayItems[0]?.id;
 
   useEffect(() => {
     void ensureIndex();
@@ -401,7 +445,7 @@ const Home = () => {
             <p className="uppercase text-xs tracking-[0.3em] text-teal font-semibold">Search</p>
             <h2 className="text-3xl md:text-4xl font-bold">Find anything on Rebellious Aging</h2>
             <p className="text-gray-600">
-              Looking for a specific blog, pillar, or video? Search the site right here.
+              Looking for a specific recipe, blog, pillar, or video? Search the site right here.
             </p>
           </div>
 
@@ -421,7 +465,7 @@ const Home = () => {
                 type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search blog, pillars, nutrition guide, video series…"
+                placeholder="Search recipes, blogs, pillars, nutrition, video series…"
                 className="w-full rounded-full border border-gray-200 bg-white px-11 py-3.5 text-base shadow-sm focus:border-teal focus:ring-2 focus:ring-teal/20 transition"
               />
               {searchLoading && (
@@ -430,28 +474,69 @@ const Home = () => {
             </div>
           </form>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            {(searchQuery ? searchResults : latestBlogs.slice(0, 4)).map((item) => (
-              <Link
-                key={item.id}
-                to={item.path ?? `/blog/${item.id}`}
-                className="block rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:-translate-y-1 hover:shadow-md transition"
+          <div className="flex flex-wrap justify-center gap-2 text-sm">
+            {([
+              { label: 'All', value: 'all' },
+              { label: 'Recipes', value: 'recipe' },
+              { label: 'Blog', value: 'blog' },
+              { label: 'Videos', value: 'video' },
+              { label: 'Pillars', value: 'pillar' },
+            ] as const).map((filter) => (
+              <Button
+                key={filter.value}
+                variant={activeSearchType === filter.value ? 'default' : 'outline'}
+                className="rounded-full px-4 py-2 text-xs"
+                onClick={() => setActiveSearchType(filter.value)}
               >
-                <div className="flex items-center gap-2 mb-2 text-xs uppercase tracking-[0.12em] text-teal font-semibold">
-                  <span>{item.type ?? 'blog'}</span>
-                  {('blogNumber' in item && item.blogNumber) ? <span className="text-gray-300">•</span> : null}
-                  {('blogNumber' in item && item.blogNumber) ? <span>Blog #{(item as any).blogNumber}</span> : null}
-                </div>
-                <h3 className="text-lg font-semibold mb-2 line-clamp-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm line-clamp-2">{item.summary ?? item.excerpt}</p>
-              </Link>
+                {filter.label}
+              </Button>
             ))}
           </div>
 
+          {displayItems.length === 0 ? (
+            <div className="max-w-3xl mx-auto border border-dashed border-gray-200 rounded-2xl p-6 text-center text-sm text-gray-600">
+              No matches yet. Try searching for “sweet potato,” “oil-free,” or “confidence.”
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+              {displayItems.map((item) => {
+                const isTop = item.id === topItemId;
+                const topLabel = searchQuery ? 'Top result' : 'Top pick';
+                const typeLabel = item.type ?? 'blog';
+
+                return (
+                  <Link
+                    key={item.id}
+                    to={item.path ?? `/blog/${item.id}`}
+                    className={`block rounded-2xl border bg-white p-5 shadow-sm hover:-translate-y-1 hover:shadow-md transition ${
+                      isTop ? 'border-teal/50 ring-2 ring-teal/15' : 'border-gray-200'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2 mb-2 text-xs uppercase tracking-[0.12em] text-teal font-semibold">
+                      <span>{typeLabel}</span>
+                      {('blogNumber' in item && item.blogNumber) ? <span className="text-gray-300">•</span> : null}
+                      {('blogNumber' in item && item.blogNumber) ? <span>Blog #{(item as any).blogNumber}</span> : null}
+                      {isTop ? <span className="ml-2 rounded-full bg-teal/10 px-2 py-0.5 text-[0.6rem]">{topLabel}</span> : null}
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 line-clamp-2">{item.title}</h3>
+                    <p className="text-gray-600 text-sm line-clamp-2">{item.summary ?? item.excerpt}</p>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+
           <div className="text-center">
-            <Button asChild variant="outline" className="border-teal text-teal hover:bg-teal hover:text-white">
-              <Link to={searchQuery ? `/search?q=${encodeURIComponent(searchQuery.trim())}` : '/search'}>Open full search →</Link>
-            </Button>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button asChild className="bg-teal text-white hover:bg-teal-dark">
+                <Link to="/recipes">Browse recipes</Link>
+              </Button>
+              <Button asChild variant="outline" className="border-teal text-teal hover:bg-teal hover:text-white">
+                <Link to={searchQuery ? `/search?q=${encodeURIComponent(searchQuery.trim())}` : '/search'}>
+                  Open full search →
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
