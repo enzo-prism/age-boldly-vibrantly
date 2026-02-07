@@ -70,6 +70,12 @@ const buildSearchText = (recipe: Recipe) =>
       ...(recipe.tags ?? []),
       ...(recipe.ingredients ?? []),
       ...(recipe.instructions ?? []),
+      ...Object.entries(recipe.components ?? {}).flatMap(([key, component]) => [
+        key,
+        component.title,
+        ...(component.ingredients ?? []),
+        ...(component.instructions ?? []),
+      ]),
     ]
       .filter(Boolean)
       .join(' ')

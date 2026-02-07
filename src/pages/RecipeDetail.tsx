@@ -5,20 +5,12 @@ import { ChefHat, Clock, Snowflake, Users } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Seo from '@/components/seo/Seo';
 import { recipes, slugifyRecipeTitle } from '@/data/recipes';
+import { getAllRecipeIngredients, getAllRecipeInstructions, getRecipeSections } from '@/lib/recipeSections';
 import { buildMetaDescription, getCanonicalUrl } from '@/lib/seo';
 import { buildRecipeJsonLd } from '@/lib/structuredData';
 import { siteMetadata } from '@/lib/siteMetadata';
-
-const formatComponentTitle = (key: string, title?: string) => {
-  if (title) return title;
-  return key
-    .replace(/([a-z])([A-Z])/g, '$1 $2')
-    .replace(/[-_]/g, ' ')
-    .replace(/\b\w/g, (char) => char.toUpperCase());
-};
 
 const RecipeDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -51,17 +43,8 @@ const RecipeDetail = () => {
   const metaDescription = buildMetaDescription(recipe.description);
   const image = recipe.image ?? siteMetadata.defaultSocialImage;
 
-  const instructionsForSchema = recipe.instructions?.length
-    ? recipe.instructions
-    : Object.values(recipe.components ?? {})
-        .flatMap((component) => component.instructions ?? [])
-        .filter(Boolean);
-
-  const ingredientsForSchema = recipe.ingredients?.length
-    ? recipe.ingredients
-    : Object.values(recipe.components ?? {})
-        .flatMap((component) => component.ingredients ?? [])
-        .filter(Boolean);
+  const instructionsForSchema = getAllRecipeInstructions(recipe);
+  const ingredientsForSchema = getAllRecipeIngredients(recipe);
 
   const recipeJsonLd = buildRecipeJsonLd({
     name: recipe.title,
@@ -79,8 +62,7 @@ const RecipeDetail = () => {
     keywords: recipe.tags?.join(', '),
   });
 
-  const componentEntries = recipe.components ? Object.entries(recipe.components) : [];
-  const hasComponents = componentEntries.length > 0;
+  const recipeSections = getRecipeSections(recipe);
 
   return (
     <div className="min-h-screen bg-background px-4 py-12">
@@ -153,7 +135,7 @@ const RecipeDetail = () => {
 
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>Category: <span className="capitalize">{recipe.category}</span></p>
-              <p>Source: {recipe.source}</p>
+              {recipe.source && <p>Source: {recipe.source}</p>}
               {recipe.storageInstructions && <p>Storage: {recipe.storageInstructions}</p>}
             </div>
 
@@ -169,87 +151,58 @@ const RecipeDetail = () => {
         <div className="space-y-6">
           <h2 className="text-2xl font-bold">Let&apos;s cook</h2>
 
-          {hasComponents ? (
-            <Tabs defaultValue={componentEntries[0][0]} className="w-full">
-              <TabsList className="flex flex-wrap h-auto">
-                {componentEntries.map(([key, section]) => (
-                  <TabsTrigger key={key} value={key} className="capitalize">
-                    {formatComponentTitle(key, section.title)}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
+          <div className="space-y-8">
+            {recipeSections.map((section) => {
+              const hasIngredients = section.ingredients.length > 0;
+              const hasInstructions = section.instructions.length > 0;
+              const gridClassName = hasIngredients && hasInstructions ? 'grid lg:grid-cols-2 gap-6' : 'grid gap-6';
 
-              {componentEntries.map(([key, section]) => (
-                <TabsContent key={key} value={key} className="mt-6">
-                  <div className="grid lg:grid-cols-2 gap-6">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Ingredients</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="list-disc list-inside space-y-1 text-sm">
-                          {section.ingredients.map((ingredient, index) => (
-                            <li key={index}>{ingredient}</li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
+              return (
+                <div key={section.key} className="space-y-4">
+                  {recipeSections.length > 1 && (
+                    <h3 className="text-lg font-semibold">{section.title}</h3>
+                  )}
 
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Instructions</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ol className="space-y-3 text-sm">
-                          {(section.instructions ?? []).map((step, index) => (
-                            <li key={index} className="flex gap-3">
-                              <span className="flex-shrink-0 w-7 h-7 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium">
-                                {index + 1}
-                              </span>
-                              <span className="leading-relaxed">{step}</span>
-                            </li>
-                          ))}
-                        </ol>
-                      </CardContent>
-                    </Card>
+                  <div className={gridClassName}>
+                    {hasIngredients && (
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Ingredients</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="list-disc list-inside space-y-1 text-sm">
+                            {section.ingredients.map((ingredient, index) => (
+                              <li key={index}>{ingredient}</li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    )}
+
+                    {hasInstructions && (
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Instructions</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <ol className="space-y-3 text-sm">
+                            {section.instructions.map((step, index) => (
+                              <li key={index} className="flex gap-3">
+                                <span className="flex-shrink-0 w-7 h-7 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium">
+                                  {index + 1}
+                                </span>
+                                <span className="leading-relaxed">{step}</span>
+                              </li>
+                            ))}
+                          </ol>
+                        </CardContent>
+                      </Card>
+                    )}
                   </div>
-                </TabsContent>
-              ))}
-            </Tabs>
-          ) : (
-            <div className="grid lg:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Ingredients</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    {recipe.ingredients.map((ingredient, index) => (
-                      <li key={index}>{ingredient}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Instructions</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ol className="space-y-3 text-sm">
-                    {recipe.instructions.map((step, index) => (
-                      <li key={index} className="flex gap-3">
-                        <span className="flex-shrink-0 w-7 h-7 bg-teal text-white rounded-full flex items-center justify-center text-xs font-medium">
-                          {index + 1}
-                        </span>
-                        <span className="leading-relaxed">{step}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </CardContent>
-              </Card>
-            </div>
-          )}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-3">

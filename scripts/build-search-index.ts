@@ -140,6 +140,15 @@ const buildRecipeDocs = (): SearchDocument[] =>
     const slug = slugifyRecipeTitle(recipe.title);
     const ingredientText = recipe.ingredients?.join(' ') ?? '';
     const instructionText = recipe.instructions?.join(' ') ?? '';
+    const componentText = Object.entries(recipe.components ?? {})
+      .flatMap(([key, component]) => [
+        key,
+        component.title,
+        ...(component.ingredients ?? []),
+        ...(component.instructions ?? []),
+      ])
+      .filter(Boolean)
+      .join(' ');
     const content = [
       recipe.description,
       recipe.notes,
@@ -147,6 +156,7 @@ const buildRecipeDocs = (): SearchDocument[] =>
       ...(recipe.tags ?? []),
       ingredientText,
       instructionText,
+      componentText,
     ]
       .filter(Boolean)
       .join(' ');

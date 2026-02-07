@@ -499,28 +499,35 @@ const Home = () => {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-              {displayItems.map((item) => {
-                const isTop = item.id === topItemId;
-                const topLabel = searchQuery ? 'Top result' : 'Top pick';
-                const typeLabel = item.type ?? 'blog';
-
-                return (
-                  <Link
-                    key={item.id}
-                    to={item.path ?? `/blog/${item.id}`}
+	              {displayItems.map((item) => {
+	                const isTop = item.id === topItemId;
+	                const topLabel = searchQuery ? 'Top result' : 'Top pick';
+	                const typeLabel = item.type ?? 'blog';
+	                const blogNumber =
+	                  typeof item === 'object' &&
+	                  item !== null &&
+	                  'blogNumber' in item &&
+	                  typeof (item as { blogNumber?: unknown }).blogNumber === 'number'
+	                    ? (item as { blogNumber: number }).blogNumber
+	                    : null;
+	
+	                return (
+	                  <Link
+	                    key={item.id}
+	                    to={item.path ?? `/blog/${item.id}`}
                     className={`block rounded-2xl border bg-white p-5 shadow-sm hover:-translate-y-1 hover:shadow-md transition ${
                       isTop ? 'border-teal/50 ring-2 ring-teal/15' : 'border-gray-200'
                     }`}
                   >
-                    <div className="flex items-center gap-2 mb-2 text-xs uppercase tracking-[0.12em] text-teal font-semibold">
-                      <span>{typeLabel}</span>
-                      {('blogNumber' in item && item.blogNumber) ? <span className="text-gray-300">•</span> : null}
-                      {('blogNumber' in item && item.blogNumber) ? <span>Blog #{(item as any).blogNumber}</span> : null}
-                      {isTop ? <span className="ml-2 rounded-full bg-teal/10 px-2 py-0.5 text-[0.6rem]">{topLabel}</span> : null}
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 line-clamp-2">{item.title}</h3>
-                    <p className="text-gray-600 text-sm line-clamp-2">{item.summary ?? item.excerpt}</p>
-                  </Link>
+	                    <div className="flex items-center gap-2 mb-2 text-xs uppercase tracking-[0.12em] text-teal font-semibold">
+	                      <span>{typeLabel}</span>
+	                      {blogNumber !== null ? <span className="text-gray-300">•</span> : null}
+	                      {blogNumber !== null ? <span>Blog #{blogNumber}</span> : null}
+	                      {isTop ? <span className="ml-2 rounded-full bg-teal/10 px-2 py-0.5 text-[0.6rem]">{topLabel}</span> : null}
+	                    </div>
+	                    <h3 className="text-lg font-semibold mb-2 line-clamp-2">{item.title}</h3>
+	                    <p className="text-gray-600 text-sm line-clamp-2">{item.summary ?? item.excerpt}</p>
+	                  </Link>
                 );
               })}
             </div>
