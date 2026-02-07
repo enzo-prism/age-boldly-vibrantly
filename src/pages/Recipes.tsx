@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Seo from '@/components/seo/Seo';
 import { getSeoRouteByPath } from '@/data/seoRoutes';
 import { recipes, slugifyRecipeTitle, type Recipe } from '@/data/recipes';
@@ -194,28 +195,39 @@ const Recipes = () => {
 
       <section id="recipe-filters" className="px-4 py-12">
         <div className="max-w-6xl mx-auto space-y-8">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-            <div>
-              <h2 className="text-2xl font-bold">Find the perfect recipe</h2>
-              <p className="text-muted-foreground">Filter by category or tag, then sort by what matters most today.</p>
-            </div>
-            <div className="flex flex-wrap items-center gap-3">
-              <label className="text-sm text-muted-foreground" htmlFor="recipe-sort">Sort by</label>
-              <select
-                id="recipe-sort"
-                value={sortBy}
-                onChange={(event) => setSortBy(event.target.value as 'newest' | 'alpha' | 'quick')}
-                className="rounded-full border border-input bg-background px-4 py-2 text-sm"
-              >
-                <option value="newest">Newest</option>
-                <option value="alpha">A - Z</option>
-                <option value="quick">Quick to Prep</option>
-              </select>
-              <Button variant="ghost" onClick={clearFilters} className="text-sm">
-                Clear all
-              </Button>
-            </div>
-          </div>
+	          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+	            <div>
+	              <h2 className="text-2xl font-bold">Find the perfect recipe</h2>
+	              <p className="text-muted-foreground">Filter by category or tag, then sort by what matters most today.</p>
+	            </div>
+	            <div className="flex flex-wrap items-center gap-3">
+	              <span id="recipe-sort-label" className="text-sm text-muted-foreground">
+	                Sort by
+	              </span>
+	              <Select value={sortBy} onValueChange={(value) => setSortBy(value as 'newest' | 'alpha' | 'quick')}>
+	                <SelectTrigger
+	                  aria-labelledby="recipe-sort-label"
+	                  className="h-11 w-[180px] rounded-full px-4 text-sm font-medium"
+	                >
+	                  <SelectValue />
+	                </SelectTrigger>
+	                <SelectContent className="rounded-2xl border border-border shadow-xl">
+	                  <SelectItem value="newest" className="rounded-xl">
+	                    Newest
+	                  </SelectItem>
+	                  <SelectItem value="alpha" className="rounded-xl">
+	                    A - Z
+	                  </SelectItem>
+	                  <SelectItem value="quick" className="rounded-xl">
+	                    Quick to Prep
+	                  </SelectItem>
+	                </SelectContent>
+	              </Select>
+	              <Button variant="ghost" onClick={clearFilters} className="text-sm">
+	                Clear all
+	              </Button>
+	            </div>
+	          </div>
 
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Browse by Category</h3>
