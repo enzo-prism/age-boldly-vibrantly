@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BlogPostFooter } from '@/components/blog/BlogPostFooter';
+import { BlogShareActions } from '@/components/blog/BlogShareActions';
 import Seo from '@/components/seo/Seo';
 import { blogPostContent } from '@/data/blogPostContent';
 import { getBlogPostById, getNextBlogPost } from '@/data/blogPosts';
@@ -76,10 +77,21 @@ const BlogPost = () => {
         <span className="text-primary font-bold text-lg">Blog #{currentPost.blogNumber}</span>
       </div>
 
+      <div className="mb-8">
+        <p className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-3">
+          Share this article
+        </p>
+        <BlogShareActions
+          title={currentPost.title}
+          excerpt={currentPost.excerpt}
+          url={canonicalUrl}
+        />
+      </div>
+
       {postContent.heading}
       {postContent.body}
 
-      <BlogPostFooter currentPost={currentPost} nextPost={nextPost} canonicalUrl={canonicalUrl} />
+      <BlogPostFooter nextPost={nextPost} />
     </div>
   );
 };
