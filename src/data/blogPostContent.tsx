@@ -4063,4 +4063,66 @@ export const blogPostContent: Record<string, BlogPostContentEntry> = {
       </>
     ),
   },
+
+  'i-dont-need-to-be-perfect-i-just-need-to-keep-going': {
+    heading: <h1 className="text-4xl font-bold mb-4">I Don’t Need to be Perfect. I Just Need to Keep Going</h1>,
+    body: (
+      <>
+        <p className="italic mb-8">By Suzanne</p>
+
+        <div className="prose max-w-none space-y-4 mb-16">
+          <p>
+            For so many years, I thought confidence meant having it all together before I took the next step. If I could just be better,
+            calmer, more polished, then I would finally feel ready.
+          </p>
+
+          <p>But life has taught me something far more honest and far more freeing.</p>
+
+          <p>I don&apos;t need to be perfect. I just need to keep going.</p>
+
+          <p>
+            Perfection is a moving target. It keeps us overthinking, shrinking, and waiting for a version of ourselves that does not
+            exist.
+          </p>
+
+          <p>
+            Progress, however, is available right now. One decision. One conversation. One hard moment where you stay present instead of
+            walking away from yourself.
+          </p>
+
+          <p>
+            Confidence is not about staying calm. NOPE! It&apos;s about staying.
+          </p>
+
+          <p>
+            Staying when your mind gets loud. Staying when you feel unsure. Staying long enough to remember who you are and what matters
+            most.
+          </p>
+
+          <p>
+            If today feels messy, good. Messy means you are in motion. Messy means you are learning. Messy means you are still in the
+            arena of your own life.
+          </p>
+
+          <p>
+            So take the pressure off perfect and put your energy into practice. Keep showing up. Keep choosing your values. Keep being kind
+            to yourself while you build a life that feels true.
+          </p>
+
+          <p>
+            This is how we age boldly, not by getting everything right, but by refusing to quit on ourselves.
+          </p>
+
+          <p>
+            <strong>Suz xo</strong>
+          </p>
+
+          <p>
+            <strong>Age Boldly, Live Loudly!</strong>
+          </p>
+        </div>
+      </>
+    ),
+  },
+
 };
