@@ -4,7 +4,7 @@ import { BlogPostFooter } from '@/components/blog/BlogPostFooter';
 import { BlogShareActions } from '@/components/blog/BlogShareActions';
 import Seo from '@/components/seo/Seo';
 import { blogPostContent } from '@/data/blogPostContent';
-import { getBlogPostById, getNextBlogPost } from '@/data/blogPosts';
+import { getBlogPostById, getBlogPostSeoTitle, getNextBlogPost } from '@/data/blogPosts';
 import { buildMetaDescription, buildSeoTitle, getCanonicalUrl, resolveSocialImage } from '@/lib/seo';
 import { buildArticleJsonLd } from '@/lib/structuredData';
 import { siteMetadata } from '@/lib/siteMetadata';
@@ -40,6 +40,7 @@ const BlogPost = () => {
 
   const nextPost = getNextBlogPost(currentPost.blogNumber);
   const canonicalUrl = getCanonicalUrl(canonicalPath);
+  const pageTitle = getBlogPostSeoTitle(currentPost);
   const metaDescription = buildMetaDescription(currentPost.seoDescription, currentPost.excerpt);
   const publishedTime = currentPost.dateSort.toISOString();
   const socialImage = resolveSocialImage(siteMetadata.defaultSocialImage);
@@ -47,7 +48,7 @@ const BlogPost = () => {
   const articleJsonLd =
     canonicalUrl &&
     buildArticleJsonLd({
-      title: buildSeoTitle(currentPost.title),
+      title: buildSeoTitle(pageTitle),
       description: metaDescription,
       canonicalUrl,
       image: socialImage,
@@ -57,7 +58,7 @@ const BlogPost = () => {
   const withSeo = (node: React.ReactNode) => (
     <>
       <Seo
-        title={currentPost.title}
+        title={pageTitle}
         description={metaDescription}
         canonicalPath={canonicalPath}
         canonicalUrl={canonicalUrl}
@@ -82,7 +83,7 @@ const BlogPost = () => {
           Share this article
         </p>
         <BlogShareActions
-          title={currentPost.title}
+          title={pageTitle}
           excerpt={currentPost.excerpt}
           url={canonicalUrl}
         />

@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { blogPosts } from '../src/data/blogPosts';
+import { blogPosts, getBlogPostSeoTitle } from '../src/data/blogPosts';
 import { seoRoutes } from '../src/data/seoRoutes';
 import { buildMetaDescription, buildSeoTitle, resolveAbsoluteUrl } from '../src/lib/seo';
 import { siteMetadata } from '../src/lib/siteMetadata';
@@ -137,7 +137,7 @@ const createBlogPostHead = (postId: string) => {
     throw new Error(`Unknown blog post id: ${postId}`);
   }
 
-  const title = buildSeoTitle(post.title);
+  const title = buildSeoTitle(getBlogPostSeoTitle(post));
   const description = buildMetaDescription(post.seoDescription, post.excerpt);
 
   return buildHeadContent({
