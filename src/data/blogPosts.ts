@@ -523,6 +523,18 @@ export const blogPosts: BlogPostMetadata[] = [
     blogNumber: 54,
     seoDescription:
       'Unapologetic style for 2026: stop asking permission, embrace color, confident statements, and fashion that matches your inner energy.'
+  },
+  {
+    id: 'i-dont-need-to-be-perfect-i-just-need-to-keep-going',
+    title: 'I Don’t Need to be Perfect. I Just Need to Keep Going',
+    excerpt:
+      'Perfection is a trap that keeps us stuck. Real confidence is built by showing up, staying present through discomfort, and taking the next step anyway.',
+    date: '2/1/2026',
+    dateSort: new Date('2026-02-01'),
+    readTime: '6 min read',
+    blogNumber: 55,
+    seoDescription:
+      'A rebellious reminder that confidence does not require perfection—just the courage to keep going, stay with yourself, and take one honest step at a time.'
   }
 ];
 
